@@ -1,0 +1,94 @@
+{
+    "MF_LOC_DEPT": {
+        "elements": [
+            {
+                "segment": "LDP",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "LCH",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "LCC",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "QUERY_RESULT_CLUSTER": {
+        "elements": [
+            {
+                "segment": "MFE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "LOC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "LCH",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "LRL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "MF_LOC_DEPT",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RSP_Q11": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "SFT",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ERR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "QAK",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QPD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "QUERY_RESULT_CLUSTER",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DSC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "ACK": {
+        "ACK": "General acknowledgment"
+    },
+    "ADT": {
+        "A01": "Admit\/Visit Notification",
+        "A02": "Transfer a Patient",
+        "A03": "Discharge\/End Visit",
+        "A04": "Register a Patient",
+        "A05": "Pre-Admit a Patient",
+        "A06": "Change an Outpatient to Inpatient",
+        "A07": "Change an Inpatient to Outpatient",
+        "A09": "Patient Departing \u2013 Tracking",
+        "A10": "Patient Arriving \u2013 Tracking",
+        "A11": "Cancel Admit\/Visit Notification",
+        "A12": "Cancel Transfer",
+        "A13": "Cancel Discharge\/End Visit",
+        "A14": "Pending Admit",
+        "A15": "Pending Transfer",
+        "A16": "Pending Discharge",
+        "A21": "Patient Goes on a Leave of Absence",
+        "A22": "Patient Returns from a Leave of Absence",
+        "A25": "Cancel Pending Discharge",
+        "A26": "Cancel Pending Transfer",
+        "A27": "Cancel Pending Admit",
+        "A28": "Create New patient",
+        "A31": "Update Patient information",
+        "A32": "Cancel Patient Arriving \u2013 Tracking",
+        "A33": "Cancel Patient Departing \u2013 Tracking",
+        "A38": "Cancel Pre-Admit",
+        "A40": "Merge two patients",
+        "A44": "Move account Information - Patient Account Number",
+        "A47": "Change Patient Identifier List",
+        "A49": "Change Patient Account Number",
+        "A52": "Cancel Leave of Absence for a Patient",
+        "A53": "Cancel Patient Return from a Leave of Absence",
+        "A54": "Change Attending Doctor",
+        "A55": "Cancel Change Attending Doctor",
+        "Z99": "Update Patient Movement Information"
+    },
+    "MDM": {
+        "T01": "Original document notification",
+        "T02": "Original document notification and content",
+        "T03": "Document status change notification",
+        "T04": "Document status change notification and content",
+        "T05": "Document addendum notification",
+        "T06": "Document addendum notification and content",
+        "T07": "Document edit notification",
+        "T08": "Document edit notification and content",
+        "T09": "Document replacement notification",
+        "T10": "Document replacement notification and content",
+        "T11": "Original document notification"
+    },
+    "ORU": {
+        "R01": "Unsolicited transmission of an observation message",
+        "R30": "Unsolicited Point-Of-Care Observation Message Without Existing Order \u2013 Place An Order",
+        "R31": "Unsolicited New Point-Of-Care Observation Message - Search For An Order",
+        "R32": "Unsolicited Pre-Ordered Point-Of-Care Observation",
+        "W01": "Waveform result, unsolicited transmission of requested information"
+    },
+    "SIU": {
+        "S12": "Notification of new appointment booking",
+        "S14": "Notification of Appointment Modification",
+        "S15": "Notification of Appointment Cancellation",
+        "S26": "Notification That Patient Did Not Show Up for Scheduled Appointment"
+    }
+}

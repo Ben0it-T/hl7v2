@@ -1,0 +1,66 @@
+{
+    "ACK": {
+        "ACK": "ACK-ACK-ACK"
+    },
+    "ADT": {
+        "A01": "ADT-A01-ADT_A01",
+        "A02": "ADT-A02-ADT_A02",
+        "A03": "ADT-A03-ADT_A03",
+        "A04": "ADT-A04-ADT_A01",
+        "A05": "ADT-A05-ADT_A05",
+        "A06": "ADT-A06-ADT_A06",
+        "A07": "ADT-A07-ADT_A06",
+        "A09": "ADT-A09-ADT_A09",
+        "A10": "ADT-A10-ADT_A09",
+        "A11": "ADT-A11-ADT_A09",
+        "A12": "ADT-A12-ADT_A12",
+        "A13": "ADT-A13-ADT_A01",
+        "A14": "ADT-A14-ADT_A05",
+        "A15": "ADT-A15-ADT_A15",
+        "A16": "ADT-A16-ADT_A16",
+        "A21": "ADT-A21-ADT_A21",
+        "A22": "ADT-A22-ADT_A21",
+        "A25": "ADT-A25-ADT_A21",
+        "A26": "ADT-A26-ADT_A21",
+        "A27": "ADT-A27-ADT_A21",
+        "A28": "ADT-A28-ADT_A05",
+        "A31": "ADT-A31-ADT_A05",
+        "A32": "ADT-A32-ADT_A21",
+        "A33": "ADT-A33-ADT_A21",
+        "A38": "ADT-A38-ADT_A38",
+        "A40": "ADT-A40-ADT_A39",
+        "A44": "ADT-A44-ADT_A43",
+        "A47": "ADT-A47-ADT_A30",
+        "A49": "ADT-A49-ADT_A30",
+        "A52": "ADT-A52-ADT_A52",
+        "A53": "ADT-A53-ADT_A52",
+        "A54": "ADT-A54-ADT_A54",
+        "A55": "ADT-A55-ADT_A52",
+        "Z99": "ADT-Z99-ADT_A01"
+    },
+    "MDM": {
+        "T01": "MDM-T01-MDM_T01",
+        "T02": "MDM-T02-MDM_T02",
+        "T03": "MDM-T03-MDM_T01",
+        "T04": "MDM-T04-MDM_T02",
+        "T05": "MDM-T05-MDM_T01",
+        "T06": "MDM-T06-MDM_T02",
+        "T07": "MDM-T07-MDM_T01",
+        "T08": "MDM-T08-MDM_T02",
+        "T09": "MDM-T09-MDM_T01",
+        "T10": "MDM-T10-MDM_T02",
+        "T11": "MDM-T11-MDM_T01"
+    },
+    "ORU": {
+        "R01": "ORU-R01-ORU_R01",
+        "R30": "ORU-R30-ORU_R30",
+        "R31": "ORU-R31-ORU_R30",
+        "R32": "ORU-R32-ORU_R30"
+    },
+    "SIU": {
+        "S12": "SIU-S12-SIU_S12",
+        "S14": "SIU-S14-SIU_S12",
+        "S15": "SIU-S15-SIU_S12",
+        "S26": "SIU-S26-SIU_S12"
+    }
+}

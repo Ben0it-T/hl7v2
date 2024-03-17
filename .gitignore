@@ -1,0 +1,19 @@
+# General
+.DS_Store
+._*
+_*
+*.sublime-project
+*.sublime-workspace
+
+# Parameters
+/scripts/config.php
+
+# Profiles
+/profiles/gazelle/
+
+# Schemas
+/schemas/appendixA-2.5/
+/schemas/hl7-xml-v2.5/
+/schemas/hl7v2xsd/
+/schemas/json-2.5-org/
+/schemas/json-2.5-sun/

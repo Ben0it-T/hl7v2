@@ -1,0 +1,52 @@
+{
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1",
+                "Usage": "O"
+            },
+            {
+                "segment": "MRG",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
+            }
+        ]
+    },
+    "ADT_A30": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
+            },
+            {
+                "segment": "SFT",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded",
+                "Usage": "O"
+            },
+            {
+                "segment": "EVN",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
+            },
+            {
+                "group": "PATIENT",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
+            }
+        ]
+    }
+}

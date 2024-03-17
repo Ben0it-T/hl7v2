@@ -1,0 +1,5094 @@
+{
+    "AD": {
+        "components": [
+            {
+                "dataType": "AD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AD.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "AD.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Street Address",
+        "maxLength": "120"
+    },
+    "AD.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Other Designation",
+        "maxLength": "120"
+    },
+    "AD.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "City",
+        "maxLength": "50"
+    },
+    "AD.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "State or Province",
+        "maxLength": "50"
+    },
+    "AD.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Zip or Postal Code",
+        "maxLength": "12"
+    },
+    "AD.6": {
+        "Type": "ID",
+        "Table": "HL70399",
+        "LongName": "Country",
+        "maxLength": "3"
+    },
+    "AD.7": {
+        "Type": "ID",
+        "Table": "HL70190",
+        "LongName": "Address Type",
+        "maxLength": "3"
+    },
+    "AD.8": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Other Geographic Designation",
+        "maxLength": "50"
+    },
+    "AUI": {
+        "components": [
+            {
+                "dataType": "AUI.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AUI.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "AUI.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "AUI.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Authorization Number",
+        "maxLength": "30"
+    },
+    "AUI.2": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Date",
+        "maxLength": "8"
+    },
+    "AUI.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Source",
+        "maxLength": "199"
+    },
+    "CCD": {
+        "components": [
+            {
+                "dataType": "CCD.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CCD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CCD.1": {
+        "Type": "ID",
+        "Table": "HL70100",
+        "LongName": "Invocation Event",
+        "maxLength": "1"
+    },
+    "CCD.2": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Date\/time",
+        "maxLength": "26"
+    },
+    "CCP": {
+        "components": [
+            {
+                "dataType": "CCP.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CCP.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CCP.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CCP.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Channel Calibration Sensitivity Correction Factor",
+        "maxLength": "6"
+    },
+    "CCP.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Channel Calibration Baseline",
+        "maxLength": "6"
+    },
+    "CCP.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Channel Calibration Time Skew",
+        "maxLength": "6"
+    },
+    "CD": {
+        "components": [
+            {
+                "dataType": "CD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CD.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CD.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CD.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CD.1": {
+        "Type": "WVI",
+        "Table": "",
+        "LongName": "Channel Identifier",
+        "maxLength": "22"
+    },
+    "CD.2": {
+        "Type": "WVS",
+        "Table": "",
+        "LongName": "Waveform Source",
+        "maxLength": "17"
+    },
+    "CD.3": {
+        "Type": "CSU",
+        "Table": "",
+        "LongName": "Channel Sensitivity\/Units",
+        "maxLength": "478"
+    },
+    "CD.4": {
+        "Type": "CCP",
+        "Table": "",
+        "LongName": "Channel Calibration Parameters",
+        "maxLength": "20"
+    },
+    "CD.5": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Channel Sampling Frequency",
+        "maxLength": "6"
+    },
+    "CD.6": {
+        "Type": "NR",
+        "Table": "",
+        "LongName": "Minimum\/Maximum Data Values",
+        "maxLength": "33"
+    },
+    "CE": {
+        "components": [
+            {
+                "dataType": "CE.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CE.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CE.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CE.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CE.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CE.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CE.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Identifier",
+        "maxLength": "20"
+    },
+    "CE.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Text",
+        "maxLength": "199"
+    },
+    "CE.3": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Coding System",
+        "maxLength": "20"
+    },
+    "CE.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Identifier",
+        "maxLength": "20"
+    },
+    "CE.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Text",
+        "maxLength": "199"
+    },
+    "CE.6": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Alternate Coding System",
+        "maxLength": "20"
+    },
+    "CF": {
+        "components": [
+            {
+                "dataType": "CF.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CF.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CF.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CF.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CF.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CF.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CF.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Identifier",
+        "maxLength": "20"
+    },
+    "CF.2": {
+        "Type": "FT",
+        "Table": "",
+        "LongName": "Formatted Text",
+        "maxLength": "65536"
+    },
+    "CF.3": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Coding System",
+        "maxLength": "20"
+    },
+    "CF.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Identifier",
+        "maxLength": "20"
+    },
+    "CF.5": {
+        "Type": "FT",
+        "Table": "",
+        "LongName": "Alternate Formatted Text",
+        "maxLength": "65536"
+    },
+    "CF.6": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Alternate Coding System",
+        "maxLength": "20"
+    },
+    "CNE": {
+        "components": [
+            {
+                "dataType": "CNE.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNE.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CNE.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Identifier",
+        "maxLength": "20"
+    },
+    "CNE.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Text",
+        "maxLength": "199"
+    },
+    "CNE.3": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Coding System",
+        "maxLength": "20"
+    },
+    "CNE.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Identifier",
+        "maxLength": "20"
+    },
+    "CNE.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Text",
+        "maxLength": "199"
+    },
+    "CNE.6": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Alternate Coding System",
+        "maxLength": "20"
+    },
+    "CNE.7": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Coding System Version ID",
+        "maxLength": "10"
+    },
+    "CNE.8": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Coding System Version ID",
+        "maxLength": "10"
+    },
+    "CNE.9": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Original Text",
+        "maxLength": "199"
+    },
+    "CNN": {
+        "components": [
+            {
+                "dataType": "CNN.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CNN.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CNN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "ID Number",
+        "maxLength": "15"
+    },
+    "CNN.10": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Assigning Authority  - Universal ID",
+        "maxLength": "199"
+    },
+    "CNN.11": {
+        "Type": "ID",
+        "Table": "HL70301",
+        "LongName": "Assigning Authority  - Universal ID Type",
+        "maxLength": "6"
+    },
+    "CNN.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Family Name",
+        "maxLength": "50"
+    },
+    "CNN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Given Name",
+        "maxLength": "30"
+    },
+    "CNN.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Second and Further Given Names or Initials Thereof",
+        "maxLength": "30"
+    },
+    "CNN.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Suffix (e.g., JR or III)",
+        "maxLength": "20"
+    },
+    "CNN.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Prefix (e.g., DR)",
+        "maxLength": "20"
+    },
+    "CNN.7": {
+        "Type": "IS",
+        "Table": "HL70360",
+        "LongName": "Degree (e.g., MD",
+        "maxLength": "5"
+    },
+    "CNN.8": {
+        "Type": "IS",
+        "Table": "HL70297",
+        "LongName": "Source Table",
+        "maxLength": "4"
+    },
+    "CNN.9": {
+        "Type": "IS",
+        "Table": "HL70363",
+        "LongName": "Assigning Authority   - Namespace ID",
+        "maxLength": "20"
+    },
+    "CP": {
+        "components": [
+            {
+                "dataType": "CP.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CP.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CP.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CP.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CP.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CP.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CP.1": {
+        "Type": "MO",
+        "Table": "",
+        "LongName": "Price",
+        "maxLength": "20"
+    },
+    "CP.2": {
+        "Type": "ID",
+        "Table": "HL70205",
+        "LongName": "Price Type",
+        "maxLength": "2"
+    },
+    "CP.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "From Value",
+        "maxLength": "16"
+    },
+    "CP.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "To Value",
+        "maxLength": "16"
+    },
+    "CP.5": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "Range Units",
+        "maxLength": "483"
+    },
+    "CP.6": {
+        "Type": "ID",
+        "Table": "HL70298",
+        "LongName": "Range Type",
+        "maxLength": "1"
+    },
+    "CQ": {
+        "components": [
+            {
+                "dataType": "CQ.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CQ.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CQ.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Quantity",
+        "maxLength": "16"
+    },
+    "CQ.2": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "Units",
+        "maxLength": "483"
+    },
+    "CSU": {
+        "components": [
+            {
+                "dataType": "CSU.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CSU.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CSU.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CSU.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CSU.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CSU.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CSU.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CSU.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Channel Sensitivity",
+        "maxLength": "60"
+    },
+    "CSU.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Unit of Measure Identifier",
+        "maxLength": "20"
+    },
+    "CSU.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Unit of Measure Description",
+        "maxLength": "199"
+    },
+    "CSU.4": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Unit of Measure Coding System",
+        "maxLength": "20"
+    },
+    "CSU.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Unit of Measure Identifier",
+        "maxLength": "20"
+    },
+    "CSU.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Unit of Measure Description",
+        "maxLength": "199"
+    },
+    "CSU.7": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Alternate Unit of Measure Coding System",
+        "maxLength": "20"
+    },
+    "CWE": {
+        "components": [
+            {
+                "dataType": "CWE.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CWE.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CWE.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Identifier",
+        "maxLength": "20"
+    },
+    "CWE.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Text",
+        "maxLength": "199"
+    },
+    "CWE.3": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Coding System",
+        "maxLength": "20"
+    },
+    "CWE.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Identifier",
+        "maxLength": "20"
+    },
+    "CWE.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Text",
+        "maxLength": "199"
+    },
+    "CWE.6": {
+        "Type": "ID",
+        "Table": "HL70396",
+        "LongName": "Name of Alternate Coding System",
+        "maxLength": "20"
+    },
+    "CWE.7": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Coding System Version ID",
+        "maxLength": "10"
+    },
+    "CWE.8": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Alternate Coding System Version ID",
+        "maxLength": "10"
+    },
+    "CWE.9": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Original Text",
+        "maxLength": "199"
+    },
+    "CX": {
+        "components": [
+            {
+                "dataType": "CX.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CX.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CX.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "ID Number",
+        "maxLength": "15"
+    },
+    "CX.10": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Assigning Agency or Department",
+        "maxLength": "705"
+    },
+    "CX.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Check Digit",
+        "maxLength": "1"
+    },
+    "CX.3": {
+        "Type": "ID",
+        "Table": "HL70061",
+        "LongName": "Check Digit Scheme",
+        "maxLength": "3"
+    },
+    "CX.4": {
+        "Type": "HD",
+        "Table": "HL70363",
+        "LongName": "Assigning Authority",
+        "maxLength": "227"
+    },
+    "CX.5": {
+        "Type": "ID",
+        "Table": "HL70203",
+        "LongName": "Identifier Type Code",
+        "maxLength": "5"
+    },
+    "CX.6": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Assigning Facility",
+        "maxLength": "227"
+    },
+    "CX.7": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "8"
+    },
+    "CX.8": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "8"
+    },
+    "CX.9": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Assigning Jurisdiction",
+        "maxLength": "705"
+    },
+    "DDI": {
+        "components": [
+            {
+                "dataType": "DDI.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DDI.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DDI.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DDI.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Delay Days",
+        "maxLength": "3"
+    },
+    "DDI.2": {
+        "Type": "MO",
+        "Table": "",
+        "LongName": "Monetary Amount",
+        "maxLength": "16"
+    },
+    "DDI.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Number of Days",
+        "maxLength": "4"
+    },
+    "DIN": {
+        "components": [
+            {
+                "dataType": "DIN.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DIN.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DIN.1": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Date",
+        "maxLength": "26"
+    },
+    "DIN.2": {
+        "Type": "CE",
+        "Table": "HL70531",
+        "LongName": "Institution Name",
+        "maxLength": "483"
+    },
+    "DLD": {
+        "components": [
+            {
+                "dataType": "DLD.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DLD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DLD.1": {
+        "Type": "IS",
+        "Table": "HL70113",
+        "LongName": "Discharge Location",
+        "maxLength": "20"
+    },
+    "DLD.2": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "26"
+    },
+    "DLN": {
+        "components": [
+            {
+                "dataType": "DLN.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DLN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DLN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DLN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "License Number",
+        "maxLength": "20"
+    },
+    "DLN.2": {
+        "Type": "IS",
+        "Table": "HL70333",
+        "LongName": "Issuing State, Province, Country",
+        "maxLength": "20"
+    },
+    "DLN.3": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "24"
+    },
+    "DLT": {
+        "components": [
+            {
+                "dataType": "DLT.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DLT.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DLT.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DLT.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DLT.1": {
+        "Type": "NR",
+        "Table": "",
+        "LongName": "Normal Range",
+        "maxLength": "33"
+    },
+    "DLT.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Numeric Threshold",
+        "maxLength": "4"
+    },
+    "DLT.3": {
+        "Type": "ID",
+        "Table": "HL70523",
+        "LongName": "Change Computation",
+        "maxLength": "1"
+    },
+    "DLT.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Days Retained",
+        "maxLength": "4"
+    },
+    "DR": {
+        "components": [
+            {
+                "dataType": "DR.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DR.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DR.1": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Range Start Date\/Time",
+        "maxLength": "26"
+    },
+    "DR.2": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Range End Date\/Time",
+        "maxLength": "26"
+    },
+    "DT": {
+        "dataType": "STRING"
+    },
+    "DTM": {
+        "dataType": "STRING"
+    },
+    "DTN": {
+        "components": [
+            {
+                "dataType": "DTN.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "DTN.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "DTN.1": {
+        "Type": "IS",
+        "Table": "HL70149",
+        "LongName": "Day Type",
+        "maxLength": "2"
+    },
+    "DTN.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Number of Days",
+        "maxLength": "3"
+    },
+    "ED": {
+        "components": [
+            {
+                "dataType": "ED.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ED.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ED.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ED.4",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ED.5",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ED.1": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Source Application",
+        "maxLength": "227"
+    },
+    "ED.2": {
+        "Type": "ID",
+        "Table": "HL70191",
+        "LongName": "Type of Data",
+        "maxLength": "9"
+    },
+    "ED.3": {
+        "Type": "ID",
+        "Table": "HL70291",
+        "LongName": "Data Subtype",
+        "maxLength": "18"
+    },
+    "ED.4": {
+        "Type": "ID",
+        "Table": "HL70299",
+        "LongName": "Encoding",
+        "maxLength": "6"
+    },
+    "ED.5": {
+        "Type": "TX",
+        "Table": "",
+        "LongName": "Data",
+        "maxLength": "65536"
+    },
+    "EI": {
+        "components": [
+            {
+                "dataType": "EI.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "EI.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "EI.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "EI.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "EI.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Entity Identifier",
+        "maxLength": "199"
+    },
+    "EI.2": {
+        "Type": "IS",
+        "Table": "HL70363",
+        "LongName": "Namespace ID",
+        "maxLength": "20"
+    },
+    "EI.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Universal ID",
+        "maxLength": "199"
+    },
+    "EI.4": {
+        "Type": "ID",
+        "Table": "HL70301",
+        "LongName": "Universal ID Type",
+        "maxLength": "6"
+    },
+    "EIP": {
+        "components": [
+            {
+                "dataType": "EIP.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "EIP.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "EIP.1": {
+        "Type": "EI",
+        "Table": "",
+        "LongName": "Placer Assigned Identifier",
+        "maxLength": "427"
+    },
+    "EIP.2": {
+        "Type": "EI",
+        "Table": "",
+        "LongName": "Filler Assigned Identifier",
+        "maxLength": "427"
+    },
+    "ELD": {
+        "components": [
+            {
+                "dataType": "ELD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ELD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ELD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ELD.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ELD.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Segment ID",
+        "maxLength": "3"
+    },
+    "ELD.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Segment Sequence",
+        "maxLength": "2"
+    },
+    "ELD.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Field Position",
+        "maxLength": "2"
+    },
+    "ELD.4": {
+        "Type": "CE",
+        "Table": "HL70357",
+        "LongName": "Code Identifying Error",
+        "maxLength": "483"
+    },
+    "ERL": {
+        "components": [
+            {
+                "dataType": "ERL.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ERL.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ERL.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ERL.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ERL.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ERL.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ERL.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Segment ID",
+        "maxLength": "3"
+    },
+    "ERL.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Segment Sequence",
+        "maxLength": "2"
+    },
+    "ERL.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Field Position",
+        "maxLength": "2"
+    },
+    "ERL.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Field Repetition",
+        "maxLength": "2"
+    },
+    "ERL.5": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Component Number",
+        "maxLength": "2"
+    },
+    "ERL.6": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sub-Component Number",
+        "maxLength": "2"
+    },
+    "FC": {
+        "components": [
+            {
+                "dataType": "FC.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "FC.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "FC.1": {
+        "Type": "IS",
+        "Table": "HL70064",
+        "LongName": "Financial Class Code",
+        "maxLength": "20"
+    },
+    "FC.2": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "26"
+    },
+    "FN": {
+        "components": [
+            {
+                "dataType": "FN.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "FN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "FN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "FN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "FN.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "FN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Surname",
+        "maxLength": "50"
+    },
+    "FN.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Own Surname Prefix",
+        "maxLength": "20"
+    },
+    "FN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Own Surname",
+        "maxLength": "50"
+    },
+    "FN.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Surname Prefix From Partner\/Spouse",
+        "maxLength": "20"
+    },
+    "FN.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Surname From Partner\/Spouse",
+        "maxLength": "50"
+    },
+    "FT": {
+        "dataType": "STRING"
+    },
+    "GTS": {
+        "dataType": "STRING"
+    },
+    "HD": {
+        "components": [
+            {
+                "dataType": "HD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "HD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "HD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "HD.1": {
+        "Type": "IS",
+        "Table": "HL70300",
+        "LongName": "Namespace ID",
+        "maxLength": "20"
+    },
+    "HD.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Universal ID",
+        "maxLength": "199"
+    },
+    "HD.3": {
+        "Type": "ID",
+        "Table": "HL70301",
+        "LongName": "Universal ID Type",
+        "maxLength": "6"
+    },
+    "ICD": {
+        "components": [
+            {
+                "dataType": "ICD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ICD.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "ICD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ICD.1": {
+        "Type": "IS",
+        "Table": "HL70150",
+        "LongName": "Certification Patient Type",
+        "maxLength": "11"
+    },
+    "ICD.2": {
+        "Type": "ID",
+        "Table": "HL70136",
+        "LongName": "Certification Required",
+        "maxLength": "1"
+    },
+    "ICD.3": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Date\/Time Certification Required",
+        "maxLength": "26"
+    },
+    "ID": {
+        "dataType": "STRING"
+    },
+    "IS": {
+        "dataType": "STRING"
+    },
+    "JCC": {
+        "components": [
+            {
+                "dataType": "JCC.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "JCC.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "JCC.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "JCC.1": {
+        "Type": "IS",
+        "Table": "HL70327",
+        "LongName": "Job Code",
+        "maxLength": "20"
+    },
+    "JCC.2": {
+        "Type": "IS",
+        "Table": "HL70328",
+        "LongName": "Job Class",
+        "maxLength": "20"
+    },
+    "JCC.3": {
+        "Type": "TX",
+        "Table": "",
+        "LongName": "Job Description Text",
+        "maxLength": "250"
+    },
+    "LA1": {
+        "components": [
+            {
+                "dataType": "LA1.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA1.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "LA1.1": {
+        "Type": "IS",
+        "Table": "HL70302",
+        "LongName": "Point of Care",
+        "maxLength": "20"
+    },
+    "LA1.2": {
+        "Type": "IS",
+        "Table": "HL70303",
+        "LongName": "Room",
+        "maxLength": "20"
+    },
+    "LA1.3": {
+        "Type": "IS",
+        "Table": "HL70304",
+        "LongName": "Bed",
+        "maxLength": "20"
+    },
+    "LA1.4": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Facility",
+        "maxLength": "227"
+    },
+    "LA1.5": {
+        "Type": "IS",
+        "Table": "HL70306",
+        "LongName": "Location Status",
+        "maxLength": "20"
+    },
+    "LA1.6": {
+        "Type": "IS",
+        "Table": "HL70305",
+        "LongName": "Patient Location Type",
+        "maxLength": "20"
+    },
+    "LA1.7": {
+        "Type": "IS",
+        "Table": "HL70307",
+        "LongName": "Building",
+        "maxLength": "20"
+    },
+    "LA1.8": {
+        "Type": "IS",
+        "Table": "HL70308",
+        "LongName": "Floor",
+        "maxLength": "20"
+    },
+    "LA1.9": {
+        "Type": "AD",
+        "Table": "",
+        "LongName": "Address",
+        "maxLength": "415"
+    },
+    "LA2": {
+        "components": [
+            {
+                "dataType": "LA2.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.13",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.14",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.15",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "LA2.16",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "LA2.1": {
+        "Type": "IS",
+        "Table": "HL70302",
+        "LongName": "Point of Care",
+        "maxLength": "20"
+    },
+    "LA2.10": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Other Designation",
+        "maxLength": "120"
+    },
+    "LA2.11": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "City",
+        "maxLength": "50"
+    },
+    "LA2.12": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "State or Province",
+        "maxLength": "50"
+    },
+    "LA2.13": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Zip or Postal Code",
+        "maxLength": "12"
+    },
+    "LA2.14": {
+        "Type": "ID",
+        "Table": "HL70399",
+        "LongName": "Country",
+        "maxLength": "3"
+    },
+    "LA2.15": {
+        "Type": "ID",
+        "Table": "HL70190",
+        "LongName": "Address Type",
+        "maxLength": "3"
+    },
+    "LA2.16": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Other Geographic Designation",
+        "maxLength": "50"
+    },
+    "LA2.2": {
+        "Type": "IS",
+        "Table": "HL70303",
+        "LongName": "Room",
+        "maxLength": "20"
+    },
+    "LA2.3": {
+        "Type": "IS",
+        "Table": "HL70304",
+        "LongName": "Bed",
+        "maxLength": "20"
+    },
+    "LA2.4": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Facility",
+        "maxLength": "227"
+    },
+    "LA2.5": {
+        "Type": "IS",
+        "Table": "HL70306",
+        "LongName": "Location Status",
+        "maxLength": "20"
+    },
+    "LA2.6": {
+        "Type": "IS",
+        "Table": "HL70305",
+        "LongName": "Patient Location Type",
+        "maxLength": "20"
+    },
+    "LA2.7": {
+        "Type": "IS",
+        "Table": "HL70307",
+        "LongName": "Building",
+        "maxLength": "20"
+    },
+    "LA2.8": {
+        "Type": "IS",
+        "Table": "HL70308",
+        "LongName": "Floor",
+        "maxLength": "20"
+    },
+    "LA2.9": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Street Address",
+        "maxLength": "120"
+    },
+    "MA": {
+        "components": [
+            {
+                "dataType": "MA.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MA.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MA.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MA.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MA.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MA.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "MA.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sample 1 From Channel 1",
+        "maxLength": "16"
+    },
+    "MA.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sample 1 From Channel 2",
+        "maxLength": "16"
+    },
+    "MA.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sample 1 From Channel N",
+        "maxLength": "16"
+    },
+    "MA.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sample 2 From Channel 1",
+        "maxLength": "16"
+    },
+    "MA.5": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sample 2 From Channel N",
+        "maxLength": "16"
+    },
+    "MA.6": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Sample N From Channel N",
+        "maxLength": "16"
+    },
+    "MO": {
+        "components": [
+            {
+                "dataType": "MO.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MO.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "MO.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Quantity",
+        "maxLength": "16"
+    },
+    "MO.2": {
+        "Type": "ID",
+        "Table": "",
+        "LongName": "Denomination",
+        "maxLength": "3"
+    },
+    "MOC": {
+        "components": [
+            {
+                "dataType": "MOC.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MOC.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "MOC.1": {
+        "Type": "MO",
+        "Table": "",
+        "LongName": "Monetary Amount",
+        "maxLength": "20"
+    },
+    "MOC.2": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "Charge Code",
+        "maxLength": "483"
+    },
+    "MOP": {
+        "components": [
+            {
+                "dataType": "MOP.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MOP.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MOP.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "MOP.1": {
+        "Type": "ID",
+        "Table": "HL70148",
+        "LongName": "Money or Percentage Indicator",
+        "maxLength": "2"
+    },
+    "MOP.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Money or Percentage Quantity",
+        "maxLength": "16"
+    },
+    "MOP.3": {
+        "Type": "ID",
+        "Table": "",
+        "LongName": "Currency Denomination",
+        "maxLength": "3"
+    },
+    "MSG": {
+        "components": [
+            {
+                "dataType": "MSG.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MSG.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "MSG.3",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "MSG.1": {
+        "Type": "ID",
+        "Table": "HL70076",
+        "LongName": "Message Code",
+        "maxLength": "3"
+    },
+    "MSG.2": {
+        "Type": "ID",
+        "Table": "HL70003",
+        "LongName": "Trigger Event",
+        "maxLength": "3"
+    },
+    "MSG.3": {
+        "Type": "ID",
+        "Table": "HL70354",
+        "LongName": "Message Structure",
+        "maxLength": "7"
+    },
+    "NA": {
+        "components": [
+            {
+                "dataType": "NA.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NA.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NA.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NA.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "NA.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Value1",
+        "maxLength": "16"
+    },
+    "NA.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Value2",
+        "maxLength": "16"
+    },
+    "NA.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Value3",
+        "maxLength": "16"
+    },
+    "NA.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Value4",
+        "maxLength": "16"
+    },
+    "NDL": {
+        "components": [
+            {
+                "dataType": "NDL.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NDL.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "NDL.1": {
+        "Type": "CNN",
+        "Table": "",
+        "LongName": "Name",
+        "maxLength": "406"
+    },
+    "NDL.10": {
+        "Type": "IS",
+        "Table": "HL70307",
+        "LongName": "Building",
+        "maxLength": "20"
+    },
+    "NDL.11": {
+        "Type": "IS",
+        "Table": "HL70308",
+        "LongName": "Floor",
+        "maxLength": "20"
+    },
+    "NDL.2": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Start Date\/time",
+        "maxLength": "26"
+    },
+    "NDL.3": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "End Date\/time",
+        "maxLength": "26"
+    },
+    "NDL.4": {
+        "Type": "IS",
+        "Table": "HL70302",
+        "LongName": "Point of Care",
+        "maxLength": "20"
+    },
+    "NDL.5": {
+        "Type": "IS",
+        "Table": "HL70303",
+        "LongName": "Room",
+        "maxLength": "20"
+    },
+    "NDL.6": {
+        "Type": "IS",
+        "Table": "HL70304",
+        "LongName": "Bed",
+        "maxLength": "20"
+    },
+    "NDL.7": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Facility",
+        "maxLength": "227"
+    },
+    "NDL.8": {
+        "Type": "IS",
+        "Table": "HL70306",
+        "LongName": "Location Status",
+        "maxLength": "20"
+    },
+    "NDL.9": {
+        "Type": "IS",
+        "Table": "HL70305",
+        "LongName": "Patient Location Type",
+        "maxLength": "20"
+    },
+    "NM": {
+        "dataType": "STRING"
+    },
+    "NR": {
+        "components": [
+            {
+                "dataType": "NR.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "NR.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "NR.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Low Value",
+        "maxLength": "16"
+    },
+    "NR.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "High Value",
+        "maxLength": "16"
+    },
+    "OCD": {
+        "components": [
+            {
+                "dataType": "OCD.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OCD.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "OCD.1": {
+        "Type": "CNE",
+        "Table": "HL70350",
+        "LongName": "Occurrence Code",
+        "maxLength": "705"
+    },
+    "OCD.2": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Occurrence Date",
+        "maxLength": "8"
+    },
+    "OSD": {
+        "components": [
+            {
+                "dataType": "OSD.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.4",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.8",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.10",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSD.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "OSD.1": {
+        "Type": "ID",
+        "Table": "HL70524",
+        "LongName": "Sequence\/Results Flag",
+        "maxLength": "1"
+    },
+    "OSD.10": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Filler Order Number: Universal ID",
+        "maxLength": "15"
+    },
+    "OSD.11": {
+        "Type": "ID",
+        "Table": "HL70301",
+        "LongName": "Filler Order Number: Universal ID Type",
+        "maxLength": "6"
+    },
+    "OSD.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Placer Order Number: Entity Identifier",
+        "maxLength": "15"
+    },
+    "OSD.3": {
+        "Type": "IS",
+        "Table": "HL70363",
+        "LongName": "Placer Order Number: Namespace ID",
+        "maxLength": "6"
+    },
+    "OSD.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Filler Order Number: Entity Identifier",
+        "maxLength": "15"
+    },
+    "OSD.5": {
+        "Type": "IS",
+        "Table": "HL70363",
+        "LongName": "Filler Order Number: Namespace ID",
+        "maxLength": "6"
+    },
+    "OSD.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Sequence Condition Value",
+        "maxLength": "12"
+    },
+    "OSD.7": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Maximum Number of Repeats",
+        "maxLength": "3"
+    },
+    "OSD.8": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Placer Order Number: Universal ID",
+        "maxLength": "15"
+    },
+    "OSD.9": {
+        "Type": "ID",
+        "Table": "HL70301",
+        "LongName": "Placer Order Number: Universal ID Type",
+        "maxLength": "6"
+    },
+    "OSP": {
+        "components": [
+            {
+                "dataType": "OSP.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSP.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "OSP.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "OSP.1": {
+        "Type": "CNE",
+        "Table": "HL70351",
+        "LongName": "Occurrence Span Code",
+        "maxLength": "705"
+    },
+    "OSP.2": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Occurrence Span Start Date",
+        "maxLength": "8"
+    },
+    "OSP.3": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Occurrence Span Stop Date",
+        "maxLength": "8"
+    },
+    "PIP": {
+        "components": [
+            {
+                "dataType": "PIP.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PIP.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PIP.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PIP.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PIP.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PIP.1": {
+        "Type": "CE",
+        "Table": "HL70525",
+        "LongName": "Privilege",
+        "maxLength": "483"
+    },
+    "PIP.2": {
+        "Type": "CE",
+        "Table": "HL70526",
+        "LongName": "Privilege Class",
+        "maxLength": "483"
+    },
+    "PIP.3": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "8"
+    },
+    "PIP.4": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Activation Date",
+        "maxLength": "8"
+    },
+    "PIP.5": {
+        "Type": "EI",
+        "Table": "",
+        "LongName": "Facility",
+        "maxLength": "427"
+    },
+    "PL": {
+        "components": [
+            {
+                "dataType": "PL.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PL.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PL.1": {
+        "Type": "IS",
+        "Table": "HL70302",
+        "LongName": "Point of Care",
+        "maxLength": "20"
+    },
+    "PL.10": {
+        "Type": "EI",
+        "Table": "",
+        "LongName": "Comprehensive Location Identifier",
+        "maxLength": "427"
+    },
+    "PL.11": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Assigning Authority for Location",
+        "maxLength": "227"
+    },
+    "PL.2": {
+        "Type": "IS",
+        "Table": "HL70303",
+        "LongName": "Room",
+        "maxLength": "20"
+    },
+    "PL.3": {
+        "Type": "IS",
+        "Table": "HL70304",
+        "LongName": "Bed",
+        "maxLength": "20"
+    },
+    "PL.4": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Facility",
+        "maxLength": "227"
+    },
+    "PL.5": {
+        "Type": "IS",
+        "Table": "HL70306",
+        "LongName": "Location Status",
+        "maxLength": "20"
+    },
+    "PL.6": {
+        "Type": "IS",
+        "Table": "HL70305",
+        "LongName": "Person Location Type",
+        "maxLength": "20"
+    },
+    "PL.7": {
+        "Type": "IS",
+        "Table": "HL70307",
+        "LongName": "Building",
+        "maxLength": "20"
+    },
+    "PL.8": {
+        "Type": "IS",
+        "Table": "HL70308",
+        "LongName": "Floor",
+        "maxLength": "20"
+    },
+    "PL.9": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Location Description",
+        "maxLength": "199"
+    },
+    "PLN": {
+        "components": [
+            {
+                "dataType": "PLN.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PLN.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PLN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PLN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PLN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "ID Number",
+        "maxLength": "20"
+    },
+    "PLN.2": {
+        "Type": "IS",
+        "Table": "HL70338",
+        "LongName": "Type of ID Number",
+        "maxLength": "8"
+    },
+    "PLN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "State\/other Qualifying Information",
+        "maxLength": "62"
+    },
+    "PLN.4": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "8"
+    },
+    "PPN": {
+        "components": [
+            {
+                "dataType": "PPN.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.13",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.14",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.15",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.16",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.17",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.18",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.19",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.20",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.21",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.22",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.23",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PPN.24",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PPN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "ID Number",
+        "maxLength": "15"
+    },
+    "PPN.10": {
+        "Type": "ID",
+        "Table": "HL70200",
+        "LongName": "Name Type Code",
+        "maxLength": "1"
+    },
+    "PPN.11": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Identifier Check Digit",
+        "maxLength": "1"
+    },
+    "PPN.12": {
+        "Type": "ID",
+        "Table": "HL70061",
+        "LongName": "Check Digit Scheme",
+        "maxLength": "3"
+    },
+    "PPN.13": {
+        "Type": "ID",
+        "Table": "HL70203",
+        "LongName": "Identifier Type Code",
+        "maxLength": "5"
+    },
+    "PPN.14": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Assigning Facility",
+        "maxLength": "227"
+    },
+    "PPN.15": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Date\/Time Action Performed",
+        "maxLength": "26"
+    },
+    "PPN.16": {
+        "Type": "ID",
+        "Table": "HL70465",
+        "LongName": "Name Representation Code",
+        "maxLength": "1"
+    },
+    "PPN.17": {
+        "Type": "CE",
+        "Table": "HL70448",
+        "LongName": "Name Context",
+        "maxLength": "483"
+    },
+    "PPN.18": {
+        "Type": "DR",
+        "Table": "",
+        "LongName": "Name Validity Range",
+        "maxLength": "17"
+    },
+    "PPN.19": {
+        "Type": "ID",
+        "Table": "HL70444",
+        "LongName": "Name Assembly Order",
+        "maxLength": "1"
+    },
+    "PPN.2": {
+        "Type": "FN",
+        "Table": "",
+        "LongName": "Family Name",
+        "maxLength": "194"
+    },
+    "PPN.20": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "26"
+    },
+    "PPN.21": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "26"
+    },
+    "PPN.22": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Professional Suffix",
+        "maxLength": "199"
+    },
+    "PPN.23": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Assigning Jurisdiction",
+        "maxLength": "705"
+    },
+    "PPN.24": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Assigning Agency or Department",
+        "maxLength": "705"
+    },
+    "PPN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Given Name",
+        "maxLength": "30"
+    },
+    "PPN.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Second and Further Given Names or Initials Thereof",
+        "maxLength": "30"
+    },
+    "PPN.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Suffix (e.g., JR or III)",
+        "maxLength": "20"
+    },
+    "PPN.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Prefix (e.g., DR)",
+        "maxLength": "20"
+    },
+    "PPN.7": {
+        "Type": "IS",
+        "Table": "HL70360",
+        "LongName": "Degree (e.g., MD)",
+        "maxLength": "5"
+    },
+    "PPN.8": {
+        "Type": "IS",
+        "Table": "HL70297",
+        "LongName": "Source Table",
+        "maxLength": "4"
+    },
+    "PPN.9": {
+        "Type": "HD",
+        "Table": "HL70363",
+        "LongName": "Assigning Authority",
+        "maxLength": "227"
+    },
+    "PRL": {
+        "components": [
+            {
+                "dataType": "PRL.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PRL.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PRL.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PRL.1": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "Parent Observation Identifier",
+        "maxLength": "483"
+    },
+    "PRL.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Parent Observation Sub-identifier",
+        "maxLength": "20"
+    },
+    "PRL.3": {
+        "Type": "TX",
+        "Table": "",
+        "LongName": "Parent Observation Value Descriptor",
+        "maxLength": "250"
+    },
+    "PT": {
+        "components": [
+            {
+                "dataType": "PT.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PT.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PT.1": {
+        "Type": "ID",
+        "Table": "HL70103",
+        "LongName": "Processing ID",
+        "maxLength": "1"
+    },
+    "PT.2": {
+        "Type": "ID",
+        "Table": "HL70207",
+        "LongName": "Processing Mode",
+        "maxLength": "1"
+    },
+    "PTA": {
+        "components": [
+            {
+                "dataType": "PTA.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PTA.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PTA.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "PTA.4",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PTA.1": {
+        "Type": "IS",
+        "Table": "HL70147",
+        "LongName": "Policy Type",
+        "maxLength": "5"
+    },
+    "PTA.2": {
+        "Type": "IS",
+        "Table": "HL70193",
+        "LongName": "Amount Class",
+        "maxLength": "9"
+    },
+    "PTA.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Money or Percentage Quantity",
+        "maxLength": "16"
+    },
+    "PTA.4": {
+        "Type": "MOP",
+        "Table": "",
+        "LongName": "Money or Percentage",
+        "maxLength": "23"
+    },
+    "QIP": {
+        "components": [
+            {
+                "dataType": "QIP.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "QIP.2",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "QIP.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Segment Field Name",
+        "maxLength": "12"
+    },
+    "QIP.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Values",
+        "maxLength": "199"
+    },
+    "QSC": {
+        "components": [
+            {
+                "dataType": "QSC.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "QSC.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "QSC.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "QSC.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "QSC.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Segment Field Name",
+        "maxLength": "12"
+    },
+    "QSC.2": {
+        "Type": "ID",
+        "Table": "HL70209",
+        "LongName": "Relational Operator",
+        "maxLength": "2"
+    },
+    "QSC.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Value",
+        "maxLength": "199"
+    },
+    "QSC.4": {
+        "Type": "ID",
+        "Table": "HL70210",
+        "LongName": "Relational Conjunction",
+        "maxLength": "3"
+    },
+    "RCD": {
+        "components": [
+            {
+                "dataType": "RCD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RCD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RCD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RCD.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Segment Field Name",
+        "maxLength": "12"
+    },
+    "RCD.2": {
+        "Type": "ID",
+        "Table": "HL70440",
+        "LongName": "HL7 Data Type",
+        "maxLength": "3"
+    },
+    "RCD.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Maximum Column Width",
+        "maxLength": "2"
+    },
+    "RFR": {
+        "components": [
+            {
+                "dataType": "RFR.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RFR.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RFR.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RFR.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RFR.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RFR.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RFR.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RFR.1": {
+        "Type": "NR",
+        "Table": "",
+        "LongName": "Numeric Range",
+        "maxLength": "33"
+    },
+    "RFR.2": {
+        "Type": "IS",
+        "Table": "HL70001",
+        "LongName": "Administrative Sex",
+        "maxLength": "8"
+    },
+    "RFR.3": {
+        "Type": "NR",
+        "Table": "",
+        "LongName": "Age Range",
+        "maxLength": "33"
+    },
+    "RFR.4": {
+        "Type": "NR",
+        "Table": "",
+        "LongName": "Gestational Age Range",
+        "maxLength": "33"
+    },
+    "RFR.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Species",
+        "maxLength": "20"
+    },
+    "RFR.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Race\/subspecies",
+        "maxLength": "20"
+    },
+    "RFR.7": {
+        "Type": "TX",
+        "Table": "",
+        "LongName": "Conditions",
+        "maxLength": "199"
+    },
+    "RI": {
+        "components": [
+            {
+                "dataType": "RI.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RI.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RI.1": {
+        "Type": "IS",
+        "Table": "HL70335",
+        "LongName": "Repeat Pattern",
+        "maxLength": "6"
+    },
+    "RI.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Explicit Time Interval",
+        "maxLength": "199"
+    },
+    "RMC": {
+        "components": [
+            {
+                "dataType": "RMC.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RMC.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RMC.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RMC.4",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RMC.1": {
+        "Type": "IS",
+        "Table": "HL70145",
+        "LongName": "Room Type",
+        "maxLength": "20"
+    },
+    "RMC.2": {
+        "Type": "IS",
+        "Table": "HL70146",
+        "LongName": "Amount Type",
+        "maxLength": "20"
+    },
+    "RMC.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Coverage Amount",
+        "maxLength": "16"
+    },
+    "RMC.4": {
+        "Type": "MOP",
+        "Table": "",
+        "LongName": "Money or Percentage",
+        "maxLength": "23"
+    },
+    "RP": {
+        "components": [
+            {
+                "dataType": "RP.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RP.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RP.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RP.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RP.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Pointer",
+        "maxLength": "15"
+    },
+    "RP.2": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Application ID",
+        "maxLength": "227"
+    },
+    "RP.3": {
+        "Type": "ID",
+        "Table": "HL70191",
+        "LongName": "Type of Data",
+        "maxLength": "9"
+    },
+    "RP.4": {
+        "Type": "ID",
+        "Table": "HL70291",
+        "LongName": "Subtype",
+        "maxLength": "19"
+    },
+    "RPT": {
+        "components": [
+            {
+                "dataType": "RPT.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "RPT.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RPT.1": {
+        "Type": "CWE",
+        "Table": "HL70335",
+        "LongName": "Repeat Pattern Code",
+        "maxLength": "705"
+    },
+    "RPT.10": {
+        "Type": "IS",
+        "Table": "",
+        "LongName": "Event Offset Units",
+        "maxLength": "10"
+    },
+    "RPT.11": {
+        "Type": "GTS",
+        "Table": "",
+        "LongName": "General Timing Specification",
+        "maxLength": "200"
+    },
+    "RPT.2": {
+        "Type": "ID",
+        "Table": "HL70527",
+        "LongName": "Calendar Alignment",
+        "maxLength": "2"
+    },
+    "RPT.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Phase Range Begin Value",
+        "maxLength": "10"
+    },
+    "RPT.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Phase Range End Value",
+        "maxLength": "10"
+    },
+    "RPT.5": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Period Quantity",
+        "maxLength": "10"
+    },
+    "RPT.6": {
+        "Type": "IS",
+        "Table": "",
+        "LongName": "Period Units",
+        "maxLength": "10"
+    },
+    "RPT.7": {
+        "Type": "ID",
+        "Table": "HL70136",
+        "LongName": "Institution Specified Time",
+        "maxLength": "1"
+    },
+    "RPT.8": {
+        "Type": "ID",
+        "Table": "HL70528",
+        "LongName": "Event",
+        "maxLength": "6"
+    },
+    "RPT.9": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Event Offset Quantity",
+        "maxLength": "10"
+    },
+    "SAD": {
+        "components": [
+            {
+                "dataType": "SAD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SAD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SAD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "SAD.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Street or Mailing Address",
+        "maxLength": "120"
+    },
+    "SAD.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Street Name",
+        "maxLength": "50"
+    },
+    "SAD.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Dwelling Number",
+        "maxLength": "12"
+    },
+    "SCV": {
+        "components": [
+            {
+                "dataType": "SCV.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SCV.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "SCV.1": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Parameter Class",
+        "maxLength": "20"
+    },
+    "SCV.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Parameter Value",
+        "maxLength": "20"
+    },
+    "SI": {
+        "dataType": "STRING"
+    },
+    "SN": {
+        "components": [
+            {
+                "dataType": "SN.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "SN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Comparator",
+        "maxLength": "2"
+    },
+    "SN.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Num1",
+        "maxLength": "15"
+    },
+    "SN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Separator\/Suffix",
+        "maxLength": "1"
+    },
+    "SN.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Num2",
+        "maxLength": "15"
+    },
+    "SPD": {
+        "components": [
+            {
+                "dataType": "SPD.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPD.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "SPD.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Specialty Name",
+        "maxLength": "50"
+    },
+    "SPD.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Governing Board",
+        "maxLength": "50"
+    },
+    "SPD.3": {
+        "Type": "ID",
+        "Table": "HL70337",
+        "LongName": "Eligible or Certified",
+        "maxLength": "1"
+    },
+    "SPD.4": {
+        "Type": "DT",
+        "Table": "",
+        "LongName": "Date of Certification",
+        "maxLength": "8"
+    },
+    "SPS": {
+        "components": [
+            {
+                "dataType": "SPS.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPS.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPS.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPS.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPS.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPS.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SPS.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "SPS.1": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Specimen Source Name or Code",
+        "maxLength": "705"
+    },
+    "SPS.2": {
+        "Type": "CWE",
+        "Table": "HL70371",
+        "LongName": "Additives",
+        "maxLength": "705"
+    },
+    "SPS.3": {
+        "Type": "TX",
+        "Table": "",
+        "LongName": "Specimen Collection Method",
+        "maxLength": "200"
+    },
+    "SPS.4": {
+        "Type": "CWE",
+        "Table": "HL70163",
+        "LongName": "Body Site",
+        "maxLength": "705"
+    },
+    "SPS.5": {
+        "Type": "CWE",
+        "Table": "HL70495",
+        "LongName": "Site Modifier",
+        "maxLength": "705"
+    },
+    "SPS.6": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Collection Method Modifier Code",
+        "maxLength": "705"
+    },
+    "SPS.7": {
+        "Type": "CWE",
+        "Table": "HL70369",
+        "LongName": "Specimen Role",
+        "maxLength": "705"
+    },
+    "SRT": {
+        "components": [
+            {
+                "dataType": "SRT.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "SRT.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "SRT.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Sort-by Field",
+        "maxLength": "12"
+    },
+    "SRT.2": {
+        "Type": "ID",
+        "Table": "HL70397",
+        "LongName": "Sequencing",
+        "maxLength": "2"
+    },
+    "ST": {
+        "dataType": "STRING"
+    },
+    "TM": {
+        "dataType": "STRING"
+    },
+    "TQ": {
+        "components": [
+            {
+                "dataType": "TQ.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TQ.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "TQ.1": {
+        "Type": "CQ",
+        "Table": "",
+        "LongName": "Quantity",
+        "maxLength": "267"
+    },
+    "TQ.10": {
+        "Type": "OSD",
+        "Table": "",
+        "LongName": "Order Sequencing",
+        "maxLength": "110"
+    },
+    "TQ.11": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "Occurrence Duration",
+        "maxLength": "483"
+    },
+    "TQ.12": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Total Occurrences",
+        "maxLength": "4"
+    },
+    "TQ.2": {
+        "Type": "RI",
+        "Table": "",
+        "LongName": "Interval",
+        "maxLength": "206"
+    },
+    "TQ.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Duration",
+        "maxLength": "6"
+    },
+    "TQ.4": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Start Date\/Time",
+        "maxLength": "26"
+    },
+    "TQ.5": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "End Date\/Time",
+        "maxLength": "26"
+    },
+    "TQ.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Priority",
+        "maxLength": "6"
+    },
+    "TQ.7": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Condition",
+        "maxLength": "199"
+    },
+    "TQ.8": {
+        "Type": "TX",
+        "Table": "",
+        "LongName": "Text",
+        "maxLength": "200"
+    },
+    "TQ.9": {
+        "Type": "ID",
+        "Table": "HL70472",
+        "LongName": "Conjunction",
+        "maxLength": "1"
+    },
+    "TS": {
+        "components": [
+            {
+                "dataType": "TS.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "TS.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "TS.1": {
+        "Type": "DTM",
+        "Table": "",
+        "LongName": "Time",
+        "maxLength": "24"
+    },
+    "TS.2": {
+        "Type": "ID",
+        "Table": "HL70529",
+        "LongName": "Degree of Precision",
+        "maxLength": "1"
+    },
+    "TX": {
+        "dataType": "STRING"
+    },
+    "UVC": {
+        "components": [
+            {
+                "dataType": "UVC.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "UVC.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "UVC.1": {
+        "Type": "CNE",
+        "Table": "HL70153",
+        "LongName": "Value Code",
+        "maxLength": "20"
+    },
+    "UVC.2": {
+        "Type": "MO",
+        "Table": "",
+        "LongName": "Value Amount",
+        "maxLength": "20"
+    },
+    "VH": {
+        "components": [
+            {
+                "dataType": "VH.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "VH.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "VH.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "VH.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "VH.1": {
+        "Type": "ID",
+        "Table": "HL70267",
+        "LongName": "Start Day Range",
+        "maxLength": "3"
+    },
+    "VH.2": {
+        "Type": "ID",
+        "Table": "HL70267",
+        "LongName": "End Day Range",
+        "maxLength": "3"
+    },
+    "VH.3": {
+        "Type": "TM",
+        "Table": "",
+        "LongName": "Start Hour Range",
+        "maxLength": "16"
+    },
+    "VH.4": {
+        "Type": "TM",
+        "Table": "",
+        "LongName": "End Hour Range",
+        "maxLength": "16"
+    },
+    "VID": {
+        "components": [
+            {
+                "dataType": "VID.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "VID.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "VID.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "VID.1": {
+        "Type": "ID",
+        "Table": "HL70104",
+        "LongName": "Version ID",
+        "maxLength": "5"
+    },
+    "VID.2": {
+        "Type": "CE",
+        "Table": "HL70399",
+        "LongName": "Internationalization Code",
+        "maxLength": "483"
+    },
+    "VID.3": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "International Version ID",
+        "maxLength": "483"
+    },
+    "VR": {
+        "components": [
+            {
+                "dataType": "VR.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "VR.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "VR.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "First Data Code Value",
+        "maxLength": "6"
+    },
+    "VR.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Last Data Code Value",
+        "maxLength": "6"
+    },
+    "WVI": {
+        "components": [
+            {
+                "dataType": "WVI.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "WVI.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "WVI.1": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Channel Number",
+        "maxLength": "4"
+    },
+    "WVI.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Channel Name",
+        "maxLength": "17"
+    },
+    "WVS": {
+        "components": [
+            {
+                "dataType": "WVS.1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "WVS.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "WVS.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Source One Name",
+        "maxLength": "8"
+    },
+    "WVS.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Source Two Name",
+        "maxLength": "8"
+    },
+    "XAD": {
+        "components": [
+            {
+                "dataType": "XAD.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.13",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XAD.14",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "XAD.1": {
+        "Type": "SAD",
+        "Table": "",
+        "LongName": "Street Address",
+        "maxLength": "184"
+    },
+    "XAD.10": {
+        "Type": "IS",
+        "Table": "HL70288",
+        "LongName": "Census Tract",
+        "maxLength": "20"
+    },
+    "XAD.11": {
+        "Type": "ID",
+        "Table": "HL70465",
+        "LongName": "Address Representation Code",
+        "maxLength": "1"
+    },
+    "XAD.12": {
+        "Type": "DR",
+        "Table": "",
+        "LongName": "Address Validity Range",
+        "maxLength": "53"
+    },
+    "XAD.13": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "26"
+    },
+    "XAD.14": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "26"
+    },
+    "XAD.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Other Designation",
+        "maxLength": "120"
+    },
+    "XAD.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "City",
+        "maxLength": "50"
+    },
+    "XAD.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "State or Province",
+        "maxLength": "50"
+    },
+    "XAD.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Zip or Postal Code",
+        "maxLength": "12"
+    },
+    "XAD.6": {
+        "Type": "ID",
+        "Table": "HL70399",
+        "LongName": "Country",
+        "maxLength": "3"
+    },
+    "XAD.7": {
+        "Type": "ID",
+        "Table": "HL70190",
+        "LongName": "Address Type",
+        "maxLength": "3"
+    },
+    "XAD.8": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Other Geographic Designation",
+        "maxLength": "50"
+    },
+    "XAD.9": {
+        "Type": "IS",
+        "Table": "HL70289",
+        "LongName": "County\/Parish Code",
+        "maxLength": "20"
+    },
+    "XCN": {
+        "components": [
+            {
+                "dataType": "XCN.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.13",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.14",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.15",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.16",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.17",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.18",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.19",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.20",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.21",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.22",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XCN.23",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "XCN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "ID Number",
+        "maxLength": "15"
+    },
+    "XCN.10": {
+        "Type": "ID",
+        "Table": "HL70200",
+        "LongName": "Name Type Code",
+        "maxLength": "1"
+    },
+    "XCN.11": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Identifier Check Digit",
+        "maxLength": "1"
+    },
+    "XCN.12": {
+        "Type": "ID",
+        "Table": "HL70061",
+        "LongName": "Check Digit Scheme",
+        "maxLength": "3"
+    },
+    "XCN.13": {
+        "Type": "ID",
+        "Table": "HL70203",
+        "LongName": "Identifier Type Code",
+        "maxLength": "5"
+    },
+    "XCN.14": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Assigning Facility",
+        "maxLength": "227"
+    },
+    "XCN.15": {
+        "Type": "ID",
+        "Table": "HL70465",
+        "LongName": "Name Representation Code",
+        "maxLength": "1"
+    },
+    "XCN.16": {
+        "Type": "CE",
+        "Table": "HL70448",
+        "LongName": "Name Context",
+        "maxLength": "483"
+    },
+    "XCN.17": {
+        "Type": "DR",
+        "Table": "",
+        "LongName": "Name Validity Range",
+        "maxLength": "53"
+    },
+    "XCN.18": {
+        "Type": "ID",
+        "Table": "HL70444",
+        "LongName": "Name Assembly Order",
+        "maxLength": "1"
+    },
+    "XCN.19": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "26"
+    },
+    "XCN.2": {
+        "Type": "FN",
+        "Table": "",
+        "LongName": "Family Name",
+        "maxLength": "194"
+    },
+    "XCN.20": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "26"
+    },
+    "XCN.21": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Professional Suffix",
+        "maxLength": "199"
+    },
+    "XCN.22": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Assigning Jurisdiction",
+        "maxLength": "705"
+    },
+    "XCN.23": {
+        "Type": "CWE",
+        "Table": "",
+        "LongName": "Assigning Agency or Department",
+        "maxLength": "705"
+    },
+    "XCN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Given Name",
+        "maxLength": "30"
+    },
+    "XCN.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Second and Further Given Names or Initials Thereof",
+        "maxLength": "30"
+    },
+    "XCN.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Suffix (e.g., JR or III)",
+        "maxLength": "20"
+    },
+    "XCN.6": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Prefix (e.g., DR)",
+        "maxLength": "20"
+    },
+    "XCN.7": {
+        "Type": "IS",
+        "Table": "HL70360",
+        "LongName": "Degree (e.g., MD)",
+        "maxLength": "5"
+    },
+    "XCN.8": {
+        "Type": "IS",
+        "Table": "HL70297",
+        "LongName": "Source Table",
+        "maxLength": "4"
+    },
+    "XCN.9": {
+        "Type": "HD",
+        "Table": "HL70363",
+        "LongName": "Assigning Authority",
+        "maxLength": "227"
+    },
+    "XON": {
+        "components": [
+            {
+                "dataType": "XON.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XON.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "XON.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Organization Name",
+        "maxLength": "50"
+    },
+    "XON.10": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Organization Identifier",
+        "maxLength": "20"
+    },
+    "XON.2": {
+        "Type": "IS",
+        "Table": "HL70204",
+        "LongName": "Organization Name Type Code",
+        "maxLength": "20"
+    },
+    "XON.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "ID Number",
+        "maxLength": "4"
+    },
+    "XON.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Check Digit",
+        "maxLength": "1"
+    },
+    "XON.5": {
+        "Type": "ID",
+        "Table": "HL70061",
+        "LongName": "Check Digit Scheme",
+        "maxLength": "3"
+    },
+    "XON.6": {
+        "Type": "HD",
+        "Table": "HL70363",
+        "LongName": "Assigning Authority",
+        "maxLength": "227"
+    },
+    "XON.7": {
+        "Type": "ID",
+        "Table": "HL70203",
+        "LongName": "Identifier Type Code",
+        "maxLength": "5"
+    },
+    "XON.8": {
+        "Type": "HD",
+        "Table": "",
+        "LongName": "Assigning Facility",
+        "maxLength": "227"
+    },
+    "XON.9": {
+        "Type": "ID",
+        "Table": "HL70465",
+        "LongName": "Name Representation Code",
+        "maxLength": "1"
+    },
+    "XPN": {
+        "components": [
+            {
+                "dataType": "XPN.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.13",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XPN.14",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "XPN.1": {
+        "Type": "FN",
+        "Table": "",
+        "LongName": "Family Name",
+        "maxLength": "194"
+    },
+    "XPN.10": {
+        "Type": "DR",
+        "Table": "",
+        "LongName": "Name Validity Range",
+        "maxLength": "53"
+    },
+    "XPN.11": {
+        "Type": "ID",
+        "Table": "HL70444",
+        "LongName": "Name Assembly Order",
+        "maxLength": "1"
+    },
+    "XPN.12": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Effective Date",
+        "maxLength": "26"
+    },
+    "XPN.13": {
+        "Type": "TS",
+        "Table": "",
+        "LongName": "Expiration Date",
+        "maxLength": "26"
+    },
+    "XPN.14": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Professional Suffix",
+        "maxLength": "199"
+    },
+    "XPN.2": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Given Name",
+        "maxLength": "30"
+    },
+    "XPN.3": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Second and Further Given Names or Initials Thereof",
+        "maxLength": "30"
+    },
+    "XPN.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Suffix (e.g., JR or III)",
+        "maxLength": "20"
+    },
+    "XPN.5": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Prefix (e.g., DR)",
+        "maxLength": "20"
+    },
+    "XPN.6": {
+        "Type": "IS",
+        "Table": "HL70360",
+        "LongName": "Degree (e.g., MD)",
+        "maxLength": "6"
+    },
+    "XPN.7": {
+        "Type": "ID",
+        "Table": "HL70200",
+        "LongName": "Name Type Code",
+        "maxLength": "1"
+    },
+    "XPN.8": {
+        "Type": "ID",
+        "Table": "HL70465",
+        "LongName": "Name Representation Code",
+        "maxLength": "1"
+    },
+    "XPN.9": {
+        "Type": "CE",
+        "Table": "HL70448",
+        "LongName": "Name Context",
+        "maxLength": "483"
+    },
+    "XTN": {
+        "components": [
+            {
+                "dataType": "XTN.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.5",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.6",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.7",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.8",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.9",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.10",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.11",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "XTN.12",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "XTN.1": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Telephone Number",
+        "maxLength": "199"
+    },
+    "XTN.10": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Extension Prefix",
+        "maxLength": "4"
+    },
+    "XTN.11": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Speed Dial Code",
+        "maxLength": "6"
+    },
+    "XTN.12": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Unformatted Telephone number",
+        "maxLength": "199"
+    },
+    "XTN.2": {
+        "Type": "ID",
+        "Table": "HL70201",
+        "LongName": "Telecommunication Use Code",
+        "maxLength": "3"
+    },
+    "XTN.3": {
+        "Type": "ID",
+        "Table": "HL70202",
+        "LongName": "Telecommunication Equipment Type",
+        "maxLength": "8"
+    },
+    "XTN.4": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Email Address",
+        "maxLength": "199"
+    },
+    "XTN.5": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Country Code",
+        "maxLength": "3"
+    },
+    "XTN.6": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Area\/City Code",
+        "maxLength": "5"
+    },
+    "XTN.7": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Local Number",
+        "maxLength": "9"
+    },
+    "XTN.8": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Extension",
+        "maxLength": "5"
+    },
+    "XTN.9": {
+        "Type": "ST",
+        "Table": "",
+        "LongName": "Any Text",
+        "maxLength": "199"
+    },
+    "escapeType": {
+        "dataType": "STRING"
+    },
+    "varies": {
+        "dataType": "STRING"
+    }
+}
