@@ -24,6 +24,7 @@ class HL7jsonProfilesGenerator {
     /**
      * @access private
      */
+    private string $eventName;
     private array $messageType;
     private array $messageProfile;
     private array $structuresSchemas;
@@ -97,6 +98,7 @@ class HL7jsonProfilesGenerator {
                     if (in_array($eventName, $ignoreEvents)) {
                         continue;
                     }
+                    $this->eventName = $eventName;
                     $this->messageProfile = array();
 
                     // get strucureId
@@ -307,6 +309,93 @@ class HL7jsonProfilesGenerator {
         $fieldAttributes["Table"] = $this->fieldsSchemas[$fieldName]["Table"];
         $fieldAttributes["LongName"] = $this->fieldsSchemas[$fieldName]["LongName"];
         $fieldAttributes["Chapter"] = $this->fieldsSchemas[$fieldName]["Chapter"];
+
+        // condition predicates
+        // --------------------
+        // PID 
+        if (substr($fieldName, 0, 3) == "PID") {
+            // PID-7 – Date/Time of Birth
+            // This field is required if available in the following messages: A28, A31, A01, A04, A08
+            // In all other messages, it is optional.
+            if ($fieldName == "PID.7") {
+                $fieldAttributes["Usage"] = "O";
+                if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
+                    $fieldAttributes["Usage"] = "RE";
+                }
+            }
+
+            // PID-8 – Administrative Sex
+            // This field is required if available in the following messages: A28, A31, A01, A04
+            // In all other messages, it is optional.
+            if ($fieldName == "PID.8") {
+                $fieldAttributes["Usage"] = "O";
+                if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
+                    $fieldAttributes["Usage"] = "RE";
+                }
+            }
+
+            // PID-11 – Patient Address
+            // This field is required if available in the following messages: A28, A31, A01, A04
+            // In all other messages, it is optional.
+            if ($fieldName == "PID.11") {
+                $fieldAttributes["Usage"] = "O";
+                if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
+                    $fieldAttributes["Usage"] = "RE";
+                }
+            }
+
+            // PID-33 – Last Update Date/Time
+            // This field is required if available in the following messages: A28, A31, A01, A04, A08
+            if ($fieldName == "PID.33") {
+                $fieldAttributes["Usage"] = "C";
+                if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
+                    $fieldAttributes["Usage"] = "RE";
+                }
+            }
+        }
+        
+        // PV1
+        if (substr($fieldName, 0, 3) == "PV1") {
+            // PV1 - General conditions of use
+            // All messages of transaction [ITI-30] that use this segment, actually use a pseudo-PV1, which is empty. The only field populated is PV1-2 “Patient Class” values “N” (Not Applicable).
+            if (in_array($this->eventName, array("A28", "A31", "A40", "A47", "A24", "A37"))) {
+                if (!in_array($fieldName, array("PV1.1", "PV1.2"))) {
+                    $fieldAttributes["Usage"] = "X";
+                }
+            }
+            else {
+                // PV1-3 – Assigned Patient Location
+                // This field is required in the following messages: A02, A12
+                // In all other messages of transaction [ITI-31], it is required if known to the sender.
+                if ($fieldName == "PV1.3") {
+                    $fieldAttributes["Usage"] = "RE";
+                    if (in_array($this->eventName, array("A02", "A12"))) {
+                        $fieldAttributes["Usage"] = "R";
+                    }
+                }
+
+                // PV1-6 – Prior Patient Location
+                // This field is required in the following messages: A02
+                // In all other messages of transaction [ITI-31], it is optional.
+                if ($fieldName == "PV1.6") {
+                    $fieldAttributes["Usage"] = "O";
+                    if (in_array($this->eventName, array("A02"))) {
+                        $fieldAttributes["Usage"] = "R";
+                    }
+                }
+
+                // PV1-42 – Pending Location
+                // This field is required in the Pending Transfer (A15) and Cancel Pending Transfer (A26) messages.
+                // In all other messages of transaction [ITI-31], it is optional.
+                if ($fieldName == "PV1.42") {
+                    $fieldAttributes["Usage"] = "O";
+                    if (in_array($this->eventName, array("A15", "A26"))) {
+                        $fieldAttributes["Usage"] = "R";
+                    }
+                }
+            }
+        }
+        // --------------------
 
         $dataType = $this->fieldsSchemas[$fieldName]["Type"];
         // If dataType has components

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- ADT-A21-ADT_A21.xml 2024-03-17 08:29:31
+ ADT-A21-ADT_A21.xml 2024-04-01 09:41:23
 -->
 <?xml-stylesheet type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"?>
 <HL7v2xConformanceProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd" HL7Version="2.5" ProfileType="Constrainable">
@@ -474,12 +474,12 @@
         </Component>
         <Component Name="Professional Suffix" Usage="X" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Date/Time of Birth" Usage="C" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00110">
+      <Field Name="Date/Time of Birth" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00110">
         <Reference>3.4.2.7</Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Administrative Sex" Usage="C" Min="0" Max="1" Datatype="IS" Length="1" Table="0001" ItemNo="00111">
+      <Field Name="Administrative Sex" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="0001" ItemNo="00111">
         <Reference>3.4.2.8</Reference>
       </Field>
       <Field Name="Patient Alias" Usage="X" Min="0" Max="0" Datatype="XPN" Length="250" ItemNo="00112">
@@ -530,7 +530,7 @@
         <Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
       </Field>
-      <Field Name="Patient Address" Usage="C" Min="0" Max="*" Datatype="XAD" Length="250" ItemNo="00114">
+      <Field Name="Patient Address" Usage="O" Min="0" Max="*" Datatype="XAD" Length="250" ItemNo="00114">
         <Reference>3.4.2.11</Reference>
         <Component Name="Street Address" Usage="O" Datatype="SAD" Length="184">
           <SubComponent Name="Street or Mailing Address" Usage="O" Datatype="ST" Length="120"/>
@@ -1055,7 +1055,7 @@
       <Field Name="Patient Class" Usage="R" Min="1" Max="1" Datatype="IS" Length="1" Table="0004" ItemNo="00132">
         <Reference>3.4.3.2</Reference>
       </Field>
-      <Field Name="Assigned Patient Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00133">
+      <Field Name="Assigned Patient Location" Usage="RE" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00133">
         <Reference>3.4.3.3</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -1126,7 +1126,7 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Prior Patient Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00136">
+      <Field Name="Prior Patient Location" Usage="O" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00136">
         <Reference>3.4.3.6</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -1628,7 +1628,7 @@
       <Field Name="Account Status" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0117" ItemNo="00171">
         <Reference>3.4.3.41</Reference>
       </Field>
-      <Field Name="Pending Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00172">
+      <Field Name="Pending Location" Usage="O" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00172">
         <Reference>3.4.3.42</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>

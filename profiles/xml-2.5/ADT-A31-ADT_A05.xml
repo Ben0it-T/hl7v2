@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- ADT-A31-ADT_A05.xml 2024-03-17 08:29:32
+ ADT-A31-ADT_A05.xml 2024-04-01 09:41:23
 -->
 <?xml-stylesheet type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"?>
 <HL7v2xConformanceProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd" HL7Version="2.5" ProfileType="Constrainable">
@@ -474,12 +474,12 @@
         </Component>
         <Component Name="Professional Suffix" Usage="X" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Date/Time of Birth" Usage="C" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00110">
+      <Field Name="Date/Time of Birth" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00110">
         <Reference>3.4.2.7</Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Administrative Sex" Usage="C" Min="0" Max="1" Datatype="IS" Length="1" Table="0001" ItemNo="00111">
+      <Field Name="Administrative Sex" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="0001" ItemNo="00111">
         <Reference>3.4.2.8</Reference>
       </Field>
       <Field Name="Patient Alias" Usage="X" Min="0" Max="0" Datatype="XPN" Length="250" ItemNo="00112">
@@ -530,7 +530,7 @@
         <Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
       </Field>
-      <Field Name="Patient Address" Usage="C" Min="0" Max="*" Datatype="XAD" Length="250" ItemNo="00114">
+      <Field Name="Patient Address" Usage="RE" Min="0" Max="*" Datatype="XAD" Length="250" ItemNo="00114">
         <Reference>3.4.2.11</Reference>
         <Component Name="Street Address" Usage="O" Datatype="SAD" Length="184">
           <SubComponent Name="Street or Mailing Address" Usage="O" Datatype="ST" Length="120"/>
@@ -770,7 +770,7 @@
       <Field Name="Identity Reliability Code" Usage="R" Min="1" Max="*" Datatype="IS" Length="20" Table="0445" ItemNo="01536">
         <Reference>3.4.2.32</Reference>
       </Field>
-      <Field Name="Last Update Date/Time" Usage="C" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="01537">
+      <Field Name="Last Update Date/Time" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="01537">
         <Reference>3.4.2.33</Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
@@ -1725,7 +1725,7 @@
       <Field Name="Patient Class" Usage="R" Min="1" Max="1" Datatype="IS" Length="1" Table="0004" ItemNo="00132">
         <Reference>3.4.3.2</Reference>
       </Field>
-      <Field Name="Assigned Patient Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00133">
+      <Field Name="Assigned Patient Location" Usage="X" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00133">
         <Reference>3.4.3.3</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -1752,10 +1752,10 @@
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
       </Field>
-      <Field Name="Admission Type" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0007" ItemNo="00134">
+      <Field Name="Admission Type" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0007" ItemNo="00134">
         <Reference>3.4.3.4</Reference>
       </Field>
-      <Field Name="Preadmit Number" Usage="C" Min="0" Max="1" Datatype="CX" Length="250" ItemNo="00135">
+      <Field Name="Preadmit Number" Usage="X" Min="0" Max="1" Datatype="CX" Length="250" ItemNo="00135">
         <Reference>3.4.3.5</Reference>
         <Component Name="ID Number" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
@@ -1796,7 +1796,7 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Prior Patient Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00136">
+      <Field Name="Prior Patient Location" Usage="X" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00136">
         <Reference>3.4.3.6</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -1823,7 +1823,7 @@
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
       </Field>
-      <Field Name="Attending Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00137">
+      <Field Name="Attending Doctor" Usage="X" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00137">
         <Reference>3.4.3.7</Reference>
         <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
@@ -1899,7 +1899,7 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Referring Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00138">
+      <Field Name="Referring Doctor" Usage="X" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00138">
         <Reference>3.4.3.8</Reference>
         <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
@@ -2051,10 +2051,10 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Hospital Service" Usage="O" Min="0" Max="1" Datatype="IS" Length="3" Table="0069" ItemNo="00140">
+      <Field Name="Hospital Service" Usage="X" Min="0" Max="1" Datatype="IS" Length="3" Table="0069" ItemNo="00140">
         <Reference>3.4.3.10</Reference>
       </Field>
-      <Field Name="Temporary Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00141">
+      <Field Name="Temporary Location" Usage="X" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00141">
         <Reference>3.4.3.11</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -2081,22 +2081,22 @@
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
       </Field>
-      <Field Name="Preadmit Test Indicator" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0087" ItemNo="00142">
+      <Field Name="Preadmit Test Indicator" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0087" ItemNo="00142">
         <Reference>3.4.3.12</Reference>
       </Field>
-      <Field Name="Re-admission Indicator" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0092" ItemNo="00143">
+      <Field Name="Re-admission Indicator" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0092" ItemNo="00143">
         <Reference>3.4.3.13</Reference>
       </Field>
-      <Field Name="Admit Source" Usage="O" Min="0" Max="1" Datatype="IS" Length="6" Table="0023" ItemNo="00144">
+      <Field Name="Admit Source" Usage="X" Min="0" Max="1" Datatype="IS" Length="6" Table="0023" ItemNo="00144">
         <Reference>3.4.3.14</Reference>
       </Field>
-      <Field Name="Ambulatory Status" Usage="O" Min="0" Max="*" Datatype="IS" Length="2" Table="0009" ItemNo="00145">
+      <Field Name="Ambulatory Status" Usage="X" Min="0" Max="*" Datatype="IS" Length="2" Table="0009" ItemNo="00145">
         <Reference>3.4.3.15</Reference>
       </Field>
-      <Field Name="VIP Indicator" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0099" ItemNo="00146">
+      <Field Name="VIP Indicator" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0099" ItemNo="00146">
         <Reference>3.4.3.16</Reference>
       </Field>
-      <Field Name="Admitting Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00147">
+      <Field Name="Admitting Doctor" Usage="X" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00147">
         <Reference>3.4.3.17</Reference>
         <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
@@ -2172,10 +2172,10 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Patient Type" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0018" ItemNo="00148">
+      <Field Name="Patient Type" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0018" ItemNo="00148">
         <Reference>3.4.3.18</Reference>
       </Field>
-      <Field Name="Visit Number" Usage="C" Min="0" Max="1" Datatype="CX" Length="250" ItemNo="00149">
+      <Field Name="Visit Number" Usage="X" Min="0" Max="1" Datatype="CX" Length="250" ItemNo="00149">
         <Reference>3.4.3.19</Reference>
         <Component Name="ID Number" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
@@ -2216,7 +2216,7 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Financial Class" Usage="O" Min="0" Max="*" Datatype="FC" Length="50" Table="0064" ItemNo="00150">
+      <Field Name="Financial Class" Usage="X" Min="0" Max="*" Datatype="FC" Length="50" Table="0064" ItemNo="00150">
         <Reference>3.4.3.20</Reference>
         <Component Name="Financial Class Code" Usage="R" Datatype="IS" Length="20" Table="0064"/>
         <Component Name="Effective Date" Usage="O" Datatype="TS" Length="26">
@@ -2224,55 +2224,55 @@
           <SubComponent Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
         </Component>
       </Field>
-      <Field Name="Charge Price Indicator" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0032" ItemNo="00151">
+      <Field Name="Charge Price Indicator" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0032" ItemNo="00151">
         <Reference>3.4.3.21</Reference>
       </Field>
-      <Field Name="Courtesy Code" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0045" ItemNo="00152">
+      <Field Name="Courtesy Code" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0045" ItemNo="00152">
         <Reference>3.4.3.22</Reference>
       </Field>
-      <Field Name="Credit Rating" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0046" ItemNo="00153">
+      <Field Name="Credit Rating" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0046" ItemNo="00153">
         <Reference>3.4.3.23</Reference>
       </Field>
-      <Field Name="Contract Code" Usage="O" Min="0" Max="*" Datatype="IS" Length="2" Table="0044" ItemNo="00154">
+      <Field Name="Contract Code" Usage="X" Min="0" Max="*" Datatype="IS" Length="2" Table="0044" ItemNo="00154">
         <Reference>3.4.3.24</Reference>
       </Field>
-      <Field Name="Contract Effective Date" Usage="O" Min="0" Max="*" Datatype="DT" Length="8" ItemNo="00155">
+      <Field Name="Contract Effective Date" Usage="X" Min="0" Max="*" Datatype="DT" Length="8" ItemNo="00155">
         <Reference>3.4.3.25</Reference>
       </Field>
-      <Field Name="Contract Amount" Usage="O" Min="0" Max="*" Datatype="NM" Length="12" ItemNo="00156">
+      <Field Name="Contract Amount" Usage="X" Min="0" Max="*" Datatype="NM" Length="12" ItemNo="00156">
         <Reference>3.4.3.26</Reference>
       </Field>
-      <Field Name="Contract Period" Usage="O" Min="0" Max="*" Datatype="NM" Length="3" ItemNo="00157">
+      <Field Name="Contract Period" Usage="X" Min="0" Max="*" Datatype="NM" Length="3" ItemNo="00157">
         <Reference>3.4.3.27</Reference>
       </Field>
-      <Field Name="Interest Code" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0073" ItemNo="00158">
+      <Field Name="Interest Code" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0073" ItemNo="00158">
         <Reference>3.4.3.28</Reference>
       </Field>
-      <Field Name="Transfer to Bad Debt Code" Usage="O" Min="0" Max="1" Datatype="IS" Length="4" Table="0110" ItemNo="00159">
+      <Field Name="Transfer to Bad Debt Code" Usage="X" Min="0" Max="1" Datatype="IS" Length="4" Table="0110" ItemNo="00159">
         <Reference>3.4.3.29</Reference>
       </Field>
-      <Field Name="Transfer to Bad Debt Date" Usage="O" Min="0" Max="1" Datatype="DT" Length="8" ItemNo="00160">
+      <Field Name="Transfer to Bad Debt Date" Usage="X" Min="0" Max="1" Datatype="DT" Length="8" ItemNo="00160">
         <Reference>3.4.3.30</Reference>
       </Field>
-      <Field Name="Bad Debt Agency Code" Usage="O" Min="0" Max="1" Datatype="IS" Length="10" Table="0021" ItemNo="00161">
+      <Field Name="Bad Debt Agency Code" Usage="X" Min="0" Max="1" Datatype="IS" Length="10" Table="0021" ItemNo="00161">
         <Reference>3.4.3.31</Reference>
       </Field>
-      <Field Name="Bad Debt Transfer Amount" Usage="O" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00162">
+      <Field Name="Bad Debt Transfer Amount" Usage="X" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00162">
         <Reference>3.4.3.32</Reference>
       </Field>
-      <Field Name="Bad Debt Recovery Amount" Usage="O" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00163">
+      <Field Name="Bad Debt Recovery Amount" Usage="X" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00163">
         <Reference>3.4.3.33</Reference>
       </Field>
-      <Field Name="Delete Account Indicator" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="0111" ItemNo="00164">
+      <Field Name="Delete Account Indicator" Usage="X" Min="0" Max="1" Datatype="IS" Length="1" Table="0111" ItemNo="00164">
         <Reference>3.4.3.34</Reference>
       </Field>
-      <Field Name="Delete Account Date" Usage="O" Min="0" Max="1" Datatype="DT" Length="8" ItemNo="00165">
+      <Field Name="Delete Account Date" Usage="X" Min="0" Max="1" Datatype="DT" Length="8" ItemNo="00165">
         <Reference>3.4.3.35</Reference>
       </Field>
-      <Field Name="Discharge Disposition" Usage="O" Min="0" Max="1" Datatype="IS" Length="3" Table="0112" ItemNo="00166">
+      <Field Name="Discharge Disposition" Usage="X" Min="0" Max="1" Datatype="IS" Length="3" Table="0112" ItemNo="00166">
         <Reference>3.4.3.36</Reference>
       </Field>
-      <Field Name="Discharged to Location" Usage="O" Min="0" Max="1" Datatype="DLD" Length="47" Table="0113" ItemNo="00167">
+      <Field Name="Discharged to Location" Usage="X" Min="0" Max="1" Datatype="DLD" Length="47" Table="0113" ItemNo="00167">
         <Reference>3.4.3.37</Reference>
         <Component Name="Discharge Location" Usage="R" Datatype="IS" Length="20" Table="0113"/>
         <Component Name="Effective Date" Usage="O" Datatype="TS" Length="26">
@@ -2280,7 +2280,7 @@
           <SubComponent Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
         </Component>
       </Field>
-      <Field Name="Diet Type" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0114" ItemNo="00168">
+      <Field Name="Diet Type" Usage="X" Min="0" Max="1" Datatype="CE" Length="250" Table="0114" ItemNo="00168">
         <Reference>3.4.3.38</Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2289,16 +2289,16 @@
         <Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
       </Field>
-      <Field Name="Servicing Facility" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0115" ItemNo="00169">
+      <Field Name="Servicing Facility" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0115" ItemNo="00169">
         <Reference>3.4.3.39</Reference>
       </Field>
       <Field Name="Bed Status" Usage="X" Min="0" Max="0" Datatype="IS" Length="1" Table="0116" ItemNo="00170">
         <Reference>3.4.3.40</Reference>
       </Field>
-      <Field Name="Account Status" Usage="O" Min="0" Max="1" Datatype="IS" Length="2" Table="0117" ItemNo="00171">
+      <Field Name="Account Status" Usage="X" Min="0" Max="1" Datatype="IS" Length="2" Table="0117" ItemNo="00171">
         <Reference>3.4.3.41</Reference>
       </Field>
-      <Field Name="Pending Location" Usage="C" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00172">
+      <Field Name="Pending Location" Usage="X" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00172">
         <Reference>3.4.3.42</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -2325,7 +2325,7 @@
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
       </Field>
-      <Field Name="Prior Temporary Location" Usage="O" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00173">
+      <Field Name="Prior Temporary Location" Usage="X" Min="0" Max="1" Datatype="PL" Length="80" ItemNo="00173">
         <Reference>3.4.3.43</Reference>
         <Component Name="Point of Care" Usage="O" Datatype="IS" Length="20" Table="0302"/>
         <Component Name="Room" Usage="O" Datatype="IS" Length="20" Table="0303"/>
@@ -2352,29 +2352,29 @@
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
       </Field>
-      <Field Name="Admit Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00174">
+      <Field Name="Admit Date/Time" Usage="X" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00174">
         <Reference>3.4.3.44</Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Discharge Date/Time" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00175">
+      <Field Name="Discharge Date/Time" Usage="X" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00175">
         <Reference>3.4.3.45</Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Current Patient Balance" Usage="O" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00176">
+      <Field Name="Current Patient Balance" Usage="X" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00176">
         <Reference>3.4.3.46</Reference>
       </Field>
-      <Field Name="Total Charges" Usage="O" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00177">
+      <Field Name="Total Charges" Usage="X" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00177">
         <Reference>3.4.3.47</Reference>
       </Field>
-      <Field Name="Total Adjustments" Usage="O" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00178">
+      <Field Name="Total Adjustments" Usage="X" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00178">
         <Reference>3.4.3.48</Reference>
       </Field>
-      <Field Name="Total Payments" Usage="O" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00179">
+      <Field Name="Total Payments" Usage="X" Min="0" Max="1" Datatype="NM" Length="12" ItemNo="00179">
         <Reference>3.4.3.49</Reference>
       </Field>
-      <Field Name="Alternate Visit ID" Usage="O" Min="0" Max="1" Datatype="CX" Length="250" Table="0203" ItemNo="00180">
+      <Field Name="Alternate Visit ID" Usage="X" Min="0" Max="1" Datatype="CX" Length="250" Table="0203" ItemNo="00180">
         <Reference>3.4.3.50</Reference>
         <Component Name="ID Number" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
@@ -2415,7 +2415,7 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Visit Indicator" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="0326" ItemNo="01226">
+      <Field Name="Visit Indicator" Usage="X" Min="0" Max="1" Datatype="IS" Length="1" Table="0326" ItemNo="01226">
         <Reference>3.4.3.51</Reference>
       </Field>
       <Field Name="Other Healthcare Provider" Usage="X" Min="0" Max="0" Datatype="XCN" Length="250" ItemNo="01274">
