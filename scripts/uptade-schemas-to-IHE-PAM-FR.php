@@ -1264,7 +1264,7 @@ foreach ($messageStructures as $type => $event) {
                                 $ROL++;
                                 if ($ROL == 1) {
                                     $msgStruct["ADT_A01"]["elements"][$key]["minOccurs"] = "0";
-                                    $msgStruct["ADT_A01"]["elements"][$key]["maxOccurs"] = "0";
+                                    $msgStruct["ADT_A01"]["elements"][$key]["maxOccurs"] = "unbounded";
                                     $msgStruct["ADT_A01"]["elements"][$key]["Usage"] = "RE";
                                 }
                                 break;

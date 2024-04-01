@@ -8167,7 +8167,7 @@
         "Name": "ROL",
         "Usage": "RE",
         "Min": "0",
-        "Max": "0",
+        "Max": "*",
         "LongName": "Role",
         "Chapter": "15.4.7",
         "fields": [
