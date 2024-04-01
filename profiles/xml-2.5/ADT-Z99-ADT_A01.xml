@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- ADT-Z99-ADT_A01.xml 2024-04-01 09:41:23
+ ADT-Z99-ADT_A01.xml 2024-04-01 11:15:17
 -->
 <?xml-stylesheet type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"?>
 <HL7v2xConformanceProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd" HL7Version="2.5" ProfileType="Constrainable">
@@ -1049,7 +1049,7 @@
       </Field>
     </Segment>
     <Segment Name="ROL" LongName="Role" Usage="O" Min="0" Max="*">
-      <Field Name="Role Instance ID" Usage="C" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
+      <Field Name="Role Instance ID" Usage="O" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
         <Reference>15.4.7.1</Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
@@ -3198,7 +3198,7 @@
       </Field>
     </Segment>
     <Segment Name="ROL" LongName="Role" Usage="O" Min="0" Max="*">
-      <Field Name="Role Instance ID" Usage="C" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
+      <Field Name="Role Instance ID" Usage="O" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
         <Reference>15.4.7.1</Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
@@ -4239,7 +4239,7 @@
         </Field>
       </Segment>
       <Segment Name="ROL" LongName="Role" Usage="O" Min="0" Max="*">
-        <Field Name="Role Instance ID" Usage="C" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
+        <Field Name="Role Instance ID" Usage="O" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
           <Reference>15.4.7.1</Reference>
           <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
           <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
@@ -7108,7 +7108,7 @@
         </Field>
       </Segment>
       <Segment Name="ROL" LongName="Role" Usage="O" Min="0" Max="*">
-        <Field Name="Role Instance ID" Usage="C" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
+        <Field Name="Role Instance ID" Usage="O" Min="0" Max="1" Datatype="EI" Length="60" ItemNo="01206">
           <Reference>15.4.7.1</Reference>
           <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
           <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>

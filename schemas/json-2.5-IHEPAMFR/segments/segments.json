@@ -8875,7 +8875,7 @@
                 "field": "ROL.1",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "C"
+                "Usage": "O"
             },
             {
                 "field": "ROL.2",

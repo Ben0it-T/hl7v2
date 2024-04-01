@@ -8173,7 +8173,7 @@
         "fields": [
             {
                 "Name": "ROL.1",
-                "Usage": "C",
+                "Usage": "O",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01206",
@@ -24276,7 +24276,7 @@
         "fields": [
             {
                 "Name": "ROL.1",
-                "Usage": "C",
+                "Usage": "O",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01206",
@@ -31172,7 +31172,7 @@
                 "fields": [
                     {
                         "Name": "ROL.1",
-                        "Usage": "C",
+                        "Usage": "O",
                         "Min": "0",
                         "Max": "1",
                         "Item": "01206",
@@ -55554,7 +55554,7 @@
                 "fields": [
                     {
                         "Name": "ROL.1",
-                        "Usage": "C",
+                        "Usage": "O",
                         "Min": "0",
                         "Max": "1",
                         "Item": "01206",

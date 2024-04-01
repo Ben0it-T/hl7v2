@@ -68,7 +68,8 @@
             {
                 "segment": "ROL",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "0",
+                "Usage": "RE"
             },
             {
                 "segment": "NK1",

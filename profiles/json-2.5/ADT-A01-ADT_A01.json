@@ -8165,15 +8165,15 @@
     {
         "Type": "segment",
         "Name": "ROL",
-        "Usage": "O",
+        "Usage": "RE",
         "Min": "0",
-        "Max": "*",
+        "Max": "0",
         "LongName": "Role",
         "Chapter": "15.4.7",
         "fields": [
             {
                 "Name": "ROL.1",
-                "Usage": "C",
+                "Usage": "O",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01206",
@@ -24975,7 +24975,7 @@
         "fields": [
             {
                 "Name": "ROL.1",
-                "Usage": "C",
+                "Usage": "O",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01206",
@@ -33126,7 +33126,7 @@
                 "fields": [
                     {
                         "Name": "ROL.1",
-                        "Usage": "C",
+                        "Usage": "O",
                         "Min": "0",
                         "Max": "1",
                         "Item": "01206",
@@ -56253,7 +56253,7 @@
                 "fields": [
                     {
                         "Name": "ROL.1",
-                        "Usage": "C",
+                        "Usage": "O",
                         "Min": "0",
                         "Max": "1",
                         "Item": "01206",

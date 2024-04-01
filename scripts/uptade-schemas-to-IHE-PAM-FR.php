@@ -470,7 +470,8 @@ foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
 foreach ($segmentsSchemas["ROL"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'ROL.1':
-            $segmentsSchemas["ROL"]["fields"][$key]["Usage"] = "C";
+            // ROL-1 – Role Instance ID. This field is in fact optional in the context of ADT messages.
+            $segmentsSchemas["ROL"]["fields"][$key]["Usage"] = "O";
             break;
 
         case 'ROL.9':
@@ -1251,6 +1252,30 @@ foreach ($messageStructures as $type => $event) {
             if (in_array($eventName, array("A01", "A04", "Z99"))) {
                 array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, array($ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD));
             }
+
+            // ADT^A01^ADT_A01
+            // ADT^A04^ADT_A01
+            if (in_array($eventName, array("A01", "A04"))) {
+                $ROL = 0;
+                foreach ($msgStruct["ADT_A01"]["elements"] as $key => $element) {
+                    if (isset($element["segment"])) {
+                        switch ($element["segment"]) {
+                            case 'ROL':
+                                $ROL++;
+                                if ($ROL == 1) {
+                                    $msgStruct["ADT_A01"]["elements"][$key]["minOccurs"] = "0";
+                                    $msgStruct["ADT_A01"]["elements"][$key]["maxOccurs"] = "0";
+                                    $msgStruct["ADT_A01"]["elements"][$key]["Usage"] = "RE";
+                                }
+                                break;
+
+                            default:
+                                break;
+                        }
+                    }
+                }
+            }
+
 
             // ADT^A09^ADT_A09
             if (in_array($eventName, array("A09"))) {
