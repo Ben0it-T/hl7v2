@@ -1,6 +1,6 @@
 # hl7v2 scripts
 
-Create HL7 2.5 json schemas and profiles from 2.x xsd schemas.
+Create HL7 2.5 json schemas and profiles from 2.x xsd schemas.  
 HL7’s Version 2.x xsd schemas : [HL7 Version 2 Product Suite](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185)
 
 ## Usage
