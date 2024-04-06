@@ -122,7 +122,7 @@ class HL7xmlProfilesGenerator {
                     $xmlDoc->formatOutput = true;
                     
                     // add comment
-                    $xmlDoc->appendChild($xmlDoc->createComment("\r\n " . $outputFilename . " " . date('Y-m-d h:i:s') . "\r\n"));
+                    // $xmlDoc->appendChild($xmlDoc->createComment("\r\n " . $outputFilename . " " . date('Y-m-d h:i:s') . "\r\n"));
 
                     // create stylesheet line
                     $xslt = $xmlDoc->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"');

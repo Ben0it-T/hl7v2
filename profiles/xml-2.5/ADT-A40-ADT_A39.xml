@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- ADT-A40-ADT_A39.xml 2024-04-01 11:23:05
--->
 <?xml-stylesheet type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"?>
 <HL7v2xConformanceProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd" HL7Version="2.5" ProfileType="Constrainable">
   <MetaData Name="ITI" OrgName="IHE" Version="2.5" Status="DRAFT" Topics="confsig-IHE-2.5-profile-accNE_accAL-Deferred"/>
