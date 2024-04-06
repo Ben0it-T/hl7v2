@@ -303,7 +303,7 @@ class HL7jsonProfilesGenerator {
      */
     private function addField($fieldName, $fieldAttributes) {
         // set field attributes
-        $fieldAttributes["Item"] = sprintf('%05s', $this->fieldsSchemas[$fieldName]["Item"]);
+        $fieldAttributes["Item"] = ($this->fieldsSchemas[$fieldName]["Item"] != "") ? sprintf('%05s', $this->fieldsSchemas[$fieldName]["Item"]) : "";
         $fieldAttributes["Datatype"] = $this->fieldsSchemas[$fieldName]["Type"];
         $fieldAttributes["Length"] = $this->fieldsSchemas[$fieldName]["maxLength"];
         // $fieldAttributes["Table"] = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? substr($this->fieldsSchemas[$fieldName]["Table"],3) : "";

@@ -2345,33 +2345,33 @@
       </Field>
     </Segment>
     <Segment Name="ZBE" LongName="Movement segment" Usage="R" Min="1" Max="1">
-      <Field Name="Movement ID" Usage="R" Min="1" Max="*" Datatype="EI" Length="427" ItemNo="00000">
+      <Field Name="Movement ID" Usage="R" Min="1" Max="*" Datatype="EI" Length="427" ItemNo="">
         <Reference></Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
-      <Field Name="Start of Movement Date/Time" Usage="R" Min="1" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Start of Movement Date/Time" Usage="R" Min="1" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="End of Movement Date/Time" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="End of Movement Date/Time" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Action on the Movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="00000">
+      <Field Name="Action on the Movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Indicator Historical movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" ItemNo="00000">
+      <Field Name="Indicator Historical movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Original trigger event code" Usage="C" Min="0" Max="1" Datatype="ID" Length="3" ItemNo="00000">
+      <Field Name="Original trigger event code" Usage="C" Min="0" Max="1" Datatype="ID" Length="3" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Ward of medical responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="00000">
+      <Field Name="Ward of medical responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="Organization Name" Usage="RE" Datatype="ST" Length="50"/>
         <Component Name="Organization Name Type Code" Usage="X" Datatype="IS" Length="20" Table="0204"/>
@@ -2392,7 +2392,7 @@
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Organization Identifier" Usage="RE" Datatype="ST" Length="64"/>
       </Field>
-      <Field Name="Ward of care responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="00000">
+      <Field Name="Ward of care responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="Organization Name" Usage="RE" Datatype="ST" Length="50"/>
         <Component Name="Organization Name Type Code" Usage="X" Datatype="IS" Length="20" Table="0204"/>
@@ -2413,7 +2413,7 @@
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Organization Identifier" Usage="RE" Datatype="ST" Length="64"/>
       </Field>
-      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="00000">
+      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2427,7 +2427,7 @@
       </Field>
     </Segment>
     <Segment Name="ZFV" LongName="Complément d'information sur la venue" Usage="O" Min="0" Max="1">
-      <Field Name="Etablissement de provenance et date de dernier séjour dans cet établissement" Usage="O" Min="0" Max="1" Datatype="DLD" Length="47" Table="0113" ItemNo="00000">
+      <Field Name="Etablissement de provenance et date de dernier séjour dans cet établissement" Usage="O" Min="0" Max="1" Datatype="DLD" Length="47" Table="0113" ItemNo="">
         <Reference></Reference>
         <Component Name="Discharge Location" Usage="R" Datatype="IS" Length="20" Table="0113"/>
         <Component Name="Effective Date" Usage="O" Datatype="TS" Length="26">
@@ -2435,7 +2435,7 @@
           <SubComponent Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
         </Component>
       </Field>
-      <Field Name="Mode de transport de sortie" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0430" ItemNo="00000">
+      <Field Name="Mode de transport de sortie" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0430" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2444,20 +2444,20 @@
         <Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
       </Field>
-      <Field Name="Type de préadmission" Usage="X" Min="0" Max="0" Datatype="IS" Length="2" ItemNo="00000">
+      <Field Name="Type de préadmission" Usage="X" Min="0" Max="0" Datatype="IS" Length="2" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Date de début de placement (psy)" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
-        <Reference></Reference>
-        <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
-        <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
-      </Field>
-      <Field Name="Date de fin de placement (psy)" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de début de placement (psy)" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Adresse de l'établissement de provenance ou de destination" Usage="O" Min="0" Max="2" Datatype="XAD" Length="250" ItemNo="00000">
+      <Field Name="Date de fin de placement (psy)" Usage="O" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
+        <Reference></Reference>
+        <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+        <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
+      </Field>
+      <Field Name="Adresse de l'établissement de provenance ou de destination" Usage="O" Min="0" Max="2" Datatype="XAD" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="Street Address" Usage="O" Datatype="SAD" Length="184">
           <SubComponent Name="Street or Mailing Address" Usage="O" Datatype="ST" Length="120"/>
@@ -2487,7 +2487,7 @@
           <SubComponent Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
         </Component>
       </Field>
-      <Field Name="NDA de l'établissement de provenance" Usage="O" Min="0" Max="1" Datatype="CX" Length="250" ItemNo="00000">
+      <Field Name="NDA de l'établissement de provenance" Usage="O" Min="0" Max="1" Datatype="CX" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="ID Number" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
@@ -2528,7 +2528,7 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Numéro d'archives" Usage="O" Min="0" Max="*" Datatype="CX" Length="250" ItemNo="00000">
+      <Field Name="Numéro d'archives" Usage="O" Min="0" Max="*" Datatype="CX" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="ID Number" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
@@ -2569,13 +2569,13 @@
           <SubComponent Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
         </Component>
       </Field>
-      <Field Name="Mode de sortie personnalisé" Usage="O" Min="0" Max="1" Datatype="IS" Length="6" ItemNo="00000">
+      <Field Name="Mode de sortie personnalisé" Usage="O" Min="0" Max="1" Datatype="IS" Length="6" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Code RIM-P du mode légal de soin transmis dans le PV2-3" Usage="C" Min="0" Max="1" Datatype="IS" Length="2" Table="RIM-P" ItemNo="00000">
+      <Field Name="Code RIM-P du mode légal de soin transmis dans le PV2-3" Usage="C" Min="0" Max="1" Datatype="IS" Length="2" Table="RIM-P" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Prise en charge durant le transport" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="3306" ItemNo="00000">
+      <Field Name="Prise en charge durant le transport" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="3306" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2586,19 +2586,19 @@
       </Field>
     </Segment>
     <Segment Name="ZFM" LongName="Mouvement PMSI" Usage="O" Min="0" Max="1">
-      <Field Name="Mode d'entrée PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-1" ItemNo="00000">
+      <Field Name="Mode d'entrée PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-1" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode de sortie PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-2" ItemNo="00000">
+      <Field Name="Mode de sortie PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-2" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode de provenance PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-3-4" ItemNo="00000">
+      <Field Name="Mode de provenance PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-3-4" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode de destination PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-3-4" ItemNo="00000">
+      <Field Name="Mode de destination PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-3-4" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Passage par une structure des Urgences (PMSI)" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-5" ItemNo="00000">
+      <Field Name="Passage par une structure des Urgences (PMSI)" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-5" ItemNo="">
         <Reference></Reference>
       </Field>
     </Segment>

@@ -2345,33 +2345,33 @@
       </Field>
     </Segment>
     <Segment Name="ZBE" LongName="Movement segment" Usage="R" Min="1" Max="1">
-      <Field Name="Movement ID" Usage="R" Min="1" Max="*" Datatype="EI" Length="427" ItemNo="00000">
+      <Field Name="Movement ID" Usage="R" Min="1" Max="*" Datatype="EI" Length="427" ItemNo="">
         <Reference></Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
-      <Field Name="Start of Movement Date/Time" Usage="R" Min="1" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Start of Movement Date/Time" Usage="R" Min="1" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="End of Movement Date/Time" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="End of Movement Date/Time" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Action on the Movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="00000">
+      <Field Name="Action on the Movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Indicator Historical movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" ItemNo="00000">
+      <Field Name="Indicator Historical movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Original trigger event code" Usage="C" Min="0" Max="1" Datatype="ID" Length="3" ItemNo="00000">
+      <Field Name="Original trigger event code" Usage="C" Min="0" Max="1" Datatype="ID" Length="3" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Ward of medical responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="00000">
+      <Field Name="Ward of medical responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="Organization Name" Usage="RE" Datatype="ST" Length="50"/>
         <Component Name="Organization Name Type Code" Usage="X" Datatype="IS" Length="20" Table="0204"/>
@@ -2392,7 +2392,7 @@
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Organization Identifier" Usage="RE" Datatype="ST" Length="64"/>
       </Field>
-      <Field Name="Ward of care responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="00000">
+      <Field Name="Ward of care responsibility in the period starting with this movement" Usage="C" Min="0" Max="1" Datatype="XON" Length="250" ItemNo="">
         <Reference></Reference>
         <Component Name="Organization Name" Usage="RE" Datatype="ST" Length="50"/>
         <Component Name="Organization Name Type Code" Usage="X" Datatype="IS" Length="20" Table="0204"/>
@@ -2413,7 +2413,7 @@
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Organization Identifier" Usage="RE" Datatype="ST" Length="64"/>
       </Field>
-      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="00000">
+      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>

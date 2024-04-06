@@ -2827,39 +2827,39 @@
       </Field>
     </Segment>
     <Segment Name="ZFA" LongName="Statut DMP" Usage="RE" Min="0" Max="1">
-      <Field Name="Statut du DMP du patient" Usage="RE" Min="0" Max="1" Datatype="ID" Length="20" Table="IHE-ZFA-1" ItemNo="00000">
+      <Field Name="Statut du DMP du patient" Usage="RE" Min="0" Max="1" Datatype="ID" Length="20" Table="IHE-ZFA-1" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Date de recueil du statut du DMP" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
-        <Reference></Reference>
-        <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
-        <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
-      </Field>
-      <Field Name="Date de fermeture du DMP du patient" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de recueil du statut du DMP" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Autorisation d'accès valide au DMP du patient pour l'établissement" Usage="X" Min="0" Max="0" Datatype="ID" Length="1" Table="0136" ItemNo="00000">
-        <Reference></Reference>
-      </Field>
-      <Field Name="Date de recueil de l'état de l'autorisation d'accès au DMP du patient pour l'établissement" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de fermeture du DMP du patient" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Opposition du patient à l'accès en mode bris de glace" Usage="X" Min="0" Max="0" Datatype="ID" Length="1" Table="0136" ItemNo="00000">
+      <Field Name="Autorisation d'accès valide au DMP du patient pour l'établissement" Usage="X" Min="0" Max="0" Datatype="ID" Length="1" Table="0136" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Opposition du patient à l'accès en mode centre de régulation" Usage="X" Min="0" Max="0" Datatype="ID" Length="1" Table="0136" ItemNo="00000">
-        <Reference></Reference>
-      </Field>
-      <Field Name="Date de recueil de l'état des oppositions du patient" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de recueil de l'état de l'autorisation d'accès au DMP du patient pour l'établissement" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Information et opposition à l'alimentation" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-9" ItemNo="00000">
+      <Field Name="Opposition du patient à l'accès en mode bris de glace" Usage="X" Min="0" Max="0" Datatype="ID" Length="1" Table="0136" ItemNo="">
+        <Reference></Reference>
+      </Field>
+      <Field Name="Opposition du patient à l'accès en mode centre de régulation" Usage="X" Min="0" Max="0" Datatype="ID" Length="1" Table="0136" ItemNo="">
+        <Reference></Reference>
+      </Field>
+      <Field Name="Date de recueil de l'état des oppositions du patient" Usage="X" Min="0" Max="0" Datatype="TS" Length="26" ItemNo="">
+        <Reference></Reference>
+        <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
+        <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
+      </Field>
+      <Field Name="Information et opposition à l'alimentation" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-9" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2871,12 +2871,12 @@
         <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
         <Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Date de recueil de l'information et opposition à l'alimentation" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de recueil de l'information et opposition à l'alimentation" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Information et opposition à la consultation du DMP" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-11" ItemNo="00000">
+      <Field Name="Information et opposition à la consultation du DMP" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-11" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2888,71 +2888,71 @@
         <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
         <Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Date de recueil de l'information et opposition à la consultation" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de recueil de l'information et opposition à la consultation" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
     </Segment>
     <Segment Name="ZFD" LongName="Complément démographique" Usage="RE" Min="0" Max="1">
-      <Field Name="Date Lunaire" Usage="O" Min="0" Max="1" Datatype="NA" Length="8" ItemNo="00000">
+      <Field Name="Date Lunaire" Usage="O" Min="0" Max="1" Datatype="NA" Length="8" ItemNo="">
         <Reference></Reference>
         <Component Name="Value1" Usage="R" Datatype="NM" Length="16"/>
         <Component Name="Value2" Usage="O" Datatype="NM" Length="16"/>
         <Component Name="Value3" Usage="O" Datatype="NM" Length="16"/>
         <Component Name="Value4" Usage="O" Datatype="NM" Length="16"/>
       </Field>
-      <Field Name="Nombre de semaines de gestation" Usage="O" Min="0" Max="1" Datatype="NM" Length="16" ItemNo="00000">
+      <Field Name="Nombre de semaines de gestation" Usage="O" Min="0" Max="1" Datatype="NM" Length="16" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" ItemNo="00000">
+      <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Indicateur de date de naissance corrigée" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFD-4" ItemNo="00000">
+      <Field Name="Indicateur de date de naissance corrigée" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFD-4" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode d'obtention de l'identité" Usage="RE" Min="0" Max="1" Datatype="IS" Length="8" Table="IHE-ZFD-5" ItemNo="00000">
+      <Field Name="Mode d'obtention de l'identité" Usage="RE" Min="0" Max="1" Datatype="IS" Length="8" Table="IHE-ZFD-5" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Date d'interrogation du téléservice INSi" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date d'interrogation du téléservice INSi" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Type de justificatif d'identité" Usage="RE" Min="0" Max="1" Datatype="IS" Length="16" Table="IHE-ZFD-7" ItemNo="00000">
+      <Field Name="Type de justificatif d'identité" Usage="RE" Min="0" Max="1" Datatype="IS" Length="16" Table="IHE-ZFD-7" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Date de fin de validité du document" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date de fin de validité du document" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
     </Segment>
     <Segment Name="ZFS" LongName="Mode légal de soins en psychiatrie" Usage="C" Min="0" Max="*">
-      <Field Name="Set ID - ZFS" Usage="R" Min="1" Max="1" Datatype="SI" Length="4" ItemNo="00000">
+      <Field Name="Set ID - ZFS" Usage="R" Min="1" Max="1" Datatype="SI" Length="4" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Identifiant du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="EI" Length="427" ItemNo="00000">
+      <Field Name="Identifiant du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="EI" Length="427" ItemNo="">
         <Reference></Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
-      <Field Name="Date et heure du début du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date et heure du début du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Date et heure de la fin du mode légal de soin" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="00000">
+      <Field Name="Date et heure de la fin du mode légal de soin" Usage="RE" Min="0" Max="1" Datatype="TS" Length="26" ItemNo="">
         <Reference></Reference>
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Action du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="00000">
+      <Field Name="Action du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode légal de soins" Usage="R" Min="1" Max="1" Datatype="CWE" Length="250" Table="3306" ItemNo="00000">
+      <Field Name="Mode légal de soins" Usage="R" Min="1" Max="1" Datatype="CWE" Length="250" Table="3306" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2964,7 +2964,7 @@
         <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
         <Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Code RIM-P du mode légal de soin" Usage="O" Min="0" Max="1" Datatype="CNE" Length="2" Table="3307" ItemNo="00000">
+      <Field Name="Code RIM-P du mode légal de soin" Usage="O" Min="0" Max="1" Datatype="CNE" Length="2" Table="3307" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="R" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2976,7 +2976,7 @@
         <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
         <Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Commentaire" Usage="O" Min="0" Max="1" Datatype="FT" Length="65536" ItemNo="00000">
+      <Field Name="Commentaire" Usage="O" Min="0" Max="1" Datatype="FT" Length="65536" ItemNo="">
         <Reference></Reference>
       </Field>
     </Segment>
