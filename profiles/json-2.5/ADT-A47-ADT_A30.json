@@ -40,7 +40,7 @@
                 "Item": "00003",
                 "Datatype": "HD",
                 "Length": "227",
-                "Table": "HL70361",
+                "Table": "0361",
                 "LongName": "Sending Application",
                 "Chapter": "2.15.9.3",
                 "components": [
@@ -50,7 +50,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "IS",
-                        "Table": "HL70300",
+                        "Table": "0300",
                         "LongName": "Namespace ID",
                         "maxLength": "20"
                     },
@@ -70,7 +70,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70301",
+                        "Table": "0301",
                         "LongName": "Universal ID Type",
                         "maxLength": "6"
                     }
@@ -84,7 +84,7 @@
                 "Item": "00004",
                 "Datatype": "HD",
                 "Length": "227",
-                "Table": "HL70362",
+                "Table": "0362",
                 "LongName": "Sending Facility",
                 "Chapter": "2.15.9.4",
                 "components": [
@@ -94,7 +94,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "IS",
-                        "Table": "HL70300",
+                        "Table": "0300",
                         "LongName": "Namespace ID",
                         "maxLength": "20"
                     },
@@ -114,7 +114,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70301",
+                        "Table": "0301",
                         "LongName": "Universal ID Type",
                         "maxLength": "6"
                     }
@@ -128,7 +128,7 @@
                 "Item": "00005",
                 "Datatype": "HD",
                 "Length": "227",
-                "Table": "HL70361",
+                "Table": "0361",
                 "LongName": "Receiving Application",
                 "Chapter": "2.15.9.5",
                 "components": [
@@ -138,7 +138,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "IS",
-                        "Table": "HL70300",
+                        "Table": "0300",
                         "LongName": "Namespace ID",
                         "maxLength": "20"
                     },
@@ -158,7 +158,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70301",
+                        "Table": "0301",
                         "LongName": "Universal ID Type",
                         "maxLength": "6"
                     }
@@ -172,7 +172,7 @@
                 "Item": "00006",
                 "Datatype": "HD",
                 "Length": "227",
-                "Table": "HL70362",
+                "Table": "0362",
                 "LongName": "Receiving Facility",
                 "Chapter": "2.15.9.6",
                 "components": [
@@ -182,7 +182,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "IS",
-                        "Table": "HL70300",
+                        "Table": "0300",
                         "LongName": "Namespace ID",
                         "maxLength": "20"
                     },
@@ -202,7 +202,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70301",
+                        "Table": "0301",
                         "LongName": "Universal ID Type",
                         "maxLength": "6"
                     }
@@ -236,7 +236,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70529",
+                        "Table": "0529",
                         "LongName": "Degree of Precision",
                         "maxLength": "1"
                     }
@@ -272,7 +272,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70076",
+                        "Table": "0076",
                         "LongName": "Message Code",
                         "maxLength": "3"
                     },
@@ -282,7 +282,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70003",
+                        "Table": "0003",
                         "LongName": "Trigger Event",
                         "maxLength": "3"
                     },
@@ -292,7 +292,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70354",
+                        "Table": "0354",
                         "LongName": "Message Structure",
                         "maxLength": "7"
                     }
@@ -328,7 +328,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70103",
+                        "Table": "0103",
                         "LongName": "Processing ID",
                         "maxLength": "1"
                     },
@@ -338,7 +338,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70207",
+                        "Table": "0207",
                         "LongName": "Processing Mode",
                         "maxLength": "1"
                     }
@@ -362,7 +362,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70104",
+                        "Table": "0104",
                         "LongName": "Version ID",
                         "maxLength": "5"
                     },
@@ -372,7 +372,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "CE",
-                        "Table": "HL70399",
+                        "Table": "0399",
                         "LongName": "Internationalization Code",
                         "maxLength": "483",
                         "components": [
@@ -402,7 +402,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -432,7 +432,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -474,7 +474,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -504,7 +504,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -544,7 +544,7 @@
                 "Item": "00015",
                 "Datatype": "ID",
                 "Length": "2",
-                "Table": "HL70155",
+                "Table": "0155",
                 "LongName": "Accept Acknowledgment Type",
                 "Chapter": "2.15.9.15"
             },
@@ -556,7 +556,7 @@
                 "Item": "00016",
                 "Datatype": "ID",
                 "Length": "2",
-                "Table": "HL70155",
+                "Table": "0155",
                 "LongName": "Application Acknowledgment Type",
                 "Chapter": "2.15.9.16"
             },
@@ -568,7 +568,7 @@
                 "Item": "00017",
                 "Datatype": "ID",
                 "Length": "3",
-                "Table": "HL70399",
+                "Table": "0399",
                 "LongName": "Country Code",
                 "Chapter": "2.15.9.17"
             },
@@ -580,7 +580,7 @@
                 "Item": "00692",
                 "Datatype": "ID",
                 "Length": "16",
-                "Table": "HL70211",
+                "Table": "0211",
                 "LongName": "Character Set",
                 "Chapter": "2.15.9.18"
             },
@@ -622,7 +622,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70396",
+                        "Table": "0396",
                         "LongName": "Name of Coding System",
                         "maxLength": "20"
                     },
@@ -652,7 +652,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70396",
+                        "Table": "0396",
                         "LongName": "Name of Alternate Coding System",
                         "maxLength": "20"
                     }
@@ -666,7 +666,7 @@
                 "Item": "01317",
                 "Datatype": "ID",
                 "Length": "20",
-                "Table": "HL70356",
+                "Table": "0356",
                 "LongName": "Alternate Character Set Handling Scheme",
                 "Chapter": "2.15.9.20"
             },
@@ -698,7 +698,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "IS",
-                        "Table": "HL70363",
+                        "Table": "0363",
                         "LongName": "Namespace ID",
                         "maxLength": "20"
                     },
@@ -718,7 +718,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70301",
+                        "Table": "0301",
                         "LongName": "Universal ID Type",
                         "maxLength": "6"
                     }
@@ -763,7 +763,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "IS",
-                        "Table": "HL70204",
+                        "Table": "0204",
                         "LongName": "Organization Name Type Code",
                         "maxLength": "20"
                     },
@@ -793,7 +793,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70061",
+                        "Table": "0061",
                         "LongName": "Check Digit Scheme",
                         "maxLength": "3"
                     },
@@ -803,7 +803,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "HD",
-                        "Table": "HL70363",
+                        "Table": "0363",
                         "LongName": "Assigning Authority",
                         "maxLength": "227",
                         "components": [
@@ -813,7 +813,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70300",
+                                "Table": "0300",
                                 "LongName": "Namespace ID",
                                 "maxLength": "20"
                             },
@@ -833,7 +833,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70301",
+                                "Table": "0301",
                                 "LongName": "Universal ID Type",
                                 "maxLength": "6"
                             }
@@ -845,7 +845,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70203",
+                        "Table": "0203",
                         "LongName": "Identifier Type Code",
                         "maxLength": "5"
                     },
@@ -865,7 +865,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70300",
+                                "Table": "0300",
                                 "LongName": "Namespace ID",
                                 "maxLength": "20"
                             },
@@ -885,7 +885,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70301",
+                                "Table": "0301",
                                 "LongName": "Universal ID Type",
                                 "maxLength": "6"
                             }
@@ -897,7 +897,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70465",
+                        "Table": "0465",
                         "LongName": "Name Representation Code",
                         "maxLength": "1"
                     },
@@ -989,7 +989,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70529",
+                        "Table": "0529",
                         "LongName": "Degree of Precision",
                         "maxLength": "1"
                     }
@@ -1014,7 +1014,7 @@
                 "Item": "00099",
                 "Datatype": "ID",
                 "Length": "3",
-                "Table": "HL70003",
+                "Table": "0003",
                 "LongName": "Event Type Code",
                 "Chapter": "3.4.1.1"
             },
@@ -1046,7 +1046,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70529",
+                        "Table": "0529",
                         "LongName": "Degree of Precision",
                         "maxLength": "1"
                     }
@@ -1080,7 +1080,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70529",
+                        "Table": "0529",
                         "LongName": "Degree of Precision",
                         "maxLength": "1"
                     }
@@ -1094,7 +1094,7 @@
                 "Item": "00102",
                 "Datatype": "IS",
                 "Length": "3",
-                "Table": "HL70062",
+                "Table": "0062",
                 "LongName": "Event Reason Code",
                 "Chapter": "3.4.1.4"
             },
@@ -1106,7 +1106,7 @@
                 "Item": "00103",
                 "Datatype": "XCN",
                 "Length": "250",
-                "Table": "HL70188",
+                "Table": "0188",
                 "LongName": "Operator ID",
                 "Chapter": "3.4.1.5",
                 "components": [
@@ -1228,7 +1228,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "IS",
-                        "Table": "HL70360",
+                        "Table": "0360",
                         "LongName": "Degree (e.g., MD)",
                         "maxLength": "5"
                     },
@@ -1238,7 +1238,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "IS",
-                        "Table": "HL70297",
+                        "Table": "0297",
                         "LongName": "Source Table",
                         "maxLength": "4"
                     },
@@ -1248,7 +1248,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "HD",
-                        "Table": "HL70363",
+                        "Table": "0363",
                         "LongName": "Assigning Authority",
                         "maxLength": "227",
                         "components": [
@@ -1258,7 +1258,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70300",
+                                "Table": "0300",
                                 "LongName": "Namespace ID",
                                 "maxLength": "20"
                             },
@@ -1278,7 +1278,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70301",
+                                "Table": "0301",
                                 "LongName": "Universal ID Type",
                                 "maxLength": "6"
                             }
@@ -1290,7 +1290,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70200",
+                        "Table": "0200",
                         "LongName": "Name Type Code",
                         "maxLength": "1"
                     },
@@ -1310,7 +1310,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70061",
+                        "Table": "0061",
                         "LongName": "Check Digit Scheme",
                         "maxLength": "3"
                     },
@@ -1320,7 +1320,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70203",
+                        "Table": "0203",
                         "LongName": "Identifier Type Code",
                         "maxLength": "5"
                     },
@@ -1340,7 +1340,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70300",
+                                "Table": "0300",
                                 "LongName": "Namespace ID",
                                 "maxLength": "20"
                             },
@@ -1360,7 +1360,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70301",
+                                "Table": "0301",
                                 "LongName": "Universal ID Type",
                                 "maxLength": "6"
                             }
@@ -1372,7 +1372,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70465",
+                        "Table": "0465",
                         "LongName": "Name Representation Code",
                         "maxLength": "1"
                     },
@@ -1382,7 +1382,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "CE",
-                        "Table": "HL70448",
+                        "Table": "0448",
                         "LongName": "Name Context",
                         "maxLength": "483",
                         "components": [
@@ -1412,7 +1412,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -1442,7 +1442,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -1486,7 +1486,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70444",
+                        "Table": "0444",
                         "LongName": "Name Assembly Order",
                         "maxLength": "1"
                     },
@@ -1516,7 +1516,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70529",
+                                "Table": "0529",
                                 "LongName": "Degree of Precision",
                                 "maxLength": "1"
                             }
@@ -1548,7 +1548,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70529",
+                                "Table": "0529",
                                 "LongName": "Degree of Precision",
                                 "maxLength": "1"
                             }
@@ -1600,7 +1600,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -1630,7 +1630,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             },
@@ -1702,7 +1702,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -1732,7 +1732,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             },
@@ -1798,7 +1798,7 @@
                         "Min": "0",
                         "Max": "0",
                         "Type": "ID",
-                        "Table": "HL70529",
+                        "Table": "0529",
                         "LongName": "Degree of Precision",
                         "maxLength": "1"
                     }
@@ -1822,7 +1822,7 @@
                         "Min": "1",
                         "Max": "1",
                         "Type": "IS",
-                        "Table": "HL70300",
+                        "Table": "0300",
                         "LongName": "Namespace ID",
                         "maxLength": "20"
                     },
@@ -1842,7 +1842,7 @@
                         "Min": "0",
                         "Max": "1",
                         "Type": "ID",
-                        "Table": "HL70301",
+                        "Table": "0301",
                         "LongName": "Universal ID Type",
                         "maxLength": "6"
                     }
@@ -1917,7 +1917,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -1927,7 +1927,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -1937,7 +1937,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -1957,7 +1957,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -1969,7 +1969,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -1989,7 +1989,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -2009,7 +2009,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -2071,7 +2071,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -2101,7 +2101,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -2173,7 +2173,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -2203,7 +2203,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -2279,7 +2279,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -2289,7 +2289,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -2299,7 +2299,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -2319,7 +2319,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -2331,7 +2331,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -2351,7 +2351,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -2371,7 +2371,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -2433,7 +2433,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -2463,7 +2463,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -2535,7 +2535,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -2565,7 +2565,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -2641,7 +2641,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -2651,7 +2651,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -2661,7 +2661,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -2681,7 +2681,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -2693,7 +2693,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -2713,7 +2713,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -2733,7 +2733,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -2795,7 +2795,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -2825,7 +2825,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -2897,7 +2897,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -2927,7 +2927,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -3085,7 +3085,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70360",
+                                "Table": "0360",
                                 "LongName": "Degree (e.g., MD)",
                                 "maxLength": "6"
                             },
@@ -3095,7 +3095,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70200",
+                                "Table": "0200",
                                 "LongName": "Name Type Code",
                                 "maxLength": "1"
                             },
@@ -3105,7 +3105,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -3115,7 +3115,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "CE",
-                                "Table": "HL70448",
+                                "Table": "0448",
                                 "LongName": "Name Context",
                                 "maxLength": "483",
                                 "components": [
@@ -3145,7 +3145,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -3175,7 +3175,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     }
@@ -3219,7 +3219,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70444",
+                                "Table": "0444",
                                 "LongName": "Name Assembly Order",
                                 "maxLength": "1"
                             },
@@ -3249,7 +3249,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -3281,7 +3281,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -3419,7 +3419,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70360",
+                                "Table": "0360",
                                 "LongName": "Degree (e.g., MD)",
                                 "maxLength": "6"
                             },
@@ -3429,7 +3429,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70200",
+                                "Table": "0200",
                                 "LongName": "Name Type Code",
                                 "maxLength": "1"
                             },
@@ -3439,7 +3439,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -3449,7 +3449,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "CE",
-                                "Table": "HL70448",
+                                "Table": "0448",
                                 "LongName": "Name Context",
                                 "maxLength": "483",
                                 "components": [
@@ -3479,7 +3479,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -3509,7 +3509,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     }
@@ -3553,7 +3553,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70444",
+                                "Table": "0444",
                                 "LongName": "Name Assembly Order",
                                 "maxLength": "1"
                             },
@@ -3583,7 +3583,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -3615,7 +3615,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -3661,7 +3661,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70529",
+                                "Table": "0529",
                                 "LongName": "Degree of Precision",
                                 "maxLength": "1"
                             }
@@ -3675,7 +3675,7 @@
                         "Item": "00111",
                         "Datatype": "IS",
                         "Length": "1",
-                        "Table": "HL70001",
+                        "Table": "0001",
                         "LongName": "Administrative Sex",
                         "Chapter": "3.4.2.8"
                     },
@@ -3799,7 +3799,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70360",
+                                "Table": "0360",
                                 "LongName": "Degree (e.g., MD)",
                                 "maxLength": "6"
                             },
@@ -3809,7 +3809,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70200",
+                                "Table": "0200",
                                 "LongName": "Name Type Code",
                                 "maxLength": "1"
                             },
@@ -3819,7 +3819,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -3829,7 +3829,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "CE",
-                                "Table": "HL70448",
+                                "Table": "0448",
                                 "LongName": "Name Context",
                                 "maxLength": "483",
                                 "components": [
@@ -3859,7 +3859,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -3889,7 +3889,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     }
@@ -3933,7 +3933,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70444",
+                                "Table": "0444",
                                 "LongName": "Name Assembly Order",
                                 "maxLength": "1"
                             },
@@ -3963,7 +3963,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -3995,7 +3995,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -4021,7 +4021,7 @@
                         "Item": "00113",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70005",
+                        "Table": "0005",
                         "LongName": "Race",
                         "Chapter": "3.4.2.10",
                         "components": [
@@ -4051,7 +4051,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -4081,7 +4081,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -4187,7 +4187,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70399",
+                                "Table": "0399",
                                 "LongName": "Country",
                                 "maxLength": "3"
                             },
@@ -4197,7 +4197,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70190",
+                                "Table": "0190",
                                 "LongName": "Address Type",
                                 "maxLength": "3"
                             },
@@ -4217,7 +4217,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70289",
+                                "Table": "0289",
                                 "LongName": "County\/Parish Code",
                                 "maxLength": "20"
                             },
@@ -4227,7 +4227,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70288",
+                                "Table": "0288",
                                 "LongName": "Census Tract",
                                 "maxLength": "20"
                             },
@@ -4237,7 +4237,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Address Representation Code",
                                 "maxLength": "1"
                             },
@@ -4299,7 +4299,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -4331,7 +4331,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -4347,7 +4347,7 @@
                         "Item": "00115",
                         "Datatype": "IS",
                         "Length": "4",
-                        "Table": "HL70289",
+                        "Table": "0289",
                         "LongName": "County Code",
                         "Chapter": "3.4.2.12"
                     },
@@ -4379,7 +4379,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70201",
+                                "Table": "0201",
                                 "LongName": "Telecommunication Use Code",
                                 "maxLength": "3"
                             },
@@ -4389,7 +4389,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70202",
+                                "Table": "0202",
                                 "LongName": "Telecommunication Equipment Type",
                                 "maxLength": "8"
                             },
@@ -4513,7 +4513,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70201",
+                                "Table": "0201",
                                 "LongName": "Telecommunication Use Code",
                                 "maxLength": "3"
                             },
@@ -4523,7 +4523,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70202",
+                                "Table": "0202",
                                 "LongName": "Telecommunication Equipment Type",
                                 "maxLength": "8"
                             },
@@ -4627,7 +4627,7 @@
                         "Item": "00118",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70296",
+                        "Table": "0296",
                         "LongName": "Primary Language",
                         "Chapter": "3.4.2.15",
                         "components": [
@@ -4657,7 +4657,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -4687,7 +4687,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -4701,7 +4701,7 @@
                         "Item": "00119",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70002",
+                        "Table": "0002",
                         "LongName": "Marital Status",
                         "Chapter": "3.4.2.16",
                         "components": [
@@ -4731,7 +4731,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -4761,7 +4761,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -4775,7 +4775,7 @@
                         "Item": "00120",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70006",
+                        "Table": "0006",
                         "LongName": "Religion",
                         "Chapter": "3.4.2.17",
                         "components": [
@@ -4805,7 +4805,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -4835,7 +4835,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -4879,7 +4879,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -4889,7 +4889,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -4899,7 +4899,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -4919,7 +4919,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -4931,7 +4931,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -4951,7 +4951,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -4971,7 +4971,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -5033,7 +5033,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -5063,7 +5063,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -5135,7 +5135,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -5165,7 +5165,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -5243,7 +5243,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70333",
+                                "Table": "0333",
                                 "LongName": "Issuing State, Province, Country",
                                 "maxLength": "20"
                             },
@@ -5297,7 +5297,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -5307,7 +5307,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -5317,7 +5317,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -5337,7 +5337,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -5349,7 +5349,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -5369,7 +5369,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -5389,7 +5389,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -5451,7 +5451,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -5481,7 +5481,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -5553,7 +5553,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -5583,7 +5583,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -5629,7 +5629,7 @@
                         "Item": "00125",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70189",
+                        "Table": "0189",
                         "LongName": "Ethnic Group",
                         "Chapter": "3.4.2.22",
                         "components": [
@@ -5659,7 +5659,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -5689,7 +5689,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -5715,7 +5715,7 @@
                         "Item": "00127",
                         "Datatype": "ID",
                         "Length": "1",
-                        "Table": "HL70136",
+                        "Table": "0136",
                         "LongName": "Multiple Birth Indicator",
                         "Chapter": "3.4.2.24"
                     },
@@ -5739,7 +5739,7 @@
                         "Item": "00129",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70171",
+                        "Table": "0171",
                         "LongName": "Citizenship",
                         "Chapter": "3.4.2.26",
                         "components": [
@@ -5769,7 +5769,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -5799,7 +5799,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -5813,7 +5813,7 @@
                         "Item": "00130",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70172",
+                        "Table": "0172",
                         "LongName": "Veterans Military Status",
                         "Chapter": "3.4.2.27",
                         "components": [
@@ -5843,7 +5843,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -5873,7 +5873,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -5887,7 +5887,7 @@
                         "Item": "00739",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70212",
+                        "Table": "0212",
                         "LongName": "Nationality",
                         "Chapter": "3.4.2.28",
                         "components": [
@@ -5917,7 +5917,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -5947,7 +5947,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -5981,7 +5981,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70529",
+                                "Table": "0529",
                                 "LongName": "Degree of Precision",
                                 "maxLength": "1"
                             }
@@ -5995,7 +5995,7 @@
                         "Item": "00741",
                         "Datatype": "ID",
                         "Length": "1",
-                        "Table": "HL70136",
+                        "Table": "0136",
                         "LongName": "Patient Death Indicator",
                         "Chapter": "3.4.2.30"
                     },
@@ -6007,7 +6007,7 @@
                         "Item": "01535",
                         "Datatype": "ID",
                         "Length": "1",
-                        "Table": "HL70136",
+                        "Table": "0136",
                         "LongName": "Identity Unknown Indicator",
                         "Chapter": "3.4.2.31"
                     },
@@ -6019,7 +6019,7 @@
                         "Item": "01536",
                         "Datatype": "IS",
                         "Length": "20",
-                        "Table": "HL70445",
+                        "Table": "0445",
                         "LongName": "Identity Reliability Code",
                         "Chapter": "3.4.2.32"
                     },
@@ -6051,7 +6051,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70529",
+                                "Table": "0529",
                                 "LongName": "Degree of Precision",
                                 "maxLength": "1"
                             }
@@ -6075,7 +6075,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "IS",
-                                "Table": "HL70300",
+                                "Table": "0300",
                                 "LongName": "Namespace ID",
                                 "maxLength": "20"
                             },
@@ -6095,7 +6095,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70301",
+                                "Table": "0301",
                                 "LongName": "Universal ID Type",
                                 "maxLength": "6"
                             }
@@ -6109,7 +6109,7 @@
                         "Item": "01539",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70446",
+                        "Table": "0446",
                         "LongName": "Species Code",
                         "Chapter": "3.4.2.35",
                         "components": [
@@ -6139,7 +6139,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -6169,7 +6169,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -6183,7 +6183,7 @@
                         "Item": "01540",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70447",
+                        "Table": "0447",
                         "LongName": "Breed Code",
                         "Chapter": "3.4.2.36",
                         "components": [
@@ -6213,7 +6213,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -6243,7 +6243,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -6269,7 +6269,7 @@
                         "Item": "01542",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70429",
+                        "Table": "0429",
                         "LongName": "Production Class Code",
                         "Chapter": "3.4.2.38",
                         "components": [
@@ -6299,7 +6299,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -6329,7 +6329,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -6343,7 +6343,7 @@
                         "Item": "01840",
                         "Datatype": "CWE",
                         "Length": "250",
-                        "Table": "HL70171",
+                        "Table": "0171",
                         "LongName": "Tribal Citizenship",
                         "Chapter": "3.4.2.39",
                         "components": [
@@ -6373,7 +6373,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -6403,7 +6403,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             },
@@ -6458,7 +6458,7 @@
                         "Item": "00755",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70223",
+                        "Table": "0223",
                         "LongName": "Living Dependency",
                         "Chapter": "3.4.10.1"
                     },
@@ -6470,7 +6470,7 @@
                         "Item": "00742",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70220",
+                        "Table": "0220",
                         "LongName": "Living Arrangement",
                         "Chapter": "3.4.10.2"
                     },
@@ -6502,7 +6502,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70204",
+                                "Table": "0204",
                                 "LongName": "Organization Name Type Code",
                                 "maxLength": "20"
                             },
@@ -6532,7 +6532,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -6542,7 +6542,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -6552,7 +6552,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -6572,7 +6572,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -6584,7 +6584,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -6604,7 +6604,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -6624,7 +6624,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -6636,7 +6636,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -6782,7 +6782,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70360",
+                                "Table": "0360",
                                 "LongName": "Degree (e.g., MD)",
                                 "maxLength": "5"
                             },
@@ -6792,7 +6792,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70297",
+                                "Table": "0297",
                                 "LongName": "Source Table",
                                 "maxLength": "4"
                             },
@@ -6802,7 +6802,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -6812,7 +6812,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -6832,7 +6832,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -6844,7 +6844,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70200",
+                                "Table": "0200",
                                 "LongName": "Name Type Code",
                                 "maxLength": "1"
                             },
@@ -6864,7 +6864,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -6874,7 +6874,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -6894,7 +6894,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -6914,7 +6914,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -6926,7 +6926,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -6936,7 +6936,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "CE",
-                                "Table": "HL70448",
+                                "Table": "0448",
                                 "LongName": "Name Context",
                                 "maxLength": "483",
                                 "components": [
@@ -6966,7 +6966,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -6996,7 +6996,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     }
@@ -7040,7 +7040,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70444",
+                                "Table": "0444",
                                 "LongName": "Name Assembly Order",
                                 "maxLength": "1"
                             },
@@ -7070,7 +7070,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -7102,7 +7102,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -7154,7 +7154,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -7184,7 +7184,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -7256,7 +7256,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -7286,7 +7286,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -7332,7 +7332,7 @@
                         "Item": "00745",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70231",
+                        "Table": "0231",
                         "LongName": "Student Indicator",
                         "Chapter": "3.4.10.5"
                     },
@@ -7344,7 +7344,7 @@
                         "Item": "00753",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70295",
+                        "Table": "0295",
                         "LongName": "Handicap",
                         "Chapter": "3.4.10.6"
                     },
@@ -7356,7 +7356,7 @@
                         "Item": "00759",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70315",
+                        "Table": "0315",
                         "LongName": "Living Will Code",
                         "Chapter": "3.4.10.7"
                     },
@@ -7368,7 +7368,7 @@
                         "Item": "00760",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70316",
+                        "Table": "0316",
                         "LongName": "Organ Donor Code",
                         "Chapter": "3.4.10.8"
                     },
@@ -7380,7 +7380,7 @@
                         "Item": "00761",
                         "Datatype": "ID",
                         "Length": "1",
-                        "Table": "HL70136",
+                        "Table": "0136",
                         "LongName": "Separate Bill",
                         "Chapter": "3.4.10.9"
                     },
@@ -7422,7 +7422,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -7432,7 +7432,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -7442,7 +7442,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -7462,7 +7462,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -7474,7 +7474,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -7494,7 +7494,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -7514,7 +7514,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -7576,7 +7576,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -7606,7 +7606,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -7678,7 +7678,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -7708,7 +7708,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -7754,7 +7754,7 @@
                         "Item": "00743",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70215",
+                        "Table": "0215",
                         "LongName": "Publicity Code",
                         "Chapter": "3.4.10.11",
                         "components": [
@@ -7784,7 +7784,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -7814,7 +7814,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -7828,7 +7828,7 @@
                         "Item": "00744",
                         "Datatype": "ID",
                         "Length": "1",
-                        "Table": "HL70136",
+                        "Table": "0136",
                         "LongName": "Protection Indicator",
                         "Chapter": "3.4.10.12"
                     },
@@ -7872,7 +7872,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70204",
+                                "Table": "0204",
                                 "LongName": "Organization Name Type Code",
                                 "maxLength": "20"
                             },
@@ -7902,7 +7902,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -7912,7 +7912,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -7922,7 +7922,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -7942,7 +7942,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -7954,7 +7954,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -7974,7 +7974,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -7994,7 +7994,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -8006,7 +8006,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -8030,7 +8030,7 @@
                         "Item": "01568",
                         "Datatype": "CE",
                         "Length": "250",
-                        "Table": "HL70435",
+                        "Table": "0435",
                         "LongName": "Advance Directive Code",
                         "Chapter": "3.4.10.15",
                         "components": [
@@ -8060,7 +8060,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Coding System",
                                 "maxLength": "20"
                             },
@@ -8090,7 +8090,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70396",
+                                "Table": "0396",
                                 "LongName": "Name of Alternate Coding System",
                                 "maxLength": "20"
                             }
@@ -8104,7 +8104,7 @@
                         "Item": "01569",
                         "Datatype": "IS",
                         "Length": "1",
-                        "Table": "HL70441",
+                        "Table": "0441",
                         "LongName": "Immunization Registry Status",
                         "Chapter": "3.4.10.16"
                     },
@@ -8140,7 +8140,7 @@
                         "Item": "01572",
                         "Datatype": "IS",
                         "Length": "5",
-                        "Table": "HL70140",
+                        "Table": "0140",
                         "LongName": "Military Branch",
                         "Chapter": "3.4.10.19"
                     },
@@ -8152,7 +8152,7 @@
                         "Item": "00486",
                         "Datatype": "IS",
                         "Length": "2",
-                        "Table": "HL70141",
+                        "Table": "0141",
                         "LongName": "Military Rank\/Grade",
                         "Chapter": "3.4.10.20"
                     },
@@ -8164,7 +8164,7 @@
                         "Item": "01573",
                         "Datatype": "IS",
                         "Length": "3",
-                        "Table": "HL70142",
+                        "Table": "0142",
                         "LongName": "Military Status",
                         "Chapter": "3.4.10.21"
                     }
@@ -8217,7 +8217,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -8227,7 +8227,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -8237,7 +8237,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -8257,7 +8257,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -8269,7 +8269,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -8289,7 +8289,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -8309,7 +8309,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -8371,7 +8371,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -8401,7 +8401,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -8473,7 +8473,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -8503,7 +8503,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -8579,7 +8579,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -8589,7 +8589,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -8599,7 +8599,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -8619,7 +8619,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -8631,7 +8631,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -8651,7 +8651,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -8671,7 +8671,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -8733,7 +8733,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -8763,7 +8763,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -8835,7 +8835,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -8865,7 +8865,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -8941,7 +8941,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -8951,7 +8951,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -8961,7 +8961,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -8981,7 +8981,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -8993,7 +8993,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -9013,7 +9013,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -9033,7 +9033,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -9095,7 +9095,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -9125,7 +9125,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -9197,7 +9197,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -9227,7 +9227,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -9303,7 +9303,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -9313,7 +9313,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -9323,7 +9323,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -9343,7 +9343,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -9355,7 +9355,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -9375,7 +9375,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -9395,7 +9395,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -9457,7 +9457,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -9487,7 +9487,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -9559,7 +9559,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -9589,7 +9589,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -9665,7 +9665,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -9675,7 +9675,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -9685,7 +9685,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -9705,7 +9705,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -9717,7 +9717,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -9737,7 +9737,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -9757,7 +9757,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -9819,7 +9819,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -9849,7 +9849,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -9921,7 +9921,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -9951,7 +9951,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -10027,7 +10027,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70061",
+                                "Table": "0061",
                                 "LongName": "Check Digit Scheme",
                                 "maxLength": "3"
                             },
@@ -10037,7 +10037,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "HD",
-                                "Table": "HL70363",
+                                "Table": "0363",
                                 "LongName": "Assigning Authority",
                                 "maxLength": "227",
                                 "components": [
@@ -10047,7 +10047,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -10067,7 +10067,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -10079,7 +10079,7 @@
                                 "Min": "0",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70203",
+                                "Table": "0203",
                                 "LongName": "Identifier Type Code",
                                 "maxLength": "5"
                             },
@@ -10099,7 +10099,7 @@
                                         "Min": "1",
                                         "Max": "1",
                                         "Type": "IS",
-                                        "Table": "HL70300",
+                                        "Table": "0300",
                                         "LongName": "Namespace ID",
                                         "maxLength": "20"
                                     },
@@ -10119,7 +10119,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70301",
+                                        "Table": "0301",
                                         "LongName": "Universal ID Type",
                                         "maxLength": "6"
                                     }
@@ -10181,7 +10181,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -10211,7 +10211,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -10283,7 +10283,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -10313,7 +10313,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     },
@@ -10471,7 +10471,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "IS",
-                                "Table": "HL70360",
+                                "Table": "0360",
                                 "LongName": "Degree (e.g., MD)",
                                 "maxLength": "6"
                             },
@@ -10481,7 +10481,7 @@
                                 "Min": "1",
                                 "Max": "1",
                                 "Type": "ID",
-                                "Table": "HL70200",
+                                "Table": "0200",
                                 "LongName": "Name Type Code",
                                 "maxLength": "1"
                             },
@@ -10491,7 +10491,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70465",
+                                "Table": "0465",
                                 "LongName": "Name Representation Code",
                                 "maxLength": "1"
                             },
@@ -10501,7 +10501,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "CE",
-                                "Table": "HL70448",
+                                "Table": "0448",
                                 "LongName": "Name Context",
                                 "maxLength": "483",
                                 "components": [
@@ -10531,7 +10531,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Coding System",
                                         "maxLength": "20"
                                     },
@@ -10561,7 +10561,7 @@
                                         "Min": "0",
                                         "Max": "1",
                                         "Type": "ID",
-                                        "Table": "HL70396",
+                                        "Table": "0396",
                                         "LongName": "Name of Alternate Coding System",
                                         "maxLength": "20"
                                     }
@@ -10605,7 +10605,7 @@
                                 "Min": "0",
                                 "Max": "0",
                                 "Type": "ID",
-                                "Table": "HL70444",
+                                "Table": "0444",
                                 "LongName": "Name Assembly Order",
                                 "maxLength": "1"
                             },
@@ -10635,7 +10635,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }
@@ -10667,7 +10667,7 @@
                                         "Min": "0",
                                         "Max": "0",
                                         "Type": "ID",
-                                        "Table": "HL70529",
+                                        "Table": "0529",
                                         "LongName": "Degree of Precision",
                                         "maxLength": "1"
                                     }

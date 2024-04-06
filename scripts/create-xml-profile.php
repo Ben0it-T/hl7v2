@@ -395,7 +395,9 @@ class HL7xmlProfilesGenerator {
         $fieldAttributes["Item"] = sprintf('%05s', $this->fieldsSchemas[$fieldName]["Item"]);
         $fieldAttributes["Datatype"] = $this->fieldsSchemas[$fieldName]["Type"];
         $fieldAttributes["Length"] = $this->fieldsSchemas[$fieldName]["maxLength"];
-        $fieldAttributes["Table"] = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? substr($this->fieldsSchemas[$fieldName]["Table"],3) : "";
+        // $fieldAttributes["Table"] = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? substr($this->fieldsSchemas[$fieldName]["Table"],3) : "";
+        $fieldAttributes["Table"] = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? $this->fieldsSchemas[$fieldName]["Table"] : "";
+        $fieldAttributes["Table"] = (substr($fieldAttributes["Table"],0,3) == "HL7") ? substr($fieldAttributes["Table"],3) : $fieldAttributes["Table"];
         $fieldAttributes["LongName"] = $this->fieldsSchemas[$fieldName]["LongName"];
         $fieldAttributes["Chapter"] = $this->fieldsSchemas[$fieldName]["Chapter"];
 
@@ -528,7 +530,9 @@ class HL7xmlProfilesGenerator {
     private function addComponent($componentNode, $componentName, $componentAttributes, $isSubComponent = false) {
         // get component attributes
         $componentAttributes["Type"] = $this->dataTypesSchemas[$componentName]["Type"];
-        $componentAttributes["Table"] = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? substr($this->dataTypesSchemas[$componentName]["Table"],3) : "";
+        //$componentAttributes["Table"] = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? substr($this->dataTypesSchemas[$componentName]["Table"],3) : "";
+        $componentAttributes["Table"] = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? $this->dataTypesSchemas[$componentName]["Table"] : "";
+        $componentAttributes["Table"] = (substr($componentAttributes["Table"],0,3) == "HL7") ? substr($componentAttributes["Table"],3) : $componentAttributes["Table"];
         $componentAttributes["LongName"] = $this->dataTypesSchemas[$componentName]["LongName"];
         $componentAttributes["maxLength"] = $this->dataTypesSchemas[$componentName]["maxLength"];
         

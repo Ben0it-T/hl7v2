@@ -2529,7 +2529,7 @@
         <Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
       </Field>
-      <Field Name="Admit Reason" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="-PV2-3" ItemNo="00183">
+      <Field Name="Admit Reason" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="IHE-PV2-3" ItemNo="00183">
         <Reference>3.4.4.3</Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2895,7 +2895,7 @@
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Organization Identifier" Usage="RE" Datatype="ST" Length="64"/>
       </Field>
-      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="-ZBE-9" ItemNo="00000">
+      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="00000">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -3054,7 +3054,7 @@
       <Field Name="Mode de sortie personnalisé" Usage="O" Min="0" Max="1" Datatype="IS" Length="6" ItemNo="00000">
         <Reference></Reference>
       </Field>
-      <Field Name="Code RIM-P du mode légal de soin transmis dans le PV2-3" Usage="C" Min="0" Max="1" Datatype="IS" Length="2" Table="-P" ItemNo="00000">
+      <Field Name="Code RIM-P du mode légal de soin transmis dans le PV2-3" Usage="C" Min="0" Max="1" Datatype="IS" Length="2" Table="RIM-P" ItemNo="00000">
         <Reference></Reference>
       </Field>
       <Field Name="Prise en charge durant le transport" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="3306" ItemNo="00000">
@@ -3068,19 +3068,19 @@
       </Field>
     </Segment>
     <Segment Name="ZFM" LongName="Mouvement PMSI" Usage="O" Min="0" Max="1">
-      <Field Name="Mode d'entrée PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="-ZFM-1" ItemNo="00000">
+      <Field Name="Mode d'entrée PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-1" ItemNo="00000">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode de sortie PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="-ZFM-2" ItemNo="00000">
+      <Field Name="Mode de sortie PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-2" ItemNo="00000">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode de provenance PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="-ZFM-3-4" ItemNo="00000">
+      <Field Name="Mode de provenance PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-3-4" ItemNo="00000">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode de destination PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="-ZFM-3-4" ItemNo="00000">
+      <Field Name="Mode de destination PMSI" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-3-4" ItemNo="00000">
         <Reference></Reference>
       </Field>
-      <Field Name="Passage par une structure des Urgences (PMSI)" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="-ZFM-5" ItemNo="00000">
+      <Field Name="Passage par une structure des Urgences (PMSI)" Usage="O" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFM-5" ItemNo="00000">
         <Reference></Reference>
       </Field>
     </Segment>
