@@ -22824,7 +22824,7 @@
                 "Item": "",
                 "Datatype": "ID",
                 "Length": "1",
-                "Table": "",
+                "Table": "IHE-ZFD-3",
                 "LongName": "Consentement SMS",
                 "Chapter": ""
             },
@@ -23097,7 +23097,7 @@
                 "Item": "",
                 "Datatype": "CWE",
                 "Length": "250",
-                "Table": "3306",
+                "Table": "IHE-ZFS-6",
                 "LongName": "Mode l\u00e9gal de soins",
                 "Chapter": "",
                 "components": [

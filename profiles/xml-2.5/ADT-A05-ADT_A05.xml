@@ -2977,10 +2977,10 @@
       </Field>
     </Segment>
     <Segment Name="ZFP" LongName="Situation professionnelle" Usage="O" Min="0" Max="1">
-      <Field Name="Activité socio-professionnelle (nomenclature INSEE)" Usage="RE" Min="0" Max="1" Datatype="ID" Length="1" Table="3300" ItemNo="">
+      <Field Name="Activité socio-professionnelle (nomenclature INSEE)" Usage="RE" Min="0" Max="1" Datatype="ID" Length="1" Table="IHE-ZFP-1" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Catégorie socio-professionnelle (nomenclature INSEE)" Usage="RE" Min="0" Max="1" Datatype="ID" Length="2" Table="3301" ItemNo="">
+      <Field Name="Catégorie socio-professionnelle (nomenclature INSEE)" Usage="RE" Min="0" Max="1" Datatype="ID" Length="2" Table="IHE-ZFP-2" ItemNo="">
         <Reference></Reference>
       </Field>
     </Segment>
@@ -3015,7 +3015,7 @@
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Adresse de l'établissement de provenance ou de destination" Usage="O" Min="0" Max="2" Datatype="XAD" Length="250" ItemNo="">
+      <Field Name="Adresse de l'établissement de provenance ou de destination" Usage="O" Min="0" Max="2" Datatype="XAD" Length="250" Table="IHE-ZFV-6" ItemNo="">
         <Reference></Reference>
         <Component Name="Street Address" Usage="O" Datatype="SAD" Length="184">
           <SubComponent Name="Street or Mailing Address" Usage="O" Datatype="ST" Length="120"/>
@@ -3130,10 +3130,10 @@
       <Field Name="Mode de sortie personnalisé" Usage="O" Min="0" Max="1" Datatype="IS" Length="6" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Code RIM-P du mode légal de soin transmis dans le PV2-3" Usage="C" Min="0" Max="1" Datatype="IS" Length="2" Table="RIM-P" ItemNo="">
+      <Field Name="Code RIM-P du mode légal de soin transmis dans le PV2-3" Usage="C" Min="0" Max="1" Datatype="IS" Length="2" Table="IHE-ZFV-10" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Prise en charge durant le transport" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="3306" ItemNo="">
+      <Field Name="Prise en charge durant le transport" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="IHE-ZFV-11" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -3171,7 +3171,7 @@
       <Field Name="Nombre de semaines de gestation" Usage="O" Min="0" Max="1" Datatype="NM" Length="16" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" ItemNo="">
+      <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="IHE-ZFD-3" ItemNo="">
         <Reference></Reference>
       </Field>
       <Field Name="Indicateur de date de naissance corrigée" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFD-4" ItemNo="">

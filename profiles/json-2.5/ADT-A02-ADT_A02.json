@@ -19233,7 +19233,7 @@
                 "Item": "",
                 "Datatype": "XAD",
                 "Length": "250",
-                "Table": "",
+                "Table": "IHE-ZFV-6",
                 "LongName": "Adresse de l'\u00e9tablissement de provenance ou de destination",
                 "Chapter": "",
                 "components": [
@@ -20221,7 +20221,7 @@
                 "Item": "",
                 "Datatype": "IS",
                 "Length": "2",
-                "Table": "RIM-P",
+                "Table": "IHE-ZFV-10",
                 "LongName": "Code RIM-P du mode l\u00e9gal de soin transmis dans le PV2-3",
                 "Chapter": ""
             },
@@ -20233,7 +20233,7 @@
                 "Item": "",
                 "Datatype": "CE",
                 "Length": "250",
-                "Table": "3306",
+                "Table": "IHE-ZFV-11",
                 "LongName": "Prise en charge durant le transport",
                 "Chapter": "",
                 "components": [

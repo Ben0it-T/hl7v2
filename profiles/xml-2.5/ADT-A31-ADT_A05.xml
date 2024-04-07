@@ -2905,7 +2905,7 @@
       <Field Name="Nombre de semaines de gestation" Usage="O" Min="0" Max="1" Datatype="NM" Length="16" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" ItemNo="">
+      <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="IHE-ZFD-3" ItemNo="">
         <Reference></Reference>
       </Field>
       <Field Name="Indicateur de date de naissance corrigée" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFD-4" ItemNo="">
@@ -2952,7 +2952,7 @@
       <Field Name="Action du mode légal de soin" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Mode légal de soins" Usage="R" Min="1" Max="1" Datatype="CWE" Length="250" Table="3306" ItemNo="">
+      <Field Name="Mode légal de soins" Usage="R" Min="1" Max="1" Datatype="CWE" Length="250" Table="IHE-ZFS-6" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>

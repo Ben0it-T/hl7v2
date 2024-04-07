@@ -16946,7 +16946,7 @@
     "ZFD.3": {
         "Item": "",
         "Type": "ID",
-        "Table": "",
+        "Table": "IHE-ZFD-3",
         "LongName": "Consentement SMS",
         "maxLength": "1",
         "Chapter": ""
@@ -17034,7 +17034,7 @@
     "ZFP.1": {
         "Item": "",
         "Type": "ID",
-        "Table": "HL73300",
+        "Table": "IHE-ZFP-1",
         "LongName": "Activit\u00e9 socio-professionnelle (nomenclature INSEE)",
         "maxLength": "1",
         "Chapter": ""
@@ -17042,7 +17042,7 @@
     "ZFP.2": {
         "Item": "",
         "Type": "ID",
-        "Table": "HL73301",
+        "Table": "IHE-ZFP-2",
         "LongName": "Cat\u00e9gorie socio-professionnelle (nomenclature INSEE)",
         "maxLength": "2",
         "Chapter": ""
@@ -17090,7 +17090,7 @@
     "ZFS.6": {
         "Item": "",
         "Type": "CWE",
-        "Table": "HL73306",
+        "Table": "IHE-ZFS-6",
         "LongName": "Mode l\u00e9gal de soins",
         "maxLength": "250",
         "Chapter": ""
@@ -17122,7 +17122,7 @@
     "ZFV.10": {
         "Item": "",
         "Type": "IS",
-        "Table": "RIM-P",
+        "Table": "IHE-ZFV-10",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin transmis dans le PV2-3",
         "maxLength": "2",
         "Chapter": ""
@@ -17130,7 +17130,7 @@
     "ZFV.11": {
         "Item": "",
         "Type": "CE",
-        "Table": "HL73306",
+        "Table": "IHE-ZFV-11",
         "LongName": "Prise en charge durant le transport",
         "maxLength": "250",
         "Chapter": ""
@@ -17170,7 +17170,7 @@
     "ZFV.6": {
         "Item": "",
         "Type": "XAD",
-        "Table": "",
+        "Table": "IHE-ZFV-6",
         "LongName": "Adresse de l'\u00e9tablissement de provenance ou de destination",
         "maxLength": "250",
         "Chapter": ""
