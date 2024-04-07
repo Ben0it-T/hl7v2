@@ -7399,6 +7399,16 @@
             "INEXISTANT"
         ]
     },
+    "IHE-ZFA-11": {
+        "id": "IHE-ZFA-11",
+        "name": "Information et opposition \u00e0 la consultation du DMP",
+        "type": "User",
+        "elements": [
+            "INO",
+            "IO",
+            "NA"
+        ]
+    },
     "IHE-ZFA-4": {
         "id": "IHE-ZFA-4",
         "name": "Valid access authorization to the patient's PHR",
@@ -7424,6 +7434,16 @@
         "elements": [
             "N",
             "Y"
+        ]
+    },
+    "IHE-ZFA-9": {
+        "id": "IHE-ZFA-9",
+        "name": "Information et opposition \u00e0 l\u2019alimentation",
+        "type": "User",
+        "elements": [
+            "INO",
+            "IO",
+            "NA"
         ]
     },
     "IHE-ZFD-3": {
