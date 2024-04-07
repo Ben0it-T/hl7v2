@@ -440,12 +440,12 @@
         "type": "User",
         "elements": [
             "C",
+            "IE",
             "L",
             "N",
             "R",
-            "U",
             "RM",
-            "IE"
+            "U"
         ]
     },
     "0008": {
@@ -523,6 +523,43 @@
             "T"
         ]
     },
+    "0032": {
+        "id": "0032",
+        "name": "Charge Prive indicator",
+        "type": "User",
+        "elements": [
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "23",
+            "24",
+            "25",
+            "26",
+            "28",
+            "32",
+            "33",
+            "37",
+            "38",
+            "39",
+            "97"
+        ]
+    },
     "0038": {
         "id": "0038",
         "name": "Order status",
@@ -537,6 +574,15 @@
             "IP",
             "RP",
             "SC"
+        ]
+    },
+    "0045": {
+        "id": "0045",
+        "name": "Courtesy code",
+        "type": "User",
+        "elements": [
+            "N",
+            "Y"
         ]
     },
     "0048": {
@@ -581,6 +627,22 @@
             "STA",
             "VXI",
             "XID"
+        ]
+    },
+    "0050": {
+        "id": "0050",
+        "name": "Accident code",
+        "type": "User",
+        "elements": [
+            "B",
+            "C",
+            "D",
+            "J",
+            "L",
+            "P",
+            "S",
+            "T",
+            "U"
         ]
     },
     "0052": {
@@ -686,6 +748,24 @@
             "L",
             "O",
             "T"
+        ]
+    },
+    "0068": {
+        "id": "0068",
+        "name": "Guarantor Type",
+        "type": "User",
+        "elements": [
+            "AMC",
+            "AME",
+            "AMEC",
+            "AMO",
+            "ASS",
+            "CMU",
+            "CMUC",
+            "DEP",
+            "EMP",
+            "ETB",
+            "PAT"
         ]
     },
     "0069": {
@@ -1275,9 +1355,9 @@
         "name": "Observation status",
         "type": "User",
         "elements": [
-            "R",
+            "D",
             "F",
-            "D"
+            "R"
         ]
     },
     "0091": {
@@ -1315,6 +1395,15 @@
             "M",
             "S",
             "U"
+        ]
+    },
+    "0099": {
+        "id": "0099",
+        "name": "VIP indicator",
+        "type": "User",
+        "elements": [
+            "N",
+            "Y"
         ]
     },
     "0100": {
@@ -1413,15 +1502,15 @@
             "4",
             "5",
             "6",
-            "R",
+            "A",
+            "B",
             "E",
             "F",
-            "A",
             "P",
-            "S",
-            "B",
+            "PSA",
+            "R",
             "REO",
-            "PSA"
+            "S"
         ]
     },
     "0116": {
@@ -1431,6 +1520,15 @@
         "elements": [
             "O",
             "U"
+        ]
+    },
+    "0117": {
+        "id": "0117",
+        "name": "Account status",
+        "type": "User",
+        "elements": [
+            "D",
+            "N"
         ]
     },
     "0119": {
@@ -1616,39 +1714,48 @@
             "U"
         ]
     },
+    "0129": {
+        "id": "0129",
+        "name": "Accomodation code",
+        "type": "User",
+        "elements": [
+            "CP",
+            "NP"
+        ]
+    },
     "0130": {
         "id": "0130",
         "name": "Visit User Code",
         "type": "User",
         "elements": [
-            "TN",
-            "TD",
-            "TU",
-            "TH",
-            "TR",
-            "MR",
-            "TO",
-            "ME",
             "1C",
-            "IT",
             "AG",
-            "MT",
+            "AL",
+            "AM",
+            "AS",
+            "CI",
             "CS",
-            "SM",
-            "ML",
+            "DT",
             "EM",
+            "ET",
+            "IT",
+            "MA",
+            "ME",
+            "MI",
+            "ML",
+            "MR",
+            "MT",
             "NT",
             "PI",
-            "ZD",
-            "AL",
             "PS",
-            "AM",
-            "CI",
-            "ET",
-            "MI",
-            "DT",
-            "MA",
-            "AS"
+            "SM",
+            "TD",
+            "TH",
+            "TN",
+            "TO",
+            "TR",
+            "TU",
+            "ZD"
         ]
     },
     "0131": {
@@ -1656,17 +1763,17 @@
         "name": "Contact role",
         "type": "User",
         "elements": [
-            "E",
             "C",
+            "E",
             "F",
             "I",
-            "N",
-            "S",
-            "O",
-            "U",
             "K",
+            "N",
+            "O",
             "P",
-            "R"
+            "R",
+            "S",
+            "U"
         ]
     },
     "0133": {
@@ -1788,9 +1895,9 @@
         "elements": [
             "AT",
             "PB",
-            "PT",
+            "PC",
             "PF",
-            "PC"
+            "PT"
         ]
     },
     "0147": {
@@ -2290,22 +2397,22 @@
         "name": "Address type",
         "type": "User",
         "elements": [
+            "ASE",
             "B",
             "BA",
             "BDL",
+            "BI",
             "BR",
             "C",
+            "DST",
             "F",
             "H",
             "M",
             "O",
-            "RH",
-            "VA",
-            "SA",
             "ORI",
-            "DST",
-            "BI",
-            "ASE"
+            "RH",
+            "SA",
+            "VA"
         ]
     },
     "0191": {
@@ -2341,8 +2448,8 @@
         "name": "Name Type Code",
         "type": "User",
         "elements": [
-            "L",
             "D",
+            "L",
             "S",
             "U"
         ]
@@ -2381,29 +2488,29 @@
         "name": "Identifier Type Code",
         "type": "User",
         "elements": [
-            "EI",
-            "NH",
-            "INS-C",
-            "INS",
-            "NNFRA",
-            "PPN",
-            "PI",
-            "NDP",
-            "PN",
-            "RRI",
             "ADELI",
-            "RPPS",
-            "IDNPS",
-            "RI",
-            "FINEJ",
+            "AN",
+            "EI",
             "FINEG",
+            "FINEJ",
+            "IDNPS",
+            "IDNST",
+            "INS",
+            "INS-C",
+            "MR",
+            "NDP",
+            "NH",
+            "NNFRA",
+            "PI",
+            "PN",
+            "PPN",
+            "RI",
+            "RPPS",
+            "RRI",
             "SIREN",
             "SIRET",
-            "UF",
-            "IDNST",
             "SRV",
-            "MR",
-            "AN",
+            "UF",
             "VN"
         ]
     },
@@ -2570,6 +2677,15 @@
             "3"
         ]
     },
+    "0218": {
+        "id": "0218",
+        "name": "Charge adjustment",
+        "type": "User",
+        "elements": [
+            "F",
+            "N"
+        ]
+    },
     "0220": {
         "id": "0220",
         "name": "Living arrangement",
@@ -2577,11 +2693,11 @@
         "elements": [
             "A",
             "F",
+            "H",
             "I",
             "R",
             "S",
-            "U",
-            "H"
+            "U"
         ]
     },
     "0223": {
@@ -5572,9 +5688,9 @@
             "AT",
             "CP",
             "FHCP",
+            "ODRP",
             "RP",
             "RT",
-            "ODRP",
             "SUBS"
         ]
     },
@@ -5592,27 +5708,27 @@
         "name": "Identity Reliability Code",
         "type": "User",
         "elements": [
-            "VIDE",
-            "PROV",
-            "VALI",
-            "DOUB",
-            "DESA",
-            "DPOT",
-            "DOUA",
+            "ANOM",
+            "CACH",
             "COLP",
             "COLV",
-            "FILI",
-            "CACH",
-            "ANOM",
-            "IDVER",
-            "RECD",
-            "IDRA",
-            "USUR",
-            "HOMD",
-            "HOMA",
-            "INVA",
+            "DESA",
+            "DOUA",
+            "DOUB",
+            "DOUT",
+            "DPOT",
             "FICT",
-            "DOUT"
+            "FILI",
+            "HOMA",
+            "HOMD",
+            "IDRA",
+            "IDVER",
+            "INVA",
+            "PROV",
+            "RECD",
+            "USUR",
+            "VALI",
+            "VIDE"
         ]
     },
     "0450": {
@@ -7255,93 +7371,22 @@
             "WRIST"
         ]
     },
-    "0099": {
-        "id": "0099",
-        "name": "VIP indicator",
+    "IHE-ZBE-9": {
+        "id": "IHE-ZBE-9",
+        "name": "Nature of movement",
         "type": "User",
         "elements": [
-            "Y",
-            "N"
-        ]
-    },
-    "0032": {
-        "id": "0032",
-        "name": "Charge Prive indicator",
-        "type": "User",
-        "elements": [
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "23",
-            "24",
-            "25",
-            "26",
-            "28",
-            "32",
-            "33",
-            "37",
-            "38",
-            "39",
-            "97"
-        ]
-    },
-    "0045": {
-        "id": "0045",
-        "name": "Courtesy code",
-        "type": "User",
-        "elements": [
-            "Y",
-            "N"
-        ]
-    },
-    "0117": {
-        "id": "0117",
-        "name": "Account status",
-        "type": "User",
-        "elements": [
-            "D",
-            "N"
-        ]
-    },
-    "0218": {
-        "id": "0218",
-        "name": "Charge adjustment",
-        "type": "User",
-        "elements": [
-            "F",
-            "N"
-        ]
-    },
-    "0050": {
-        "id": "0050",
-        "name": "Accident code",
-        "type": "User",
-        "elements": [
-            "P",
-            "T",
-            "D",
-            "S",
-            "J",
             "C",
+            "D",
+            "H",
+            "HMS",
             "L",
-            "B",
-            "U"
+            "LD",
+            "M",
+            "MH",
+            "S",
+            "SH",
+            "SM"
         ]
     },
     "IHE-ZFA-1": {
@@ -7359,8 +7404,8 @@
         "name": "Valid access authorization to the patient's PHR",
         "type": "User",
         "elements": [
-            "Y",
-            "N"
+            "N",
+            "Y"
         ]
     },
     "IHE-ZFA-6": {
@@ -7368,8 +7413,8 @@
         "name": "Opposition of the patient to the \"bris de glace\" mode access",
         "type": "User",
         "elements": [
-            "Y",
-            "N"
+            "N",
+            "Y"
         ]
     },
     "IHE-ZFA-7": {
@@ -7377,35 +7422,116 @@
         "name": "Opposition of the patient to the \"centre 15\" mode access",
         "type": "User",
         "elements": [
-            "Y",
-            "N"
+            "N",
+            "Y"
         ]
     },
-    "IHE-ZFV-6": {
-        "id": "IHE-ZFV-6",
-        "name": "address type",
+    "IHE-ZFD-3": {
+        "id": "IHE-ZFD-3",
+        "name": "SMS Consent",
         "type": "User",
         "elements": [
-            "ORI",
-            "DST"
+            "N",
+            "Y"
         ]
     },
-    "IHE-ZBE-9": {
-        "id": "IHE-ZBE-9",
-        "name": "Nature of movement",
+    "IHE-ZFD-4": {
+        "id": "IHE-ZFD-4",
+        "name": "Indicateur de date de naissance modifi\u00e9e",
         "type": "User",
         "elements": [
-            "S",
-            "H",
-            "M",
-            "L",
+            "N",
+            "Y"
+        ]
+    },
+    "IHE-ZFD-5": {
+        "id": "IHE-ZFD-5",
+        "name": "Mode d\u2019obtention de l\u2019identit\u00e9",
+        "type": "User",
+        "elements": [
+            "CB",
+            "CV",
+            "INSI",
+            "RFID",
+            "SM"
+        ]
+    },
+    "IHE-ZFD-7": {
+        "id": "IHE-ZFD-7",
+        "name": "Type de justificatif d\u2019identit\u00e9",
+        "type": "User",
+        "elements": [
+            "AN",
+            "CC",
+            "CE",
+            "CM",
+            "CN",
+            "CS",
+            "LE",
+            "PA",
+            "PC",
+            "TC"
+        ]
+    },
+    "IHE-ZFM-1": {
+        "id": "IHE-ZFM-1",
+        "name": "DRG admit mode",
+        "type": "User",
+        "elements": [
+            "0",
+            "6",
+            "7",
+            "8",
+            "N",
+            "O"
+        ]
+    },
+    "IHE-ZFM-2": {
+        "id": "IHE-ZFM-2",
+        "name": "DRG discharge mode",
+        "type": "User",
+        "elements": [
+            "0",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ]
+    },
+    "IHE-ZFM-3": {
+        "id": "IHE-ZFM-3",
+        "name": "DRG origin and destination mode",
+        "type": "User",
+        "elements": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
             "D",
-            "SM",
-            "SH",
-            "MH",
-            "LD",
-            "HMS",
-            "C"
+            "R"
+        ]
+    },
+    "IHE-ZFM-3-4": {
+        "id": "IHE-ZFM-3-4",
+        "name": "DRG origin and destination mode",
+        "type": "User",
+        "elements": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "R",
+            "U"
         ]
     },
     "IHE-ZFP-1": {
@@ -7472,74 +7598,27 @@
             "86"
         ]
     },
-    "IHE-ZFD-3": {
-        "id": "IHE-ZFD-3",
-        "name": "SMS Consent",
-        "type": "User",
-        "elements": [
-            "Y",
-            "N"
-        ]
-    },
     "IHE-ZFS-6": {
         "id": "IHE-ZFS-6",
         "name": "Admit Reason",
         "type": "User",
         "elements": [
+            "DET",
+            "HDT",
             "HL",
             "HO",
-            "HDT",
             "JPI",
             "OPP",
-            "DET",
-            "SPP",
-            "SPL",
-            "SPAP",
-            "SDREP",
-            "SDREM",
             "SDREIP",
-            "SPD",
+            "SDREM",
+            "SDREP",
             "SDT",
             "SDTU",
-            "SPI"
-        ]
-    },
-    "IHE-ZFD-4": {
-        "id": "IHE-ZFD-4",
-        "name": "Indicateur de date de naissance modifi\u00e9e",
-        "type": "User",
-        "elements": [
-            "Y",
-            "N"
-        ]
-    },
-    "IHE-ZFD-5": {
-        "id": "IHE-ZFD-5",
-        "name": "Mode d\u2019obtention de l\u2019identit\u00e9",
-        "type": "User",
-        "elements": [
-            "SM",
-            "CV",
-            "INSI",
-            "CB",
-            "RFID"
-        ]
-    },
-    "IHE-ZFD-7": {
-        "id": "IHE-ZFD-7",
-        "name": "Type de justificatif d\u2019identit\u00e9",
-        "type": "User",
-        "elements": [
-            "AN",
-            "CC",
-            "CE",
-            "CM",
-            "CN",
-            "CS",
-            "LE",
-            "PA",
-            "PC",
-            "TC"
+            "SPAP",
+            "SPD",
+            "SPI",
+            "SPL",
+            "SPP"
         ]
     },
     "IHE-ZFV-10": {
@@ -7556,102 +7635,23 @@
             "8"
         ]
     },
-    "IHE-ZFM-1": {
-        "id": "IHE-ZFM-1",
-        "name": "DRG admit mode",
-        "type": "User",
-        "elements": [
-            "0",
-            "6",
-            "7",
-            "8",
-            "N",
-            "O"
-        ]
-    },
-    "IHE-ZFM-2": {
-        "id": "IHE-ZFM-2",
-        "name": "DRG discharge mode",
-        "type": "User",
-        "elements": [
-            "0",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"
-        ]
-    },
-    "IHE-ZFM-3": {
-        "id": "IHE-ZFM-3",
-        "name": "DRG origin and destination mode",
-        "type": "User",
-        "elements": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "D",
-            "R"
-        ]
-    },
-    "IHE-ZFM-3-4": {
-        "id": "IHE-ZFM-3-4",
-        "name": "DRG origin and destination mode",
-        "type": "User",
-        "elements": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "R",
-            "9",
-            "U",
-            "8"
-        ]
-    },
     "IHE-ZFV-11": {
         "id": "IHE-ZFV-11",
         "name": "Care during transport",
         "type": "User",
         "elements": [
+            "AUCUN",
             "MED",
-            "PARAMED",
-            "AUCUN"
+            "PARAMED"
         ]
     },
-    "0068": {
-        "id": "0068",
-        "name": "Guarantor Type",
+    "IHE-ZFV-6": {
+        "id": "IHE-ZFV-6",
+        "name": "address type",
         "type": "User",
         "elements": [
-            "AMO",
-            "CMU",
-            "AME",
-            "AMC",
-            "CMUC",
-            "AMEC",
-            "PAT",
-            "ASS",
-            "EMP",
-            "ETB",
-            "DEP"
-        ]
-    },
-    "0129": {
-        "id": "0129",
-        "name": "Accomodation code",
-        "type": "User",
-        "elements": [
-            "CP",
-            "NP"
+            "DST",
+            "ORI"
         ]
     }
 }
