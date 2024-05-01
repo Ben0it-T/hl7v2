@@ -60,7 +60,9 @@ $createJsonProfile = array(
     "inputDir"  => "../schemas/json-2.5-IHEPAMFR",
     "outputDir" => "../profiles/json-2.5",
     "msgType"   => array("ACK", "ADT", "SIU"),
-    "ignoreEvents" => array("A08")
+    "ignoreEvents" => array("A08"),
+    "indent" => 2,
+    "pretty" => true
 );
 
 // create-xml-profile

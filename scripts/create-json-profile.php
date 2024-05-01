@@ -20,6 +20,8 @@ class HL7jsonProfilesGenerator {
     public string $messageTypeFilename;
     // json profiles output directory
     public string $profilesOutputDir;
+    public int  $indent;
+    public bool $pretty;
 
     /**
      * @access private
@@ -45,6 +47,8 @@ class HL7jsonProfilesGenerator {
         $this->segmentsSchemas = array();
         $this->fieldsSchemas = array();
         $this->dataTypesSchemas = array();
+        $this->indent = 4;
+        $this->pretty = true;
     }
 
     /**
@@ -74,6 +78,24 @@ class HL7jsonProfilesGenerator {
 
     public function setProfilesOutputDir($directory) {
         $this->profilesOutputDir = $directory;
+    }
+
+    /**
+     * Set indentation level (2 spaces, 4 spaces, etc.)
+     * 
+     * @param int $indent (nb of spaces)
+     */
+    public function setIndentationLevel($indent = 4) {
+        $this->indent = intval($indent);
+    }
+
+    /**
+     * Set pretty print
+     * 
+     * @param bool $pretty
+     */
+    public function setPretty($pretty) {
+        $this->pretty = $pretty;
     }
 
 
@@ -124,7 +146,23 @@ class HL7jsonProfilesGenerator {
 
                     $outputFilename = "$type-$eventName-$strucureId.json";
                     echo "- $outputFilename<br/>";
-                    file_put_contents($this->profilesOutputDir . "/" . $outputFilename, json_encode($this->messageProfile, JSON_PRETTY_PRINT));
+                    //file_put_contents($this->profilesOutputDir . "/" . $outputFilename, json_encode($this->messageProfile, JSON_PRETTY_PRINT));
+                    if ($this->pretty) {
+                        if ($this->indent == 4) {
+                            $json = json_encode($this->messageProfile, JSON_PRETTY_PRINT);
+                        } else {
+                            $json = preg_replace_callback(
+                                '/^(?: {4})+/m',
+                                function($m) {
+                                    return str_repeat(' ', $this->indent * (strlen($m[0]) / 4));
+                                },
+                                json_encode($this->messageProfile, JSON_PRETTY_PRINT)
+                            );
+                        }
+                    } else {
+                        $json = json_encode($this->messageProfile);
+                    }
+                    file_put_contents($this->profilesOutputDir . "/" . $outputFilename, $json);
                 }
             }
         }
@@ -461,6 +499,8 @@ $inputDir     = $createJsonProfile["inputDir"];
 $outputDir    = $createJsonProfile["outputDir"];
 $msgType      = $createJsonProfile["msgType"];
 $ignoreEvents = $createJsonProfile["ignoreEvents"];
+$indent       = $createJsonProfile["indent"];
+$pretty       = $createJsonProfile["pretty"];
 
 // main
 $profilesGen = new HL7jsonProfilesGenerator();
@@ -474,6 +514,10 @@ $profilesGen->setMessageTypeFilename($inputDir . "/messageType.json");
 
 // set output directory
 $profilesGen->setProfilesOutputDir($outputDir);
+
+// pretty print
+$profilesGen->setPretty($pretty);
+$profilesGen->setIndentationLevel($indent);
 
 // create profile
 $profilesGen->createJsonProfiles($msgType, $ignoreEvents);
