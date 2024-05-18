@@ -224,6 +224,7 @@ class Message {
                     "type" => "Field",
                     "location" => $location,
                     "name" => $name,
+                    "longName" => $longName,
                     "usage" => $usage,
                     "card" => $card,
                     "datatype" => $datatype,
@@ -245,6 +246,7 @@ class Message {
                     "type" => "Component",
                     "location" => $location,
                     "name" => $name,
+                    "longName" => $longName,
                     "usage" => $usage,
                     "datatype" => $datatype,
                     "length" => $length,
@@ -262,6 +264,7 @@ class Message {
                     "type" => "SubComponent",
                     "location" => $location,
                     "name" => $name,
+                    "longName" => $longName,
                     "usage" => $usage,
                     "datatype" => $datatype,
                     "length" => $length,
@@ -746,7 +749,7 @@ class Message {
      * - an array representation of the HL7 message according to profile (msgData),
      * - a test report and a validation report
      * 
-     * @return bool Returns false if profil or /hl7tables not found
+     * @return bool Returns false if profil or hl7tables not found
      */
     private function validateMessage() {
         $this->testReport = array();
