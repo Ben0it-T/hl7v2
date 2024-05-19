@@ -755,9 +755,22 @@ class Message {
         $this->testReport = array();
         $this->testReportErrorCnt = 0;
         $this->validationReport = array();
-        
+
         // Load json profile
         $this->addLogs("--- Load json profile ---");
+        if ($this->messageStructID == "") {
+            $messageTypeFileName = $this->profilePath . "/json-" . $this->messageVersionID . "/messageType.json";
+            if (!is_file($messageTypeFileName)) {
+                $this->parseMessageError = "Profile not found.";
+                $this->addLogs("Profile not found.");
+                return false;
+            }
+            $messageTypeArray = json_decode(file_get_contents($messageTypeFileName), true);
+            if (isset($messageTypeArray[$this->messageType][$this->messageTriggerEvent])) {
+                $this->messageStructID = $messageTypeArray[$this->messageType][$this->messageTriggerEvent];
+            }
+        }
+
         $profileName = $this->messageType . "-" . $this->messageTriggerEvent . "-" . $this->messageStructID;
         $profileFileName = $this->profilePath . "/json-" . $this->messageVersionID . "/" . $profileName . ".json";
         if (!is_file($profileFileName)) {
@@ -1601,7 +1614,7 @@ class Message {
             $description = "$elementType $elementName cardinality is [$min..$maxStr]. Must have at least $min repetition(s) (found $elementCnt).";
             $result = false;
             $type = "Cardinality";
-        } else if (($max >= 0) && ($elementCnt > $max)) {
+        } else if ($elementCnt > $max) {
             $description = "$elementType $elementName cardinality is [$min..$maxStr]. Must have no more than $maxStr repetition(s) (found $elementCnt).";
             $result = false;
             $type = "Cardinality";
