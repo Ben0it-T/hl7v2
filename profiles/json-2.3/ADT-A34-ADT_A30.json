@@ -260,11 +260,33 @@
         "Min": "1",
         "Max": "1",
         "Item": "00009",
-        "Datatype": "CM",
+        "Datatype": "CM_MSG",
         "Length": "7",
         "Table": "",
         "LongName": "Message Type",
-        "Chapter": "2"
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "CM_MSG.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "message type",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_MSG.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "trigger event",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "MSH.10",
@@ -854,24 +876,24 @@
         "Min": "0",
         "Max": "1",
         "Item": "00105",
-        "Datatype": "CK",
+        "Datatype": "CX",
         "Length": "20",
         "Table": "",
         "LongName": "Patient ID (External ID)",
         "Chapter": "3",
         "components": [
           {
-            "Name": "CK.1",
+            "Name": "CX.1",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
-            "Type": "NM",
+            "Type": "ST",
             "Table": "",
-            "LongName": "ID number (NM)",
+            "LongName": "ID",
             "maxLength": ""
           },
           {
-            "Name": "CK.2",
+            "Name": "CX.2",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
@@ -881,7 +903,7 @@
             "maxLength": ""
           },
           {
-            "Name": "CK.3",
+            "Name": "CX.3",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
@@ -891,13 +913,65 @@
             "maxLength": ""
           },
           {
-            "Name": "CK.4",
+            "Name": "CX.4",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
             "Type": "HD",
             "Table": "",
             "LongName": "assigning authority",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CX.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0203",
+            "LongName": "identifier type code",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -1078,11 +1152,137 @@
         "Min": "0",
         "Max": "1",
         "Item": "00107",
-        "Datatype": "ST",
+        "Datatype": "CX",
         "Length": "20",
         "Table": "",
         "LongName": "Alternate Patient ID",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "CX.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "check digit",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "code identifying the check digit scheme employed",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning authority",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CX.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0203",
+            "LongName": "identifier type code",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning facility",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
       },
       {
         "Name": "PID.5",
@@ -2012,11 +2212,43 @@
         "Min": "0",
         "Max": "1",
         "Item": "00123",
-        "Datatype": "CM",
+        "Datatype": "DLN",
         "Length": "25",
         "Table": "",
         "LongName": "Driver's License Number",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "DLN.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Driver\u00b4s License Number",
+            "maxLength": ""
+          },
+          {
+            "Name": "DLN.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Issuing State, province, country",
+            "maxLength": ""
+          },
+          {
+            "Name": "DLN.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "expiration date",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "PID.21",

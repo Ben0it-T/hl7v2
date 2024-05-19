@@ -260,11 +260,33 @@
         "Min": "1",
         "Max": "1",
         "Item": "00009",
-        "Datatype": "CM",
+        "Datatype": "CM_MSG",
         "Length": "7",
         "Table": "",
         "LongName": "Message Type",
-        "Chapter": "2"
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "CM_MSG.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "message type",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_MSG.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "trigger event",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "MSH.10",

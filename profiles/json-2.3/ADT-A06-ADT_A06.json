@@ -260,11 +260,33 @@
         "Min": "1",
         "Max": "1",
         "Item": "00009",
-        "Datatype": "CM",
+        "Datatype": "CM_MSG",
         "Length": "7",
         "Table": "",
         "LongName": "Message Type",
-        "Chapter": "2"
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "CM_MSG.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "message type",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_MSG.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "trigger event",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "MSH.10",
@@ -854,24 +876,24 @@
         "Min": "0",
         "Max": "1",
         "Item": "00105",
-        "Datatype": "CK",
+        "Datatype": "CX",
         "Length": "20",
         "Table": "",
         "LongName": "Patient ID (External ID)",
         "Chapter": "3",
         "components": [
           {
-            "Name": "CK.1",
+            "Name": "CX.1",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
-            "Type": "NM",
+            "Type": "ST",
             "Table": "",
-            "LongName": "ID number (NM)",
+            "LongName": "ID",
             "maxLength": ""
           },
           {
-            "Name": "CK.2",
+            "Name": "CX.2",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
@@ -881,7 +903,7 @@
             "maxLength": ""
           },
           {
-            "Name": "CK.3",
+            "Name": "CX.3",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
@@ -891,13 +913,65 @@
             "maxLength": ""
           },
           {
-            "Name": "CK.4",
+            "Name": "CX.4",
             "Usage": "O",
             "Min": "0",
             "Max": "1",
             "Type": "HD",
             "Table": "",
             "LongName": "assigning authority",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CX.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0203",
+            "LongName": "identifier type code",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -1078,11 +1152,137 @@
         "Min": "0",
         "Max": "1",
         "Item": "00107",
-        "Datatype": "ST",
+        "Datatype": "CX",
         "Length": "20",
         "Table": "",
         "LongName": "Alternate Patient ID",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "CX.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "check digit",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "code identifying the check digit scheme employed",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning authority",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CX.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0203",
+            "LongName": "identifier type code",
+            "maxLength": ""
+          },
+          {
+            "Name": "CX.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning facility",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
       },
       {
         "Name": "PID.5",
@@ -2012,11 +2212,43 @@
         "Min": "0",
         "Max": "1",
         "Item": "00123",
-        "Datatype": "CM",
+        "Datatype": "DLN",
         "Length": "25",
         "Table": "",
         "LongName": "Driver's License Number",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "DLN.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Driver\u00b4s License Number",
+            "maxLength": ""
+          },
+          {
+            "Name": "DLN.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Issuing State, province, country",
+            "maxLength": ""
+          },
+          {
+            "Name": "DLN.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "expiration date",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "PID.21",
@@ -4667,11 +4899,33 @@
         "Min": "0",
         "Max": "1",
         "Item": "00200",
-        "Datatype": "CM",
+        "Datatype": "JCC",
         "Length": "20",
         "Table": "",
         "LongName": "Next of Kin Job\/Associated Parties Code\/Class",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "JCC.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "job code",
+            "maxLength": ""
+          },
+          {
+            "Name": "JCC.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "job class",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "NK1.12",
@@ -6040,7 +6294,7 @@
         "Min": "1",
         "Max": "1",
         "Item": "00132",
-        "Datatype": "IS",
+        "Datatype": "ID",
         "Length": "1",
         "Table": "00004",
         "LongName": "Patient Class",
@@ -6188,7 +6442,7 @@
         "Min": "0",
         "Max": "1",
         "Item": "00134",
-        "Datatype": "IS",
+        "Datatype": "ID",
         "Length": "2",
         "Table": "00007",
         "LongName": "Admission Type",
@@ -7704,11 +7958,55 @@
         "Min": "0",
         "Max": "*",
         "Item": "00150",
-        "Datatype": "CM",
+        "Datatype": "FC",
         "Length": "50",
         "Table": "00064",
         "LongName": "Financial Class",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "FC.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Financial Class",
+            "maxLength": ""
+          },
+          {
+            "Name": "FC.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Effective Date",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "TS.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "time of an event",
+                "maxLength": ""
+              },
+              {
+                "Name": "TS.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "degree of precision",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
       },
       {
         "Name": "PV1.21",
@@ -7908,11 +8206,55 @@
         "Min": "0",
         "Max": "1",
         "Item": "00167",
-        "Datatype": "CM",
+        "Datatype": "CM_DLD",
         "Length": "25",
         "Table": "00113",
         "LongName": "Discharged to Location",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "CM_DLD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "discharge location",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_DLD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "effective date",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "TS.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "time of an event",
+                "maxLength": ""
+              },
+              {
+                "Name": "TS.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "degree of precision",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
       },
       {
         "Name": "PV1.38",
@@ -9129,11 +9471,33 @@
         "Min": "0",
         "Max": "1",
         "Item": "00188",
-        "Datatype": "DT",
+        "Datatype": "TS",
         "Length": "8",
         "Table": "",
         "LongName": "Expected Admit Date",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "PV2.9",
@@ -9141,11 +9505,33 @@
         "Min": "0",
         "Max": "1",
         "Item": "00189",
-        "Datatype": "DT",
+        "Datatype": "TS",
         "Length": "8",
         "Table": "",
         "LongName": "Expected Discharge Date",
-        "Chapter": "3"
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "PV2.10",
@@ -9865,7 +10251,7 @@
     "Usage": "O",
     "Min": "0",
     "Max": "*",
-    "LongName": "Disability Segment",
+    "LongName": "",
     "Chapter": "",
     "fields": [
       {
@@ -10786,7 +11172,7 @@
         "Min": "0",
         "Max": "*",
         "Item": "00573",
-        "Datatype": "*",
+        "Datatype": "varies",
         "Length": "65536",
         "Table": "",
         "LongName": "Observation Value",
@@ -14002,7 +14388,7 @@
         "Usage": "O",
         "Min": "0",
         "Max": "*",
-        "LongName": "Role",
+        "LongName": "",
         "Chapter": "",
         "fields": [
           {
@@ -17254,11 +17640,33 @@
         "Min": "0",
         "Max": "1",
         "Item": "00786",
-        "Datatype": "CM",
+        "Datatype": "JCC",
         "Length": "20",
         "Table": "",
         "LongName": "Job Code\/Class",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "JCC.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "job code",
+            "maxLength": ""
+          },
+          {
+            "Name": "JCC.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "job class",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "GT1.51",
@@ -17448,11 +17856,55 @@
         "Min": "0",
         "Max": "1",
         "Item": "01231",
-        "Datatype": "CM",
+        "Datatype": "FC",
         "Length": "0",
         "Table": "0064",
         "LongName": "Guarantor Financial Class",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "FC.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Financial Class",
+            "maxLength": ""
+          },
+          {
+            "Name": "FC.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Effective Date",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "TS.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "time of an event",
+                "maxLength": ""
+              },
+              {
+                "Name": "TS.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "degree of precision",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
       },
       {
         "Name": "GT1.55",
@@ -18675,11 +19127,65 @@
             "Min": "0",
             "Max": "1",
             "Item": "00439",
-            "Datatype": "CM",
+            "Datatype": "CM_AUI",
             "Length": "55",
             "Table": "",
             "LongName": "Authorization Information",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_AUI.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "authorization number",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_AUI.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "date",
+                "maxLength": "",
+                "components": [
+                  {
+                    "Name": "TS.1",
+                    "Usage": "O",
+                    "Min": "0",
+                    "Max": "1",
+                    "Type": "ST",
+                    "Table": "",
+                    "LongName": "time of an event",
+                    "maxLength": ""
+                  },
+                  {
+                    "Name": "TS.2",
+                    "Usage": "O",
+                    "Min": "0",
+                    "Max": "1",
+                    "Type": "ST",
+                    "Table": "",
+                    "LongName": "degree of precision",
+                    "maxLength": ""
+                  }
+                ]
+              },
+              {
+                "Name": "CM_AUI.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "source",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN1.15",
@@ -21518,11 +22024,43 @@
             "Min": "0",
             "Max": "*",
             "Item": "00499",
-            "Datatype": "CM",
+            "Datatype": "CM_RMC",
             "Length": "25",
             "Table": "",
             "LongName": "Room Coverage Type\/Amount",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_RMC.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0145",
+                "LongName": "room type",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_RMC.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "amount type",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_RMC.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "0193",
+                "LongName": "coverage amount",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN2.29",
@@ -21530,11 +22068,43 @@
             "Min": "0",
             "Max": "*",
             "Item": "00500",
-            "Datatype": "CM",
+            "Datatype": "CM_PTA",
             "Length": "25",
             "Table": "",
             "LongName": "Policy Type\/Amount",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_PTA.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0147",
+                "LongName": "policy type",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_PTA.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0193",
+                "LongName": "amount class",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_PTA.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "",
+                "LongName": "amount",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN2.30",
@@ -21542,11 +22112,43 @@
             "Min": "0",
             "Max": "1",
             "Item": "00501",
-            "Datatype": "CM",
+            "Datatype": "CM_DDI",
             "Length": "25",
             "Table": "",
             "LongName": "Daily Deductible",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_DDI.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "",
+                "LongName": "delay days",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_DDI.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "",
+                "LongName": "amount",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_DDI.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "",
+                "LongName": "number of days",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN2.31",
@@ -22014,11 +22616,33 @@
             "Min": "0",
             "Max": "1",
             "Item": "00786",
-            "Datatype": "CM",
+            "Datatype": "JCC",
             "Length": "20",
             "Table": "",
             "LongName": "Job Code\/Class",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "JCC.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "job code",
+                "maxLength": ""
+              },
+              {
+                "Name": "JCC.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "job class",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN2.48",
@@ -23883,11 +24507,33 @@
             "Min": "0",
             "Max": "1",
             "Item": "00506",
-            "Datatype": "CM",
+            "Datatype": "CM_PEN",
             "Length": "10",
             "Table": "00148",
             "LongName": "Penalty",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_PEN.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "penalty type",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_PEN.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "",
+                "LongName": "penalty amount",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN3.6",
@@ -24205,11 +24851,33 @@
             "Min": "0",
             "Max": "1",
             "Item": "00512",
-            "Datatype": "CM",
+            "Datatype": "CM_DTN",
             "Length": "3",
             "Table": "00149",
             "LongName": "Days",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_DTN.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "day type",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_DTN.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "NM",
+                "Table": "",
+                "LongName": "number of days",
+                "maxLength": ""
+              }
+            ]
           },
           {
             "Name": "IN3.12",
@@ -24911,11 +25579,65 @@
             "Min": "0",
             "Max": "*",
             "Item": "00521",
-            "Datatype": "CM",
+            "Datatype": "CM_PCF",
             "Length": "40",
             "Table": "00150",
             "LongName": "Pre-Certification required\/Window",
-            "Chapter": "6"
+            "Chapter": "6",
+            "components": [
+              {
+                "Name": "CM_PCF.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "pre-certification patient type",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_PCF.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "pre-certification required",
+                "maxLength": ""
+              },
+              {
+                "Name": "CM_PCF.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "pre-certification windwow",
+                "maxLength": "",
+                "components": [
+                  {
+                    "Name": "TS.1",
+                    "Usage": "O",
+                    "Min": "0",
+                    "Max": "1",
+                    "Type": "ST",
+                    "Table": "",
+                    "LongName": "time of an event",
+                    "maxLength": ""
+                  },
+                  {
+                    "Name": "TS.2",
+                    "Usage": "O",
+                    "Min": "0",
+                    "Max": "1",
+                    "Type": "ST",
+                    "Table": "",
+                    "LongName": "degree of precision",
+                    "maxLength": ""
+                  }
+                ]
+              }
+            ]
           },
           {
             "Name": "IN3.21",
@@ -25539,11 +26261,33 @@
         "Min": "0",
         "Max": "*",
         "Item": "00539",
-        "Datatype": "CM",
+        "Datatype": "CM_UVC",
         "Length": "12",
         "Table": "00153",
         "LongName": "Value Amount & Code (46-49)",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "CM_UVC.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "value code",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_UVC.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "NM",
+            "Table": "",
+            "LongName": "value amount",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "UB1.11",
@@ -25735,11 +26479,95 @@
         "Min": "0",
         "Max": "*",
         "Item": "00545",
-        "Datatype": "CM",
+        "Datatype": "CM_OCD",
         "Length": "20",
         "Table": "",
         "LongName": "Occurrence (28 32)",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "CM_OCD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "occurrence code",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "alternate identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CM_OCD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "occurrence date",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "UB1.17",
@@ -25964,11 +26792,33 @@
         "Min": "0",
         "Max": "*",
         "Item": "00558",
-        "Datatype": "CM",
+        "Datatype": "CM_UVC",
         "Length": "11",
         "Table": "",
         "LongName": "Value Amount & Code",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "CM_UVC.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "value code",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_UVC.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "NM",
+            "Table": "",
+            "LongName": "value amount",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "UB2.7",
@@ -25976,11 +26826,95 @@
         "Min": "0",
         "Max": "*",
         "Item": "00559",
-        "Datatype": "CM",
+        "Datatype": "CM_OCD",
         "Length": "11",
         "Table": "00153",
         "LongName": "Occurrence Code & Date (32-35)",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "CM_OCD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "occurrence code",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "alternate identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CM_OCD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "occurrence date",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "UB2.8",
@@ -25988,11 +26922,105 @@
         "Min": "0",
         "Max": "*",
         "Item": "00560",
-        "Datatype": "CM",
+        "Datatype": "CM_OSP",
         "Length": "28",
         "Table": "",
         "LongName": "Occurrence Span Code\/Dates (36)",
-        "Chapter": "6"
+        "Chapter": "6",
+        "components": [
+          {
+            "Name": "CM_OSP.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "occurrence span code",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "alternate identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "CM_OSP.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "occurrence span start date",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_OSP.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "occurrence span stop date",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "UB2.9",

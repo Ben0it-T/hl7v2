@@ -260,11 +260,33 @@
         "Min": "1",
         "Max": "1",
         "Item": "00009",
-        "Datatype": "CM",
+        "Datatype": "CM_MSG",
         "Length": "7",
         "Table": "",
         "LongName": "Message Type",
-        "Chapter": "2"
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "CM_MSG.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "message type",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_MSG.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "trigger event",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "MSH.10",
@@ -632,11 +654,115 @@
         "Min": "1",
         "Max": "*",
         "Item": "00024",
-        "Datatype": "CM",
+        "Datatype": "CM_ELD",
         "Length": "80",
         "Table": "0060",
         "LongName": "Error Code and Location",
-        "Chapter": "2"
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "CM_ELD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "segment ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_ELD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "NM",
+            "Table": "",
+            "LongName": "sequence",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_ELD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "NM",
+            "Table": "",
+            "LongName": "field position",
+            "maxLength": ""
+          },
+          {
+            "Name": "CM_ELD.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "code identifying error",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "alternate identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
       }
     ]
   }

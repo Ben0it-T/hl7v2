@@ -1078,9 +1078,7 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ],
-        "LongName": "Disability Segment",
-        "Chapter": ""
+        ]
     },
     "DG1": {
         "fields": [
@@ -6371,9 +6369,7 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ],
-        "LongName": "Resource Group",
-        "Chapter": ""
+        ]
     },
     "ROL": {
         "fields": [
@@ -6417,9 +6413,7 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ],
-        "LongName": "Role",
-        "Chapter": ""
+        ]
     },
     "RQ1": {
         "fields": [
