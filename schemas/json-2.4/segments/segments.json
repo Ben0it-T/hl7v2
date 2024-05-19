@@ -4718,7 +4718,7 @@
             {
                 "field": "OBX.9",
                 "minOccurs": "0",
-                "maxOccurs": "5"
+                "maxOccurs": "1"
             },
             {
                 "field": "OBX.10",
@@ -5403,7 +5403,7 @@
             {
                 "field": "ORC.1",
                 "minOccurs": "1",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "1"
             },
             {
                 "field": "ORC.2",
@@ -5423,7 +5423,7 @@
             {
                 "field": "ORC.5",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "1"
             },
             {
                 "field": "ORC.6",
@@ -5523,7 +5523,7 @@
             {
                 "field": "ORC.25",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "1"
             }
         ],
         "LongName": "Common Order",

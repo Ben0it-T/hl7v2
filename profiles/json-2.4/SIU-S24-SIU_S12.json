@@ -260,11 +260,43 @@
         "Min": "1",
         "Max": "1",
         "Item": "00009",
-        "Datatype": "CM",
+        "Datatype": "MSG",
         "Length": "15",
         "Table": "00076",
         "LongName": "Message Type",
-        "Chapter": "2"
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "MSG.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "message type",
+            "maxLength": ""
+          },
+          {
+            "Name": "MSG.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "trigger event",
+            "maxLength": ""
+          },
+          {
+            "Name": "MSG.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "message structure",
+            "maxLength": ""
+          }
+        ]
       },
       {
         "Name": "MSH.10",
@@ -11335,11 +11367,55 @@
             "Min": "0",
             "Max": "1",
             "Item": "00167",
-            "Datatype": "CM",
+            "Datatype": "DLD",
             "Length": "25",
             "Table": "00113",
             "LongName": "Discharged to Location",
-            "Chapter": "3"
+            "Chapter": "3",
+            "components": [
+              {
+                "Name": "DLD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "",
+                "LongName": "discharge location",
+                "maxLength": ""
+              },
+              {
+                "Name": "DLD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "effective date",
+                "maxLength": "",
+                "components": [
+                  {
+                    "Name": "TS.1",
+                    "Usage": "O",
+                    "Min": "0",
+                    "Max": "1",
+                    "Type": "ST",
+                    "Table": "",
+                    "LongName": "time of an event",
+                    "maxLength": ""
+                  },
+                  {
+                    "Name": "TS.2",
+                    "Usage": "O",
+                    "Min": "0",
+                    "Max": "1",
+                    "Type": "ST",
+                    "Table": "",
+                    "LongName": "degree of precision",
+                    "maxLength": ""
+                  }
+                ]
+              }
+            ]
           },
           {
             "Name": "PV1.38",
@@ -14583,7 +14659,7 @@
             "Name": "OBX.9",
             "Usage": "O",
             "Min": "0",
-            "Max": "5",
+            "Max": "1",
             "Item": "00577",
             "Datatype": "NM",
             "Length": "5",
