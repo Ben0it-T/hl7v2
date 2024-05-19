@@ -41,19 +41,21 @@ if ($todoList["dataTypes"]) {
                 $dataType = $component["dataType"];
                 $minOccurs = $component["minOccurs"];
                 $maxOccurs = $component["maxOccurs"];
-                for ($i=0; $i < count($dataTarget[$dtKey]["components"]); $i++) {
-                    if ($dataTarget[$dtKey]["components"][$i]["dataType"] == $dataType) {
-                        if ($dataTarget[$dtKey]["components"][$i]["minOccurs"] != $minOccurs) {
-                            $hasChanged = true;
-                            $changes .= $dataType . ": minOccurs (" . $dataTarget[$dtKey]["components"][$i]["minOccurs"] . " -> " . $minOccurs. ")<br/>";
-                            $dataTarget[$dtKey]["components"][$i]["minOccurs"] = $minOccurs;
+                if (isset($dataTarget[$dtKey])) {
+                    for ($i=0; $i < count($dataTarget[$dtKey]["components"]); $i++) {
+                        if ($dataTarget[$dtKey]["components"][$i]["dataType"] == $dataType) {
+                            if ($dataTarget[$dtKey]["components"][$i]["minOccurs"] != $minOccurs) {
+                                $hasChanged = true;
+                                $changes .= $dataType . ": minOccurs (" . $dataTarget[$dtKey]["components"][$i]["minOccurs"] . " -> " . $minOccurs. ")<br/>";
+                                $dataTarget[$dtKey]["components"][$i]["minOccurs"] = $minOccurs;
+                            }
+                            if ($dataTarget[$dtKey]["components"][$i]["maxOccurs"] != $maxOccurs) {
+                                $hasChanged = true;
+                                $changes .= $dataType . ": maxOccurs (" . $dataTarget[$dtKey]["components"][$i]["maxOccurs"] . " -> " . $maxOccurs. ")<br/>";
+                                $dataTarget[$dtKey]["components"][$i]["maxOccurs"] = $maxOccurs;
+                            }
+                            break;
                         }
-                        if ($dataTarget[$dtKey]["components"][$i]["maxOccurs"] != $maxOccurs) {
-                            $hasChanged = true;
-                            $changes .= $dataType . ": maxOccurs (" . $dataTarget[$dtKey]["components"][$i]["maxOccurs"] . " -> " . $maxOccurs. ")<br/>";
-                            $dataTarget[$dtKey]["components"][$i]["maxOccurs"] = $maxOccurs;
-                        }
-                        break;
                     }
                 }
             }
@@ -61,10 +63,12 @@ if ($todoList["dataTypes"]) {
         else {
             // datatypes
             foreach ($dtVal as $key => $val) {
-                if ($val != "" && $dataTarget[$dtKey][$key] != $val) {
-                    $hasChanged = true;
-                    $changes .= $dtKey . ": " . $key . " (". $dataTarget[$dtKey][$key] . " -> " . $val . ")<br/>";
-                    $dataTarget[$dtKey][$key] = $val;
+                if (isset($dataTarget[$dtKey])) {
+                    if ($val != "" && $dataTarget[$dtKey][$key] != $val) {
+                        $hasChanged = true;
+                        $changes .= $dtKey . ": " . $key . " (". $dataTarget[$dtKey][$key] . " -> " . $val . ")<br/>";
+                        $dataTarget[$dtKey][$key] = $val;
+                    }
                 }
             }
         }

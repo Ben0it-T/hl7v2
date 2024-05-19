@@ -81,10 +81,12 @@ if ($todoList["dataElements"]) {
                 $dataFields[$fieldName]["Type"] = trim($dt);
             }
             if (trim($item) != "" && $dataFields[$fieldName]["Item"] != trim($item)) {
-               $dataFields[$fieldName]["Item"] = trim($item);
+               //$dataFields[$fieldName]["Item"] = trim($item);
+               $dataFields[$fieldName]["Item"] = sprintf('%05d', trim($item));
             }
             if (trim($table) != "" && $dataFields[$fieldName]["Table"] != "HL7".trim($table)) {
-                $dataFields[$fieldName]["Table"] = "HL7".trim($table);
+                //$dataFields[$fieldName]["Table"] = "HL7".trim($table);
+                $dataFields[$fieldName]["Table"] = "HL7" . (sprintf('%05d', trim($table)));
             }
             if (trim($len) != "" && $dataFields[$fieldName]["maxLength"] != trim($len)) {
                 $dataFields[$fieldName]["maxLength"] = trim($len);
