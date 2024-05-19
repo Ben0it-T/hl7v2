@@ -1,0 +1,1389 @@
+[
+  {
+    "Type": "segment",
+    "Name": "MSH",
+    "Usage": "R",
+    "Min": "1",
+    "Max": "1",
+    "LongName": "Message Header",
+    "Chapter": "2",
+    "fields": [
+      {
+        "Name": "MSH.1",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00001",
+        "Datatype": "ST",
+        "Length": "1",
+        "Table": "",
+        "LongName": "Field Separator",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.2",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00002",
+        "Datatype": "ST",
+        "Length": "4",
+        "Table": "",
+        "LongName": "Encoding Characters",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.3",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00003",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00361",
+        "LongName": "Sending Application",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.4",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00004",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00362",
+        "LongName": "Sending Facility",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.5",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00005",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00361",
+        "LongName": "Receiving Application",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.6",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00006",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00362",
+        "LongName": "Receiving Facility",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.7",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00007",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Date\/Time Of Message",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.8",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00008",
+        "Datatype": "ST",
+        "Length": "40",
+        "Table": "",
+        "LongName": "Security",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.9",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00009",
+        "Datatype": "CM",
+        "Length": "15",
+        "Table": "00076",
+        "LongName": "Message Type",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.10",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00010",
+        "Datatype": "ST",
+        "Length": "20",
+        "Table": "",
+        "LongName": "Message Control ID",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.11",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00011",
+        "Datatype": "PT",
+        "Length": "3",
+        "Table": "",
+        "LongName": "Processing ID",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "PT.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "processing ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "PT.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "processing mode",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.12",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00012",
+        "Datatype": "VID",
+        "Length": "60",
+        "Table": "00104",
+        "LongName": "Version ID",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "VID.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "version ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "VID.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "internationalization code",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "identifier (ST)",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate identifier (ST)",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "VID.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "international version ID",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "identifier (ST)",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate identifier (ST)",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "MSH.13",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00013",
+        "Datatype": "NM",
+        "Length": "15",
+        "Table": "",
+        "LongName": "Sequence Number",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.14",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00014",
+        "Datatype": "ST",
+        "Length": "180",
+        "Table": "",
+        "LongName": "Continuation Pointer",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.15",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00015",
+        "Datatype": "ID",
+        "Length": "2",
+        "Table": "00155",
+        "LongName": "Accept Acknowledgment Type",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.16",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00016",
+        "Datatype": "ID",
+        "Length": "2",
+        "Table": "00155",
+        "LongName": "Application Acknowledgment Type",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.17",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00017",
+        "Datatype": "ID",
+        "Length": "3",
+        "Table": "00399",
+        "LongName": "Country Code",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.18",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "*",
+        "Item": "00692",
+        "Datatype": "ID",
+        "Length": "16",
+        "Table": "00211",
+        "LongName": "Character Set",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.19",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00693",
+        "Datatype": "CE",
+        "Length": "250",
+        "Table": "",
+        "LongName": "Principal Language Of Message",
+        "Chapter": "2",
+        "components": [
+          {
+            "Name": "CE.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "identifier (ST)",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "text",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "name of coding system",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "alternate identifier (ST)",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "alternate text",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "name of alternate coding system",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.20",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "01317",
+        "Datatype": "ID",
+        "Length": "20",
+        "Table": "00356",
+        "LongName": "Alternate Character Set Handling Scheme",
+        "Chapter": "2"
+      },
+      {
+        "Name": "MSH.21",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "*",
+        "Item": "01598",
+        "Datatype": "ID",
+        "Length": "10",
+        "Table": "00449",
+        "LongName": "Conformance Statement ID",
+        "Chapter": "2"
+      }
+    ]
+  },
+  {
+    "Type": "segment",
+    "Name": "EVN",
+    "Usage": "R",
+    "Min": "1",
+    "Max": "1",
+    "LongName": "Event Type",
+    "Chapter": "3",
+    "fields": [
+      {
+        "Name": "EVN.1",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00099",
+        "Datatype": "ID",
+        "Length": "3",
+        "Table": "00003",
+        "LongName": "Event Type Code",
+        "Chapter": "3"
+      },
+      {
+        "Name": "EVN.2",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00100",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Recorded Date\/Time",
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "EVN.3",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00101",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Date\/Time Planned Event",
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "EVN.4",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00102",
+        "Datatype": "IS",
+        "Length": "3",
+        "Table": "00062",
+        "LongName": "Event Reason Code",
+        "Chapter": "3"
+      },
+      {
+        "Name": "EVN.5",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "*",
+        "Item": "00103",
+        "Datatype": "XCN",
+        "Length": "250",
+        "Table": "00188",
+        "LongName": "Operator ID",
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "XCN.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "ID number (ST)",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "FN",
+            "Table": "",
+            "LongName": "family name",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "FN.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "surname",
+                "maxLength": ""
+              },
+              {
+                "Name": "FN.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "own surname prefix",
+                "maxLength": ""
+              },
+              {
+                "Name": "FN.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "own surname",
+                "maxLength": ""
+              },
+              {
+                "Name": "FN.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "surname prefix from partner\/spouse",
+                "maxLength": ""
+              },
+              {
+                "Name": "FN.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "surname from partner\/spouse",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "XCN.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "given name",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "second and further given names or initials thereof",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "suffix (e.g., JR or III)",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "prefix (e.g., DR)",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.7",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "degree (e.g., MD)",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.8",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "source table",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.9",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning authority",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0300",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "XCN.10",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "name type code",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.11",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "identifier check digit",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.12",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "code identifying the check digit scheme employed",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.13",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "identifier type code (IS)",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.14",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "assigning facility",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0300",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "XCN.15",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Name Representation code",
+            "maxLength": ""
+          },
+          {
+            "Name": "XCN.16",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "name context",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "identifier (ST)",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate identifier (ST)",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "XCN.17",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DR",
+            "Table": "",
+            "LongName": "name validity range",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "DR.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "range start date\/time",
+                "maxLength": ""
+              },
+              {
+                "Name": "DR.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "range end date\/time",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "XCN.18",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "name assembly order",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "EVN.6",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "01278",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Event Occurred",
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "EVN.7",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "01534",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "",
+        "LongName": "Event Facility",
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Type": "segment",
+    "Name": "NPU",
+    "Usage": "R",
+    "Min": "1",
+    "Max": "1",
+    "LongName": "Bed status update",
+    "Chapter": "3",
+    "fields": [
+      {
+        "Name": "NPU.1",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00209",
+        "Datatype": "PL",
+        "Length": "80",
+        "Table": "",
+        "LongName": "Bed Location",
+        "Chapter": "3",
+        "components": [
+          {
+            "Name": "PL.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "point of care",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "room",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "bed",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "0300",
+            "LongName": "facility (HD)",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0300",
+                "LongName": "namespace ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "universal ID",
+                "maxLength": ""
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "universal ID type",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "PL.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "location status",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "person location type",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.7",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "building",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.8",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "floor",
+            "maxLength": ""
+          },
+          {
+            "Name": "PL.9",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Location description",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "NPU.2",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00170",
+        "Datatype": "IS",
+        "Length": "1",
+        "Table": "00116",
+        "LongName": "Bed Status",
+        "Chapter": "3"
+      }
+    ]
+  }
+]

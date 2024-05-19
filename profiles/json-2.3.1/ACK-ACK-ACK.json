@@ -1,0 +1,811 @@
+[
+  {
+    "Type": "segment",
+    "Name": "MSH",
+    "Usage": "R",
+    "Min": "1",
+    "Max": "1",
+    "LongName": "Message header segment",
+    "Chapter": "2",
+    "fields": [
+      {
+        "Name": "MSH.1",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00001",
+        "Datatype": "ST",
+        "Length": "1",
+        "Table": "",
+        "LongName": "Field Separator",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.2",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00002",
+        "Datatype": "ST",
+        "Length": "4",
+        "Table": "",
+        "LongName": "Encoding Characters",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.3",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00003",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00361",
+        "LongName": "Sending Application",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.4",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00004",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00362",
+        "LongName": "Sending Facility",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.5",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00005",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00361",
+        "LongName": "Receiving Application",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.6",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00006",
+        "Datatype": "HD",
+        "Length": "180",
+        "Table": "00362",
+        "LongName": "Receiving Facility",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "HD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0300",
+            "LongName": "namespace ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "universal ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "HD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0301",
+            "LongName": "universal ID type",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.7",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00007",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Date\/Time Of Message",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "time of an event",
+            "maxLength": ""
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "degree of precision",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.8",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00008",
+        "Datatype": "ST",
+        "Length": "40",
+        "Table": "",
+        "LongName": "Security",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.9",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00009",
+        "Datatype": "CM",
+        "Length": "7",
+        "Table": "00076",
+        "LongName": "Message Type",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.10",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00010",
+        "Datatype": "ST",
+        "Length": "20",
+        "Table": "",
+        "LongName": "Message Control ID",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.11",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00011",
+        "Datatype": "PT",
+        "Length": "3",
+        "Table": "",
+        "LongName": "Processing ID",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "PT.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "processing ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "PT.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "processing mode",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.12",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00012",
+        "Datatype": "VID",
+        "Length": "60",
+        "Table": "00104",
+        "LongName": "Version ID",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "VID.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "version ID",
+            "maxLength": ""
+          },
+          {
+            "Name": "VID.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "internationalization code",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          },
+          {
+            "Name": "VID.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CE",
+            "Table": "",
+            "LongName": "international version ID",
+            "maxLength": "",
+            "components": [
+              {
+                "Name": "CE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of coding system",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate identifier",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "alternate text",
+                "maxLength": ""
+              },
+              {
+                "Name": "CE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "name of alternate coding system",
+                "maxLength": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "MSH.13",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00013",
+        "Datatype": "NM",
+        "Length": "15",
+        "Table": "",
+        "LongName": "Sequence Number",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.14",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00014",
+        "Datatype": "ST",
+        "Length": "180",
+        "Table": "",
+        "LongName": "Continuation Pointer",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.15",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00015",
+        "Datatype": "ID",
+        "Length": "2",
+        "Table": "00155",
+        "LongName": "Accept Acknowledgment Type",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.16",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00016",
+        "Datatype": "ID",
+        "Length": "2",
+        "Table": "00155",
+        "LongName": "Application Acknowledgment Type",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.17",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00017",
+        "Datatype": "ID",
+        "Length": "2",
+        "Table": "",
+        "LongName": "Country Code",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.18",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "*",
+        "Item": "00692",
+        "Datatype": "ID",
+        "Length": "16",
+        "Table": "00211",
+        "LongName": "Character Set",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSH.19",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00693",
+        "Datatype": "CE",
+        "Length": "60",
+        "Table": "",
+        "LongName": "Principal Language Of Message",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "CE.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "identifier",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "text",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "name of coding system",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "alternate identifier",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "alternate text",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "name of alternate coding system",
+            "maxLength": ""
+          }
+        ]
+      },
+      {
+        "Name": "MSH.20",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "01317",
+        "Datatype": "ID",
+        "Length": "20",
+        "Table": "00356",
+        "LongName": "Alternate Character Set Handling Scheme",
+        "Chapter": ""
+      }
+    ]
+  },
+  {
+    "Type": "segment",
+    "Name": "MSA",
+    "Usage": "R",
+    "Min": "1",
+    "Max": "1",
+    "LongName": "Message acknowledgment segment",
+    "Chapter": "2",
+    "fields": [
+      {
+        "Name": "MSA.1",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00018",
+        "Datatype": "ID",
+        "Length": "2",
+        "Table": "00008",
+        "LongName": "Acknowledgement Code",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSA.2",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "1",
+        "Item": "00010",
+        "Datatype": "ST",
+        "Length": "20",
+        "Table": "",
+        "LongName": "Message Control ID",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSA.3",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00020",
+        "Datatype": "ST",
+        "Length": "80",
+        "Table": "",
+        "LongName": "Text Message",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSA.4",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00021",
+        "Datatype": "NM",
+        "Length": "15",
+        "Table": "",
+        "LongName": "Expected Sequence Number",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSA.5",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00022",
+        "Datatype": "ID",
+        "Length": "1",
+        "Table": "00102",
+        "LongName": "Delayed Acknowledgment Type",
+        "Chapter": ""
+      },
+      {
+        "Name": "MSA.6",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "00023",
+        "Datatype": "CE",
+        "Length": "100",
+        "Table": "",
+        "LongName": "Error Condition",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "CE.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "identifier",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "text",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "name of coding system",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "alternate identifier",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "alternate text",
+            "maxLength": ""
+          },
+          {
+            "Name": "CE.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "name of alternate coding system",
+            "maxLength": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Type": "segment",
+    "Name": "ERR",
+    "Usage": "O",
+    "Min": "0",
+    "Max": "1",
+    "LongName": "Error segment",
+    "Chapter": "2",
+    "fields": [
+      {
+        "Name": "ERR.1",
+        "Usage": "R",
+        "Min": "1",
+        "Max": "*",
+        "Item": "00024",
+        "Datatype": "CM",
+        "Length": "80",
+        "Table": "",
+        "LongName": "Error Code and Location",
+        "Chapter": ""
+      }
+    ]
+  }
+]

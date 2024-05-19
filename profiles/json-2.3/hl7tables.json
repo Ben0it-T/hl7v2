@@ -1,0 +1,3407 @@
+{
+    "0001": {
+        "id": "0001",
+        "name": "Sex",
+        "type": "User",
+        "elements": [
+            "F",
+            "M",
+            "O",
+            "U"
+        ]
+    },
+    "0002": {
+        "id": "0002",
+        "name": "Marital Status",
+        "type": "User",
+        "elements": [
+            "A",
+            "D",
+            "M",
+            "S",
+            "W"
+        ]
+    },
+    "0003": {
+        "id": "0003",
+        "name": "Event Type",
+        "type": "HL7",
+        "elements": [
+            "A01",
+            "A02",
+            "A03",
+            "A04",
+            "A05",
+            "A06",
+            "A07",
+            "A08",
+            "A09",
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A19",
+            "A20",
+            "A21",
+            "A22",
+            "A23",
+            "A24",
+            "A25",
+            "A26",
+            "A27",
+            "A28",
+            "A29",
+            "A30",
+            "A31",
+            "A32",
+            "A33",
+            "A34",
+            "A35",
+            "A36",
+            "A37",
+            "A38",
+            "A39",
+            "A40",
+            "A41",
+            "A42",
+            "A43",
+            "A44",
+            "A45",
+            "A46",
+            "A47",
+            "A48",
+            "A49",
+            "A50",
+            "A51",
+            "C01",
+            "C02",
+            "C02",
+            "C04",
+            "C05",
+            "C06",
+            "C07",
+            "C08",
+            "C09",
+            "C10",
+            "C11",
+            "C12",
+            "CNQ",
+            "I01",
+            "I02",
+            "I03",
+            "I04",
+            "I05",
+            "I06",
+            "I07",
+            "I08",
+            "I09",
+            "I10",
+            "I11",
+            "I12",
+            "I13",
+            "I14",
+            "I15",
+            "M01",
+            "M02",
+            "M03",
+            "varies",
+            "M04",
+            "M05",
+            "M06",
+            "M07",
+            "M08",
+            "M09",
+            "M10",
+            "M11",
+            "O01",
+            "O02",
+            "R05",
+            "R06",
+            "RAR",
+            "RDR",
+            "RER",
+            "RGR",
+            "ROR",
+            "P01",
+            "P02",
+            "P03",
+            "P04",
+            "P05",
+            "P06",
+            "Q01",
+            "Q02",
+            "Q03",
+            "Q05",
+            "Q06",
+            "R01",
+            "R02",
+            "R03",
+            "R04",
+            "RAR",
+            "RER",
+            "R0R",
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10",
+            "S11",
+            "S12",
+            "S13",
+            "S14",
+            "S15",
+            "S16",
+            "S17",
+            "S18",
+            "S19",
+            "S20",
+            "S21",
+            "S22",
+            "S23",
+            "S24",
+            "S25",
+            "S26",
+            "T01",
+            "T02",
+            "T03",
+            "T04",
+            "T05",
+            "T06",
+            "T07",
+            "T08",
+            "T09",
+            "V01",
+            "V02",
+            "V03",
+            "V04",
+            "W01",
+            "W02"
+        ]
+    },
+    "0004": {
+        "id": "0004",
+        "name": "Patient Class",
+        "type": "User",
+        "elements": [
+            "E",
+            "I",
+            "O",
+            "P",
+            "R",
+            "B"
+        ]
+    },
+    "0005": {
+        "id": "0005",
+        "name": "Race",
+        "type": "User",
+        "elements": []
+    },
+    "0006": {
+        "id": "0006",
+        "name": "Religion",
+        "type": "User",
+        "elements": []
+    },
+    "0007": {
+        "id": "0007",
+        "name": "Admission Type",
+        "type": "User",
+        "elements": [
+            "A",
+            "E",
+            "L",
+            "R"
+        ]
+    },
+    "0008": {
+        "id": "0008",
+        "name": "Acknowledgment Code",
+        "type": "HL7",
+        "elements": [
+            "AA",
+            "AE",
+            "AR",
+            "CA",
+            "CE",
+            "CR"
+        ]
+    },
+    "0009": {
+        "id": "0009",
+        "name": "Ambulatory Status",
+        "type": "User",
+        "elements": [
+            "A0",
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "B1",
+            "B2",
+            "B3",
+            "B4",
+            "B5",
+            "B6"
+        ]
+    },
+    "0010": {
+        "id": "0010",
+        "name": "Physician ID",
+        "type": "User",
+        "elements": []
+    },
+    "0017": {
+        "id": "0017",
+        "name": "Transaction Type",
+        "type": "User",
+        "elements": [
+            "CG",
+            "CD",
+            "PY",
+            "AJ"
+        ]
+    },
+    "0018": {
+        "id": "0018",
+        "name": "Patient Type",
+        "type": "User",
+        "elements": []
+    },
+    "0019": {
+        "id": "0019",
+        "name": "Anesthesia Code",
+        "type": "User",
+        "elements": []
+    },
+    "0021": {
+        "id": "0021",
+        "name": "Bad Debt Agency Code",
+        "type": "User",
+        "elements": []
+    },
+    "0022": {
+        "id": "0022",
+        "name": "Billing Status",
+        "type": "User",
+        "elements": []
+    },
+    "0023": {
+        "id": "0023",
+        "name": "Admit Source",
+        "type": "User",
+        "elements": []
+    },
+    "0024": {
+        "id": "0024",
+        "name": "Fee Schedule",
+        "type": "User",
+        "elements": []
+    },
+    "0027": {
+        "id": "0027",
+        "name": "Priority",
+        "type": "HL7",
+        "elements": [
+            "S",
+            "A",
+            "R",
+            "P",
+            "T"
+        ]
+    },
+    "0032": {
+        "id": "0032",
+        "name": "Charge\/Price Indicator",
+        "type": "User",
+        "elements": []
+    },
+    "0038": {
+        "id": "0038",
+        "name": "Order Status",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "CA",
+            "CM",
+            "DC",
+            "ER",
+            "HD",
+            "IP",
+            "RP",
+            "SC"
+        ]
+    },
+    "0042": {
+        "id": "0042",
+        "name": "Company Plan Code",
+        "type": "User",
+        "elements": []
+    },
+    "0043": {
+        "id": "0043",
+        "name": "Condition Code",
+        "type": "User",
+        "elements": []
+    },
+    "0044": {
+        "id": "0044",
+        "name": "Contract Code",
+        "type": "User",
+        "elements": []
+    },
+    "0045": {
+        "id": "0045",
+        "name": "Courtesy Code",
+        "type": "User",
+        "elements": []
+    },
+    "0046": {
+        "id": "0046",
+        "name": "Credit Rating",
+        "type": "User",
+        "elements": []
+    },
+    "0048": {
+        "id": "0048",
+        "name": "What Subject Filter",
+        "type": "HL7",
+        "elements": [
+            "ADV",
+            "ANU",
+            "APN",
+            "APP",
+            "ARN",
+            "APM",
+            "APA",
+            "CAN",
+            "DEM",
+            "FIN",
+            "GOL",
+            "MRI",
+            "MRO",
+            "NCK",
+            "NSC",
+            "NST",
+            "ORD",
+            "OTH",
+            "PRB",
+            "PRO",
+            "RES",
+            "RAR",
+            "RER",
+            "RDR",
+            "RGR",
+            "ROR",
+            "STA",
+            "VXI"
+        ]
+    },
+    "0049": {
+        "id": "0049",
+        "name": "Department Code",
+        "type": "User",
+        "elements": []
+    },
+    "0050": {
+        "id": "0050",
+        "name": "Accident Code",
+        "type": "User",
+        "elements": []
+    },
+    "0051": {
+        "id": "0051",
+        "name": "Diagnosis Code",
+        "type": "User",
+        "elements": []
+    },
+    "0052": {
+        "id": "0052",
+        "name": "Diagnosis Type",
+        "type": "User",
+        "elements": [
+            "A",
+            "W",
+            "F"
+        ]
+    },
+    "0053": {
+        "id": "0053",
+        "name": "Diagnosis Coding Method",
+        "type": "HL7",
+        "elements": []
+    },
+    "0055": {
+        "id": "0055",
+        "name": "DRG Code",
+        "type": "User",
+        "elements": []
+    },
+    "0056": {
+        "id": "0056",
+        "name": "DRG Grouper Review Code",
+        "type": "User",
+        "elements": []
+    },
+    "0059": {
+        "id": "0059",
+        "name": "Consent Code",
+        "type": "User",
+        "elements": []
+    },
+    "0061": {
+        "id": "0061",
+        "name": "Check Digit Scheme",
+        "type": "HL7",
+        "elements": [
+            "M10",
+            "M11"
+        ]
+    },
+    "0062": {
+        "id": "0062",
+        "name": "Event Reason",
+        "type": "User",
+        "elements": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "0063": {
+        "id": "0063",
+        "name": "Relationship",
+        "type": "User",
+        "elements": []
+    },
+    "0064": {
+        "id": "0064",
+        "name": "Financial Class",
+        "type": "User",
+        "elements": []
+    },
+    "0065": {
+        "id": "0065",
+        "name": "Specimen Action Code",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "G",
+            "L",
+            "O",
+            "P",
+            "R",
+            "S"
+        ]
+    },
+    "0066": {
+        "id": "0066",
+        "name": "Employment Status",
+        "type": "User",
+        "elements": []
+    },
+    "0068": {
+        "id": "0068",
+        "name": "Guarantor Type",
+        "type": "User",
+        "elements": []
+    },
+    "0069": {
+        "id": "0069",
+        "name": "Hospital Service",
+        "type": "User",
+        "elements": []
+    },
+    "0070": {
+        "id": "0070",
+        "name": "Specimen Source Codes",
+        "type": "HL7",
+        "elements": [
+            "ABS",
+            "AMN",
+            "ASP",
+            "BPH",
+            "BIFL",
+            "BLDA",
+            "BBL",
+            "BLDC",
+            "BPU",
+            "BLDV",
+            "BON",
+            "BRTH",
+            "BRO",
+            "BRN",
+            "CALC",
+            "CDM",
+            "CNL",
+            "CTP",
+            "CSF",
+            "CVM",
+            "CVX",
+            "COL",
+            "CBLD",
+            "CNJT",
+            "CUR",
+            "CYST",
+            "DIAF",
+            "DOSE",
+            "DRN",
+            "DUFL",
+            "EAR",
+            "EARW",
+            "ELT",
+            "ENDC",
+            "ENDM",
+            "EOS",
+            "RBC",
+            "EYE",
+            "EXHLD",
+            "FIB",
+            "FLT",
+            "FIST",
+            "FLU",
+            "GAS",
+            "GAST",
+            "GEN",
+            "GENC",
+            "GENL",
+            "GENV",
+            "HAR",
+            "IHG",
+            "IT",
+            "ISLT",
+            "LAM",
+            "WBC",
+            "LN",
+            "LNA",
+            "LNV",
+            "LIQ",
+            "LYM",
+            "MAC",
+            "MAR",
+            "MEC",
+            "MBLD",
+            "MLK",
+            "MILK",
+            "NAIL",
+            "NOS",
+            "ORH",
+            "PAFL",
+            "PAT",
+            "PRT",
+            "PLC",
+            "PLAS",
+            "PLB",
+            "PLR",
+            "PMN",
+            "PPP",
+            "PRP",
+            "PUS",
+            "RT",
+            "SAL",
+            "SEM",
+            "SER",
+            "SKN",
+            "SKM",
+            "SPRM",
+            "SPT",
+            "SPTC",
+            "SPTT",
+            "STON",
+            "STL",
+            "SWT",
+            "SNV",
+            "TEAR",
+            "THRT",
+            "THRB",
+            "TISS",
+            "TISG",
+            "TLGI",
+            "TLNG",
+            "TISPL",
+            "TSMI",
+            "TISU",
+            "TUB",
+            "ULC",
+            "UMB",
+            "UMED",
+            "URTH",
+            "UR",
+            "URC",
+            "URT",
+            "URNS",
+            "USUB",
+            "VOM",
+            "BLD",
+            "BDY",
+            "WAT",
+            "WICK",
+            "WND",
+            "WNDA",
+            "WNDE",
+            "WNDD",
+            "XXX"
+        ]
+    },
+    "0072": {
+        "id": "0072",
+        "name": "Insurance Plan ID",
+        "type": "User",
+        "elements": []
+    },
+    "0073": {
+        "id": "0073",
+        "name": "Interest Rate Code",
+        "type": "User",
+        "elements": []
+    },
+    "0074": {
+        "id": "0074",
+        "name": "Diagnostic Service Section ID",
+        "type": "HL7",
+        "elements": [
+            "AU",
+            "BG",
+            "BLB",
+            "CUS",
+            "CTH",
+            "CT",
+            "CH",
+            "CP",
+            "EC",
+            "EN",
+            "HM",
+            "ICU",
+            "IMM",
+            "LAB",
+            "MB",
+            "MCB",
+            "MYC",
+            "NMS",
+            "NMR",
+            "NRS",
+            "OUS",
+            "OT",
+            "OTH",
+            "OSL",
+            "PHR",
+            "PT",
+            "PHY",
+            "PF",
+            "RAD",
+            "RX",
+            "RUS",
+            "RC",
+            "RT",
+            "SR",
+            "SP",
+            "TX",
+            "VUS",
+            "VR",
+            "XRC"
+        ]
+    },
+    "0076": {
+        "id": "0076",
+        "name": "Message Type",
+        "type": "HL7",
+        "elements": [
+            "ACK",
+            "ADR",
+            "ADT",
+            "ARD",
+            "BAR",
+            "CNQ",
+            "CSU",
+            "DFT",
+            "DSR",
+            "EDR",
+            "ERP",
+            "ERQ",
+            "EQQ",
+            "MCF",
+            "MDM",
+            "MFN",
+            "MFK",
+            "MFD",
+            "MFQ",
+            "MFR",
+            "ORF",
+            "ORM",
+            "ORR",
+            "ORU",
+            "OSQ",
+            "OSR",
+            "QRY",
+            "PEX",
+            "PGL",
+            "PGR",
+            "PGQ",
+            "PIN",
+            "PPP",
+            "PPR",
+            "PPR",
+            "PPT",
+            "PPV",
+            "PRQ",
+            "PRR",
+            "PTQ",
+            "PTR",
+            "PTU",
+            "PTV",
+            "PIN",
+            "RCI",
+            "RAR",
+            "RCL",
+            "RAS",
+            "RDE",
+            "RDR",
+            "RDS",
+            "RGV",
+            "RGR",
+            "REF",
+            "RER",
+            "ROC",
+            "ROD",
+            "ROR",
+            "RPA",
+            "RPI",
+            "RPL",
+            "RPR",
+            "RQA",
+            "RQI",
+            "RRA",
+            "RRD",
+            "RRE",
+            "RRG",
+            "RRI",
+            "SIU",
+            "SPQ",
+            "SQM",
+            "SQR",
+            "SRM",
+            "SRM",
+            "SRR",
+            "TBR",
+            "UDM",
+            "VQQ",
+            "VXQ",
+            "VXX",
+            "VXR",
+            "VXU"
+        ]
+    },
+    "0078": {
+        "id": "0078",
+        "name": "Abnormal Flags",
+        "type": "HL7",
+        "elements": [
+            "L",
+            "H",
+            "LL",
+            "HH",
+            "<",
+            ">",
+            "N",
+            "A",
+            "AA",
+            "null",
+            "U",
+            "D",
+            "B",
+            "W",
+            "S",
+            "R",
+            "I",
+            "MS",
+            "VS"
+        ]
+    },
+    "0079": {
+        "id": "0079",
+        "name": "Location",
+        "type": "User",
+        "elements": []
+    },
+    "0080": {
+        "id": "0080",
+        "name": "Nature of Abnormal Testing",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "N",
+            "R",
+            "S"
+        ]
+    },
+    "0083": {
+        "id": "0083",
+        "name": "Outlier Type",
+        "type": "User",
+        "elements": []
+    },
+    "0084": {
+        "id": "0084",
+        "name": "Performed By",
+        "type": "User",
+        "elements": []
+    },
+    "0085": {
+        "id": "0085",
+        "name": "Observation Result Status Codes Interpretation",
+        "type": "HL7",
+        "elements": [
+            "C",
+            "D",
+            "F",
+            "I",
+            "P",
+            "R",
+            "S",
+            "X",
+            "U",
+            "W"
+        ]
+    },
+    "0086": {
+        "id": "0086",
+        "name": "Plan ID",
+        "type": "User",
+        "elements": []
+    },
+    "0087": {
+        "id": "0087",
+        "name": "Pre-admit Test Indicator",
+        "type": "User",
+        "elements": []
+    },
+    "0088": {
+        "id": "0088",
+        "name": "Procedure Code",
+        "type": "User",
+        "elements": []
+    },
+    "0089": {
+        "id": "0089",
+        "name": "Procedure Coding Method",
+        "type": "User",
+        "elements": []
+    },
+    "0091": {
+        "id": "0091",
+        "name": "Query Priority",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "I"
+        ]
+    },
+    "0092": {
+        "id": "0092",
+        "name": "Re-admission Indicator",
+        "type": "User",
+        "elements": [
+            "R"
+        ]
+    },
+    "0093": {
+        "id": "0093",
+        "name": "Release Information",
+        "type": "User",
+        "elements": [
+            "Y",
+            "Null",
+            "N"
+        ]
+    },
+    "0098": {
+        "id": "0098",
+        "name": "Type of agreement",
+        "type": "User",
+        "elements": [
+            "S",
+            "U",
+            "M"
+        ]
+    },
+    "0099": {
+        "id": "0099",
+        "name": "VIP Indicator",
+        "type": "User",
+        "elements": []
+    },
+    "0100": {
+        "id": "0100",
+        "name": "When to Charge",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "O",
+            "R",
+            "S",
+            "T"
+        ]
+    },
+    "0102": {
+        "id": "0102",
+        "name": "Delayed Acknowledgment Type",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "F"
+        ]
+    },
+    "0103": {
+        "id": "0103",
+        "name": "Processing ID",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "P",
+            "T"
+        ]
+    },
+    "0104": {
+        "id": "0104",
+        "name": "Version ID",
+        "type": "HL7",
+        "elements": [
+            "2.0",
+            "2.0D",
+            "2.1",
+            "2.2",
+            "2.3"
+        ]
+    },
+    "0105": {
+        "id": "0105",
+        "name": "Source of Comment",
+        "type": "HL7",
+        "elements": [
+            "L",
+            "P",
+            "O"
+        ]
+    },
+    "0106": {
+        "id": "0106",
+        "name": "Query\/Response Format Code",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "R",
+            "T"
+        ]
+    },
+    "0107": {
+        "id": "0107",
+        "name": "Deferred Response Type",
+        "type": "HL7",
+        "elements": [
+            "B",
+            "L"
+        ]
+    },
+    "0108": {
+        "id": "0108",
+        "name": "Query Results Level",
+        "type": "HL7",
+        "elements": [
+            "O",
+            "R",
+            "S",
+            "T"
+        ]
+    },
+    "0109": {
+        "id": "0109",
+        "name": "Report Priority",
+        "type": "HL7",
+        "elements": [
+            "R",
+            "S"
+        ]
+    },
+    "0110": {
+        "id": "0110",
+        "name": "Transfer to Bad Debt Code",
+        "type": "User",
+        "elements": []
+    },
+    "0111": {
+        "id": "0111",
+        "name": "Delete Account Code",
+        "type": "User",
+        "elements": []
+    },
+    "0112": {
+        "id": "0112",
+        "name": "Discharged Disposition",
+        "type": "User",
+        "elements": []
+    },
+    "0113": {
+        "id": "0113",
+        "name": "Discharged to Location",
+        "type": "User",
+        "elements": []
+    },
+    "0114": {
+        "id": "0114",
+        "name": "Diet Type",
+        "type": "User",
+        "elements": []
+    },
+    "0115": {
+        "id": "0115",
+        "name": "Servicing Facility",
+        "type": "User",
+        "elements": []
+    },
+    "0116": {
+        "id": "0116",
+        "name": "Bed Status",
+        "type": "User",
+        "elements": [
+            "C",
+            "H",
+            "O",
+            "U",
+            "K",
+            "I"
+        ]
+    },
+    "0117": {
+        "id": "0117",
+        "name": "Account Status",
+        "type": "User",
+        "elements": []
+    },
+    "0118": {
+        "id": "0118",
+        "name": "Major Diagnostic Category",
+        "type": "User",
+        "elements": []
+    },
+    "0119": {
+        "id": "0119",
+        "name": "Order Control Code",
+        "type": "HL7",
+        "elements": [
+            "NW",
+            "OK",
+            "UA",
+            "CA",
+            "OC",
+            "CR",
+            "UC",
+            "DC",
+            "OD",
+            "DR",
+            "UD",
+            "HD",
+            "OH",
+            "UH",
+            "HR",
+            "RL",
+            "OE",
+            "OR",
+            "UR",
+            "RP",
+            "RU",
+            "RO",
+            "RQ",
+            "UM",
+            "PA",
+            "CH",
+            "XO",
+            "XX",
+            "UX",
+            "XR",
+            "DE",
+            "RE",
+            "RR",
+            "SR",
+            "SS",
+            "SC",
+            "SN",
+            "NA",
+            "CN",
+            "RF",
+            "AF",
+            "DF",
+            "FU",
+            "OF",
+            "UF",
+            "LI",
+            "UN"
+        ]
+    },
+    "0121": {
+        "id": "0121",
+        "name": "Response Flag",
+        "type": "HL7",
+        "elements": [
+            "E",
+            "R",
+            "D",
+            "F",
+            "N"
+        ]
+    },
+    "0122": {
+        "id": "0122",
+        "name": "Charge Type",
+        "type": "HL7",
+        "elements": [
+            "CH",
+            "CO",
+            "CR",
+            "DP",
+            "GR",
+            "NC",
+            "PC",
+            "RS"
+        ]
+    },
+    "0123": {
+        "id": "0123",
+        "name": "Result Status",
+        "type": "HL7",
+        "elements": [
+            "O",
+            "I",
+            "S",
+            "A",
+            "P",
+            "C",
+            "R",
+            "F",
+            "X",
+            "Y",
+            "Z"
+        ]
+    },
+    "0124": {
+        "id": "0124",
+        "name": "Transportation Mode",
+        "type": "HL7",
+        "elements": [
+            "CART",
+            "PORT",
+            "WALK",
+            "WHLC"
+        ]
+    },
+    "0125": {
+        "id": "0125",
+        "name": "Value Type",
+        "type": "HL7",
+        "elements": [
+            "AD",
+            "CE",
+            "CF",
+            "CK",
+            "CN",
+            "CP",
+            "CX",
+            "DT",
+            "ED",
+            "FT",
+            "ID",
+            "MO",
+            "NM",
+            "PN",
+            "RP",
+            "SN",
+            "ST",
+            "TM",
+            "TN",
+            "TS",
+            "TX",
+            "XAD",
+            "XCN",
+            "XON",
+            "XPN",
+            "XTN"
+        ]
+    },
+    "0126": {
+        "id": "0126",
+        "name": "Quantity Limited Request",
+        "type": "HL7",
+        "elements": [
+            "CH",
+            "LI",
+            "PG",
+            "RD",
+            "ZO"
+        ]
+    },
+    "0127": {
+        "id": "0127",
+        "name": "Allergy Type",
+        "type": "User",
+        "elements": [
+            "DA",
+            "FA",
+            "MA",
+            "MC"
+        ]
+    },
+    "0128": {
+        "id": "0128",
+        "name": "Allergy Severity",
+        "type": "User",
+        "elements": [
+            "SV",
+            "MO",
+            "MI"
+        ]
+    },
+    "0129": {
+        "id": "0129",
+        "name": "Accommodation Code",
+        "type": "User",
+        "elements": []
+    },
+    "0130": {
+        "id": "0130",
+        "name": "Visit User Code",
+        "type": "User",
+        "elements": []
+    },
+    "0131": {
+        "id": "0131",
+        "name": "Contact Role",
+        "type": "User",
+        "elements": [
+            "CP",
+            "EP",
+            "BP",
+            "PR"
+        ]
+    },
+    "0132": {
+        "id": "0132",
+        "name": "Transaction Code",
+        "type": "User",
+        "elements": []
+    },
+    "0133": {
+        "id": "0133",
+        "name": "Procedure Practitioner Identifier Code Type",
+        "type": "User",
+        "elements": [
+            "AN",
+            "PR",
+            "RD",
+            "RS",
+            "NP",
+            "CM",
+            "SN",
+            "PS",
+            "AS"
+        ]
+    },
+    "0135": {
+        "id": "0135",
+        "name": "Assignment of Benefits",
+        "type": "User",
+        "elements": [
+            "Y",
+            "N",
+            "M"
+        ]
+    },
+    "0136": {
+        "id": "0136",
+        "name": "Yes\/No Indicator",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "N"
+        ]
+    },
+    "0137": {
+        "id": "0137",
+        "name": "Mail Claim Party",
+        "type": "User",
+        "elements": [
+            "E",
+            "G",
+            "I",
+            "O",
+            "P"
+        ]
+    },
+    "0139": {
+        "id": "0139",
+        "name": "Employer Information Data",
+        "type": "User",
+        "elements": []
+    },
+    "0140": {
+        "id": "0140",
+        "name": "Champus Service",
+        "type": "User",
+        "elements": []
+    },
+    "0141": {
+        "id": "0141",
+        "name": "Champus Rank\/Grade",
+        "type": "User",
+        "elements": []
+    },
+    "0142": {
+        "id": "0142",
+        "name": "Champus Status",
+        "type": "User",
+        "elements": []
+    },
+    "0143": {
+        "id": "0143",
+        "name": "Non-covered Insurance Code",
+        "type": "User",
+        "elements": []
+    },
+    "0144": {
+        "id": "0144",
+        "name": "Eligibility Source",
+        "type": "User",
+        "elements": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ]
+    },
+    "0145": {
+        "id": "0145",
+        "name": "Room Type",
+        "type": "User",
+        "elements": [
+            "PRI",
+            "2PRI",
+            "SPR",
+            "2SPR",
+            "ICU",
+            "2ICU"
+        ]
+    },
+    "0146": {
+        "id": "0146",
+        "name": "Amount Type",
+        "type": "User",
+        "elements": [
+            "DF",
+            "LM",
+            "PC",
+            "RT",
+            "UL"
+        ]
+    },
+    "0147": {
+        "id": "0147",
+        "name": "Policy Type",
+        "type": "User",
+        "elements": [
+            "ANC",
+            "2ANC",
+            "MMD",
+            "2MMD",
+            "3MMD"
+        ]
+    },
+    "0148": {
+        "id": "0148",
+        "name": "Penalty Type",
+        "type": "User",
+        "elements": [
+            "AT",
+            "PC"
+        ]
+    },
+    "0149": {
+        "id": "0149",
+        "name": "Days Type",
+        "type": "User",
+        "elements": [
+            "AP",
+            "DE",
+            "PE"
+        ]
+    },
+    "0150": {
+        "id": "0150",
+        "name": "Pre-certification Patient Type",
+        "type": "User",
+        "elements": [
+            "ER",
+            "IPE",
+            "OPE",
+            "UR"
+        ]
+    },
+    "0151": {
+        "id": "0151",
+        "name": "Second Opinion Status",
+        "type": "User",
+        "elements": []
+    },
+    "0152": {
+        "id": "0152",
+        "name": "Second Opinion Documentation Received",
+        "type": "User",
+        "elements": []
+    },
+    "0153": {
+        "id": "0153",
+        "name": "Value Code",
+        "type": "User",
+        "elements": []
+    },
+    "0155": {
+        "id": "0155",
+        "name": "Accept\/Application Acknowledgment Conditions",
+        "type": "HL7",
+        "elements": [
+            "AL",
+            "NE",
+            "ER",
+            "SU"
+        ]
+    },
+    "0156": {
+        "id": "0156",
+        "name": "Which Date\/Time Qualifier",
+        "type": "HL7",
+        "elements": [
+            "ORD",
+            "CAN",
+            "SCHED",
+            "COL",
+            "RCT",
+            "REP",
+            "ANY"
+        ]
+    },
+    "0157": {
+        "id": "0157",
+        "name": "Which Date\/Time Status Qualifier",
+        "type": "HL7",
+        "elements": [
+            "PRE",
+            "REP",
+            "CFN",
+            "FIN",
+            "COR",
+            "ANY"
+        ]
+    },
+    "0158": {
+        "id": "0158",
+        "name": "Date\/Time Selection Qualifier",
+        "type": "HL7",
+        "elements": [
+            "1ST",
+            "ALL",
+            "LST",
+            "REV"
+        ]
+    },
+    "0159": {
+        "id": "0159",
+        "name": "Diet Type",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "S",
+            "P"
+        ]
+    },
+    "0160": {
+        "id": "0160",
+        "name": "Tray Type",
+        "type": "HL7",
+        "elements": [
+            "EARLY",
+            "LATE",
+            "GUEST",
+            "NO",
+            "MSG"
+        ]
+    },
+    "0161": {
+        "id": "0161",
+        "name": "Allow Substitution",
+        "type": "HL7",
+        "elements": [
+            "N",
+            "G",
+            "T"
+        ]
+    },
+    "0162": {
+        "id": "0162",
+        "name": "Route of Administration",
+        "type": "HL7",
+        "elements": [
+            "AP",
+            "B",
+            "DT",
+            "EP",
+            "ET",
+            "GTT",
+            "GU",
+            "IMR",
+            "IA",
+            "IB",
+            "IC",
+            "ICV",
+            "ID",
+            "IH",
+            "MM",
+            "NS",
+            "NG",
+            "NP",
+            "NT",
+            "OP",
+            "OT",
+            "OTH",
+            "PF",
+            "PO",
+            "PR",
+            "RM",
+            "SD",
+            "SC",
+            "SL",
+            "TP",
+            "TRA",
+            "TD",
+            "TL",
+            "UR",
+            "VG",
+            "VM",
+            "WND",
+            "*"
+        ]
+    },
+    "0163": {
+        "id": "0163",
+        "name": "Administrative Site",
+        "type": "HL7",
+        "elements": [
+            "BE",
+            "OU",
+            "BN",
+            "BU",
+            "CT",
+            "LA",
+            "LAC",
+            "LACF",
+            "LD",
+            "LE",
+            "LEJ",
+            "OS",
+            "LF",
+            "LG",
+            "LH",
+            "LIJ",
+            "LLAQ",
+            "LLFA",
+            "LMFA",
+            "LN",
+            "LPC",
+            "LSC",
+            "LT",
+            "LUA",
+            "LUAQ",
+            "LUFA",
+            "LVG",
+            "LVL",
+            "NB",
+            "PA",
+            "PERIN",
+            "RA",
+            "RAC",
+            "RACF",
+            "RD",
+            "RE",
+            "REJ",
+            "OD",
+            "RF",
+            "RG",
+            "RH",
+            "RIJ",
+            "RLAQ",
+            "RLFA",
+            "RMFA",
+            "RN",
+            "RPC",
+            "RSC",
+            "RT",
+            "RUA",
+            "RUAQ",
+            "RUFA",
+            "RVL",
+            "RVG"
+        ]
+    },
+    "0164": {
+        "id": "0164",
+        "name": "Administration Device",
+        "type": "HL7",
+        "elements": [
+            "AP",
+            "BT",
+            "HL",
+            "IPPB",
+            "IVP",
+            "IVS",
+            "MI",
+            "NEB",
+            "PCA"
+        ]
+    },
+    "0165": {
+        "id": "0165",
+        "name": "Administration Method",
+        "type": "HL7",
+        "elements": [
+            "CH",
+            "DI",
+            "DU",
+            "IF",
+            "IS",
+            "IR",
+            "IVPB",
+            "IVP",
+            "NB",
+            "PT",
+            "PF",
+            "SH",
+            "SO",
+            "WA",
+            "WI"
+        ]
+    },
+    "0166": {
+        "id": "0166",
+        "name": "RX Component Type",
+        "type": "HL7",
+        "elements": [
+            "B",
+            "A"
+        ]
+    },
+    "0167": {
+        "id": "0167",
+        "name": "Substitution Status",
+        "type": "HL7",
+        "elements": [
+            "N",
+            "G",
+            "T"
+        ]
+    },
+    "0168": {
+        "id": "0168",
+        "name": "Processing Priority",
+        "type": "HL7",
+        "elements": [
+            "S",
+            "A",
+            "R",
+            "P",
+            "T",
+            "C",
+            "B"
+        ]
+    },
+    "0169": {
+        "id": "0169",
+        "name": "Reporting Priority",
+        "type": "HL7",
+        "elements": [
+            "C",
+            "R"
+        ]
+    },
+    "0170": {
+        "id": "0170",
+        "name": "Derived Specimen",
+        "type": "HL7",
+        "elements": [
+            "P",
+            "C",
+            "N"
+        ]
+    },
+    "0171": {
+        "id": "0171",
+        "name": "Citizenship",
+        "type": "User",
+        "elements": []
+    },
+    "0172": {
+        "id": "0172",
+        "name": "Veterans Military Status",
+        "type": "User",
+        "elements": []
+    },
+    "0173": {
+        "id": "0173",
+        "name": "Coordination of Benefits",
+        "type": "User",
+        "elements": [
+            "CO",
+            "IN"
+        ]
+    },
+    "0174": {
+        "id": "0174",
+        "name": "Nature of Test\/Observation",
+        "type": "HL7",
+        "elements": [
+            "P",
+            "F",
+            "A",
+            "S",
+            "C"
+        ]
+    },
+    "0175": {
+        "id": "0175",
+        "name": "Master File Identifier Code",
+        "type": "HL7",
+        "elements": [
+            "CDM",
+            "CM0",
+            "CM1",
+            "CM2",
+            "LOC",
+            "OM1-OM6",
+            "PRA",
+            "STF"
+        ]
+    },
+    "0176": {
+        "id": "0176",
+        "name": "Master File Application Identifier",
+        "type": "User",
+        "elements": []
+    },
+    "0177": {
+        "id": "0177",
+        "name": "Confidentiality code",
+        "type": "User",
+        "elements": [
+            "V",
+            "R",
+            "U",
+            "EMP",
+            "UWM",
+            "VIP",
+            "PSY",
+            "AID",
+            "HIV",
+            "ETH"
+        ]
+    },
+    "0178": {
+        "id": "0178",
+        "name": "File Level Event Code",
+        "type": "HL7",
+        "elements": [
+            "REP",
+            "UPD"
+        ]
+    },
+    "0179": {
+        "id": "0179",
+        "name": "Response Level",
+        "type": "HL7",
+        "elements": [
+            "NE",
+            "ER",
+            "AL",
+            "SU"
+        ]
+    },
+    "0180": {
+        "id": "0180",
+        "name": "Record Level Event Code",
+        "type": "HL7",
+        "elements": [
+            "MAD",
+            "MDL",
+            "MUP",
+            "MDC",
+            "MAC"
+        ]
+    },
+    "0181": {
+        "id": "0181",
+        "name": "MFN Record Level Error Return",
+        "type": "User",
+        "elements": [
+            "S",
+            "U"
+        ]
+    },
+    "0182": {
+        "id": "0182",
+        "name": "Staff Type",
+        "type": "User",
+        "elements": []
+    },
+    "0183": {
+        "id": "0183",
+        "name": "Active\/Inactive",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "I"
+        ]
+    },
+    "0184": {
+        "id": "0184",
+        "name": "Department",
+        "type": "User",
+        "elements": []
+    },
+    "0185": {
+        "id": "0185",
+        "name": "Preferred Method of Contact",
+        "type": "HL7",
+        "elements": [
+            "H",
+            "O",
+            "F",
+            "C",
+            "B",
+            "E",
+            "M"
+        ]
+    },
+    "0186": {
+        "id": "0186",
+        "name": "Practitioner Category",
+        "type": "User",
+        "elements": []
+    },
+    "0187": {
+        "id": "0187",
+        "name": "Provider Billing",
+        "type": "HL7",
+        "elements": [
+            "P",
+            "I"
+        ]
+    },
+    "0188": {
+        "id": "0188",
+        "name": "Operator ID",
+        "type": "User",
+        "elements": []
+    },
+    "0189": {
+        "id": "0189",
+        "name": "Ethnic Group",
+        "type": "User",
+        "elements": []
+    },
+    "0190": {
+        "id": "0190",
+        "name": "Address Type",
+        "type": "HL7",
+        "elements": [
+            "C",
+            "P",
+            "M",
+            "B",
+            "O",
+            "H",
+            "B",
+            "F"
+        ]
+    },
+    "0191": {
+        "id": "0191",
+        "name": "Main Type of Reference Data",
+        "type": "HL7",
+        "elements": [
+            "SI",
+            "NS",
+            "SD",
+            "TX",
+            "FT",
+            "IM",
+            "AU",
+            "AP"
+        ]
+    },
+    "0192": {
+        "id": "0192",
+        "name": "Visit ID Type",
+        "type": "User",
+        "elements": []
+    },
+    "0193": {
+        "id": "0193",
+        "name": "Amount Class",
+        "type": "User",
+        "elements": [
+            "AT",
+            "LM",
+            "PC",
+            "UL"
+        ]
+    },
+    "0200": {
+        "id": "0200",
+        "name": "Name Type",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "L",
+            "D",
+            "M",
+            "C",
+            "O"
+        ]
+    },
+    "0201": {
+        "id": "0201",
+        "name": "Telecommunication Use Code",
+        "type": "HL7",
+        "elements": [
+            "PRN",
+            "ORN",
+            "WPN",
+            "VHN",
+            "ASN",
+            "EMR",
+            "NET",
+            "BPN"
+        ]
+    },
+    "0202": {
+        "id": "0202",
+        "name": "Telecommunication Equipment Type",
+        "type": "HL7",
+        "elements": [
+            "PH",
+            "FX",
+            "MD",
+            "CP",
+            "BP",
+            "Internet",
+            "X.400"
+        ]
+    },
+    "0203": {
+        "id": "0203",
+        "name": "Identifier Type",
+        "type": "User",
+        "elements": [
+            "AM",
+            "BR",
+            "DI",
+            "DL",
+            "DN",
+            "DS",
+            "EI",
+            "EN",
+            "GI",
+            "GN",
+            "MS",
+            "MA",
+            "MC",
+            "MR",
+            "PI",
+            "PT",
+            "RR",
+            "SS",
+            "XX",
+            "VS",
+            "VN",
+            "AN"
+        ]
+    },
+    "0204": {
+        "id": "0204",
+        "name": "Organizational Name Type",
+        "type": "User",
+        "elements": [
+            "A",
+            "L",
+            "D",
+            "SL"
+        ]
+    },
+    "0205": {
+        "id": "0205",
+        "name": "Price Type",
+        "type": "HL7",
+        "elements": [
+            "AP",
+            "PF",
+            "UP",
+            "TF",
+            "DC",
+            "IC",
+            "TP"
+        ]
+    },
+    "0206": {
+        "id": "0206",
+        "name": "Segment Action Code",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "D",
+            "U"
+        ]
+    },
+    "0207": {
+        "id": "0207",
+        "name": "Processing Mode",
+        "type": "HL7",
+        "elements": [
+            "a",
+            "r",
+            "i",
+            "not present"
+        ]
+    },
+    "0208": {
+        "id": "0208",
+        "name": "Query Response Status",
+        "type": "User",
+        "elements": [
+            "OK",
+            "NF",
+            "AR"
+        ]
+    },
+    "0209": {
+        "id": "0209",
+        "name": "Relational Operator",
+        "type": "HL7",
+        "elements": [
+            "EQ",
+            "NE",
+            "LT",
+            "GT",
+            "LE",
+            "GE",
+            "CT",
+            "GN"
+        ]
+    },
+    "0210": {
+        "id": "0210",
+        "name": "Relational Conjunction",
+        "type": "HL7",
+        "elements": [
+            "AND",
+            "OR"
+        ]
+    },
+    "0211": {
+        "id": "0211",
+        "name": "Alternate Character Sets",
+        "type": "HL7",
+        "elements": [
+            "ASCII",
+            "8859\/1",
+            "8859\/2",
+            "8859\/3",
+            "8859\/4",
+            "8859\/5",
+            "8859\/6",
+            "8859\/7",
+            "8859\/8",
+            "8859\/9",
+            "JAS2020",
+            "UNICODE",
+            "JIS X 0202"
+        ]
+    },
+    "0212": {
+        "id": "0212",
+        "name": "Nationality",
+        "type": "User",
+        "elements": []
+    },
+    "0213": {
+        "id": "0213",
+        "name": "Purge Status",
+        "type": "User",
+        "elements": [
+            "P",
+            "D",
+            "I"
+        ]
+    },
+    "0214": {
+        "id": "0214",
+        "name": "Special Program Codes",
+        "type": "User",
+        "elements": []
+    },
+    "0215": {
+        "id": "0215",
+        "name": "Publicity Code",
+        "type": "User",
+        "elements": []
+    },
+    "0216": {
+        "id": "0216",
+        "name": "Patient Status",
+        "type": "User",
+        "elements": []
+    },
+    "0217": {
+        "id": "0217",
+        "name": "Visit Priority",
+        "type": "User",
+        "elements": []
+    },
+    "0218": {
+        "id": "0218",
+        "name": "Charge Adjustment",
+        "type": "User",
+        "elements": []
+    },
+    "0219": {
+        "id": "0219",
+        "name": "Recurring Service",
+        "type": "User",
+        "elements": []
+    },
+    "0220": {
+        "id": "0220",
+        "name": "Living Arrangement",
+        "type": "User",
+        "elements": [
+            "A",
+            "F",
+            "I",
+            "R",
+            "U",
+            "S"
+        ]
+    },
+    "0222": {
+        "id": "0222",
+        "name": "Contact Reason",
+        "type": "User",
+        "elements": []
+    },
+    "0223": {
+        "id": "0223",
+        "name": "Living Dependency",
+        "type": "User",
+        "elements": [
+            "D",
+            "M",
+            "S",
+            "WU",
+            "CB"
+        ]
+    },
+    "0224": {
+        "id": "0224",
+        "name": "Transport Arranged",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "N",
+            "U"
+        ]
+    },
+    "0225": {
+        "id": "0225",
+        "name": "Escort Required",
+        "type": "HL7",
+        "elements": [
+            "R",
+            "N",
+            "U"
+        ]
+    },
+    "0227": {
+        "id": "0227",
+        "name": "Manufacturers of vaccines (code = MVX)",
+        "type": "HL7",
+        "elements": [
+            "AB",
+            "AD",
+            "ALP",
+            "AR",
+            "BA",
+            "BAY",
+            "BP",
+            "CON",
+            "EVN",
+            "GRE",
+            "IUS",
+            "KGC",
+            "LED",
+            "MA",
+            "MSD",
+            "IM",
+            "MIP",
+            "JPN",
+            "MIL",
+            "NYB",
+            "NAB",
+            "OTC",
+            "OTH",
+            "PD",
+            "PRX",
+            "SCL",
+            "SKB",
+            "SI",
+            "WA",
+            "UNK"
+        ]
+    },
+    "0228": {
+        "id": "0228",
+        "name": "Diagnosis Classification",
+        "type": "User",
+        "elements": [
+            "C",
+            "D",
+            "M",
+            "O",
+            "R",
+            "S",
+            "T",
+            "I"
+        ]
+    },
+    "0229": {
+        "id": "0229",
+        "name": "Outlier Type",
+        "type": "User",
+        "elements": [
+            "M",
+            "C",
+            "G"
+        ]
+    },
+    "0230": {
+        "id": "0230",
+        "name": "Procedure Functional Type",
+        "type": "User",
+        "elements": [
+            "A",
+            "P",
+            "I",
+            "D"
+        ]
+    },
+    "0231": {
+        "id": "0231",
+        "name": "Student Status",
+        "type": "User",
+        "elements": [
+            "F",
+            "P",
+            "N"
+        ]
+    },
+    "0232": {
+        "id": "0232",
+        "name": "Insurance Company Contact Reason",
+        "type": "User",
+        "elements": [
+            "1",
+            "2",
+            "3"
+        ]
+    },
+    "0233": {
+        "id": "0233",
+        "name": "Non-concur Code\/Description",
+        "type": "User",
+        "elements": []
+    },
+    "0234": {
+        "id": "0234",
+        "name": "Report Timing",
+        "type": "HL7",
+        "elements": [
+            "CO",
+            "AD",
+            "RQ",
+            "DE",
+            "PD",
+            "3D",
+            "7D",
+            "10D",
+            "15D",
+            "30D"
+        ]
+    },
+    "0235": {
+        "id": "0235",
+        "name": "Report Source",
+        "type": "HL7",
+        "elements": [
+            "C",
+            "L",
+            "H",
+            "R",
+            "D",
+            "N",
+            "P",
+            "M",
+            "E",
+            "O"
+        ]
+    },
+    "0236": {
+        "id": "0236",
+        "name": "Reported To",
+        "type": "HL7",
+        "elements": [
+            "M",
+            "L",
+            "R",
+            "D"
+        ]
+    },
+    "0237": {
+        "id": "0237",
+        "name": "Event Qualification",
+        "type": "HL7",
+        "elements": [
+            "I",
+            "O",
+            "A",
+            "M",
+            "D",
+            "L",
+            "W",
+            "B"
+        ]
+    },
+    "0238": {
+        "id": "0238",
+        "name": "Event Seriousness",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "S",
+            "N"
+        ]
+    },
+    "0239": {
+        "id": "0239",
+        "name": "Event Expected",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "N",
+            "U"
+        ]
+    },
+    "0240": {
+        "id": "0240",
+        "name": "Event Consequence",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "L",
+            "H",
+            "P",
+            "C",
+            "I",
+            "J",
+            "R",
+            "O"
+        ]
+    },
+    "0241": {
+        "id": "0241",
+        "name": "Patient Outcome",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "R",
+            "N",
+            "W",
+            "S",
+            "F",
+            "U"
+        ]
+    },
+    "0242": {
+        "id": "0242",
+        "name": "Primary Observer's Qualification",
+        "type": "HL7",
+        "elements": [
+            "P",
+            "R",
+            "M",
+            "H",
+            "C",
+            "L",
+            "O"
+        ]
+    },
+    "0243": {
+        "id": "0243",
+        "name": "Identity may be Divulged",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "N",
+            "NA"
+        ]
+    },
+    "0244": {
+        "id": "0244",
+        "name": "Single Use Device",
+        "type": "User",
+        "elements": []
+    },
+    "0245": {
+        "id": "0245",
+        "name": "Product Problem",
+        "type": "User",
+        "elements": []
+    },
+    "0246": {
+        "id": "0246",
+        "name": "Product Available for Inspection",
+        "type": "User",
+        "elements": []
+    },
+    "0247": {
+        "id": "0247",
+        "name": "Start of Evaluation",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "P",
+            "K",
+            "X",
+            "A",
+            "D",
+            "C",
+            "I",
+            "U",
+            "Q",
+            "R",
+            "O"
+        ]
+    },
+    "0248": {
+        "id": "0248",
+        "name": "Product Source",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "L",
+            "R",
+            "N"
+        ]
+    },
+    "0249": {
+        "id": "0249",
+        "name": "Generic Product",
+        "type": "User",
+        "elements": []
+    },
+    "0250": {
+        "id": "0250",
+        "name": "Relatedness Assessment",
+        "type": "HL7",
+        "elements": [
+            "H",
+            "M",
+            "S",
+            "I",
+            "N"
+        ]
+    },
+    "0251": {
+        "id": "0251",
+        "name": "Action Taken in Response to the Event",
+        "type": "HL7",
+        "elements": [
+            "WP",
+            "WT",
+            "DR",
+            "DI",
+            "OT",
+            "N"
+        ]
+    },
+    "0252": {
+        "id": "0252",
+        "name": "Causality Observations",
+        "type": "HL7",
+        "elements": [
+            "AW",
+            "BE",
+            "LI",
+            "IN",
+            "EX",
+            "PL",
+            "TC",
+            "DR",
+            "SE",
+            "OE",
+            "OT"
+        ]
+    },
+    "0253": {
+        "id": "0253",
+        "name": "Indirect Exposure Mechanism",
+        "type": "HL7",
+        "elements": [
+            "B",
+            "P",
+            "F",
+            "X",
+            "O"
+        ]
+    },
+    "0254": {
+        "id": "0254",
+        "name": "Kind of Quantity",
+        "type": "HL7",
+        "elements": []
+    },
+    "0255": {
+        "id": "0255",
+        "name": "Duration Categories",
+        "type": "HL7",
+        "elements": []
+    },
+    "0256": {
+        "id": "0256",
+        "name": "Time Delay Post Challenge",
+        "type": "HL7",
+        "elements": []
+    },
+    "0257": {
+        "id": "0257",
+        "name": "Nature of Challenge",
+        "type": "HL7",
+        "elements": [
+            "CFST",
+            "EXCZ",
+            "FFST"
+        ]
+    },
+    "0258": {
+        "id": "0258",
+        "name": "Relationship Modifier",
+        "type": "HL7",
+        "elements": [
+            "CONTROL",
+            "PATIENT",
+            "DONOR",
+            "BPU"
+        ]
+    },
+    "0259": {
+        "id": "0259",
+        "name": "Modality",
+        "type": "User",
+        "elements": [
+            "AS",
+            "BS",
+            "CD",
+            "CP",
+            "CR",
+            "CS",
+            "CT",
+            "DD",
+            "DG",
+            "DM",
+            "EC",
+            "ES",
+            "FA",
+            "FS",
+            "LP",
+            "LS",
+            "MA",
+            "MS",
+            "NM",
+            "OT",
+            "PT",
+            "RF",
+            "ST",
+            "TG",
+            "US",
+            "XA"
+        ]
+    },
+    "0260": {
+        "id": "0260",
+        "name": "Patient Location Type",
+        "type": "User",
+        "elements": [
+            "N",
+            "R",
+            "B",
+            "E",
+            "O",
+            "C",
+            "D",
+            "L"
+        ]
+    },
+    "0261": {
+        "id": "0261",
+        "name": "Location Equipment",
+        "type": "User",
+        "elements": [
+            "OXY",
+            "SUC",
+            "VIT",
+            "INF",
+            "IVP",
+            "EEG",
+            "EKG",
+            "VEN"
+        ]
+    },
+    "0262": {
+        "id": "0262",
+        "name": "Privacy Level",
+        "type": "User",
+        "elements": [
+            "F",
+            "P",
+            "J",
+            "Q",
+            "S",
+            "W"
+        ]
+    },
+    "0263": {
+        "id": "0263",
+        "name": "Level of Care",
+        "type": "User",
+        "elements": [
+            "A",
+            "E",
+            "F",
+            "N",
+            "C",
+            "R",
+            "S"
+        ]
+    },
+    "0264": {
+        "id": "0264",
+        "name": "Location Department",
+        "type": "User",
+        "elements": []
+    },
+    "0265": {
+        "id": "0265",
+        "name": "Specialty Type",
+        "type": "User",
+        "elements": [
+            "AMB",
+            "PSY",
+            "PPS",
+            "REH",
+            "PRE",
+            "ISO",
+            "OBG",
+            "PIN",
+            "INT",
+            "SUR",
+            "PSI",
+            "EDI",
+            "CAR",
+            "NBI",
+            "CCR",
+            "PED",
+            "EMR",
+            "OBS",
+            "WIC",
+            "PHY",
+            "ALC",
+            "FPC",
+            "CHI",
+            "CAN",
+            "NAT",
+            "OTH"
+        ]
+    },
+    "0266": {
+        "id": "0266",
+        "name": "Gender Indicator",
+        "type": "User",
+        "elements": [
+            "M",
+            "F",
+            "E"
+        ]
+    },
+    "0267": {
+        "id": "0267",
+        "name": "Days of the Week",
+        "type": "HL7",
+        "elements": [
+            "SAT",
+            "SUN",
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+        ]
+    },
+    "0268": {
+        "id": "0268",
+        "name": "Override",
+        "type": "User",
+        "elements": [
+            "X",
+            "A",
+            "R"
+        ]
+    },
+    "0269": {
+        "id": "0269",
+        "name": "Charge on Indicator",
+        "type": "User",
+        "elements": [
+            "O",
+            "R"
+        ]
+    },
+    "0270": {
+        "id": "0270",
+        "name": "Document Type",
+        "type": "User",
+        "elements": [
+            "AR",
+            "CD",
+            "CN",
+            "DI",
+            "DS",
+            "ED",
+            "HP",
+            "OP",
+            "PC",
+            "PH",
+            "PN",
+            "PR",
+            "SP",
+            "TS"
+        ]
+    },
+    "0271": {
+        "id": "0271",
+        "name": "Document Completion Status",
+        "type": "HL7",
+        "elements": [
+            "DI",
+            "DO",
+            "IP",
+            "IN",
+            "PA",
+            "AU",
+            "LA"
+        ]
+    },
+    "0272": {
+        "id": "0272",
+        "name": "Document Confidentiality Status",
+        "type": "HL7",
+        "elements": [
+            "VR",
+            "RE",
+            "UC"
+        ]
+    },
+    "0273": {
+        "id": "0273",
+        "name": "Document Availability Status",
+        "type": "HL7",
+        "elements": [
+            "AV",
+            "UN"
+        ]
+    },
+    "0274": {
+        "id": "0274",
+        "name": "Document Modification Status",
+        "type": "HL7",
+        "elements": [
+            "RP",
+            "IN"
+        ]
+    },
+    "0275": {
+        "id": "0275",
+        "name": "Document Storage Status",
+        "type": "HL7",
+        "elements": [
+            "AC",
+            "AA",
+            "AR",
+            "PU"
+        ]
+    },
+    "0276": {
+        "id": "0276",
+        "name": "Appointment Reason Codes",
+        "type": "User",
+        "elements": [
+            "ROUTINE",
+            "WALKIN",
+            "CHECKUP",
+            "FOLLOWUP",
+            "EMERGENCY"
+        ]
+    },
+    "0277": {
+        "id": "0277",
+        "name": "Appointment Type Codes",
+        "type": "User",
+        "elements": [
+            "NORMAL",
+            "TENTATIVE",
+            "COMPLETE"
+        ]
+    },
+    "0278": {
+        "id": "0278",
+        "name": "Filler Status Codes",
+        "type": "User",
+        "elements": [
+            "PENDING",
+            "WAITLIST",
+            "BOOKED",
+            "STARTED",
+            "COMPLETE",
+            "CANCELLED",
+            "DC",
+            "DELETED",
+            "BLOCKED",
+            "OVERBOOK"
+        ]
+    },
+    "0279": {
+        "id": "0279",
+        "name": "Allow Substitution Codes",
+        "type": "User",
+        "elements": [
+            "NO",
+            "CONFIRM",
+            "NOTIFY",
+            "YES"
+        ]
+    },
+    "0280": {
+        "id": "0280",
+        "name": "Referral Priority",
+        "type": "User",
+        "elements": [
+            "S",
+            "A",
+            "R"
+        ]
+    },
+    "0281": {
+        "id": "0281",
+        "name": "Referral Type",
+        "type": "User",
+        "elements": [
+            "LAB",
+            "RAD",
+            "MED",
+            "SKN",
+            "PSY",
+            "HOM"
+        ]
+    },
+    "0282": {
+        "id": "0282",
+        "name": "Referral Disposition",
+        "type": "User",
+        "elements": [
+            "WR",
+            "RP",
+            "AM",
+            "SO"
+        ]
+    },
+    "0283": {
+        "id": "0283",
+        "name": "Referral Status",
+        "type": "User",
+        "elements": [
+            "A",
+            "P",
+            "R",
+            "E"
+        ]
+    },
+    "0284": {
+        "id": "0284",
+        "name": "Referral Category",
+        "type": "User",
+        "elements": [
+            "I",
+            "O",
+            "A",
+            "E"
+        ]
+    },
+    "0285": {
+        "id": "0285",
+        "name": "Insurance Company ID Codes",
+        "type": "User",
+        "elements": []
+    },
+    "0286": {
+        "id": "0286",
+        "name": "Provider Role",
+        "type": "User",
+        "elements": [
+            "RP",
+            "PP",
+            "CP",
+            "RT"
+        ]
+    },
+    "0287": {
+        "id": "0287",
+        "name": "Action Code",
+        "type": "HL7",
+        "elements": [
+            "AD",
+            "CO",
+            "DE",
+            "LI",
+            "UC",
+            "UN",
+            "UP"
+        ]
+    },
+    "0288": {
+        "id": "0288",
+        "name": "Census Tract",
+        "type": "User",
+        "elements": []
+    },
+    "0289": {
+        "id": "0289",
+        "name": "County\/parish",
+        "type": "User",
+        "elements": []
+    },
+    "0290": {
+        "id": "0290",
+        "name": "MIME base64 encoding Characters",
+        "type": "HL7",
+        "elements": []
+    },
+    "0291": {
+        "id": "0291",
+        "name": "Subtype of Referenced Data",
+        "type": "HL7",
+        "elements": [
+            "TIFF",
+            "PICT",
+            "DICOM",
+            "FAX",
+            "JOT",
+            "BASIC",
+            "Octet-stream",
+            "PostScript",
+            "JPEG",
+            "GIF",
+            "HTML",
+            "RTF"
+        ]
+    },
+    "0292": {
+        "id": "0292",
+        "name": "Vaccines Administered",
+        "type": "HL7",
+        "elements": [
+            "24",
+            "19",
+            "27",
+            "26",
+            "29",
+            "12",
+            "28",
+            "20",
+            "50",
+            "1",
+            "22",
+            "30",
+            "31",
+            "52",
+            "8",
+            "42",
+            "43",
+            "44",
+            "45",
+            "17",
+            "46",
+            "47",
+            "48",
+            "49",
+            "51",
+            "14",
+            "15",
+            "16",
+            "10",
+            "39",
+            "3",
+            "4",
+            "5",
+            "32",
+            "7",
+            "11",
+            "23",
+            "33",
+            "2",
+            "18",
+            "40",
+            "34",
+            "6",
+            "38",
+            "9",
+            "35",
+            "13",
+            "25",
+            "41",
+            "21",
+            "36",
+            "37"
+        ]
+    },
+    "0293": {
+        "id": "0293",
+        "name": "Billing Category",
+        "type": "User",
+        "elements": []
+    },
+    "0294": {
+        "id": "0294",
+        "name": "Time Selection Criteria Parameter Class Codes",
+        "type": "User",
+        "elements": [
+            "PREFSTART",
+            "PREFEND",
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI",
+            "SAT",
+            "SUN"
+        ]
+    },
+    "0295": {
+        "id": "0295",
+        "name": "Handicap",
+        "type": "User",
+        "elements": []
+    },
+    "0296": {
+        "id": "0296",
+        "name": "Language",
+        "type": "User",
+        "elements": []
+    },
+    "0309": {
+        "id": "0309",
+        "name": "Coverage Type",
+        "type": "User",
+        "elements": [
+            "H",
+            "P",
+            "B"
+        ]
+    },
+    "0310": {
+        "id": "0310",
+        "name": "Handicap",
+        "type": "User",
+        "elements": []
+    },
+    "0311": {
+        "id": "0311",
+        "name": "Job Status",
+        "type": "User",
+        "elements": []
+    },
+    "0312": {
+        "id": "0312",
+        "name": "Policy Scope",
+        "type": "User",
+        "elements": []
+    },
+    "0313": {
+        "id": "0313",
+        "name": "Policy Source",
+        "type": "User",
+        "elements": []
+    },
+    "0314": {
+        "id": "0314",
+        "name": "Document Change Reason",
+        "type": "HL7",
+        "elements": []
+    },
+    "0315": {
+        "id": "0315",
+        "name": "Living Will",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "F",
+            "N",
+            "I",
+            "U"
+        ]
+    },
+    "0316": {
+        "id": "0316",
+        "name": "Organ Donor",
+        "type": "HL7",
+        "elements": [
+            "Y",
+            "F",
+            "N",
+            "U"
+        ]
+    },
+    "0317": {
+        "id": "0317",
+        "name": "Annotations",
+        "type": "User",
+        "elements": [
+            "9900",
+            "9901",
+            "9902",
+            "9903",
+            "9904"
+        ]
+    },
+    "0318": {
+        "id": "0318",
+        "name": "Confirmation Provided By",
+        "type": "HL7",
+        "elements": []
+    },
+    "0319": {
+        "id": "0319",
+        "name": "Department Cost Center",
+        "type": "User",
+        "elements": []
+    },
+    "0320": {
+        "id": "0320",
+        "name": "Item Natural Account Code",
+        "type": "User",
+        "elements": []
+    },
+    "0321": {
+        "id": "0321",
+        "name": "Dispense Method",
+        "type": "HL7",
+        "elements": [
+            "TR",
+            "UD",
+            "F",
+            "AD"
+        ]
+    },
+    "0322": {
+        "id": "0322",
+        "name": "Completion Status",
+        "type": "HL7",
+        "elements": [
+            "CP",
+            "RE",
+            "NA",
+            "PA"
+        ]
+    },
+    "0323": {
+        "id": "0323",
+        "name": "Action Code",
+        "type": "HL7",
+        "elements": [
+            "D",
+            "U",
+            "A"
+        ]
+    },
+    "0324": {
+        "id": "0324",
+        "name": "Location Characteristic ID",
+        "type": "User",
+        "elements": [
+            "SMK",
+            "LIC",
+            "IMP",
+            "SHA",
+            "INF",
+            "PRL",
+            "LCR",
+            "OVR",
+            "STF",
+            "SET",
+            "GEN",
+            "TEA"
+        ]
+    },
+    "0325": {
+        "id": "0325",
+        "name": "Location Relationship ID",
+        "type": "User",
+        "elements": [
+            "RX",
+            "RX2",
+            "LAB",
+            "LB2",
+            "DTY",
+            "ALI",
+            "PAR"
+        ]
+    },
+    "0326": {
+        "id": "0326",
+        "name": "Visit Indicator",
+        "type": "User",
+        "elements": [
+            "A",
+            "V"
+        ]
+    },
+    "0327": {
+        "id": "0327",
+        "name": "Job Class",
+        "type": "User",
+        "elements": []
+    },
+    "0328": {
+        "id": "0328",
+        "name": "Employee Classification",
+        "type": "User",
+        "elements": []
+    },
+    "0329": {
+        "id": "0329",
+        "name": "Quantity Method",
+        "type": "HL7",
+        "elements": [
+            "A",
+            "E"
+        ]
+    },
+    "0330": {
+        "id": "0330",
+        "name": "Marketing Basis",
+        "type": "HL7",
+        "elements": [
+            "510K",
+            "510E",
+            "PMA",
+            "PRE",
+            "TXN",
+            "522S"
+        ]
+    },
+    "0331": {
+        "id": "0331",
+        "name": "Facility Type",
+        "type": "HL7",
+        "elements": [
+            "U",
+            "M",
+            "D",
+            "A"
+        ]
+    },
+    "0332": {
+        "id": "0332",
+        "name": "Network Source Type",
+        "type": "HL7",
+        "elements": [
+            "I",
+            "A"
+        ]
+    },
+    "0334": {
+        "id": "0334",
+        "name": "Disabled Person",
+        "type": "User",
+        "elements": [
+            "PT",
+            "GT",
+            "IN",
+            "AP"
+        ]
+    },
+    "0337": {
+        "id": "0337",
+        "name": "Certification Status",
+        "type": "HL7",
+        "elements": [
+            "E",
+            "C"
+        ]
+    },
+    "0338": {
+        "id": "0338",
+        "name": "Practitioner ID number type",
+        "type": "User",
+        "elements": [
+            "UPIN",
+            "SL",
+            "MCD",
+            "GL",
+            "CY",
+            "TAX",
+            "DEA",
+            "MCR",
+            "L&I",
+            "QA",
+            "TRL"
+        ]
+    }
+}
