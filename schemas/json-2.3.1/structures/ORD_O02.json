@@ -1,0 +1,102 @@
+{
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER_DIET": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ODS",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER_TRAY": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ODT",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RESPONSE": {
+        "elements": [
+            {
+                "group": "PATIENT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER_DIET",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "ORDER_TRAY",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORD_O02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ERR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "RESPONSE",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

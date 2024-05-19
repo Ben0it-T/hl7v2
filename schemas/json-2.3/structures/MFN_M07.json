@@ -1,0 +1,54 @@
+{
+    "MF_PHASE_SCHED_DETAIL": {
+        "elements": [
+            {
+                "segment": "CM1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "CM2",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "MF_CLIN_STUDY": {
+        "elements": [
+            {
+                "segment": "MFE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "CM0",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "MF_PHASE_SCHED_DETAIL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "MFN_M07": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MFI",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "MF_CLIN_STUDY",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

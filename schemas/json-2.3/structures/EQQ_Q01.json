@@ -1,0 +1,21 @@
+{
+    "EQQ_Q01": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EQL",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DSC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

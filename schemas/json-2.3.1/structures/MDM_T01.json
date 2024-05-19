@@ -1,0 +1,31 @@
+{
+    "MDM_T01": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EVN",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "TXA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

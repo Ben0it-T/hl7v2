@@ -1,0 +1,21 @@
+{
+    "PMU_B03": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EVN",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "STF",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

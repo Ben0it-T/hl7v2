@@ -1,0 +1,87 @@
+{
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ADMINISTRATION": {
+        "elements": [
+            {
+                "segment": "RXA",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "RXR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ADMINISTRATION",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RESPONSE": {
+        "elements": [
+            {
+                "group": "PATIENT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RRA_O02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ERR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "RESPONSE",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

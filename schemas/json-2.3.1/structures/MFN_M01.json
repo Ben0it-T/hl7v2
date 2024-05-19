@@ -1,0 +1,35 @@
+{
+    "MF": {
+        "elements": [
+            {
+                "segment": "MFE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "anyZSegment",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "MFN_M01": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MFI",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "MF",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

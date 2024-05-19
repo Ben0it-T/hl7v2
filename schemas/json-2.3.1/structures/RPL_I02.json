@@ -1,0 +1,50 @@
+{
+    "PROVIDER": {
+        "elements": [
+            {
+                "segment": "PRD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "CTD",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RPL_I02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "PROVIDER",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "DSP",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "DSC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

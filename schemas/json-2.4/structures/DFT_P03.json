@@ -1,0 +1,237 @@
+{
+    "ORDER": {
+        "elements": [
+            {
+                "segment": "OBR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "OBSERVATION": {
+        "elements": [
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "COMMON_ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "OBSERVATION",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "FINANCIAL_PROCEDURE": {
+        "elements": [
+            {
+                "segment": "PR1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "FINANCIAL_ORDER": {
+        "elements": [
+            {
+                "segment": "OBR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "FINANCIAL_OBSERVATION": {
+        "elements": [
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "FINANCIAL_COMMON_ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "FINANCIAL_ORDER",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "FINANCIAL_OBSERVATION",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "FINANCIAL": {
+        "elements": [
+            {
+                "segment": "FT1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "FINANCIAL_PROCEDURE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "FINANCIAL_COMMON_ORDER",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "INSURANCE": {
+        "elements": [
+            {
+                "segment": "IN1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "IN2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "IN3",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "DFT_P03": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EVN",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "PV1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "DB1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "COMMON_ORDER",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "FINANCIAL",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "DG1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "DRG",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "GT1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "INSURANCE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "ACC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

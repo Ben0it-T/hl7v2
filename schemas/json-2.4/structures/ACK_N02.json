@@ -1,0 +1,16 @@
+{
+    "ACK_N02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

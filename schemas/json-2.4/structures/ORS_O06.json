@@ -1,0 +1,83 @@
+{
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RQD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RQ1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RSPONSE": {
+        "elements": [
+            {
+                "group": "PATIENT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORS_O06": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ERR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "RSPONSE",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

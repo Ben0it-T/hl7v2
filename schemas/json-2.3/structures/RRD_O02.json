@@ -1,0 +1,92 @@
+{
+    "RESPONSE": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "DISPENSE": {
+        "elements": [
+            {
+                "segment": "RXD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RXR",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "RXC",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "DISPENSE",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PATIENT": {
+        "elements": [
+            {
+                "group": "RESPONSE",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RRD_O02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ERR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PATIENT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

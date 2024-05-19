@@ -1,0 +1,204 @@
+{
+    "PATIENT_VISIT": {
+        "elements": [
+            {
+                "segment": "PV1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "INSURANCE": {
+        "elements": [
+            {
+                "segment": "IN1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "IN2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "IN3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PATIENT_VISIT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "INSURANCE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "GT1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "AL1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "CHOICE": {
+        "elements": [
+            {
+                "segment": "OBR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RQD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RQ1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RXO",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ODS",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ODT",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "OBSERVATION": {
+        "elements": [
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER_DETAIL": {
+        "elements": [
+            {
+                "group": "CHOICE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "CTD",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DG1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "OBSERVATION",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER_DETAIL",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "FT1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "CTI",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "BLG",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ORM_O01": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PATIENT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

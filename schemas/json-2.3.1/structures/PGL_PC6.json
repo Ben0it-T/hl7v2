@@ -1,0 +1,254 @@
+{
+    "PATIENT_VISIT": {
+        "elements": [
+            {
+                "segment": "PV1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "GOAL_ROLE": {
+        "elements": [
+            {
+                "segment": "ROL",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "PATHWAY": {
+        "elements": [
+            {
+                "segment": "PTH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "OBSERVATION": {
+        "elements": [
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "PROBLEM_ROLE": {
+        "elements": [
+            {
+                "segment": "ROL",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "PROBLEM_OBSERVATION": {
+        "elements": [
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "PROBLEM": {
+        "elements": [
+            {
+                "segment": "PRB",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PROBLEM_ROLE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PROBLEM_OBSERVATION",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "CHOICE": {
+        "elements": [
+            {
+                "segment": "OBR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RXO",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "ORDER_OBSERVATION": {
+        "elements": [
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER_DETAIL": {
+        "elements": [
+            {
+                "group": "CHOICE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "ORDER_OBSERVATION",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "ORDER": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "ORDER_DETAIL",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "GOAL": {
+        "elements": [
+            {
+                "segment": "GOL",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "VAR",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "GOAL_ROLE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PATHWAY",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "OBSERVATION",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PROBLEM",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "ORDER",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "PGL_PC6": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "PATIENT_VISIT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "GOAL",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "PRODUCT": {
+        "elements": [
+            {
+                "segment": "PSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PDC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "FACILITY_DETAIL": {
+        "elements": [
+            {
+                "segment": "FAC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PDC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "FACILITY": {
+        "elements": [
+            {
+                "segment": "FAC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "PRODUCT",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "PSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "FACILITY_DETAIL",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "SUR_P09": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "FACILITY",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

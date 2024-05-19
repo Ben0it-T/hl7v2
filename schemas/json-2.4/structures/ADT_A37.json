@@ -1,0 +1,56 @@
+{
+    "ADT_A37": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EVN",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DB1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DB1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

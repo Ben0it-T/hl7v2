@@ -1,0 +1,46 @@
+{
+    "DSR_Q03": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ERR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QAK",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QRD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QRF",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DSP",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "DSC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

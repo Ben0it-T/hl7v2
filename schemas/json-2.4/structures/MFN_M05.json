@@ -1,0 +1,69 @@
+{
+    "MF_LOC_DEPT": {
+        "elements": [
+            {
+                "segment": "LDP",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "LCH",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "LCC",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "MF_LOCATION": {
+        "elements": [
+            {
+                "segment": "MFE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "LOC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "LCH",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "LRL",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "MF_LOC_DEPT",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "MFN_M05": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MFI",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "MF_LOCATION",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

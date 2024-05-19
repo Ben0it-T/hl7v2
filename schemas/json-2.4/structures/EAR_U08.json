@@ -1,0 +1,45 @@
+{
+    "COMMAND_RESPONSE": {
+        "elements": [
+            {
+                "segment": "ECD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "SAC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "ECR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "EAR_U08": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EQU",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "COMMAND_RESPONSE",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

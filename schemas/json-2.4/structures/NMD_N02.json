@@ -1,0 +1,77 @@
+{
+    "CLOCK": {
+        "elements": [
+            {
+                "segment": "NCK",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "APP_STATS": {
+        "elements": [
+            {
+                "segment": "NST",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "APP_STATUS": {
+        "elements": [
+            {
+                "segment": "NSC",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "CLOCK_AND_STATS_WITH_NOTES": {
+        "elements": [
+            {
+                "group": "CLOCK",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "APP_STATS",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "APP_STATUS",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "NMD_N02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "CLOCK_AND_STATS_WITH_NOTES",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

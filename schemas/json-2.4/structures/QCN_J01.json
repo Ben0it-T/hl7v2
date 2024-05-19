@@ -1,0 +1,16 @@
+{
+    "QCN_J01": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

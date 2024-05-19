@@ -1,0 +1,26 @@
+{
+    "INU_U05": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EQU",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "INV",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

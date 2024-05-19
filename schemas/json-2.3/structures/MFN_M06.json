@@ -1,0 +1,40 @@
+{
+    "MF_CDM": {
+        "elements": [
+            {
+                "segment": "MFE",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "CDM",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PRC",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "MFN_M06": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MFI",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "MF_CDM",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "VISIT": {
+        "elements": [
+            {
+                "segment": "PV1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "STUDY_OBSERVATION": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "OBR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "OBX",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "RX_ADMIN": {
+        "elements": [
+            {
+                "segment": "RXA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "RXR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "STUDY_PHARM": {
+        "elements": [
+            {
+                "segment": "ORC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "RX_ADMIN",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "STUDY_SCHEDULE": {
+        "elements": [
+            {
+                "segment": "CSS",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "STUDY_OBSERVATION",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "STUDY_PHARM",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "STUDY_PHASE": {
+        "elements": [
+            {
+                "segment": "CSP",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "STUDY_SCHEDULE",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "VISIT",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "CSR",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "STUDY_PHASE",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "CSU_C09": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "PATIENT",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

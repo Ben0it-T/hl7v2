@@ -1,0 +1,40 @@
+{
+    "NOTIFICATION": {
+        "elements": [
+            {
+                "segment": "NDS",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "NTE",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "EAN_U09": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EQU",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "NOTIFICATION",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

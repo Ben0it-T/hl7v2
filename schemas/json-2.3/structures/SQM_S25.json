@@ -1,0 +1,140 @@
+{
+    "SERVICE": {
+        "elements": [
+            {
+                "segment": "AIS",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "APR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "GENERAL_RESOURCE": {
+        "elements": [
+            {
+                "segment": "AIG",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "APR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "PERSONNEL_RESOURCE": {
+        "elements": [
+            {
+                "segment": "AIP",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "APR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "LOCATION_RESOURCE": {
+        "elements": [
+            {
+                "segment": "AIL",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "APR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "RESOURCES": {
+        "elements": [
+            {
+                "segment": "RGS",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "SERVICE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "GENERAL_RESOURCE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "PERSONNEL_RESOURCE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "group": "LOCATION_RESOURCE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "REQUEST": {
+        "elements": [
+            {
+                "segment": "ARQ",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "APR",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "RESOURCES",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    },
+    "SQM_S25": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QRD",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "QRF",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "REQUEST",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DSC",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "SSR_U04": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EQU",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "SAC",
+                "minOccurs": "1",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "ROL",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    }
+}

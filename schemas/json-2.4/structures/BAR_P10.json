@@ -1,0 +1,55 @@
+{
+    "PROCEDURE": {
+        "elements": [
+            {
+                "segment": "PR1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "GP2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "BAR_P10": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "EVN",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "PV1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "DG1",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            },
+            {
+                "segment": "GP1",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "group": "PROCEDURE",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}

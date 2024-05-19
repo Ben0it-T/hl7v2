@@ -1,0 +1,26 @@
+{
+    "MFK_M02": {
+        "elements": [
+            {
+                "segment": "MSH",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MSA",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MFI",
+                "minOccurs": "1",
+                "maxOccurs": "1"
+            },
+            {
+                "segment": "MFA",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded"
+            }
+        ]
+    }
+}
