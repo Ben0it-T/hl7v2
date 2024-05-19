@@ -1237,12 +1237,14 @@ class Message {
                 $this->fieldrepeat = $repeat;
 
                 // check length
-                list($checkLengthResult, $checkLengthType, $checkLengthDesc) = $this->checkLength($fieldDef["Length"], $fieldValue, "Field", "'".$fieldDef["LongName"]."'");
-                if (!$checkLengthResult) {
-                    $fieldError = true;
-                    $fieldRepeatComments .= $checkLengthDesc . " ";
+                if ($fieldDef["Length"] !== "") {
+                    list($checkLengthResult, $checkLengthType, $checkLengthDesc) = $this->checkLength($fieldDef["Length"], $fieldValue, "Field", "'".$fieldDef["LongName"]."'");
+                    $this->addTestReport($currentLocation, $checkLengthDesc, $checkLengthType, $checkLengthResult);
+                    if (!$checkLengthResult) {
+                        $fieldError = true;
+                        $fieldRepeatComments .= $checkLengthDesc . " ";
+                    }
                 }
-                $this->addTestReport($currentLocation, $checkLengthDesc, $checkLengthType, $checkLengthResult);
 
                 // check table
                 if ($fieldDef["Table"] !== "" && isset($this->hl7tables[$fieldDef["Table"]]) ) {
@@ -1365,12 +1367,15 @@ class Message {
         if ($componentExists) {
             $componentValue = $this->msgParseComponentToString($this->msgParse[$this->segmentLocation][$this->segmentName][$this->fieldLocation][$this->fieldrepeat][$this->componentLocation]);
             // check length
-            list($checkLengthResult, $checkLengthType, $checkLengthDesc) = $this->checkLength($componentDef["maxLength"], $componentValue, "Component", "'".$componentDef["LongName"] . "' (" . $componentDef["Name"] . ")");
-            if (!$checkLengthResult) {
-                $componentError = true;
-                $componentComments .= $checkLengthDesc . " ";
+            if ($componentDef["maxLength"] !== "") {
+                list($checkLengthResult, $checkLengthType, $checkLengthDesc) = $this->checkLength($componentDef["maxLength"], $componentValue, "Component", "'".$componentDef["LongName"] . "' (" . $componentDef["Name"] . ")");
+                $this->addTestReport($currentLocation, $checkLengthDesc, $checkLengthType, $checkLengthResult);
+                if (!$checkLengthResult) {
+                    $componentError = true;
+                    $componentComments .= $checkLengthDesc . " ";
+                }
             }
-            $this->addTestReport($currentLocation, $checkLengthDesc, $checkLengthType, $checkLengthResult);
+
             // check table
             if ($componentDef["Table"] !== "" && isset($this->hl7tables[$componentDef["Table"]])) {
                 list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($componentDef["Table"], $componentValue, "Component", "'".$componentDef["LongName"] . "' (" . $componentDef["Name"] . ")");
@@ -1490,13 +1495,15 @@ class Message {
         if ($subcomponentExists) {
             $subcomponentValue = $this->msgParseSubComponentToString($this->msgParse[$this->segmentLocation][$this->segmentName][$this->fieldLocation][$this->fieldrepeat][$this->componentLocation][$this->subcomponentLocation]);
             // check length
-            list($checkLengthResult, $checkLengthType, $checkLengthDesc) = $this->checkLength($subComponentDef["maxLength"], $subcomponentValue, "SubComponent", "'".$subComponentDef["LongName"] . "' (" . $subComponentDef["Name"] . ")");
-            if (!$checkLengthResult) {
-                $subcomponentError = true;
-                $subcomponentComments .= $checkLengthDesc . " ";
+            if ($subComponentDef["maxLength"] !== "") {
+                list($checkLengthResult, $checkLengthType, $checkLengthDesc) = $this->checkLength($subComponentDef["maxLength"], $subcomponentValue, "SubComponent", "'".$subComponentDef["LongName"] . "' (" . $subComponentDef["Name"] . ")");
+                $this->addTestReport($currentLocation, $checkLengthDesc, $checkLengthType, $checkLengthResult);
+                if (!$checkLengthResult) {
+                    $subcomponentError = true;
+                    $subcomponentComments .= $checkLengthDesc . " ";
+                }
             }
-            $this->addTestReport($currentLocation, $checkLengthDesc, $checkLengthType, $checkLengthResult);
-            
+
             // check table
             if ($subComponentDef["Table"] !== "" && isset($this->hl7tables[$subComponentDef["Table"]])) {
                 list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($subComponentDef["Table"], $subcomponentValue, "SubComponent", "'".$subComponentDef["LongName"] . "' (" . $subComponentDef["Name"] . ")");
