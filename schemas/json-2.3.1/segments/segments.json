@@ -6005,7 +6005,7 @@
             {
                 "field": "PV1.50",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "1"
             },
             {
                 "field": "PV1.51",

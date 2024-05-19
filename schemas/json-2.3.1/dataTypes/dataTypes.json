@@ -449,6 +449,80 @@
         "LongName": "assigning authority",
         "maxLength": ""
     },
+    "CM_ABS_RANGE": {
+        "components": [
+            {
+                "dataType": "CM_ABS_RANGE.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CM_ABS_RANGE.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CM_ABS_RANGE.3",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CM_ABS_RANGE.4",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CM_ABS_RANGE.1": {
+        "Type": "CM_RANGE",
+        "Table": "",
+        "LongName": "Range",
+        "maxLength": ""
+    },
+    "CM_ABS_RANGE.2": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Numeric Change",
+        "maxLength": ""
+    },
+    "CM_ABS_RANGE.3": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Percent per Change",
+        "maxLength": ""
+    },
+    "CM_ABS_RANGE.4": {
+        "Type": "NM",
+        "Table": "",
+        "LongName": "Days",
+        "maxLength": ""
+    },
+    "CM_RANGE": {
+        "components": [
+            {
+                "dataType": "CM_RANGE.1",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            },
+            {
+                "dataType": "CM_RANGE.2",
+                "minOccurs": "0",
+                "maxOccurs": "1"
+            }
+        ]
+    },
+    "CM_RANGE.1": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "Low Value",
+        "maxLength": ""
+    },
+    "CM_RANGE.2": {
+        "Type": "CE",
+        "Table": "",
+        "LongName": "High Value",
+        "maxLength": ""
+    },
     "CN": {
         "components": [
             {

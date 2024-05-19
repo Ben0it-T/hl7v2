@@ -889,7 +889,7 @@
     },
     "BLG.1": {
         "Item": "234",
-        "Type": "CM",
+        "Type": "CCD",
         "Table": "HL700100",
         "LongName": "When to Charge",
         "maxLength": "40",
@@ -1417,7 +1417,7 @@
     },
     "CTD.7": {
         "Item": "1171",
-        "Type": "CM",
+        "Type": "PI",
         "Table": "",
         "LongName": "Contact Identifiers",
         "maxLength": "100",
@@ -1849,7 +1849,7 @@
     },
     "ERR.1": {
         "Item": "24",
-        "Type": "CM",
+        "Type": "ELD",
         "Table": "",
         "LongName": "Error Code and Location",
         "maxLength": "80",
@@ -2969,7 +2969,7 @@
     },
     "IN1.14": {
         "Item": "439",
-        "Type": "CM",
+        "Type": "AUI",
         "Table": "",
         "LongName": "Authorization Information",
         "maxLength": "55",
@@ -3481,7 +3481,7 @@
     },
     "IN2.28": {
         "Item": "499",
-        "Type": "CM",
+        "Type": "RMC",
         "Table": "HL700145",
         "LongName": "Room Coverage Type\/Amount",
         "maxLength": "25",
@@ -3489,7 +3489,7 @@
     },
     "IN2.29": {
         "Item": "500",
-        "Type": "CM",
+        "Type": "PTA",
         "Table": "HL700147",
         "LongName": "Policy Type\/Amount",
         "maxLength": "25",
@@ -3505,7 +3505,7 @@
     },
     "IN2.30": {
         "Item": "501",
-        "Type": "CM",
+        "Type": "DDI",
         "Table": "",
         "LongName": "Daily Deductible",
         "maxLength": "25",
@@ -3913,7 +3913,7 @@
     },
     "IN3.11": {
         "Item": "512",
-        "Type": "CM",
+        "Type": "DTN",
         "Table": "HL700149",
         "LongName": "Days",
         "maxLength": "3",
@@ -3993,7 +3993,7 @@
     },
     "IN3.20": {
         "Item": "521",
-        "Type": "CM",
+        "Type": "PCF",
         "Table": "HL700150",
         "LongName": "Pre-Certification Req\/Window",
         "maxLength": "40",
@@ -4057,7 +4057,7 @@
     },
     "IN3.5": {
         "Item": "506",
-        "Type": "CM",
+        "Type": "MOP",
         "Table": "HL700148",
         "LongName": "Penalty",
         "maxLength": "10",
@@ -4761,7 +4761,7 @@
     },
     "MSH.9": {
         "Item": "9",
-        "Type": "CM",
+        "Type": "MSG",
         "Table": "HL700076",
         "LongName": "Message Type",
         "maxLength": "7",
@@ -5361,7 +5361,7 @@
     },
     "OBR.15": {
         "Item": "249",
-        "Type": "CM",
+        "Type": "SPS",
         "Table": "HL700070",
         "LongName": "Specimen Source",
         "maxLength": "300",
@@ -5433,7 +5433,7 @@
     },
     "OBR.23": {
         "Item": "256",
-        "Type": "CM",
+        "Type": "MOC",
         "Table": "",
         "LongName": "Charge to Practice +",
         "maxLength": "40",
@@ -5457,7 +5457,7 @@
     },
     "OBR.26": {
         "Item": "259",
-        "Type": "CM",
+        "Type": "PRL",
         "Table": "",
         "LongName": "Parent Result +",
         "maxLength": "200",
@@ -5481,7 +5481,7 @@
     },
     "OBR.29": {
         "Item": "261",
-        "Type": "CM",
+        "Type": "EIP",
         "Table": "",
         "LongName": "Parent",
         "maxLength": "200",
@@ -5513,7 +5513,7 @@
     },
     "OBR.32": {
         "Item": "264",
-        "Type": "CM",
+        "Type": "NDL",
         "Table": "",
         "LongName": "Principal Result Interpreter +",
         "maxLength": "200",
@@ -5521,7 +5521,7 @@
     },
     "OBR.33": {
         "Item": "265",
-        "Type": "CM",
+        "Type": "NDL",
         "Table": "",
         "LongName": "Assistant Result Interpreter +",
         "maxLength": "200",
@@ -5529,7 +5529,7 @@
     },
     "OBR.34": {
         "Item": "266",
-        "Type": "CM",
+        "Type": "NDL",
         "Table": "",
         "LongName": "Technician +",
         "maxLength": "200",
@@ -5537,7 +5537,7 @@
     },
     "OBR.35": {
         "Item": "267",
-        "Type": "CM",
+        "Type": "NDL",
         "Table": "",
         "LongName": "Transcriptionist +",
         "maxLength": "200",
@@ -5769,7 +5769,7 @@
     },
     "OBX.5": {
         "Item": "573",
-        "Type": "*",
+        "Type": "varies",
         "Table": "",
         "LongName": "Observation Value",
         "maxLength": "65536",
@@ -6169,7 +6169,7 @@
     },
     "OM1.44": {
         "Item": "939",
-        "Type": "TX",
+        "Type": "TX_CHALLENGE",
         "Table": "HL700256",
         "LongName": "Challenge Information",
         "maxLength": "200",
@@ -6289,7 +6289,7 @@
     },
     "OM2.6": {
         "Item": "631",
-        "Type": "CM",
+        "Type": "RFR",
         "Table": "",
         "LongName": "Reference (Normal) Range - Ordinal & Continuous Obs",
         "maxLength": "200",
@@ -6297,7 +6297,7 @@
     },
     "OM2.7": {
         "Item": "632",
-        "Type": "CM",
+        "Type": "NR",
         "Table": "",
         "LongName": "Critical Range for Ordinal & Continuous Obs",
         "maxLength": "200",
@@ -6305,7 +6305,7 @@
     },
     "OM2.8": {
         "Item": "633",
-        "Type": "CM",
+        "Type": "RFR",
         "Table": "",
         "LongName": "Absolute Range for Ordinal & Continuous Obs",
         "maxLength": "200",
@@ -6313,7 +6313,7 @@
     },
     "OM2.9": {
         "Item": "634",
-        "Type": "CM",
+        "Type": "DLT",
         "Table": "",
         "LongName": "Delta Check Criteria",
         "maxLength": "200",
@@ -6704,7 +6704,7 @@
     },
     "ORC.8": {
         "Item": "222",
-        "Type": "CM",
+        "Type": "EIP",
         "Table": "",
         "LongName": "Parent",
         "maxLength": "200",
@@ -7824,7 +7824,7 @@
     },
     "PRA.5": {
         "Item": "689",
-        "Type": "CM",
+        "Type": "SPD",
         "Table": "HL700337",
         "LongName": "Specialty",
         "maxLength": "100",
@@ -7832,7 +7832,7 @@
     },
     "PRA.6": {
         "Item": "690",
-        "Type": "CM",
+        "Type": "PLN",
         "Table": "HL700338",
         "LongName": "Practitioner ID Numbers",
         "maxLength": "100",
@@ -7840,7 +7840,7 @@
     },
     "PRA.7": {
         "Item": "691",
-        "Type": "CM",
+        "Type": "PIP",
         "Table": "",
         "LongName": "Privileges",
         "maxLength": "200",
@@ -8248,7 +8248,7 @@
     },
     "PRD.7": {
         "Item": "1162",
-        "Type": "CM",
+        "Type": "PI",
         "Table": "",
         "LongName": "Provider Identifiers",
         "maxLength": "100",
@@ -8672,7 +8672,7 @@
     },
     "PV1.37": {
         "Item": "167",
-        "Type": "CM",
+        "Type": "DLD",
         "Table": "HL700113",
         "LongName": "Discharged to Location",
         "maxLength": "25",
@@ -9176,7 +9176,7 @@
     },
     "QRD.11": {
         "Item": "35",
-        "Type": "CM",
+        "Type": "VR",
         "Table": "",
         "LongName": "What Data Code Value Qual.",
         "maxLength": "20",
@@ -9344,7 +9344,7 @@
     },
     "RDT.1": {
         "Item": "703",
-        "Type": "Variable",
+        "Type": "varies",
         "Table": "",
         "LongName": "Column Value",
         "maxLength": "Variable",
@@ -9680,7 +9680,7 @@
     },
     "RXA.11": {
         "Item": "353",
-        "Type": "CM",
+        "Type": "LA2",
         "Table": "",
         "LongName": "Administered-at Location",
         "maxLength": "200",
@@ -9920,7 +9920,7 @@
     },
     "RXD.13": {
         "Item": "1303",
-        "Type": "CM",
+        "Type": "LA2",
         "Table": "",
         "LongName": "Dispense-To Location",
         "maxLength": "200",
@@ -10304,7 +10304,7 @@
     },
     "RXE.8": {
         "Item": "299",
-        "Type": "CM",
+        "Type": "LA1",
         "Table": "",
         "LongName": "Deliver-to Location",
         "maxLength": "200",
@@ -10336,7 +10336,7 @@
     },
     "RXG.11": {
         "Item": "1303",
-        "Type": "CM",
+        "Type": "LA2",
         "Table": "",
         "LongName": "Dispense-To Location",
         "maxLength": "200",
@@ -10664,7 +10664,7 @@
     },
     "RXO.8": {
         "Item": "299",
-        "Type": "CM",
+        "Type": "LA1",
         "Table": "",
         "LongName": "Deliver-to Location",
         "maxLength": "200",
@@ -10976,7 +10976,7 @@
     },
     "STF.12": {
         "Item": "680",
-        "Type": "CM",
+        "Type": "DIN",
         "Table": "",
         "LongName": "Institution Activation Date",
         "maxLength": "26",
@@ -10984,7 +10984,7 @@
     },
     "STF.13": {
         "Item": "681",
-        "Type": "CM",
+        "Type": "DIN",
         "Table": "",
         "LongName": "Institution Inactivation Date",
         "maxLength": "26",
@@ -11352,7 +11352,7 @@
     },
     "UB1.10": {
         "Item": "539",
-        "Type": "CM",
+        "Type": "UVC",
         "Table": "HL700153",
         "LongName": "Value Amount & Code (46-49)",
         "maxLength": "12",
@@ -11400,7 +11400,7 @@
     },
     "UB1.16": {
         "Item": "545",
-        "Type": "CM",
+        "Type": "OCD",
         "Table": "HL700350",
         "LongName": "Occurrence (28-32)",
         "maxLength": "20",
@@ -11632,7 +11632,7 @@
     },
     "UB2.6": {
         "Item": "558",
-        "Type": "CM",
+        "Type": "UVC",
         "Table": "HL700153",
         "LongName": "Value Amount & Code",
         "maxLength": "11",
@@ -11640,7 +11640,7 @@
     },
     "UB2.7": {
         "Item": "559",
-        "Type": "CM",
+        "Type": "OCD",
         "Table": "HL700350",
         "LongName": "Occurrence Code & Date (32-35)",
         "maxLength": "11",
@@ -11648,7 +11648,7 @@
     },
     "UB2.8": {
         "Item": "560",
-        "Type": "CM",
+        "Type": "OSP",
         "Table": "HL700351",
         "LongName": "Occurrence Span Code\/Dates (36)",
         "maxLength": "28",
