@@ -342,7 +342,7 @@
         "Item": "00012",
         "Datatype": "ID",
         "Length": "8",
-        "Table": "00104",
+        "Table": "0104",
         "LongName": "Version ID",
         "Chapter": "2"
       },
@@ -378,7 +378,7 @@
         "Item": "00015",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Accept Acknowledgement Type",
         "Chapter": "2"
       },
@@ -390,7 +390,7 @@
         "Item": "00016",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Application Acknowledgement Type",
         "Chapter": "2"
       },
@@ -414,7 +414,7 @@
         "Item": "00692",
         "Datatype": "ID",
         "Length": "6",
-        "Table": "00211",
+        "Table": "0211",
         "LongName": "Character Set",
         "Chapter": "2"
       },
@@ -511,7 +511,7 @@
         "Item": "00018",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00008",
+        "Table": "0008",
         "LongName": "Acknowledgement code",
         "Chapter": "2"
       },
@@ -559,7 +559,7 @@
         "Item": "00022",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00102",
+        "Table": "0102",
         "LongName": "Delayed Acknowledgement Type",
         "Chapter": "2"
       },

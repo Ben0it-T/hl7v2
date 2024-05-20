@@ -119,7 +119,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Appointment information - general resource",
+        "LongName": "Appointment information - general resource segment",
         "Chapter": "10"
     },
     "AIL": {
@@ -1078,7 +1078,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "Disability Segment",
+        "Chapter": "3"
     },
     "DG1": {
         "fields": [
@@ -1759,7 +1761,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "unbounded"
             }
-        ]
+        ],
+        "LongName": "Goal detail segment",
+        "Chapter": "12"
     },
     "GT1": {
         "fields": [
@@ -3268,7 +3272,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "System clock segment",
+        "Chapter": "C"
     },
     "NK1": {
         "fields": [
@@ -3524,7 +3530,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "Status change segment",
+        "Chapter": "C"
     },
     "NST": {
         "fields": [
@@ -3603,7 +3611,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "Statistics segment",
+        "Chapter": "C"
     },
     "NTE": {
         "fields": [
@@ -5417,7 +5427,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "Problem detail segment",
+        "Chapter": "12"
     },
     "PRC": {
         "fields": [
@@ -5638,7 +5650,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "unbounded"
             }
-        ]
+        ],
+       "LongName": "Product summary header segment",
+        "Chapter": "7"
     },
     "PTH": {
         "fields": [
@@ -5672,7 +5686,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "Pathway segment",
+        "Chapter": "12"
     },
     "PV1": {
         "fields": [
@@ -6369,7 +6385,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "LongName": "Resource group segment",
+        "Chapter": "10"
     },
     "ROL": {
         "fields": [
@@ -6413,7 +6431,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+         "LongName": "Role segment",
+        "Chapter": "12"
     },
     "RQ1": {
         "fields": [
@@ -7954,7 +7974,9 @@
                 "minOccurs": "0",
                 "maxOccurs": "unbounded"
             }
-        ]
+        ],
+        "LongName": "Variance segment",
+        "Chapter": "12"
     },
     "VTQ": {
         "fields": [

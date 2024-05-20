@@ -342,7 +342,7 @@
         "Item": "00012",
         "Datatype": "ID",
         "Length": "8",
-        "Table": "00104",
+        "Table": "0104",
         "LongName": "Version ID",
         "Chapter": "2"
       },
@@ -378,7 +378,7 @@
         "Item": "00015",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Accept Acknowledgement Type",
         "Chapter": "2"
       },
@@ -390,7 +390,7 @@
         "Item": "00016",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Application Acknowledgement Type",
         "Chapter": "2"
       },
@@ -414,7 +414,7 @@
         "Item": "00692",
         "Datatype": "ID",
         "Length": "6",
-        "Table": "00211",
+        "Table": "0211",
         "LongName": "Character Set",
         "Chapter": "2"
       },
@@ -511,7 +511,7 @@
         "Item": "00099",
         "Datatype": "ID",
         "Length": "3",
-        "Table": "00003",
+        "Table": "0003",
         "LongName": "Event Type Code",
         "Chapter": "3"
       },
@@ -591,7 +591,7 @@
         "Item": "00102",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00062",
+        "Table": "0062",
         "LongName": "Event Reason Code",
         "Chapter": "3"
       },
@@ -603,7 +603,7 @@
         "Item": "00103",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00188",
+        "Table": "0188",
         "LongName": "Operator ID",
         "Chapter": "3",
         "components": [
@@ -1514,7 +1514,7 @@
         "Item": "00111",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00001",
+        "Table": "0001",
         "LongName": "Sex",
         "Chapter": "3"
       },
@@ -1620,7 +1620,7 @@
         "Item": "00113",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00005",
+        "Table": "0005",
         "LongName": "Race",
         "Chapter": "3"
       },
@@ -1966,7 +1966,7 @@
         "Item": "00118",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00296",
+        "Table": "0296",
         "LongName": "Primary Language",
         "Chapter": "3",
         "components": [
@@ -2040,7 +2040,7 @@
         "Item": "00119",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00002",
+        "Table": "0002",
         "LongName": "Marital Status",
         "Chapter": "3"
       },
@@ -2052,7 +2052,7 @@
         "Item": "00120",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00006",
+        "Table": "0006",
         "LongName": "Religion",
         "Chapter": "3"
       },
@@ -2396,7 +2396,7 @@
         "Item": "00125",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00189",
+        "Table": "0189",
         "LongName": "Ethnic Group",
         "Chapter": "3"
       },
@@ -2420,7 +2420,7 @@
         "Item": "00127",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Multiple Birth Indicator",
         "Chapter": "3"
       },
@@ -2444,7 +2444,7 @@
         "Item": "00129",
         "Datatype": "IS",
         "Length": "4",
-        "Table": "00171",
+        "Table": "0171",
         "LongName": "Citizenship",
         "Chapter": "3"
       },
@@ -2456,7 +2456,7 @@
         "Item": "00130",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00172",
+        "Table": "0172",
         "LongName": "Veterans Military Status",
         "Chapter": "3",
         "components": [
@@ -2530,7 +2530,7 @@
         "Item": "00739",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00212",
+        "Table": "0212",
         "LongName": "Nationality Code",
         "Chapter": "3",
         "components": [
@@ -2638,7 +2638,7 @@
         "Item": "00741",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Patient Death Indicator",
         "Chapter": "3"
       }
@@ -2661,7 +2661,7 @@
         "Item": "00755",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00223",
+        "Table": "0223",
         "LongName": "Living Dependency",
         "Chapter": "3"
       },
@@ -2673,7 +2673,7 @@
         "Item": "00742",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00220",
+        "Table": "0220",
         "LongName": "Living Arrangement",
         "Chapter": "3"
       },
@@ -3061,7 +3061,7 @@
         "Item": "00745",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00231",
+        "Table": "0231",
         "LongName": "Student Indicator",
         "Chapter": "3"
       },
@@ -3073,7 +3073,7 @@
         "Item": "00753",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00295",
+        "Table": "0295",
         "LongName": "Handicap",
         "Chapter": "3"
       },
@@ -3085,7 +3085,7 @@
         "Item": "00759",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00315",
+        "Table": "0315",
         "LongName": "Living Will",
         "Chapter": "3"
       },
@@ -3097,7 +3097,7 @@
         "Item": "00760",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00316",
+        "Table": "0316",
         "LongName": "Organ Donor",
         "Chapter": "3"
       },
@@ -3109,7 +3109,7 @@
         "Item": "00761",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Separate Bill",
         "Chapter": "3"
       },
@@ -3121,7 +3121,7 @@
         "Item": "00762",
         "Datatype": "CX",
         "Length": "2",
-        "Table": "00000",
+        "Table": "0000",
         "LongName": "Duplicate Patient",
         "Chapter": "3",
         "components": [
@@ -3259,7 +3259,7 @@
         "Item": "00743",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00125",
+        "Table": "0125",
         "LongName": "Publicity Indicator",
         "Chapter": "3",
         "components": [
@@ -3333,7 +3333,7 @@
         "Item": "01293",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Protection Indicator",
         "Chapter": "3"
       }

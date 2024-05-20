@@ -342,7 +342,7 @@
         "Item": "00012",
         "Datatype": "ID",
         "Length": "8",
-        "Table": "00104",
+        "Table": "0104",
         "LongName": "Version ID",
         "Chapter": "2"
       },
@@ -378,7 +378,7 @@
         "Item": "00015",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Accept Acknowledgement Type",
         "Chapter": "2"
       },
@@ -390,7 +390,7 @@
         "Item": "00016",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Application Acknowledgement Type",
         "Chapter": "2"
       },
@@ -414,7 +414,7 @@
         "Item": "00692",
         "Datatype": "ID",
         "Length": "6",
-        "Table": "00211",
+        "Table": "0211",
         "LongName": "Character Set",
         "Chapter": "2"
       },
@@ -511,7 +511,7 @@
         "Item": "00099",
         "Datatype": "ID",
         "Length": "3",
-        "Table": "00003",
+        "Table": "0003",
         "LongName": "Event Type Code",
         "Chapter": "3"
       },
@@ -591,7 +591,7 @@
         "Item": "00102",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00062",
+        "Table": "0062",
         "LongName": "Event Reason Code",
         "Chapter": "3"
       },
@@ -603,7 +603,7 @@
         "Item": "00103",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00188",
+        "Table": "0188",
         "LongName": "Operator ID",
         "Chapter": "3",
         "components": [
@@ -1002,7 +1002,7 @@
         "Item": "00170",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00116",
+        "Table": "0116",
         "LongName": "Bed Status",
         "Chapter": "3"
       }
