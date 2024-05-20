@@ -86,7 +86,7 @@ if ($todoList["dataElements"]) {
             }
             if (trim($table) != "" && $dataFields[$fieldName]["Table"] != "HL7".trim($table)) {
                 //$dataFields[$fieldName]["Table"] = "HL7".trim($table);
-                $dataFields[$fieldName]["Table"] = "HL7" . (sprintf('%05d', trim($table)));
+                $dataFields[$fieldName]["Table"] = "HL7" . (sprintf('%04d', trim($table)));
             }
             if (trim($len) != "" && $dataFields[$fieldName]["maxLength"] != trim($len)) {
                 $dataFields[$fieldName]["maxLength"] = trim($len);
