@@ -40,7 +40,7 @@
         "Item": "00003",
         "Datatype": "HD",
         "Length": "180",
-        "Table": "00361",
+        "Table": "0361",
         "LongName": "Sending Application",
         "Chapter": "",
         "components": [
@@ -84,7 +84,7 @@
         "Item": "00004",
         "Datatype": "HD",
         "Length": "180",
-        "Table": "00362",
+        "Table": "0362",
         "LongName": "Sending Facility",
         "Chapter": "",
         "components": [
@@ -128,7 +128,7 @@
         "Item": "00005",
         "Datatype": "HD",
         "Length": "180",
-        "Table": "00361",
+        "Table": "0361",
         "LongName": "Receiving Application",
         "Chapter": "",
         "components": [
@@ -172,7 +172,7 @@
         "Item": "00006",
         "Datatype": "HD",
         "Length": "180",
-        "Table": "00362",
+        "Table": "0362",
         "LongName": "Receiving Facility",
         "Chapter": "",
         "components": [
@@ -262,7 +262,7 @@
         "Item": "00009",
         "Datatype": "MSG",
         "Length": "7",
-        "Table": "00076",
+        "Table": "0076",
         "LongName": "Message Type",
         "Chapter": "",
         "components": [
@@ -352,7 +352,7 @@
         "Item": "00012",
         "Datatype": "VID",
         "Length": "60",
-        "Table": "00104",
+        "Table": "0104",
         "LongName": "Version ID",
         "Chapter": "",
         "components": [
@@ -544,7 +544,7 @@
         "Item": "00015",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Accept Acknowledgment Type",
         "Chapter": ""
       },
@@ -556,7 +556,7 @@
         "Item": "00016",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00155",
+        "Table": "0155",
         "LongName": "Application Acknowledgment Type",
         "Chapter": ""
       },
@@ -580,7 +580,7 @@
         "Item": "00692",
         "Datatype": "ID",
         "Length": "16",
-        "Table": "00211",
+        "Table": "0211",
         "LongName": "Character Set",
         "Chapter": ""
       },
@@ -666,7 +666,7 @@
         "Item": "01317",
         "Datatype": "ID",
         "Length": "20",
-        "Table": "00356",
+        "Table": "0356",
         "LongName": "Alternate Character Set Handling Scheme",
         "Chapter": ""
       }
@@ -689,7 +689,7 @@
         "Item": "00099",
         "Datatype": "ID",
         "Length": "3",
-        "Table": "00003",
+        "Table": "0003",
         "LongName": "Event Type Code",
         "Chapter": ""
       },
@@ -769,7 +769,7 @@
         "Item": "00102",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00062",
+        "Table": "0062",
         "LongName": "Event Reason Code",
         "Chapter": ""
       },
@@ -781,7 +781,7 @@
         "Item": "00103",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00188",
+        "Table": "0188",
         "LongName": "Operator ID",
         "Chapter": "",
         "components": [
@@ -1768,7 +1768,7 @@
         "Item": "00111",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00001",
+        "Table": "0001",
         "LongName": "Sex",
         "Chapter": ""
       },
@@ -1896,7 +1896,7 @@
         "Item": "00113",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00005",
+        "Table": "0005",
         "LongName": "Race",
         "Chapter": "",
         "components": [
@@ -2094,7 +2094,7 @@
         "Item": "00115",
         "Datatype": "IS",
         "Length": "4",
-        "Table": "00289",
+        "Table": "0289",
         "LongName": "County Code",
         "Chapter": ""
       },
@@ -2314,7 +2314,7 @@
         "Item": "00118",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00296",
+        "Table": "0296",
         "LongName": "Primary Language",
         "Chapter": "",
         "components": [
@@ -2388,7 +2388,7 @@
         "Item": "00119",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00002",
+        "Table": "0002",
         "LongName": "Marital Status",
         "Chapter": "",
         "components": [
@@ -2462,7 +2462,7 @@
         "Item": "00120",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00006",
+        "Table": "0006",
         "LongName": "Religion",
         "Chapter": "",
         "components": [
@@ -2868,7 +2868,7 @@
         "Item": "00125",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00189",
+        "Table": "0189",
         "LongName": "Ethnic Group",
         "Chapter": "",
         "components": [
@@ -2954,7 +2954,7 @@
         "Item": "00127",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Multiple Birth Indicator",
         "Chapter": ""
       },
@@ -2978,7 +2978,7 @@
         "Item": "00129",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00171",
+        "Table": "0171",
         "LongName": "Citizenship",
         "Chapter": "",
         "components": [
@@ -3052,7 +3052,7 @@
         "Item": "00130",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00172",
+        "Table": "0172",
         "LongName": "Veterans Military Status",
         "Chapter": "",
         "components": [
@@ -3126,7 +3126,7 @@
         "Item": "00739",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00212",
+        "Table": "0212",
         "LongName": "Nationality",
         "Chapter": "",
         "components": [
@@ -3234,7 +3234,7 @@
         "Item": "00741",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Patient Death Indicator",
         "Chapter": ""
       }
@@ -3257,7 +3257,7 @@
         "Item": "00755",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00223",
+        "Table": "0223",
         "LongName": "Living Dependency",
         "Chapter": ""
       },
@@ -3269,7 +3269,7 @@
         "Item": "00742",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00220",
+        "Table": "0220",
         "LongName": "Living Arrangement",
         "Chapter": ""
       },
@@ -3699,7 +3699,7 @@
         "Item": "00745",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00231",
+        "Table": "0231",
         "LongName": "Student Indicator",
         "Chapter": ""
       },
@@ -3711,7 +3711,7 @@
         "Item": "00753",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00295",
+        "Table": "0295",
         "LongName": "Handicap",
         "Chapter": ""
       },
@@ -3723,7 +3723,7 @@
         "Item": "00759",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00315",
+        "Table": "0315",
         "LongName": "Living Will",
         "Chapter": ""
       },
@@ -3735,7 +3735,7 @@
         "Item": "00760",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00316",
+        "Table": "0316",
         "LongName": "Organ Donor",
         "Chapter": ""
       },
@@ -3747,7 +3747,7 @@
         "Item": "00761",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Separate Bill",
         "Chapter": ""
       },
@@ -3897,7 +3897,7 @@
         "Item": "00743",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00215",
+        "Table": "0215",
         "LongName": "Publicity Code",
         "Chapter": "",
         "components": [
@@ -3971,7 +3971,7 @@
         "Item": "00744",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Protection Indicator",
         "Chapter": ""
       }
@@ -4122,7 +4122,7 @@
         "Item": "00192",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00063",
+        "Table": "0063",
         "LongName": "Relationship",
         "Chapter": "",
         "components": [
@@ -4528,7 +4528,7 @@
         "Item": "00196",
         "Datatype": "CE",
         "Length": "200",
-        "Table": "00131",
+        "Table": "0131",
         "LongName": "Contact Role",
         "Chapter": "",
         "components": [
@@ -4638,7 +4638,7 @@
         "Item": "00200",
         "Datatype": "JCC",
         "Length": "20",
-        "Table": "00327",
+        "Table": "0327",
         "LongName": "Next of Kin \/ Associated Parties Job Code\/Class",
         "Chapter": "",
         "components": [
@@ -4978,7 +4978,7 @@
         "Item": "00119",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00002",
+        "Table": "0002",
         "LongName": "Marital Status",
         "Chapter": "",
         "components": [
@@ -5052,7 +5052,7 @@
         "Item": "00111",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00001",
+        "Table": "0001",
         "LongName": "Sex",
         "Chapter": ""
       },
@@ -5098,7 +5098,7 @@
         "Item": "00755",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00223",
+        "Table": "0223",
         "LongName": "Living Dependency",
         "Chapter": ""
       },
@@ -5110,7 +5110,7 @@
         "Item": "00145",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00009",
+        "Table": "0009",
         "LongName": "Ambulatory Status",
         "Chapter": ""
       },
@@ -5122,7 +5122,7 @@
         "Item": "00129",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00171",
+        "Table": "0171",
         "LongName": "Citizenship",
         "Chapter": "",
         "components": [
@@ -5196,7 +5196,7 @@
         "Item": "00118",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00296",
+        "Table": "0296",
         "LongName": "Primary Language",
         "Chapter": "",
         "components": [
@@ -5270,7 +5270,7 @@
         "Item": "00742",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00220",
+        "Table": "0220",
         "LongName": "Living Arrangement",
         "Chapter": ""
       },
@@ -5282,7 +5282,7 @@
         "Item": "00743",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00215",
+        "Table": "0215",
         "LongName": "Publicity Code",
         "Chapter": "",
         "components": [
@@ -5356,7 +5356,7 @@
         "Item": "00744",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Protection Indicator",
         "Chapter": ""
       },
@@ -5368,7 +5368,7 @@
         "Item": "00745",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00231",
+        "Table": "0231",
         "LongName": "Student Indicator",
         "Chapter": ""
       },
@@ -5380,7 +5380,7 @@
         "Item": "00120",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00006",
+        "Table": "0006",
         "LongName": "Religion",
         "Chapter": "",
         "components": [
@@ -5570,7 +5570,7 @@
         "Item": "00739",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00212",
+        "Table": "0212",
         "LongName": "Nationality",
         "Chapter": "",
         "components": [
@@ -5644,7 +5644,7 @@
         "Item": "00125",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00189",
+        "Table": "0189",
         "LongName": "Ethnic Group",
         "Chapter": "",
         "components": [
@@ -5718,7 +5718,7 @@
         "Item": "00747",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00222",
+        "Table": "0222",
         "LongName": "Contact Reason",
         "Chapter": "",
         "components": [
@@ -6274,7 +6274,7 @@
         "Item": "00752",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00311",
+        "Table": "0311",
         "LongName": "Job Status",
         "Chapter": ""
       },
@@ -6286,7 +6286,7 @@
         "Item": "00113",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00005",
+        "Table": "0005",
         "LongName": "Race",
         "Chapter": "",
         "components": [
@@ -6360,7 +6360,7 @@
         "Item": "00753",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00295",
+        "Table": "0295",
         "LongName": "Handicap",
         "Chapter": ""
       },
@@ -6407,7 +6407,7 @@
         "Item": "00132",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00004",
+        "Table": "0004",
         "LongName": "Patient Class",
         "Chapter": ""
       },
@@ -6555,7 +6555,7 @@
         "Item": "00134",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00007",
+        "Table": "0007",
         "LongName": "Admission Type",
         "Chapter": ""
       },
@@ -6841,7 +6841,7 @@
         "Item": "00137",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00010",
+        "Table": "0010",
         "LongName": "Attending Doctor",
         "Chapter": "",
         "components": [
@@ -7091,7 +7091,7 @@
         "Item": "00138",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00010",
+        "Table": "0010",
         "LongName": "Referring Doctor",
         "Chapter": "",
         "components": [
@@ -7341,7 +7341,7 @@
         "Item": "00139",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00010",
+        "Table": "0010",
         "LongName": "Consulting Doctor",
         "Chapter": "",
         "components": [
@@ -7591,7 +7591,7 @@
         "Item": "00140",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00069",
+        "Table": "0069",
         "LongName": "Hospital Service",
         "Chapter": ""
       },
@@ -7739,7 +7739,7 @@
         "Item": "00142",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00087",
+        "Table": "0087",
         "LongName": "Preadmit Test Indicator",
         "Chapter": ""
       },
@@ -7751,7 +7751,7 @@
         "Item": "00143",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00092",
+        "Table": "0092",
         "LongName": "Re-admission Indicator",
         "Chapter": ""
       },
@@ -7763,7 +7763,7 @@
         "Item": "00144",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00023",
+        "Table": "0023",
         "LongName": "Admit Source",
         "Chapter": ""
       },
@@ -7775,7 +7775,7 @@
         "Item": "00145",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00009",
+        "Table": "0009",
         "LongName": "Ambulatory Status",
         "Chapter": ""
       },
@@ -7787,7 +7787,7 @@
         "Item": "00146",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00099",
+        "Table": "0099",
         "LongName": "VIP Indicator",
         "Chapter": ""
       },
@@ -7799,7 +7799,7 @@
         "Item": "00147",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00010",
+        "Table": "0010",
         "LongName": "Admitting Doctor",
         "Chapter": "",
         "components": [
@@ -8049,7 +8049,7 @@
         "Item": "00148",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00018",
+        "Table": "0018",
         "LongName": "Patient Type",
         "Chapter": ""
       },
@@ -8199,7 +8199,7 @@
         "Item": "00150",
         "Datatype": "FC",
         "Length": "50",
-        "Table": "00064",
+        "Table": "0064",
         "LongName": "Financial Class",
         "Chapter": "",
         "components": [
@@ -8255,7 +8255,7 @@
         "Item": "00151",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00032",
+        "Table": "0032",
         "LongName": "Charge Price Indicator",
         "Chapter": ""
       },
@@ -8267,7 +8267,7 @@
         "Item": "00152",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00045",
+        "Table": "0045",
         "LongName": "Courtesy Code",
         "Chapter": ""
       },
@@ -8279,7 +8279,7 @@
         "Item": "00153",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00046",
+        "Table": "0046",
         "LongName": "Credit Rating",
         "Chapter": ""
       },
@@ -8291,7 +8291,7 @@
         "Item": "00154",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00044",
+        "Table": "0044",
         "LongName": "Contract Code",
         "Chapter": ""
       },
@@ -8339,7 +8339,7 @@
         "Item": "00158",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00073",
+        "Table": "0073",
         "LongName": "Interest Code",
         "Chapter": ""
       },
@@ -8351,7 +8351,7 @@
         "Item": "00159",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00110",
+        "Table": "0110",
         "LongName": "Transfer to Bad Debt Code",
         "Chapter": ""
       },
@@ -8375,7 +8375,7 @@
         "Item": "00161",
         "Datatype": "IS",
         "Length": "10",
-        "Table": "00021",
+        "Table": "0021",
         "LongName": "Bad Debt Agency Code",
         "Chapter": ""
       },
@@ -8411,7 +8411,7 @@
         "Item": "00164",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00111",
+        "Table": "0111",
         "LongName": "Delete Account Indicator",
         "Chapter": ""
       },
@@ -8435,7 +8435,7 @@
         "Item": "00166",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00112",
+        "Table": "0112",
         "LongName": "Discharge Disposition",
         "Chapter": ""
       },
@@ -8447,7 +8447,7 @@
         "Item": "00167",
         "Datatype": "DLD",
         "Length": "25",
-        "Table": "00113",
+        "Table": "0113",
         "LongName": "Discharged to Location",
         "Chapter": "",
         "components": [
@@ -8503,7 +8503,7 @@
         "Item": "00168",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00114",
+        "Table": "0114",
         "LongName": "Diet Type",
         "Chapter": "",
         "components": [
@@ -8577,7 +8577,7 @@
         "Item": "00169",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00115",
+        "Table": "0115",
         "LongName": "Servicing Facility",
         "Chapter": ""
       },
@@ -8589,7 +8589,7 @@
         "Item": "00170",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00116",
+        "Table": "0116",
         "LongName": "Bed Status",
         "Chapter": ""
       },
@@ -8601,7 +8601,7 @@
         "Item": "00171",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00117",
+        "Table": "0117",
         "LongName": "Account Status",
         "Chapter": ""
       },
@@ -9001,7 +9001,7 @@
         "Item": "00180",
         "Datatype": "CX",
         "Length": "20",
-        "Table": "00203",
+        "Table": "0203",
         "LongName": "Alternate Visit ID",
         "Chapter": "",
         "components": [
@@ -9139,7 +9139,7 @@
         "Item": "01226",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00326",
+        "Table": "0326",
         "LongName": "Visit Indicator",
         "Chapter": ""
       },
@@ -9151,7 +9151,7 @@
         "Item": "01274",
         "Datatype": "XCN",
         "Length": "60",
-        "Table": "00010",
+        "Table": "0010",
         "LongName": "Other Healthcare Provider",
         "Chapter": "",
         "components": [
@@ -9548,7 +9548,7 @@
         "Item": "00182",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00129",
+        "Table": "0129",
         "LongName": "Accommodation Code",
         "Chapter": "",
         "components": [
@@ -9794,7 +9794,7 @@
         "Item": "00187",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00130",
+        "Table": "0130",
         "LongName": "Visit User Code",
         "Chapter": ""
       },
@@ -10172,7 +10172,7 @@
         "Item": "00716",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Employment Illness Related Indicator",
         "Chapter": ""
       },
@@ -10184,7 +10184,7 @@
         "Item": "00717",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00213",
+        "Table": "0213",
         "LongName": "Purge Status Code",
         "Chapter": ""
       },
@@ -10208,7 +10208,7 @@
         "Item": "00719",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00214",
+        "Table": "0214",
         "LongName": "Special Program Code",
         "Chapter": ""
       },
@@ -10220,7 +10220,7 @@
         "Item": "00720",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Retention Indicator",
         "Chapter": ""
       },
@@ -10244,7 +10244,7 @@
         "Item": "00722",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00215",
+        "Table": "0215",
         "LongName": "Visit Publicity Code",
         "Chapter": ""
       },
@@ -10256,7 +10256,7 @@
         "Item": "00723",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Visit Protection Indicator",
         "Chapter": ""
       },
@@ -10436,7 +10436,7 @@
         "Item": "00725",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00216",
+        "Table": "0216",
         "LongName": "Patient Status Code",
         "Chapter": ""
       },
@@ -10448,7 +10448,7 @@
         "Item": "00726",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00217",
+        "Table": "0217",
         "LongName": "Visit Priority Code",
         "Chapter": ""
       },
@@ -10472,7 +10472,7 @@
         "Item": "00728",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00112",
+        "Table": "0112",
         "LongName": "Expected Discharge Disposition",
         "Chapter": ""
       },
@@ -10508,7 +10508,7 @@
         "Item": "00731",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00218",
+        "Table": "0218",
         "LongName": "Patient Charge Adjustment Code",
         "Chapter": "",
         "components": [
@@ -10582,7 +10582,7 @@
         "Item": "00732",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00219",
+        "Table": "0219",
         "LongName": "Recurring Service Code",
         "Chapter": ""
       },
@@ -10594,7 +10594,7 @@
         "Item": "00733",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Billing Media Code",
         "Chapter": ""
       },
@@ -10640,7 +10640,7 @@
         "Item": "00735",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Military Partnership Code",
         "Chapter": ""
       },
@@ -10652,7 +10652,7 @@
         "Item": "00736",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Military Non-Availability Code",
         "Chapter": ""
       },
@@ -10664,7 +10664,7 @@
         "Item": "00737",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Newborn Baby Indicator",
         "Chapter": ""
       },
@@ -10676,7 +10676,7 @@
         "Item": "00738",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Baby Detained Indicator",
         "Chapter": ""
       }
@@ -10711,7 +10711,7 @@
         "Item": "01284",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00334",
+        "Table": "0334",
         "LongName": "Disabled Person Code",
         "Chapter": ""
       },
@@ -10861,7 +10861,7 @@
         "Item": "128006",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Disabled Indicator",
         "Chapter": ""
       },
@@ -10944,7 +10944,7 @@
         "Item": "00570",
         "Datatype": "ID",
         "Length": "3",
-        "Table": "00125",
+        "Table": "0125",
         "LongName": "Value Type",
         "Chapter": ""
       },
@@ -11140,7 +11140,7 @@
         "Item": "00576",
         "Datatype": "ID",
         "Length": "5",
-        "Table": "00078",
+        "Table": "0078",
         "LongName": "Abnormal Flags",
         "Chapter": ""
       },
@@ -11164,7 +11164,7 @@
         "Item": "00578",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00080",
+        "Table": "0080",
         "LongName": "Nature of Abnormal Test",
         "Chapter": ""
       },
@@ -11176,7 +11176,7 @@
         "Item": "00579",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00085",
+        "Table": "0085",
         "LongName": "Observation Result Status",
         "Chapter": ""
       },
@@ -11689,7 +11689,7 @@
         "Item": "00204",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00127",
+        "Table": "0127",
         "LongName": "Allergy Type",
         "Chapter": ""
       },
@@ -11775,7 +11775,7 @@
         "Item": "00206",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00128",
+        "Table": "0128",
         "LongName": "Allergy Severity",
         "Chapter": ""
       },
@@ -11834,7 +11834,7 @@
         "Item": "00376",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00053",
+        "Table": "0053",
         "LongName": "Diagnosis Coding Method",
         "Chapter": ""
       },
@@ -11846,7 +11846,7 @@
         "Item": "00377",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00051",
+        "Table": "0051",
         "LongName": "Diagnosis Code - DG1",
         "Chapter": "",
         "components": [
@@ -11966,7 +11966,7 @@
         "Item": "00380",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00052",
+        "Table": "0052",
         "LongName": "Diagnosis Type",
         "Chapter": ""
       },
@@ -11978,7 +11978,7 @@
         "Item": "00381",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00118",
+        "Table": "0118",
         "LongName": "Major Diagnostic Category",
         "Chapter": "",
         "components": [
@@ -12052,7 +12052,7 @@
         "Item": "00382",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00055",
+        "Table": "0055",
         "LongName": "Diagnostic Related Group",
         "Chapter": "",
         "components": [
@@ -12126,7 +12126,7 @@
         "Item": "00383",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "DRG Approval Indicator",
         "Chapter": ""
       },
@@ -12138,7 +12138,7 @@
         "Item": "00384",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00056",
+        "Table": "0056",
         "LongName": "DRG Grouper Review Code",
         "Chapter": ""
       },
@@ -12150,7 +12150,7 @@
         "Item": "00385",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00083",
+        "Table": "0083",
         "LongName": "Outlier Type",
         "Chapter": "",
         "components": [
@@ -12406,7 +12406,7 @@
         "Item": "00389",
         "Datatype": "ID",
         "Length": "2",
-        "Table": "00359",
+        "Table": "0359",
         "LongName": "Diagnosis Priority",
         "Chapter": ""
       },
@@ -12668,7 +12668,7 @@
         "Item": "00766",
         "Datatype": "IS",
         "Length": "3",
-        "Table": "00228",
+        "Table": "0228",
         "LongName": "Diagnosis Classification",
         "Chapter": ""
       },
@@ -12680,7 +12680,7 @@
         "Item": "00767",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Confidential Indicator",
         "Chapter": ""
       },
@@ -12737,7 +12737,7 @@
         "Item": "00382",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00055",
+        "Table": "0055",
         "LongName": "Diagnostic Related Group",
         "Chapter": "",
         "components": [
@@ -12845,7 +12845,7 @@
         "Item": "00383",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "DRG Approval Indicator",
         "Chapter": ""
       },
@@ -12857,7 +12857,7 @@
         "Item": "00384",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00056",
+        "Table": "0056",
         "LongName": "DRG Grouper Review Code",
         "Chapter": ""
       },
@@ -12869,7 +12869,7 @@
         "Item": "00385",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00083",
+        "Table": "0083",
         "LongName": "Outlier Type",
         "Chapter": "",
         "components": [
@@ -13113,7 +13113,7 @@
         "Item": "00770",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00229",
+        "Table": "0229",
         "LongName": "DRG Payor",
         "Chapter": ""
       },
@@ -13283,7 +13283,7 @@
         "Item": "00767",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Confidential Indicator",
         "Chapter": ""
       }
@@ -13326,7 +13326,7 @@
             "Item": "00392",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00089",
+            "Table": "0089",
             "LongName": "Procedure Coding Method",
             "Chapter": ""
           },
@@ -13338,7 +13338,7 @@
             "Item": "00393",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00088",
+            "Table": "0088",
             "LongName": "Procedure Code",
             "Chapter": "",
             "components": [
@@ -13458,7 +13458,7 @@
             "Item": "00396",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00230",
+            "Table": "0230",
             "LongName": "Procedure Functional Type",
             "Chapter": ""
           },
@@ -13482,7 +13482,7 @@
             "Item": "00398",
             "Datatype": "XCN",
             "Length": "120",
-            "Table": "00010",
+            "Table": "0010",
             "LongName": "Anesthesiologist",
             "Chapter": "",
             "components": [
@@ -13732,7 +13732,7 @@
             "Item": "00399",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00019",
+            "Table": "0019",
             "LongName": "Anesthesia Code",
             "Chapter": ""
           },
@@ -13756,7 +13756,7 @@
             "Item": "00401",
             "Datatype": "XCN",
             "Length": "120",
-            "Table": "00010",
+            "Table": "0010",
             "LongName": "Surgeon",
             "Chapter": "",
             "components": [
@@ -14006,7 +14006,7 @@
             "Item": "00402",
             "Datatype": "XCN",
             "Length": "230",
-            "Table": "00010",
+            "Table": "0010",
             "LongName": "Procedure Practitioner",
             "Chapter": "",
             "components": [
@@ -14256,7 +14256,7 @@
             "Item": "00403",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00059",
+            "Table": "0059",
             "LongName": "Consent Code",
             "Chapter": "",
             "components": [
@@ -14342,7 +14342,7 @@
             "Item": "00772",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00051",
+            "Table": "0051",
             "LongName": "Associated Diagnosis Code",
             "Chapter": "",
             "components": [
@@ -14416,7 +14416,7 @@
             "Item": "01316",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00340",
+            "Table": "0340",
             "LongName": "Procedure Code Modifier",
             "Chapter": "",
             "components": [
@@ -14555,7 +14555,7 @@
             "Item": "00816",
             "Datatype": "ID",
             "Length": "2",
-            "Table": "00287",
+            "Table": "0287",
             "LongName": "Action Code",
             "Chapter": ""
           },
@@ -15868,7 +15868,7 @@
         "Item": "00413",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "00001",
+        "Table": "0001",
         "LongName": "Guarantor Sex",
         "Chapter": ""
       },
@@ -15880,7 +15880,7 @@
         "Item": "00414",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00068",
+        "Table": "0068",
         "LongName": "Guarantor Type",
         "Chapter": ""
       },
@@ -15892,7 +15892,7 @@
         "Item": "00415",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00063",
+        "Table": "0063",
         "LongName": "Guarantor Relationship",
         "Chapter": "",
         "components": [
@@ -16496,7 +16496,7 @@
         "Item": "00424",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00066",
+        "Table": "0066",
         "LongName": "Guarantor Employment Status",
         "Chapter": ""
       },
@@ -16676,7 +16676,7 @@
         "Item": "00773",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Guarantor Billing Hold Flag",
         "Chapter": ""
       },
@@ -16688,7 +16688,7 @@
         "Item": "00774",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00341",
+        "Table": "0341",
         "LongName": "Guarantor Credit Rating Code",
         "Chapter": "",
         "components": [
@@ -16796,7 +16796,7 @@
         "Item": "00776",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Guarantor Death Flag",
         "Chapter": ""
       },
@@ -16808,7 +16808,7 @@
         "Item": "00777",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00218",
+        "Table": "0218",
         "LongName": "Guarantor Charge Adjustment Code",
         "Chapter": "",
         "components": [
@@ -17190,7 +17190,7 @@
         "Item": "00781",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00002",
+        "Table": "0002",
         "LongName": "Guarantor Marital Status Code",
         "Chapter": "",
         "components": [
@@ -17288,7 +17288,7 @@
         "Item": "00755",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00223",
+        "Table": "0223",
         "LongName": "Living Dependency",
         "Chapter": ""
       },
@@ -17300,7 +17300,7 @@
         "Item": "00145",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00009",
+        "Table": "0009",
         "LongName": "Ambulatory Status",
         "Chapter": ""
       },
@@ -17312,7 +17312,7 @@
         "Item": "00129",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00171",
+        "Table": "0171",
         "LongName": "Citizenship",
         "Chapter": "",
         "components": [
@@ -17386,7 +17386,7 @@
         "Item": "00118",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00296",
+        "Table": "0296",
         "LongName": "Primary Language",
         "Chapter": "",
         "components": [
@@ -17460,7 +17460,7 @@
         "Item": "00742",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00220",
+        "Table": "0220",
         "LongName": "Living Arrangement",
         "Chapter": ""
       },
@@ -17472,7 +17472,7 @@
         "Item": "00743",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00215",
+        "Table": "0215",
         "LongName": "Publicity Code",
         "Chapter": "",
         "components": [
@@ -17546,7 +17546,7 @@
         "Item": "00744",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Protection Indicator",
         "Chapter": ""
       },
@@ -17558,7 +17558,7 @@
         "Item": "00745",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00231",
+        "Table": "0231",
         "LongName": "Student Indicator",
         "Chapter": ""
       },
@@ -17570,7 +17570,7 @@
         "Item": "00120",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00006",
+        "Table": "0006",
         "LongName": "Religion",
         "Chapter": "",
         "components": [
@@ -17760,7 +17760,7 @@
         "Item": "00739",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00212",
+        "Table": "0212",
         "LongName": "Nationality",
         "Chapter": "",
         "components": [
@@ -17834,7 +17834,7 @@
         "Item": "00125",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00189",
+        "Table": "0189",
         "LongName": "Ethnic Group",
         "Chapter": "",
         "components": [
@@ -18128,7 +18128,7 @@
         "Item": "00747",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00222",
+        "Table": "0222",
         "LongName": "Contact Reason",
         "Chapter": "",
         "components": [
@@ -18202,7 +18202,7 @@
         "Item": "00784",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00063",
+        "Table": "0063",
         "LongName": "Contact Relationship",
         "Chapter": ""
       },
@@ -18226,7 +18226,7 @@
         "Item": "00786",
         "Datatype": "JCC",
         "Length": "20",
-        "Table": "00327",
+        "Table": "0327",
         "LongName": "Job Code\/Class",
         "Chapter": "",
         "components": [
@@ -18428,7 +18428,7 @@
         "Item": "00753",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00295",
+        "Table": "0295",
         "LongName": "Handicap",
         "Chapter": ""
       },
@@ -18440,7 +18440,7 @@
         "Item": "00752",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00311",
+        "Table": "0311",
         "LongName": "Job Status",
         "Chapter": ""
       },
@@ -18452,7 +18452,7 @@
         "Item": "01231",
         "Datatype": "FC",
         "Length": "50",
-        "Table": "00064",
+        "Table": "0064",
         "LongName": "Guarantor Financial Class",
         "Chapter": "",
         "components": [
@@ -18508,7 +18508,7 @@
         "Item": "01291",
         "Datatype": "CE",
         "Length": "80",
-        "Table": "00005",
+        "Table": "0005",
         "LongName": "Guarantor Race",
         "Chapter": "",
         "components": [
@@ -18613,7 +18613,7 @@
             "Item": "00368",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00072",
+            "Table": "0072",
             "LongName": "Insurance Plan ID",
             "Chapter": "",
             "components": [
@@ -19913,7 +19913,7 @@
             "Item": "00440",
             "Datatype": "IS",
             "Length": "3",
-            "Table": "00086",
+            "Table": "0086",
             "LongName": "Plan Type",
             "Chapter": ""
           },
@@ -20041,7 +20041,7 @@
             "Item": "00442",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00063",
+            "Table": "0063",
             "LongName": "Insured\u2019s Relationship To Patient",
             "Chapter": "",
             "components": [
@@ -20273,7 +20273,7 @@
             "Item": "00445",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00135",
+            "Table": "0135",
             "LongName": "Assignment Of Benefits",
             "Chapter": ""
           },
@@ -20285,7 +20285,7 @@
             "Item": "00446",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00173",
+            "Table": "0173",
             "LongName": "Coordination Of Benefits",
             "Chapter": ""
           },
@@ -20309,7 +20309,7 @@
             "Item": "00448",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Notice Of Admission Flag",
             "Chapter": ""
           },
@@ -20333,7 +20333,7 @@
             "Item": "00450",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Report Of Eligibility Flag",
             "Chapter": ""
           },
@@ -20357,7 +20357,7 @@
             "Item": "00452",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00093",
+            "Table": "0093",
             "LongName": "Release Information Code",
             "Chapter": ""
           },
@@ -20665,7 +20665,7 @@
             "Item": "00456",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00098",
+            "Table": "0098",
             "LongName": "Type Of Agreement Code",
             "Chapter": ""
           },
@@ -20677,7 +20677,7 @@
             "Item": "00457",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00022",
+            "Table": "0022",
             "LongName": "Billing Status",
             "Chapter": ""
           },
@@ -20713,7 +20713,7 @@
             "Item": "00460",
             "Datatype": "IS",
             "Length": "8",
-            "Table": "00042",
+            "Table": "0042",
             "LongName": "Company Plan Code",
             "Chapter": ""
           },
@@ -21381,7 +21381,7 @@
             "Item": "00467",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00066",
+            "Table": "0066",
             "LongName": "Insured\u2019s Employment Status",
             "Chapter": "",
             "components": [
@@ -21455,7 +21455,7 @@
             "Item": "00468",
             "Datatype": "IS",
             "Length": "1",
-            "Table": "00001",
+            "Table": "0001",
             "LongName": "Insured\u2019s Sex",
             "Chapter": ""
           },
@@ -21603,7 +21603,7 @@
             "Item": "00471",
             "Datatype": "IS",
             "Length": "8",
-            "Table": "00072",
+            "Table": "0072",
             "LongName": "Prior Insurance Plan ID",
             "Chapter": ""
           },
@@ -21615,7 +21615,7 @@
             "Item": "01227",
             "Datatype": "IS",
             "Length": "3",
-            "Table": "00309",
+            "Table": "0309",
             "LongName": "Coverage Type",
             "Chapter": ""
           },
@@ -21627,7 +21627,7 @@
             "Item": "00753",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00295",
+            "Table": "0295",
             "LongName": "Handicap",
             "Chapter": ""
           },
@@ -22188,7 +22188,7 @@
             "Item": "00475",
             "Datatype": "IS",
             "Length": "1",
-            "Table": "00139",
+            "Table": "0139",
             "LongName": "Employer Information Data",
             "Chapter": ""
           },
@@ -22200,7 +22200,7 @@
             "Item": "00476",
             "Datatype": "IS",
             "Length": "1",
-            "Table": "00137",
+            "Table": "0137",
             "LongName": "Mail Claim Party",
             "Chapter": ""
           },
@@ -22480,7 +22480,7 @@
             "Item": "00482",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00342",
+            "Table": "0342",
             "LongName": "Dependent Of Military Recipient",
             "Chapter": "",
             "components": [
@@ -22578,7 +22578,7 @@
             "Item": "00485",
             "Datatype": "IS",
             "Length": "14",
-            "Table": "00140",
+            "Table": "0140",
             "LongName": "Military Service",
             "Chapter": ""
           },
@@ -22590,7 +22590,7 @@
             "Item": "00486",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00141",
+            "Table": "0141",
             "LongName": "Military Rank\/Grade",
             "Chapter": ""
           },
@@ -22602,7 +22602,7 @@
             "Item": "00487",
             "Datatype": "IS",
             "Length": "3",
-            "Table": "00142",
+            "Table": "0142",
             "LongName": "Military Status",
             "Chapter": ""
           },
@@ -22626,7 +22626,7 @@
             "Item": "00489",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Military Non-Avail Cert On File",
             "Chapter": ""
           },
@@ -22638,7 +22638,7 @@
             "Item": "00490",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Baby Coverage",
             "Chapter": ""
           },
@@ -22650,7 +22650,7 @@
             "Item": "00491",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Combine Baby Bill",
             "Chapter": ""
           },
@@ -22802,7 +22802,7 @@
             "Item": "00495",
             "Datatype": "IS",
             "Length": "8",
-            "Table": "00143",
+            "Table": "0143",
             "LongName": "Non-Covered Insurance Code",
             "Chapter": ""
           },
@@ -23090,7 +23090,7 @@
             "Item": "00498",
             "Datatype": "IS",
             "Length": "1",
-            "Table": "00144",
+            "Table": "0144",
             "LongName": "Eligibility Source",
             "Chapter": ""
           },
@@ -23102,7 +23102,7 @@
             "Item": "00499",
             "Datatype": "RMC",
             "Length": "25",
-            "Table": "00145",
+            "Table": "0145",
             "LongName": "Room Coverage Type\/Amount",
             "Chapter": "",
             "components": [
@@ -23146,7 +23146,7 @@
             "Item": "00500",
             "Datatype": "PTA",
             "Length": "25",
-            "Table": "00147",
+            "Table": "0147",
             "LongName": "Policy Type\/Amount",
             "Chapter": "",
             "components": [
@@ -23234,7 +23234,7 @@
             "Item": "00755",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00223",
+            "Table": "0223",
             "LongName": "Living Dependency",
             "Chapter": ""
           },
@@ -23246,7 +23246,7 @@
             "Item": "00145",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00009",
+            "Table": "0009",
             "LongName": "Ambulatory Status",
             "Chapter": ""
           },
@@ -23258,7 +23258,7 @@
             "Item": "00129",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00171",
+            "Table": "0171",
             "LongName": "Citizenship",
             "Chapter": "",
             "components": [
@@ -23332,7 +23332,7 @@
             "Item": "00118",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00296",
+            "Table": "0296",
             "LongName": "Primary Language",
             "Chapter": "",
             "components": [
@@ -23406,7 +23406,7 @@
             "Item": "00742",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00220",
+            "Table": "0220",
             "LongName": "Living Arrangement",
             "Chapter": ""
           },
@@ -23418,7 +23418,7 @@
             "Item": "00743",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00215",
+            "Table": "0215",
             "LongName": "Publicity Code",
             "Chapter": "",
             "components": [
@@ -23492,7 +23492,7 @@
             "Item": "00744",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Protection Indicator",
             "Chapter": ""
           },
@@ -23504,7 +23504,7 @@
             "Item": "00745",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00231",
+            "Table": "0231",
             "LongName": "Student Indicator",
             "Chapter": ""
           },
@@ -23516,7 +23516,7 @@
             "Item": "00120",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00006",
+            "Table": "0006",
             "LongName": "Religion",
             "Chapter": "",
             "components": [
@@ -23706,7 +23706,7 @@
             "Item": "00739",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00212",
+            "Table": "0212",
             "LongName": "Nationality",
             "Chapter": "",
             "components": [
@@ -23780,7 +23780,7 @@
             "Item": "00125",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00189",
+            "Table": "0189",
             "LongName": "Ethnic Group",
             "Chapter": "",
             "components": [
@@ -23854,7 +23854,7 @@
             "Item": "00119",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00002",
+            "Table": "0002",
             "LongName": "Marital Status",
             "Chapter": "",
             "components": [
@@ -23964,7 +23964,7 @@
             "Item": "00786",
             "Datatype": "JCC",
             "Length": "20",
-            "Table": "00327",
+            "Table": "0327",
             "LongName": "Job Code\/Class",
             "Chapter": "",
             "components": [
@@ -23998,7 +23998,7 @@
             "Item": "00752",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00311",
+            "Table": "0311",
             "LongName": "Job Status",
             "Chapter": ""
           },
@@ -24230,7 +24230,7 @@
             "Item": "00791",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00222",
+            "Table": "0222",
             "LongName": "Employer Contact Reason",
             "Chapter": ""
           },
@@ -24462,7 +24462,7 @@
             "Item": "00794",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00222",
+            "Table": "0222",
             "LongName": "Insured\u2019s Contact Person Reason",
             "Chapter": ""
           },
@@ -24498,7 +24498,7 @@
             "Item": "00797",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00232",
+            "Table": "0232",
             "LongName": "Insurance Co. Contact Reason",
             "Chapter": ""
           },
@@ -24614,7 +24614,7 @@
             "Item": "00799",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00312",
+            "Table": "0312",
             "LongName": "Policy Scope",
             "Chapter": ""
           },
@@ -24626,7 +24626,7 @@
             "Item": "00800",
             "Datatype": "IS",
             "Length": "2",
-            "Table": "00313",
+            "Table": "0313",
             "LongName": "Policy Source",
             "Chapter": ""
           },
@@ -24776,7 +24776,7 @@
             "Item": "00802",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00063",
+            "Table": "0063",
             "LongName": "Guarantor\u2019s Relationship To Insured",
             "Chapter": "",
             "components": [
@@ -25058,7 +25058,7 @@
             "Item": "00805",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00343",
+            "Table": "0343",
             "LongName": "Military Handicapped Program",
             "Chapter": "",
             "components": [
@@ -25132,7 +25132,7 @@
             "Item": "00806",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Suspend Flag",
             "Chapter": ""
           },
@@ -25144,7 +25144,7 @@
             "Item": "00807",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Copay Limit Flag",
             "Chapter": ""
           },
@@ -25156,7 +25156,7 @@
             "Item": "00808",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Stoploss Limit Flag",
             "Chapter": ""
           },
@@ -25504,7 +25504,7 @@
             "Item": "00113",
             "Datatype": "CE",
             "Length": "80",
-            "Table": "00005",
+            "Table": "0005",
             "LongName": "Race",
             "Chapter": "",
             "components": [
@@ -25578,7 +25578,7 @@
             "Item": "00811",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00344",
+            "Table": "0344",
             "LongName": "HCFA Patient\u2019s Relationship to Insured",
             "Chapter": "",
             "components": [
@@ -26063,7 +26063,7 @@
             "Item": "00505",
             "Datatype": "ID",
             "Length": "1",
-            "Table": "00136",
+            "Table": "0136",
             "LongName": "Certification Required",
             "Chapter": ""
           },
@@ -26075,7 +26075,7 @@
             "Item": "00506",
             "Datatype": "MOP",
             "Length": "10",
-            "Table": "00148",
+            "Table": "0148",
             "LongName": "Penalty",
             "Chapter": "",
             "components": [
@@ -26451,7 +26451,7 @@
             "Item": "00512",
             "Datatype": "DTN",
             "Length": "3",
-            "Table": "00149",
+            "Table": "0149",
             "LongName": "Days",
             "Chapter": "",
             "components": [
@@ -26485,7 +26485,7 @@
             "Item": "00513",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00233",
+            "Table": "0233",
             "LongName": "Non-Concur Code\/Description",
             "Chapter": "",
             "components": [
@@ -26593,7 +26593,7 @@
             "Item": "00515",
             "Datatype": "XCN",
             "Length": "60",
-            "Table": "00010",
+            "Table": "0010",
             "LongName": "Physician Reviewer",
             "Chapter": "",
             "components": [
@@ -26959,7 +26959,7 @@
             "Item": "00518",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00345",
+            "Table": "0345",
             "LongName": "Appeal Reason",
             "Chapter": "",
             "components": [
@@ -27033,7 +27033,7 @@
             "Item": "00519",
             "Datatype": "CE",
             "Length": "60",
-            "Table": "00346",
+            "Table": "0346",
             "LongName": "Certification Agency",
             "Chapter": "",
             "components": [
@@ -27211,7 +27211,7 @@
             "Item": "00521",
             "Datatype": "PCF",
             "Length": "40",
-            "Table": "00150",
+            "Table": "0150",
             "LongName": "Pre-Certification Req\/Window",
             "Chapter": "",
             "components": [
@@ -27301,7 +27301,7 @@
             "Item": "00524",
             "Datatype": "IS",
             "Length": "1",
-            "Table": "00151",
+            "Table": "0151",
             "LongName": "Second Opinion Status",
             "Chapter": ""
           },
@@ -27313,7 +27313,7 @@
             "Item": "00525",
             "Datatype": "IS",
             "Length": "1",
-            "Table": "00152",
+            "Table": "0152",
             "LongName": "Second Opinion Documentation Received",
             "Chapter": ""
           },
@@ -27325,7 +27325,7 @@
             "Item": "00526",
             "Datatype": "XCN",
             "Length": "60",
-            "Table": "00010",
+            "Table": "0010",
             "LongName": "Second Opinion Physician",
             "Chapter": "",
             "components": [
@@ -27622,7 +27622,7 @@
         "Item": "00528",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00050",
+        "Table": "0050",
         "LongName": "Accident Code",
         "Chapter": "",
         "components": [
@@ -27708,7 +27708,7 @@
         "Item": "00812",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00347",
+        "Table": "0347",
         "LongName": "Auto Accident State",
         "Chapter": "",
         "components": [
@@ -27782,7 +27782,7 @@
         "Item": "00813",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Accident Job Related Indicator",
         "Chapter": ""
       },
@@ -27794,7 +27794,7 @@
         "Item": "00814",
         "Datatype": "ID",
         "Length": "12",
-        "Table": "00136",
+        "Table": "0136",
         "LongName": "Accident Death Indicator",
         "Chapter": ""
       }
@@ -27889,7 +27889,7 @@
         "Item": "00536",
         "Datatype": "IS",
         "Length": "14",
-        "Table": "00043",
+        "Table": "0043",
         "LongName": "Condition Code (35-39)",
         "Chapter": ""
       },
@@ -27925,7 +27925,7 @@
         "Item": "00539",
         "Datatype": "UVC",
         "Length": "12",
-        "Table": "00153",
+        "Table": "0153",
         "LongName": "Value Amount & Code (46-49)",
         "Chapter": "",
         "components": [
@@ -27971,7 +27971,7 @@
         "Item": "00541",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00348",
+        "Table": "0348",
         "LongName": "Special Program Indicator (44)",
         "Chapter": "",
         "components": [
@@ -28045,7 +28045,7 @@
         "Item": "00542",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00349",
+        "Table": "0349",
         "LongName": "PSRO\/UR Approval Indicator (87)",
         "Chapter": "",
         "components": [
@@ -28143,7 +28143,7 @@
         "Item": "00545",
         "Datatype": "OCD",
         "Length": "20",
-        "Table": "00350",
+        "Table": "0350",
         "LongName": "Occurrence (28-32)",
         "Chapter": "",
         "components": [
@@ -28177,7 +28177,7 @@
         "Item": "00546",
         "Datatype": "CE",
         "Length": "60",
-        "Table": "00351",
+        "Table": "0351",
         "LongName": "Occurrence Span (33)",
         "Chapter": "",
         "components": [
@@ -28358,7 +28358,7 @@
         "Item": "00555",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "00043",
+        "Table": "0043",
         "LongName": "Condition Code (24-30)",
         "Chapter": ""
       },
@@ -28394,7 +28394,7 @@
         "Item": "00558",
         "Datatype": "UVC",
         "Length": "11",
-        "Table": "00153",
+        "Table": "0153",
         "LongName": "Value Amount & Code",
         "Chapter": "",
         "components": [
@@ -28428,7 +28428,7 @@
         "Item": "00559",
         "Datatype": "OCD",
         "Length": "11",
-        "Table": "00350",
+        "Table": "0350",
         "LongName": "Occurrence Code & Date (32-35)",
         "Chapter": "",
         "components": [
@@ -28462,7 +28462,7 @@
         "Item": "00560",
         "Datatype": "OSP",
         "Length": "28",
-        "Table": "00351",
+        "Table": "0351",
         "LongName": "Occurrence Span Code\/Dates (36)",
         "Chapter": "",
         "components": [
