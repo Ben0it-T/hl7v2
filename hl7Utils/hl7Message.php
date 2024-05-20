@@ -8,7 +8,7 @@ namespace HL7;
  * 
  */
 class Message {
-    
+
     public  bool   $debug;
     public  array  $logs;
     public  string $parseMessageError;
@@ -279,7 +279,7 @@ class Message {
                     "elementComments" => $elementComments,
                 );
                 break;
-            
+
             default:
                 break;
         }
@@ -298,7 +298,7 @@ class Message {
      * Note: msgParse[segmentLocation][segmentName][field][repeat][component][subcomponent]
      * 
      * @param string $msgStr the HL7 message string
-     * @return bool  Returns false if ctrl string is not valid or if profile/hl7tables not found 
+     * @return bool  Returns false if ctrl string is not valid or if profile/hl7tables not found
      */
     public function parseMessage($msgStr = '') {
         if (empty($msgStr)) {
@@ -338,7 +338,7 @@ class Message {
 
         // Split message to segments
         $segments = preg_split("/[\n\r" . $this->segmentSeparator . ']/', $msgStr, -1, PREG_SPLIT_NO_EMPTY);
-        
+
         // Read the fisrt segment (MSH) and get 'Message Type' (MSH-9) and 'Version ID' (MSH-12)
         $MSH = preg_split("/\\" . $this->fieldSeparator .'/', $segments[0]);
         // message type (MSH-9)
@@ -384,7 +384,7 @@ class Message {
                 // foreach field repeat
                 foreach ($fieldRepeats as $rep => $fieldRepeat) {
                     $currentSegment[$n][$rep] = array();
-                    
+
                     // get components
                     $components = preg_split("/\\".$this->componentSeparator."/", $fieldRepeat, -1);
                     if ($components === false || ($segmentName === "MSH" && $i === 1)) {
@@ -406,7 +406,7 @@ class Message {
                             $currentSegment[$n][$rep][$j+1][$k+1] = $subcomponents[$k];
                         }
                     }
-                }   
+                }
             }
 
             // Push segment to msgParse
@@ -441,13 +441,13 @@ class Message {
                 $segmentStr = $this->msgParseSegmentLocationToString($segmentLocation);
                 $messageStr .= $segmentStr . "\r\n"; // CRLF
             }
-        }        
+        }
         return $messageStr;
     }
 
     /**
      * Return msgParse segmentLocation to string
-     *   
+     * 
      * @param array $segmentLocation
      * @return string
      */
@@ -799,7 +799,7 @@ class Message {
         // Get not defined segment and not present segment
         $this->notDefinedSegment = array_diff($this->messageSegmentNames, $this->profileSegmentNames);
         $this->notPresentSegment = array_diff($this->profileSegmentNames, $this->messageSegmentNames);
-        
+
         $this->addLogs("--- Segment names ---");
         $this->addLogs("Segment names in profile: " . implode(", ", $this->profileSegmentNames));
         $this->addLogs("Segment names in message: " . implode(", ", $this->messageSegmentNames));
@@ -897,7 +897,7 @@ class Message {
             $groupError = true;
             $groupComments .= $checkGroupUsageDesc . " ";
         }
-        
+
         // check group Cardinality
         list($checkGroupCardinalityResult, $checkGroupCardinalityType, $checkGroupCardinalityDesc) = $this->checkCardinality($groupDef["Min"], $groupDef["Max"], $groupReps, $isGroupExists, $groupDef["Usage"], "Group", "'".$groupDef["Name"]."'");
         if (!$checkGroupCardinalityResult) {
@@ -988,7 +988,7 @@ class Message {
                     if ($groupDef["segments"][$j]["Name"] === $segmentName) {
                         // Profile segment name matches parseMsg segment name
                         $this->addLogs("-Segment- >> Profile segment found. Validate '$segmentName' segment. Move on");
-                        
+
                         $segmentComments = "";
                         $segmentError = false;
                         $segmentReps = 1;
@@ -996,7 +996,7 @@ class Message {
                         if ($j > 0) {
                             $segmentReps = $this->getMsgParseSegmentReps($segmentName, $this->segmentLocation);
                         }
-                        
+
                         // check segment Usage
                         list($checkSegmentUsageResult, $checkSegmentUsageType, $checkSegmentUsageDesc) = $this->checkUsage($groupDef["segments"][$j]["Usage"], true, "Segment", "'".$groupDef["segments"][$j]["Name"]."'");
 
@@ -1004,7 +1004,7 @@ class Message {
                             $segmentError = true;
                             $segmentComments .= $checkSegmentUsageDesc . " ";
                         }
-                        
+
                         // check segment Cardinality
                         list($checkSegmentCardinalityResult, $checkSegmentCardinalityType, $checkSegmentCardinalityDesc) = $this->checkCardinality($groupDef["segments"][$j]["Min"], $groupDef["segments"][$j]["Max"], $segmentReps, true, $groupDef["segments"][$j]["Usage"], "Segment", "'".$groupDef["segments"][$j]["Name"]."'");
                         if (!$checkSegmentCardinalityResult) {
@@ -1015,7 +1015,7 @@ class Message {
                         $this->addTestReport($this->messageStructID, $checkSegmentUsageDesc, $checkSegmentUsageType, $checkSegmentUsageResult);
                         $this->addTestReport($this->messageStructID, $checkSegmentCardinalityDesc, $checkSegmentCardinalityType, $checkSegmentCardinalityResult);
                         $this->addValidationReport("Segment", "", $groupDef["segments"][$j]["Name"], $groupDef["segments"][$j]["LongName"], $groupDef["segments"][$j]["Usage"], "[" . $groupDef["segments"][$j]["Min"] . ".." . $groupDef["segments"][$j]["Max"] . "]", "", "", "", "", "", "", "", "", true, $segmentError, $segmentReps, trim($segmentComments));
-                        
+
                         for ($cnt = 0; $cnt < $segmentReps; $cnt++) {
                             $segmentArray = $this->validateSegment($groupDef["segments"][$j]);
                             $segmentArray["hasError"] = $segmentError;
@@ -1029,7 +1029,7 @@ class Message {
                     } else {
                         $this->addLogs("-Segment- >> Profile segment not found.");
                         $segmentError = false;
-                        $segmentComments = "";                        
+                        $segmentComments = "";
                         // check segment Usage
                         list($checkSegmentUsageResult, $checkSegmentUsageType, $checkSegmentUsageDesc) = $this->checkUsage($groupDef["segments"][$j]["Usage"], false, "Segment", "'".$groupDef["segments"][$j]["Name"]."'");
                         if (!$checkSegmentUsageResult) {
@@ -1042,7 +1042,6 @@ class Message {
                             $segmentError = true;
                         }
                         $segmentComments .= $checkSegmentCardinalityDesc . " ";
-
 
                         if (in_array($groupDef["segments"][$j]["Name"], $this->notPresentSegment)) {
                             // Case 1: profile segment name is not present in parseMsg
@@ -1070,7 +1069,7 @@ class Message {
                             $this->addLogs("-Segment- >> message '$segmentName' segment exists in profile but is not expected here (Case 3).");
                             $nextSegmentsOfTheGroup = array_slice($segmentsInGroup,$j+1);
                             $this->addLogs("-Segment- >> nextSegmentsOfTheGroup: " . (implode(", ", $nextSegmentsOfTheGroup)));
-                            
+
                             if (in_array($segmentName, $nextSegmentsOfTheGroup)) {
                                 // a. message segment name appears later in the group. Move on.
                                 $case = "appearsLater";
@@ -1150,7 +1149,7 @@ class Message {
     /**
      * Validate Segment
      * 
-     * @param  array $segmentDef  
+     * @param  array $segmentDef
      * @return array $segmentArray
      */
     private function validateSegment($segmentDef) {
@@ -1158,7 +1157,7 @@ class Message {
         $this->segmentName = $segmentDef["Name"];
         $this->fieldLocation=0;
         $this->addLogs("-Segment- Validate segment '" . $segmentDef["Name"] . "'");
-        
+
         // Create segment structure
         $segmentArray = array(
             "Type" => $segmentDef["Type"],
@@ -1231,7 +1230,7 @@ class Message {
             $fieldError = true;
         }
         $fieldComments .= $checkCardinalityDesc . " ";
-        
+
         $this->addTestReport($currentLocation, $checkUsageDesc, $checkUsageType, $checkUsageResult);
         $this->addTestReport($currentLocation, $checkCardinalityDesc, $checkCardinalityType, $checkCardinalityResult);
 
@@ -1370,7 +1369,7 @@ class Message {
             $componentComments .= $checkUsageDesc . " ";
         }
         $this->addTestReport($currentLocation, $checkUsageDesc, $checkUsageType, $checkUsageResult);
-        
+
         if ($componentExists) {
             $componentValue = $this->msgParseComponentToString($this->msgParse[$this->segmentLocation][$this->segmentName][$this->fieldLocation][$this->fieldrepeat][$this->componentLocation]);
             // check length
@@ -1783,7 +1782,7 @@ class Message {
         if (count($segmentDef) == 0) {
             $segmentDef = $this->findProfileSegmentDef($segmentName, $this->profile);
         }
-        
+
         if (count($segmentDef) > 0) {
             $segmentArray = $this->validateSegment($segmentDef);
             $segmentArray["hasError"] = true;
@@ -1917,7 +1916,7 @@ class Message {
         }
         return $groupStr;
     }
-    
+
     public function msgDataSegmentToString($segment) {
         $segmentName = $segment["Name"];
         $segmentStr = $segmentName . $this->fieldSeparator;
