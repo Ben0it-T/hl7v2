@@ -7819,7 +7819,7 @@
                 "description": "Initial load"
             },
             {
-                "code": "Notpresent",
+                "code": "Not present",
                 "description": "Not present (the default, meaning current  processing)"
             },
             {
@@ -11809,7 +11809,7 @@
                 "description": "Cibus Matutinus (breakfast)"
             },
             {
-                "code": "MealRelatedTimings",
+                "code": "Meal Related Timings",
                 "description": "<timing>C (_cum_)<meal>"
             },
             {
