@@ -25,6 +25,7 @@ class Message {
     public  string $messageType; // message type code (MSH-9.1)
     public  string $messageTriggerEvent; // trigger event code (MSH-9.2)
     public  string $messageStructID; // abstract message structure code (MSH-9.3)
+    public  string $messageVersionID; // message version ID (MSH-12.1)
     private array  $messageSegmentNames; // list of segment names
     private array  $notDefinedSegment; // list of not defined segment names
     private array  $notPresentSegment; // list of not present segment names
@@ -65,6 +66,7 @@ class Message {
         $this->messageType = "";
         $this->messageTriggerEvent = "";
         $this->messageStructID = "";
+        $this->messageVersionID = "";
         $this->messageSegmentNames = array();
         $this->notDefinedSegment = array();
         $this->notPresentSegment = array();
@@ -339,6 +341,7 @@ class Message {
         
         // Read the fisrt segment (MSH) and get 'Message Type' (MSH-9) and 'Version ID' (MSH-12)
         $MSH = preg_split("/\\" . $this->fieldSeparator .'/', $segments[0]);
+        // message type (MSH-9)
         $messageType = preg_split("/\\".$this->componentSeparator."/", $MSH[8], -1);
         $this->messageType = (isset($messageType[0]) ? $messageType[0] : "");
         $this->messageTriggerEvent = (isset($messageType[1]) ? $messageType[1] : "");
@@ -346,7 +349,9 @@ class Message {
         if ($this->messageType == "ACK") {
             $this->messageTriggerEvent = $this->messageStructID = $this->messageType;
         }
-        $this->messageVersionID = $MSH[11];
+        // message version ID (MSH-12)
+        $messageVersionID = preg_split("/\\".$this->componentSeparator."/", $MSH[11], -1);
+        $this->messageVersionID = (isset($messageVersionID[0]) ? $messageVersionID[0] : "");
 
         // Simply (naively) convert the HL7 message into a simple array: msgParse[segmentLocation][segmentName][field][repeat][component][subcomponent]
         // foreach segment
