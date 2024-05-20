@@ -1253,12 +1253,14 @@ class Message {
 
                 // check table
                 if ($fieldDef["Table"] !== "" && isset($this->hl7tables[$fieldDef["Table"]]) ) {
-                    list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($fieldDef["Table"], $fieldValue, "Field", "'".$fieldDef["LongName"]."'");
-                    $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
-                    if (!$checkHL7tableResult) {
-                        $fieldError = true;
+                    if (!empty($this->hl7tables[$fieldDef["Table"]]["elements"])) {
+                        list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($fieldDef["Table"], $fieldValue, "Field", "'".$fieldDef["LongName"]."'");
+                        $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
+                        if (!$checkHL7tableResult) {
+                            $fieldError = true;
+                        }
+                        $fieldRepeatComments .= $checkHL7tableDesc . " ";
                     }
-                    $fieldRepeatComments .= $checkHL7tableDesc . " ";
                 }
 
                 $this->addValidationReport("Field", $currentLocation, $fieldDef["Name"] . ( ($fieldReps > 1) ? " (Rep. " . ($repeat+1) . ")" : ""), $fieldDef["LongName"], $fieldDef["Usage"], "[". $fieldDef["Min"] . ".." . $fieldDef["Max"] . "]", $fieldDef["Datatype"], $fieldDef["Length"], "", $fieldDef["Item"], $fieldDef["Table"], $fieldDef["Chapter"], "", $fieldValue, $fieldExists, $fieldError, $fieldReps, trim($fieldRepeatComments));
@@ -1383,12 +1385,14 @@ class Message {
 
             // check table
             if ($componentDef["Table"] !== "" && isset($this->hl7tables[$componentDef["Table"]])) {
-                list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($componentDef["Table"], $componentValue, "Component", "'".$componentDef["LongName"] . "' (" . $componentDef["Name"] . ")");
-                $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
-                if (!$checkHL7tableResult) {
-                    $componentError = true;
+                if (!empty($this->hl7tables[$componentDef["Table"]]["elements"])) {
+                    list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($componentDef["Table"], $componentValue, "Component", "'".$componentDef["LongName"] . "' (" . $componentDef["Name"] . ")");
+                    $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
+                    if (!$checkHL7tableResult) {
+                        $componentError = true;
+                    }
+                    $componentComments .= $checkHL7tableDesc . " ";
                 }
-                $componentComments .= $checkHL7tableDesc . " ";
             }
         }
 
@@ -1511,12 +1515,14 @@ class Message {
 
             // check table
             if ($subComponentDef["Table"] !== "" && isset($this->hl7tables[$subComponentDef["Table"]])) {
-                list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($subComponentDef["Table"], $subcomponentValue, "SubComponent", "'".$subComponentDef["LongName"] . "' (" . $subComponentDef["Name"] . ")");
-                $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
-                if (!$checkHL7tableResult) {
-                    $subcomponentError = true;
+                if (!empty($this->hl7tables[$subComponentDef["Table"]]["elements"])) {
+                    list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($subComponentDef["Table"], $subcomponentValue, "SubComponent", "'".$subComponentDef["LongName"] . "' (" . $subComponentDef["Name"] . ")");
+                    $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
+                    if (!$checkHL7tableResult) {
+                        $subcomponentError = true;
+                    }
+                    $subcomponentComments .= $checkHL7tableDesc . " ";
                 }
-                $subcomponentComments .= $checkHL7tableDesc . " ";
             }
             // subcomponent
             $subComponentArray = array(
