@@ -2310,7 +2310,7 @@
       },
       {
         "Name": "PID.8",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00111",
@@ -2656,7 +2656,7 @@
       },
       {
         "Name": "PID.11",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00114",

@@ -2,7 +2,7 @@
     "ABS.1": {
         "Item": "1514",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Discharge Care Provider",
         "maxLength": "250",
         "Chapter": "6"
@@ -10,7 +10,7 @@
     "ABS.10": {
         "Item": "1523",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Caesarian Section Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -18,7 +18,7 @@
     "ABS.11": {
         "Item": "1524",
         "Type": "CE",
-        "Table": "HL700424",
+        "Table": "HL70424",
         "LongName": "Gestation Category Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -34,7 +34,7 @@
     "ABS.13": {
         "Item": "1526",
         "Type": "CE",
-        "Table": "HL700425",
+        "Table": "HL70425",
         "LongName": "Newborn Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -42,7 +42,7 @@
     "ABS.14": {
         "Item": "1527",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Stillborn Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -50,7 +50,7 @@
     "ABS.2": {
         "Item": "1515",
         "Type": "CE",
-        "Table": "HL700069",
+        "Table": "HL70069",
         "LongName": "Transfer Medical Service Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -58,7 +58,7 @@
     "ABS.3": {
         "Item": "1516",
         "Type": "CE",
-        "Table": "HL700421",
+        "Table": "HL70421",
         "LongName": "Severity of Illness Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -82,7 +82,7 @@
     "ABS.6": {
         "Item": "1519",
         "Type": "CE",
-        "Table": "HL700422",
+        "Table": "HL70422",
         "LongName": "Triage Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -106,7 +106,7 @@
     "ABS.9": {
         "Item": "1522",
         "Type": "CE",
-        "Table": "HL700423",
+        "Table": "HL70423",
         "LongName": "Case Category Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -122,7 +122,7 @@
     "ACC.10": {
         "Item": "1505",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Police Notified Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -130,7 +130,7 @@
     "ACC.2": {
         "Item": "528",
         "Type": "CE",
-        "Table": "HL700050",
+        "Table": "HL70050",
         "LongName": "Accident Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -146,7 +146,7 @@
     "ACC.4": {
         "Item": "812",
         "Type": "CE",
-        "Table": "HL700347",
+        "Table": "HL70347",
         "LongName": "Auto Accident State",
         "maxLength": "250",
         "Chapter": "6"
@@ -154,7 +154,7 @@
     "ACC.5": {
         "Item": "813",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Accident Job Related Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -162,7 +162,7 @@
     "ACC.6": {
         "Item": "814",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Accident Death Indicator",
         "maxLength": "12",
         "Chapter": "6"
@@ -274,7 +274,7 @@
     "AIG.13": {
         "Item": "895",
         "Type": "IS",
-        "Table": "HL700279",
+        "Table": "HL70279",
         "LongName": "Allow Substitution Code",
         "maxLength": "10",
         "Chapter": "10"
@@ -282,7 +282,7 @@
     "AIG.14": {
         "Item": "889",
         "Type": "CE",
-        "Table": "HL700278",
+        "Table": "HL70278",
         "LongName": "Filler Status Code",
         "maxLength": "250",
         "Chapter": "10"
@@ -290,7 +290,7 @@
     "AIG.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "10"
@@ -370,7 +370,7 @@
     "AIL.11": {
         "Item": "895",
         "Type": "IS",
-        "Table": "HL700279",
+        "Table": "HL70279",
         "LongName": "Allow Substitution Code",
         "maxLength": "10",
         "Chapter": "10"
@@ -378,7 +378,7 @@
     "AIL.12": {
         "Item": "889",
         "Type": "CE",
-        "Table": "HL700278",
+        "Table": "HL70278",
         "LongName": "Filler Status Code",
         "maxLength": "250",
         "Chapter": "10"
@@ -386,7 +386,7 @@
     "AIL.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "10"
@@ -466,7 +466,7 @@
     "AIP.11": {
         "Item": "895",
         "Type": "IS",
-        "Table": "HL700279",
+        "Table": "HL70279",
         "LongName": "Allow Substitution Code",
         "maxLength": "10",
         "Chapter": "10"
@@ -474,7 +474,7 @@
     "AIP.12": {
         "Item": "889",
         "Type": "CE",
-        "Table": "HL700278",
+        "Table": "HL70278",
         "LongName": "Filler Status Code",
         "maxLength": "250",
         "Chapter": "10"
@@ -482,7 +482,7 @@
     "AIP.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "10"
@@ -554,7 +554,7 @@
     "AIS.10": {
         "Item": "889",
         "Type": "CE",
-        "Table": "HL700278",
+        "Table": "HL70278",
         "LongName": "Filler Status Code",
         "maxLength": "250",
         "Chapter": "10"
@@ -562,7 +562,7 @@
     "AIS.11": {
         "Item": "1474",
         "Type": "CE",
-        "Table": "HL700411",
+        "Table": "HL70411",
         "LongName": "Placer Supplemental Service Information",
         "maxLength": "250",
         "Chapter": "10"
@@ -570,7 +570,7 @@
     "AIS.12": {
         "Item": "1475",
         "Type": "CE",
-        "Table": "HL700411",
+        "Table": "HL70411",
         "LongName": "Filler Supplemental Service Information",
         "maxLength": "250",
         "Chapter": "10"
@@ -578,7 +578,7 @@
     "AIS.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "10"
@@ -634,7 +634,7 @@
     "AIS.9": {
         "Item": "895",
         "Type": "IS",
-        "Table": "HL700279",
+        "Table": "HL70279",
         "LongName": "Allow Substitution Code",
         "maxLength": "10",
         "Chapter": "10"
@@ -650,7 +650,7 @@
     "AL1.2": {
         "Item": "204",
         "Type": "CE",
-        "Table": "HL700127",
+        "Table": "HL70127",
         "LongName": "Allergen Type Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -666,7 +666,7 @@
     "AL1.4": {
         "Item": "206",
         "Type": "CE",
-        "Table": "HL700128",
+        "Table": "HL70128",
         "LongName": "Allergy Severity Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -690,7 +690,7 @@
     "APR.1": {
         "Item": "908",
         "Type": "SCV",
-        "Table": "HL700294",
+        "Table": "HL70294",
         "LongName": "Time Selection Criteria",
         "maxLength": "80",
         "Chapter": "10"
@@ -698,7 +698,7 @@
     "APR.2": {
         "Item": "909",
         "Type": "SCV",
-        "Table": "HL700294",
+        "Table": "HL70294",
         "LongName": "Resource Selection Criteria",
         "maxLength": "80",
         "Chapter": "10"
@@ -706,7 +706,7 @@
     "APR.3": {
         "Item": "910",
         "Type": "SCV",
-        "Table": "HL700294",
+        "Table": "HL70294",
         "LongName": "Location Selection Criteria",
         "maxLength": "80",
         "Chapter": "10"
@@ -906,7 +906,7 @@
     "ARQ.7": {
         "Item": "866",
         "Type": "CE",
-        "Table": "HL700276",
+        "Table": "HL70276",
         "LongName": "Appointment Reason",
         "maxLength": "250",
         "Chapter": "10"
@@ -914,7 +914,7 @@
     "ARQ.8": {
         "Item": "867",
         "Type": "CE",
-        "Table": "HL700277",
+        "Table": "HL70277",
         "LongName": "Appointment Type",
         "maxLength": "250",
         "Chapter": "10"
@@ -930,7 +930,7 @@
     "AUT.1": {
         "Item": "1146",
         "Type": "CE",
-        "Table": "HL700072",
+        "Table": "HL70072",
         "LongName": "Authorizing Payor, Plan ID",
         "maxLength": "250",
         "Chapter": "11"
@@ -946,7 +946,7 @@
     "AUT.2": {
         "Item": "1147",
         "Type": "CE",
-        "Table": "HL700285",
+        "Table": "HL70285",
         "LongName": "Authorizing Payor, Company ID",
         "maxLength": "250",
         "Chapter": "11"
@@ -1106,7 +1106,7 @@
     "BLC.1": {
         "Item": "1528",
         "Type": "CE",
-        "Table": "HL700426",
+        "Table": "HL70426",
         "LongName": "Blood Product Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -1122,7 +1122,7 @@
     "BLG.1": {
         "Item": "234",
         "Type": "CCD",
-        "Table": "HL700100",
+        "Table": "HL70100",
         "LongName": "When to Charge",
         "maxLength": "40",
         "Chapter": "4"
@@ -1130,7 +1130,7 @@
     "BLG.2": {
         "Item": "235",
         "Type": "ID",
-        "Table": "HL700122",
+        "Table": "HL70122",
         "LongName": "Charge Type",
         "maxLength": "50",
         "Chapter": "4"
@@ -1170,7 +1170,7 @@
     "CDM.1": {
         "Item": "1306",
         "Type": "CE",
-        "Table": "HL700132",
+        "Table": "HL70132",
         "LongName": "Primary Key Value - CDM",
         "maxLength": "250",
         "Chapter": "8"
@@ -1202,7 +1202,7 @@
     "CDM.13": {
         "Item": "994",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Room Fee Indicator",
         "maxLength": "1",
         "Chapter": "8"
@@ -1234,7 +1234,7 @@
     "CDM.5": {
         "Item": "986",
         "Type": "IS",
-        "Table": "HL700268",
+        "Table": "HL70268",
         "LongName": "Description Override Indicator",
         "maxLength": "1",
         "Chapter": "8"
@@ -1250,7 +1250,7 @@
     "CDM.7": {
         "Item": "393",
         "Type": "CE",
-        "Table": "HL700088",
+        "Table": "HL70088",
         "LongName": "Procedure Code",
         "maxLength": "250",
         "Chapter": "8"
@@ -1258,7 +1258,7 @@
     "CDM.8": {
         "Item": "675",
         "Type": "ID",
-        "Table": "HL700183",
+        "Table": "HL70183",
         "LongName": "Active\/Inactive Flag",
         "maxLength": "1",
         "Chapter": "8"
@@ -1266,7 +1266,7 @@
     "CDM.9": {
         "Item": "990",
         "Type": "CE",
-        "Table": "HL700463",
+        "Table": "HL70463",
         "LongName": "Inventory Number",
         "maxLength": "250",
         "Chapter": "8"
@@ -1650,7 +1650,7 @@
     "CTD.1": {
         "Item": "196",
         "Type": "CE",
-        "Table": "HL700131",
+        "Table": "HL70131",
         "LongName": "Contact Role",
         "maxLength": "250",
         "Chapter": "11"
@@ -1690,7 +1690,7 @@
     "CTD.6": {
         "Item": "684",
         "Type": "CE",
-        "Table": "HL700185",
+        "Table": "HL70185",
         "LongName": "Preferred Method of Contact",
         "maxLength": "250",
         "Chapter": "11"
@@ -1738,7 +1738,7 @@
     "DB1.2": {
         "Item": "1284",
         "Type": "IS",
-        "Table": "HL700334",
+        "Table": "HL70334",
         "LongName": "Disabled Person Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -1754,7 +1754,7 @@
     "DB1.4": {
         "Item": "1286",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Disability Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -1802,7 +1802,7 @@
     "DG1.10": {
         "Item": "384",
         "Type": "IS",
-        "Table": "HL700056",
+        "Table": "HL70056",
         "LongName": "DRG Grouper Review Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -1810,7 +1810,7 @@
     "DG1.11": {
         "Item": "385",
         "Type": "CE",
-        "Table": "HL700083",
+        "Table": "HL70083",
         "LongName": "Outlier Type",
         "maxLength": "250",
         "Chapter": "6"
@@ -1842,7 +1842,7 @@
     "DG1.15": {
         "Item": "389",
         "Type": "ID",
-        "Table": "HL700359",
+        "Table": "HL70359",
         "LongName": "Diagnosis Priority",
         "maxLength": "2",
         "Chapter": "6"
@@ -1858,7 +1858,7 @@
     "DG1.17": {
         "Item": "766",
         "Type": "IS",
-        "Table": "HL700228",
+        "Table": "HL70228",
         "LongName": "Diagnosis Classification",
         "maxLength": "3",
         "Chapter": "6"
@@ -1866,7 +1866,7 @@
     "DG1.18": {
         "Item": "767",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Confidential Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -1882,7 +1882,7 @@
     "DG1.2": {
         "Item": "376",
         "Type": "ID",
-        "Table": "HL700053",
+        "Table": "HL70053",
         "LongName": "Diagnosis Coding Method",
         "maxLength": "2",
         "Chapter": "6"
@@ -1890,7 +1890,7 @@
     "DG1.3": {
         "Item": "377",
         "Type": "CE",
-        "Table": "HL700051",
+        "Table": "HL70051",
         "LongName": "Diagnosis Code - DG1",
         "maxLength": "250",
         "Chapter": "6"
@@ -1914,7 +1914,7 @@
     "DG1.6": {
         "Item": "380",
         "Type": "IS",
-        "Table": "HL700052",
+        "Table": "HL70052",
         "LongName": "Diagnosis Type",
         "maxLength": "2",
         "Chapter": "6"
@@ -1922,7 +1922,7 @@
     "DG1.7": {
         "Item": "381",
         "Type": "CE",
-        "Table": "HL700118",
+        "Table": "HL70118",
         "LongName": "Major Diagnostic Category",
         "maxLength": "250",
         "Chapter": "6"
@@ -1930,7 +1930,7 @@
     "DG1.8": {
         "Item": "382",
         "Type": "CE",
-        "Table": "HL700055",
+        "Table": "HL70055",
         "LongName": "Diagnostic Related Group",
         "maxLength": "250",
         "Chapter": "6"
@@ -1938,7 +1938,7 @@
     "DG1.9": {
         "Item": "383",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "DRG Approval Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -1946,7 +1946,7 @@
     "DRG.1": {
         "Item": "382",
         "Type": "CE",
-        "Table": "HL700055",
+        "Table": "HL70055",
         "LongName": "Diagnostic Related Group",
         "maxLength": "250",
         "Chapter": "6"
@@ -1954,7 +1954,7 @@
     "DRG.10": {
         "Item": "767",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Confidential Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -1962,7 +1962,7 @@
     "DRG.11": {
         "Item": "1500",
         "Type": "IS",
-        "Table": "HL700415",
+        "Table": "HL70415",
         "LongName": "DRG Transfer Type",
         "maxLength": "21",
         "Chapter": "6"
@@ -1978,7 +1978,7 @@
     "DRG.3": {
         "Item": "383",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "DRG Approval Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -1986,7 +1986,7 @@
     "DRG.4": {
         "Item": "384",
         "Type": "IS",
-        "Table": "HL700056",
+        "Table": "HL70056",
         "LongName": "DRG Grouper Review Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -1994,7 +1994,7 @@
     "DRG.5": {
         "Item": "385",
         "Type": "CE",
-        "Table": "HL700083",
+        "Table": "HL70083",
         "LongName": "Outlier Type",
         "maxLength": "250",
         "Chapter": "6"
@@ -2018,7 +2018,7 @@
     "DRG.8": {
         "Item": "770",
         "Type": "IS",
-        "Table": "HL700229",
+        "Table": "HL70229",
         "LongName": "DRG Payor",
         "maxLength": "1",
         "Chapter": "6"
@@ -2042,7 +2042,7 @@
     "DSC.2": {
         "Item": "1354",
         "Type": "ID",
-        "Table": "HL700398",
+        "Table": "HL70398",
         "LongName": "Continuation Style",
         "maxLength": "1",
         "Chapter": "2"
@@ -2098,7 +2098,7 @@
     "ECD.2": {
         "Item": "1391",
         "Type": "CE",
-        "Table": "HL700368",
+        "Table": "HL70368",
         "LongName": "Remote Control Command",
         "maxLength": "250",
         "Chapter": "13"
@@ -2106,7 +2106,7 @@
     "ECD.3": {
         "Item": "1392",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Response Required",
         "maxLength": "80",
         "Chapter": "13"
@@ -2130,7 +2130,7 @@
     "ECR.1": {
         "Item": "1395",
         "Type": "CE",
-        "Table": "HL700387",
+        "Table": "HL70387",
         "LongName": "Command Response",
         "maxLength": "250",
         "Chapter": "13"
@@ -2162,7 +2162,7 @@
     "EDU.2": {
         "Item": "1449",
         "Type": "IS",
-        "Table": "HL700360",
+        "Table": "HL70360",
         "LongName": "Academic Degree",
         "maxLength": "10",
         "Chapter": "15"
@@ -2202,7 +2202,7 @@
     "EDU.7": {
         "Item": "1453",
         "Type": "CE",
-        "Table": "HL700402",
+        "Table": "HL70402",
         "LongName": "School Type Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -2226,7 +2226,7 @@
     "EQL.2": {
         "Item": "697",
         "Type": "ID",
-        "Table": "HL700106",
+        "Table": "HL70106",
         "LongName": "Query\/Response Format Code",
         "maxLength": "1",
         "Chapter": "5"
@@ -2250,7 +2250,7 @@
     "EQP.1": {
         "Item": "1430",
         "Type": "CE",
-        "Table": "HL700450",
+        "Table": "HL70450",
         "LongName": "Event type",
         "maxLength": "250",
         "Chapter": "13"
@@ -2306,7 +2306,7 @@
     "EQU.3": {
         "Item": "1323",
         "Type": "CE",
-        "Table": "HL700365",
+        "Table": "HL70365",
         "LongName": "Equipment State",
         "maxLength": "250",
         "Chapter": "13"
@@ -2314,7 +2314,7 @@
     "EQU.4": {
         "Item": "1324",
         "Type": "CE",
-        "Table": "HL700366",
+        "Table": "HL70366",
         "LongName": "Local\/Remote Control State",
         "maxLength": "250",
         "Chapter": "13"
@@ -2322,7 +2322,7 @@
     "EQU.5": {
         "Item": "1325",
         "Type": "CE",
-        "Table": "HL700367",
+        "Table": "HL70367",
         "LongName": "Alert Level",
         "maxLength": "250",
         "Chapter": "13"
@@ -2362,7 +2362,7 @@
     "EVN.1": {
         "Item": "99",
         "Type": "ID",
-        "Table": "HL700003",
+        "Table": "HL70003",
         "LongName": "Event Type Code",
         "maxLength": "3",
         "Chapter": "3"
@@ -2386,7 +2386,7 @@
     "EVN.4": {
         "Item": "102",
         "Type": "IS",
-        "Table": "HL700062",
+        "Table": "HL70062",
         "LongName": "Event Reason Code",
         "maxLength": "3",
         "Chapter": "3"
@@ -2394,7 +2394,7 @@
     "EVN.5": {
         "Item": "103",
         "Type": "XCN",
-        "Table": "HL700188",
+        "Table": "HL70188",
         "LongName": "Operator ID",
         "maxLength": "250",
         "Chapter": "3"
@@ -2450,7 +2450,7 @@
     "FAC.2": {
         "Item": "1263",
         "Type": "ID",
-        "Table": "HL700331",
+        "Table": "HL70331",
         "LongName": "Facility Type",
         "maxLength": "1",
         "Chapter": "7"
@@ -2642,7 +2642,7 @@
     "FT1.13": {
         "Item": "367",
         "Type": "CE",
-        "Table": "HL700049",
+        "Table": "HL70049",
         "LongName": "Department Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -2650,7 +2650,7 @@
     "FT1.14": {
         "Item": "368",
         "Type": "CE",
-        "Table": "HL700072",
+        "Table": "HL70072",
         "LongName": "Insurance Plan ID",
         "maxLength": "250",
         "Chapter": "6"
@@ -2674,7 +2674,7 @@
     "FT1.17": {
         "Item": "370",
         "Type": "IS",
-        "Table": "HL700024",
+        "Table": "HL70024",
         "LongName": "Fee Schedule",
         "maxLength": "1",
         "Chapter": "6"
@@ -2682,7 +2682,7 @@
     "FT1.18": {
         "Item": "148",
         "Type": "IS",
-        "Table": "HL700018",
+        "Table": "HL70018",
         "LongName": "Patient Type",
         "maxLength": "2",
         "Chapter": "6"
@@ -2690,7 +2690,7 @@
     "FT1.19": {
         "Item": "371",
         "Type": "CE",
-        "Table": "HL700051",
+        "Table": "HL70051",
         "LongName": "Diagnosis Code - FT1",
         "maxLength": "250",
         "Chapter": "6"
@@ -2706,7 +2706,7 @@
     "FT1.20": {
         "Item": "372",
         "Type": "XCN",
-        "Table": "HL700084",
+        "Table": "HL70084",
         "LongName": "Performed By Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -2746,7 +2746,7 @@
     "FT1.25": {
         "Item": "393",
         "Type": "CE",
-        "Table": "HL700088",
+        "Table": "HL70088",
         "LongName": "Procedure Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -2754,7 +2754,7 @@
     "FT1.26": {
         "Item": "1316",
         "Type": "CE",
-        "Table": "HL700340",
+        "Table": "HL70340",
         "LongName": "Procedure Code Modifier",
         "maxLength": "250",
         "Chapter": "6"
@@ -2786,7 +2786,7 @@
     "FT1.6": {
         "Item": "360",
         "Type": "IS",
-        "Table": "HL700017",
+        "Table": "HL70017",
         "LongName": "Transaction Type",
         "maxLength": "8",
         "Chapter": "6"
@@ -2794,7 +2794,7 @@
     "FT1.7": {
         "Item": "361",
         "Type": "CE",
-        "Table": "HL700132",
+        "Table": "HL70132",
         "LongName": "Transaction Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -2834,7 +2834,7 @@
     "GOL.1": {
         "Item": "816",
         "Type": "ID",
-        "Table": "HL700287",
+        "Table": "HL70287",
         "LongName": "Action Code",
         "maxLength": "2",
         "Chapter": "12"
@@ -3002,7 +3002,7 @@
     "GP1.1": {
         "Item": "1599",
         "Type": "IS",
-        "Table": "HL700455",
+        "Table": "HL70455",
         "LongName": "Type of Bill Code",
         "maxLength": "3",
         "Chapter": "6"
@@ -3010,7 +3010,7 @@
     "GP1.2": {
         "Item": "1600",
         "Type": "IS",
-        "Table": "HL700456",
+        "Table": "HL70456",
         "LongName": "Revenue Code",
         "maxLength": "3",
         "Chapter": "6"
@@ -3018,7 +3018,7 @@
     "GP1.3": {
         "Item": "1601",
         "Type": "IS",
-        "Table": "HL700457",
+        "Table": "HL70457",
         "LongName": "Overall Claim Disposition Code",
         "maxLength": "1",
         "Chapter": "6"
@@ -3026,7 +3026,7 @@
     "GP1.4": {
         "Item": "1602",
         "Type": "IS",
-        "Table": "HL700458",
+        "Table": "HL70458",
         "LongName": "OCE Edits per Visit Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -3042,7 +3042,7 @@
     "GP2.1": {
         "Item": "1600",
         "Type": "IS",
-        "Table": "HL700456",
+        "Table": "HL70456",
         "LongName": "Revenue Code",
         "maxLength": "3",
         "Chapter": "6"
@@ -3050,7 +3050,7 @@
     "GP2.10": {
         "Item": "1617",
         "Type": "IS",
-        "Table": "HL700469",
+        "Table": "HL70469",
         "LongName": "Packaging Status Code",
         "maxLength": "1",
         "Chapter": "6"
@@ -3066,7 +3066,7 @@
     "GP2.12": {
         "Item": "1619",
         "Type": "IS",
-        "Table": "HL700470",
+        "Table": "HL70470",
         "LongName": "Reimbursement Type Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -3106,7 +3106,7 @@
     "GP2.4": {
         "Item": "1606",
         "Type": "IS",
-        "Table": "HL700459",
+        "Table": "HL70459",
         "LongName": "Reimbursement Action Code",
         "maxLength": "1",
         "Chapter": "6"
@@ -3114,7 +3114,7 @@
     "GP2.5": {
         "Item": "1607",
         "Type": "IS",
-        "Table": "HL700460",
+        "Table": "HL70460",
         "LongName": "Denial or Rejection Code",
         "maxLength": "1",
         "Chapter": "6"
@@ -3122,7 +3122,7 @@
     "GP2.6": {
         "Item": "1608",
         "Type": "IS",
-        "Table": "HL700458",
+        "Table": "HL70458",
         "LongName": "OCE Edit Code",
         "maxLength": "3",
         "Chapter": "6"
@@ -3130,7 +3130,7 @@
     "GP2.7": {
         "Item": "1609",
         "Type": "CE",
-        "Table": "HL700466",
+        "Table": "HL70466",
         "LongName": "Ambulatory Payment Classification Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -3138,7 +3138,7 @@
     "GP2.8": {
         "Item": "1610",
         "Type": "IS",
-        "Table": "HL700467",
+        "Table": "HL70467",
         "LongName": "Modifier Edit Code",
         "maxLength": "1",
         "Chapter": "6"
@@ -3146,7 +3146,7 @@
     "GP2.9": {
         "Item": "1611",
         "Type": "IS",
-        "Table": "HL700468",
+        "Table": "HL70468",
         "LongName": "Payment Adjustment Code",
         "maxLength": "1",
         "Chapter": "6"
@@ -3162,7 +3162,7 @@
     "GT1.10": {
         "Item": "414",
         "Type": "IS",
-        "Table": "HL700068",
+        "Table": "HL70068",
         "LongName": "Guarantor Type",
         "maxLength": "2",
         "Chapter": "6"
@@ -3170,7 +3170,7 @@
     "GT1.11": {
         "Item": "415",
         "Type": "CE",
-        "Table": "HL700063",
+        "Table": "HL70063",
         "LongName": "Guarantor Relationship",
         "maxLength": "250",
         "Chapter": "6"
@@ -3250,7 +3250,7 @@
     "GT1.20": {
         "Item": "424",
         "Type": "IS",
-        "Table": "HL700066",
+        "Table": "HL70066",
         "LongName": "Guarantor Employment Status",
         "maxLength": "2",
         "Chapter": "6"
@@ -3266,7 +3266,7 @@
     "GT1.22": {
         "Item": "773",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Guarantor Billing Hold Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -3274,7 +3274,7 @@
     "GT1.23": {
         "Item": "774",
         "Type": "CE",
-        "Table": "HL700341",
+        "Table": "HL70341",
         "LongName": "Guarantor Credit Rating Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -3290,7 +3290,7 @@
     "GT1.25": {
         "Item": "776",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Guarantor Death Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -3298,7 +3298,7 @@
     "GT1.26": {
         "Item": "777",
         "Type": "CE",
-        "Table": "HL700218",
+        "Table": "HL70218",
         "LongName": "Guarantor Charge Adjustment Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -3338,7 +3338,7 @@
     "GT1.30": {
         "Item": "781",
         "Type": "CE",
-        "Table": "HL700002",
+        "Table": "HL70002",
         "LongName": "Guarantor Marital Status Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -3362,7 +3362,7 @@
     "GT1.33": {
         "Item": "755",
         "Type": "IS",
-        "Table": "HL700223",
+        "Table": "HL70223",
         "LongName": "Living Dependency",
         "maxLength": "2",
         "Chapter": "6"
@@ -3370,7 +3370,7 @@
     "GT1.34": {
         "Item": "145",
         "Type": "IS",
-        "Table": "HL700009",
+        "Table": "HL70009",
         "LongName": "Ambulatory Status",
         "maxLength": "2",
         "Chapter": "6"
@@ -3378,7 +3378,7 @@
     "GT1.35": {
         "Item": "129",
         "Type": "CE",
-        "Table": "HL700171",
+        "Table": "HL70171",
         "LongName": "Citizenship",
         "maxLength": "250",
         "Chapter": "6"
@@ -3386,7 +3386,7 @@
     "GT1.36": {
         "Item": "118",
         "Type": "CE",
-        "Table": "HL700296",
+        "Table": "HL70296",
         "LongName": "Primary Language",
         "maxLength": "250",
         "Chapter": "6"
@@ -3394,7 +3394,7 @@
     "GT1.37": {
         "Item": "742",
         "Type": "IS",
-        "Table": "HL700220",
+        "Table": "HL70220",
         "LongName": "Living Arrangement",
         "maxLength": "2",
         "Chapter": "6"
@@ -3402,7 +3402,7 @@
     "GT1.38": {
         "Item": "743",
         "Type": "CE",
-        "Table": "HL700215",
+        "Table": "HL70215",
         "LongName": "Publicity Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -3410,7 +3410,7 @@
     "GT1.39": {
         "Item": "744",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Protection Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -3426,7 +3426,7 @@
     "GT1.40": {
         "Item": "745",
         "Type": "IS",
-        "Table": "HL700231",
+        "Table": "HL70231",
         "LongName": "Student Indicator",
         "maxLength": "2",
         "Chapter": "6"
@@ -3434,7 +3434,7 @@
     "GT1.41": {
         "Item": "120",
         "Type": "CE",
-        "Table": "HL700006",
+        "Table": "HL70006",
         "LongName": "Religion",
         "maxLength": "250",
         "Chapter": "6"
@@ -3450,7 +3450,7 @@
     "GT1.43": {
         "Item": "739",
         "Type": "CE",
-        "Table": "HL700212",
+        "Table": "HL70212",
         "LongName": "Nationality",
         "maxLength": "250",
         "Chapter": "6"
@@ -3458,7 +3458,7 @@
     "GT1.44": {
         "Item": "125",
         "Type": "CE",
-        "Table": "HL700189",
+        "Table": "HL70189",
         "LongName": "Ethnic Group",
         "maxLength": "250",
         "Chapter": "6"
@@ -3482,7 +3482,7 @@
     "GT1.47": {
         "Item": "747",
         "Type": "CE",
-        "Table": "HL700222",
+        "Table": "HL70222",
         "LongName": "Contact Reason",
         "maxLength": "250",
         "Chapter": "6"
@@ -3490,7 +3490,7 @@
     "GT1.48": {
         "Item": "784",
         "Type": "IS",
-        "Table": "HL700063",
+        "Table": "HL70063",
         "LongName": "Contact Relationship",
         "maxLength": "2",
         "Chapter": "6"
@@ -3514,7 +3514,7 @@
     "GT1.50": {
         "Item": "786",
         "Type": "JCC",
-        "Table": "HL700327",
+        "Table": "HL70327",
         "LongName": "Job Code\/Class",
         "maxLength": "20",
         "Chapter": "6"
@@ -3530,7 +3530,7 @@
     "GT1.52": {
         "Item": "753",
         "Type": "IS",
-        "Table": "HL700295",
+        "Table": "HL70295",
         "LongName": "Handicap",
         "maxLength": "2",
         "Chapter": "6"
@@ -3538,7 +3538,7 @@
     "GT1.53": {
         "Item": "752",
         "Type": "IS",
-        "Table": "HL700311",
+        "Table": "HL70311",
         "LongName": "Job Status",
         "maxLength": "2",
         "Chapter": "6"
@@ -3546,7 +3546,7 @@
     "GT1.54": {
         "Item": "1231",
         "Type": "FC",
-        "Table": "HL700064",
+        "Table": "HL70064",
         "LongName": "Guarantor Financial Class",
         "maxLength": "50",
         "Chapter": "6"
@@ -3554,7 +3554,7 @@
     "GT1.55": {
         "Item": "1291",
         "Type": "CE",
-        "Table": "HL700005",
+        "Table": "HL70005",
         "LongName": "Guarantor Race",
         "maxLength": "250",
         "Chapter": "6"
@@ -3586,7 +3586,7 @@
     "GT1.9": {
         "Item": "413",
         "Type": "IS",
-        "Table": "HL700001",
+        "Table": "HL70001",
         "LongName": "Guarantor Administrative Sex",
         "maxLength": "1",
         "Chapter": "6"
@@ -3642,7 +3642,7 @@
     "IAM.15": {
         "Item": "1560",
         "Type": "CE",
-        "Table": "HL700063",
+        "Table": "HL70063",
         "LongName": "Relationship to Patient Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3650,7 +3650,7 @@
     "IAM.16": {
         "Item": "1561",
         "Type": "CE",
-        "Table": "HL700437",
+        "Table": "HL70437",
         "LongName": "Alert Device Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3658,7 +3658,7 @@
     "IAM.17": {
         "Item": "1562",
         "Type": "CE",
-        "Table": "HL700438",
+        "Table": "HL70438",
         "LongName": "Allergy Clinical Status Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3682,7 +3682,7 @@
     "IAM.2": {
         "Item": "204",
         "Type": "CE",
-        "Table": "HL700127",
+        "Table": "HL70127",
         "LongName": "Allergen Type Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3706,7 +3706,7 @@
     "IAM.4": {
         "Item": "206",
         "Type": "CE",
-        "Table": "HL700128",
+        "Table": "HL70128",
         "LongName": "Allergy Severity Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3722,7 +3722,7 @@
     "IAM.6": {
         "Item": "1551",
         "Type": "CNE",
-        "Table": "HL700323",
+        "Table": "HL70323",
         "LongName": "Allergy Action Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3746,7 +3746,7 @@
     "IAM.9": {
         "Item": "1554",
         "Type": "CE",
-        "Table": "HL700436",
+        "Table": "HL70436",
         "LongName": "Sensitivity to Causative Agent Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -3802,7 +3802,7 @@
     "IN1.15": {
         "Item": "440",
         "Type": "IS",
-        "Table": "HL700086",
+        "Table": "HL70086",
         "LongName": "Plan Type",
         "maxLength": "3",
         "Chapter": "6"
@@ -3818,7 +3818,7 @@
     "IN1.17": {
         "Item": "442",
         "Type": "CE",
-        "Table": "HL700063",
+        "Table": "HL70063",
         "LongName": "Insured's Relationship To Patient",
         "maxLength": "250",
         "Chapter": "6"
@@ -3842,7 +3842,7 @@
     "IN1.2": {
         "Item": "368",
         "Type": "CE",
-        "Table": "HL700072",
+        "Table": "HL70072",
         "LongName": "Insurance Plan ID",
         "maxLength": "250",
         "Chapter": "6"
@@ -3850,7 +3850,7 @@
     "IN1.20": {
         "Item": "445",
         "Type": "IS",
-        "Table": "HL700135",
+        "Table": "HL70135",
         "LongName": "Assignment Of Benefits",
         "maxLength": "2",
         "Chapter": "6"
@@ -3858,7 +3858,7 @@
     "IN1.21": {
         "Item": "446",
         "Type": "IS",
-        "Table": "HL700173",
+        "Table": "HL70173",
         "LongName": "Coordination Of Benefits",
         "maxLength": "2",
         "Chapter": "6"
@@ -3874,7 +3874,7 @@
     "IN1.23": {
         "Item": "448",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Notice Of Admission Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -3890,7 +3890,7 @@
     "IN1.25": {
         "Item": "450",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Report Of Eligibility Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -3906,7 +3906,7 @@
     "IN1.27": {
         "Item": "452",
         "Type": "IS",
-        "Table": "HL700093",
+        "Table": "HL70093",
         "LongName": "Release Information Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -3946,7 +3946,7 @@
     "IN1.31": {
         "Item": "456",
         "Type": "IS",
-        "Table": "HL700098",
+        "Table": "HL70098",
         "LongName": "Type Of Agreement Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -3954,7 +3954,7 @@
     "IN1.32": {
         "Item": "457",
         "Type": "IS",
-        "Table": "HL700022",
+        "Table": "HL70022",
         "LongName": "Billing Status",
         "maxLength": "2",
         "Chapter": "6"
@@ -3978,7 +3978,7 @@
     "IN1.35": {
         "Item": "460",
         "Type": "IS",
-        "Table": "HL700042",
+        "Table": "HL70042",
         "LongName": "Company Plan Code",
         "maxLength": "8",
         "Chapter": "6"
@@ -4042,7 +4042,7 @@
     "IN1.42": {
         "Item": "467",
         "Type": "CE",
-        "Table": "HL700066",
+        "Table": "HL70066",
         "LongName": "Insured's Employment Status",
         "maxLength": "250",
         "Chapter": "6"
@@ -4050,7 +4050,7 @@
     "IN1.43": {
         "Item": "468",
         "Type": "IS",
-        "Table": "HL700001",
+        "Table": "HL70001",
         "LongName": "Insured's Administrative Sex",
         "maxLength": "1",
         "Chapter": "6"
@@ -4074,7 +4074,7 @@
     "IN1.46": {
         "Item": "471",
         "Type": "IS",
-        "Table": "HL700072",
+        "Table": "HL70072",
         "LongName": "Prior Insurance Plan ID",
         "maxLength": "8",
         "Chapter": "6"
@@ -4082,7 +4082,7 @@
     "IN1.47": {
         "Item": "1227",
         "Type": "IS",
-        "Table": "HL700309",
+        "Table": "HL70309",
         "LongName": "Coverage Type",
         "maxLength": "3",
         "Chapter": "6"
@@ -4090,7 +4090,7 @@
     "IN1.48": {
         "Item": "753",
         "Type": "IS",
-        "Table": "HL700295",
+        "Table": "HL70295",
         "LongName": "Handicap",
         "maxLength": "2",
         "Chapter": "6"
@@ -4162,7 +4162,7 @@
     "IN2.11": {
         "Item": "482",
         "Type": "CE",
-        "Table": "HL700342",
+        "Table": "HL70342",
         "LongName": "Dependent Of Military Recipient",
         "maxLength": "250",
         "Chapter": "6"
@@ -4186,7 +4186,7 @@
     "IN2.14": {
         "Item": "485",
         "Type": "IS",
-        "Table": "HL700140",
+        "Table": "HL70140",
         "LongName": "Military Service",
         "maxLength": "14",
         "Chapter": "6"
@@ -4194,7 +4194,7 @@
     "IN2.15": {
         "Item": "486",
         "Type": "IS",
-        "Table": "HL700141",
+        "Table": "HL70141",
         "LongName": "Military Rank\/Grade",
         "maxLength": "2",
         "Chapter": "6"
@@ -4202,7 +4202,7 @@
     "IN2.16": {
         "Item": "487",
         "Type": "IS",
-        "Table": "HL700142",
+        "Table": "HL70142",
         "LongName": "Military Status",
         "maxLength": "3",
         "Chapter": "6"
@@ -4218,7 +4218,7 @@
     "IN2.18": {
         "Item": "489",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Military Non-Avail Cert On File",
         "maxLength": "1",
         "Chapter": "6"
@@ -4226,7 +4226,7 @@
     "IN2.19": {
         "Item": "490",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Baby Coverage",
         "maxLength": "1",
         "Chapter": "6"
@@ -4242,7 +4242,7 @@
     "IN2.20": {
         "Item": "491",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Combine Baby Bill",
         "maxLength": "1",
         "Chapter": "6"
@@ -4274,7 +4274,7 @@
     "IN2.24": {
         "Item": "495",
         "Type": "IS",
-        "Table": "HL700143",
+        "Table": "HL70143",
         "LongName": "Non-Covered Insurance Code",
         "maxLength": "8",
         "Chapter": "6"
@@ -4298,7 +4298,7 @@
     "IN2.27": {
         "Item": "498",
         "Type": "IS",
-        "Table": "HL700144",
+        "Table": "HL70144",
         "LongName": "Eligibility Source",
         "maxLength": "1",
         "Chapter": "6"
@@ -4306,7 +4306,7 @@
     "IN2.28": {
         "Item": "499",
         "Type": "RMC",
-        "Table": "HL700145",
+        "Table": "HL70145",
         "LongName": "Room Coverage Type\/Amount",
         "maxLength": "250",
         "Chapter": "6"
@@ -4314,7 +4314,7 @@
     "IN2.29": {
         "Item": "500",
         "Type": "PTA",
-        "Table": "HL700147",
+        "Table": "HL70147",
         "LongName": "Policy Type\/Amount",
         "maxLength": "250",
         "Chapter": "6"
@@ -4338,7 +4338,7 @@
     "IN2.31": {
         "Item": "755",
         "Type": "IS",
-        "Table": "HL700223",
+        "Table": "HL70223",
         "LongName": "Living Dependency",
         "maxLength": "2",
         "Chapter": "6"
@@ -4346,7 +4346,7 @@
     "IN2.32": {
         "Item": "145",
         "Type": "IS",
-        "Table": "HL700009",
+        "Table": "HL70009",
         "LongName": "Ambulatory Status",
         "maxLength": "2",
         "Chapter": "6"
@@ -4354,7 +4354,7 @@
     "IN2.33": {
         "Item": "129",
         "Type": "CE",
-        "Table": "HL700171",
+        "Table": "HL70171",
         "LongName": "Citizenship",
         "maxLength": "250",
         "Chapter": "6"
@@ -4362,7 +4362,7 @@
     "IN2.34": {
         "Item": "118",
         "Type": "CE",
-        "Table": "HL700296",
+        "Table": "HL70296",
         "LongName": "Primary Language",
         "maxLength": "250",
         "Chapter": "6"
@@ -4370,7 +4370,7 @@
     "IN2.35": {
         "Item": "742",
         "Type": "IS",
-        "Table": "HL700220",
+        "Table": "HL70220",
         "LongName": "Living Arrangement",
         "maxLength": "2",
         "Chapter": "6"
@@ -4378,7 +4378,7 @@
     "IN2.36": {
         "Item": "743",
         "Type": "CE",
-        "Table": "HL700215",
+        "Table": "HL70215",
         "LongName": "Publicity Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -4386,7 +4386,7 @@
     "IN2.37": {
         "Item": "744",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Protection Indicator",
         "maxLength": "1",
         "Chapter": "6"
@@ -4394,7 +4394,7 @@
     "IN2.38": {
         "Item": "745",
         "Type": "IS",
-        "Table": "HL700231",
+        "Table": "HL70231",
         "LongName": "Student Indicator",
         "maxLength": "2",
         "Chapter": "6"
@@ -4402,7 +4402,7 @@
     "IN2.39": {
         "Item": "120",
         "Type": "CE",
-        "Table": "HL700006",
+        "Table": "HL70006",
         "LongName": "Religion",
         "maxLength": "250",
         "Chapter": "6"
@@ -4410,7 +4410,7 @@
     "IN2.4": {
         "Item": "475",
         "Type": "IS",
-        "Table": "HL700139",
+        "Table": "HL70139",
         "LongName": "Employer Information Data",
         "maxLength": "1",
         "Chapter": "6"
@@ -4426,7 +4426,7 @@
     "IN2.41": {
         "Item": "739",
         "Type": "CE",
-        "Table": "HL700212",
+        "Table": "HL70212",
         "LongName": "Nationality",
         "maxLength": "250",
         "Chapter": "6"
@@ -4434,7 +4434,7 @@
     "IN2.42": {
         "Item": "125",
         "Type": "CE",
-        "Table": "HL700189",
+        "Table": "HL70189",
         "LongName": "Ethnic Group",
         "maxLength": "250",
         "Chapter": "6"
@@ -4442,7 +4442,7 @@
     "IN2.43": {
         "Item": "119",
         "Type": "CE",
-        "Table": "HL700002",
+        "Table": "HL70002",
         "LongName": "Marital Status",
         "maxLength": "250",
         "Chapter": "6"
@@ -4474,7 +4474,7 @@
     "IN2.47": {
         "Item": "786",
         "Type": "JCC",
-        "Table": "HL700327",
+        "Table": "HL70327",
         "LongName": "Job Code\/Class",
         "maxLength": "20",
         "Chapter": "6"
@@ -4482,7 +4482,7 @@
     "IN2.48": {
         "Item": "752",
         "Type": "IS",
-        "Table": "HL700311",
+        "Table": "HL70311",
         "LongName": "Job Status",
         "maxLength": "2",
         "Chapter": "6"
@@ -4498,7 +4498,7 @@
     "IN2.5": {
         "Item": "476",
         "Type": "IS",
-        "Table": "HL700137",
+        "Table": "HL70137",
         "LongName": "Mail Claim Party",
         "maxLength": "1",
         "Chapter": "6"
@@ -4514,7 +4514,7 @@
     "IN2.51": {
         "Item": "791",
         "Type": "IS",
-        "Table": "HL700222",
+        "Table": "HL70222",
         "LongName": "Employer Contact Reason",
         "maxLength": "2",
         "Chapter": "6"
@@ -4538,7 +4538,7 @@
     "IN2.54": {
         "Item": "794",
         "Type": "IS",
-        "Table": "HL700222",
+        "Table": "HL70222",
         "LongName": "Insured's Contact Person Reason",
         "maxLength": "2",
         "Chapter": "6"
@@ -4562,7 +4562,7 @@
     "IN2.57": {
         "Item": "797",
         "Type": "IS",
-        "Table": "HL700232",
+        "Table": "HL70232",
         "LongName": "Insurance Co. Contact Reason",
         "maxLength": "2",
         "Chapter": "6"
@@ -4578,7 +4578,7 @@
     "IN2.59": {
         "Item": "799",
         "Type": "IS",
-        "Table": "HL700312",
+        "Table": "HL70312",
         "LongName": "Policy Scope",
         "maxLength": "2",
         "Chapter": "6"
@@ -4594,7 +4594,7 @@
     "IN2.60": {
         "Item": "800",
         "Type": "IS",
-        "Table": "HL700313",
+        "Table": "HL70313",
         "LongName": "Policy Source",
         "maxLength": "2",
         "Chapter": "6"
@@ -4610,7 +4610,7 @@
     "IN2.62": {
         "Item": "802",
         "Type": "CE",
-        "Table": "HL700063",
+        "Table": "HL70063",
         "LongName": "Guarantor's Relationship To Insured",
         "maxLength": "250",
         "Chapter": "6"
@@ -4634,7 +4634,7 @@
     "IN2.65": {
         "Item": "805",
         "Type": "CE",
-        "Table": "HL700343",
+        "Table": "HL70343",
         "LongName": "Military Handicapped Program",
         "maxLength": "250",
         "Chapter": "6"
@@ -4642,7 +4642,7 @@
     "IN2.66": {
         "Item": "806",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Suspend Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -4650,7 +4650,7 @@
     "IN2.67": {
         "Item": "807",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Copay Limit Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -4658,7 +4658,7 @@
     "IN2.68": {
         "Item": "808",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Stoploss Limit Flag",
         "maxLength": "1",
         "Chapter": "6"
@@ -4690,7 +4690,7 @@
     "IN2.71": {
         "Item": "113",
         "Type": "CE",
-        "Table": "HL700005",
+        "Table": "HL70005",
         "LongName": "Race",
         "maxLength": "250",
         "Chapter": "6"
@@ -4698,7 +4698,7 @@
     "IN2.72": {
         "Item": "811",
         "Type": "CE",
-        "Table": "HL700344",
+        "Table": "HL70344",
         "LongName": "HCFA Patient's Relationship to Insured",
         "maxLength": "250",
         "Chapter": "6"
@@ -4738,7 +4738,7 @@
     "IN3.11": {
         "Item": "512",
         "Type": "DTN",
-        "Table": "HL700149",
+        "Table": "HL70149",
         "LongName": "Days",
         "maxLength": "3",
         "Chapter": "6"
@@ -4746,7 +4746,7 @@
     "IN3.12": {
         "Item": "513",
         "Type": "CE",
-        "Table": "HL700233",
+        "Table": "HL70233",
         "LongName": "Non-Concur Code\/Description",
         "maxLength": "250",
         "Chapter": "6"
@@ -4762,7 +4762,7 @@
     "IN3.14": {
         "Item": "515",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Physician Reviewer",
         "maxLength": "250",
         "Chapter": "6"
@@ -4786,7 +4786,7 @@
     "IN3.17": {
         "Item": "518",
         "Type": "CE",
-        "Table": "HL700345",
+        "Table": "HL70345",
         "LongName": "Appeal Reason",
         "maxLength": "250",
         "Chapter": "6"
@@ -4794,7 +4794,7 @@
     "IN3.18": {
         "Item": "519",
         "Type": "CE",
-        "Table": "HL700346",
+        "Table": "HL70346",
         "LongName": "Certification Agency",
         "maxLength": "250",
         "Chapter": "6"
@@ -4818,7 +4818,7 @@
     "IN3.20": {
         "Item": "521",
         "Type": "PCF",
-        "Table": "HL700150",
+        "Table": "HL70150",
         "LongName": "Pre-Certification Req\/Window",
         "maxLength": "40",
         "Chapter": "6"
@@ -4842,7 +4842,7 @@
     "IN3.23": {
         "Item": "524",
         "Type": "IS",
-        "Table": "HL700151",
+        "Table": "HL70151",
         "LongName": "Second Opinion Status",
         "maxLength": "1",
         "Chapter": "6"
@@ -4850,7 +4850,7 @@
     "IN3.24": {
         "Item": "525",
         "Type": "IS",
-        "Table": "HL700152",
+        "Table": "HL70152",
         "LongName": "Second Opinion Documentation Received",
         "maxLength": "1",
         "Chapter": "6"
@@ -4858,7 +4858,7 @@
     "IN3.25": {
         "Item": "526",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Second Opinion Physician",
         "maxLength": "250",
         "Chapter": "6"
@@ -4874,7 +4874,7 @@
     "IN3.4": {
         "Item": "505",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Certification Required",
         "maxLength": "1",
         "Chapter": "6"
@@ -4882,7 +4882,7 @@
     "IN3.5": {
         "Item": "506",
         "Type": "MOP",
-        "Table": "HL700148",
+        "Table": "HL70148",
         "LongName": "Penalty",
         "maxLength": "10",
         "Chapter": "6"
@@ -4922,7 +4922,7 @@
     "INV.1": {
         "Item": "1372",
         "Type": "CE",
-        "Table": "HL700451",
+        "Table": "HL70451",
         "LongName": "Substance Identifier",
         "maxLength": "250",
         "Chapter": "13"
@@ -4986,7 +4986,7 @@
     "INV.17": {
         "Item": "286",
         "Type": "CE",
-        "Table": "HL700385",
+        "Table": "HL70385",
         "LongName": "Manufacturer Identifier",
         "maxLength": "250",
         "Chapter": "13"
@@ -4994,7 +4994,7 @@
     "INV.18": {
         "Item": "1389",
         "Type": "CE",
-        "Table": "HL700386",
+        "Table": "HL70386",
         "LongName": "Supplier Identifier",
         "maxLength": "250",
         "Chapter": "13"
@@ -5002,7 +5002,7 @@
     "INV.2": {
         "Item": "1373",
         "Type": "CE",
-        "Table": "HL700383",
+        "Table": "HL70383",
         "LongName": "Substance Status",
         "maxLength": "250",
         "Chapter": "13"
@@ -5010,7 +5010,7 @@
     "INV.3": {
         "Item": "1374",
         "Type": "CE",
-        "Table": "HL700384",
+        "Table": "HL70384",
         "LongName": "Substance Type",
         "maxLength": "250",
         "Chapter": "13"
@@ -5074,7 +5074,7 @@
     "ISD.2": {
         "Item": "1327",
         "Type": "CE",
-        "Table": "HL700368",
+        "Table": "HL70368",
         "LongName": "Interaction Type Identifier",
         "maxLength": "250",
         "Chapter": "13"
@@ -5082,7 +5082,7 @@
     "ISD.3": {
         "Item": "1328",
         "Type": "CE",
-        "Table": "HL700387",
+        "Table": "HL70387",
         "LongName": "Interaction Active State",
         "maxLength": "250",
         "Chapter": "13"
@@ -5098,7 +5098,7 @@
     "LAN.2": {
         "Item": "1456",
         "Type": "CE",
-        "Table": "HL700296",
+        "Table": "HL70296",
         "LongName": "Language Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -5106,7 +5106,7 @@
     "LAN.3": {
         "Item": "1457",
         "Type": "CE",
-        "Table": "HL700403",
+        "Table": "HL70403",
         "LongName": "Language Ability Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -5114,7 +5114,7 @@
     "LAN.4": {
         "Item": "1458",
         "Type": "CE",
-        "Table": "HL700404",
+        "Table": "HL70404",
         "LongName": "Language Proficiency Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -5130,7 +5130,7 @@
     "LCC.2": {
         "Item": "964",
         "Type": "CE",
-        "Table": "HL700264",
+        "Table": "HL70264",
         "LongName": "Location Department",
         "maxLength": "250",
         "Chapter": "8"
@@ -5138,7 +5138,7 @@
     "LCC.3": {
         "Item": "980",
         "Type": "CE",
-        "Table": "HL700129",
+        "Table": "HL70129",
         "LongName": "Accommodation Type",
         "maxLength": "250",
         "Chapter": "8"
@@ -5146,7 +5146,7 @@
     "LCC.4": {
         "Item": "981",
         "Type": "CE",
-        "Table": "HL700132",
+        "Table": "HL70132",
         "LongName": "Charge Code",
         "maxLength": "250",
         "Chapter": "8"
@@ -5162,7 +5162,7 @@
     "LCH.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "8"
@@ -5178,7 +5178,7 @@
     "LCH.4": {
         "Item": "1295",
         "Type": "CE",
-        "Table": "HL700324",
+        "Table": "HL70324",
         "LongName": "Location Characteristic ID",
         "maxLength": "250",
         "Chapter": "8"
@@ -5186,7 +5186,7 @@
     "LCH.5": {
         "Item": "1294",
         "Type": "CE",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Location Characteristic Value-LCH",
         "maxLength": "250",
         "Chapter": "8"
@@ -5202,7 +5202,7 @@
     "LDP.10": {
         "Item": "976",
         "Type": "VH",
-        "Table": "HL700267",
+        "Table": "HL70267",
         "LongName": "Visiting Hours",
         "maxLength": "80",
         "Chapter": "8"
@@ -5218,7 +5218,7 @@
     "LDP.12": {
         "Item": "1584",
         "Type": "CE",
-        "Table": "HL700462",
+        "Table": "HL70462",
         "LongName": "Location Cost Center",
         "maxLength": "250",
         "Chapter": "8"
@@ -5226,7 +5226,7 @@
     "LDP.2": {
         "Item": "964",
         "Type": "CE",
-        "Table": "HL700264",
+        "Table": "HL70264",
         "LongName": "Location Department",
         "maxLength": "250",
         "Chapter": "8"
@@ -5234,7 +5234,7 @@
     "LDP.3": {
         "Item": "965",
         "Type": "IS",
-        "Table": "HL700069",
+        "Table": "HL70069",
         "LongName": "Location Service",
         "maxLength": "3",
         "Chapter": "8"
@@ -5242,7 +5242,7 @@
     "LDP.4": {
         "Item": "966",
         "Type": "CE",
-        "Table": "HL700265",
+        "Table": "HL70265",
         "LongName": "Specialty Type",
         "maxLength": "250",
         "Chapter": "8"
@@ -5250,7 +5250,7 @@
     "LDP.5": {
         "Item": "967",
         "Type": "IS",
-        "Table": "HL700004",
+        "Table": "HL70004",
         "LongName": "Valid Patient Classes",
         "maxLength": "1",
         "Chapter": "8"
@@ -5258,7 +5258,7 @@
     "LDP.6": {
         "Item": "675",
         "Type": "ID",
-        "Table": "HL700183",
+        "Table": "HL70183",
         "LongName": "Active\/Inactive Flag",
         "maxLength": "1",
         "Chapter": "8"
@@ -5306,7 +5306,7 @@
     "LOC.3": {
         "Item": "945",
         "Type": "IS",
-        "Table": "HL700260",
+        "Table": "HL70260",
         "LongName": "Location Type - LOC",
         "maxLength": "2",
         "Chapter": "8"
@@ -5338,7 +5338,7 @@
     "LOC.7": {
         "Item": "951",
         "Type": "CE",
-        "Table": "HL700461",
+        "Table": "HL70461",
         "LongName": "License Number",
         "maxLength": "250",
         "Chapter": "8"
@@ -5346,7 +5346,7 @@
     "LOC.8": {
         "Item": "953",
         "Type": "IS",
-        "Table": "HL700261",
+        "Table": "HL70261",
         "LongName": "Location Equipment",
         "maxLength": "3",
         "Chapter": "8"
@@ -5354,7 +5354,7 @@
     "LOC.9": {
         "Item": "1583",
         "Type": "IS",
-        "Table": "HL700442",
+        "Table": "HL70442",
         "LongName": "Location Service Code",
         "maxLength": "1",
         "Chapter": "8"
@@ -5370,7 +5370,7 @@
     "LRL.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "8"
@@ -5386,7 +5386,7 @@
     "LRL.4": {
         "Item": "1277",
         "Type": "CE",
-        "Table": "HL700325",
+        "Table": "HL70325",
         "LongName": "Location Relationship ID",
         "maxLength": "250",
         "Chapter": "8"
@@ -5410,7 +5410,7 @@
     "MFA.1": {
         "Item": "664",
         "Type": "ID",
-        "Table": "HL700180",
+        "Table": "HL70180",
         "LongName": "Record-Level Event Code",
         "maxLength": "3",
         "Chapter": "8"
@@ -5434,7 +5434,7 @@
     "MFA.4": {
         "Item": "669",
         "Type": "CE",
-        "Table": "HL700181",
+        "Table": "HL70181",
         "LongName": "MFN Record Level Error Return",
         "maxLength": "250",
         "Chapter": "8"
@@ -5450,7 +5450,7 @@
     "MFA.6": {
         "Item": "1320",
         "Type": "ID",
-        "Table": "HL700355",
+        "Table": "HL70355",
         "LongName": "Primary Key Value Type - MFA",
         "maxLength": "3",
         "Chapter": "8"
@@ -5458,7 +5458,7 @@
     "MFE.1": {
         "Item": "664",
         "Type": "ID",
-        "Table": "HL700180",
+        "Table": "HL70180",
         "LongName": "Record-Level Event Code",
         "maxLength": "3",
         "Chapter": "8"
@@ -5490,7 +5490,7 @@
     "MFE.5": {
         "Item": "1319",
         "Type": "ID",
-        "Table": "HL700355",
+        "Table": "HL70355",
         "LongName": "Primary Key Value Type",
         "maxLength": "3",
         "Chapter": "8"
@@ -5498,7 +5498,7 @@
     "MFI.1": {
         "Item": "658",
         "Type": "CE",
-        "Table": "HL700175",
+        "Table": "HL70175",
         "LongName": "Master File Identifier",
         "maxLength": "250",
         "Chapter": "8"
@@ -5514,7 +5514,7 @@
     "MFI.3": {
         "Item": "660",
         "Type": "ID",
-        "Table": "HL700178",
+        "Table": "HL70178",
         "LongName": "File-Level Event Code",
         "maxLength": "3",
         "Chapter": "8"
@@ -5538,7 +5538,7 @@
     "MFI.6": {
         "Item": "663",
         "Type": "ID",
-        "Table": "HL700179",
+        "Table": "HL70179",
         "LongName": "Response Level Code",
         "maxLength": "2",
         "Chapter": "8"
@@ -5602,7 +5602,7 @@
     "MSA.1": {
         "Item": "18",
         "Type": "ID",
-        "Table": "HL700008",
+        "Table": "HL70008",
         "LongName": "Acknowledgement Code",
         "maxLength": "2",
         "Chapter": "2"
@@ -5634,7 +5634,7 @@
     "MSA.5": {
         "Item": "22",
         "Type": "ID",
-        "Table": "HL700102",
+        "Table": "HL70102",
         "LongName": "Delayed Acknowledgment Type",
         "maxLength": "1",
         "Chapter": "2"
@@ -5642,7 +5642,7 @@
     "MSA.6": {
         "Item": "23",
         "Type": "CE",
-        "Table": "HL700357",
+        "Table": "HL70357",
         "LongName": "Error Condition",
         "maxLength": "250",
         "Chapter": "2"
@@ -5674,7 +5674,7 @@
     "MSH.12": {
         "Item": "12",
         "Type": "VID",
-        "Table": "HL700104",
+        "Table": "HL70104",
         "LongName": "Version ID",
         "maxLength": "60",
         "Chapter": "2"
@@ -5698,7 +5698,7 @@
     "MSH.15": {
         "Item": "15",
         "Type": "ID",
-        "Table": "HL700155",
+        "Table": "HL70155",
         "LongName": "Accept Acknowledgment Type",
         "maxLength": "2",
         "Chapter": "2"
@@ -5706,7 +5706,7 @@
     "MSH.16": {
         "Item": "16",
         "Type": "ID",
-        "Table": "HL700155",
+        "Table": "HL70155",
         "LongName": "Application Acknowledgment Type",
         "maxLength": "2",
         "Chapter": "2"
@@ -5714,7 +5714,7 @@
     "MSH.17": {
         "Item": "17",
         "Type": "ID",
-        "Table": "HL700399",
+        "Table": "HL70399",
         "LongName": "Country Code",
         "maxLength": "3",
         "Chapter": "2"
@@ -5722,7 +5722,7 @@
     "MSH.18": {
         "Item": "692",
         "Type": "ID",
-        "Table": "HL700211",
+        "Table": "HL70211",
         "LongName": "Character Set",
         "maxLength": "16",
         "Chapter": "2"
@@ -5746,7 +5746,7 @@
     "MSH.20": {
         "Item": "1317",
         "Type": "ID",
-        "Table": "HL700356",
+        "Table": "HL70356",
         "LongName": "Alternate Character Set Handling Scheme",
         "maxLength": "20",
         "Chapter": "2"
@@ -5754,7 +5754,7 @@
     "MSH.21": {
         "Item": "1598",
         "Type": "ID",
-        "Table": "HL700449",
+        "Table": "HL70449",
         "LongName": "Conformance Statement ID",
         "maxLength": "10",
         "Chapter": "2"
@@ -5762,7 +5762,7 @@
     "MSH.3": {
         "Item": "3",
         "Type": "HD",
-        "Table": "HL700361",
+        "Table": "HL70361",
         "LongName": "Sending Application",
         "maxLength": "180",
         "Chapter": "2"
@@ -5770,7 +5770,7 @@
     "MSH.4": {
         "Item": "4",
         "Type": "HD",
-        "Table": "HL700362",
+        "Table": "HL70362",
         "LongName": "Sending Facility",
         "maxLength": "180",
         "Chapter": "2"
@@ -5778,7 +5778,7 @@
     "MSH.5": {
         "Item": "5",
         "Type": "HD",
-        "Table": "HL700361",
+        "Table": "HL70361",
         "LongName": "Receiving Application",
         "maxLength": "180",
         "Chapter": "2"
@@ -5786,7 +5786,7 @@
     "MSH.6": {
         "Item": "6",
         "Type": "HD",
-        "Table": "HL700362",
+        "Table": "HL70362",
         "LongName": "Receiving Facility",
         "maxLength": "180",
         "Chapter": "2"
@@ -5810,7 +5810,7 @@
     "MSH.9": {
         "Item": "9",
         "Type": "MSG",
-        "Table": "HL700076",
+        "Table": "HL70076",
         "LongName": "Message Type",
         "maxLength": "15",
         "Chapter": "2"
@@ -5842,7 +5842,7 @@
     "NDS.3": {
         "Item": "1400",
         "Type": "CE",
-        "Table": "HL700367",
+        "Table": "HL70367",
         "LongName": "Notification Alert Severity",
         "maxLength": "250",
         "Chapter": "13"
@@ -5874,7 +5874,7 @@
     "NK1.11": {
         "Item": "200",
         "Type": "JCC",
-        "Table": "HL700327",
+        "Table": "HL70327",
         "LongName": "Next of Kin \/ Associated Parties Job Code\/Class",
         "maxLength": "20",
         "Chapter": "3"
@@ -5898,7 +5898,7 @@
     "NK1.14": {
         "Item": "119",
         "Type": "CE",
-        "Table": "HL700002",
+        "Table": "HL70002",
         "LongName": "Marital Status",
         "maxLength": "250",
         "Chapter": "3"
@@ -5906,7 +5906,7 @@
     "NK1.15": {
         "Item": "111",
         "Type": "IS",
-        "Table": "HL700001",
+        "Table": "HL70001",
         "LongName": "Administrative Sex",
         "maxLength": "1",
         "Chapter": "3"
@@ -5922,7 +5922,7 @@
     "NK1.17": {
         "Item": "755",
         "Type": "IS",
-        "Table": "HL700223",
+        "Table": "HL70223",
         "LongName": "Living Dependency",
         "maxLength": "2",
         "Chapter": "3"
@@ -5930,7 +5930,7 @@
     "NK1.18": {
         "Item": "145",
         "Type": "IS",
-        "Table": "HL700009",
+        "Table": "HL70009",
         "LongName": "Ambulatory Status",
         "maxLength": "2",
         "Chapter": "3"
@@ -5938,7 +5938,7 @@
     "NK1.19": {
         "Item": "129",
         "Type": "CE",
-        "Table": "HL700171",
+        "Table": "HL70171",
         "LongName": "Citizenship",
         "maxLength": "250",
         "Chapter": "3"
@@ -5954,7 +5954,7 @@
     "NK1.20": {
         "Item": "118",
         "Type": "CE",
-        "Table": "HL700296",
+        "Table": "HL70296",
         "LongName": "Primary Language",
         "maxLength": "250",
         "Chapter": "3"
@@ -5962,7 +5962,7 @@
     "NK1.21": {
         "Item": "742",
         "Type": "IS",
-        "Table": "HL700220",
+        "Table": "HL70220",
         "LongName": "Living Arrangement",
         "maxLength": "2",
         "Chapter": "3"
@@ -5970,7 +5970,7 @@
     "NK1.22": {
         "Item": "743",
         "Type": "CE",
-        "Table": "HL700215",
+        "Table": "HL70215",
         "LongName": "Publicity Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -5978,7 +5978,7 @@
     "NK1.23": {
         "Item": "744",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Protection Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -5986,7 +5986,7 @@
     "NK1.24": {
         "Item": "745",
         "Type": "IS",
-        "Table": "HL700231",
+        "Table": "HL70231",
         "LongName": "Student Indicator",
         "maxLength": "2",
         "Chapter": "3"
@@ -5994,7 +5994,7 @@
     "NK1.25": {
         "Item": "120",
         "Type": "CE",
-        "Table": "HL700006",
+        "Table": "HL70006",
         "LongName": "Religion",
         "maxLength": "250",
         "Chapter": "3"
@@ -6010,7 +6010,7 @@
     "NK1.27": {
         "Item": "739",
         "Type": "CE",
-        "Table": "HL700212",
+        "Table": "HL70212",
         "LongName": "Nationality",
         "maxLength": "250",
         "Chapter": "3"
@@ -6018,7 +6018,7 @@
     "NK1.28": {
         "Item": "125",
         "Type": "CE",
-        "Table": "HL700189",
+        "Table": "HL70189",
         "LongName": "Ethnic Group",
         "maxLength": "250",
         "Chapter": "3"
@@ -6026,7 +6026,7 @@
     "NK1.29": {
         "Item": "747",
         "Type": "CE",
-        "Table": "HL700222",
+        "Table": "HL70222",
         "LongName": "Contact Reason",
         "maxLength": "250",
         "Chapter": "3"
@@ -6034,7 +6034,7 @@
     "NK1.3": {
         "Item": "192",
         "Type": "CE",
-        "Table": "HL700063",
+        "Table": "HL70063",
         "LongName": "Relationship",
         "maxLength": "250",
         "Chapter": "3"
@@ -6074,7 +6074,7 @@
     "NK1.34": {
         "Item": "752",
         "Type": "IS",
-        "Table": "HL700311",
+        "Table": "HL70311",
         "LongName": "Job Status",
         "maxLength": "2",
         "Chapter": "3"
@@ -6082,7 +6082,7 @@
     "NK1.35": {
         "Item": "113",
         "Type": "CE",
-        "Table": "HL700005",
+        "Table": "HL70005",
         "LongName": "Race",
         "maxLength": "250",
         "Chapter": "3"
@@ -6090,7 +6090,7 @@
     "NK1.36": {
         "Item": "753",
         "Type": "IS",
-        "Table": "HL700295",
+        "Table": "HL70295",
         "LongName": "Handicap",
         "maxLength": "2",
         "Chapter": "3"
@@ -6130,7 +6130,7 @@
     "NK1.7": {
         "Item": "196",
         "Type": "CE",
-        "Table": "HL700131",
+        "Table": "HL70131",
         "LongName": "Contact Role",
         "maxLength": "250",
         "Chapter": "3"
@@ -6162,7 +6162,7 @@
     "NPU.2": {
         "Item": "170",
         "Type": "IS",
-        "Table": "HL700116",
+        "Table": "HL70116",
         "LongName": "Bed Status",
         "maxLength": "1",
         "Chapter": "3"
@@ -6170,7 +6170,7 @@
     "NSC.1": {
         "Item": "1188",
         "Type": "IS",
-        "Table": "HL700409",
+        "Table": "HL70409",
         "LongName": "Application Change Type",
         "maxLength": "4",
         "Chapter": "14"
@@ -6242,7 +6242,7 @@
     "NST.1": {
         "Item": "1173",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Statistics Available",
         "maxLength": "1",
         "Chapter": "14"
@@ -6370,7 +6370,7 @@
     "NTE.2": {
         "Item": "97",
         "Type": "ID",
-        "Table": "HL700105",
+        "Table": "HL70105",
         "LongName": "Source of Comment",
         "maxLength": "8",
         "Chapter": "2"
@@ -6386,7 +6386,7 @@
     "NTE.4": {
         "Item": "1318",
         "Type": "CE",
-        "Table": "HL700364",
+        "Table": "HL70364",
         "LongName": "Comment Type",
         "maxLength": "250",
         "Chapter": "2"
@@ -6410,7 +6410,7 @@
     "OBR.11": {
         "Item": "245",
         "Type": "ID",
-        "Table": "HL700065",
+        "Table": "HL70065",
         "LongName": "Specimen Action Code *",
         "maxLength": "1",
         "Chapter": "4"
@@ -6442,7 +6442,7 @@
     "OBR.15": {
         "Item": "249",
         "Type": "SPS",
-        "Table": "HL700070",
+        "Table": "HL70070",
         "LongName": "Specimen Source",
         "maxLength": "300",
         "Chapter": "4"
@@ -6522,7 +6522,7 @@
     "OBR.24": {
         "Item": "257",
         "Type": "ID",
-        "Table": "HL700074",
+        "Table": "HL70074",
         "LongName": "Diagnostic Serv Sect ID",
         "maxLength": "10",
         "Chapter": "4"
@@ -6530,7 +6530,7 @@
     "OBR.25": {
         "Item": "258",
         "Type": "ID",
-        "Table": "HL700123",
+        "Table": "HL70123",
         "LongName": "Result Status +",
         "maxLength": "1",
         "Chapter": "4"
@@ -6578,7 +6578,7 @@
     "OBR.30": {
         "Item": "262",
         "Type": "ID",
-        "Table": "HL700124",
+        "Table": "HL70124",
         "LongName": "Transportation Mode",
         "maxLength": "20",
         "Chapter": "4"
@@ -6674,7 +6674,7 @@
     "OBR.41": {
         "Item": "1032",
         "Type": "ID",
-        "Table": "HL700224",
+        "Table": "HL70224",
         "LongName": "Transport Arranged",
         "maxLength": "30",
         "Chapter": "4"
@@ -6682,7 +6682,7 @@
     "OBR.42": {
         "Item": "1033",
         "Type": "ID",
-        "Table": "HL700225",
+        "Table": "HL70225",
         "LongName": "Escort Required",
         "maxLength": "1",
         "Chapter": "4"
@@ -6698,7 +6698,7 @@
     "OBR.44": {
         "Item": "393",
         "Type": "CE",
-        "Table": "HL700088",
+        "Table": "HL70088",
         "LongName": "Procedure Code",
         "maxLength": "250",
         "Chapter": "4"
@@ -6706,7 +6706,7 @@
     "OBR.45": {
         "Item": "1316",
         "Type": "CE",
-        "Table": "HL700340",
+        "Table": "HL70340",
         "LongName": "Procedure Code Modifier",
         "maxLength": "250",
         "Chapter": "4"
@@ -6714,7 +6714,7 @@
     "OBR.46": {
         "Item": "1474",
         "Type": "CE",
-        "Table": "HL700411",
+        "Table": "HL70411",
         "LongName": "Placer Supplemental Service Information",
         "maxLength": "250",
         "Chapter": "4"
@@ -6722,7 +6722,7 @@
     "OBR.47": {
         "Item": "1475",
         "Type": "CE",
-        "Table": "HL700411",
+        "Table": "HL70411",
         "LongName": "Filler Supplemental Service Information",
         "maxLength": "250",
         "Chapter": "4"
@@ -6778,7 +6778,7 @@
     "OBX.10": {
         "Item": "578",
         "Type": "ID",
-        "Table": "HL700080",
+        "Table": "HL70080",
         "LongName": "Nature of Abnormal Test",
         "maxLength": "2",
         "Chapter": "7"
@@ -6786,7 +6786,7 @@
     "OBX.11": {
         "Item": "579",
         "Type": "ID",
-        "Table": "HL700085",
+        "Table": "HL70085",
         "LongName": "Observation Result Status",
         "maxLength": "1",
         "Chapter": "7"
@@ -6858,7 +6858,7 @@
     "OBX.2": {
         "Item": "570",
         "Type": "ID",
-        "Table": "HL700125",
+        "Table": "HL70125",
         "LongName": "Value Type",
         "maxLength": "2",
         "Chapter": "7"
@@ -6906,7 +6906,7 @@
     "OBX.8": {
         "Item": "576",
         "Type": "IS",
-        "Table": "HL700078",
+        "Table": "HL70078",
         "LongName": "Abnormal Flags",
         "maxLength": "5",
         "Chapter": "7"
@@ -6922,7 +6922,7 @@
     "ODS.1": {
         "Item": "269",
         "Type": "ID",
-        "Table": "HL700159",
+        "Table": "HL70159",
         "LongName": "Type",
         "maxLength": "1",
         "Chapter": "4"
@@ -6954,7 +6954,7 @@
     "ODT.1": {
         "Item": "273",
         "Type": "CE",
-        "Table": "HL700160",
+        "Table": "HL70160",
         "LongName": "Tray Type",
         "maxLength": "250",
         "Chapter": "4"
@@ -7002,7 +7002,7 @@
     "OM1.12": {
         "Item": "597",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Orderability",
         "maxLength": "1",
         "Chapter": "8"
@@ -7026,7 +7026,7 @@
     "OM1.15": {
         "Item": "600",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Portable Device Indicator",
         "maxLength": "1",
         "Chapter": "8"
@@ -7050,7 +7050,7 @@
     "OM1.18": {
         "Item": "603",
         "Type": "IS",
-        "Table": "HL700174",
+        "Table": "HL70174",
         "LongName": "Nature of Service\/Test\/Observation",
         "maxLength": "1",
         "Chapter": "8"
@@ -7114,7 +7114,7 @@
     "OM1.25": {
         "Item": "610",
         "Type": "ID",
-        "Table": "HL700168",
+        "Table": "HL70168",
         "LongName": "Processing Priority",
         "maxLength": "40",
         "Chapter": "8"
@@ -7122,7 +7122,7 @@
     "OM1.26": {
         "Item": "611",
         "Type": "ID",
-        "Table": "HL700169",
+        "Table": "HL70169",
         "LongName": "Reporting Priority",
         "maxLength": "5",
         "Chapter": "8"
@@ -7154,7 +7154,7 @@
     "OM1.3": {
         "Item": "588",
         "Type": "ID",
-        "Table": "HL700125",
+        "Table": "HL70125",
         "LongName": "Permitted Data Types",
         "maxLength": "12",
         "Chapter": "8"
@@ -7162,7 +7162,7 @@
     "OM1.30": {
         "Item": "615",
         "Type": "IS",
-        "Table": "HL700177",
+        "Table": "HL70177",
         "LongName": "Confidentiality Code",
         "maxLength": "1",
         "Chapter": "8"
@@ -7242,7 +7242,7 @@
     "OM1.4": {
         "Item": "589",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Specimen Required",
         "maxLength": "1",
         "Chapter": "8"
@@ -7266,7 +7266,7 @@
     "OM1.42": {
         "Item": "937",
         "Type": "CE",
-        "Table": "HL700254",
+        "Table": "HL70254",
         "LongName": "Kind of Quantity Observed",
         "maxLength": "250",
         "Chapter": "8"
@@ -7274,7 +7274,7 @@
     "OM1.43": {
         "Item": "938",
         "Type": "CE",
-        "Table": "HL700255",
+        "Table": "HL70255",
         "LongName": "Point Versus Interval",
         "maxLength": "250",
         "Chapter": "8"
@@ -7282,7 +7282,7 @@
     "OM1.44": {
         "Item": "939",
         "Type": "TX",
-        "Table": "HL700256",
+        "Table": "HL70256",
         "LongName": "Challenge Information",
         "maxLength": "200",
         "Chapter": "8"
@@ -7290,7 +7290,7 @@
     "OM1.45": {
         "Item": "940",
         "Type": "CE",
-        "Table": "HL700258",
+        "Table": "HL70258",
         "LongName": "Relationship Modifier",
         "maxLength": "250",
         "Chapter": "8"
@@ -7306,7 +7306,7 @@
     "OM1.47": {
         "Item": "942",
         "Type": "CE",
-        "Table": "HL700259",
+        "Table": "HL70259",
         "LongName": "Modality Of Imaging Measurement",
         "maxLength": "250",
         "Chapter": "8"
@@ -7482,7 +7482,7 @@
     "OM3.7": {
         "Item": "570",
         "Type": "ID",
-        "Table": "HL700125",
+        "Table": "HL70125",
         "LongName": "Value Type",
         "maxLength": "2",
         "Chapter": "8"
@@ -7522,7 +7522,7 @@
     "OM4.13": {
         "Item": "653",
         "Type": "ID",
-        "Table": "HL700027",
+        "Table": "HL70027",
         "LongName": "Specimen Priorities",
         "maxLength": "1",
         "Chapter": "8"
@@ -7538,7 +7538,7 @@
     "OM4.2": {
         "Item": "642",
         "Type": "ID",
-        "Table": "HL700170",
+        "Table": "HL70170",
         "LongName": "Derived Specimen",
         "maxLength": "1",
         "Chapter": "8"
@@ -7578,7 +7578,7 @@
     "OM4.7": {
         "Item": "647",
         "Type": "CE",
-        "Table": "HL700371",
+        "Table": "HL70371",
         "LongName": "Additive",
         "maxLength": "250",
         "Chapter": "8"
@@ -7650,7 +7650,7 @@
     "OM7.10": {
         "Item": "1488",
         "Type": "IS",
-        "Table": "HL700335",
+        "Table": "HL70335",
         "LongName": "Test\/Service Default Frequency",
         "maxLength": "60",
         "Chapter": "8"
@@ -7658,7 +7658,7 @@
     "OM7.11": {
         "Item": "1489",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Consent Indicator",
         "maxLength": "1",
         "Chapter": "8"
@@ -7666,7 +7666,7 @@
     "OM7.12": {
         "Item": "1490",
         "Type": "CE",
-        "Table": "HL700413",
+        "Table": "HL70413",
         "LongName": "Consent Identifier",
         "maxLength": "250",
         "Chapter": "8"
@@ -7698,7 +7698,7 @@
     "OM7.16": {
         "Item": "1494",
         "Type": "CE",
-        "Table": "HL700414",
+        "Table": "HL70414",
         "LongName": "Consent Interval Units",
         "maxLength": "250",
         "Chapter": "8"
@@ -7714,7 +7714,7 @@
     "OM7.18": {
         "Item": "1496",
         "Type": "CE",
-        "Table": "HL700414",
+        "Table": "HL70414",
         "LongName": "Consent Waiting Period Units",
         "maxLength": "250",
         "Chapter": "8"
@@ -7762,7 +7762,7 @@
     "OM7.23": {
         "Item": "1499",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Special Order Indicator",
         "maxLength": "1",
         "Chapter": "8"
@@ -7770,7 +7770,7 @@
     "OM7.24": {
         "Item": "1306",
         "Type": "CE",
-        "Table": "HL700132",
+        "Table": "HL70132",
         "LongName": "Primary Key Value - CDM",
         "maxLength": "250",
         "Chapter": "8"
@@ -7778,7 +7778,7 @@
     "OM7.3": {
         "Item": "1481",
         "Type": "CE",
-        "Table": "HL700412",
+        "Table": "HL70412",
         "LongName": "Category Identifier",
         "maxLength": "250",
         "Chapter": "8"
@@ -7834,7 +7834,7 @@
     "ORC.1": {
         "Item": "215",
         "Type": "ID",
-        "Table": "HL700119",
+        "Table": "HL70119",
         "LongName": "Order Control",
         "maxLength": "2",
         "Chapter": "4"
@@ -7930,7 +7930,7 @@
     "ORC.20": {
         "Item": "1310",
         "Type": "CE",
-        "Table": "HL700339",
+        "Table": "HL70339",
         "LongName": "Advanced Beneficiary Notice Code",
         "maxLength": "250",
         "Chapter": "4"
@@ -7994,7 +7994,7 @@
     "ORC.5": {
         "Item": "219",
         "Type": "ID",
-        "Table": "HL700038",
+        "Table": "HL70038",
         "LongName": "Order Status",
         "maxLength": "2",
         "Chapter": "4"
@@ -8002,7 +8002,7 @@
     "ORC.6": {
         "Item": "220",
         "Type": "ID",
-        "Table": "HL700121",
+        "Table": "HL70121",
         "LongName": "Response Flag",
         "maxLength": "1",
         "Chapter": "4"
@@ -8042,7 +8042,7 @@
     "ORG.10": {
         "Item": "1276",
         "Type": "CE",
-        "Table": "HL700066",
+        "Table": "HL70066",
         "LongName": "Employment Status Code",
         "maxLength": "2",
         "Chapter": "15"
@@ -8050,7 +8050,7 @@
     "ORG.11": {
         "Item": "1467",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Board Approval Indicator",
         "maxLength": "1",
         "Chapter": "15"
@@ -8058,7 +8058,7 @@
     "ORG.12": {
         "Item": "1468",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Primary Care Physician Indicator",
         "maxLength": "1",
         "Chapter": "15"
@@ -8066,7 +8066,7 @@
     "ORG.2": {
         "Item": "1460",
         "Type": "CE",
-        "Table": "HL700405",
+        "Table": "HL70405",
         "LongName": "Organization Unit Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -8074,7 +8074,7 @@
     "ORG.3": {
         "Item": "1625",
         "Type": "CE",
-        "Table": "HL700474",
+        "Table": "HL70474",
         "LongName": "Organization Unit Type Code - ORG",
         "maxLength": "250",
         "Chapter": "15"
@@ -8082,7 +8082,7 @@
     "ORG.4": {
         "Item": "1462",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Primary Org Unit Indicator",
         "maxLength": "1",
         "Chapter": "15"
@@ -8098,7 +8098,7 @@
     "ORG.6": {
         "Item": "1464",
         "Type": "CE",
-        "Table": "HL700452",
+        "Table": "HL70452",
         "LongName": "Health Care Provider Type Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -8106,7 +8106,7 @@
     "ORG.7": {
         "Item": "1614",
         "Type": "CE",
-        "Table": "HL700453",
+        "Table": "HL70453",
         "LongName": "Health Care Provider Classification Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -8114,7 +8114,7 @@
     "ORG.8": {
         "Item": "1615",
         "Type": "CE",
-        "Table": "HL700454",
+        "Table": "HL70454",
         "LongName": "Health Care Provider Area of Specialization Code",
         "maxLength": "250",
         "Chapter": "15"
@@ -8146,7 +8146,7 @@
     "PCR.11": {
         "Item": "1108",
         "Type": "IS",
-        "Table": "HL700245",
+        "Table": "HL70245",
         "LongName": "Product Problem",
         "maxLength": "8",
         "Chapter": "7"
@@ -8162,7 +8162,7 @@
     "PCR.13": {
         "Item": "1110",
         "Type": "IS",
-        "Table": "HL700246",
+        "Table": "HL70246",
         "LongName": "Product Available For Inspection",
         "maxLength": "1",
         "Chapter": "7"
@@ -8178,7 +8178,7 @@
     "PCR.15": {
         "Item": "1112",
         "Type": "CE",
-        "Table": "HL700247",
+        "Table": "HL70247",
         "LongName": "Product Evaluation Status",
         "maxLength": "250",
         "Chapter": "7"
@@ -8194,7 +8194,7 @@
     "PCR.17": {
         "Item": "1114",
         "Type": "ID",
-        "Table": "HL700248",
+        "Table": "HL70248",
         "LongName": "Evaluated Product Source",
         "maxLength": "8",
         "Chapter": "7"
@@ -8210,7 +8210,7 @@
     "PCR.19": {
         "Item": "1116",
         "Type": "ID",
-        "Table": "HL700242",
+        "Table": "HL70242",
         "LongName": "Device Operator Qualifications",
         "maxLength": "1",
         "Chapter": "7"
@@ -8218,7 +8218,7 @@
     "PCR.2": {
         "Item": "1099",
         "Type": "IS",
-        "Table": "HL700249",
+        "Table": "HL70249",
         "LongName": "Generic Product",
         "maxLength": "1",
         "Chapter": "7"
@@ -8226,7 +8226,7 @@
     "PCR.20": {
         "Item": "1117",
         "Type": "ID",
-        "Table": "HL700250",
+        "Table": "HL70250",
         "LongName": "Relatedness Assessment",
         "maxLength": "1",
         "Chapter": "7"
@@ -8234,7 +8234,7 @@
     "PCR.21": {
         "Item": "1118",
         "Type": "ID",
-        "Table": "HL700251",
+        "Table": "HL70251",
         "LongName": "Action Taken In Response To The Event",
         "maxLength": "2",
         "Chapter": "7"
@@ -8242,7 +8242,7 @@
     "PCR.22": {
         "Item": "1119",
         "Type": "ID",
-        "Table": "HL700252",
+        "Table": "HL70252",
         "LongName": "Event Causality Observations",
         "maxLength": "2",
         "Chapter": "7"
@@ -8250,7 +8250,7 @@
     "PCR.23": {
         "Item": "1120",
         "Type": "ID",
-        "Table": "HL700253",
+        "Table": "HL70253",
         "LongName": "Indirect Exposure Mechanism",
         "maxLength": "1",
         "Chapter": "7"
@@ -8306,7 +8306,7 @@
     "PCR.9": {
         "Item": "1106",
         "Type": "IS",
-        "Table": "HL700244",
+        "Table": "HL70244",
         "LongName": "Single Use Device",
         "maxLength": "8",
         "Chapter": "7"
@@ -8314,7 +8314,7 @@
     "PD1.1": {
         "Item": "755",
         "Type": "IS",
-        "Table": "HL700223",
+        "Table": "HL70223",
         "LongName": "Living Dependency",
         "maxLength": "2",
         "Chapter": "3"
@@ -8330,7 +8330,7 @@
     "PD1.11": {
         "Item": "743",
         "Type": "CE",
-        "Table": "HL700215",
+        "Table": "HL70215",
         "LongName": "Publicity Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -8338,7 +8338,7 @@
     "PD1.12": {
         "Item": "744",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Protection Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -8362,7 +8362,7 @@
     "PD1.15": {
         "Item": "01568",
         "Type": "CE",
-        "Table": "HL700435",
+        "Table": "HL70435",
         "LongName": "Advance Directive Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -8370,7 +8370,7 @@
     "PD1.16": {
         "Item": "1569",
         "Type": "IS",
-        "Table": "HL700441",
+        "Table": "HL70441",
         "LongName": "Immunization Registry Status",
         "maxLength": "1",
         "Chapter": "3"
@@ -8394,7 +8394,7 @@
     "PD1.19": {
         "Item": "1572",
         "Type": "IS",
-        "Table": "HL700140",
+        "Table": "HL70140",
         "LongName": "Military Branch",
         "maxLength": "5",
         "Chapter": "3"
@@ -8402,7 +8402,7 @@
     "PD1.2": {
         "Item": "742",
         "Type": "IS",
-        "Table": "HL700220",
+        "Table": "HL70220",
         "LongName": "Living Arrangement",
         "maxLength": "2",
         "Chapter": "3"
@@ -8410,7 +8410,7 @@
     "PD1.20": {
         "Item": "486",
         "Type": "IS",
-        "Table": "HL700141",
+        "Table": "HL70141",
         "LongName": "Military Rank\/Grade",
         "maxLength": "2",
         "Chapter": "3"
@@ -8418,7 +8418,7 @@
     "PD1.21": {
         "Item": "01573",
         "Type": "IS",
-        "Table": "HL700142",
+        "Table": "HL70142",
         "LongName": "Military Status",
         "maxLength": "3",
         "Chapter": "3"
@@ -8442,7 +8442,7 @@
     "PD1.5": {
         "Item": "745",
         "Type": "IS",
-        "Table": "HL700231",
+        "Table": "HL70231",
         "LongName": "Student Indicator",
         "maxLength": "2",
         "Chapter": "3"
@@ -8450,7 +8450,7 @@
     "PD1.6": {
         "Item": "753",
         "Type": "IS",
-        "Table": "HL700295",
+        "Table": "HL70295",
         "LongName": "Handicap",
         "maxLength": "2",
         "Chapter": "3"
@@ -8458,7 +8458,7 @@
     "PD1.7": {
         "Item": "759",
         "Type": "IS",
-        "Table": "HL700315",
+        "Table": "HL70315",
         "LongName": "Living Will Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -8466,7 +8466,7 @@
     "PD1.8": {
         "Item": "760",
         "Type": "IS",
-        "Table": "HL700316",
+        "Table": "HL70316",
         "LongName": "Organ Donor Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -8474,7 +8474,7 @@
     "PD1.9": {
         "Item": "761",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Separate Bill",
         "maxLength": "1",
         "Chapter": "3"
@@ -8498,7 +8498,7 @@
     "PDA.3": {
         "Item": "1576",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Death Certified Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -8522,7 +8522,7 @@
     "PDA.6": {
         "Item": "1579",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Autopsy Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -8546,7 +8546,7 @@
     "PDA.9": {
         "Item": "1582",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Coroner Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -8562,7 +8562,7 @@
     "PDC.10": {
         "Item": "1256",
         "Type": "ID",
-        "Table": "HL700330",
+        "Table": "HL70330",
         "LongName": "Marketing Basis",
         "maxLength": "4",
         "Chapter": "7"
@@ -8682,7 +8682,7 @@
     "PEO.10": {
         "Item": "1082",
         "Type": "ID",
-        "Table": "HL700239",
+        "Table": "HL70239",
         "LongName": "Event Expected",
         "maxLength": "1",
         "Chapter": "7"
@@ -8690,7 +8690,7 @@
     "PEO.11": {
         "Item": "1083",
         "Type": "ID",
-        "Table": "HL700240",
+        "Table": "HL70240",
         "LongName": "Event Outcome",
         "maxLength": "1",
         "Chapter": "7"
@@ -8698,7 +8698,7 @@
     "PEO.12": {
         "Item": "1084",
         "Type": "ID",
-        "Table": "HL700241",
+        "Table": "HL70241",
         "LongName": "Patient Outcome",
         "maxLength": "1",
         "Chapter": "7"
@@ -8786,7 +8786,7 @@
     "PEO.22": {
         "Item": "1094",
         "Type": "ID",
-        "Table": "HL700242",
+        "Table": "HL70242",
         "LongName": "Primary Observer's Qualification",
         "maxLength": "1",
         "Chapter": "7"
@@ -8794,7 +8794,7 @@
     "PEO.23": {
         "Item": "1095",
         "Type": "ID",
-        "Table": "HL700242",
+        "Table": "HL70242",
         "LongName": "Confirmation Provided By",
         "maxLength": "1",
         "Chapter": "7"
@@ -8810,7 +8810,7 @@
     "PEO.25": {
         "Item": "1097",
         "Type": "ID",
-        "Table": "HL700243",
+        "Table": "HL70243",
         "LongName": "Primary Observer's identity May Be Divulged",
         "maxLength": "1",
         "Chapter": "7"
@@ -8858,7 +8858,7 @@
     "PEO.8": {
         "Item": "1080",
         "Type": "ID",
-        "Table": "HL700237",
+        "Table": "HL70237",
         "LongName": "Event Qualification",
         "maxLength": "1",
         "Chapter": "7"
@@ -8866,7 +8866,7 @@
     "PEO.9": {
         "Item": "1081",
         "Type": "ID",
-        "Table": "HL700238",
+        "Table": "HL70238",
         "LongName": "Event Serious",
         "maxLength": "1",
         "Chapter": "7"
@@ -8890,7 +8890,7 @@
     "PES.11": {
         "Item": "1070",
         "Type": "ID",
-        "Table": "HL700234",
+        "Table": "HL70234",
         "LongName": "Event Report Timing\/Type",
         "maxLength": "3",
         "Chapter": "7"
@@ -8898,7 +8898,7 @@
     "PES.12": {
         "Item": "1071",
         "Type": "ID",
-        "Table": "HL700235",
+        "Table": "HL70235",
         "LongName": "Event Report Source",
         "maxLength": "1",
         "Chapter": "7"
@@ -8906,7 +8906,7 @@
     "PES.13": {
         "Item": "1072",
         "Type": "ID",
-        "Table": "HL700236",
+        "Table": "HL70236",
         "LongName": "Event Reported To",
         "maxLength": "1",
         "Chapter": "7"
@@ -8986,7 +8986,7 @@
     "PID.10": {
         "Item": "113",
         "Type": "CE",
-        "Table": "HL700005",
+        "Table": "HL70005",
         "LongName": "Race",
         "maxLength": "250",
         "Chapter": "3"
@@ -9002,7 +9002,7 @@
     "PID.12": {
         "Item": "115",
         "Type": "IS",
-        "Table": "HL700289",
+        "Table": "HL70289",
         "LongName": "County Code",
         "maxLength": "4",
         "Chapter": "3"
@@ -9026,7 +9026,7 @@
     "PID.15": {
         "Item": "118",
         "Type": "CE",
-        "Table": "HL700296",
+        "Table": "HL70296",
         "LongName": "Primary Language",
         "maxLength": "250",
         "Chapter": "3"
@@ -9034,7 +9034,7 @@
     "PID.16": {
         "Item": "119",
         "Type": "CE",
-        "Table": "HL700002",
+        "Table": "HL70002",
         "LongName": "Marital Status",
         "maxLength": "250",
         "Chapter": "3"
@@ -9042,7 +9042,7 @@
     "PID.17": {
         "Item": "120",
         "Type": "CE",
-        "Table": "HL700006",
+        "Table": "HL70006",
         "LongName": "Religion",
         "maxLength": "250",
         "Chapter": "3"
@@ -9090,7 +9090,7 @@
     "PID.22": {
         "Item": "125",
         "Type": "CE",
-        "Table": "HL700189",
+        "Table": "HL70189",
         "LongName": "Ethnic Group",
         "maxLength": "250",
         "Chapter": "3"
@@ -9106,7 +9106,7 @@
     "PID.24": {
         "Item": "127",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Multiple Birth Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -9122,7 +9122,7 @@
     "PID.26": {
         "Item": "129",
         "Type": "CE",
-        "Table": "HL700171",
+        "Table": "HL70171",
         "LongName": "Citizenship",
         "maxLength": "250",
         "Chapter": "3"
@@ -9130,7 +9130,7 @@
     "PID.27": {
         "Item": "130",
         "Type": "CE",
-        "Table": "HL700172",
+        "Table": "HL70172",
         "LongName": "Veterans Military Status",
         "maxLength": "250",
         "Chapter": "3"
@@ -9138,7 +9138,7 @@
     "PID.28": {
         "Item": "739",
         "Type": "CE",
-        "Table": "HL700212",
+        "Table": "HL70212",
         "LongName": "Nationality",
         "maxLength": "250",
         "Chapter": "3"
@@ -9162,7 +9162,7 @@
     "PID.30": {
         "Item": "741",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Patient Death Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -9170,7 +9170,7 @@
     "PID.31": {
         "Item": "1535",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Identity Unknown Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -9178,7 +9178,7 @@
     "PID.32": {
         "Item": "1536",
         "Type": "IS",
-        "Table": "HL700445",
+        "Table": "HL70445",
         "LongName": "Identity Reliability Code",
         "maxLength": "20",
         "Chapter": "3"
@@ -9202,7 +9202,7 @@
     "PID.35": {
         "Item": "1539",
         "Type": "CE",
-        "Table": "HL700446",
+        "Table": "HL70446",
         "LongName": "Species Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -9210,7 +9210,7 @@
     "PID.36": {
         "Item": "1540",
         "Type": "CE",
-        "Table": "HL700447",
+        "Table": "HL70447",
         "LongName": "Breed Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -9226,7 +9226,7 @@
     "PID.38": {
         "Item": "1542",
         "Type": "CE",
-        "Table": "HL700429",
+        "Table": "HL70429",
         "LongName": "Production Class Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -9266,7 +9266,7 @@
     "PID.8": {
         "Item": "111",
         "Type": "IS",
-        "Table": "HL700001",
+        "Table": "HL70001",
         "LongName": "Administrative Sex",
         "maxLength": "1",
         "Chapter": "3"
@@ -9298,7 +9298,7 @@
     "PR1.11": {
         "Item": "401",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Surgeon",
         "maxLength": "250",
         "Chapter": "6"
@@ -9306,7 +9306,7 @@
     "PR1.12": {
         "Item": "402",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Procedure Practitioner",
         "maxLength": "250",
         "Chapter": "6"
@@ -9314,7 +9314,7 @@
     "PR1.13": {
         "Item": "403",
         "Type": "CE",
-        "Table": "HL700059",
+        "Table": "HL70059",
         "LongName": "Consent Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -9322,7 +9322,7 @@
     "PR1.14": {
         "Item": "404",
         "Type": "ID",
-        "Table": "HL700418",
+        "Table": "HL70418",
         "LongName": "Procedure Priority",
         "maxLength": "2",
         "Chapter": "6"
@@ -9330,7 +9330,7 @@
     "PR1.15": {
         "Item": "772",
         "Type": "CE",
-        "Table": "HL700051",
+        "Table": "HL70051",
         "LongName": "Associated Diagnosis Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -9338,7 +9338,7 @@
     "PR1.16": {
         "Item": "1316",
         "Type": "CE",
-        "Table": "HL700340",
+        "Table": "HL70340",
         "LongName": "Procedure Code Modifier",
         "maxLength": "250",
         "Chapter": "6"
@@ -9346,7 +9346,7 @@
     "PR1.17": {
         "Item": "1501",
         "Type": "IS",
-        "Table": "HL700416",
+        "Table": "HL70416",
         "LongName": "Procedure DRG Type",
         "maxLength": "20",
         "Chapter": "6"
@@ -9354,7 +9354,7 @@
     "PR1.18": {
         "Item": "1502",
         "Type": "CE",
-        "Table": "HL700417",
+        "Table": "HL70417",
         "LongName": "Tissue Type Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -9362,7 +9362,7 @@
     "PR1.2": {
         "Item": "392",
         "Type": "IS",
-        "Table": "HL700089",
+        "Table": "HL70089",
         "LongName": "Procedure Coding Method",
         "maxLength": "3",
         "Chapter": "6"
@@ -9370,7 +9370,7 @@
     "PR1.3": {
         "Item": "393",
         "Type": "CE",
-        "Table": "HL700088",
+        "Table": "HL70088",
         "LongName": "Procedure Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -9394,7 +9394,7 @@
     "PR1.6": {
         "Item": "396",
         "Type": "IS",
-        "Table": "HL700230",
+        "Table": "HL70230",
         "LongName": "Procedure Functional Type",
         "maxLength": "2",
         "Chapter": "6"
@@ -9410,7 +9410,7 @@
     "PR1.8": {
         "Item": "398",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Anesthesiologist",
         "maxLength": "250",
         "Chapter": "6"
@@ -9418,7 +9418,7 @@
     "PR1.9": {
         "Item": "399",
         "Type": "IS",
-        "Table": "HL700019",
+        "Table": "HL70019",
         "LongName": "Anesthesia Code",
         "maxLength": "2",
         "Chapter": "6"
@@ -9442,7 +9442,7 @@
     "PRA.11": {
         "Item": "1388",
         "Type": "CE",
-        "Table": "HL700401",
+        "Table": "HL70401",
         "LongName": "Government Reimbursement Billing Eligibility",
         "maxLength": "250",
         "Chapter": "15"
@@ -9458,7 +9458,7 @@
     "PRA.2": {
         "Item": "686",
         "Type": "CE",
-        "Table": "HL700358",
+        "Table": "HL70358",
         "LongName": "Practitioner Group",
         "maxLength": "250",
         "Chapter": "15"
@@ -9466,7 +9466,7 @@
     "PRA.3": {
         "Item": "687",
         "Type": "IS",
-        "Table": "HL700186",
+        "Table": "HL70186",
         "LongName": "Practitioner Category",
         "maxLength": "3",
         "Chapter": "15"
@@ -9474,7 +9474,7 @@
     "PRA.4": {
         "Item": "688",
         "Type": "ID",
-        "Table": "HL700187",
+        "Table": "HL70187",
         "LongName": "Provider Billing",
         "maxLength": "1",
         "Chapter": "15"
@@ -9482,7 +9482,7 @@
     "PRA.5": {
         "Item": "689",
         "Type": "SPD",
-        "Table": "HL700337",
+        "Table": "HL70337",
         "LongName": "Specialty",
         "maxLength": "100",
         "Chapter": "15"
@@ -9490,7 +9490,7 @@
     "PRA.6": {
         "Item": "690",
         "Type": "PLN",
-        "Table": "HL700338",
+        "Table": "HL70338",
         "LongName": "Practitioner ID Numbers",
         "maxLength": "100",
         "Chapter": "15"
@@ -9522,7 +9522,7 @@
     "PRB.1": {
         "Item": "816",
         "Type": "ID",
-        "Table": "HL700287",
+        "Table": "HL70287",
         "LongName": "Action Code",
         "maxLength": "2",
         "Chapter": "12"
@@ -9722,7 +9722,7 @@
     "PRC.1": {
         "Item": "982",
         "Type": "CE",
-        "Table": "HL700132",
+        "Table": "HL70132",
         "LongName": "Primary Key Value - PRC",
         "maxLength": "250",
         "Chapter": "8"
@@ -9754,7 +9754,7 @@
     "PRC.13": {
         "Item": "1006",
         "Type": "IS",
-        "Table": "HL700268",
+        "Table": "HL70268",
         "LongName": "Price Override Flag",
         "maxLength": "1",
         "Chapter": "8"
@@ -9762,7 +9762,7 @@
     "PRC.14": {
         "Item": "1007",
         "Type": "CE",
-        "Table": "HL700293",
+        "Table": "HL70293",
         "LongName": "Billing Category",
         "maxLength": "250",
         "Chapter": "8"
@@ -9770,7 +9770,7 @@
     "PRC.15": {
         "Item": "1008",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Chargeable Flag",
         "maxLength": "1",
         "Chapter": "8"
@@ -9778,7 +9778,7 @@
     "PRC.16": {
         "Item": "675",
         "Type": "ID",
-        "Table": "HL700183",
+        "Table": "HL70183",
         "LongName": "Active\/Inactive Flag",
         "maxLength": "1",
         "Chapter": "8"
@@ -9794,7 +9794,7 @@
     "PRC.18": {
         "Item": "1009",
         "Type": "IS",
-        "Table": "HL700269",
+        "Table": "HL70269",
         "LongName": "Charge On Indicator",
         "maxLength": "1",
         "Chapter": "8"
@@ -9802,7 +9802,7 @@
     "PRC.2": {
         "Item": "995",
         "Type": "CE",
-        "Table": "HL700464",
+        "Table": "HL70464",
         "LongName": "Facility ID - PRC",
         "maxLength": "250",
         "Chapter": "8"
@@ -9810,7 +9810,7 @@
     "PRC.3": {
         "Item": "676",
         "Type": "CE",
-        "Table": "HL700184",
+        "Table": "HL70184",
         "LongName": "Department",
         "maxLength": "250",
         "Chapter": "8"
@@ -9818,7 +9818,7 @@
     "PRC.4": {
         "Item": "967",
         "Type": "IS",
-        "Table": "HL700004",
+        "Table": "HL70004",
         "LongName": "Valid Patient Classes",
         "maxLength": "1",
         "Chapter": "8"
@@ -9866,7 +9866,7 @@
     "PRD.1": {
         "Item": "1155",
         "Type": "CE",
-        "Table": "HL700286",
+        "Table": "HL70286",
         "LongName": "Provider Role",
         "maxLength": "250",
         "Chapter": "11"
@@ -9906,7 +9906,7 @@
     "PRD.6": {
         "Item": "684",
         "Type": "CE",
-        "Table": "HL700185",
+        "Table": "HL70185",
         "LongName": "Preferred Method of Contact",
         "maxLength": "250",
         "Chapter": "11"
@@ -9954,7 +9954,7 @@
     "PSH.11": {
         "Item": "1243",
         "Type": "ID",
-        "Table": "HL700329",
+        "Table": "HL70329",
         "LongName": "Quantity in Use Method",
         "maxLength": "1",
         "Chapter": "7"
@@ -10034,7 +10034,7 @@
     "PSH.8": {
         "Item": "1240",
         "Type": "ID",
-        "Table": "HL700329",
+        "Table": "HL70329",
         "LongName": "Quantity Distributed Method",
         "maxLength": "1",
         "Chapter": "7"
@@ -10050,7 +10050,7 @@
     "PTH.1": {
         "Item": "816",
         "Type": "ID",
-        "Table": "HL700287",
+        "Table": "HL70287",
         "LongName": "Action Code",
         "maxLength": "2",
         "Chapter": "12"
@@ -10106,7 +10106,7 @@
     "PV1.10": {
         "Item": "140",
         "Type": "IS",
-        "Table": "HL700069",
+        "Table": "HL70069",
         "LongName": "Hospital Service",
         "maxLength": "3",
         "Chapter": "3"
@@ -10122,7 +10122,7 @@
     "PV1.12": {
         "Item": "142",
         "Type": "IS",
-        "Table": "HL700087",
+        "Table": "HL70087",
         "LongName": "Preadmit Test Indicator",
         "maxLength": "2",
         "Chapter": "3"
@@ -10130,7 +10130,7 @@
     "PV1.13": {
         "Item": "143",
         "Type": "IS",
-        "Table": "HL700092",
+        "Table": "HL70092",
         "LongName": "Re-admission Indicator",
         "maxLength": "2",
         "Chapter": "3"
@@ -10138,7 +10138,7 @@
     "PV1.14": {
         "Item": "144",
         "Type": "IS",
-        "Table": "HL700023",
+        "Table": "HL70023",
         "LongName": "Admit Source",
         "maxLength": "6",
         "Chapter": "3"
@@ -10146,7 +10146,7 @@
     "PV1.15": {
         "Item": "145",
         "Type": "IS",
-        "Table": "HL700009",
+        "Table": "HL70009",
         "LongName": "Ambulatory Status",
         "maxLength": "2",
         "Chapter": "3"
@@ -10154,7 +10154,7 @@
     "PV1.16": {
         "Item": "146",
         "Type": "IS",
-        "Table": "HL700099",
+        "Table": "HL70099",
         "LongName": "VIP Indicator",
         "maxLength": "2",
         "Chapter": "3"
@@ -10162,7 +10162,7 @@
     "PV1.17": {
         "Item": "147",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Admitting Doctor",
         "maxLength": "250",
         "Chapter": "3"
@@ -10170,7 +10170,7 @@
     "PV1.18": {
         "Item": "148",
         "Type": "IS",
-        "Table": "HL700018",
+        "Table": "HL70018",
         "LongName": "Patient Type",
         "maxLength": "2",
         "Chapter": "3"
@@ -10186,7 +10186,7 @@
     "PV1.2": {
         "Item": "132",
         "Type": "IS",
-        "Table": "HL700004",
+        "Table": "HL70004",
         "LongName": "Patient Class",
         "maxLength": "1",
         "Chapter": "3"
@@ -10194,7 +10194,7 @@
     "PV1.20": {
         "Item": "150",
         "Type": "FC",
-        "Table": "HL700064",
+        "Table": "HL70064",
         "LongName": "Financial Class",
         "maxLength": "50",
         "Chapter": "3"
@@ -10202,7 +10202,7 @@
     "PV1.21": {
         "Item": "151",
         "Type": "IS",
-        "Table": "HL700032",
+        "Table": "HL70032",
         "LongName": "Charge Price Indicator",
         "maxLength": "2",
         "Chapter": "3"
@@ -10210,7 +10210,7 @@
     "PV1.22": {
         "Item": "152",
         "Type": "IS",
-        "Table": "HL700045",
+        "Table": "HL70045",
         "LongName": "Courtesy Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10218,7 +10218,7 @@
     "PV1.23": {
         "Item": "153",
         "Type": "IS",
-        "Table": "HL700046",
+        "Table": "HL70046",
         "LongName": "Credit Rating",
         "maxLength": "2",
         "Chapter": "3"
@@ -10226,7 +10226,7 @@
     "PV1.24": {
         "Item": "154",
         "Type": "IS",
-        "Table": "HL700044",
+        "Table": "HL70044",
         "LongName": "Contract Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10258,7 +10258,7 @@
     "PV1.28": {
         "Item": "158",
         "Type": "IS",
-        "Table": "HL700073",
+        "Table": "HL70073",
         "LongName": "Interest Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10266,7 +10266,7 @@
     "PV1.29": {
         "Item": "159",
         "Type": "IS",
-        "Table": "HL700110",
+        "Table": "HL70110",
         "LongName": "Transfer to Bad Debt Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10290,7 +10290,7 @@
     "PV1.31": {
         "Item": "161",
         "Type": "IS",
-        "Table": "HL700021",
+        "Table": "HL70021",
         "LongName": "Bad Debt Agency Code",
         "maxLength": "10",
         "Chapter": "3"
@@ -10314,7 +10314,7 @@
     "PV1.34": {
         "Item": "164",
         "Type": "IS",
-        "Table": "HL700111",
+        "Table": "HL70111",
         "LongName": "Delete Account Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10330,7 +10330,7 @@
     "PV1.36": {
         "Item": "166",
         "Type": "IS",
-        "Table": "HL700112",
+        "Table": "HL70112",
         "LongName": "Discharge Disposition",
         "maxLength": "3",
         "Chapter": "3"
@@ -10338,7 +10338,7 @@
     "PV1.37": {
         "Item": "167",
         "Type": "DLD",
-        "Table": "HL700113",
+        "Table": "HL70113",
         "LongName": "Discharged to Location",
         "maxLength": "25",
         "Chapter": "3"
@@ -10346,7 +10346,7 @@
     "PV1.38": {
         "Item": "168",
         "Type": "CE",
-        "Table": "HL700114",
+        "Table": "HL70114",
         "LongName": "Diet Type",
         "maxLength": "250",
         "Chapter": "3"
@@ -10354,7 +10354,7 @@
     "PV1.39": {
         "Item": "169",
         "Type": "IS",
-        "Table": "HL700115",
+        "Table": "HL70115",
         "LongName": "Servicing Facility",
         "maxLength": "2",
         "Chapter": "3"
@@ -10362,7 +10362,7 @@
     "PV1.4": {
         "Item": "134",
         "Type": "IS",
-        "Table": "HL700007",
+        "Table": "HL70007",
         "LongName": "Admission Type",
         "maxLength": "2",
         "Chapter": "3"
@@ -10370,7 +10370,7 @@
     "PV1.40": {
         "Item": "170",
         "Type": "IS",
-        "Table": "HL700116",
+        "Table": "HL70116",
         "LongName": "Bed Status",
         "maxLength": "1",
         "Chapter": "3"
@@ -10378,7 +10378,7 @@
     "PV1.41": {
         "Item": "171",
         "Type": "IS",
-        "Table": "HL700117",
+        "Table": "HL70117",
         "LongName": "Account Status",
         "maxLength": "2",
         "Chapter": "3"
@@ -10458,7 +10458,7 @@
     "PV1.50": {
         "Item": "180",
         "Type": "CX",
-        "Table": "HL700203",
+        "Table": "HL70203",
         "LongName": "Alternate Visit ID",
         "maxLength": "250",
         "Chapter": "3"
@@ -10466,7 +10466,7 @@
     "PV1.51": {
         "Item": "1226",
         "Type": "IS",
-        "Table": "HL700326",
+        "Table": "HL70326",
         "LongName": "Visit Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10474,7 +10474,7 @@
     "PV1.52": {
         "Item": "1274",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Other Healthcare Provider",
         "maxLength": "250",
         "Chapter": "3"
@@ -10490,7 +10490,7 @@
     "PV1.7": {
         "Item": "137",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Attending Doctor",
         "maxLength": "250",
         "Chapter": "3"
@@ -10498,7 +10498,7 @@
     "PV1.8": {
         "Item": "138",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Referring Doctor",
         "maxLength": "250",
         "Chapter": "3"
@@ -10506,7 +10506,7 @@
     "PV1.9": {
         "Item": "139",
         "Type": "XCN",
-        "Table": "HL700010",
+        "Table": "HL70010",
         "LongName": "Consulting Doctor",
         "maxLength": "250",
         "Chapter": "3"
@@ -10562,7 +10562,7 @@
     "PV2.15": {
         "Item": "716",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Employment Illness Related Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10570,7 +10570,7 @@
     "PV2.16": {
         "Item": "717",
         "Type": "IS",
-        "Table": "HL700213",
+        "Table": "HL70213",
         "LongName": "Purge Status Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10586,7 +10586,7 @@
     "PV2.18": {
         "Item": "719",
         "Type": "IS",
-        "Table": "HL700214",
+        "Table": "HL70214",
         "LongName": "Special Program Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10594,7 +10594,7 @@
     "PV2.19": {
         "Item": "720",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Retention Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10602,7 +10602,7 @@
     "PV2.2": {
         "Item": "182",
         "Type": "CE",
-        "Table": "HL700129",
+        "Table": "HL70129",
         "LongName": "Accommodation Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10618,7 +10618,7 @@
     "PV2.21": {
         "Item": "722",
         "Type": "IS",
-        "Table": "HL700215",
+        "Table": "HL70215",
         "LongName": "Visit Publicity Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10626,7 +10626,7 @@
     "PV2.22": {
         "Item": "723",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Visit Protection Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10642,7 +10642,7 @@
     "PV2.24": {
         "Item": "725",
         "Type": "IS",
-        "Table": "HL700216",
+        "Table": "HL70216",
         "LongName": "Patient Status Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10650,7 +10650,7 @@
     "PV2.25": {
         "Item": "726",
         "Type": "IS",
-        "Table": "HL700217",
+        "Table": "HL70217",
         "LongName": "Visit Priority Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10666,7 +10666,7 @@
     "PV2.27": {
         "Item": "728",
         "Type": "IS",
-        "Table": "HL700112",
+        "Table": "HL70112",
         "LongName": "Expected Discharge Disposition",
         "maxLength": "2",
         "Chapter": "3"
@@ -10698,7 +10698,7 @@
     "PV2.30": {
         "Item": "731",
         "Type": "CE",
-        "Table": "HL700218",
+        "Table": "HL70218",
         "LongName": "Patient Charge Adjustment Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10706,7 +10706,7 @@
     "PV2.31": {
         "Item": "732",
         "Type": "IS",
-        "Table": "HL700219",
+        "Table": "HL70219",
         "LongName": "Recurring Service Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10714,7 +10714,7 @@
     "PV2.32": {
         "Item": "733",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Billing Media Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10730,7 +10730,7 @@
     "PV2.34": {
         "Item": "735",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Military Partnership Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10738,7 +10738,7 @@
     "PV2.35": {
         "Item": "736",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Military Non-Availability Code",
         "maxLength": "1",
         "Chapter": "3"
@@ -10746,7 +10746,7 @@
     "PV2.36": {
         "Item": "737",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Newborn Baby Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10754,7 +10754,7 @@
     "PV2.37": {
         "Item": "738",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Baby Detained Indicator",
         "maxLength": "1",
         "Chapter": "3"
@@ -10762,7 +10762,7 @@
     "PV2.38": {
         "Item": "1543",
         "Type": "CE",
-        "Table": "HL700430",
+        "Table": "HL70430",
         "LongName": "Mode of Arrival Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10770,7 +10770,7 @@
     "PV2.39": {
         "Item": "1544",
         "Type": "CE",
-        "Table": "HL700431",
+        "Table": "HL70431",
         "LongName": "Recreational Drug Use Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10786,7 +10786,7 @@
     "PV2.40": {
         "Item": "1545",
         "Type": "CE",
-        "Table": "HL700432",
+        "Table": "HL70432",
         "LongName": "Admission Level of Care Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10794,7 +10794,7 @@
     "PV2.41": {
         "Item": "1546",
         "Type": "CE",
-        "Table": "HL700433",
+        "Table": "HL70433",
         "LongName": "Precaution Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10802,7 +10802,7 @@
     "PV2.42": {
         "Item": "1547",
         "Type": "CE",
-        "Table": "HL700434",
+        "Table": "HL70434",
         "LongName": "Patient Condition Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10810,7 +10810,7 @@
     "PV2.43": {
         "Item": "759",
         "Type": "IS",
-        "Table": "HL700315",
+        "Table": "HL70315",
         "LongName": "Living Will Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10818,7 +10818,7 @@
     "PV2.44": {
         "Item": "760",
         "Type": "IS",
-        "Table": "HL700316",
+        "Table": "HL70316",
         "LongName": "Organ Donor Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10826,7 +10826,7 @@
     "PV2.45": {
         "Item": "1548",
         "Type": "CE",
-        "Table": "HL700435",
+        "Table": "HL70435",
         "LongName": "Advance Directive Code",
         "maxLength": "250",
         "Chapter": "3"
@@ -10866,7 +10866,7 @@
     "PV2.7": {
         "Item": "187",
         "Type": "IS",
-        "Table": "HL700130",
+        "Table": "HL70130",
         "LongName": "Visit User Code",
         "maxLength": "2",
         "Chapter": "3"
@@ -10898,7 +10898,7 @@
     "QAK.2": {
         "Item": "708",
         "Type": "ID",
-        "Table": "HL700208",
+        "Table": "HL70208",
         "LongName": "Query Response Status",
         "maxLength": "2",
         "Chapter": "5"
@@ -10906,7 +10906,7 @@
     "QAK.3": {
         "Item": "1375",
         "Type": "CE",
-        "Table": "HL700471",
+        "Table": "HL70471",
         "LongName": "Message Query Name",
         "maxLength": "250",
         "Chapter": "5"
@@ -10946,7 +10946,7 @@
     "QID.2": {
         "Item": "1375",
         "Type": "CE",
-        "Table": "HL700471",
+        "Table": "HL70471",
         "LongName": "Message Query Name",
         "maxLength": "250",
         "Chapter": "5"
@@ -10954,7 +10954,7 @@
     "QPD.1": {
         "Item": "1375",
         "Type": "CE",
-        "Table": "HL700471",
+        "Table": "HL70471",
         "LongName": "Message Query Name",
         "maxLength": "250",
         "Chapter": "5"
@@ -11002,7 +11002,7 @@
     "QRD.12": {
         "Item": "36",
         "Type": "ID",
-        "Table": "HL700108",
+        "Table": "HL70108",
         "LongName": "Query Results Level",
         "maxLength": "1",
         "Chapter": "5"
@@ -11010,7 +11010,7 @@
     "QRD.2": {
         "Item": "26",
         "Type": "ID",
-        "Table": "HL700106",
+        "Table": "HL70106",
         "LongName": "Query Format Code",
         "maxLength": "1",
         "Chapter": "5"
@@ -11018,7 +11018,7 @@
     "QRD.3": {
         "Item": "27",
         "Type": "ID",
-        "Table": "HL700091",
+        "Table": "HL70091",
         "LongName": "Query Priority",
         "maxLength": "1",
         "Chapter": "5"
@@ -11034,7 +11034,7 @@
     "QRD.5": {
         "Item": "29",
         "Type": "ID",
-        "Table": "HL700107",
+        "Table": "HL70107",
         "LongName": "Deferred Response Type",
         "maxLength": "1",
         "Chapter": "5"
@@ -11050,7 +11050,7 @@
     "QRD.7": {
         "Item": "31",
         "Type": "CQ",
-        "Table": "HL700126",
+        "Table": "HL70126",
         "LongName": "Quantity Limited Request",
         "maxLength": "10",
         "Chapter": "5"
@@ -11066,7 +11066,7 @@
     "QRD.9": {
         "Item": "33",
         "Type": "CE",
-        "Table": "HL700048",
+        "Table": "HL70048",
         "LongName": "What Subject Filter",
         "maxLength": "250",
         "Chapter": "5"
@@ -11122,7 +11122,7 @@
     "QRF.6": {
         "Item": "42",
         "Type": "ID",
-        "Table": "HL700156",
+        "Table": "HL70156",
         "LongName": "Which Date\/Time Qualifier",
         "maxLength": "12",
         "Chapter": "5"
@@ -11130,7 +11130,7 @@
     "QRF.7": {
         "Item": "43",
         "Type": "ID",
-        "Table": "HL700157",
+        "Table": "HL70157",
         "LongName": "Which Date\/Time Status Qualifier",
         "maxLength": "12",
         "Chapter": "5"
@@ -11138,7 +11138,7 @@
     "QRF.8": {
         "Item": "44",
         "Type": "ID",
-        "Table": "HL700158",
+        "Table": "HL70158",
         "LongName": "Date\/Time Selection Qualifier",
         "maxLength": "12",
         "Chapter": "5"
@@ -11162,7 +11162,7 @@
     "QRI.2": {
         "Item": "1437",
         "Type": "IS",
-        "Table": "HL700392",
+        "Table": "HL70392",
         "LongName": "Match Reason Code",
         "maxLength": "2",
         "Chapter": "5"
@@ -11170,7 +11170,7 @@
     "QRI.3": {
         "Item": "1438",
         "Type": "CE",
-        "Table": "HL700393",
+        "Table": "HL70393",
         "LongName": "Algorithm Descriptor",
         "maxLength": "250",
         "Chapter": "5"
@@ -11178,7 +11178,7 @@
     "RCP.1": {
         "Item": "27",
         "Type": "ID",
-        "Table": "HL700091",
+        "Table": "HL70091",
         "LongName": "Query Priority",
         "maxLength": "1",
         "Chapter": "5"
@@ -11186,7 +11186,7 @@
     "RCP.2": {
         "Item": "31",
         "Type": "CQ",
-        "Table": "HL700126",
+        "Table": "HL70126",
         "LongName": "Quantity Limited Request",
         "maxLength": "10",
         "Chapter": "5"
@@ -11194,7 +11194,7 @@
     "RCP.3": {
         "Item": "1440",
         "Type": "CE",
-        "Table": "HL700394",
+        "Table": "HL70394",
         "LongName": "Response Modality",
         "maxLength": "250",
         "Chapter": "5"
@@ -11210,7 +11210,7 @@
     "RCP.5": {
         "Item": "1443",
         "Type": "ID",
-        "Table": "HL700395",
+        "Table": "HL70395",
         "LongName": "Modify Indicator",
         "maxLength": "1",
         "Chapter": "5"
@@ -11242,7 +11242,7 @@
     "RDF.2": {
         "Item": "702",
         "Type": "RCD",
-        "Table": "HL700440",
+        "Table": "HL70440",
         "LongName": "Column Description",
         "maxLength": "40",
         "Chapter": "5"
@@ -11258,7 +11258,7 @@
     "RF1.1": {
         "Item": "1137",
         "Type": "CE",
-        "Table": "HL700283",
+        "Table": "HL70283",
         "LongName": "Referral Status",
         "maxLength": "250",
         "Chapter": "11"
@@ -11266,7 +11266,7 @@
     "RF1.10": {
         "Item": "1228",
         "Type": "CE",
-        "Table": "HL700336",
+        "Table": "HL70336",
         "LongName": "Referral Reason",
         "maxLength": "250",
         "Chapter": "11"
@@ -11282,7 +11282,7 @@
     "RF1.2": {
         "Item": "1138",
         "Type": "CE",
-        "Table": "HL700280",
+        "Table": "HL70280",
         "LongName": "Referral Priority",
         "maxLength": "250",
         "Chapter": "11"
@@ -11290,7 +11290,7 @@
     "RF1.3": {
         "Item": "1139",
         "Type": "CE",
-        "Table": "HL700281",
+        "Table": "HL70281",
         "LongName": "Referral Type",
         "maxLength": "250",
         "Chapter": "11"
@@ -11298,7 +11298,7 @@
     "RF1.4": {
         "Item": "1140",
         "Type": "CE",
-        "Table": "HL700282",
+        "Table": "HL70282",
         "LongName": "Referral Disposition",
         "maxLength": "250",
         "Chapter": "11"
@@ -11306,7 +11306,7 @@
     "RF1.5": {
         "Item": "1141",
         "Type": "CE",
-        "Table": "HL700284",
+        "Table": "HL70284",
         "LongName": "Referral Category",
         "maxLength": "250",
         "Chapter": "11"
@@ -11354,7 +11354,7 @@
     "RGS.2": {
         "Item": "763",
         "Type": "ID",
-        "Table": "HL700206",
+        "Table": "HL70206",
         "LongName": "Segment Action Code",
         "maxLength": "3",
         "Chapter": "10"
@@ -11370,7 +11370,7 @@
     "RMI.1": {
         "Item": "1530",
         "Type": "CE",
-        "Table": "HL700427",
+        "Table": "HL70427",
         "LongName": "Risk Management Incident Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -11386,7 +11386,7 @@
     "RMI.3": {
         "Item": "1533",
         "Type": "CE",
-        "Table": "HL700428",
+        "Table": "HL70428",
         "LongName": "Incident Type Code",
         "maxLength": "250",
         "Chapter": "6"
@@ -11402,7 +11402,7 @@
     "ROL.10": {
         "Item": "1461",
         "Type": "CE",
-        "Table": "HL700406",
+        "Table": "HL70406",
         "LongName": "Organization Unit Type - ROL",
         "maxLength": "250",
         "Chapter": "12"
@@ -11426,7 +11426,7 @@
     "ROL.2": {
         "Item": "816",
         "Type": "ID",
-        "Table": "HL700287",
+        "Table": "HL70287",
         "LongName": "Action Code",
         "maxLength": "2",
         "Chapter": "12"
@@ -11434,7 +11434,7 @@
     "ROL.3": {
         "Item": "1197",
         "Type": "CE",
-        "Table": "HL700443",
+        "Table": "HL70443",
         "LongName": "Role-ROL",
         "maxLength": "250",
         "Chapter": "12"
@@ -11498,7 +11498,7 @@
     "RQ1.2": {
         "Item": "286",
         "Type": "CE",
-        "Table": "HL700385",
+        "Table": "HL70385",
         "LongName": "Manufacturer Identifier",
         "maxLength": "250",
         "Chapter": "4"
@@ -11530,7 +11530,7 @@
     "RQ1.6": {
         "Item": "290",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Taxable",
         "maxLength": "1",
         "Chapter": "4"
@@ -11538,7 +11538,7 @@
     "RQ1.7": {
         "Item": "291",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Substitute Allowed",
         "maxLength": "1",
         "Chapter": "4"
@@ -11602,7 +11602,7 @@
     "RQD.7": {
         "Item": "281",
         "Type": "IS",
-        "Table": "HL700319",
+        "Table": "HL70319",
         "LongName": "Dept. Cost Center",
         "maxLength": "30",
         "Chapter": "4"
@@ -11610,7 +11610,7 @@
     "RQD.8": {
         "Item": "282",
         "Type": "IS",
-        "Table": "HL700320",
+        "Table": "HL70320",
         "LongName": "Item Natural Account Code",
         "maxLength": "30",
         "Chapter": "4"
@@ -11690,7 +11690,7 @@
     "RXA.17": {
         "Item": "1131",
         "Type": "CE",
-        "Table": "HL700227",
+        "Table": "HL70227",
         "LongName": "Substance Manufacturer Name",
         "maxLength": "250",
         "Chapter": "4"
@@ -11722,7 +11722,7 @@
     "RXA.20": {
         "Item": "1223",
         "Type": "ID",
-        "Table": "HL700322",
+        "Table": "HL70322",
         "LongName": "Completion Status",
         "maxLength": "2",
         "Chapter": "4"
@@ -11730,7 +11730,7 @@
     "RXA.21": {
         "Item": "1224",
         "Type": "ID",
-        "Table": "HL700323",
+        "Table": "HL70323",
         "LongName": "Action Code-RXA",
         "maxLength": "2",
         "Chapter": "4"
@@ -11762,7 +11762,7 @@
     "RXA.5": {
         "Item": "347",
         "Type": "CE",
-        "Table": "HL700292",
+        "Table": "HL70292",
         "LongName": "Administered Code",
         "maxLength": "250",
         "Chapter": "4"
@@ -11802,7 +11802,7 @@
     "RXC.1": {
         "Item": "313",
         "Type": "ID",
-        "Table": "HL700166",
+        "Table": "HL70166",
         "LongName": "RX Component Type",
         "maxLength": "1",
         "Chapter": "4"
@@ -11874,7 +11874,7 @@
     "RXD.11": {
         "Item": "322",
         "Type": "ID",
-        "Table": "HL700167",
+        "Table": "HL70167",
         "LongName": "Substitution Status",
         "maxLength": "1",
         "Chapter": "4"
@@ -11898,7 +11898,7 @@
     "RXD.14": {
         "Item": "307",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Needs Human Review",
         "maxLength": "1",
         "Chapter": "4"
@@ -11946,7 +11946,7 @@
     "RXD.2": {
         "Item": "335",
         "Type": "CE",
-        "Table": "HL700292",
+        "Table": "HL70292",
         "LongName": "Dispense\/Give Code",
         "maxLength": "250",
         "Chapter": "4"
@@ -11954,7 +11954,7 @@
     "RXD.20": {
         "Item": "1131",
         "Type": "CE",
-        "Table": "HL700227",
+        "Table": "HL70227",
         "LongName": "Substance Manufacturer Name",
         "maxLength": "250",
         "Chapter": "4"
@@ -11986,7 +11986,7 @@
     "RXD.24": {
         "Item": "1222",
         "Type": "ID",
-        "Table": "HL700321",
+        "Table": "HL70321",
         "LongName": "Dispense Package Method",
         "maxLength": "2",
         "Chapter": "4"
@@ -12162,7 +12162,7 @@
     "RXE.2": {
         "Item": "317",
         "Type": "CE",
-        "Table": "HL700292",
+        "Table": "HL70292",
         "LongName": "Give Code",
         "maxLength": "250",
         "Chapter": "4"
@@ -12170,7 +12170,7 @@
     "RXE.20": {
         "Item": "307",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Needs Human Review",
         "maxLength": "1",
         "Chapter": "4"
@@ -12258,7 +12258,7 @@
     "RXE.30": {
         "Item": "1222",
         "Type": "ID",
-        "Table": "HL700321",
+        "Table": "HL70321",
         "LongName": "Dispense Package Method",
         "maxLength": "2",
         "Chapter": "4"
@@ -12314,7 +12314,7 @@
     "RXE.9": {
         "Item": "322",
         "Type": "ID",
-        "Table": "HL700167",
+        "Table": "HL70167",
         "LongName": "Substitution Status",
         "maxLength": "1",
         "Chapter": "4"
@@ -12330,7 +12330,7 @@
     "RXG.10": {
         "Item": "322",
         "Type": "ID",
-        "Table": "HL700167",
+        "Table": "HL70167",
         "LongName": "Substitution Status",
         "maxLength": "1",
         "Chapter": "4"
@@ -12346,7 +12346,7 @@
     "RXG.12": {
         "Item": "307",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Needs Human Review",
         "maxLength": "1",
         "Chapter": "4"
@@ -12426,7 +12426,7 @@
     "RXG.21": {
         "Item": "1131",
         "Type": "CE",
-        "Table": "HL700227",
+        "Table": "HL70227",
         "LongName": "Substance Manufacturer Name",
         "maxLength": "250",
         "Chapter": "4"
@@ -12450,7 +12450,7 @@
     "RXG.4": {
         "Item": "317",
         "Type": "CE",
-        "Table": "HL700292",
+        "Table": "HL70292",
         "LongName": "Give Code",
         "maxLength": "250",
         "Chapter": "4"
@@ -12554,7 +12554,7 @@
     "RXO.16": {
         "Item": "307",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Needs Human Review",
         "maxLength": "1",
         "Chapter": "4"
@@ -12682,7 +12682,7 @@
     "RXO.9": {
         "Item": "300",
         "Type": "ID",
-        "Table": "HL700161",
+        "Table": "HL70161",
         "LongName": "Allow Substitutions",
         "maxLength": "1",
         "Chapter": "4"
@@ -12690,7 +12690,7 @@
     "RXR.1": {
         "Item": "309",
         "Type": "CE",
-        "Table": "HL700162",
+        "Table": "HL70162",
         "LongName": "Route",
         "maxLength": "250",
         "Chapter": "4"
@@ -12698,7 +12698,7 @@
     "RXR.2": {
         "Item": "310",
         "Type": "CE",
-        "Table": "HL700163",
+        "Table": "HL70163",
         "LongName": "Administration Site",
         "maxLength": "250",
         "Chapter": "4"
@@ -12706,7 +12706,7 @@
     "RXR.3": {
         "Item": "311",
         "Type": "CE",
-        "Table": "HL700164",
+        "Table": "HL70164",
         "LongName": "Administration Device",
         "maxLength": "250",
         "Chapter": "4"
@@ -12714,7 +12714,7 @@
     "RXR.4": {
         "Item": "312",
         "Type": "CE",
-        "Table": "HL700165",
+        "Table": "HL70165",
         "LongName": "Administration Method",
         "maxLength": "250",
         "Chapter": "4"
@@ -12754,7 +12754,7 @@
     "SAC.12": {
         "Item": "1339",
         "Type": "CE",
-        "Table": "HL700379",
+        "Table": "HL70379",
         "LongName": "Tray Type - SAC",
         "maxLength": "250",
         "Chapter": "13"
@@ -12866,7 +12866,7 @@
     "SAC.25": {
         "Item": "1352",
         "Type": "CE",
-        "Table": "HL700380",
+        "Table": "HL70380",
         "LongName": "Separator Type",
         "maxLength": "250",
         "Chapter": "13"
@@ -12874,7 +12874,7 @@
     "SAC.26": {
         "Item": "1353",
         "Type": "CE",
-        "Table": "HL700381",
+        "Table": "HL70381",
         "LongName": "Cap Type",
         "maxLength": "250",
         "Chapter": "13"
@@ -12882,7 +12882,7 @@
     "SAC.27": {
         "Item": "647",
         "Type": "CE",
-        "Table": "HL700371",
+        "Table": "HL70371",
         "LongName": "Additive",
         "maxLength": "250",
         "Chapter": "13"
@@ -12914,7 +12914,7 @@
     "SAC.30": {
         "Item": "1357",
         "Type": "CE",
-        "Table": "HL700373",
+        "Table": "HL70373",
         "LongName": "Treatment",
         "maxLength": "250",
         "Chapter": "13"
@@ -13002,7 +13002,7 @@
     "SAC.40": {
         "Item": "1367",
         "Type": "CE",
-        "Table": "HL700374",
+        "Table": "HL70374",
         "LongName": "System Induced Contaminants",
         "maxLength": "250",
         "Chapter": "13"
@@ -13010,7 +13010,7 @@
     "SAC.41": {
         "Item": "1368",
         "Type": "CE",
-        "Table": "HL700382",
+        "Table": "HL70382",
         "LongName": "Drug Interference",
         "maxLength": "250",
         "Chapter": "13"
@@ -13018,7 +13018,7 @@
     "SAC.42": {
         "Item": "1369",
         "Type": "CE",
-        "Table": "HL700375",
+        "Table": "HL70375",
         "LongName": "Artificial Blood",
         "maxLength": "250",
         "Chapter": "13"
@@ -13026,7 +13026,7 @@
     "SAC.43": {
         "Item": "1370",
         "Type": "CE",
-        "Table": "HL700376",
+        "Table": "HL70376",
         "LongName": "Special Handling Considerations",
         "maxLength": "250",
         "Chapter": "13"
@@ -13034,7 +13034,7 @@
     "SAC.44": {
         "Item": "1371",
         "Type": "CE",
-        "Table": "HL700377",
+        "Table": "HL70377",
         "LongName": "Other Environmental Factors",
         "maxLength": "250",
         "Chapter": "13"
@@ -13050,7 +13050,7 @@
     "SAC.6": {
         "Item": "249",
         "Type": "SPS",
-        "Table": "HL700070",
+        "Table": "HL70070",
         "LongName": "Specimen Source",
         "maxLength": "300",
         "Chapter": "13"
@@ -13066,7 +13066,7 @@
     "SAC.8": {
         "Item": "1335",
         "Type": "CE",
-        "Table": "HL700370",
+        "Table": "HL70370",
         "LongName": "Container Status",
         "maxLength": "250",
         "Chapter": "13"
@@ -13074,7 +13074,7 @@
     "SAC.9": {
         "Item": "1336",
         "Type": "CE",
-        "Table": "HL700378",
+        "Table": "HL70378",
         "LongName": "Carrier Type",
         "maxLength": "250",
         "Chapter": "13"
@@ -13218,7 +13218,7 @@
     "SCH.25": {
         "Item": "889",
         "Type": "CE",
-        "Table": "HL700278",
+        "Table": "HL70278",
         "LongName": "Filler Status Code",
         "maxLength": "250",
         "Chapter": "10"
@@ -13274,7 +13274,7 @@
     "SCH.7": {
         "Item": "866",
         "Type": "CE",
-        "Table": "HL700276",
+        "Table": "HL70276",
         "LongName": "Appointment Reason",
         "maxLength": "250",
         "Chapter": "10"
@@ -13282,7 +13282,7 @@
     "SCH.8": {
         "Item": "867",
         "Type": "CE",
-        "Table": "HL700277",
+        "Table": "HL70277",
         "LongName": "Appointment Type",
         "maxLength": "250",
         "Chapter": "10"
@@ -13322,7 +13322,7 @@
     "SID.4": {
         "Item": "1429",
         "Type": "CE",
-        "Table": "HL700385",
+        "Table": "HL70385",
         "LongName": "Substance Manufacturer Identifier",
         "maxLength": "250",
         "Chapter": "13"
@@ -13338,7 +13338,7 @@
     "SPR.2": {
         "Item": "697",
         "Type": "ID",
-        "Table": "HL700106",
+        "Table": "HL70106",
         "LongName": "Query\/Response Format Code",
         "maxLength": "1",
         "Chapter": "5"
@@ -13418,7 +13418,7 @@
     "STF.16": {
         "Item": "684",
         "Type": "CE",
-        "Table": "HL700185",
+        "Table": "HL70185",
         "LongName": "Preferred Method of Contact",
         "maxLength": "250",
         "Chapter": "15"
@@ -13426,7 +13426,7 @@
     "STF.17": {
         "Item": "119",
         "Type": "CE",
-        "Table": "HL700002",
+        "Table": "HL70002",
         "LongName": "Marital Status",
         "maxLength": "250",
         "Chapter": "15"
@@ -13442,7 +13442,7 @@
     "STF.19": {
         "Item": "786",
         "Type": "JCC",
-        "Table": "HL700327",
+        "Table": "HL70327",
         "LongName": "Job Code\/Class",
         "maxLength": "20",
         "Chapter": "15"
@@ -13458,7 +13458,7 @@
     "STF.20": {
         "Item": "1276",
         "Type": "CE",
-        "Table": "HL700066",
+        "Table": "HL70066",
         "LongName": "Employment Status Code",
         "maxLength": "2",
         "Chapter": "15"
@@ -13466,7 +13466,7 @@
     "STF.21": {
         "Item": "1275",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Additional Insured on  Auto",
         "maxLength": "1",
         "Chapter": "15"
@@ -13482,7 +13482,7 @@
     "STF.23": {
         "Item": "1229",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Copy  Auto Ins",
         "maxLength": "1",
         "Chapter": "15"
@@ -13514,7 +13514,7 @@
     "STF.27": {
         "Item": "113",
         "Type": "CE",
-        "Table": "HL700005",
+        "Table": "HL70005",
         "LongName": "Race",
         "maxLength": "250",
         "Chapter": "15"
@@ -13522,7 +13522,7 @@
     "STF.28": {
         "Item": "125",
         "Type": "CE",
-        "Table": "HL700189",
+        "Table": "HL70189",
         "LongName": "Ethnic Group",
         "maxLength": "250",
         "Chapter": "15"
@@ -13530,7 +13530,7 @@
     "STF.29": {
         "Item": "1596",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Re-activation Approval Indicator",
         "maxLength": "1",
         "Chapter": "15"
@@ -13546,7 +13546,7 @@
     "STF.4": {
         "Item": "674",
         "Type": "IS",
-        "Table": "HL700182",
+        "Table": "HL70182",
         "LongName": "Staff Type",
         "maxLength": "2",
         "Chapter": "15"
@@ -13554,7 +13554,7 @@
     "STF.5": {
         "Item": "111",
         "Type": "IS",
-        "Table": "HL700001",
+        "Table": "HL70001",
         "LongName": "Administrative Sex",
         "maxLength": "1",
         "Chapter": "15"
@@ -13570,7 +13570,7 @@
     "STF.7": {
         "Item": "675",
         "Type": "ID",
-        "Table": "HL700183",
+        "Table": "HL70183",
         "LongName": "Active\/Inactive Flag",
         "maxLength": "1",
         "Chapter": "15"
@@ -13578,7 +13578,7 @@
     "STF.8": {
         "Item": "676",
         "Type": "CE",
-        "Table": "HL700184",
+        "Table": "HL70184",
         "LongName": "Department",
         "maxLength": "250",
         "Chapter": "15"
@@ -13586,7 +13586,7 @@
     "STF.9": {
         "Item": "677",
         "Type": "CE",
-        "Table": "HL700069",
+        "Table": "HL70069",
         "LongName": "Hospital Service",
         "maxLength": "250",
         "Chapter": "15"
@@ -13602,7 +13602,7 @@
     "TCC.10": {
         "Item": "1416",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Automatic Repeat Allowed",
         "maxLength": "1",
         "Chapter": "13"
@@ -13610,7 +13610,7 @@
     "TCC.11": {
         "Item": "1417",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Automatic Reflex Allowed",
         "maxLength": "1",
         "Chapter": "13"
@@ -13634,7 +13634,7 @@
     "TCC.14": {
         "Item": "1419",
         "Type": "CE",
-        "Table": "HL700388",
+        "Table": "HL70388",
         "LongName": "Processing Type",
         "maxLength": "250",
         "Chapter": "13"
@@ -13650,7 +13650,7 @@
     "TCC.3": {
         "Item": "249",
         "Type": "SPS",
-        "Table": "HL700070",
+        "Table": "HL70070",
         "LongName": "Specimen Source",
         "maxLength": "300",
         "Chapter": "13"
@@ -13698,7 +13698,7 @@
     "TCC.9": {
         "Item": "1415",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Automatic Rerun Allowed",
         "maxLength": "1",
         "Chapter": "13"
@@ -13746,7 +13746,7 @@
     "TCD.6": {
         "Item": "01423",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Automatic Repeat Allowed",
         "maxLength": "1",
         "Chapter": "13"
@@ -13754,7 +13754,7 @@
     "TCD.7": {
         "Item": "1424",
         "Type": "ID",
-        "Table": "HL700136",
+        "Table": "HL70136",
         "LongName": "Reflex Allowed",
         "maxLength": "1",
         "Chapter": "13"
@@ -13762,7 +13762,7 @@
     "TCD.8": {
         "Item": "1425",
         "Type": "CE",
-        "Table": "HL700389",
+        "Table": "HL70389",
         "LongName": "Analyte Repeat Status",
         "maxLength": "250",
         "Chapter": "13"
@@ -13834,7 +13834,7 @@
     "TXA.17": {
         "Item": "928",
         "Type": "ID",
-        "Table": "HL700271",
+        "Table": "HL70271",
         "LongName": "Document Completion Status",
         "maxLength": "2",
         "Chapter": "9"
@@ -13842,7 +13842,7 @@
     "TXA.18": {
         "Item": "929",
         "Type": "ID",
-        "Table": "HL700272",
+        "Table": "HL70272",
         "LongName": "Document Confidentiality Status",
         "maxLength": "2",
         "Chapter": "9"
@@ -13850,7 +13850,7 @@
     "TXA.19": {
         "Item": "930",
         "Type": "ID",
-        "Table": "HL700273",
+        "Table": "HL70273",
         "LongName": "Document Availability Status",
         "maxLength": "2",
         "Chapter": "9"
@@ -13858,7 +13858,7 @@
     "TXA.2": {
         "Item": "915",
         "Type": "IS",
-        "Table": "HL700270",
+        "Table": "HL70270",
         "LongName": "Document Type",
         "maxLength": "30",
         "Chapter": "9"
@@ -13866,7 +13866,7 @@
     "TXA.20": {
         "Item": "932",
         "Type": "ID",
-        "Table": "HL700275",
+        "Table": "HL70275",
         "LongName": "Document Storage Status",
         "maxLength": "2",
         "Chapter": "9"
@@ -13898,7 +13898,7 @@
     "TXA.3": {
         "Item": "916",
         "Type": "ID",
-        "Table": "HL700191",
+        "Table": "HL70191",
         "LongName": "Document Content Presentation",
         "maxLength": "2",
         "Chapter": "9"
@@ -13962,7 +13962,7 @@
     "UB1.10": {
         "Item": "539",
         "Type": "UVC",
-        "Table": "HL700153",
+        "Table": "HL70153",
         "LongName": "Value Amount & Code (46-49)",
         "maxLength": "12",
         "Chapter": "6"
@@ -13978,7 +13978,7 @@
     "UB1.12": {
         "Item": "541",
         "Type": "CE",
-        "Table": "HL700348",
+        "Table": "HL70348",
         "LongName": "Special Program Indicator (44)",
         "maxLength": "250",
         "Chapter": "6"
@@ -13986,7 +13986,7 @@
     "UB1.13": {
         "Item": "542",
         "Type": "CE",
-        "Table": "HL700349",
+        "Table": "HL70349",
         "LongName": "PSRO\/UR Approval Indicator (87)",
         "maxLength": "250",
         "Chapter": "6"
@@ -14010,7 +14010,7 @@
     "UB1.16": {
         "Item": "545",
         "Type": "OCD",
-        "Table": "HL700350",
+        "Table": "HL70350",
         "LongName": "Occurrence (28-32)",
         "maxLength": "20",
         "Chapter": "6"
@@ -14018,7 +14018,7 @@
     "UB1.17": {
         "Item": "546",
         "Type": "CE",
-        "Table": "HL700351",
+        "Table": "HL70351",
         "LongName": "Occurrence Span (33)",
         "maxLength": "250",
         "Chapter": "6"
@@ -14114,7 +14114,7 @@
     "UB1.7": {
         "Item": "536",
         "Type": "IS",
-        "Table": "HL700043",
+        "Table": "HL70043",
         "LongName": "Condition Code (35-39)",
         "maxLength": "14",
         "Chapter": "6"
@@ -14218,7 +14218,7 @@
     "UB2.3": {
         "Item": "555",
         "Type": "IS",
-        "Table": "HL700043",
+        "Table": "HL70043",
         "LongName": "Condition Code (24-30)",
         "maxLength": "2",
         "Chapter": "6"
@@ -14242,7 +14242,7 @@
     "UB2.6": {
         "Item": "558",
         "Type": "UVC",
-        "Table": "HL700153",
+        "Table": "HL70153",
         "LongName": "Value Amount & Code",
         "maxLength": "11",
         "Chapter": "6"
@@ -14250,7 +14250,7 @@
     "UB2.7": {
         "Item": "559",
         "Type": "OCD",
-        "Table": "HL700350",
+        "Table": "HL70350",
         "LongName": "Occurrence Code & Date (32-35)",
         "maxLength": "11",
         "Chapter": "6"
@@ -14258,7 +14258,7 @@
     "UB2.8": {
         "Item": "560",
         "Type": "OSP",
-        "Table": "HL700351",
+        "Table": "HL70351",
         "LongName": "Occurrence Span Code\/Dates (36)",
         "maxLength": "28",
         "Chapter": "6"
@@ -14282,7 +14282,7 @@
     "URD.2": {
         "Item": "46",
         "Type": "ID",
-        "Table": "HL700109",
+        "Table": "HL70109",
         "LongName": "Report Priority",
         "maxLength": "1",
         "Chapter": "5"
@@ -14298,7 +14298,7 @@
     "URD.4": {
         "Item": "48",
         "Type": "CE",
-        "Table": "HL700048",
+        "Table": "HL70048",
         "LongName": "R\/U What Subject Definition",
         "maxLength": "250",
         "Chapter": "5"
@@ -14322,7 +14322,7 @@
     "URD.7": {
         "Item": "51",
         "Type": "ID",
-        "Table": "HL700108",
+        "Table": "HL70108",
         "LongName": "R\/U Results Level",
         "maxLength": "1",
         "Chapter": "5"
@@ -14370,7 +14370,7 @@
     "URS.6": {
         "Item": "57",
         "Type": "ID",
-        "Table": "HL700156",
+        "Table": "HL70156",
         "LongName": "R\/U Which Date\/Time Qualifier",
         "maxLength": "12",
         "Chapter": "5"
@@ -14378,7 +14378,7 @@
     "URS.7": {
         "Item": "58",
         "Type": "ID",
-        "Table": "HL700157",
+        "Table": "HL70157",
         "LongName": "R\/U Which Date\/Time Status Qualifier",
         "maxLength": "12",
         "Chapter": "5"
@@ -14386,7 +14386,7 @@
     "URS.8": {
         "Item": "59",
         "Type": "ID",
-        "Table": "HL700158",
+        "Table": "HL70158",
         "LongName": "R\/U Date\/Time Selection Qualifier",
         "maxLength": "12",
         "Chapter": "5"
@@ -14458,7 +14458,7 @@
     "VTQ.2": {
         "Item": "697",
         "Type": "ID",
-        "Table": "HL700106",
+        "Table": "HL70106",
         "LongName": "Query\/Response Format Code",
         "maxLength": "1",
         "Chapter": "5"
