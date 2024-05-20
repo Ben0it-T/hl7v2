@@ -4697,7 +4697,7 @@
         "name": "Alternate character set handling scheme",
         "type": "HL7",
         "elements": [
-            "<null>",
+            "null",
             "2.3",
             "ISO 2022-1994"
         ]
