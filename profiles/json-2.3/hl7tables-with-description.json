@@ -2558,7 +2558,7 @@
                 "description": "Yes"
             },
             {
-                "code": "Null",
+                "code": "null",
                 "description": ""
             },
             {
@@ -5218,19 +5218,19 @@
         "type": "HL7",
         "elements": [
             {
-                "code": "a",
+                "code": "A",
                 "description": "Archive"
             },
             {
-                "code": "r",
+                "code": "R",
                 "description": "Restore from Archive"
             },
             {
-                "code": "i",
+                "code": "I",
                 "description": "Initial Load"
             },
             {
-                "code": "not present",
+                "code": "Not present",
                 "description": "Not Present (the default, meaning current processing)"
             }
         ]

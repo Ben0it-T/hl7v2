@@ -2343,7 +2343,7 @@
             "R",
             "I",
             "T",
-            "not present"
+            "Not present"
         ]
     },
     "0208": {
@@ -2987,7 +2987,7 @@
         "type": "User",
         "elements": [
             "PT",
-            "* (star)",
+            "*",
             "30M",
             "1H",
             "2H",
@@ -3320,11 +3320,11 @@
         "name": "Appointment reason codes",
         "type": "User",
         "elements": [
-            "Routine",
-            "Walkin",
-            "Checkup",
-            "Followup",
-            "Emergency"
+            "ROUTINE",
+            "WALKIN",
+            "CHECKUP",
+            "FOLLOWUP",
+            "EMERGENCY"
         ]
     },
     "0277": {
@@ -3332,9 +3332,9 @@
         "name": "Appointment type codes",
         "type": "User",
         "elements": [
-            "Normal",
-            "Tentative",
-            "Complete"
+            "NORMAL",
+            "TENTATIVE",
+            "COMPLETE"
         ]
     },
     "0278": {
@@ -3342,16 +3342,16 @@
         "name": "Filler status codes",
         "type": "User",
         "elements": [
-            "Pending",
-            "Waitlist",
-            "Booked",
-            "Started",
-            "Complete",
-            "Cancelled",
-            "Dc",
-            "Deleted",
-            "Blocked",
-            "Overbook"
+            "PENDING",
+            "WAITLIST",
+            "BOOKED",
+            "STARTED",
+            "COMPLETE",
+            "CANCELLED",
+            "DC",
+            "DELETED",
+            "BLOCKED",
+            "OVERBOOK"
         ]
     },
     "0279": {
@@ -3601,23 +3601,14 @@
         "name": "Time selection criteria parameter class codes",
         "type": "User",
         "elements": [
-            "Prefstart",
             "PREFSTART",
-            "Prefend",
             "PREFEND",
-            "Mon",
             "MON",
             "TUE",
-            "Tue",
-            "Wed",
             "WED",
-            "Thu",
             "THU",
-            "Fri",
             "FRI",
-            "Sat",
             "SAT",
-            "Sun",
             "SUN"
         ]
     },
@@ -4321,7 +4312,7 @@
         "type": "HL7",
         "elements": [
             "ISO 2022-1994",
-            "<null>"
+            "null"
         ]
     },
     "0357": {
@@ -4357,7 +4348,7 @@
         "elements": [
             "0",
             "1",
-            "2 and higher"
+            "2"
         ]
     },
     "0360": {

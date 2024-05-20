@@ -925,7 +925,7 @@
         "type": "User",
         "elements": [
             "Y",
-            "Null",
+            "null",
             "N"
         ]
     },
@@ -2088,10 +2088,10 @@
         "name": "Processing Mode",
         "type": "HL7",
         "elements": [
-            "a",
-            "r",
-            "i",
-            "not present"
+            "A",
+            "R",
+            "I",
+            "Not present"
         ]
     },
     "0208": {

@@ -3549,9 +3549,9 @@
         "name": "Appointment type codes",
         "type": "User",
         "elements": [
-            "Complete",
-            "Normal",
-            "Tentative"
+            "COMPLETE",
+            "NORMAL",
+            "TENTATIVE"
         ]
     },
     "0278": {
@@ -3559,16 +3559,16 @@
         "name": "Filler status codes",
         "type": "User",
         "elements": [
-            "Blocked",
-            "Booked",
-            "Cancelled",
-            "Complete",
-            "Dc",
-            "Deleted",
-            "Overbook",
-            "Pending",
-            "Started",
-            "Waitlist"
+            "BLOCKED",
+            "BOOKED",
+            "CANCELLED",
+            "COMPLETE",
+            "DC",
+            "DELETED",
+            "OVERBOOK",
+            "PENDING",
+            "STARTED",
+            "WAITLIST"
         ]
     },
     "0279": {

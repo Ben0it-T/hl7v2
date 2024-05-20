@@ -6274,7 +6274,7 @@
                 "description": "Current processing, transmitted at intervals (scheduled or on demand)"
             },
             {
-                "code": "not present",
+                "code": "Not present",
                 "description": "Not present (the default, meaning current processing)"
             }
         ]
@@ -7923,7 +7923,7 @@
                 "description": "To identify measures at a point in time. This is a synonym for \"spot\" or \"random\" as applied to urine measurements."
             },
             {
-                "code": "* (star)",
+                "code": "*",
                 "description": "Life of the \"unit.\" Used for blood products."
             },
             {
@@ -8859,23 +8859,23 @@
         "type": "User",
         "elements": [
             {
-                "code": "Routine",
+                "code": "ROUTINE",
                 "description": "Routine appointment - default if not valued"
             },
             {
-                "code": "Walkin",
+                "code": "WALKIN",
                 "description": "A previously unscheduled walk-in visit"
             },
             {
-                "code": "Checkup",
+                "code": "CHECKUP",
                 "description": "A routine check-up, such as an annual physical"
             },
             {
-                "code": "Followup",
+                "code": "FOLLOWUP",
                 "description": "A follow up visit from a previous appointment"
             },
             {
-                "code": "Emergency",
+                "code": "EMERGENCY",
                 "description": "Emergency appointment"
             }
         ]
@@ -8886,15 +8886,15 @@
         "type": "User",
         "elements": [
             {
-                "code": "Normal",
+                "code": "NORMAL",
                 "description": "Routine schedule request type - default if not valued"
             },
             {
-                "code": "Tentative",
+                "code": "TENTATIVE",
                 "description": "A request for a tentative (e.g., \"penciled in\") appointment"
             },
             {
-                "code": "Complete",
+                "code": "COMPLETE",
                 "description": "A request to add a completed appointment, used to maintain records of completed appointments"
             }
         ]
@@ -8905,43 +8905,43 @@
         "type": "User",
         "elements": [
             {
-                "code": "Pending",
+                "code": "PENDING",
                 "description": "Appointment has not yet been confirmed"
             },
             {
-                "code": "Waitlist",
+                "code": "WAITLIST",
                 "description": "Appointment has been placed on a waiting list for a particular slot, or set of slots"
             },
             {
-                "code": "Booked",
+                "code": "BOOKED",
                 "description": "The indicated appointment is booked"
             },
             {
-                "code": "Started",
+                "code": "STARTED",
                 "description": "The indicated appointment has begun and is currently in progress"
             },
             {
-                "code": "Complete",
+                "code": "COMPLETE",
                 "description": "The indicated appointment has completed normally (was not discontinued, canceled, or deleted)"
             },
             {
-                "code": "Cancelled",
+                "code": "CANCELLED",
                 "description": "T7he indicated appointment was stopped from occurring (canceled prior to starting)"
             },
             {
-                "code": "Dc",
+                "code": "DC",
                 "description": "The indicated appointment was discontinued (DC'ed while in progress, discontinued parent appointment, or discontinued child appointment)"
             },
             {
-                "code": "Deleted",
+                "code": "DELETED",
                 "description": "The indicated appointment was deleted from the filler application"
             },
             {
-                "code": "Blocked",
+                "code": "BLOCKED",
                 "description": "The indicated time slot(s) is(are) blocked"
             },
             {
-                "code": "Overbook",
+                "code": "OVERBOOK",
                 "description": "The appointment has been confirmed; however it is confirmed in an overbooked state"
             }
         ]
@@ -9620,24 +9620,12 @@
         "type": "User",
         "elements": [
             {
-                "code": "Prefstart",
-                "description": "The preferred start time for the appointment request, service or resource. Any legal time specification in the format HHMM, using 24-hour clock notation"
-            },
-            {
                 "code": "PREFSTART",
                 "description": "The preferred start time for the appointment request, service or resource. Any legal time specification in the format HHMM, using 24-hour clock notation"
             },
             {
-                "code": "Prefend",
-                "description": "The preferred end time for the appointment request, service or resource. Any legal time specification in the format HHMM, using 24-hour clock notation"
-            },
-            {
                 "code": "PREFEND",
                 "description": "The preferred end time for the appointment request, service or resource. Any legal time specification in the format HHMM, using 24-hour clock notation"
-            },
-            {
-                "code": "Mon",
-                "description": "An indicator that Monday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
             },
             {
                 "code": "MON",
@@ -9648,44 +9636,20 @@
                 "description": "An indicator that Tuesday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
             },
             {
-                "code": "Tue",
-                "description": "An indicator that Tuesday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
-            },
-            {
-                "code": "Wed",
-                "description": "An indicator that Wednesday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
-            },
-            {
                 "code": "WED",
                 "description": "An indicator that Wednesday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
-            },
-            {
-                "code": "Thu",
-                "description": "An indicator that Thursday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
             },
             {
                 "code": "THU",
                 "description": "An indicator that Thursday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
             },
             {
-                "code": "Fri",
-                "description": "An indicator that Friday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
-            },
-            {
                 "code": "FRI",
                 "description": "An indicator that Friday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
             },
             {
-                "code": "Sat",
-                "description": "An indicator that Saturday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
-            },
-            {
                 "code": "SAT",
                 "description": "An indicator that Saturday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
-            },
-            {
-                "code": "Sun",
-                "description": "An indicator that Sunday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day NO = Day is not preferred"
             },
             {
                 "code": "SUN",
@@ -11360,7 +11324,7 @@
                 "description": "This standard is titled \"Information Technology - Character Code Structure and Extension Technique\". This standard specifies an escape sequence from basic one byte character set to specified other character set, and vice versa. The escape sequence expl"
             },
             {
-                "code": "<null>",
+                "code": "null",
                 "description": "This is the default, indicating that there is no character set switching occurring in this message."
             }
         ]
@@ -11444,7 +11408,7 @@
                 "description": "the primary diagnosis"
             },
             {
-                "code": "2 and higher",
+                "code": "2",
                 "description": "for ranked secondary diagnoses"
             }
         ]

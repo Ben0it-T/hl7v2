@@ -9742,15 +9742,15 @@
         "type": "User",
         "elements": [
             {
-                "code": "Complete",
+                "code": "COMPLETE",
                 "description": "A request to add a completed appointment, used to maintain records of completed appointments that did not appear in the schedule (e.g., STAT, walk-in, etc.)"
             },
             {
-                "code": "Normal",
+                "code": "NORMAL",
                 "description": "Routine schedule request type - default if not valued"
             },
             {
-                "code": "Tentative",
+                "code": "TENTATIVE",
                 "description": "A request for a tentative (e.g., \"penciled in\") appointment"
             }
         ]
@@ -9761,43 +9761,43 @@
         "type": "User",
         "elements": [
             {
-                "code": "Blocked",
+                "code": "BLOCKED",
                 "description": "The indicated time slot(s) is(are) blocked"
             },
             {
-                "code": "Booked",
+                "code": "BOOKED",
                 "description": "The indicated appointment is booked"
             },
             {
-                "code": "Cancelled",
+                "code": "CANCELLED",
                 "description": "The indicated appointment was stopped from occurring (canceled prior to starting)"
             },
             {
-                "code": "Complete",
+                "code": "COMPLETE",
                 "description": "The indicated appointment has completed normally (was not discontinued, canceled, or deleted)"
             },
             {
-                "code": "Dc",
+                "code": "DC",
                 "description": "The indicated appointment was discontinued (DC'ed while in progress, discontinued parent appointment, or discontinued child appointment)"
             },
             {
-                "code": "Deleted",
+                "code": "DELETED",
                 "description": "The indicated appointment was deleted from the filler application"
             },
             {
-                "code": "Overbook",
+                "code": "OVERBOOK",
                 "description": "The appointment has been confirmed; however it is confirmed in an overbooked state"
             },
             {
-                "code": "Pending",
+                "code": "PENDING",
                 "description": "Appointment has not yet been confirmed"
             },
             {
-                "code": "Started",
+                "code": "STARTED",
                 "description": "The indicated appointment has begun and is currently in progress"
             },
             {
-                "code": "Waitlist",
+                "code": "WAITLIST",
                 "description": "Appointment has been placed on a waiting list for a particular slot, or set of slots"
             }
         ]
@@ -12843,7 +12843,7 @@
         "type": "HL7",
         "elements": [
             {
-                "code": "<null>",
+                "code": "null",
                 "description": "This is the default, indicating that there is no character set switching occurring in this message."
             },
             {
