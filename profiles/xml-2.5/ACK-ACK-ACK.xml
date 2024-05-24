@@ -19,25 +19,25 @@
       </Field>
       <Field Name="Sending Application" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0361" ItemNo="00003">
         <Reference>2.15.9.3</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0361"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
       <Field Name="Sending Facility" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0362" ItemNo="00004">
         <Reference>2.15.9.4</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0362"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
       <Field Name="Receiving Application" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0361" ItemNo="00005">
         <Reference>2.15.9.5</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0361"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
       <Field Name="Receiving Facility" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0362" ItemNo="00006">
         <Reference>2.15.9.6</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0362"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
@@ -67,7 +67,7 @@
         <Reference>2.15.9.12</Reference>
         <Component Name="Version ID" Usage="O" Datatype="ID" Length="5" Table="0104"/>
         <Component Name="Internationalization Code" Usage="O" Datatype="CE" Length="483" Table="0399">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0399"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -130,7 +130,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -179,7 +179,7 @@
       </Field>
       <Field Name="Error Condition" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0357" ItemNo="00023">
         <Reference>2.15.8.6</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0357"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -194,7 +194,7 @@
         <Component Name="Segment Sequence" Usage="O" Datatype="NM" Length="2"/>
         <Component Name="Field Position" Usage="O" Datatype="NM" Length="2"/>
         <Component Name="Code Identifying Error" Usage="O" Datatype="CE" Length="483" Table="0357">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0357"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -213,7 +213,7 @@
       </Field>
       <Field Name="HL7 Error Code" Usage="R" Min="1" Max="1" Datatype="CWE" Length="705" Table="0357" ItemNo="01813">
         <Reference>2.15.5.3</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0357"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -228,7 +228,7 @@
       </Field>
       <Field Name="Application Error Code" Usage="O" Min="0" Max="1" Datatype="CWE" Length="705" Table="0533" ItemNo="01815">
         <Reference>2.15.5.5</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0533"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -252,7 +252,7 @@
       </Field>
       <Field Name="Override Type" Usage="O" Min="0" Max="1" Datatype="CWE" Length="705" Table="0518" ItemNo="01820">
         <Reference>2.15.5.10</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0518"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -264,7 +264,7 @@
       </Field>
       <Field Name="Override Reason Code" Usage="O" Min="0" Max="*" Datatype="CWE" Length="705" Table="0519" ItemNo="01821">
         <Reference>2.15.5.11</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0519"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>

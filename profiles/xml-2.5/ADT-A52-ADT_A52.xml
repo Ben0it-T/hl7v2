@@ -19,25 +19,25 @@
       </Field>
       <Field Name="Sending Application" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0361" ItemNo="00003">
         <Reference>2.15.9.3</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0361"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
       <Field Name="Sending Facility" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0362" ItemNo="00004">
         <Reference>2.15.9.4</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0362"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
       <Field Name="Receiving Application" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0361" ItemNo="00005">
         <Reference>2.15.9.5</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0361"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
       <Field Name="Receiving Facility" Usage="R" Min="1" Max="1" Datatype="HD" Length="227" Table="0362" ItemNo="00006">
         <Reference>2.15.9.6</Reference>
-        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+        <Component Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0362"/>
         <Component Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
         <Component Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
       </Field>
@@ -67,7 +67,7 @@
         <Reference>2.15.9.12</Reference>
         <Component Name="Version ID" Usage="O" Datatype="ID" Length="5" Table="0104"/>
         <Component Name="Internationalization Code" Usage="O" Datatype="CE" Length="483" Table="0399">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0399"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -130,7 +130,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -180,7 +180,7 @@
       </Field>
       <Field Name="Operator ID" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0188" ItemNo="00103">
         <Reference>3.4.1.5</Reference>
-        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
+        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199" Table="0188"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
           <SubComponent Name="Surname" Usage="R" Datatype="ST" Length="50"/>
           <SubComponent Name="Own Surname Prefix" Usage="O" Datatype="ST" Length="20"/>
@@ -195,7 +195,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -210,7 +210,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -276,7 +276,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -317,7 +317,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -358,7 +358,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -410,7 +410,7 @@
         <Component Name="Name Type Code" Usage="R" Datatype="ID" Length="1" Table="0200"/>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -449,7 +449,7 @@
         <Component Name="Name Type Code" Usage="R" Datatype="ID" Length="1" Table="0200"/>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -496,7 +496,7 @@
         <Component Name="Name Type Code" Usage="R" Datatype="ID" Length="1" Table="0200"/>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -520,7 +520,7 @@
       </Field>
       <Field Name="Race" Usage="X" Min="0" Max="0" Datatype="CE" Length="250" Table="0005" ItemNo="00113">
         <Reference>3.4.2.10</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0005"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -592,7 +592,7 @@
       </Field>
       <Field Name="Primary Language" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0296" ItemNo="00118">
         <Reference>3.4.2.15</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0296"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -601,7 +601,7 @@
       </Field>
       <Field Name="Marital Status" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0002" ItemNo="00119">
         <Reference>3.4.2.16</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0002"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -610,7 +610,7 @@
       </Field>
       <Field Name="Religion" Usage="X" Min="0" Max="0" Datatype="CE" Length="250" Table="0006" ItemNo="00120">
         <Reference>3.4.2.17</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0006"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -623,7 +623,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -673,7 +673,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -710,7 +710,7 @@
       </Field>
       <Field Name="Ethnic Group" Usage="X" Min="0" Max="0" Datatype="CE" Length="250" Table="0189" ItemNo="00125">
         <Reference>3.4.2.22</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0189"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -728,7 +728,7 @@
       </Field>
       <Field Name="Citizenship" Usage="O" Min="0" Max="*" Datatype="CE" Length="250" Table="0171" ItemNo="00129">
         <Reference>3.4.2.26</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0171"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -737,7 +737,7 @@
       </Field>
       <Field Name="Veterans Military Status" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0172" ItemNo="00130">
         <Reference>3.4.2.27</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0172"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -746,7 +746,7 @@
       </Field>
       <Field Name="Nationality" Usage="X" Min="0" Max="0" Datatype="CE" Length="250" Table="0212" ItemNo="00739">
         <Reference>3.4.2.28</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0212"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -780,7 +780,7 @@
       </Field>
       <Field Name="Species Code" Usage="C" Min="0" Max="1" Datatype="CE" Length="250" Table="0446" ItemNo="01539">
         <Reference>3.4.2.35</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0446"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -789,7 +789,7 @@
       </Field>
       <Field Name="Breed Code" Usage="C" Min="0" Max="1" Datatype="CE" Length="250" Table="0447" ItemNo="01540">
         <Reference>3.4.2.36</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0447"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -801,7 +801,7 @@
       </Field>
       <Field Name="Production Class Code" Usage="O" Min="0" Max="2" Datatype="CE" Length="250" Table="0429" ItemNo="01542">
         <Reference>3.4.2.38</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0429"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -810,7 +810,7 @@
       </Field>
       <Field Name="Tribal Citizenship" Usage="O" Min="0" Max="*" Datatype="CWE" Length="250" Table="0171" ItemNo="01840">
         <Reference>3.4.2.39</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0171"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -836,7 +836,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -866,7 +866,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -881,7 +881,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -946,7 +946,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -983,7 +983,7 @@
       </Field>
       <Field Name="Publicity Code" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0215" ItemNo="00743">
         <Reference>3.4.10.11</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0215"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1004,7 +1004,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1019,7 +1019,7 @@
       </Field>
       <Field Name="Advance Directive Code" Usage="O" Min="0" Max="*" Datatype="CE" Length="250" Table="0435" ItemNo="01568">
         <Reference>3.4.10.15</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0435"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1088,7 +1088,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1152,7 +1152,7 @@
       </Field>
       <Field Name="Attending Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00137">
         <Reference>3.4.3.7</Reference>
-        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
+        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199" Table="0010"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
           <SubComponent Name="Surname" Usage="R" Datatype="ST" Length="50"/>
           <SubComponent Name="Own Surname Prefix" Usage="O" Datatype="ST" Length="20"/>
@@ -1167,7 +1167,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1182,7 +1182,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1228,7 +1228,7 @@
       </Field>
       <Field Name="Referring Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00138">
         <Reference>3.4.3.8</Reference>
-        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
+        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199" Table="0010"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
           <SubComponent Name="Surname" Usage="R" Datatype="ST" Length="50"/>
           <SubComponent Name="Own Surname Prefix" Usage="O" Datatype="ST" Length="20"/>
@@ -1243,7 +1243,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1258,7 +1258,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1319,7 +1319,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1334,7 +1334,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1425,7 +1425,7 @@
       </Field>
       <Field Name="Admitting Doctor" Usage="O" Min="0" Max="*" Datatype="XCN" Length="250" Table="0010" ItemNo="00147">
         <Reference>3.4.3.17</Reference>
-        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199"/>
+        <Component Name="ID Number" Usage="RE" Datatype="ST" Length="199" Table="0010"/>
         <Component Name="Family Name" Usage="RE" Datatype="FN" Length="194">
           <SubComponent Name="Surname" Usage="R" Datatype="ST" Length="50"/>
           <SubComponent Name="Own Surname Prefix" Usage="O" Datatype="ST" Length="20"/>
@@ -1440,7 +1440,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1455,7 +1455,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1508,7 +1508,7 @@
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1609,7 +1609,7 @@
       </Field>
       <Field Name="Diet Type" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0114" ItemNo="00168">
         <Reference>3.4.3.38</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0114"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1703,11 +1703,11 @@
       </Field>
       <Field Name="Alternate Visit ID" Usage="O" Min="0" Max="1" Datatype="CX" Length="250" Table="0203" ItemNo="00180">
         <Reference>3.4.3.50</Reference>
-        <Component Name="ID Number" Usage="R" Datatype="ST" Length="128"/>
+        <Component Name="ID Number" Usage="R" Datatype="ST" Length="128" Table="0203"/>
         <Component Name="Check Digit" Usage="O" Datatype="ST" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="O" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="R" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1762,7 +1762,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1777,7 +1777,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1852,7 +1852,7 @@
       </Field>
       <Field Name="Accommodation Code" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0129" ItemNo="00182">
         <Reference>3.4.4.2</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0129"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1861,7 +1861,7 @@
       </Field>
       <Field Name="Admit Reason" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="IHE-PV2-3" ItemNo="00183">
         <Reference>3.4.4.3</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-PV2-3"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -1922,7 +1922,7 @@
         <Component Name="Degree (e.g., MD)" Usage="X" Datatype="IS" Length="5" Table="0360"/>
         <Component Name="Source Table" Usage="X" Datatype="IS" Length="4" Table="0297"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -1937,7 +1937,7 @@
         </Component>
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Name Context" Usage="X" Datatype="CE" Length="483" Table="0448">
-          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+          <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0448"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
           <SubComponent Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2016,7 +2016,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -2049,7 +2049,7 @@
       </Field>
       <Field Name="Patient Charge Adjustment Code" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0218" ItemNo="00731">
         <Reference>3.4.4.30</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0218"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2081,7 +2081,7 @@
       </Field>
       <Field Name="Mode of Arrival Code" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0430" ItemNo="01543">
         <Reference>3.4.4.38</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0430"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2090,7 +2090,7 @@
       </Field>
       <Field Name="Recreational Drug Use Code" Usage="O" Min="0" Max="*" Datatype="CE" Length="250" Table="0431" ItemNo="01544">
         <Reference>3.4.4.39</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0431"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2099,7 +2099,7 @@
       </Field>
       <Field Name="Admission Level of Care Code" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0432" ItemNo="01545">
         <Reference>3.4.4.40</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0432"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2108,7 +2108,7 @@
       </Field>
       <Field Name="Precaution Code" Usage="O" Min="0" Max="*" Datatype="CE" Length="250" Table="0433" ItemNo="01546">
         <Reference>3.4.4.41</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0433"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2117,7 +2117,7 @@
       </Field>
       <Field Name="Patient Condition Code" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="0434" ItemNo="01547">
         <Reference>3.4.4.42</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0434"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2132,7 +2132,7 @@
       </Field>
       <Field Name="Advance Directive Code" Usage="O" Min="0" Max="*" Datatype="CE" Length="250" Table="0435" ItemNo="01548">
         <Reference>3.4.4.45</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0435"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -2191,7 +2191,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -2212,7 +2212,7 @@
         <Component Name="Check Digit" Usage="X" Datatype="NM" Length="1"/>
         <Component Name="Check Digit Scheme" Usage="X" Datatype="ID" Length="3" Table="0061"/>
         <Component Name="Assigning Authority" Usage="RE" Datatype="HD" Length="227" Table="0363">
-          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0300"/>
+          <SubComponent Name="Namespace ID" Usage="R" Datatype="IS" Length="20" Table="0363"/>
           <SubComponent Name="Universal ID" Usage="C" Datatype="ST" Length="199"/>
           <SubComponent Name="Universal ID Type" Usage="C" Datatype="ID" Length="6" Table="0301"/>
         </Component>
@@ -2227,7 +2227,7 @@
       </Field>
       <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="">
         <Reference></Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-ZBE-9"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
