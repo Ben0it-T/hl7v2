@@ -613,7 +613,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0188",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -876,7 +876,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0079",
             "LongName": "point of care (ID)",
             "maxLength": ""
           },

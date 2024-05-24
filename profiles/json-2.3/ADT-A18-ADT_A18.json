@@ -613,7 +613,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0188",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -1976,7 +1976,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0296",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2466,7 +2466,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0172",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2540,7 +2540,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0212",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -3131,7 +3131,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0000",
             "LongName": "ID",
             "maxLength": ""
           },
@@ -3269,7 +3269,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0125",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -4307,7 +4307,7 @@
       },
       {
         "Name": "PV1.3",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00133",
@@ -4745,7 +4745,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -4963,7 +4963,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5181,7 +5181,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5607,7 +5607,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5975,7 +5975,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
+            "Table": "0064",
             "LongName": "Financial Class",
             "maxLength": ""
           },
@@ -6223,7 +6223,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0113",
             "LongName": "discharge location",
             "maxLength": ""
           },
@@ -6715,7 +6715,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0192",
             "LongName": "ID",
             "maxLength": ""
           },
@@ -6865,7 +6865,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },

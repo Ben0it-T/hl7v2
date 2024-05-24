@@ -666,7 +666,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0060",
             "LongName": "segment ID",
             "maxLength": ""
           },
