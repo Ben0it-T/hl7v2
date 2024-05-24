@@ -50,7 +50,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -94,7 +94,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -138,7 +138,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -182,7 +182,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -272,7 +272,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0076",
             "LongName": "message type",
             "maxLength": ""
           },
@@ -362,7 +362,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0104",
             "LongName": "version ID",
             "maxLength": ""
           },
@@ -803,7 +803,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0188",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -2276,7 +2276,7 @@
       },
       {
         "Name": "PID.7",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00110",
@@ -2310,7 +2310,7 @@
       },
       {
         "Name": "PID.8",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00111",
@@ -2598,7 +2598,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0005",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -2656,7 +2656,7 @@
       },
       {
         "Name": "PID.11",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00114",
@@ -3080,7 +3080,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0296",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3154,7 +3154,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0002",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3228,7 +3228,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0006",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3674,7 +3674,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0189",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3784,7 +3784,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0171",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3858,7 +3858,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0172",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3932,7 +3932,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0212",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4060,7 +4060,7 @@
       },
       {
         "Name": "PID.33",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "01537",
@@ -4154,7 +4154,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0446",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4228,7 +4228,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0447",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4314,7 +4314,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0429",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -5203,7 +5203,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0215",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -5469,7 +5469,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0435",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -5692,7 +5692,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0443",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -6450,7 +6450,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0406",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -7099,7 +7099,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0063",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -7569,7 +7569,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0131",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8039,7 +8039,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0002",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8183,7 +8183,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0171",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8257,7 +8257,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0296",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8343,7 +8343,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0215",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8441,7 +8441,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0006",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8775,7 +8775,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0212",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8849,7 +8849,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0189",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -8923,7 +8923,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0222",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9719,7 +9719,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0005",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9836,7 +9836,7 @@
       },
       {
         "Name": "PV1.3",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00133",
@@ -9972,7 +9972,7 @@
       },
       {
         "Name": "PV1.4",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00134",
@@ -9984,7 +9984,7 @@
       },
       {
         "Name": "PV1.5",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00135",
@@ -10142,7 +10142,7 @@
       },
       {
         "Name": "PV1.6",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00136",
@@ -10278,7 +10278,7 @@
       },
       {
         "Name": "PV1.7",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00137",
@@ -10294,7 +10294,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -10672,7 +10672,7 @@
       },
       {
         "Name": "PV1.8",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00138",
@@ -10688,7 +10688,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -11066,7 +11066,7 @@
       },
       {
         "Name": "PV1.9",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00139",
@@ -11082,7 +11082,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -11460,7 +11460,7 @@
       },
       {
         "Name": "PV1.10",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00140",
@@ -11472,7 +11472,7 @@
       },
       {
         "Name": "PV1.11",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00141",
@@ -11608,7 +11608,7 @@
       },
       {
         "Name": "PV1.12",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00142",
@@ -11620,7 +11620,7 @@
       },
       {
         "Name": "PV1.13",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00143",
@@ -11632,7 +11632,7 @@
       },
       {
         "Name": "PV1.14",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00144",
@@ -11644,7 +11644,7 @@
       },
       {
         "Name": "PV1.15",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00145",
@@ -11656,7 +11656,7 @@
       },
       {
         "Name": "PV1.16",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00146",
@@ -11668,7 +11668,7 @@
       },
       {
         "Name": "PV1.17",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00147",
@@ -11684,7 +11684,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -12062,7 +12062,7 @@
       },
       {
         "Name": "PV1.18",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00148",
@@ -12074,7 +12074,7 @@
       },
       {
         "Name": "PV1.19",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00149",
@@ -12232,7 +12232,7 @@
       },
       {
         "Name": "PV1.20",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00150",
@@ -12288,7 +12288,7 @@
       },
       {
         "Name": "PV1.21",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00151",
@@ -12300,7 +12300,7 @@
       },
       {
         "Name": "PV1.22",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00152",
@@ -12312,7 +12312,7 @@
       },
       {
         "Name": "PV1.23",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00153",
@@ -12324,7 +12324,7 @@
       },
       {
         "Name": "PV1.24",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00154",
@@ -12336,7 +12336,7 @@
       },
       {
         "Name": "PV1.25",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00155",
@@ -12348,7 +12348,7 @@
       },
       {
         "Name": "PV1.26",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00156",
@@ -12360,7 +12360,7 @@
       },
       {
         "Name": "PV1.27",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00157",
@@ -12372,7 +12372,7 @@
       },
       {
         "Name": "PV1.28",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00158",
@@ -12384,7 +12384,7 @@
       },
       {
         "Name": "PV1.29",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00159",
@@ -12396,7 +12396,7 @@
       },
       {
         "Name": "PV1.30",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00160",
@@ -12408,7 +12408,7 @@
       },
       {
         "Name": "PV1.31",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00161",
@@ -12420,7 +12420,7 @@
       },
       {
         "Name": "PV1.32",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00162",
@@ -12432,7 +12432,7 @@
       },
       {
         "Name": "PV1.33",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00163",
@@ -12444,7 +12444,7 @@
       },
       {
         "Name": "PV1.34",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00164",
@@ -12456,7 +12456,7 @@
       },
       {
         "Name": "PV1.35",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00165",
@@ -12468,7 +12468,7 @@
       },
       {
         "Name": "PV1.36",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00166",
@@ -12480,7 +12480,7 @@
       },
       {
         "Name": "PV1.37",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00167",
@@ -12496,7 +12496,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0113",
             "LongName": "discharge location",
             "maxLength": ""
           },
@@ -12536,7 +12536,7 @@
       },
       {
         "Name": "PV1.38",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00168",
@@ -12552,7 +12552,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0114",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -12610,7 +12610,7 @@
       },
       {
         "Name": "PV1.39",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00169",
@@ -12622,7 +12622,7 @@
       },
       {
         "Name": "PV1.40",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00170",
@@ -12634,7 +12634,7 @@
       },
       {
         "Name": "PV1.41",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00171",
@@ -12646,7 +12646,7 @@
       },
       {
         "Name": "PV1.42",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00172",
@@ -12782,7 +12782,7 @@
       },
       {
         "Name": "PV1.43",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00173",
@@ -12918,7 +12918,7 @@
       },
       {
         "Name": "PV1.44",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00174",
@@ -12952,7 +12952,7 @@
       },
       {
         "Name": "PV1.45",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "00175",
@@ -12986,7 +12986,7 @@
       },
       {
         "Name": "PV1.46",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00176",
@@ -12998,7 +12998,7 @@
       },
       {
         "Name": "PV1.47",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00177",
@@ -13010,7 +13010,7 @@
       },
       {
         "Name": "PV1.48",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00178",
@@ -13022,7 +13022,7 @@
       },
       {
         "Name": "PV1.49",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00179",
@@ -13034,7 +13034,7 @@
       },
       {
         "Name": "PV1.50",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00180",
@@ -13050,7 +13050,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0203",
             "LongName": "ID",
             "maxLength": ""
           },
@@ -13192,7 +13192,7 @@
       },
       {
         "Name": "PV1.51",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "01226",
@@ -13204,7 +13204,7 @@
       },
       {
         "Name": "PV1.52",
-        "Usage": "X",
+        "Usage": "O",
         "Min": "0",
         "Max": "*",
         "Item": "01274",
@@ -13220,7 +13220,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -13761,7 +13761,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0129",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -14865,7 +14865,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0218",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15045,7 +15045,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0430",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15119,7 +15119,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0431",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15193,7 +15193,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0432",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15267,7 +15267,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0433",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15341,7 +15341,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0434",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15439,7 +15439,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0435",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -15636,7 +15636,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0443",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -16394,7 +16394,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0406",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -18075,7 +18075,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0127",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -18223,7 +18223,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0128",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -18356,7 +18356,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0051",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -18488,7 +18488,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0118",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -18562,7 +18562,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0055",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -18660,7 +18660,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0083",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -19391,7 +19391,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0055",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -19523,7 +19523,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0083",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -20004,7 +20004,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0088",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -20148,7 +20148,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0010",
                 "LongName": "ID number (ST)",
                 "maxLength": ""
               },
@@ -20566,7 +20566,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0010",
                 "LongName": "ID number (ST)",
                 "maxLength": ""
               },
@@ -20960,7 +20960,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0010",
                 "LongName": "ID number (ST)",
                 "maxLength": ""
               },
@@ -21354,7 +21354,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0059",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -21440,7 +21440,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0051",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -21514,7 +21514,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0340",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -21600,7 +21600,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0417",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -21751,7 +21751,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0443",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -22509,7 +22509,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0406",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -24032,7 +24032,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0063",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25056,7 +25056,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0341",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25176,7 +25176,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0218",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25578,7 +25578,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0002",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25700,7 +25700,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0171",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25774,7 +25774,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0296",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25860,7 +25860,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0215",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -25958,7 +25958,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0006",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -26292,7 +26292,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0212",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -26366,7 +26366,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0189",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -26804,7 +26804,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0222",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -27184,7 +27184,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0005",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -27289,7 +27289,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0072",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -29087,7 +29087,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0063",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -30635,7 +30635,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0066",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -32270,7 +32270,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0342",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33076,7 +33076,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
+                "Table": "0145",
                 "LongName": "room type",
                 "maxLength": ""
               },
@@ -33120,7 +33120,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
+                "Table": "0147",
                 "LongName": "policy type",
                 "maxLength": ""
               },
@@ -33232,7 +33232,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0171",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33306,7 +33306,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0296",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33392,7 +33392,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0215",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33490,7 +33490,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0006",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33824,7 +33824,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0212",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33898,7 +33898,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0189",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -33972,7 +33972,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0002",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -35202,7 +35202,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0063",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -35484,7 +35484,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0343",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -35930,7 +35930,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0005",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -36004,7 +36004,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0344",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -36665,7 +36665,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
+                "Table": "0148",
                 "LongName": "money or percentage indicator",
                 "maxLength": ""
               },
@@ -37185,7 +37185,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
+                "Table": "0149",
                 "LongName": "day type",
                 "maxLength": ""
               },
@@ -37219,7 +37219,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0233",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -37327,7 +37327,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0010",
                 "LongName": "ID number (ST)",
                 "maxLength": ""
               },
@@ -37837,7 +37837,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0345",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -37911,7 +37911,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0346",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -38089,7 +38089,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
+                "Table": "0150",
                 "LongName": "pre-certification patient type",
                 "maxLength": ""
               },
@@ -38203,7 +38203,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0010",
                 "LongName": "ID number (ST)",
                 "maxLength": ""
               },
@@ -38674,7 +38674,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0443",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -39432,7 +39432,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0406",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },
@@ -39845,7 +39845,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0050",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -39931,7 +39931,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0347",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -40578,7 +40578,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
+            "Table": "0153",
             "LongName": "value code",
             "maxLength": ""
           },
@@ -40624,7 +40624,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0348",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -40698,7 +40698,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0349",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -40796,7 +40796,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
+            "Table": "0350",
             "LongName": "occurrence code",
             "maxLength": ""
           },
@@ -40830,7 +40830,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0351",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -41047,7 +41047,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
+            "Table": "0153",
             "LongName": "value code",
             "maxLength": ""
           },
@@ -41081,7 +41081,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
+            "Table": "0350",
             "LongName": "occurrence code",
             "maxLength": ""
           },
@@ -41115,7 +41115,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "CE",
-            "Table": "",
+            "Table": "0351",
             "LongName": "occurrence span code",
             "maxLength": "",
             "components": [
@@ -41125,7 +41125,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0351",
                 "LongName": "identifier (ST)",
                 "maxLength": ""
               },

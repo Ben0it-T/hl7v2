@@ -50,7 +50,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -94,7 +94,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -138,7 +138,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -182,7 +182,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -272,7 +272,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0076",
             "LongName": "message type",
             "maxLength": ""
           },
@@ -362,7 +362,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0104",
             "LongName": "version ID",
             "maxLength": ""
           },
@@ -803,7 +803,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0188",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -2598,7 +2598,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0005",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3080,7 +3080,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0296",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3154,7 +3154,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0002",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3228,7 +3228,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0006",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3674,7 +3674,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0189",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3784,7 +3784,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0171",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3858,7 +3858,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0172",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -3932,7 +3932,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0212",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4060,7 +4060,7 @@
       },
       {
         "Name": "PID.33",
-        "Usage": "C",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "01537",
@@ -4154,7 +4154,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0446",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4228,7 +4228,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0447",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4314,7 +4314,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0429",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -4407,7 +4407,7 @@
       },
       {
         "Name": "PV1.3",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00133",
@@ -4865,7 +4865,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5259,7 +5259,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5653,7 +5653,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -6255,7 +6255,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -7067,7 +7067,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0113",
             "LongName": "discharge location",
             "maxLength": ""
           },
@@ -7123,7 +7123,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0114",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -7621,7 +7621,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0203",
             "LongName": "ID",
             "maxLength": ""
           },
@@ -7791,7 +7791,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -8332,7 +8332,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0129",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9436,7 +9436,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0218",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9616,7 +9616,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0430",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9690,7 +9690,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0431",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9764,7 +9764,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0432",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9838,7 +9838,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0433",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -9912,7 +9912,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0434",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -10010,7 +10010,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0435",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -10153,7 +10153,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0127",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -10301,7 +10301,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0128",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -10387,7 +10387,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0323",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -10557,7 +10557,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0436",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -11023,7 +11023,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0063",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -11097,7 +11097,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0437",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
@@ -11171,7 +11171,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0438",
             "LongName": "identifier (ST)",
             "maxLength": ""
           },
