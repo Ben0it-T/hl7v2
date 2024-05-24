@@ -50,7 +50,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -94,7 +94,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -138,7 +138,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -182,7 +182,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "namespace ID",
             "maxLength": ""
           },
@@ -272,7 +272,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0076",
             "LongName": "message type",
             "maxLength": ""
           },
@@ -362,7 +362,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
+            "Table": "0104",
             "LongName": "version ID",
             "maxLength": ""
           },
@@ -791,7 +791,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0188",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -1906,7 +1906,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0005",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2324,7 +2324,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0296",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2398,7 +2398,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0002",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2472,7 +2472,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0006",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2878,7 +2878,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0189",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -2988,7 +2988,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0171",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -3062,7 +3062,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0172",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -3136,7 +3136,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0212",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -3907,7 +3907,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0215",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -4967,7 +4967,7 @@
       },
       {
         "Name": "PV1.3",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "00133",
@@ -5405,7 +5405,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5655,7 +5655,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -5905,7 +5905,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -6363,7 +6363,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
@@ -7011,7 +7011,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
+            "Table": "0113",
             "LongName": "discharge location",
             "maxLength": ""
           },
@@ -7067,7 +7067,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0114",
             "LongName": "identifier",
             "maxLength": ""
           },
@@ -7565,7 +7565,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0203",
             "LongName": "ID",
             "maxLength": ""
           },
@@ -7715,7 +7715,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0010",
             "LongName": "ID number (ST)",
             "maxLength": ""
           },
