@@ -21,6 +21,7 @@ class HL7xmlProfilesGenerator {
     public string $eventDescFilename;
     // json profiles output directory
     public string $profilesOutputDir;
+    public bool $fieldsConstraints;
 
     /**
      * @access private
@@ -48,6 +49,7 @@ class HL7xmlProfilesGenerator {
         $this->fieldsSchemas = array();
         $this->dataTypesSchemas = array();
         $this->eventName = "";
+        $this->fieldsConstraints = false;
     }
 
     /**
@@ -81,6 +83,15 @@ class HL7xmlProfilesGenerator {
 
     public function setProfilesOutputDir($directory) {
         $this->profilesOutputDir = $directory;
+    }
+
+    /**
+     * Set fields constraints (update condition predicates)
+     * 
+     * @param bool $fieldsConstraints
+     */
+    public function setFieldsConstraints($fieldsConstraints) {
+        $this->fieldsConstraints = $fieldsConstraints;
     }
 
     /**
@@ -314,7 +325,8 @@ class HL7xmlProfilesGenerator {
             "Name" => $componentName,
             "Usage" => $componentUsage,
             "Min" => $componentMin,
-            "Max" => $componentMax
+            "Max" => $componentMax,
+            "Type" => "",
         );
     }
 
@@ -392,97 +404,98 @@ class HL7xmlProfilesGenerator {
      */
     private function addField($fieldNode, $fieldName, $fieldAttributes) {
         // set field attributes
-        // $fieldAttributes["Item"] = sprintf('%05s', $this->fieldsSchemas[$fieldName]["Item"]);
+        $fieldTable = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? $this->fieldsSchemas[$fieldName]["Table"] : "";
+        $fieldTable = (substr($fieldTable,0,3) == "HL7") ? substr($fieldTable,3) : $fieldTable;
         $fieldAttributes["Item"] = ($this->fieldsSchemas[$fieldName]["Item"] != "") ? sprintf('%05s', $this->fieldsSchemas[$fieldName]["Item"]) : "";
         $fieldAttributes["Datatype"] = $this->fieldsSchemas[$fieldName]["Type"];
         $fieldAttributes["Length"] = $this->fieldsSchemas[$fieldName]["maxLength"];
-        // $fieldAttributes["Table"] = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? substr($this->fieldsSchemas[$fieldName]["Table"],3) : "";
-        $fieldAttributes["Table"] = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? $this->fieldsSchemas[$fieldName]["Table"] : "";
-        $fieldAttributes["Table"] = (substr($fieldAttributes["Table"],0,3) == "HL7") ? substr($fieldAttributes["Table"],3) : $fieldAttributes["Table"];
+        $fieldAttributes["Table"] = $fieldTable;
         $fieldAttributes["LongName"] = $this->fieldsSchemas[$fieldName]["LongName"];
         $fieldAttributes["Chapter"] = $this->fieldsSchemas[$fieldName]["Chapter"];
 
         // condition predicates
         // --------------------
-        // PID 
-        if (substr($fieldName, 0, 3) == "PID") {
-            // PID-7 – Date/Time of Birth
-            // This field is required if available in the following messages: A28, A31, A01, A04, A08
-            // In all other messages, it is optional.
-            if ($fieldName == "PID.7") {
-                $fieldAttributes["Usage"] = "O";
-                if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
-                    $fieldAttributes["Usage"] = "RE";
-                }
-            }
-
-            // PID-8 – Administrative Sex
-            // This field is required if available in the following messages: A28, A31, A01, A04
-            // In all other messages, it is optional.
-            if ($fieldName == "PID.8") {
-                $fieldAttributes["Usage"] = "O";
-                if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
-                    $fieldAttributes["Usage"] = "RE";
-                }
-            }
-
-            // PID-11 – Patient Address
-            // This field is required if available in the following messages: A28, A31, A01, A04
-            // In all other messages, it is optional.
-            if ($fieldName == "PID.11") {
-                $fieldAttributes["Usage"] = "O";
-                if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
-                    $fieldAttributes["Usage"] = "RE";
-                }
-            }
-
-            // PID-33 – Last Update Date/Time
-            // This field is required if available in the following messages: A28, A31, A01, A04, A08
-            if ($fieldName == "PID.33") {
-                $fieldAttributes["Usage"] = "C";
-                if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
-                    $fieldAttributes["Usage"] = "RE";
-                }
-            }
-        }
-        
-        // PV1
-        if (substr($fieldName, 0, 3) == "PV1") {
-            // PV1 - General conditions of use
-            // All messages of transaction [ITI-30] that use this segment, actually use a pseudo-PV1, which is empty. The only field populated is PV1-2 “Patient Class” values “N” (Not Applicable).
-            if (in_array($this->eventName, array("A28", "A31", "A40", "A47", "A24", "A37"))) {
-                if (!in_array($fieldName, array("PV1.1", "PV1.2"))) {
-                    $fieldAttributes["Usage"] = "X";
-                }
-            }
-            else {
-                // PV1-3 – Assigned Patient Location
-                // This field is required in the following messages: A02, A12
-                // In all other messages of transaction [ITI-31], it is required if known to the sender.
-                if ($fieldName == "PV1.3") {
-                    $fieldAttributes["Usage"] = "RE";
-                    if (in_array($this->eventName, array("A02", "A12"))) {
-                        $fieldAttributes["Usage"] = "R";
+        if ($this->fieldsConstraints) {
+            // PID 
+            if (substr($fieldName, 0, 3) == "PID") {
+                // PID-7 – Date/Time of Birth
+                // This field is required if available in the following messages: A28, A31, A01, A04, A08
+                // In all other messages, it is optional.
+                if ($fieldName == "PID.7") {
+                    $fieldAttributes["Usage"] = "O";
+                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
+                        $fieldAttributes["Usage"] = "RE";
                     }
                 }
 
-                // PV1-6 – Prior Patient Location
-                // This field is required in the following messages: A02
-                // In all other messages of transaction [ITI-31], it is optional.
-                if ($fieldName == "PV1.6") {
+                // PID-8 – Administrative Sex
+                // This field is required if available in the following messages: A28, A31, A01, A04
+                // In all other messages, it is optional.
+                if ($fieldName == "PID.8") {
                     $fieldAttributes["Usage"] = "O";
-                    if (in_array($this->eventName, array("A02"))) {
-                        $fieldAttributes["Usage"] = "R";
+                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
+                        $fieldAttributes["Usage"] = "RE";
                     }
                 }
 
-                // PV1-42 – Pending Location
-                // This field is required in the Pending Transfer (A15) and Cancel Pending Transfer (A26) messages.
-                // In all other messages of transaction [ITI-31], it is optional.
-                if ($fieldName == "PV1.42") {
+                // PID-11 – Patient Address
+                // This field is required if available in the following messages: A28, A31, A01, A04
+                // In all other messages, it is optional.
+                if ($fieldName == "PID.11") {
                     $fieldAttributes["Usage"] = "O";
-                    if (in_array($this->eventName, array("A15", "A26"))) {
-                        $fieldAttributes["Usage"] = "R";
+                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
+                        $fieldAttributes["Usage"] = "RE";
+                    }
+                }
+
+                // PID-33 – Last Update Date/Time
+                // This field is required if available in the following messages: A28, A31, A01, A04, A08
+                if ($fieldName == "PID.33") {
+                    $fieldAttributes["Usage"] = "C";
+                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
+                        $fieldAttributes["Usage"] = "RE";
+                    }
+                }
+            }
+            
+            // PV1
+            if (substr($fieldName, 0, 3) == "PV1") {
+                // PV1 - General conditions of use
+                // All messages of transaction [ITI-30] that use this segment, actually use a pseudo-PV1, which is empty. The only field populated is PV1-2 “Patient Class” values “N” (Not Applicable).
+                if (in_array($this->eventName, array("A28", "A31", "A40", "A47", "A24", "A37"))) {
+                    if (!in_array($fieldName, array("PV1.1", "PV1.2"))) {
+                        $fieldAttributes["Usage"] = "X";
+                    }
+                }
+                else {
+                    // PV1-3 – Assigned Patient Location
+                    // This field is required in the following messages: A02, A12
+                    // In all other messages of transaction [ITI-31], it is required if known to the sender.
+                    if ($fieldName == "PV1.3") {
+                        $fieldAttributes["Usage"] = "RE";
+                        if (in_array($this->eventName, array("A02", "A12"))) {
+                            $fieldAttributes["Usage"] = "R";
+                        }
+                    }
+
+                    // PV1-6 – Prior Patient Location
+                    // This field is required in the following messages: A02
+                    // In all other messages of transaction [ITI-31], it is optional.
+                    if ($fieldName == "PV1.6") {
+                        $fieldAttributes["Usage"] = "O";
+                        if (in_array($this->eventName, array("A02"))) {
+                            $fieldAttributes["Usage"] = "R";
+                        }
+                    }
+
+                    // PV1-42 – Pending Location
+                    // This field is required in the Pending Transfer (A15) and Cancel Pending Transfer (A26) messages.
+                    // In all other messages of transaction [ITI-31], it is optional.
+                    if ($fieldName == "PV1.42") {
+                        $fieldAttributes["Usage"] = "O";
+                        if (in_array($this->eventName, array("A15", "A26"))) {
+                            $fieldAttributes["Usage"] = "R";
+                        }
                     }
                 }
             }
@@ -508,10 +521,13 @@ class HL7xmlProfilesGenerator {
         $dataType = $this->fieldsSchemas[$fieldName]["Type"];
         if (isset($this->dataTypesSchemas[$dataType]["components"])) {
             $components = array();
-            foreach ($this->dataTypesSchemas[$dataType]["components"] as $component) {
+            foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $component) {
                 // component attributes
                 $componentAttributes = $this->getComponentAttributes($component);
-
+                if ($key == 0 && $fieldTable != "") {
+                    // send hl7 tabme to first component
+                    $componentAttributes["Table"] =  $fieldTable;
+                }
                 // add component node
                 $componentNode = $fieldNode->appendChild($this->messageProfile->createElement("Component"));
                 $this->addComponent($componentNode, $component["dataType"], $componentAttributes);
@@ -530,10 +546,15 @@ class HL7xmlProfilesGenerator {
      */
     private function addComponent($componentNode, $componentName, $componentAttributes, $isSubComponent = false) {
         // get component attributes
+        $componentTable = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? $this->dataTypesSchemas[$componentName]["Table"] : "";
+        $componentTable = (substr($componentTable,0,3) == "HL7") ? substr($componentTable,3) : $componentTable;
+
+        if (isset($componentAttributes["Table"]) && $componentAttributes["Table"] != "") {
+            $componentTable = $componentAttributes["Table"];
+        }
+
         $componentAttributes["Type"] = $this->dataTypesSchemas[$componentName]["Type"];
-        //$componentAttributes["Table"] = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? substr($this->dataTypesSchemas[$componentName]["Table"],3) : "";
-        $componentAttributes["Table"] = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? $this->dataTypesSchemas[$componentName]["Table"] : "";
-        $componentAttributes["Table"] = (substr($componentAttributes["Table"],0,3) == "HL7") ? substr($componentAttributes["Table"],3) : $componentAttributes["Table"];
+        $componentAttributes["Table"] = $componentTable;
         $componentAttributes["LongName"] = $this->dataTypesSchemas[$componentName]["LongName"];
         $componentAttributes["maxLength"] = $this->dataTypesSchemas[$componentName]["maxLength"];
         
@@ -550,10 +571,13 @@ class HL7xmlProfilesGenerator {
         $dataType = $this->dataTypesSchemas[$componentName]["Type"];
         if (isset($this->dataTypesSchemas[$dataType]["components"]) && ! $isSubComponent) {
             $subcomponents = array();
-            foreach ($this->dataTypesSchemas[$dataType]["components"] as $subcomponent) {
+            foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $subcomponent) {
                 // subcomponent attributes
                 $subcomponentAttributes = $this->getComponentAttributes($subcomponent);
-
+                if ($key == 0 && $componentTable != "") {
+                    // send hl7 tabme to first component
+                    $subcomponentAttributes["Table"] =  $componentTable;
+                }
                 // add subcomponent node
                 $subcomponentNode = $componentNode->appendChild($this->messageProfile->createElement("SubComponent"));
                 $this->addComponent($subcomponentNode, $subcomponent["dataType"], $subcomponentAttributes, true);
@@ -573,6 +597,7 @@ $inputDir     = $createXmlProfile["inputDir"];
 $outputDir    = $createXmlProfile["outputDir"];
 $msgType      = $createXmlProfile["msgType"];
 $ignoreEvents = $createXmlProfile["ignoreEvents"];
+$fieldsConstr = $createXmlProfile["fieldsConstraints"];
 
 // main
 $profilesGen = new HL7xmlProfilesGenerator();
@@ -587,6 +612,9 @@ $profilesGen->setEventDescFilename($inputDir . "/eventDesc.json");
 
 // set output directory
 $profilesGen->setProfilesOutputDir($outputDir);
+
+// fields constraints (update condition predicates)
+$profilesGen->setFieldsConstraints($fieldsConstr);
 
 // create profile
 $profilesGen->createXmlProfiles($HL7Version, $msgType, $ignoreEvents);

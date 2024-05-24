@@ -61,6 +61,7 @@ $createJsonProfile = array(
     "outputDir" => "../profiles/json-2.5",
     "msgType"   => array("ACK", "ADT", "SIU"),
     "ignoreEvents" => array("A08"),
+    "fieldsConstraints" => true,
     "indent" => 2,
     "pretty" => true
 );
@@ -72,4 +73,5 @@ $createXmlProfile = array(
     "outputDir"  => "../profiles/xml-2.5",
     "msgType"    => array("ACK", "ADT", "SIU"),
     "ignoreEvents" => array("A08"),
+    "fieldsConstraints" => true,
 );
