@@ -50,7 +50,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -94,7 +94,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -138,7 +138,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -182,7 +182,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -382,7 +382,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0399",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -813,7 +813,7 @@
                 "Min": "1",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "0300",
+                "Table": "0363",
                 "LongName": "Namespace ID",
                 "maxLength": "20"
               },
@@ -1084,7 +1084,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0357",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1209,7 +1209,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0357",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -1359,7 +1359,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0357",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1475,7 +1475,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0533",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1627,7 +1627,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0518",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1731,7 +1731,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0519",
             "LongName": "Identifier",
             "maxLength": "20"
           },

@@ -50,7 +50,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -94,7 +94,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -138,7 +138,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0361",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -182,7 +182,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0300",
+            "Table": "0362",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -382,7 +382,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0399",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -813,7 +813,7 @@
                 "Min": "1",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "0300",
+                "Table": "0363",
                 "LongName": "Namespace ID",
                 "maxLength": "20"
               },
@@ -1116,7 +1116,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "",
+            "Table": "0188",
             "LongName": "ID Number",
             "maxLength": "199"
           },
@@ -1258,7 +1258,7 @@
                 "Min": "1",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "0300",
+                "Table": "0363",
                 "LongName": "Namespace ID",
                 "maxLength": "20"
               },
@@ -1392,7 +1392,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0448",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -1937,7 +1937,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -2299,7 +2299,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -2661,7 +2661,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -3125,7 +3125,7 @@
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
-                    "Table": "",
+                    "Table": "0448",
                     "LongName": "Identifier",
                     "maxLength": "20"
                   },
@@ -3459,7 +3459,7 @@
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
-                    "Table": "",
+                    "Table": "0448",
                     "LongName": "Identifier",
                     "maxLength": "20"
                   },
@@ -3839,7 +3839,7 @@
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
-                    "Table": "",
+                    "Table": "0448",
                     "LongName": "Identifier",
                     "maxLength": "20"
                   },
@@ -4031,7 +4031,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0005",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4637,7 +4637,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0296",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4711,7 +4711,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0002",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4785,7 +4785,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0006",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4899,7 +4899,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -5317,7 +5317,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -5639,7 +5639,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0189",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5749,7 +5749,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0171",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5823,7 +5823,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0172",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5897,7 +5897,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0212",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6119,7 +6119,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0446",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6193,7 +6193,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0447",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6279,7 +6279,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0429",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6353,7 +6353,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0171",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6552,7 +6552,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -6812,7 +6812,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -6946,7 +6946,7 @@
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
-                    "Table": "",
+                    "Table": "0448",
                     "LongName": "Identifier",
                     "maxLength": "20"
                   },
@@ -7442,7 +7442,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -7764,7 +7764,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0215",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -7922,7 +7922,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -8040,7 +8040,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "",
+                "Table": "0435",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -8237,7 +8237,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -8599,7 +8599,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -8961,7 +8961,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -9323,7 +9323,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -9685,7 +9685,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -10047,7 +10047,7 @@
                     "Min": "1",
                     "Max": "1",
                     "Type": "IS",
-                    "Table": "0300",
+                    "Table": "0363",
                     "LongName": "Namespace ID",
                     "maxLength": "20"
                   },
@@ -10511,7 +10511,7 @@
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
-                    "Table": "",
+                    "Table": "0448",
                     "LongName": "Identifier",
                     "maxLength": "20"
                   },
