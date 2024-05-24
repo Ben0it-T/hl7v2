@@ -1251,7 +1251,7 @@ class Message {
                 }
 
                 // check table
-                if ($fieldDef["Table"] !== "" && isset($this->hl7tables[$fieldDef["Table"]]) ) {
+                if ($fieldDef["Table"] !== "" && isset($this->hl7tables[$fieldDef["Table"]]) && !isset($fieldDef["components"])) {
                     if (!empty($this->hl7tables[$fieldDef["Table"]]["elements"])) {
                         list($checkHL7tableResult, $checkHL7tableType, $checkHL7tableDesc) = $this->checkHL7table($fieldDef["Table"], $fieldValue, "Field", "'".$fieldDef["LongName"]."'");
                         $this->addTestReport($currentLocation, $checkHL7tableDesc, $checkHL7tableType, $checkHL7tableResult);
