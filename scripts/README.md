@@ -47,13 +47,14 @@ php uptade-schemas-to-IHE-PAM-FR.php
 
 ### Create profiles
 
-Create json profile from json schema
+Create json profile from json schema  
 *Set fieldsConstraints to true to apply 2.5 IHE PAM FR condition predicates*
 ```
 php create-json-profile.php
 ```
 
-Create xml profile (HL7v2xConformanceProfile) from json schema
+Create xml profile (HL7v2xConformanceProfile) from json schema  
+*Set fieldsConstraints to true to apply 2.5 IHE PAM FR condition predicates*
 ```
 php create-xml-profile.php
 ```
