@@ -18,9 +18,8 @@ PV1|1|N
 use HL7\Message;
 
 $msg = new Message();
-$isValidMsg = $msg->parseMessage($msgStr);
+$msg->parseMessage($msgStr);
 
-echo "isValidMsg: " . ($isValidMsg ? "true":"false") . PHP_EOL;
 echo "msg Type: " . $msg->messageType . PHP_EOL;
 echo "msg Trigger Event: " . $msg->messageTriggerEvent . PHP_EOL;
 echo "msg Struct ID: " . $msg->messageStructID . PHP_EOL;
@@ -192,7 +191,7 @@ print_r(htmlentities($msgXML));
 use HL7\Message;
 
 $msg = new Message();
-$isValidMsg = $msg->parseMessage($msgStr);
+$msg->parseMessage($msgStr);
 
 // Validation report
 $validationReport = $msg->getValidationReport();
