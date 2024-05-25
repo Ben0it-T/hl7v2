@@ -1,6 +1,6 @@
 # hl7v2 scripts
 
-Create HL7 2.5 json schemas and profiles from 2.x xsd schemas.  
+Create HL7 2.x json schemas and profiles from 2.x xsd schemas.  
 HL7’s Version 2.x xsd schemas : [HL7 Version 2 Product Suite](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185)
 
 ## Usage
@@ -30,7 +30,7 @@ php xsd-schemas-to-json-schemas.php
 ```
 
 Update json schemas  
-Only from HL7 v2.3.1, v2.4, v2.5, v2.5.1 messaging schemas to Sun_HL7v2xsd
+*Only from HL7 v2.3.1, v2.4, v2.5, v2.5.1 messaging schemas to Sun_HL7v2xsd*
 ```
 php json-schemas-update-from-old-schemas.php
 ```
@@ -40,7 +40,7 @@ Update json schemas from Appendix A
 php json-schemas-update-from-appendix-a.php
 ```
 
-Update json schemas to HL7 2.5 IHE PAM FR 2.x
+For HL7 2.5 IHE PAM FR, update json schemas to HL7 2.5 IHE PAM FR 2.x
 ```
 php uptade-schemas-to-IHE-PAM-FR.php
 ```
@@ -48,6 +48,7 @@ php uptade-schemas-to-IHE-PAM-FR.php
 ### Create profiles
 
 Create json profile from json schema
+*Set fieldsConstraints to true to apply 2.5 IHE PAM FR condition predicates*
 ```
 php create-json-profile.php
 ```
