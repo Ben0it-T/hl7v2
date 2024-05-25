@@ -13,7 +13,8 @@ PV1|1|N
 ```
 
 ### Parse HL7 message
-```
+
+```php
 use HL7\Message;
 
 $msg = new Message();
@@ -187,7 +188,7 @@ print_r(htmlentities($msgXML));
 
 ### Validation and test reports
 
-```
+```php
 use HL7\Message;
 
 $msg = new Message();
