@@ -93,6 +93,10 @@ class Message {
         return $this->msgData;
     }
 
+    public function getMsgXML() {
+        return $this->msgDataToXML($exportURN = true);
+    }
+
     public function getMsgType() {
         return $this->messageType;
     }
