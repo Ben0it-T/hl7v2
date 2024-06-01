@@ -1680,9 +1680,8 @@ class Message {
      */
     private function checkHL7table($table="", $elementValue = "", $elementType = "", $elementName = "") {
         $type = "Table";
-        //$result = (in_array($elementValue, $this->hl7tables[$table]["elements"]) ? true : false);
         $result = (in_array(strtoupper($elementValue), array_map('strtoupper', $this->hl7tables[$table]["elements"])) ? true : false);
-        $description = "$elementType $elementName value ($elementValue) " . (($result)? "exists in" : "not in") . " table $table.";
+        $description = "$elementType $elementName value ($elementValue) " . (($result) ? "exists in" : "not in") . " table $table (".($this->hl7tables[$table]["elements"] == "HL7" ? "HL7 standard" : "User defined")." tables).";
         $this->addLogs("-$elementType- $type: $description");
         return array($result, $type, $description);
     }
