@@ -29,6 +29,9 @@ class Message {
     private array  $messageSegmentNames; // list of segment names
     private array  $notDefinedSegment; // list of not defined segment names
     private array  $notPresentSegment; // list of not present segment names
+    private string $segmentName;
+    private int    $fieldrepeat;
+    private array  $profileParentGroupFirstSegmentsName;
     // Profile
     private string $profilePath;
     private array  $profile;
@@ -38,6 +41,13 @@ class Message {
     public  array  $testReport;
     public  array  $validationReport;
     public  int    $testReportErrorCnt;
+    // Location
+    private int    $segmentLocation;
+    private int    $profileSegmentLocation;
+    private bool   $profileLocationMoveBack;
+    private int    $fieldLocation;
+    private int    $componentLocation;
+    private int    $subcomponentLocation;
 
     /**
      * Create a new instance
