@@ -5993,7 +5993,7 @@
       },
       {
         "Name": "PID.31",
-        "Usage": "C",
+        "Usage": "CE",
         "Min": "0",
         "Max": "1",
         "Item": "01535",
@@ -24866,7 +24866,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFD-4",
+        "Table": "0136",
         "LongName": "Indicateur de date de naissance corrig\u00e9e",
         "Chapter": ""
       },

@@ -7340,7 +7340,7 @@
                 "field": "PID.31",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "C"
+                "Usage": "CE"
             },
             {
                 "field": "PID.32",
@@ -7379,7 +7379,8 @@
             {
                 "field": "PID.38",
                 "minOccurs": "0",
-                "maxOccurs": "2"
+                "maxOccurs": "2",
+                "Usage": "O"
             },
             {
                 "field": "PID.39",

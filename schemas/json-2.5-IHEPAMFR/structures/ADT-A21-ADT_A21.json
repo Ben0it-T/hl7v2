@@ -43,6 +43,18 @@
                 "Usage": "R"
             },
             {
+                "segment": "ZFV",
+                "minOccurs": "0",
+                "maxOccurs": "1",
+                "Usage": "O"
+            },
+            {
+                "segment": "ZFM",
+                "minOccurs": "0",
+                "maxOccurs": "1",
+                "Usage": "O"
+            },
+            {
                 "segment": "DB1",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded"

@@ -1236,6 +1236,10 @@
             {
                 "code": "R",
                 "description": "Recurring patient"
+            },
+            {
+                "code": "V",
+                "description": "Virtual"
             }
         ]
     },

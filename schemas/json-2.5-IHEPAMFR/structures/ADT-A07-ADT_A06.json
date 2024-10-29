@@ -99,12 +99,6 @@
                 "Usage": "R"
             },
             {
-                "segment": "ZFM",
-                "minOccurs": "0",
-                "maxOccurs": "1",
-                "Usage": "O"
-            },
-            {
                 "segment": "ROL",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded"

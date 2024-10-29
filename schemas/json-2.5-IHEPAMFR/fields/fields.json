@@ -16954,7 +16954,7 @@
     "ZFD.4": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFD-4",
+        "Table": "HL70136",
         "LongName": "Indicateur de date de naissance corrig\u00e9e",
         "maxLength": "1",
         "Chapter": ""
@@ -17098,7 +17098,7 @@
     "ZFS.7": {
         "Item": "",
         "Type": "CNE",
-        "Table": "HL73307",
+        "Table": "IHE-ZFS-7",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin",
         "maxLength": "2",
         "Chapter": ""

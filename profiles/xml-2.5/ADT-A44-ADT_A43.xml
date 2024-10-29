@@ -762,7 +762,7 @@
         <Field Name="Patient Death Indicator" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="00741">
           <Reference>3.4.2.30</Reference>
         </Field>
-        <Field Name="Identity Unknown Indicator" Usage="C" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="01535">
+        <Field Name="Identity Unknown Indicator" Usage="CE" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="01535">
           <Reference>3.4.2.31</Reference>
         </Field>
         <Field Name="Identity Reliability Code" Usage="R" Min="1" Max="*" Datatype="IS" Length="20" Table="0445" ItemNo="01536">

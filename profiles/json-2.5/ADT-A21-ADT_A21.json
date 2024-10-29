@@ -5993,7 +5993,7 @@
       },
       {
         "Name": "PID.31",
-        "Usage": "C",
+        "Usage": "CE",
         "Min": "0",
         "Max": "1",
         "Item": "01535",
@@ -17430,6 +17430,1372 @@
             "maxLength": "199"
           }
         ]
+      }
+    ]
+  },
+  {
+    "Type": "segment",
+    "Name": "ZFV",
+    "Usage": "O",
+    "Min": "0",
+    "Max": "1",
+    "LongName": "Compl\u00e9ment d'information sur la venue",
+    "Chapter": "",
+    "fields": [
+      {
+        "Name": "ZFV.1",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "DLD",
+        "Length": "47",
+        "Table": "0113",
+        "LongName": "Etablissement de provenance et date de dernier s\u00e9jour dans cet \u00e9tablissement",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "DLD.1",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0113",
+            "LongName": "Discharge Location",
+            "maxLength": "20"
+          },
+          {
+            "Name": "DLD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Effective Date",
+            "maxLength": "26",
+            "components": [
+              {
+                "Name": "TS.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "DTM",
+                "Table": "",
+                "LongName": "Time",
+                "maxLength": "24"
+              },
+              {
+                "Name": "TS.2",
+                "Usage": "X",
+                "Min": "0",
+                "Max": "0",
+                "Type": "ID",
+                "Table": "0529",
+                "LongName": "Degree of Precision",
+                "maxLength": "1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.2",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "CE",
+        "Length": "250",
+        "Table": "0430",
+        "LongName": "Mode de transport de sortie",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "CE.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "0430",
+            "LongName": "Identifier",
+            "maxLength": "20"
+          },
+          {
+            "Name": "CE.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Text",
+            "maxLength": "199"
+          },
+          {
+            "Name": "CE.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0396",
+            "LongName": "Name of Coding System",
+            "maxLength": "20"
+          },
+          {
+            "Name": "CE.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Alternate Identifier",
+            "maxLength": "20"
+          },
+          {
+            "Name": "CE.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Alternate Text",
+            "maxLength": "199"
+          },
+          {
+            "Name": "CE.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0396",
+            "LongName": "Name of Alternate Coding System",
+            "maxLength": "20"
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.3",
+        "Usage": "X",
+        "Min": "0",
+        "Max": "0",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "2",
+        "Table": "",
+        "LongName": "Type de pr\u00e9admission",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFV.4",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Date de d\u00e9but de placement (psy)",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "DTM",
+            "Table": "",
+            "LongName": "Time",
+            "maxLength": "24"
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "X",
+            "Min": "0",
+            "Max": "0",
+            "Type": "ID",
+            "Table": "0529",
+            "LongName": "Degree of Precision",
+            "maxLength": "1"
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.5",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "TS",
+        "Length": "26",
+        "Table": "",
+        "LongName": "Date de fin de placement (psy)",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "TS.1",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "DTM",
+            "Table": "",
+            "LongName": "Time",
+            "maxLength": "24"
+          },
+          {
+            "Name": "TS.2",
+            "Usage": "X",
+            "Min": "0",
+            "Max": "0",
+            "Type": "ID",
+            "Table": "0529",
+            "LongName": "Degree of Precision",
+            "maxLength": "1"
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.6",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "2",
+        "Item": "",
+        "Datatype": "XAD",
+        "Length": "250",
+        "Table": "IHE-ZFV-6",
+        "LongName": "Adresse de l'\u00e9tablissement de provenance ou de destination",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "XAD.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "SAD",
+            "Table": "IHE-ZFV-6",
+            "LongName": "Street Address",
+            "maxLength": "184",
+            "components": [
+              {
+                "Name": "SAD.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "IHE-ZFV-6",
+                "LongName": "Street or Mailing Address",
+                "maxLength": "120"
+              },
+              {
+                "Name": "SAD.2",
+                "Usage": "X",
+                "Min": "0",
+                "Max": "0",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Street Name",
+                "maxLength": "50"
+              },
+              {
+                "Name": "SAD.3",
+                "Usage": "X",
+                "Min": "0",
+                "Max": "0",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Dwelling Number",
+                "maxLength": "12"
+              }
+            ]
+          },
+          {
+            "Name": "XAD.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Other Designation",
+            "maxLength": "120"
+          },
+          {
+            "Name": "XAD.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "City",
+            "maxLength": "50"
+          },
+          {
+            "Name": "XAD.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "State or Province",
+            "maxLength": "50"
+          },
+          {
+            "Name": "XAD.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Zip or Postal Code",
+            "maxLength": "12"
+          },
+          {
+            "Name": "XAD.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0399",
+            "LongName": "Country",
+            "maxLength": "3"
+          },
+          {
+            "Name": "XAD.7",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0190",
+            "LongName": "Address Type",
+            "maxLength": "3"
+          },
+          {
+            "Name": "XAD.8",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Other Geographic Designation",
+            "maxLength": "50"
+          },
+          {
+            "Name": "XAD.9",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0289",
+            "LongName": "County\/Parish Code",
+            "maxLength": "20"
+          },
+          {
+            "Name": "XAD.10",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "IS",
+            "Table": "0288",
+            "LongName": "Census Tract",
+            "maxLength": "20"
+          },
+          {
+            "Name": "XAD.11",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0465",
+            "LongName": "Address Representation Code",
+            "maxLength": "1"
+          },
+          {
+            "Name": "XAD.12",
+            "Usage": "X",
+            "Min": "0",
+            "Max": "0",
+            "Type": "DR",
+            "Table": "",
+            "LongName": "Address Validity Range",
+            "maxLength": "53",
+            "components": [
+              {
+                "Name": "DR.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "Range Start Date\/Time",
+                "maxLength": "26"
+              },
+              {
+                "Name": "DR.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "TS",
+                "Table": "",
+                "LongName": "Range End Date\/Time",
+                "maxLength": "26"
+              }
+            ]
+          },
+          {
+            "Name": "XAD.13",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Effective Date",
+            "maxLength": "26",
+            "components": [
+              {
+                "Name": "TS.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "DTM",
+                "Table": "",
+                "LongName": "Time",
+                "maxLength": "24"
+              },
+              {
+                "Name": "TS.2",
+                "Usage": "X",
+                "Min": "0",
+                "Max": "0",
+                "Type": "ID",
+                "Table": "0529",
+                "LongName": "Degree of Precision",
+                "maxLength": "1"
+              }
+            ]
+          },
+          {
+            "Name": "XAD.14",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Expiration Date",
+            "maxLength": "26",
+            "components": [
+              {
+                "Name": "TS.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "DTM",
+                "Table": "",
+                "LongName": "Time",
+                "maxLength": "24"
+              },
+              {
+                "Name": "TS.2",
+                "Usage": "X",
+                "Min": "0",
+                "Max": "0",
+                "Type": "ID",
+                "Table": "0529",
+                "LongName": "Degree of Precision",
+                "maxLength": "1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.7",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "CX",
+        "Length": "250",
+        "Table": "",
+        "LongName": "NDA de l'\u00e9tablissement de provenance",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "CX.1",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "ID Number",
+            "maxLength": "128"
+          },
+          {
+            "Name": "CX.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Check Digit",
+            "maxLength": "1"
+          },
+          {
+            "Name": "CX.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0061",
+            "LongName": "Check Digit Scheme",
+            "maxLength": "3"
+          },
+          {
+            "Name": "CX.4",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "0363",
+            "LongName": "Assigning Authority",
+            "maxLength": "227",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0363",
+                "LongName": "Namespace ID",
+                "maxLength": "20"
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Universal ID",
+                "maxLength": "199"
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "Universal ID Type",
+                "maxLength": "6"
+              }
+            ]
+          },
+          {
+            "Name": "CX.5",
+            "Usage": "RE",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0203",
+            "LongName": "Identifier Type Code",
+            "maxLength": "5"
+          },
+          {
+            "Name": "CX.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "Assigning Facility",
+            "maxLength": "227",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0300",
+                "LongName": "Namespace ID",
+                "maxLength": "20"
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Universal ID",
+                "maxLength": "199"
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "Universal ID Type",
+                "maxLength": "6"
+              }
+            ]
+          },
+          {
+            "Name": "CX.7",
+            "Usage": "C",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "Effective Date",
+            "maxLength": "8"
+          },
+          {
+            "Name": "CX.8",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "Expiration Date",
+            "maxLength": "8"
+          },
+          {
+            "Name": "CX.9",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CWE",
+            "Table": "",
+            "LongName": "Assigning Jurisdiction",
+            "maxLength": "705",
+            "components": [
+              {
+                "Name": "CWE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Alternate Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.7",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.8",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.9",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Original Text",
+                "maxLength": "199"
+              }
+            ]
+          },
+          {
+            "Name": "CX.10",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CWE",
+            "Table": "",
+            "LongName": "Assigning Agency or Department",
+            "maxLength": "705",
+            "components": [
+              {
+                "Name": "CWE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Alternate Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.7",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.8",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.9",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Original Text",
+                "maxLength": "199"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.8",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "*",
+        "Item": "",
+        "Datatype": "CX",
+        "Length": "250",
+        "Table": "",
+        "LongName": "Num\u00e9ro d'archives",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "CX.1",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "ID Number",
+            "maxLength": "128"
+          },
+          {
+            "Name": "CX.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Check Digit",
+            "maxLength": "1"
+          },
+          {
+            "Name": "CX.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0061",
+            "LongName": "Check Digit Scheme",
+            "maxLength": "3"
+          },
+          {
+            "Name": "CX.4",
+            "Usage": "R",
+            "Min": "1",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "0363",
+            "LongName": "Assigning Authority",
+            "maxLength": "227",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0363",
+                "LongName": "Namespace ID",
+                "maxLength": "20"
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Universal ID",
+                "maxLength": "199"
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "Universal ID Type",
+                "maxLength": "6"
+              }
+            ]
+          },
+          {
+            "Name": "CX.5",
+            "Usage": "RE",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0203",
+            "LongName": "Identifier Type Code",
+            "maxLength": "5"
+          },
+          {
+            "Name": "CX.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "HD",
+            "Table": "",
+            "LongName": "Assigning Facility",
+            "maxLength": "227",
+            "components": [
+              {
+                "Name": "HD.1",
+                "Usage": "R",
+                "Min": "1",
+                "Max": "1",
+                "Type": "IS",
+                "Table": "0300",
+                "LongName": "Namespace ID",
+                "maxLength": "20"
+              },
+              {
+                "Name": "HD.2",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Universal ID",
+                "maxLength": "199"
+              },
+              {
+                "Name": "HD.3",
+                "Usage": "C",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0301",
+                "LongName": "Universal ID Type",
+                "maxLength": "6"
+              }
+            ]
+          },
+          {
+            "Name": "CX.7",
+            "Usage": "C",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "Effective Date",
+            "maxLength": "8"
+          },
+          {
+            "Name": "CX.8",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "Expiration Date",
+            "maxLength": "8"
+          },
+          {
+            "Name": "CX.9",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CWE",
+            "Table": "",
+            "LongName": "Assigning Jurisdiction",
+            "maxLength": "705",
+            "components": [
+              {
+                "Name": "CWE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Alternate Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.7",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.8",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.9",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Original Text",
+                "maxLength": "199"
+              }
+            ]
+          },
+          {
+            "Name": "CX.10",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "CWE",
+            "Table": "",
+            "LongName": "Assigning Agency or Department",
+            "maxLength": "705",
+            "components": [
+              {
+                "Name": "CWE.1",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.2",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.3",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.4",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Identifier",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.5",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Text",
+                "maxLength": "199"
+              },
+              {
+                "Name": "CWE.6",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ID",
+                "Table": "0396",
+                "LongName": "Name of Alternate Coding System",
+                "maxLength": "20"
+              },
+              {
+                "Name": "CWE.7",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.8",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Alternate Coding System Version ID",
+                "maxLength": "10"
+              },
+              {
+                "Name": "CWE.9",
+                "Usage": "O",
+                "Min": "0",
+                "Max": "1",
+                "Type": "ST",
+                "Table": "",
+                "LongName": "Original Text",
+                "maxLength": "199"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "ZFV.9",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "6",
+        "Table": "",
+        "LongName": "Mode de sortie personnalis\u00e9",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFV.10",
+        "Usage": "C",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "2",
+        "Table": "IHE-ZFV-10",
+        "LongName": "Code RIM-P du mode l\u00e9gal de soin transmis dans le PV2-3",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFV.11",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "CE",
+        "Length": "250",
+        "Table": "IHE-ZFV-11",
+        "LongName": "Prise en charge durant le transport",
+        "Chapter": "",
+        "components": [
+          {
+            "Name": "CE.1",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "IHE-ZFV-11",
+            "LongName": "Identifier",
+            "maxLength": "20"
+          },
+          {
+            "Name": "CE.2",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Text",
+            "maxLength": "199"
+          },
+          {
+            "Name": "CE.3",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0396",
+            "LongName": "Name of Coding System",
+            "maxLength": "20"
+          },
+          {
+            "Name": "CE.4",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Alternate Identifier",
+            "maxLength": "20"
+          },
+          {
+            "Name": "CE.5",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Alternate Text",
+            "maxLength": "199"
+          },
+          {
+            "Name": "CE.6",
+            "Usage": "O",
+            "Min": "0",
+            "Max": "1",
+            "Type": "ID",
+            "Table": "0396",
+            "LongName": "Name of Alternate Coding System",
+            "maxLength": "20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Type": "segment",
+    "Name": "ZFM",
+    "Usage": "O",
+    "Min": "0",
+    "Max": "1",
+    "LongName": "Mouvement PMSI",
+    "Chapter": "",
+    "fields": [
+      {
+        "Name": "ZFM.1",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "1",
+        "Table": "IHE-ZFM-1",
+        "LongName": "Mode d'entr\u00e9e PMSI",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFM.2",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "1",
+        "Table": "IHE-ZFM-2",
+        "LongName": "Mode de sortie PMSI",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFM.3",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "1",
+        "Table": "IHE-ZFM-3-4",
+        "LongName": "Mode de provenance PMSI",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFM.4",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "1",
+        "Table": "IHE-ZFM-3-4",
+        "LongName": "Mode de destination PMSI",
+        "Chapter": ""
+      },
+      {
+        "Name": "ZFM.5",
+        "Usage": "O",
+        "Min": "0",
+        "Max": "1",
+        "Item": "",
+        "Datatype": "IS",
+        "Length": "1",
+        "Table": "IHE-ZFM-5",
+        "LongName": "Passage par une structure des Urgences (PMSI)",
+        "Chapter": ""
       }
     ]
   },

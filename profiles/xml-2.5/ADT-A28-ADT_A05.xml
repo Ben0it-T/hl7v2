@@ -761,7 +761,7 @@
       <Field Name="Patient Death Indicator" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="00741">
         <Reference>3.4.2.30</Reference>
       </Field>
-      <Field Name="Identity Unknown Indicator" Usage="C" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="01535">
+      <Field Name="Identity Unknown Indicator" Usage="CE" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="01535">
         <Reference>3.4.2.31</Reference>
       </Field>
       <Field Name="Identity Reliability Code" Usage="R" Min="1" Max="*" Datatype="IS" Length="20" Table="0445" ItemNo="01536">
@@ -2908,7 +2908,7 @@
       <Field Name="Consentement SMS" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="IHE-ZFD-3" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Indicateur de date de naissance corrigée" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="IHE-ZFD-4" ItemNo="">
+      <Field Name="Indicateur de date de naissance corrigée" Usage="RE" Min="0" Max="1" Datatype="IS" Length="1" Table="0136" ItemNo="">
         <Reference></Reference>
       </Field>
       <Field Name="Mode d'obtention de l'identité" Usage="RE" Min="0" Max="1" Datatype="IS" Length="8" Table="IHE-ZFD-5" ItemNo="">
@@ -2964,9 +2964,9 @@
         <Component Name="Alternate Coding System Version ID" Usage="O" Datatype="ST" Length="10"/>
         <Component Name="Original Text" Usage="O" Datatype="ST" Length="199"/>
       </Field>
-      <Field Name="Code RIM-P du mode légal de soin" Usage="O" Min="0" Max="1" Datatype="CNE" Length="2" Table="3307" ItemNo="">
+      <Field Name="Code RIM-P du mode légal de soin" Usage="O" Min="0" Max="1" Datatype="CNE" Length="2" Table="IHE-ZFS-7" ItemNo="">
         <Reference></Reference>
-        <Component Name="Identifier" Usage="R" Datatype="ST" Length="20" Table="3307"/>
+        <Component Name="Identifier" Usage="R" Datatype="ST" Length="20" Table="IHE-ZFS-7"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>

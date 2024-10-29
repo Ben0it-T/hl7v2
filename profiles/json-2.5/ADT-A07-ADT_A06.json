@@ -5993,7 +5993,7 @@
       },
       {
         "Name": "PID.31",
-        "Usage": "C",
+        "Usage": "CE",
         "Min": "0",
         "Max": "1",
         "Item": "01535",
@@ -25413,77 +25413,6 @@
             "maxLength": "199"
           }
         ]
-      }
-    ]
-  },
-  {
-    "Type": "segment",
-    "Name": "ZFM",
-    "Usage": "O",
-    "Min": "0",
-    "Max": "1",
-    "LongName": "Mouvement PMSI",
-    "Chapter": "",
-    "fields": [
-      {
-        "Name": "ZFM.1",
-        "Usage": "O",
-        "Min": "0",
-        "Max": "1",
-        "Item": "",
-        "Datatype": "IS",
-        "Length": "1",
-        "Table": "IHE-ZFM-1",
-        "LongName": "Mode d'entr\u00e9e PMSI",
-        "Chapter": ""
-      },
-      {
-        "Name": "ZFM.2",
-        "Usage": "O",
-        "Min": "0",
-        "Max": "1",
-        "Item": "",
-        "Datatype": "IS",
-        "Length": "1",
-        "Table": "IHE-ZFM-2",
-        "LongName": "Mode de sortie PMSI",
-        "Chapter": ""
-      },
-      {
-        "Name": "ZFM.3",
-        "Usage": "O",
-        "Min": "0",
-        "Max": "1",
-        "Item": "",
-        "Datatype": "IS",
-        "Length": "1",
-        "Table": "IHE-ZFM-3-4",
-        "LongName": "Mode de provenance PMSI",
-        "Chapter": ""
-      },
-      {
-        "Name": "ZFM.4",
-        "Usage": "O",
-        "Min": "0",
-        "Max": "1",
-        "Item": "",
-        "Datatype": "IS",
-        "Length": "1",
-        "Table": "IHE-ZFM-3-4",
-        "LongName": "Mode de destination PMSI",
-        "Chapter": ""
-      },
-      {
-        "Name": "ZFM.5",
-        "Usage": "O",
-        "Min": "0",
-        "Max": "1",
-        "Item": "",
-        "Datatype": "IS",
-        "Length": "1",
-        "Table": "IHE-ZFM-5",
-        "LongName": "Passage par une structure des Urgences (PMSI)",
-        "Chapter": ""
       }
     ]
   },

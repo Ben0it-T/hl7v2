@@ -1,7 +1,7 @@
 <?php
 /**
  * Update json schemas
- * From HL7 2.5 IHE PAM to HL7 2.5 IHE PAM FR 2.11
+ * From HL7 2.5 IHE PAM to HL7 2.5 IHE PAM FR 2.11.1
  */
 
 require_once("config.php");
@@ -78,7 +78,7 @@ foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
 
 // NK1 segment
 foreach ($segmentsSchemas["NK1"]["fields"] as $key => $field) {
-    if (in_array($field["field"], array("NK1.35", "NK1.25", "NK1.28"))) {
+    if (in_array($field["field"], array("NK1.25", "NK1.28", "NK1.35"))) {
         $segmentsSchemas["NK1"]["fields"][$key]["minOccurs"] = "0";
         $segmentsSchemas["NK1"]["fields"][$key]["maxOccurs"] = "0";
         $segmentsSchemas["NK1"]["fields"][$key]["Usage"] = "X";
@@ -262,7 +262,7 @@ $ZFDfields = array(
     "ZFD.1"  => array("Item" => "", "Type" => "NA", "Table" => "", "LongName" => "Date Lunaire", "maxLength" => "8", "Chapter" => ""),
     "ZFD.2"  => array("Item" => "", "Type" => "NM", "Table" => "", "LongName" => "Nombre de semaines de gestation", "maxLength" => "16", "Chapter" => ""),
     "ZFD.3"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-ZFD-3", "LongName" => "Consentement SMS", "maxLength" => "1", "Chapter" => ""),
-    "ZFD.4"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFD-4", "LongName" => "Indicateur de date de naissance corrigée", "maxLength" => "1", "Chapter" => ""),
+    "ZFD.4"  => array("Item" => "", "Type" => "IS", "Table" => "HL70136", "LongName" => "Indicateur de date de naissance corrigée", "maxLength" => "1", "Chapter" => ""),
     "ZFD.5"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFD-5", "LongName" => "Mode d'obtention de l'identité", "maxLength" => "8", "Chapter" => ""),
     "ZFD.6"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date d'interrogation du téléservice INSi", "maxLength" => "26", "Chapter" => ""),
     "ZFD.7"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFD-7", "LongName" => "Type de justificatif d'identité", "maxLength" => "16", "Chapter" => ""),
@@ -300,7 +300,7 @@ $ZFSfields = array(
     "ZFS.4"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date et heure de la fin du mode légal de soin", "maxLength" => "26", "Chapter" => ""),
     "ZFS.5"  => array("Item" => "", "Type" => "ID", "Table" => "", "LongName" => "Action du mode légal de soin", "maxLength" => "6", "Chapter" => ""),
     "ZFS.6"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFS-6", "LongName" => "Mode légal de soins", "maxLength" => "250", "Chapter" => ""),
-    "ZFS.7"  => array("Item" => "", "Type" => "CNE", "Table" => "HL73307", "LongName" => "Code RIM-P du mode légal de soin", "maxLength" => "2", "Chapter" => ""),
+    "ZFS.7"  => array("Item" => "", "Type" => "CNE", "Table" => "IHE-ZFS-7", "LongName" => "Code RIM-P du mode légal de soin", "maxLength" => "2", "Chapter" => ""),
     "ZFS.8"  => array("Item" => "", "Type" => "FT", "Table" => "", "LongName" => "Commentaire", "maxLength" => "65536", "Chapter" => ""),
 );
 
@@ -447,11 +447,16 @@ foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
         case 'PID.11':
         case 'PID.18':
         case 'PID.25':
-        case 'PID.31':
         case 'PID.33':
         case 'PID.35':
         case 'PID.36':
             $segmentsSchemas["PID"]["fields"][$key]["Usage"] = "C";
+            break;
+
+        case 'PID.31':
+            $segmentsSchemas["PID"]["fields"][$key]["minOccurs"] = "0";
+            $segmentsSchemas["PID"]["fields"][$key]["maxOccurs"] = "1";
+            $segmentsSchemas["PID"]["fields"][$key]["Usage"] = "CE";
             break;
 
         case 'PID.32':
@@ -460,6 +465,12 @@ foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
             $segmentsSchemas["PID"]["fields"][$key]["Usage"] = "R";
             break;
         
+        case 'PID.38':
+            $segmentsSchemas["PID"]["fields"][$key]["minOccurs"] = "0";
+            $segmentsSchemas["PID"]["fields"][$key]["maxOccurs"] = "2";
+            $segmentsSchemas["PID"]["fields"][$key]["Usage"] = "O";
+            break;
+
         default:
             break;
     }
@@ -1374,7 +1385,15 @@ foreach ($messageStructures as $type => $event) {
                         }
                     }
                 }
+            }
+
+            // ADT^A06^ADT_A06
+            if (in_array($eventName, array("A06"))) {
                 array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, array($ZBE, $ZFM));
+            }
+            // ADT^A07^ADT_A06
+            if (in_array($eventName, array("A07"))) {
+                array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, array($ZBE));
             }
 
             // ADT^A02^ADT_A02
@@ -1402,13 +1421,21 @@ foreach ($messageStructures as $type => $event) {
             }
 
             // ADT^A21^ADT_A21
+            if (in_array($eventName, array("A21"))) {
+                array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, array($ZBE, $ZFV, $ZFM));
+            }
+
             // ADT^A22^ADT_A21
+            if (in_array($eventName, array("A22"))) {
+                array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, array($ZBE, $ZFM));
+            }
+
             // ADT^A25^ADT_A21
             // ADT^A26^ADT_A21
             // ADT^A27^ADT_A21
             // ADT^A32^ADT_A21
             // ADT^A33^ADT_A21
-            if (in_array($eventName, array("A21", "A22", "A25", "A26", "A27", "A32", "A33"))) {
+            if (in_array($eventName, array("A25", "A26", "A27", "A32", "A33"))) {
                 array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, array($ZBE));
             }
 

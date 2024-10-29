@@ -5993,7 +5993,7 @@
       },
       {
         "Name": "PID.31",
-        "Usage": "C",
+        "Usage": "CE",
         "Min": "0",
         "Max": "1",
         "Item": "01535",
@@ -22836,7 +22836,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFD-4",
+        "Table": "0136",
         "LongName": "Indicateur de date de naissance corrig\u00e9e",
         "Chapter": ""
       },
@@ -23201,7 +23201,7 @@
         "Item": "",
         "Datatype": "CNE",
         "Length": "2",
-        "Table": "3307",
+        "Table": "IHE-ZFS-7",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin",
         "Chapter": "",
         "components": [
@@ -23211,7 +23211,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "ST",
-            "Table": "3307",
+            "Table": "IHE-ZFS-7",
             "LongName": "Identifier",
             "maxLength": "20"
           },
