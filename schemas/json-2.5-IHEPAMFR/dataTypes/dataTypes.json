@@ -4165,18 +4165,21 @@
         "components": [
             {
                 "dataType": "VID.1",
-                "minOccurs": "0",
-                "maxOccurs": "1"
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
             },
             {
                 "dataType": "VID.2",
-                "minOccurs": "0",
-                "maxOccurs": "1"
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
             },
             {
                 "dataType": "VID.3",
-                "minOccurs": "0",
-                "maxOccurs": "1"
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "Usage": "R"
             }
         ]
     },

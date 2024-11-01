@@ -888,6 +888,23 @@ foreach ($dataTypesSchemas["TS"]["components"] as $key => $component) {
     }
 }
 //
+// VID
+//
+foreach ($dataTypesSchemas["VID"]["components"] as $key => $component) {
+    switch ($component["dataType"]) {
+        case 'VID.1':
+        case 'VID.2':
+        case 'VID.3':
+            $dataTypesSchemas["VID"]["components"][$key]["minOccurs"] = "1";
+            $dataTypesSchemas["VID"]["components"][$key]["maxOccurs"] = "1";
+            $dataTypesSchemas["VID"]["components"][$key]["Usage"] = "R";
+            break;
+
+        default:
+            break;
+    }
+}
+//
 // XAD
 //
 foreach ($dataTypesSchemas["XAD"]["components"] as $key => $component) {

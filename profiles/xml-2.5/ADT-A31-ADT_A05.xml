@@ -65,8 +65,8 @@
       </Field>
       <Field Name="Version ID" Usage="R" Min="1" Max="1" Datatype="VID" Length="60" ItemNo="00012">
         <Reference>2.15.9.12</Reference>
-        <Component Name="Version ID" Usage="O" Datatype="ID" Length="5" Table="0104"/>
-        <Component Name="Internationalization Code" Usage="O" Datatype="CE" Length="483" Table="0399">
+        <Component Name="Version ID" Usage="R" Datatype="ID" Length="5" Table="0104"/>
+        <Component Name="Internationalization Code" Usage="R" Datatype="CE" Length="483" Table="0399">
           <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="0399"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
@@ -74,7 +74,7 @@
           <SubComponent Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         </Component>
-        <Component Name="International Version ID" Usage="O" Datatype="CE" Length="483">
+        <Component Name="International Version ID" Usage="R" Datatype="CE" Length="483">
           <SubComponent Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
           <SubComponent Name="Text" Usage="O" Datatype="ST" Length="199"/>
           <SubComponent Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>

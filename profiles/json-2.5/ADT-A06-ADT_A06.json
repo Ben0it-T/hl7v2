@@ -358,8 +358,8 @@
         "components": [
           {
             "Name": "VID.1",
-            "Usage": "O",
-            "Min": "0",
+            "Usage": "R",
+            "Min": "1",
             "Max": "1",
             "Type": "ID",
             "Table": "0104",
@@ -368,8 +368,8 @@
           },
           {
             "Name": "VID.2",
-            "Usage": "O",
-            "Min": "0",
+            "Usage": "R",
+            "Min": "1",
             "Max": "1",
             "Type": "CE",
             "Table": "0399",
@@ -440,8 +440,8 @@
           },
           {
             "Name": "VID.3",
-            "Usage": "O",
-            "Min": "0",
+            "Usage": "R",
+            "Min": "1",
             "Max": "1",
             "Type": "CE",
             "Table": "",
