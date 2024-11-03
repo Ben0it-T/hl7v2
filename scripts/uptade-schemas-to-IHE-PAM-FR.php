@@ -135,9 +135,9 @@ $ZFAfields = array(
     "ZFA.6"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Opposition du patient à l'accès en mode bris de glace", "maxLength" => "1", "Chapter" => ""),
     "ZFA.7"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Opposition du patient à l'accès en mode centre de régulation", "maxLength" => "1", "Chapter" => ""),
     "ZFA.8"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil de l'état des oppositions du patient", "maxLength" => "26", "Chapter" => ""),
-    "ZFA.9"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFA-9", "LongName" => "Information et opposition à l'alimentation", "maxLength" => "3", "Chapter" => ""),
+    "ZFA.9"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFA-9", "LongName" => "Information et opposition à l'alimentation du DMP", "maxLength" => "3", "Chapter" => ""),
     "ZFA.10" => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil de l'information et opposition à l'alimentation", "maxLength" => "26", "Chapter" => ""),
-    "ZFA.11" => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFA-11", "LongName" => "Information et opposition à la consultation du DMP", "maxLength" => "3", "Chapter" => ""),
+    "ZFA.11" => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFA-11", "LongName" => "Information et consentement à la consultation du DMP", "maxLength" => "3", "Chapter" => ""),
     "ZFA.12" => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil de l'information et opposition à la consultation", "maxLength" => "26", "Chapter" => ""),
 );
 

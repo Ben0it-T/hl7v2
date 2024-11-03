@@ -22472,7 +22472,7 @@
         "Datatype": "CWE",
         "Length": "3",
         "Table": "IHE-ZFA-9",
-        "LongName": "Information et opposition \u00e0 l'alimentation",
+        "LongName": "Information et opposition \u00e0 l'alimentation du DMP",
         "Chapter": "",
         "components": [
           {
@@ -22610,7 +22610,7 @@
         "Datatype": "CWE",
         "Length": "3",
         "Table": "IHE-ZFA-11",
-        "LongName": "Information et opposition \u00e0 la consultation du DMP",
+        "LongName": "Information et consentement \u00e0 la consultation du DMP",
         "Chapter": "",
         "components": [
           {

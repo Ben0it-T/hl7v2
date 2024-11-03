@@ -16851,7 +16851,7 @@
         "Item": "",
         "Type": "CWE",
         "Table": "IHE-ZFA-11",
-        "LongName": "Information et opposition \u00e0 la consultation du DMP",
+        "LongName": "Information et consentement \u00e0 la consultation du DMP",
         "maxLength": "3",
         "Chapter": ""
     },
@@ -16923,7 +16923,7 @@
         "Item": "",
         "Type": "CWE",
         "Table": "IHE-ZFA-9",
-        "LongName": "Information et opposition \u00e0 l'alimentation",
+        "LongName": "Information et opposition \u00e0 l'alimentation du DMP",
         "maxLength": "3",
         "Chapter": ""
     },

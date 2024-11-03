@@ -7402,12 +7402,12 @@
     },
     "IHE-ZFA-11": {
         "id": "IHE-ZFA-11",
-        "name": "Information et opposition \u00e0 la consultation du DMP",
+        "name": "Information et consentement \u00e0 la consultation du DMP",
         "type": "User",
         "elements": [
-            "INO",
-            "IO",
-            "NA"
+            "NA",
+            "INC",
+            "IC"
         ]
     },
     "IHE-ZFA-4": {
@@ -7442,9 +7442,9 @@
         "name": "Information et opposition \u00e0 l\u2019alimentation",
         "type": "User",
         "elements": [
-            "INO",
+            "NA",
             "IO",
-            "NA"
+            "INO"
         ]
     },
     "IHE-ZFD-3": {
@@ -7621,30 +7621,39 @@
     },
     "IHE-ZFS-6": {
         "id": "IHE-ZFS-6",
-        "name": "Admit Reason",
+        "name": "Mode l\u00e9gal de soin (Psychiatrie)",
         "type": "User",
         "elements": [
-            "DET",
-            "HDT",
-            "HL",
-            "HO",
-            "JPI",
             "OPP",
-            "SDREIP",
-            "SDREM",
+            "SPP",
+            "SPL",
+            "SPAP",
             "SDREP",
+            "SDREM",
+            "SDREIP",
+            "SPD",
             "SDT",
             "SDTU",
-            "SPAP",
-            "SPD",
-            "SPI",
-            "SPL",
-            "SPP"
+            "SPI"
+        ]
+    },
+    "IHE-ZFS-7": {
+        "id": "IHE-ZFS-7",
+        "name": "Code RIM-P (Psychiatrie)",
+        "type": "User",
+        "elements": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
         ]
     },
     "IHE-ZFV-10": {
         "id": "IHE-ZFV-10",
-        "name": "RIMP Code",
+        "name": "Codes RIM-P",
         "type": "User",
         "elements": [
             "1",
@@ -7658,12 +7667,12 @@
     },
     "IHE-ZFV-11": {
         "id": "IHE-ZFV-11",
-        "name": "Care during transport",
+        "name": "Types de prise en charge durant le transport",
         "type": "User",
         "elements": [
-            "AUCUN",
             "MED",
-            "PARAMED"
+            "PARAMED",
+            "AUCUN"
         ]
     },
     "IHE-ZFV-6": {

@@ -22132,20 +22132,20 @@
     },
     "IHE-ZFA-11": {
         "id": "IHE-ZFA-11",
-        "name": "Information et opposition \u00e0 la consultation du DMP",
+        "name": "Information et consentement \u00e0 la consultation du DMP",
         "type": "User",
         "elements": [
             {
-                "code": "INO",
-                "description": "Inform\u00e9 et non oppos\u00e9"
-            },
-            {
-                "code": "IO",
-                "description": "Inform\u00e9 et oppos\u00e9"
-            },
-            {
                 "code": "NA",
-                "description": "N\/A"
+                "description": "N\/A (information non recueillie)"
+            },
+            {
+                "code": "INC",
+                "description": "Inform\u00e9 et ne consent pas \u00e0 la consultation de Mon Espace Sant\u00e9 \/ DMP"
+            },
+            {
+                "code": "IC",
+                "description": "Inform\u00e9 et consent \u00e0 la consultation de Mon Espace Sant\u00e9 \/ DMP"
             }
         ]
     },
@@ -22200,16 +22200,16 @@
         "type": "User",
         "elements": [
             {
-                "code": "INO",
-                "description": "Inform\u00e9 et non oppos\u00e9"
+                "code": "NA",
+                "description": "N\/A (information non recueillie)"
             },
             {
                 "code": "IO",
                 "description": "Inform\u00e9 et oppos\u00e9"
             },
             {
-                "code": "NA",
-                "description": "N\/A"
+                "code": "INO",
+                "description": "Inform\u00e9 et non oppos\u00e9"
             }
         ]
     },
@@ -22693,119 +22693,130 @@
     },
     "IHE-ZFS-6": {
         "id": "IHE-ZFS-6",
-        "name": "Admit Reason",
+        "name": "Mode l\u00e9gal de soin (Psychiatrie)",
         "type": "User",
         "elements": [
             {
-                "code": "DET",
-                "description": "Prisoner"
-            },
-            {
-                "code": "HDT",
-                "description": "Hospitalisation requested by a third party"
-            },
-            {
-                "code": "HL",
-                "description": "Free Hospitalisation"
-            },
-            {
-                "code": "HO",
-                "description": "Involuntary Placement"
-            },
-            {
-                "code": "JPI",
-                "description": "Placement of a person regarded as criminally irresponsible"
-            },
-            {
                 "code": "OPP",
-                "description": "Temporary placement order"
-            },
-            {
-                "code": "SDREIP",
-                "description": "Psychiatric care following the request by the representative of the State after having regarded the person as criminally irresponsible"
-            },
-            {
-                "code": "SDREM",
-                "description": "Psychiatric care following the request by the representative of the State, by order of the mayor"
-            },
-            {
-                "code": "SDREP",
-                "description": "Psychiatric care following a request by the representative of the State, by order of the prefect"
-            },
-            {
-                "code": "SDT",
-                "description": "Psychiatric care requested by a third party (2 certificates)"
-            },
-            {
-                "code": "SDTU",
-                "description": "Psychiatric care requested as an emergency by a third party (1 certificate)"
-            },
-            {
-                "code": "SPAP",
-                "description": "Psychiatric care with parental permission"
-            },
-            {
-                "code": "SPD",
-                "description": "Psychiatric care of prisoners"
-            },
-            {
-                "code": "SPI",
-                "description": "Psychiatric care for imminent danger (1 certificate)"
-            },
-            {
-                "code": "SPL",
-                "description": " Free Psychiatric care"
+                "description": "Ordonnance provisoire de placement"
             },
             {
                 "code": "SPP",
-                "description": "Psychiatric care for imminent danger"
+                "description": "Soins Psychiatiques Pour P\u00e9ril Imminent"
+            },
+            {
+                "code": "SPL",
+                "description": "Soins Psychiatriques Libres"
+            },
+            {
+                "code": "SPAP",
+                "description": "Soins Psychiatriques avec Autorisation Parentale"
+            },
+            {
+                "code": "SDREP",
+                "description": "Soins Psychiatriques \u00e0 la demande du Repr\u00e9sentant de l’Etat sur arr\u00eat\u00e9 Pr\u00e9fectoral (Art.L3213-1)"
+            },
+            {
+                "code": "SDREM",
+                "description": "Soins Psychiatriques \u00e0 la demande du Repr\u00e9sentant de l’Etat sur arr\u00eat\u00e9 Municipal (Art.L.3213-2)"
+            },
+            {
+                "code": "SDREIP",
+                "description": "Soins Psychiatriques \u00e0 la demande du Repr\u00e9sentant de l’Etat apr\u00e8s Irresponsabilit\u00e9 P\u00e9nal (Art.L.3213-7)"
+            },
+            {
+                "code": "SPD",
+                "description": "Soins Psychiatriques des Personnes D\u00e9tenues (article D.398 du code de proc\u00e9dure p\u00e9nale)"
+            },
+            {
+                "code": "SDT",
+                "description": "Soins Psychiatriques \u00e0 la Demande d’un Tiers (2 certificats) (Art.L.3212-1-II-1)"
+            },
+            {
+                "code": "SDTU",
+                "description": "Soins Psychiatriques \u00e0 la Demande d’un Tiers en urgence (1 certificat)(Art.L3213-3)"
+            },
+            {
+                "code": "SPI",
+                "description": "Soins Psychiatriques pour P\u00e9ril Imminent (1 certificat) (Art.L.3212-1-II-2)"
+            }
+        ]
+    },
+    "IHE-ZFS-7": {
+        "id": "IHE-ZFS-7",
+        "name": "Code RIM-P (Psychiatrie)",
+        "type": "User",
+        "elements": [
+            {
+                "code": "1",
+                "description": "Soins Psychiatriques Libres"
+            },
+            {
+                "code": "3",
+                "description": "Soins Psychiatriques sur d\u00e9cision du Repr\u00e9sentant de l’Etat"
+            },
+            {
+                "code": "4",
+                "description": "Article 706-135 du code de proc\u00e9dure p\u00e9nal et article L. 3213-7 du code de la sant\u00e9 publique pour les personnes jug\u00e9es p\u00e9nalement irresponsables"
+            },
+            {
+                "code": "5",
+                "description": "Ordonnance Provisoire de Placement"
+            },
+            {
+                "code": "6",
+                "description": "D\u00e9tenus : article D.398 du code de proc\u00e9dure p\u00e9nale"
+            },
+            {
+                "code": "7",
+                "description": "Soins Psychiatriques \u00e0 la Demande d’un Tiers (2 certificats) Ou Soins Psychiatriques \u00e0 la Demande d’un Tiers en urgence (1 certificat)"
+            },
+            {
+                "code": "8",
+                "description": "Soins Psychiatriques pour P\u00e9ril Imminent (1 certificat, sans tiers)"
             }
         ]
     },
     "IHE-ZFV-10": {
         "id": "IHE-ZFV-10",
-        "name": "RIMP Code",
+        "name": "Codes RIM-P",
         "type": "User",
         "elements": [
             {
                 "code": "1",
-                "description": "Free psychiatric care"
+                "description": "Soins Psychiatriques Libres"
             },
             {
                 "code": "3",
-                "description": "Psychiatric care following a request by the representative of the State"
+                "description": "Soins Psychiatriques sur d\u00e9cision du Repr\u00e9sentant de l’Etat"
             },
             {
                 "code": "4",
-                "description": "Code of Criminal Procedure 706-135 article and Code of Public Health L. 3213-7 article for persons regarded as criminally irresponsible"
+                "description": "Article 706-135 du code de proc\u00e9dure p\u00e9nal et article L. 3213-7 du code de la sant\u00e9 publique pour les personnes jug\u00e9es p\u00e9nalement irresponsables"
             },
             {
                 "code": "5",
-                "description": "Temporary Placement Order"
+                "description": "Ordonnance Provisoire de Placement"
             },
             {
                 "code": "6",
-                "description": "Prisoners: Code of Criminal Procedure D.398 article"
+                "description": "D\u00e9tenus : article D.398 du code de proc\u00e9dure p\u00e9nale"
             },
             {
                 "code": "7",
-                "description": "Psychiatric care following a request by a third party (2 certificates) Or Psychiatric care following an emergency request by a third party (1 certificate)"
+                "description": "Soins Psychiatriques \u00e0 la Demande d’un Tiers (2 certificats) ou Soins Psychiatriques \u00e0 la Demande d’un Tiers en urgence (1 certificat)"
             },
             {
                 "code": "8",
-                "description": "Psychiatric care for Imminent danger (1 certificate, no third party)"
+                "description": "Soins Psychiatriques pour P\u00e9ril Imminent (1 certificat, sans tiers)"
             }
         ]
     },
     "IHE-ZFV-11": {
         "id": "IHE-ZFV-11",
-        "name": "Care during transport",
+        "name": "Types de prise en charge durant le transport",
         "type": "User",
         "elements": [
-            {
-                "code": "AUCUN",
-                "description": "sans prise en charge m\u00e9dicalis\u00e9e ou para m\u00e9dicalis\u00e9e"
-            },
             {
                 "code": "MED",
                 "description": "M\u00e9dicalis\u00e9"
@@ -22813,6 +22824,10 @@
             {
                 "code": "PARAMED",
                 "description": "Para m\u00e9dicalis\u00e9"
+            },
+            {
+                "code": "AUCUN",
+                "description": "Sans prise en charge m\u00e9dicalis\u00e9e ou para m\u00e9dicalis\u00e9"
             }
         ]
     },

@@ -2941,7 +2941,7 @@
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Information et opposition à l'alimentation" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-9" ItemNo="">
+      <Field Name="Information et opposition à l'alimentation du DMP" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-9" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-ZFA-9"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
@@ -2958,7 +2958,7 @@
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Information et opposition à la consultation du DMP" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-11" ItemNo="">
+      <Field Name="Information et consentement à la consultation du DMP" Usage="RE" Min="0" Max="1" Datatype="CWE" Length="3" Table="IHE-ZFA-11" ItemNo="">
         <Reference></Reference>
         <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-ZFA-11"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
