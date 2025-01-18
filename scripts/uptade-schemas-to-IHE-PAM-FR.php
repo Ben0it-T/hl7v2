@@ -127,7 +127,7 @@ $ZFAsegment = array(
 );
 // Add fields
 $ZFAfields = array(
-    "ZFA.1"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-ZFA-1", "LongName" => "Statut du DMP du patient", "maxLength" => "20", "Chapter" => ""),
+    "ZFA.1"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-FRANCE-ZFA-1", "LongName" => "Statut du DMP du patient", "maxLength" => "20", "Chapter" => ""),
     "ZFA.2"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil du statut du DMP", "maxLength" => "26", "Chapter" => ""),
     "ZFA.3"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de fermeture du DMP du patient", "maxLength" => "26", "Chapter" => ""),
     "ZFA.4"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Autorisation d'accès valide au DMP du patient pour l'établissement", "maxLength" => "1", "Chapter" => ""),
@@ -135,9 +135,9 @@ $ZFAfields = array(
     "ZFA.6"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Opposition du patient à l'accès en mode bris de glace", "maxLength" => "1", "Chapter" => ""),
     "ZFA.7"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Opposition du patient à l'accès en mode centre de régulation", "maxLength" => "1", "Chapter" => ""),
     "ZFA.8"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil de l'état des oppositions du patient", "maxLength" => "26", "Chapter" => ""),
-    "ZFA.9"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFA-9", "LongName" => "Information et opposition à l'alimentation du DMP", "maxLength" => "3", "Chapter" => ""),
+    "ZFA.9"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-FRANCE-ZFA-9", "LongName" => "Information et opposition à l'alimentation du DMP", "maxLength" => "3", "Chapter" => ""),
     "ZFA.10" => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil de l'information et opposition à l'alimentation", "maxLength" => "26", "Chapter" => ""),
-    "ZFA.11" => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFA-11", "LongName" => "Information et consentement à la consultation du DMP", "maxLength" => "3", "Chapter" => ""),
+    "ZFA.11" => array("Item" => "", "Type" => "CWE", "Table" => "IHE-FRANCE-ZFA-11", "LongName" => "Information et consentement à la consultation du DMP", "maxLength" => "3", "Chapter" => ""),
     "ZFA.12" => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de recueil de l'information et opposition à la consultation", "maxLength" => "26", "Chapter" => ""),
 );
 
@@ -160,8 +160,8 @@ $ZFPsegment = array(
 );
 // Add fields
 $ZFPfields = array(
-    "ZFP.1"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-ZFP-1", "LongName" => "Activité socio-professionnelle (nomenclature INSEE)", "maxLength" => "1", "Chapter" => ""),
-    "ZFP.2"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-ZFP-2", "LongName" => "Catégorie socio-professionnelle (nomenclature INSEE)", "maxLength" => "2", "Chapter" => ""),
+    "ZFP.1"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-FRANCE-ZFP-1", "LongName" => "Activité socio-professionnelle (nomenclature INSEE)", "maxLength" => "1", "Chapter" => ""),
+    "ZFP.2"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-FRANCE-ZFP-2", "LongName" => "Catégorie socio-professionnelle (nomenclature INSEE)", "maxLength" => "2", "Chapter" => ""),
 );
 
 $segmentsSchemas = array_merge($segmentsSchemas, $ZFPsegment);
@@ -183,7 +183,7 @@ $ZFVsegment = array(
             array("field" => "ZFV.7",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
             array("field" => "ZFV.8",  "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"),
             array("field" => "ZFV.9",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"),
+            array("field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
             array("field" => "ZFV.11", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
         ),
         "LongName" => "Complément d'information sur la venue",
@@ -197,12 +197,12 @@ $ZFVfields = array(
     "ZFV.3"  => array("Item" => "", "Type" => "IS", "Table" => "", "LongName" => "Type de préadmission", "maxLength" => "2", "Chapter" => ""),
     "ZFV.4"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de début de placement (psy)", "maxLength" => "26", "Chapter" => ""),
     "ZFV.5"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de fin de placement (psy)", "maxLength" => "26", "Chapter" => ""),
-    "ZFV.6"  => array("Item" => "", "Type" => "XAD", "Table" => "IHE-ZFV-6", "LongName" => "Adresse de l'établissement de provenance ou de destination", "maxLength" => "250", "Chapter" => ""),
+    "ZFV.6"  => array("Item" => "", "Type" => "XAD", "Table" => "IHE-FRANCE-ZFV-6", "LongName" => "Adresse de l'établissement de provenance ou de destination", "maxLength" => "250", "Chapter" => ""),
     "ZFV.7"  => array("Item" => "", "Type" => "CX", "Table" => "", "LongName" => "NDA de l'établissement de provenance", "maxLength" => "250", "Chapter" => ""),
     "ZFV.8"  => array("Item" => "", "Type" => "CX", "Table" => "", "LongName" => "Numéro d'archives", "maxLength" => "250", "Chapter" => ""),
     "ZFV.9"  => array("Item" => "", "Type" => "IS", "Table" => "", "LongName" => "Mode de sortie personnalisé", "maxLength" => "6", "Chapter" => ""),
-    "ZFV.10" => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFV-10", "LongName" => "Code RIM-P du mode légal de soin transmis dans le PV2-3", "maxLength" => "2", "Chapter" => ""),
-    "ZFV.11" => array("Item" => "", "Type" => "CE", "Table" => "IHE-ZFV-11", "LongName" => "Prise en charge durant le transport", "maxLength" => "250", "Chapter" => ""),
+    "ZFV.10" => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFV-10", "LongName" => "Code RIM-P du mode légal de soin transmis dans le PV2-3", "maxLength" => "2", "Chapter" => ""),
+    "ZFV.11" => array("Item" => "", "Type" => "CE", "Table" => "IHE-FRANCE-ZFV-11", "LongName" => "Prise en charge durant le transport", "maxLength" => "250", "Chapter" => ""),
 );
 
 $segmentsSchemas = array_merge($segmentsSchemas, $ZFVsegment);
@@ -227,11 +227,11 @@ $ZFMsegment = array(
 );
 // Add fields
 $ZFMfields = array(
-    "ZFM.1"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFM-1", "LongName" => "Mode d'entrée PMSI", "maxLength" => "1", "Chapter" => ""),
-    "ZFM.2"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFM-2", "LongName" => "Mode de sortie PMSI", "maxLength" => "1", "Chapter" => ""),
-    "ZFM.3"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFM-3-4", "LongName" => "Mode de provenance PMSI", "maxLength" => "1", "Chapter" => ""),
-    "ZFM.4"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFM-3-4", "LongName" => "Mode de destination PMSI", "maxLength" => "1", "Chapter" => ""),
-    "ZFM.5"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFM-5", "LongName" => "Passage par une structure des Urgences (PMSI)", "maxLength" => "1", "Chapter" => ""),
+    "ZFM.1"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFM-1", "LongName" => "Mode d'entrée PMSI", "maxLength" => "1", "Chapter" => ""),
+    "ZFM.2"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFM-2", "LongName" => "Mode de sortie PMSI", "maxLength" => "1", "Chapter" => ""),
+    "ZFM.3"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFM-3-4", "LongName" => "Mode de provenance PMSI", "maxLength" => "1", "Chapter" => ""),
+    "ZFM.4"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFM-3-4", "LongName" => "Mode de destination PMSI", "maxLength" => "1", "Chapter" => ""),
+    "ZFM.5"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFM-5", "LongName" => "Passage par une structure des Urgences (PMSI)", "maxLength" => "1", "Chapter" => ""),
 );
 
 $segmentsSchemas = array_merge($segmentsSchemas, $ZFMsegment);
@@ -261,11 +261,11 @@ $ZFDsegment = array(
 $ZFDfields = array(
     "ZFD.1"  => array("Item" => "", "Type" => "NA", "Table" => "", "LongName" => "Date Lunaire", "maxLength" => "8", "Chapter" => ""),
     "ZFD.2"  => array("Item" => "", "Type" => "NM", "Table" => "", "LongName" => "Nombre de semaines de gestation", "maxLength" => "16", "Chapter" => ""),
-    "ZFD.3"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-ZFD-3", "LongName" => "Consentement SMS", "maxLength" => "1", "Chapter" => ""),
+    "ZFD.3"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Consentement SMS", "maxLength" => "1", "Chapter" => ""),
     "ZFD.4"  => array("Item" => "", "Type" => "IS", "Table" => "HL70136", "LongName" => "Indicateur de date de naissance corrigée", "maxLength" => "1", "Chapter" => ""),
-    "ZFD.5"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFD-5", "LongName" => "Mode d'obtention de l'identité", "maxLength" => "8", "Chapter" => ""),
+    "ZFD.5"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFD-5", "LongName" => "Mode d'obtention de l'identité", "maxLength" => "8", "Chapter" => ""),
     "ZFD.6"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date d'interrogation du téléservice INSi", "maxLength" => "26", "Chapter" => ""),
-    "ZFD.7"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-ZFD-7", "LongName" => "Type de justificatif d'identité", "maxLength" => "16", "Chapter" => ""),
+    "ZFD.7"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFD-7", "LongName" => "Type de justificatif d'identité", "maxLength" => "16", "Chapter" => ""),
     "ZFD.8"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date de fin de validité du document", "maxLength" => "26", "Chapter" => ""),
 );
 
@@ -299,8 +299,8 @@ $ZFSfields = array(
     "ZFS.3"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date et heure du début du mode légal de soin", "maxLength" => "26", "Chapter" => ""),
     "ZFS.4"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Date et heure de la fin du mode légal de soin", "maxLength" => "26", "Chapter" => ""),
     "ZFS.5"  => array("Item" => "", "Type" => "ID", "Table" => "", "LongName" => "Action du mode légal de soin", "maxLength" => "6", "Chapter" => ""),
-    "ZFS.6"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZFS-6", "LongName" => "Mode légal de soins", "maxLength" => "250", "Chapter" => ""),
-    "ZFS.7"  => array("Item" => "", "Type" => "CNE", "Table" => "IHE-ZFS-7", "LongName" => "Code RIM-P du mode légal de soin", "maxLength" => "2", "Chapter" => ""),
+    "ZFS.6"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-FRANCE-ZFS-6", "LongName" => "Mode légal de soins", "maxLength" => "250", "Chapter" => ""),
+    "ZFS.7"  => array("Item" => "", "Type" => "CNE", "Table" => "IHE-FRANCE-ZFS-7", "LongName" => "Code RIM-P du mode légal de soin", "maxLength" => "2", "Chapter" => ""),
     "ZFS.8"  => array("Item" => "", "Type" => "FT", "Table" => "", "LongName" => "Commentaire", "maxLength" => "65536", "Chapter" => ""),
 );
 
@@ -333,12 +333,12 @@ $ZBEfields = array(
     "ZBE.1"  => array("Item" => "", "Type" => "EI", "Table" => "", "LongName" => "Movement ID", "maxLength" => "427", "Chapter" => ""),
     "ZBE.2"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "Start of Movement Date/Time", "maxLength" => "26", "Chapter" => ""),
     "ZBE.3"  => array("Item" => "", "Type" => "TS", "Table" => "", "LongName" => "End of Movement Date/Time", "maxLength" => "26", "Chapter" => ""),
-    "ZBE.4"  => array("Item" => "", "Type" => "ID", "Table" => "", "LongName" => "Action on the Movement", "maxLength" => "6", "Chapter" => ""),
-    "ZBE.5"  => array("Item" => "", "Type" => "ID", "Table" => "", "LongName" => "Indicator Historical movement", "maxLength" => "1", "Chapter" => ""),
+    "ZBE.4"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-FRANCE-ZBE-4", "LongName" => "Action on the Movement", "maxLength" => "6", "Chapter" => ""),
+    "ZBE.5"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Indicator Historical movement", "maxLength" => "1", "Chapter" => ""),
     "ZBE.6"  => array("Item" => "", "Type" => "ID", "Table" => "", "LongName" => "Original trigger event code", "maxLength" => "3", "Chapter" => ""),
     "ZBE.7"  => array("Item" => "", "Type" => "XON", "Table" => "", "LongName" => "Ward of medical responsibility in the period starting with this movement", "maxLength" => "250", "Chapter" => ""),
     "ZBE.8"  => array("Item" => "", "Type" => "XON", "Table" => "", "LongName" => "Ward of care responsibility in the period starting with this movement", "maxLength" => "250", "Chapter" => ""),
-    "ZBE.9"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-ZBE-9", "LongName" => "Nature of this movement", "maxLength" => "3", "Chapter" => ""),
+    "ZBE.9"  => array("Item" => "", "Type" => "CWE", "Table" => "IHE-FRANCE-ZBE-9", "LongName" => "Nature of this movement", "maxLength" => "3", "Chapter" => ""),
 );
 
 $segmentsSchemas = array_merge($segmentsSchemas, $ZBEsegment);
@@ -368,6 +368,7 @@ foreach ($segmentsSchemas["MSH"]["fields"] as $key => $field) {
         case 'MSH.10':
         case 'MSH.11':
         case 'MSH.12':
+        case 'MSH.21':
             $segmentsSchemas["MSH"]["fields"][$key]["minOccurs"] = "1";
             $segmentsSchemas["MSH"]["fields"][$key]["maxOccurs"] = "1";
             $segmentsSchemas["MSH"]["fields"][$key]["Usage"] = "R";
@@ -383,7 +384,6 @@ foreach ($segmentsSchemas["MSH"]["fields"] as $key => $field) {
 
         case 'MSH.17':
         case 'MSH.19':
-        case 'MSH.21':
             $segmentsSchemas["MSH"]["fields"][$key]["Usage"] = "RE";
             break;
 
@@ -559,6 +559,11 @@ $fieldsSchemas["PV1.52"]["Table"] = "";
 //
 foreach ($segmentsSchemas["PV2"]["fields"] as $key => $field) {
     switch ($field["field"]) {
+        case 'PV2.3':
+            $segmentsSchemas["PV2"]["fields"][$key]["minOccurs"] = "0";
+            $segmentsSchemas["PV2"]["fields"][$key]["maxOccurs"] = "0";
+            $segmentsSchemas["PV2"]["fields"][$key]["Usage"] = "X";
+            break;
         case 'PV2.1':
         case 'PV2.47':
             $segmentsSchemas["PV2"]["fields"][$key]["Usage"] = "C";
@@ -572,7 +577,7 @@ foreach ($segmentsSchemas["PV2"]["fields"] as $key => $field) {
             break;
     }
 }
-$fieldsSchemas["PV2.3"]["Table"] = "IHE-PV2-3";
+$fieldsSchemas["PV2.3"]["Table"] = ""; // IHE PAM FR 2.11.2 : Usage X
 //
 // ACC segment
 //

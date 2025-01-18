@@ -499,6 +499,15 @@ class HL7xmlProfilesGenerator {
                     }
                 }
             }
+
+            // PV2
+            if (substr($fieldName, 0, 3) == "PV2") {
+                if (in_array($this->eventName, array("A01", "A14"))) {
+                    if ($fieldName == "PV2.38") {
+                        $fieldAttributes["Usage"] = "RE";
+                    }
+                }
+            }
         }
         // --------------------
 

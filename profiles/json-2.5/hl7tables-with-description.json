@@ -13,8 +13,8 @@
                 "description": "Male"
             },
             {
-                "code": "O",
-                "description": "Other"
+                "code": "U",
+                "description": "Unknown"
             }
         ]
     },
@@ -1313,7 +1313,7 @@
             },
             {
                 "code": "BAH",
-                "description": "Baha'i"
+                "description": "Baha\u2019i"
             },
             {
                 "code": "BAP",
@@ -1473,7 +1473,7 @@
             },
             {
                 "code": "JWN",
-                "description": "Christian: Jehovah's Witness"
+                "description": "Christian: Jehovah\u2019s Witness"
             },
             {
                 "code": "LMS",
@@ -2669,7 +2669,7 @@
             },
             {
                 "code": "BCYST",
-                "description": "Cyst, Baker's"
+                "description": "Cyst, Baker\u2019s"
             },
             {
                 "code": "BDY",
@@ -4682,7 +4682,7 @@
             },
             {
                 "code": "null",
-                "description": "No range defined, or normal ranges don't apply"
+                "description": "No range defined, or normal ranges don\u2019t apply"
             },
             {
                 "code": "R",
@@ -5458,7 +5458,7 @@
             },
             {
                 "code": "PORT",
-                "description": "The examining device goes to patient's location"
+                "description": "The examining device goes to patient\u2019s location"
             },
             {
                 "code": "WALK",
@@ -8814,7 +8814,7 @@
     },
     "0242": {
         "id": "0242",
-        "name": "Primary Observer's Qualification",
+        "name": "Primary Observer\u2019s Qualification",
         "type": "HL7",
         "elements": [
             {
@@ -8831,7 +8831,7 @@
             },
             {
                 "code": "M",
-                "description": "Mid-level professional (nurse, nurse practitioner, physician's assistant)"
+                "description": "Mid-level professional (nurse, nurse practitioner, physician\u2019s assistant)"
             },
             {
                 "code": "O",
@@ -10494,7 +10494,7 @@
             },
             {
                 "code": "Dc",
-                "description": "The indicated appointment was discontinued (DC'ed while in progress, discontinued parent appointment, or discontinued child appointment)"
+                "description": "The indicated appointment was discontinued (DC\u2019ed while in progress, discontinued parent appointment, or discontinued child appointment)"
             },
             {
                 "code": "Deleted",
@@ -13609,7 +13609,7 @@
             },
             {
                 "code": "BOUIN",
-                "description": "Bouin's solution"
+                "description": "Bouin\u2019s solution"
             },
             {
                 "code": "BSKM",
@@ -13625,7 +13625,7 @@
             },
             {
                 "code": "CARS",
-                "description": "Carson's Modified 10% formalin"
+                "description": "Carson\u2019s Modified 10% formalin"
             },
             {
                 "code": "CARY",
@@ -13705,7 +13705,7 @@
             },
             {
                 "code": "KARN",
-                "description": "Karnovsky's fixative"
+                "description": "Karnovsky\u2019s fixative"
             },
             {
                 "code": "KOX",
@@ -13729,7 +13729,7 @@
             },
             {
                 "code": "MICHTM",
-                "description": "Michel's transport medium"
+                "description": "Michel\u2019s transport medium"
             },
             {
                 "code": "MMDTM",
@@ -13749,7 +13749,7 @@
             },
             {
                 "code": "PAGE",
-                "description": "Pages's Saline"
+                "description": "Pages\u2019s Saline"
             },
             {
                 "code": "PHENOL",
@@ -14873,7 +14873,7 @@
             },
             {
                 "code": "CIV",
-                "description": "Cote D'Ivoire"
+                "description": "Cote D\u2019Ivoire"
             },
             {
                 "code": "HRV",
@@ -15061,7 +15061,7 @@
             },
             {
                 "code": "PRK",
-                "description": "Korea, Democratic People's Republic of"
+                "description": "Korea, Democratic People\u2019s Republic of"
             },
             {
                 "code": "KOR",
@@ -15077,7 +15077,7 @@
             },
             {
                 "code": "LAO",
-                "description": "Lao People's Democratic Republic"
+                "description": "Lao People\u2019s Democratic Republic"
             },
             {
                 "code": "LBN",
@@ -17007,7 +17007,7 @@
             },
             {
                 "code": "FILI",
-                "description": "filiation"
+                "description": "Filiation"
             },
             {
                 "code": "HOMA",
@@ -21732,7 +21732,7 @@
             },
             {
                 "code": "SKENE",
-                "description": "Skene's Gland"
+                "description": "Skene\u2019s Gland"
             },
             {
                 "code": "SKM",
@@ -22060,8 +22060,27 @@
             }
         ]
     },
-    "IHE-ZBE-9": {
-        "id": "IHE-ZBE-9",
+    "IHE-FRANCE-ZBE-4": {
+        "id": "IHE-FRANCE-ZBE-4",
+        "name": "Action on the Movement",
+        "type": "User",
+        "elements": [
+            {
+                "code": "INSERT",
+                "description": "Insertion d\u2019un nouveau mouvement"
+            },
+            {
+                "code": "CANCEL",
+                "description": "Annulation d\u2019un mouvement de la sequence"
+            },
+            {
+                "code": "UPDATE",
+                "description": "Correction du mouvement (courant ou historique)"
+            }
+        ]
+    },
+    "IHE-FRANCE-ZBE-9": {
+        "id": "IHE-FRANCE-ZBE-9",
         "name": "Nature of movement",
         "type": "User",
         "elements": [
@@ -22111,27 +22130,27 @@
             }
         ]
     },
-    "IHE-ZFA-1": {
-        "id": "IHE-ZFA-1",
-        "name": "Patient PHR's status",
+    "IHE-FRANCE-ZFA-1": {
+        "id": "IHE-FRANCE-ZFA-1",
+        "name": "Patient PHR\u2019s status",
         "type": "User",
         "elements": [
             {
                 "code": "ACTIF",
-                "description": "The patient's PHR exists and is not closed"
+                "description": "The patient\u2019s PHR exists and is not closed"
             },
             {
                 "code": "FERME",
-                "description": "The patient's PHR exists and is closed"
+                "description": "The patient\u2019s PHR exists and is closed"
             },
             {
                 "code": "INEXISTANT",
-                "description": "The patient's PHR doesn't exist"
+                "description": "The patient\u2019s PHR doesn\u2019t exist"
             }
         ]
     },
-    "IHE-ZFA-11": {
-        "id": "IHE-ZFA-11",
+    "IHE-FRANCE-ZFA-11": {
+        "id": "IHE-FRANCE-ZFA-11",
         "name": "Information et consentement \u00e0 la consultation du DMP",
         "type": "User",
         "elements": [
@@ -22149,53 +22168,8 @@
             }
         ]
     },
-    "IHE-ZFA-4": {
-        "id": "IHE-ZFA-4",
-        "name": "Valid access authorization to the patient's PHR",
-        "type": "User",
-        "elements": [
-            {
-                "code": "N",
-                "description": "The organization does not have any valid access authorization for this PHR"
-            },
-            {
-                "code": "Y",
-                "description": "The organization has a valid access authorization"
-            }
-        ]
-    },
-    "IHE-ZFA-6": {
-        "id": "IHE-ZFA-6",
-        "name": "Opposition of the patient to the \"bris de glace\" mode access",
-        "type": "User",
-        "elements": [
-            {
-                "code": "N",
-                "description": "The patient is not opposed to the \"bris de glace\" use of their PHR"
-            },
-            {
-                "code": "Y",
-                "description": "The patient is opposed to the \"bris de glace\" use of their PHR"
-            }
-        ]
-    },
-    "IHE-ZFA-7": {
-        "id": "IHE-ZFA-7",
-        "name": "Opposition of the patient to the \"centre 15\" mode access",
-        "type": "User",
-        "elements": [
-            {
-                "code": "N",
-                "description": "The patient is not opposed to the \"centre 15\" use of their PHR"
-            },
-            {
-                "code": "Y",
-                "description": "The patient is opposed to the \"centre 15\" use of their PHR"
-            }
-        ]
-    },
-    "IHE-ZFA-9": {
-        "id": "IHE-ZFA-9",
+    "IHE-FRANCE-ZFA-9": {
+        "id": "IHE-FRANCE-ZFA-9",
         "name": "Information et opposition \u00e0 l\u2019alimentation",
         "type": "User",
         "elements": [
@@ -22213,38 +22187,8 @@
             }
         ]
     },
-    "IHE-ZFD-3": {
-        "id": "IHE-ZFD-3",
-        "name": "SMS Consent",
-        "type": "User",
-        "elements": [
-            {
-                "code": "N",
-                "description": "No"
-            },
-            {
-                "code": "Y",
-                "description": "Yes"
-            }
-        ]
-    },
-    "IHE-ZFD-4": {
-        "id": "IHE-ZFD-4",
-        "name": "Indicateur de date de naissance modifi\u00e9e",
-        "type": "User",
-        "elements": [
-            {
-                "code": "N",
-                "description": "No"
-            },
-            {
-                "code": "Y",
-                "description": "Yes"
-            }
-        ]
-    },
-    "IHE-ZFD-5": {
-        "id": "IHE-ZFD-5",
+    "IHE-FRANCE-ZFD-5": {
+        "id": "IHE-FRANCE-ZFD-5",
         "name": "Mode d\u2019obtention de l\u2019identit\u00e9",
         "type": "User",
         "elements": [
@@ -22270,8 +22214,8 @@
             }
         ]
     },
-    "IHE-ZFD-7": {
-        "id": "IHE-ZFD-7",
+    "IHE-FRANCE-ZFD-7": {
+        "id": "IHE-FRANCE-ZFD-7",
         "name": "Type de justificatif d\u2019identit\u00e9",
         "type": "User",
         "elements": [
@@ -22297,7 +22241,7 @@
             },
             {
                 "code": "CS",
-                "description": "Carte de s\u00e9jour"
+                "description": "Titre de s\u00e9jour"
             },
             {
                 "code": "LE",
@@ -22314,11 +22258,27 @@
             {
                 "code": "TC",
                 "description": "Tiers de confiance"
+            },
+            {
+                "code": "AV",
+                "description": "Application Carte Vitale"
+            },
+            {
+                "code": "DC",
+                "description": "Document de Circulation pour \u00e9tranger mineur"
+            },
+            {
+                "code": "AC",
+                "description": "Acte de naissance + Carte vitale avec photo"
+            },
+            {
+                "code": "IE",
+                "description": "Identification électronique EIDAS"
             }
         ]
     },
-    "IHE-ZFM-1": {
-        "id": "IHE-ZFM-1",
+    "IHE-FRANCE-ZFM-1": {
+        "id": "IHE-FRANCE-ZFM-1",
         "name": "DRG admit mode",
         "type": "User",
         "elements": [
@@ -22348,8 +22308,8 @@
             }
         ]
     },
-    "IHE-ZFM-2": {
-        "id": "IHE-ZFM-2",
+    "IHE-FRANCE-ZFM-2": {
+        "id": "IHE-FRANCE-ZFM-2",
         "name": "DRG discharge mode",
         "type": "User",
         "elements": [
@@ -22383,51 +22343,8 @@
             }
         ]
     },
-    "IHE-ZFM-3": {
-        "id": "IHE-ZFM-3",
-        "name": "DRG origin and destination mode",
-        "type": "User",
-        "elements": [
-            {
-                "code": "1",
-                "description": "Acute care nursing ward (MCO) except resuscitation ward"
-            },
-            {
-                "code": "2",
-                "description": "Long-term care or rehabilitation care ward"
-            },
-            {
-                "code": "3",
-                "description": "Long-term care ward"
-            },
-            {
-                "code": "4",
-                "description": "Psychiatric care ward"
-            },
-            {
-                "code": "5",
-                "description": "Reception to the facility\u2019s emergency department"
-            },
-            {
-                "code": "6",
-                "description": "Home-based hospitalisation"
-            },
-            {
-                "code": "7",
-                "description": "Medico-social housing structure"
-            },
-            {
-                "code": "D",
-                "description": "Home"
-            },
-            {
-                "code": "R",
-                "description": "From a resuscitation care ward"
-            }
-        ]
-    },
-    "IHE-ZFM-3-4": {
-        "id": "IHE-ZFM-3-4",
+    "IHE-FRANCE-ZFM-3-4": {
+        "id": "IHE-FRANCE-ZFM-3-4",
         "name": "DRG origin and destination mode",
         "type": "User",
         "elements": [
@@ -22477,8 +22394,27 @@
             }
         ]
     },
-    "IHE-ZFP-1": {
-        "id": "IHE-ZFP-1",
+    "IHE-FRANCE-ZFM-5": {
+        "id": "IHE-FRANCE-ZFM-5",
+        "name": "Mode de provenance et destination PMSI",
+        "type": "User",
+        "elements": [
+            {
+                "code": "5",
+                "description": "Passage par une structure des urgences de la même entit\u00e9 g\u00e9ographique (y compris l\u2019UHCD)"
+            },
+            {
+                "code": "U",
+                "description": "Passage par une structure des urgences d\u2019une autre entit\u00e9 g\u00e9ographique (y compris l\u2019UHCD)"
+            },
+            {
+                "code": "V",
+                "description": "Passage par une structure des urgences d\u2019une autre entit\u00e9 g\u00e9ographique et par celle de l\u2019entit\u00e9 g\u00e9ographique de l\u2019\u00e9tablissement (UHCD comprises)"
+            }
+        ]
+    },
+    "IHE-FRANCE-ZFP-1": {
+        "id": "IHE-FRANCE-ZFP-1",
         "name": "Socio-Professional occupation",
         "type": "User",
         "elements": [
@@ -22516,8 +22452,8 @@
             }
         ]
     },
-    "IHE-ZFP-2": {
-        "id": "IHE-ZFP-2",
+    "IHE-FRANCE-ZFP-2": {
+        "id": "IHE-FRANCE-ZFP-2",
         "name": "Socio-Professional group",
         "type": "User",
         "elements": [
@@ -22691,8 +22627,8 @@
             }
         ]
     },
-    "IHE-ZFS-6": {
-        "id": "IHE-ZFS-6",
+    "IHE-FRANCE-ZFS-6": {
+        "id": "IHE-FRANCE-ZFS-6",
         "name": "Mode l\u00e9gal de soin (Psychiatrie)",
         "type": "User",
         "elements": [
@@ -22742,8 +22678,8 @@
             }
         ]
     },
-    "IHE-ZFS-7": {
-        "id": "IHE-ZFS-7",
+    "IHE-FRANCE-ZFS-7": {
+        "id": "IHE-FRANCE-ZFS-7",
         "name": "Code RIM-P (Psychiatrie)",
         "type": "User",
         "elements": [
@@ -22777,8 +22713,8 @@
             }
         ]
     },
-    "IHE-ZFV-10": {
-        "id": "IHE-ZFV-10",
+    "IHE-FRANCE-ZFV-10": {
+        "id": "IHE-FRANCE-ZFV-10",
         "name": "Codes RIM-P",
         "type": "User",
         "elements": [
@@ -22812,8 +22748,8 @@
             }
         ]
     },
-    "IHE-ZFV-11": {
-        "id": "IHE-ZFV-11",
+    "IHE-FRANCE-ZFV-11": {
+        "id": "IHE-FRANCE-ZFV-11",
         "name": "Types de prise en charge durant le transport",
         "type": "User",
         "elements": [
@@ -22831,8 +22767,8 @@
             }
         ]
     },
-    "IHE-ZFV-6": {
-        "id": "IHE-ZFV-6",
+    "IHE-FRANCE-ZFV-6": {
+        "id": "IHE-FRANCE-ZFV-6",
         "name": "address type",
         "type": "User",
         "elements": [

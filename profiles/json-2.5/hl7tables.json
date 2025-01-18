@@ -6,7 +6,7 @@
         "elements": [
             "F",
             "M",
-            "O"
+            "U"
         ]
     },
     "0002": {
@@ -2955,7 +2955,7 @@
     },
     "0242": {
         "id": "0242",
-        "name": "Primary Observer's Qualification",
+        "name": "Primary Observer\u2019s Qualification",
         "type": "HL7",
         "elements": [
             "C",
@@ -7372,8 +7372,18 @@
             "WRIST"
         ]
     },
-    "IHE-ZBE-9": {
-        "id": "IHE-ZBE-9",
+    "IHE-FRANCE-ZBE-4": {
+        "id": "IHE-FRANCE-ZBE-4",
+        "name": "Action on the Movement",
+        "type": "User",
+        "elements": [
+            "INSERT",
+            "CANCEL",
+            "UPDATE"
+        ]
+    },
+    "IHE-FRANCE-ZBE-9": {
+        "id": "IHE-FRANCE-ZBE-9",
         "name": "Nature of movement",
         "type": "User",
         "elements": [
@@ -7390,9 +7400,9 @@
             "SM"
         ]
     },
-    "IHE-ZFA-1": {
-        "id": "IHE-ZFA-1",
-        "name": "Patient PHR's status",
+    "IHE-FRANCE-ZFA-1": {
+        "id": "IHE-FRANCE-ZFA-1",
+        "name": "Patient PHR\u2019s status",
         "type": "User",
         "elements": [
             "ACTIF",
@@ -7400,8 +7410,8 @@
             "INEXISTANT"
         ]
     },
-    "IHE-ZFA-11": {
-        "id": "IHE-ZFA-11",
+    "IHE-FRANCE-ZFA-11": {
+        "id": "IHE-FRANCE-ZFA-11",
         "name": "Information et consentement \u00e0 la consultation du DMP",
         "type": "User",
         "elements": [
@@ -7410,35 +7420,8 @@
             "IC"
         ]
     },
-    "IHE-ZFA-4": {
-        "id": "IHE-ZFA-4",
-        "name": "Valid access authorization to the patient's PHR",
-        "type": "User",
-        "elements": [
-            "N",
-            "Y"
-        ]
-    },
-    "IHE-ZFA-6": {
-        "id": "IHE-ZFA-6",
-        "name": "Opposition of the patient to the \"bris de glace\" mode access",
-        "type": "User",
-        "elements": [
-            "N",
-            "Y"
-        ]
-    },
-    "IHE-ZFA-7": {
-        "id": "IHE-ZFA-7",
-        "name": "Opposition of the patient to the \"centre 15\" mode access",
-        "type": "User",
-        "elements": [
-            "N",
-            "Y"
-        ]
-    },
-    "IHE-ZFA-9": {
-        "id": "IHE-ZFA-9",
+    "IHE-FRANCE-ZFA-9": {
+        "id": "IHE-FRANCE-ZFA-9",
         "name": "Information et opposition \u00e0 l\u2019alimentation",
         "type": "User",
         "elements": [
@@ -7447,26 +7430,8 @@
             "INO"
         ]
     },
-    "IHE-ZFD-3": {
-        "id": "IHE-ZFD-3",
-        "name": "SMS Consent",
-        "type": "User",
-        "elements": [
-            "N",
-            "Y"
-        ]
-    },
-    "IHE-ZFD-4": {
-        "id": "IHE-ZFD-4",
-        "name": "Indicateur de date de naissance modifi\u00e9e",
-        "type": "User",
-        "elements": [
-            "N",
-            "Y"
-        ]
-    },
-    "IHE-ZFD-5": {
-        "id": "IHE-ZFD-5",
+    "IHE-FRANCE-ZFD-5": {
+        "id": "IHE-FRANCE-ZFD-5",
         "name": "Mode d\u2019obtention de l\u2019identit\u00e9",
         "type": "User",
         "elements": [
@@ -7477,8 +7442,8 @@
             "SM"
         ]
     },
-    "IHE-ZFD-7": {
-        "id": "IHE-ZFD-7",
+    "IHE-FRANCE-ZFD-7": {
+        "id": "IHE-FRANCE-ZFD-7",
         "name": "Type de justificatif d\u2019identit\u00e9",
         "type": "User",
         "elements": [
@@ -7491,11 +7456,15 @@
             "LE",
             "PA",
             "PC",
-            "TC"
+            "TC",
+            "AV",
+            "DC",
+            "AC",
+            "IE"
         ]
     },
-    "IHE-ZFM-1": {
-        "id": "IHE-ZFM-1",
+    "IHE-FRANCE-ZFM-1": {
+        "id": "IHE-FRANCE-ZFM-1",
         "name": "DRG admit mode",
         "type": "User",
         "elements": [
@@ -7507,8 +7476,8 @@
             "O"
         ]
     },
-    "IHE-ZFM-2": {
-        "id": "IHE-ZFM-2",
+    "IHE-FRANCE-ZFM-2": {
+        "id": "IHE-FRANCE-ZFM-2",
         "name": "DRG discharge mode",
         "type": "User",
         "elements": [
@@ -7521,24 +7490,8 @@
             "9"
         ]
     },
-    "IHE-ZFM-3": {
-        "id": "IHE-ZFM-3",
-        "name": "DRG origin and destination mode",
-        "type": "User",
-        "elements": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "D",
-            "R"
-        ]
-    },
-    "IHE-ZFM-3-4": {
-        "id": "IHE-ZFM-3-4",
+    "IHE-FRANCE-ZFM-3-4": {
+        "id": "IHE-FRANCE-ZFM-3-4",
         "name": "DRG origin and destination mode",
         "type": "User",
         "elements": [
@@ -7555,8 +7508,18 @@
             "U"
         ]
     },
-    "IHE-ZFP-1": {
-        "id": "IHE-ZFP-1",
+    "IHE-FRANCE-ZFM-5": {
+        "id": "IHE-FRANCE-ZFM-5",
+        "name": "Mode de provenance et destination PMSI",
+        "type": "User",
+        "elements": [
+            "5",
+            "U",
+            "V"
+        ]
+    },
+    "IHE-FRANCE-ZFP-1": {
+        "id": "IHE-FRANCE-ZFP-1",
         "name": "Socio-Professional occupation",
         "type": "User",
         "elements": [
@@ -7570,8 +7533,8 @@
             "8"
         ]
     },
-    "IHE-ZFP-2": {
-        "id": "IHE-ZFP-2",
+    "IHE-FRANCE-ZFP-2": {
+        "id": "IHE-FRANCE-ZFP-2",
         "name": "Socio-Professional group",
         "type": "User",
         "elements": [
@@ -7619,8 +7582,8 @@
             "86"
         ]
     },
-    "IHE-ZFS-6": {
-        "id": "IHE-ZFS-6",
+    "IHE-FRANCE-ZFS-6": {
+        "id": "IHE-FRANCE-ZFS-6",
         "name": "Mode l\u00e9gal de soin (Psychiatrie)",
         "type": "User",
         "elements": [
@@ -7637,8 +7600,8 @@
             "SPI"
         ]
     },
-    "IHE-ZFS-7": {
-        "id": "IHE-ZFS-7",
+    "IHE-FRANCE-ZFS-7": {
+        "id": "IHE-FRANCE-ZFS-7",
         "name": "Code RIM-P (Psychiatrie)",
         "type": "User",
         "elements": [
@@ -7651,8 +7614,8 @@
             "8"
         ]
     },
-    "IHE-ZFV-10": {
-        "id": "IHE-ZFV-10",
+    "IHE-FRANCE-ZFV-10": {
+        "id": "IHE-FRANCE-ZFV-10",
         "name": "Codes RIM-P",
         "type": "User",
         "elements": [
@@ -7665,8 +7628,8 @@
             "8"
         ]
     },
-    "IHE-ZFV-11": {
-        "id": "IHE-ZFV-11",
+    "IHE-FRANCE-ZFV-11": {
+        "id": "IHE-FRANCE-ZFV-11",
         "name": "Types de prise en charge durant le transport",
         "type": "User",
         "elements": [
@@ -7675,8 +7638,8 @@
             "AUCUN"
         ]
     },
-    "IHE-ZFV-6": {
-        "id": "IHE-ZFV-6",
+    "IHE-FRANCE-ZFV-6": {
+        "id": "IHE-FRANCE-ZFV-6",
         "name": "address type",
         "type": "User",
         "elements": [
