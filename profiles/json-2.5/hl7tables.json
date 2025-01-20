@@ -1919,6 +1919,9 @@
         "type": "HL7",
         "elements": [
             "AT",
+            "PB",
+            "PT",
+            "PF",
             "PC"
         ]
     },

@@ -6171,11 +6171,23 @@
         "elements": [
             {
                 "code": "AT",
-                "description": "Currency amount"
+                "description": "Montant absolu"
+            },
+            {
+                "code": "PB",
+                "description": "Pourcentage de la base de remboursement"
+            },
+            {
+                "code": "PT",
+                "description": "Pourcentage du ticket mod\u00e9rateur"
+            },
+            {
+                "code": "PF",
+                "description": "Pourcentage des frais r\u00e9els"
             },
             {
                 "code": "PC",
-                "description": "Percentage"
+                "description": "Pourcentage non pr\u00e9cis\u00e9"
             }
         ]
     },
@@ -22273,7 +22285,7 @@
             },
             {
                 "code": "IE",
-                "description": "Identification électronique EIDAS"
+                "description": "Identification \u00e9lectronique EIDAS"
             }
         ]
     },

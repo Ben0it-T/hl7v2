@@ -183,7 +183,7 @@ $ZFVsegment = array(
             array("field" => "ZFV.7",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
             array("field" => "ZFV.8",  "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"),
             array("field" => "ZFV.9",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
+            array("field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
             array("field" => "ZFV.11", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
         ),
         "LongName" => "Complément d'information sur la venue",
@@ -368,7 +368,6 @@ foreach ($segmentsSchemas["MSH"]["fields"] as $key => $field) {
         case 'MSH.10':
         case 'MSH.11':
         case 'MSH.12':
-        case 'MSH.21':
             $segmentsSchemas["MSH"]["fields"][$key]["minOccurs"] = "1";
             $segmentsSchemas["MSH"]["fields"][$key]["maxOccurs"] = "1";
             $segmentsSchemas["MSH"]["fields"][$key]["Usage"] = "R";
@@ -391,6 +390,12 @@ foreach ($segmentsSchemas["MSH"]["fields"] as $key => $field) {
             $segmentsSchemas["MSH"]["fields"][$key]["minOccurs"] = "0";
             $segmentsSchemas["MSH"]["fields"][$key]["maxOccurs"] = "1";
             $segmentsSchemas["MSH"]["fields"][$key]["Usage"] = "C";
+            break;
+
+        case 'MSH.21':
+            $segmentsSchemas["MSH"]["fields"][$key]["minOccurs"] = "0";
+            $segmentsSchemas["MSH"]["fields"][$key]["maxOccurs"] = "1";
+            $segmentsSchemas["MSH"]["fields"][$key]["Usage"] = "O";
             break;
         
         default:
@@ -648,6 +653,7 @@ foreach ($segmentsSchemas["IN1"]["fields"] as $key => $field) {
             break;
     }
 }
+$fieldsSchemas["IN1.2"]["Table"] = "HL70072";
 $fieldsSchemas["IN1.35"]["maxLength"] = "20";
 //
 // IN2 segment
@@ -679,6 +685,7 @@ foreach ($segmentsSchemas["IN3"]["fields"] as $key => $field) {
             break;
     }
 }
+$fieldsSchemas["IN3.5"]["Table"] = "HL70148";
 //
 // GT1 segment
 //
