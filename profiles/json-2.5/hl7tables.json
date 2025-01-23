@@ -1128,6 +1128,24 @@
             "XXX"
         ]
     },
+    "0072": {
+        "id": "0072",
+        "name": "Type de débiteur",
+        "type": "User",
+        "elements": [
+            "AMO",
+            "CMU",
+            "AME",
+            "AMC",
+            "CMUC",
+            "AMEC",
+            "PAT",
+            "ASS",
+            "EMP",
+            "ETB",
+            "DEP"
+        ]
+    },
     "0074": {
         "id": "0074",
         "name": "Diagnostic Service Section ID",

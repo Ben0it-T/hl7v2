@@ -3969,6 +3969,57 @@
             }
         ]
     },
+    "0072": {
+        "id": "0072",
+        "name": "Type de débiteur",
+        "type": "User",
+        "elements": [
+            {
+                "code": "AMO",
+                "description": "Organisme obligatoire"
+            },
+            {
+                "code": "CMU",
+                "description": "CMU caisse"
+            },
+            {
+                "code": "AME",
+                "description": "Aide M\u00e9dicale d\u2019Etat"
+            },
+            {
+                "code": "AMC",
+                "description": "Organisme compl\u00e9mentaire"
+            },
+            {
+                "code": "CMUC",
+                "description": "CMU compl\u00e9mentaire"
+            },
+            {
+                "code": "AMEC",
+                "description": "Aide M\u00e9dicale d\u2019Etat compl\u00e9mentaire"
+            },
+            {
+                "code": "PAT",
+                "description": "Patient"
+            },
+            {
+                "code": "ASS",
+                "description": "Assur\u00e9"
+            },
+            {
+                "code": "EMP",
+                "description": "Employeur"
+            },
+            {
+                "code": "ETB",
+                "description": "Etablissement ext\u00e9rieur"
+            },
+            {
+                "code": "DEP",
+                "description": "D\u00e9partement"
+            }
+        ]
+    },
     "0074": {
         "id": "0074",
         "name": "Diagnostic Service Section ID",
