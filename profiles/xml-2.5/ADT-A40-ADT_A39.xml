@@ -113,7 +113,7 @@
       <Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="0" Datatype="ID" Length="20" Table="0356" ItemNo="01317">
         <Reference>2.15.9.20</Reference>
       </Field>
-      <Field Name="Message Profile Identifier" Usage="RE" Min="0" Max="*" Datatype="EI" Length="427" ItemNo="01598">
+      <Field Name="Message Profile Identifier" Usage="O" Min="0" Max="1" Datatype="EI" Length="427" ItemNo="01598">
         <Reference>2.15.9.21</Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>

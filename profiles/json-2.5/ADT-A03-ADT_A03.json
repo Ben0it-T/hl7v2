@@ -672,9 +672,9 @@
       },
       {
         "Name": "MSH.21",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
-        "Max": "*",
+        "Max": "1",
         "Item": "01598",
         "Datatype": "EI",
         "Length": "427",
@@ -20212,13 +20212,13 @@
       },
       {
         "Name": "PV2.3",
-        "Usage": "O",
+        "Usage": "X",
         "Min": "0",
-        "Max": "1",
+        "Max": "0",
         "Item": "00183",
         "Datatype": "CE",
         "Length": "250",
-        "Table": "IHE-PV2-3",
+        "Table": "",
         "LongName": "Admit Reason",
         "Chapter": "3.4.4.3",
         "components": [
@@ -20228,7 +20228,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-PV2-3",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -22409,7 +22409,7 @@
         "Item": "",
         "Datatype": "ID",
         "Length": "6",
-        "Table": "",
+        "Table": "IHE-FRANCE-ZBE-4",
         "LongName": "Action on the Movement",
         "Chapter": ""
       },
@@ -22421,7 +22421,7 @@
         "Item": "",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "",
+        "Table": "0136",
         "LongName": "Indicator Historical movement",
         "Chapter": ""
       },
@@ -22801,7 +22801,7 @@
         "Item": "",
         "Datatype": "CWE",
         "Length": "3",
-        "Table": "IHE-ZBE-9",
+        "Table": "IHE-FRANCE-ZBE-9",
         "LongName": "Nature of this movement",
         "Chapter": "",
         "components": [
@@ -22811,7 +22811,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZBE-9",
+            "Table": "IHE-FRANCE-ZBE-9",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -23126,7 +23126,7 @@
         "Item": "",
         "Datatype": "XAD",
         "Length": "250",
-        "Table": "IHE-ZFV-6",
+        "Table": "IHE-FRANCE-ZFV-6",
         "LongName": "Adresse de l'\u00e9tablissement de provenance ou de destination",
         "Chapter": "",
         "components": [
@@ -23136,7 +23136,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "SAD",
-            "Table": "IHE-ZFV-6",
+            "Table": "IHE-FRANCE-ZFV-6",
             "LongName": "Street Address",
             "maxLength": "184",
             "components": [
@@ -23146,7 +23146,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "IHE-ZFV-6",
+                "Table": "IHE-FRANCE-ZFV-6",
                 "LongName": "Street or Mailing Address",
                 "maxLength": "120"
               },
@@ -24108,13 +24108,13 @@
       },
       {
         "Name": "ZFV.10",
-        "Usage": "C",
+        "Usage": "O",
         "Min": "0",
         "Max": "1",
         "Item": "",
         "Datatype": "IS",
         "Length": "2",
-        "Table": "IHE-ZFV-10",
+        "Table": "IHE-FRANCE-ZFV-10",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin transmis dans le PV2-3",
         "Chapter": ""
       },
@@ -24126,7 +24126,7 @@
         "Item": "",
         "Datatype": "CE",
         "Length": "250",
-        "Table": "IHE-ZFV-11",
+        "Table": "IHE-FRANCE-ZFV-11",
         "LongName": "Prise en charge durant le transport",
         "Chapter": "",
         "components": [
@@ -24136,7 +24136,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZFV-11",
+            "Table": "IHE-FRANCE-ZFV-11",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -24211,7 +24211,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFM-1",
+        "Table": "IHE-FRANCE-ZFM-1",
         "LongName": "Mode d'entr\u00e9e PMSI",
         "Chapter": ""
       },
@@ -24223,7 +24223,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFM-2",
+        "Table": "IHE-FRANCE-ZFM-2",
         "LongName": "Mode de sortie PMSI",
         "Chapter": ""
       },
@@ -24235,7 +24235,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFM-3-4",
+        "Table": "IHE-FRANCE-ZFM-3-4",
         "LongName": "Mode de provenance PMSI",
         "Chapter": ""
       },
@@ -24247,7 +24247,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFM-3-4",
+        "Table": "IHE-FRANCE-ZFM-3-4",
         "LongName": "Mode de destination PMSI",
         "Chapter": ""
       },
@@ -24259,7 +24259,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "1",
-        "Table": "IHE-ZFM-5",
+        "Table": "IHE-FRANCE-ZFM-5",
         "LongName": "Passage par une structure des Urgences (PMSI)",
         "Chapter": ""
       }
@@ -52713,7 +52713,7 @@
             "Item": "00506",
             "Datatype": "MOP",
             "Length": "23",
-            "Table": "",
+            "Table": "0148",
             "LongName": "Penalty",
             "Chapter": "6.5.8.5",
             "components": [

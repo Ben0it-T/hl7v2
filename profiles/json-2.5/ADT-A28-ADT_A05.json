@@ -672,9 +672,9 @@
       },
       {
         "Name": "MSH.21",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
-        "Max": "*",
+        "Max": "1",
         "Item": "01598",
         "Datatype": "EI",
         "Length": "427",
@@ -20212,13 +20212,13 @@
       },
       {
         "Name": "PV2.3",
-        "Usage": "O",
+        "Usage": "X",
         "Min": "0",
-        "Max": "1",
+        "Max": "0",
         "Item": "00183",
         "Datatype": "CE",
         "Length": "250",
-        "Table": "IHE-PV2-3",
+        "Table": "",
         "LongName": "Admit Reason",
         "Chapter": "3.4.4.3",
         "components": [
@@ -20228,7 +20228,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-PV2-3",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -22287,7 +22287,7 @@
         "Item": "",
         "Datatype": "ID",
         "Length": "20",
-        "Table": "IHE-ZFA-1",
+        "Table": "IHE-FRANCE-ZFA-1",
         "LongName": "Statut du DMP du patient",
         "Chapter": ""
       },
@@ -22471,7 +22471,7 @@
         "Item": "",
         "Datatype": "CWE",
         "Length": "3",
-        "Table": "IHE-ZFA-9",
+        "Table": "IHE-FRANCE-ZFA-9",
         "LongName": "Information et opposition \u00e0 l'alimentation du DMP",
         "Chapter": "",
         "components": [
@@ -22481,7 +22481,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZFA-9",
+            "Table": "IHE-FRANCE-ZFA-9",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -22609,7 +22609,7 @@
         "Item": "",
         "Datatype": "CWE",
         "Length": "3",
-        "Table": "IHE-ZFA-11",
+        "Table": "IHE-FRANCE-ZFA-11",
         "LongName": "Information et consentement \u00e0 la consultation du DMP",
         "Chapter": "",
         "components": [
@@ -22619,7 +22619,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZFA-11",
+            "Table": "IHE-FRANCE-ZFA-11",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -22824,7 +22824,7 @@
         "Item": "",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "IHE-ZFD-3",
+        "Table": "0136",
         "LongName": "Consentement SMS",
         "Chapter": ""
       },
@@ -22848,7 +22848,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "8",
-        "Table": "IHE-ZFD-5",
+        "Table": "IHE-FRANCE-ZFD-5",
         "LongName": "Mode d'obtention de l'identit\u00e9",
         "Chapter": ""
       },
@@ -22894,7 +22894,7 @@
         "Item": "",
         "Datatype": "IS",
         "Length": "16",
-        "Table": "IHE-ZFD-7",
+        "Table": "IHE-FRANCE-ZFD-7",
         "LongName": "Type de justificatif d'identit\u00e9",
         "Chapter": ""
       },
@@ -23097,7 +23097,7 @@
         "Item": "",
         "Datatype": "CWE",
         "Length": "250",
-        "Table": "IHE-ZFS-6",
+        "Table": "IHE-FRANCE-ZFS-6",
         "LongName": "Mode l\u00e9gal de soins",
         "Chapter": "",
         "components": [
@@ -23107,7 +23107,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZFS-6",
+            "Table": "IHE-FRANCE-ZFS-6",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -23201,7 +23201,7 @@
         "Item": "",
         "Datatype": "CNE",
         "Length": "2",
-        "Table": "IHE-ZFS-7",
+        "Table": "IHE-FRANCE-ZFS-7",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin",
         "Chapter": "",
         "components": [
@@ -23211,7 +23211,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZFS-7",
+            "Table": "IHE-FRANCE-ZFS-7",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -51759,7 +51759,7 @@
             "Item": "00506",
             "Datatype": "MOP",
             "Length": "23",
-            "Table": "",
+            "Table": "0148",
             "LongName": "Penalty",
             "Chapter": "6.5.8.5",
             "components": [

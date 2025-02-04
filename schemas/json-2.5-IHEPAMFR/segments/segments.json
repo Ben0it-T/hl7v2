@@ -4941,8 +4941,8 @@
             {
                 "field": "MSH.21",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded",
-                "Usage": "RE"
+                "maxOccurs": "1",
+                "Usage": "O"
             }
         ],
         "LongName": "Message Header",
@@ -8245,7 +8245,8 @@
             {
                 "field": "PV2.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "0",
+                "Usage": "X"
             },
             {
                 "field": "PV2.4",
@@ -11846,7 +11847,7 @@
                 "field": "ZFV.10",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "C"
+                "Usage": "O"
             },
             {
                 "field": "ZFV.11",

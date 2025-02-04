@@ -672,9 +672,9 @@
       },
       {
         "Name": "MSH.21",
-        "Usage": "RE",
+        "Usage": "O",
         "Min": "0",
-        "Max": "*",
+        "Max": "1",
         "Item": "01598",
         "Datatype": "EI",
         "Length": "427",
@@ -16319,13 +16319,13 @@
       },
       {
         "Name": "PV2.3",
-        "Usage": "O",
+        "Usage": "X",
         "Min": "0",
-        "Max": "1",
+        "Max": "0",
         "Item": "00183",
         "Datatype": "CE",
         "Length": "250",
-        "Table": "IHE-PV2-3",
+        "Table": "",
         "LongName": "Admit Reason",
         "Chapter": "3.4.4.3",
         "components": [
@@ -16335,7 +16335,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-PV2-3",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -18516,7 +18516,7 @@
         "Item": "",
         "Datatype": "ID",
         "Length": "6",
-        "Table": "",
+        "Table": "IHE-FRANCE-ZBE-4",
         "LongName": "Action on the Movement",
         "Chapter": ""
       },
@@ -18528,7 +18528,7 @@
         "Item": "",
         "Datatype": "ID",
         "Length": "1",
-        "Table": "",
+        "Table": "0136",
         "LongName": "Indicator Historical movement",
         "Chapter": ""
       },
@@ -18908,7 +18908,7 @@
         "Item": "",
         "Datatype": "CWE",
         "Length": "3",
-        "Table": "IHE-ZBE-9",
+        "Table": "IHE-FRANCE-ZBE-9",
         "LongName": "Nature of this movement",
         "Chapter": "",
         "components": [
@@ -18918,7 +18918,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "IHE-ZBE-9",
+            "Table": "IHE-FRANCE-ZBE-9",
             "LongName": "Identifier",
             "maxLength": "20"
           },

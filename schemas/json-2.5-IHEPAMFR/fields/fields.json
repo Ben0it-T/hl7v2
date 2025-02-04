@@ -6098,7 +6098,7 @@
     "IN3.5": {
         "Item": "506",
         "Type": "MOP",
-        "Table": "",
+        "Table": "HL70148",
         "LongName": "Penalty",
         "maxLength": "23",
         "Chapter": "6.5.8.5"
@@ -12130,7 +12130,7 @@
     "PV2.3": {
         "Item": "183",
         "Type": "CE",
-        "Table": "IHE-PV2-3",
+        "Table": "",
         "LongName": "Admit Reason",
         "maxLength": "250",
         "Chapter": "3.4.4.3"
@@ -16786,7 +16786,7 @@
     "ZBE.4": {
         "Item": "",
         "Type": "ID",
-        "Table": "",
+        "Table": "IHE-FRANCE-ZBE-4",
         "LongName": "Action on the Movement",
         "maxLength": "6",
         "Chapter": ""
@@ -16794,7 +16794,7 @@
     "ZBE.5": {
         "Item": "",
         "Type": "ID",
-        "Table": "",
+        "Table": "HL70136",
         "LongName": "Indicator Historical movement",
         "maxLength": "1",
         "Chapter": ""
@@ -16826,7 +16826,7 @@
     "ZBE.9": {
         "Item": "",
         "Type": "CWE",
-        "Table": "IHE-ZBE-9",
+        "Table": "IHE-FRANCE-ZBE-9",
         "LongName": "Nature of this movement",
         "maxLength": "3",
         "Chapter": ""
@@ -16834,7 +16834,7 @@
     "ZFA.1": {
         "Item": "",
         "Type": "ID",
-        "Table": "IHE-ZFA-1",
+        "Table": "IHE-FRANCE-ZFA-1",
         "LongName": "Statut du DMP du patient",
         "maxLength": "20",
         "Chapter": ""
@@ -16850,7 +16850,7 @@
     "ZFA.11": {
         "Item": "",
         "Type": "CWE",
-        "Table": "IHE-ZFA-11",
+        "Table": "IHE-FRANCE-ZFA-11",
         "LongName": "Information et consentement \u00e0 la consultation du DMP",
         "maxLength": "3",
         "Chapter": ""
@@ -16922,7 +16922,7 @@
     "ZFA.9": {
         "Item": "",
         "Type": "CWE",
-        "Table": "IHE-ZFA-9",
+        "Table": "IHE-FRANCE-ZFA-9",
         "LongName": "Information et opposition \u00e0 l'alimentation du DMP",
         "maxLength": "3",
         "Chapter": ""
@@ -16946,7 +16946,7 @@
     "ZFD.3": {
         "Item": "",
         "Type": "ID",
-        "Table": "IHE-ZFD-3",
+        "Table": "HL70136",
         "LongName": "Consentement SMS",
         "maxLength": "1",
         "Chapter": ""
@@ -16962,7 +16962,7 @@
     "ZFD.5": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFD-5",
+        "Table": "IHE-FRANCE-ZFD-5",
         "LongName": "Mode d'obtention de l'identit\u00e9",
         "maxLength": "8",
         "Chapter": ""
@@ -16978,7 +16978,7 @@
     "ZFD.7": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFD-7",
+        "Table": "IHE-FRANCE-ZFD-7",
         "LongName": "Type de justificatif d'identit\u00e9",
         "maxLength": "16",
         "Chapter": ""
@@ -16994,7 +16994,7 @@
     "ZFM.1": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFM-1",
+        "Table": "IHE-FRANCE-ZFM-1",
         "LongName": "Mode d'entr\u00e9e PMSI",
         "maxLength": "1",
         "Chapter": ""
@@ -17002,7 +17002,7 @@
     "ZFM.2": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFM-2",
+        "Table": "IHE-FRANCE-ZFM-2",
         "LongName": "Mode de sortie PMSI",
         "maxLength": "1",
         "Chapter": ""
@@ -17010,7 +17010,7 @@
     "ZFM.3": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFM-3-4",
+        "Table": "IHE-FRANCE-ZFM-3-4",
         "LongName": "Mode de provenance PMSI",
         "maxLength": "1",
         "Chapter": ""
@@ -17018,7 +17018,7 @@
     "ZFM.4": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFM-3-4",
+        "Table": "IHE-FRANCE-ZFM-3-4",
         "LongName": "Mode de destination PMSI",
         "maxLength": "1",
         "Chapter": ""
@@ -17026,7 +17026,7 @@
     "ZFM.5": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFM-5",
+        "Table": "IHE-FRANCE-ZFM-5",
         "LongName": "Passage par une structure des Urgences (PMSI)",
         "maxLength": "1",
         "Chapter": ""
@@ -17034,7 +17034,7 @@
     "ZFP.1": {
         "Item": "",
         "Type": "ID",
-        "Table": "IHE-ZFP-1",
+        "Table": "IHE-FRANCE-ZFP-1",
         "LongName": "Activit\u00e9 socio-professionnelle (nomenclature INSEE)",
         "maxLength": "1",
         "Chapter": ""
@@ -17042,7 +17042,7 @@
     "ZFP.2": {
         "Item": "",
         "Type": "ID",
-        "Table": "IHE-ZFP-2",
+        "Table": "IHE-FRANCE-ZFP-2",
         "LongName": "Cat\u00e9gorie socio-professionnelle (nomenclature INSEE)",
         "maxLength": "2",
         "Chapter": ""
@@ -17090,7 +17090,7 @@
     "ZFS.6": {
         "Item": "",
         "Type": "CWE",
-        "Table": "IHE-ZFS-6",
+        "Table": "IHE-FRANCE-ZFS-6",
         "LongName": "Mode l\u00e9gal de soins",
         "maxLength": "250",
         "Chapter": ""
@@ -17098,7 +17098,7 @@
     "ZFS.7": {
         "Item": "",
         "Type": "CNE",
-        "Table": "IHE-ZFS-7",
+        "Table": "IHE-FRANCE-ZFS-7",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin",
         "maxLength": "2",
         "Chapter": ""
@@ -17122,7 +17122,7 @@
     "ZFV.10": {
         "Item": "",
         "Type": "IS",
-        "Table": "IHE-ZFV-10",
+        "Table": "IHE-FRANCE-ZFV-10",
         "LongName": "Code RIM-P du mode l\u00e9gal de soin transmis dans le PV2-3",
         "maxLength": "2",
         "Chapter": ""
@@ -17130,7 +17130,7 @@
     "ZFV.11": {
         "Item": "",
         "Type": "CE",
-        "Table": "IHE-ZFV-11",
+        "Table": "IHE-FRANCE-ZFV-11",
         "LongName": "Prise en charge durant le transport",
         "maxLength": "250",
         "Chapter": ""
@@ -17170,7 +17170,7 @@
     "ZFV.6": {
         "Item": "",
         "Type": "XAD",
-        "Table": "IHE-ZFV-6",
+        "Table": "IHE-FRANCE-ZFV-6",
         "LongName": "Adresse de l'\u00e9tablissement de provenance ou de destination",
         "maxLength": "250",
         "Chapter": ""

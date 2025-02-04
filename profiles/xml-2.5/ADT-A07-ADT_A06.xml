@@ -113,7 +113,7 @@
       <Field Name="Alternate Character Set Handling Scheme" Usage="X" Min="0" Max="0" Datatype="ID" Length="20" Table="0356" ItemNo="01317">
         <Reference>2.15.9.20</Reference>
       </Field>
-      <Field Name="Message Profile Identifier" Usage="RE" Min="0" Max="*" Datatype="EI" Length="427" ItemNo="01598">
+      <Field Name="Message Profile Identifier" Usage="O" Min="0" Max="1" Datatype="EI" Length="427" ItemNo="01598">
         <Reference>2.15.9.21</Reference>
         <Component Name="Entity Identifier" Usage="R" Datatype="ST" Length="128"/>
         <Component Name="Namespace ID" Usage="C" Datatype="IS" Length="20" Table="0363"/>
@@ -2816,9 +2816,9 @@
         <Component Name="Alternate Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Alternate Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
       </Field>
-      <Field Name="Admit Reason" Usage="O" Min="0" Max="1" Datatype="CE" Length="250" Table="IHE-PV2-3" ItemNo="00183">
+      <Field Name="Admit Reason" Usage="X" Min="0" Max="0" Datatype="CE" Length="250" ItemNo="00183">
         <Reference>3.4.4.3</Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-PV2-3"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -3131,10 +3131,10 @@
         <Component Name="Time" Usage="R" Datatype="DTM" Length="24"/>
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
-      <Field Name="Action on the Movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" ItemNo="">
+      <Field Name="Action on the Movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="6" Table="IHE-FRANCE-ZBE-4" ItemNo="">
         <Reference></Reference>
       </Field>
-      <Field Name="Indicator Historical movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" ItemNo="">
+      <Field Name="Indicator Historical movement" Usage="R" Min="1" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="">
         <Reference></Reference>
       </Field>
       <Field Name="Original trigger event code" Usage="C" Min="0" Max="1" Datatype="ID" Length="3" ItemNo="">
@@ -3182,9 +3182,9 @@
         <Component Name="Name Representation Code" Usage="X" Datatype="ID" Length="1" Table="0465"/>
         <Component Name="Organization Identifier" Usage="RE" Datatype="ST" Length="64"/>
       </Field>
-      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-ZBE-9" ItemNo="">
+      <Field Name="Nature of this movement" Usage="R" Min="1" Max="1" Datatype="CWE" Length="3" Table="IHE-FRANCE-ZBE-9" ItemNo="">
         <Reference></Reference>
-        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-ZBE-9"/>
+        <Component Name="Identifier" Usage="O" Datatype="ST" Length="20" Table="IHE-FRANCE-ZBE-9"/>
         <Component Name="Text" Usage="O" Datatype="ST" Length="199"/>
         <Component Name="Name of Coding System" Usage="O" Datatype="ID" Length="20" Table="0396"/>
         <Component Name="Alternate Identifier" Usage="O" Datatype="ST" Length="20"/>
@@ -6763,7 +6763,7 @@
         <Field Name="Certification Required" Usage="O" Min="0" Max="1" Datatype="ID" Length="1" Table="0136" ItemNo="00505">
           <Reference>6.5.8.4</Reference>
         </Field>
-        <Field Name="Penalty" Usage="RE" Min="0" Max="1" Datatype="MOP" Length="23" ItemNo="00506">
+        <Field Name="Penalty" Usage="RE" Min="0" Max="1" Datatype="MOP" Length="23" Table="0148" ItemNo="00506">
           <Reference>6.5.8.5</Reference>
           <Component Name="Money or Percentage Indicator" Usage="R" Datatype="ID" Length="2" Table="0148"/>
           <Component Name="Money or Percentage Quantity" Usage="R" Datatype="NM" Length="16"/>
