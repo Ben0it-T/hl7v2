@@ -5,7 +5,7 @@ PHP class to parse HL7 v2.x messages and compare/validate against a profile.
 ## Usage
 
 ```
-MSH|^~\&|SendingApp|SendingFacility|ReceivingApp|ReceivingFacility|20240524103000||ADT^A31^ADT_A05|12345|D|2.5^FRA^2.11||||||8859/1
+MSH|^~\&|SendingApp|SendingFacility|ReceivingApp|ReceivingFacility|20240524103000||ADT^A31^ADT_A05|12345|D|2.5^FRA^2.11||||||8859/1|FR||2.11^IHE_FRANCE-2.11-PAM
 EVN||20240524103000
 PID|1||123456789^^^AssigningAuthority^PI~170017510112313^^^ASIP-SANTE-INS-NIR&1.2.250.1.213.1.4.10&ISO^INS||Lastname^Firstname^^^^^D~Lastname^Firstname^Firstname^^^^L||19700101|M|||3 avenue Montaigne^1er étage^PARIS 08^^75008^FRA^H^^FRANCE^^^^20230101^20260101~^^PARIS 01^75101^75001^FRA^BDL^^75101||^PRN^PH^^^^^^^^^0102030405~^PRN^CP^^^^^^^^^0602030405~^WPN^FX^^^^^^^^^0302030405~^NET^Internet^mail.address@hdomaine.net~^WPN^PH^^^^^^^^^0202030405||FR|M|||||||PARIS 01|Y|1|FRA||||N||PROV~FICT
 PD1||U||||||||||N
