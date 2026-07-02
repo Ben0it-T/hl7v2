@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "HL7v2\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.2"
+    }
+}
