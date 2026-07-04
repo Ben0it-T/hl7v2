@@ -8,7 +8,7 @@ use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
 use HL7v2\Model\FieldRepeat;
 use HL7v2\Model\Component;
-//use HL7v2\Model\SubComponent;
+use HL7v2\Model\SubComponent;
 
 class HL7StringSerializer
 {
