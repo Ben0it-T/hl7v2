@@ -155,4 +155,14 @@ class Message
         return $this->segments;
     }
 
+    /**
+     * Count segments
+     *
+     * @return int
+     */
+    public function countSegments(): int
+    {
+        return count($this->segments);
+    }
+
 }

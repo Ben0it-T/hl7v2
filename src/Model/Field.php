@@ -45,4 +45,27 @@ class Field
         return $this->repeats;
     }
 
+    /**
+     * Count repeats
+     *
+     * @return int
+     */
+    public function countRepeats(): int
+    {
+        return count($this->repeats);
+    }
+
+    /**
+     * Check if a field repeat exists.
+     *
+     * Repetitions are stored using a 0-based index.
+     *
+     * @param int $index
+     * @return bool
+     */
+    public function hasRepeat(int $index): bool
+    {
+        return isset($this->repeats[$index]);
+    }
+
 }

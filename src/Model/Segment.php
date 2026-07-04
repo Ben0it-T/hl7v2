@@ -37,7 +37,7 @@ class Segment
     /**
      * Get field
      *
-     * HL7 positions are 1-based.
+     * HL7 field positions are 1-based.
      *
      * @param int $index
      * @return Field|null
@@ -56,4 +56,28 @@ class Segment
     {
         return $this->fields;
     }
+
+    /**
+     * Count fields
+     *
+     * @return int
+     */
+    public function countFields(): int
+    {
+        return count($this->fields);
+    }
+
+    /**
+     * Check if a field exists.
+     *
+     * HL7 field positions are 1-based.
+     *
+     * @param int $index
+     * @return bool
+     */
+    public function hasField(int $index): bool
+    {
+        return isset($this->fields[$index - 1]);
+    }
+
 }

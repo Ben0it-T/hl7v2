@@ -25,7 +25,7 @@ class FieldRepeat
     /**
      * Get component
      *
-     * HL7 positions are 1-based.
+     * HL7 component positions are 1-based.
      *
      * @param int $index
      * @return Component|null
@@ -44,4 +44,28 @@ class FieldRepeat
     {
         return $this->components;
     }
+
+    /**
+     * Count components
+     *
+     * @return int
+     */
+    public function countComponents(): int
+    {
+        return count($this->components);
+    }
+
+    /**
+     * Check if a component exists.
+     *
+     * HL7 component positions are 1-based.
+     *
+     * @param int $index
+     * @return bool
+     */
+    public function hasComponent(int $index): bool
+    {
+        return isset($this->components[$index - 1]);
+    }
+
 }

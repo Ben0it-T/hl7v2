@@ -25,7 +25,7 @@ class Component
     /**
      * Get sub-component
      *
-     * HL7 positions are 1-based.
+     * HL7 sub-component positions are 1-based.
      *
      * @param int $index
      * @return SubComponent|null
@@ -44,4 +44,28 @@ class Component
     {
         return $this->subComponents;
     }
+
+    /**
+     * Count sub-components
+     *
+     * @return int
+     */
+    public function countSubComponents(): int
+    {
+        return count($this->subComponents);
+    }
+
+    /**
+     * Check if a sub-component exists.
+     *
+     * HL7 sub-component positions are 1-based.
+     *
+     * @param int $index
+     * @return bool
+     */
+    public function hasSubComponent(int $index): bool
+    {
+        return isset($this->subComponents[$index - 1]);
+    }
+
 }
