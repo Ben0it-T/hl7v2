@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace HL7v2;
 
+use HL7v2\Exception\HL7Exception;
 use HL7v2\Parser\HL7Parser;
 use HL7v2\Model\Message;
 
@@ -20,13 +21,11 @@ class HL7Message
      * Parse HL7 message string
      *
      * @param string $rawMessage
-     * @return bool
+     * @throws HL7Exception If the message cannot be parsed.
      */
-    public function parse(string $rawMessage): bool
+    public function parse(string $rawMessage): void
     {
         $this->message = $this->parser->parse($rawMessage);
-
-        return ($this->message !== null);
     }
 
     /**

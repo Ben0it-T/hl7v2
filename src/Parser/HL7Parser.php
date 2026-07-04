@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace HL7v2\Parser;
 
+use HL7v2\Exception\HL7Exception;
 use HL7v2\Model\Message;
 use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
@@ -26,9 +27,10 @@ class HL7Parser
      *                     └── SubComponent
      *
      * @param string $raw the HL7 message string
-     * @return ?Message Returns null if control string string is not valid or if message is empty
+     * @return Message
+     * @throws HL7Exception
      */
-    public function parse(string $raw): ?Message
+    public function parse(string $raw): Message
     {
         // Remove any leading CR/LF or whitespace that may precede the
         // first MSH segment. Such characters are transport artefacts and
@@ -36,7 +38,7 @@ class HL7Parser
         $raw = ltrim($raw);
 
         if (empty($raw)) {
-            return null;
+            throw new HL7Exception('Message is empty.');
         }
 
 
@@ -66,19 +68,15 @@ class HL7Parser
             // [5] Escape character       => \
             // [6] Subcomponent separator => &
             // [7] Field separator        => | (must match [2])
-
-            // This is not a valid message. Please check MSH segment.
-            return null;
+            throw new HL7Exception('This is not a valid message. Please check MSH segment.');
         }
         // first segment name must be "MSH"
-        if ($matches[1] != "MSH") {
-            // This is not a valid message. MSH segment not found.
-            return null;
+        if ($matches[1] !== "MSH") {
+            throw new HL7Exception('This is not a valid message. MSH segment not found.');
         }
         // field separator must be the same as the first field separator
-        if ($matches[2] != $matches[7]) {
-            //This is not a valid message. Invalid field separator.
-            return null;
+        if ($matches[2] !== $matches[7]) {
+            throw new HL7Exception('This is not a valid message. Invalid field separator in control string.');
         }
 
         // Get field separator (MSH-1) and encoding characters (MSH-2)
@@ -96,7 +94,7 @@ class HL7Parser
         $segments = preg_split("/[\n\r" . $this->segmentSeparator . ']/', $raw, -1, PREG_SPLIT_NO_EMPTY);
 
         if ($segments === false) { // array<int,string>|false
-            return null;
+            throw new HL7Exception('Unable to split message into segments.');
         }
 
         // Get message metadata
