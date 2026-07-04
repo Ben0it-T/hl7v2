@@ -8,6 +8,7 @@ use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
 use HL7v2\Model\FieldRepeat;
 use HL7v2\Model\Component;
+//use HL7v2\Model\SubComponent;
 
 class HL7StringSerializer
 {
@@ -24,6 +25,33 @@ class HL7StringSerializer
             $segments
         );
     }
+
+    public function getSegmentValue(Segment $segment, Message $message): string
+    {
+        return $this->segmentToString($segment, $message);
+    }
+
+    public function getFieldValue(Field $field, Message $message): string
+    {
+        return $this->fieldToString($field, $message);
+    }
+
+    public function getFieldRepeatValue(FieldRepeat $repeat, Message $message): string
+    {
+        return $this->repeatToString($repeat, $message);
+    }
+
+    public function getComponentValue(Component $component, Message $message): string
+    {
+        return $this->componentToString($component, $message);
+    }
+
+    public function getSubComponentValue(SubComponent $subComponent): string
+    {
+        return $subComponent->getValue();
+    }
+
+
 
     private function segmentToString(
         Segment $segment,
