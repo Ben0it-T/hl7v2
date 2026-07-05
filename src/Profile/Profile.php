@@ -81,7 +81,7 @@ class Profile
     }
 
     /**
-     * Get all segment names from a profile group.
+     * Get all segment names from a profile group (segGroup).
      *
      * @param array<mixed,mixed> $segGroup
      * @return string[]
@@ -113,7 +113,7 @@ class Profile
     }
 
     /**
-     * Get first segment names from a profile group.
+     * Get names of the first segments in a profile group and its child groups (group and sub-goup).
      *
      * @param array<mixed,mixed> $segGroup
      * @return string[]
