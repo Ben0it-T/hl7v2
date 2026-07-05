@@ -86,8 +86,19 @@ class Profile
      * @param array<mixed,mixed> $segGroup
      * @return string[]
      */
-    private function getSegmentNamesInDefinition(array $segGroup): array {
+    public function getSegmentNamesInGroup(array $segGroup): array
+    {
+        return $this->getSegmentNamesInDefinition($segGroup);
+    }
 
+    /**
+     * Extract segment names from a profile definition.
+     *
+     * @param array<mixed,mixed> $segGroup
+     * @return string[]
+     */
+    private function getSegmentNamesInDefinition(array $segGroup): array
+    {
         $segmentNames = [];
 
         foreach ($segGroup as $child) {
