@@ -15,6 +15,7 @@ class Validator
 {
 
     private bool $debug = false;
+    private HL7Tables $tables;
     private ?LoggerInterface $logger = null;
 
     public function __construct(?LoggerInterface $logger = null)
@@ -55,6 +56,8 @@ class Validator
      */
     public function validate(Message $message, Profile $profile, HL7Tables $tables): ValidationResult
     {
+        $this->tables = $tables;
+
         $this->log('-Validator- Validation started');
         return new ValidationResult();
     }
@@ -66,7 +69,7 @@ class Validator
 
     /**
      * Check element usage.
-     *  Group, Segment, Field, Component, SubComponent.
+     * Applies to: Group, Segment, Field, Component, SubComponent.
      *
      * Supported usage codes:
      * - R: Required
@@ -136,7 +139,7 @@ class Validator
 
     /**
      * Check element cardinality ([min..max]).
-     *  Group, Segment, Field
+     * Applies to: Group, Segment, Field
      *
      * Examples:
      * - [1..1]  with 1 occurrence  => valid
@@ -209,7 +212,7 @@ class Validator
 
     /**
      * Check element length.
-     *  Field, Component, SubComponent.
+     * Applies to: Field, Component, SubComponent.
      *
      * Examples:
      * - max length 20, value length 10 => valid
@@ -235,6 +238,58 @@ class Validator
             "$elementType $elementName length "
             . ($result ? 'does not exceed' : 'exceeds')
             . " the length defined in the message profile ($length).";
+
+        $this->log(
+            "-$elementType- $type: $description"
+        );
+
+        return [
+            'result' => $result,
+            'type' => $type,
+            'description' => $description,
+        ];
+    }
+
+    /**
+     * Check HL7 table value.
+     * Applies to: Field, Component, SubComponent
+     *
+     * Validation is currently case-insensitive to preserve legacy Validator behavior.
+     *
+     * @param string $table
+     * @param string $elementValue
+     * @param string $elementType
+     * @param string $elementName
+     *
+     * @return array{
+     *     result: bool,
+     *     type: string,
+     *     description: string
+     * }
+     */
+    private function checkHL7Table(string $table, string $elementValue, string $elementType, string $elementName): array
+    {
+        $type = 'Table';
+        $hl7Tables = $this->tables->getTables();
+
+        // Preserve legacy behaviour (case-insensitive comparison).
+        // TODO: Audit HL7 tables and switch to strict case-sensitive validation.
+        $result = in_array(
+            strtoupper($elementValue),
+            array_map(
+                'strtoupper',
+                $hl7Tables[$table]['elements']
+            )
+        );
+
+        $description =
+            "$elementType $elementName value ($elementValue) "
+            . ($result ? 'exists in' : 'not in')
+            . " table $table ("
+            . ($hl7Tables[$table]['type'] === 'HL7'
+                ? 'HL7 standard'
+                : 'User defined')
+            . " tables).";
 
         $this->log(
             "-$elementType- $type: $description"
