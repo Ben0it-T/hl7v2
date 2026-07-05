@@ -134,4 +134,77 @@ class Validator
         ];
     }
 
+    /**
+     * Check element cardinality ([min..max]).
+     *  Group, Segment, Field
+     *
+     * Examples:
+     * - [1..1]  with 1 occurrence  => valid
+     * - [1..*]  with 25 occurrences => valid
+     * - [1..3]  with 0 occurrence  => minimum not met
+     * - [1..3]  with 4 occurrences => maximum exceeded
+     * - [1..3]  with 0 occurrence and O usage => valid
+     *
+     * @param string $min
+     * @param string $max
+     * @param int $elementCnt
+     * @param string $elementUsage
+     * @param string $elementType
+     * @param string $elementName
+     *
+     * @return array{
+     *     result: bool,
+     *     type: string,
+     *     description: string
+     * }
+     */
+    private function checkCardinality(string $min, string $max, int $elementCnt, string $elementUsage, string $elementType, string $elementName): array
+    {
+        $maxStr = $max;
+
+        $max = ($maxStr === '*')
+            ? INF
+            : (int) $maxStr;
+
+        $min = (int) $min;
+
+        if (($elementCnt < $min) && $elementUsage === 'R') {
+
+            $description =
+                "$elementType $elementName cardinality is [$min..$maxStr]. "
+                . "Must have at least $min repetition(s) (found $elementCnt).";
+
+            $result = false;
+            $type = 'Cardinality';
+
+        } elseif ($elementCnt > $max) {
+
+            $description =
+                "$elementType $elementName cardinality is [$min..$maxStr]. "
+                . "Must have no more than $maxStr repetition(s) (found $elementCnt).";
+
+            $result = false;
+            $type = 'Cardinality';
+
+        } else {
+
+            $description =
+                "$elementType $elementName cardinality is [$min..$maxStr]. "
+                . "Found $elementCnt time(s).";
+
+            $result = true;
+            $type = 'Cardinality';
+        }
+
+        $this->log(
+            "-$elementType- $type: $description"
+        );
+
+        return [
+            'result' => $result,
+            'type' => $type,
+            'description' => $description,
+        ];
+    }
+
 }
