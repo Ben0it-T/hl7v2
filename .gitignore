@@ -21,3 +21,4 @@ vendor/
 # Tools
 phpstan.log
 phpstan.neon
+validator.log
