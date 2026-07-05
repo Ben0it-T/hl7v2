@@ -112,4 +112,25 @@ class Profile
         return $segmentNames;
     }
 
+    /**
+     * Get first segment names from a profile group.
+     *
+     * @param array<mixed,mixed> $segGroup
+     * @return string[]
+     */
+    public function getFirstSegmentNamesInGroup(array $segGroup): array
+    {
+        $segmentNames = [];
+
+        foreach ($segGroup['segments'] as $index => $child) {
+            if ($index === 0 && $child['Type'] === 'segment') {
+                $segmentNames[] = $child['Name'];
+            } elseif ($child['Type'] === 'group') {
+                $segmentNames = array_merge($segmentNames, $this->getFirstSegmentNamesInGroup($child));
+            }
+        }
+
+        return $segmentNames;
+    }
+
 }
