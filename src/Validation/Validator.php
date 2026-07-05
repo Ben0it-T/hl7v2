@@ -17,6 +17,7 @@ class Validator
     private bool $debug = false;
     private HL7Tables $tables;
     private ?LoggerInterface $logger = null;
+    private ValidationResult $validationResult;
 
     public function __construct(?LoggerInterface $logger = null)
     {
@@ -57,9 +58,10 @@ class Validator
     public function validate(Message $message, Profile $profile, HL7Tables $tables): ValidationResult
     {
         $this->tables = $tables;
+        $this->validationResult = new ValidationResult();
 
         $this->log('-Validator- Validation started');
-        return new ValidationResult();
+        return $this->validationResult;
     }
 
 
@@ -252,7 +254,7 @@ class Validator
 
     /**
      * Check HL7 table value.
-     * Applies to: Field, Component, SubComponent
+     * Applies to: Field, Component, SubComponent.
      *
      * Validation is currently case-insensitive to preserve legacy Validator behavior.
      *
