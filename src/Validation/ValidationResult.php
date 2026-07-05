@@ -52,10 +52,22 @@ class ValidationResult
      * Add test report entry.
      *
      * @param array<string, mixed> $entry
+     *
+     * Expected structure:
+     * array{
+     *     Location: string,
+     *     Description: string,
+     *     Type: string
+     *     Result: bool
+     * }
      */
     public function addTestReport(array $entry): void
     {
         $this->testReport[] = $entry;
+
+        if (!$entry['Result']) {
+            $this->errorCount++;
+        }
     }
 
     /**
