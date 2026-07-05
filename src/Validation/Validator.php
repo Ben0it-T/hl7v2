@@ -207,4 +207,44 @@ class Validator
         ];
     }
 
+    /**
+     * Check element length.
+     *  Field, Component, SubComponent.
+     *
+     * Examples:
+     * - max length 20, value length 10 => valid
+     * - max length 20, value length 20 => valid
+     * - max length 20, value length 21 => invalid
+     *
+     * @param int $length
+     * @param string $elementValue
+     * @param string $elementType
+     * @param string $elementName
+     *
+     * @return array{
+     *     result: bool,
+     *     type: string,
+     *     description: string
+     * }
+     */
+    private function checkLength(int $length, string $elementValue, string $elementType, string $elementName): array
+    {
+        $type = 'Length';
+        $result = mb_strlen($elementValue) <= $length;
+        $description =
+            "$elementType $elementName length "
+            . ($result ? 'does not exceed' : 'exceeds')
+            . " the length defined in the message profile ($length).";
+
+        $this->log(
+            "-$elementType- $type: $description"
+        );
+
+        return [
+            'result' => $result,
+            'type' => $type,
+            'description' => $description,
+        ];
+    }
+
 }
