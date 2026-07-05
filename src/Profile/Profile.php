@@ -68,4 +68,37 @@ class Profile
 
         return [];
     }
+
+
+    /**
+     * Get all segment names from profile.
+     *
+     * @return string[]
+     */
+    public function getSegmentNames(): array
+    {
+        return $this->getSegmentNamesInDefinition($this->definition);
+    }
+
+    /**
+     * Get all segment names from a profile group.
+     *
+     * @param array<mixed,mixed> $segGroup
+     * @return string[]
+     */
+    private function getSegmentNamesInDefinition(array $segGroup): array {
+
+        $segmentNames = [];
+
+        foreach ($segGroup as $child) {
+            if ($child['Type'] === 'segment') {
+                $segmentNames[] = $child['Name'];
+            } elseif ($child['Type'] === 'group') {
+                $segmentNames = array_merge($segmentNames, $this->getSegmentNamesInDefinition($child['segments']));
+            }
+        }
+
+        return $segmentNames;
+    }
+
 }
