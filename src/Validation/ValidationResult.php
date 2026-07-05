@@ -29,4 +29,81 @@ class ValidationResult
     {
         return $this->messages;
     }
+
+
+
+
+    /**
+     * @var array<int, array<string, mixed>>
+     */
+    private array $testReport = [];
+
+    /**
+     * @var array<int, array<string, mixed>>
+     */
+    private array $validationReport = [];
+
+    /**
+     * Validation error count.
+     */
+    private int $errorCount = 0;
+
+    /**
+     * Add test report entry.
+     *
+     * @param array<string, mixed> $entry
+     */
+    public function addTestReport(array $entry): void
+    {
+        $this->testReport[] = $entry;
+    }
+
+    /**
+     * Add validation report entry.
+     *
+     * @param array<string, mixed> $entry
+     */
+    public function addValidationReport(array $entry): void
+    {
+        $this->validationReport[] = $entry;
+    }
+
+    /**
+     * Increment validation error counter.
+     */
+    public function incrementErrorCount(): void
+    {
+        $this->errorCount++;
+    }
+
+    /**
+     * Get test report.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    public function getTestReport(): array
+    {
+        return $this->testReport;
+    }
+
+    /**
+     * Get validation report.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    public function getValidationReport(): array
+    {
+        return $this->validationReport;
+    }
+
+    /**
+     * Get validation error count.
+     *
+     * @return int
+     */
+    public function getErrorCount(): int
+    {
+        return $this->errorCount;
+    }
+
 }
