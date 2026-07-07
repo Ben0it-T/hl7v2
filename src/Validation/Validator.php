@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace HL7v2\Validation;
 
 use HL7v2\Model\Message;
+use HL7v2\Model\SubComponent;
+
 use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 
@@ -15,7 +17,14 @@ class Validator
 {
 
     private bool $debug = false;
-    private HL7Tables $tables;
+
+    /**
+     * HL7 tables indexed by table number.
+     *
+     * @var array<string, mixed>
+     */
+    private array $hl7Tables = [];
+
     private ?LoggerInterface $logger = null;
     private ValidationResult $validationResult;
 
@@ -57,7 +66,7 @@ class Validator
      */
     public function validate(Message $message, Profile $profile, HL7Tables $tables): ValidationResult
     {
-        $this->tables = $tables;
+        $this->hl7Tables = $tables->getTables();
         $this->validationResult = new ValidationResult();
 
         $this->log('-Validator- Validation started');
@@ -272,7 +281,6 @@ class Validator
     private function checkHL7Table(string $table, string $elementValue, string $elementType, string $elementName): array
     {
         $type = 'Table';
-        $hl7Tables = $this->tables->getTables();
 
         // Preserve legacy behaviour (case-insensitive comparison).
         // TODO: Audit HL7 tables and switch to strict case-sensitive validation.
@@ -280,7 +288,7 @@ class Validator
             strtoupper($elementValue),
             array_map(
                 'strtoupper',
-                $hl7Tables[$table]['elements']
+                $this->hl7Tables[$table]['elements']
             )
         );
 
@@ -288,7 +296,7 @@ class Validator
             "$elementType $elementName value ($elementValue) "
             . ($result ? 'exists in' : 'not in')
             . " table $table ("
-            . ($hl7Tables[$table]['type'] === 'HL7'
+            . ($this->hl7Tables[$table]['type'] === 'HL7'
                 ? 'HL7 standard'
                 : 'User defined')
             . " tables).";
@@ -302,6 +310,144 @@ class Validator
             'type' => $type,
             'description' => $description,
         ];
+    }
+
+
+    // ---
+    // --- Validate functions
+    // ---
+
+
+    /**
+     * Validate sub-component.
+     *
+     * Validates the sub-component against its profile definition,
+     * updates validation reports,
+     * and returns the profiled representation of the sub-component.
+     *
+     * @param SubComponent|null $subComponent
+     * @param array<string, mixed> $subComponentDef
+     * @param string $location
+     *
+     * @return array<string, mixed>
+     */
+    private function validateSubComponent(?SubComponent $subComponent, array $subComponentDef, string $location): array
+    {
+        $exists = (
+            $subComponent !== null
+            && $subComponent->getValue() !== ''
+        );
+        $value = $subComponent?->getValue() ?? '';
+        $elementName = "'{$subComponentDef['LongName']}' ({$subComponentDef['Name']})";
+        $hasError = false;
+        $comments = '';
+
+        $this->log(
+            "-SubComponent- $location : subcomponentExists: "
+            . ($exists ? 'true' : 'false')
+            . " ({$subComponentDef['Usage']})"
+        );
+
+        // check usage
+        $usage = $this->checkUsage(
+            $subComponentDef['Usage'],
+            $exists,
+            'SubComponent',
+            $elementName
+        );
+
+        $this->validationResult->addTestReport([
+            'Location'    => $location,
+            'Description' => $usage['description'],
+            'Type'        => $usage['type'],
+            'Result'      => $usage['result'],
+        ]);
+
+        if (!$usage['result']) {
+            $hasError = true;
+            $comments .= $usage['description'] . " ";
+        }
+
+        if ($exists) {
+
+            // check length
+            if ($subComponentDef["maxLength"] !== "") {
+                $lengthCheck = $this->checkLength(
+                    (int) $subComponentDef["maxLength"],
+                    $value,
+                    'SubComponent',
+                    $elementName
+                );
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $location,
+                    'Description' => $lengthCheck['description'],
+                    'Type'        => $lengthCheck['type'],
+                    'Result'      => $lengthCheck['result'],
+                ]);
+
+                if (!$lengthCheck['result']) {
+                    $hasError = true;
+                    $comments .= $lengthCheck['description'] . " ";
+                }
+            }
+
+            // check table
+            if ($subComponentDef['Table'] !== "" && isset($this->hl7Tables[$subComponentDef['Table']])) {
+                if (!empty($this->hl7Tables[$subComponentDef['Table']]['elements'])) {
+                    $tableCheck = $this->checkHL7Table(
+                        $subComponentDef["Table"],
+                        $value,
+                        'SubComponent',
+                        $elementName
+                    );
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $location,
+                        'Description' => $tableCheck['description'],
+                        'Type'        => $tableCheck['type'],
+                        'Result'      => $tableCheck['result'],
+                    ]);
+
+                    if (!$tableCheck['result']) {
+                        $hasError = true;
+                        $comments .= $tableCheck['description'] . " ";
+                    }
+                }
+            }
+
+        }
+
+        $this->validationResult->addValidationReport([
+            "type"            => "SubComponent",
+            "location"        => $location,
+            "name"            => $subComponentDef["Name"],
+            "longName"        => $subComponentDef["LongName"],
+            "usage"           => $subComponentDef["Usage"],
+            "datatype"        => $subComponentDef["Type"],
+            "length"          => $subComponentDef["maxLength"],
+            "constantValue"   => "",
+            "table"           => $subComponentDef["Table"],
+            "impNote"         => "",
+            "elementValue"    => $value,
+            "elementExists"   => $exists,
+            "elementError"    => $hasError,
+            "elementComments" => trim($comments),
+        ]);
+
+        // profiled representation of the sub-component
+        $subComponentArray = [
+            "Type"     => "subcomponent",
+            "Name"     => $subComponentDef["Name"],
+            "LocName"  => $location,
+            "LongName" => $subComponentDef["LongName"],
+            "Datatype" => $subComponentDef["Type"],
+            "hasError" => $hasError,
+            "comments" => trim($comments),
+            "value"    => $value,
+        ];
+
+        return $subComponentArray;
     }
 
 }
