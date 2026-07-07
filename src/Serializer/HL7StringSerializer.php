@@ -26,22 +26,22 @@ class HL7StringSerializer
         );
     }
 
-    public function getSegmentValue(Segment $segment, Message $message): string
+    public function serializeSegment(Segment $segment, Message $message): string
     {
         return $this->segmentToString($segment, $message);
     }
 
-    public function getFieldValue(Field $field, Message $message): string
+    public function serializeField(Field $field, Message $message): string
     {
         return $this->fieldToString($field, $message);
     }
 
-    public function getFieldRepeatValue(FieldRepeat $repeat, Message $message): string
+    public function serializeFieldRepeat(FieldRepeat $repeat, Message $message): string
     {
         return $this->repeatToString($repeat, $message);
     }
 
-    public function getComponentValue(Component $component, Message $message): string
+    public function serializeComponent(Component $component, Message $message): string
     {
         return $this->componentToString($component, $message);
     }
