@@ -57,7 +57,7 @@ class ValidationResult
      * array{
      *     Location: string,
      *     Description: string,
-     *     Type: string
+     *     Type: string,
      *     Result: bool
      * }
      */
