@@ -4,11 +4,13 @@ declare(strict_types=1);
 namespace HL7v2\Validation;
 
 use HL7v2\Model\Message;
+use HL7v2\Model\Component;
 use HL7v2\Model\SubComponent;
 
 use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 
+use HL7v2\Serializer\HL7StringSerializer;
 use HL7v2\Validation\ValidationResult;
 
 use Psr\Log\LoggerInterface;
@@ -17,6 +19,9 @@ class Validator
 {
 
     private bool $debug = false;
+
+    private Message $message;
+    private HL7StringSerializer $serializer;
 
     /**
      * HL7 tables indexed by table number.
@@ -31,6 +36,7 @@ class Validator
     public function __construct(?LoggerInterface $logger = null)
     {
         $this->logger = $logger;
+        $this->serializer = new HL7StringSerializer();
     }
 
     /**
@@ -68,6 +74,7 @@ class Validator
     {
         $this->hl7Tables = $tables->getTables();
         $this->validationResult = new ValidationResult();
+        $this->message = $message;
 
         $this->log('-Validator- Validation started');
         return $this->validationResult;
@@ -319,11 +326,285 @@ class Validator
 
 
     /**
+     * Validate component.
+     *
+     * Validates the component against its profile definition,
+     * updates validation reports,
+     * and returns the profiled representation of the component.
+     *
+     * TODO:
+     * Refactor after complete Validator migration.
+     *
+     * @param Component|null $component
+     * @param array<string, mixed> $componentDef
+     * @param string $location
+     *
+     * @return array<string, mixed>
+     */
+    private function validateComponent(?Component $component, array $componentDef, string $location): array
+    {
+        $value = $component !== null
+            ? $this->serializer->serializeComponent($component, $this->message)
+            : '';
+
+        $exists = (
+            $component !== null
+            && $value !== ''
+        );
+        $elementName = "'{$componentDef['LongName']}' ({$componentDef['Name']})";
+        $hasError = false;
+        $comments = '';
+
+        $this->log(
+            "-Component- $location : component exists: "
+            . ($exists ? 'true' : 'false')
+            . " ({$componentDef['Usage']})"
+        );
+
+        // check usage
+        $usage = $this->checkUsage(
+            $componentDef['Usage'],
+            $exists,
+            'Component',
+            $elementName
+        );
+
+        $this->validationResult->addTestReport([
+            'Location'    => $location,
+            'Description' => $usage['description'],
+            'Type'        => $usage['type'],
+            'Result'      => $usage['result'],
+        ]);
+
+        if (!$usage['result']) {
+            $hasError = true;
+            $comments .= $usage['description'] . " ";
+        }
+
+        if ($exists) {
+
+            // check length
+            if ($componentDef["maxLength"] !== "") {
+                $lengthCheck = $this->checkLength(
+                    (int) $componentDef["maxLength"],
+                    $value,
+                    'Component',
+                    $elementName
+                );
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $location,
+                    'Description' => $lengthCheck['description'],
+                    'Type'        => $lengthCheck['type'],
+                    'Result'      => $lengthCheck['result'],
+                ]);
+
+                if (!$lengthCheck['result']) {
+                    $hasError = true;
+                    $comments .= $lengthCheck['description'] . " ";
+                }
+            }
+
+            // check table - only if simple component
+            if (
+                !isset($componentDef['components'])
+                && $componentDef['Table'] !== ""
+                && isset($this->hl7Tables[$componentDef['Table']])
+            ) {
+                if (!empty($this->hl7Tables[$componentDef['Table']]['elements'])) {
+                    $tableCheck = $this->checkHL7Table(
+                        $componentDef["Table"],
+                        $value,
+                        'Component',
+                        $elementName
+                    );
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $location,
+                        'Description' => $tableCheck['description'],
+                        'Type'        => $tableCheck['type'],
+                        'Result'      => $tableCheck['result'],
+                    ]);
+
+                    if (!$tableCheck['result']) {
+                        $hasError = true;
+                        $comments .= $tableCheck['description'] . " ";
+                    }
+                }
+            }
+
+        }
+
+        $this->validationResult->addValidationReport([
+            "type"            => "Component",
+            "location"        => $location,
+            "name"            => $componentDef["Name"],
+            "longName"        => $componentDef["LongName"],
+            "usage"           => $componentDef["Usage"],
+            "datatype"        => $componentDef["Type"],
+            "length"          => $componentDef["maxLength"],
+            "table"           => $componentDef["Table"],
+            "impNote"         => "",
+            "elementValue"    => $value,
+            "elementExists"   => $exists,
+            "elementError"    => $hasError,
+            "elementComments" => trim($comments),
+        ]);
+
+        $componentArray = [
+            "Type"     => "component",
+            "Name"     => $componentDef["Name"],
+            "LocName"  => $location,
+            "LongName" => $componentDef["LongName"],
+            "Datatype" => $componentDef["Type"],
+            "hasError" => $hasError,
+            "comments" => trim($comments),
+            "value"    => $value,
+        ];
+
+
+        if ($exists) {
+            // Note:
+            //  If Component is absent
+            //  Don't validate sub-component
+
+            if (isset($componentDef["components"])) {
+                // validate subComponents
+                $componentArray["subcomponents"] = [];
+
+                foreach ($componentDef['components'] as $i => $subComponentDef) {
+                    $subComponent = $component->getSubComponent($i + 1);
+
+                    $componentArray['subcomponents'][$i + 1] = $this->validateSubComponent(
+                        $subComponent,
+                        $subComponentDef,
+                        "{$location}." . ($i + 1)
+                    );
+                }
+
+                // Check if there are more subComponent in message - Element not expected
+                if ($component->countSubComponents() > count($componentDef["components"])) {
+                    $this->log(
+                        "-Component- There are more subComponents in component '{$location}'."
+                    );
+                    for ($i = count($componentDef["components"]); $i < $component->countSubComponents(); $i++) {
+                        $subComponent = $component->getSubComponent($i + 1);
+
+                        if ($subComponent === null) {
+                            throw new \LogicException('Unexpected null sub-component.');
+                        }
+
+                        $subComponentPosition = $i + 1;
+                        $subComponentLocation = "{$location}.{$subComponentPosition}";
+
+                        $description = "SubComponent '{$subComponentLocation}' is not expected in Component '$location' structure.";
+
+                        $notDefinedSubComponent = $this->createNotDefinedSubComponent($subComponent, $location, $subComponentPosition);
+                        $notDefinedSubComponent["hasError"] = true;
+                        $notDefinedSubComponent["comments"] = $description;
+                        $componentArray["subcomponents"][$i + 1] = $notDefinedSubComponent;
+
+                        $this->log(
+                            "-SubComponent- {$subComponentLocation} :  {$description}"
+                        );
+
+                        $this->validationResult->addTestReport([
+                            'Location'    => $subComponentLocation,
+                            'Description' => $description,
+                            'Type'        => "Element not expected",
+                            'Result'      => false,
+                        ]);
+
+                        $this->validationResult->addValidationReport([
+                            "type"            => "SubComponent",
+                            "location"        => $subComponentLocation,
+                            "name"            => "UNKNOWN.{$subComponentPosition}",
+                            "longName"        => "Not defined subcomponent",
+                            "usage"           => "",
+                            "datatype"        => "UNKNOWN",
+                            "length"          => "",
+                            "constantValue"   => "",
+                            "table"           => "",
+                            "impNote"         => "",
+                            "elementValue"    => $subComponent->getValue(),
+                            "elementExists"   => true,
+                            "elementError"    => true,
+                            "elementComments" => trim($description),
+                        ]);
+                    }
+                }
+
+            } elseif ($component->countSubComponents() > 1) {
+                // There is no subComponent in the profile
+                // Check if there are more than one SubComponent in message
+
+                $this->log(
+                    "-Component- SubComponent are not expected in Component '{$location}' structure."
+                );
+
+                for ($i = 0; $i < $component->countSubComponents(); $i++) {
+                    $subComponent = $component->getSubComponent($i + 1);
+
+                    if ($subComponent === null) {
+                        throw new \LogicException('Unexpected null sub-component.');
+                    }
+
+                    $subComponentPosition = $i + 1;
+                    $subComponentLocation = "{$location}.{$subComponentPosition}";
+
+                    $description = "SubComponent '{$subComponentLocation}' is not expected in Component '$location' structure.";
+
+                    $notDefinedSubComponent = $this->createNotDefinedSubComponent($subComponent, $location, $subComponentPosition);
+                    $notDefinedSubComponent["hasError"] = true;
+                    $notDefinedSubComponent["comments"] = $description;
+                    $componentArray["subcomponents"][$i + 1] = $notDefinedSubComponent;
+
+                    $this->log(
+                        "-SubComponent- {$subComponentLocation} :  {$description}"
+                    );
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $subComponentLocation,
+                        'Description' => $description,
+                        'Type'        => "Element not expected",
+                        'Result'      => false,
+                    ]);
+
+                    $this->validationResult->addValidationReport([
+                        "type"            => "SubComponent",
+                        "location"        => $subComponentLocation,
+                        "name"            => "UNKNOWN.{$subComponentPosition}",
+                        "longName"        => "Not defined subcomponent",
+                        "usage"           => "",
+                        "datatype"        => "UNKNOWN",
+                        "length"          => "",
+                        "constantValue"   => "",
+                        "table"           => "",
+                        "impNote"         => "",
+                        "elementValue"    => $subComponent->getValue(),
+                        "elementExists"   => true,
+                        "elementError"    => true,
+                        "elementComments" => trim($description),
+                    ]);
+                }
+            }
+
+        }
+
+        return $componentArray;
+    }
+
+
+
+    /**
      * Validate sub-component.
      *
      * Validates the sub-component against its profile definition,
      * updates validation reports,
      * and returns the profiled representation of the sub-component.
+     *
+     * TODO:
+     * Refactor after complete Validator migration.
      *
      * @param SubComponent|null $subComponent
      * @param array<string, mixed> $subComponentDef
@@ -343,7 +624,7 @@ class Validator
         $comments = '';
 
         $this->log(
-            "-SubComponent- $location : subcomponentExists: "
+            "-SubComponent- $location : subcomponent exists: "
             . ($exists ? 'true' : 'false')
             . " ({$subComponentDef['Usage']})"
         );
@@ -448,6 +729,35 @@ class Validator
         ];
 
         return $subComponentArray;
+    }
+
+
+    // ---
+    // --- Create not defined element functions
+    // ---
+
+    /**
+     * Create profiled representation of a sub-component
+     * not defined in the profile.
+     *
+     * @param SubComponent $subComponent
+     * @param string $location
+     * @param int $position
+     *
+     * @return array<string, mixed>
+     */
+    private function createNotDefinedSubComponent(SubComponent $subComponent, string $location, int $position): array
+    {
+        return [
+            "Type"     => "subcomponent",
+            "Name"     => "UNKNOWN.$position",
+            "LocName"  => "$location.$position",
+            "LongName" => "",
+            "Datatype" => "UNKNOWN",
+            "hasError" => false,
+            "comments" => "",
+            "value"    => $subComponent->getValue(),
+        ];
     }
 
 }
