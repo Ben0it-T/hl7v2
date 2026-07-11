@@ -14,6 +14,7 @@ use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 
 use HL7v2\Serializer\HL7StringSerializer;
+use HL7v2\Validation\ValidationContext;
 use HL7v2\Validation\ValidationResult;
 
 use Psr\Log\LoggerInterface;
@@ -34,6 +35,7 @@ class Validator
     private array $hl7Tables = [];
 
     private ?LoggerInterface $logger = null;
+    private ValidationContext $context;
     private ValidationResult $validationResult;
 
     public function __construct(?LoggerInterface $logger = null)
@@ -78,6 +80,24 @@ class Validator
         $this->hl7Tables = $tables->getTables();
         $this->validationResult = new ValidationResult();
         $this->message = $message;
+
+        $messageSegmentNames = $message->getSegmentNames();
+
+        $this->context = new ValidationContext();
+        $this->context->profileSegmentNames = $profile->getSegmentNames();
+        $this->context->notDefinedSegments = array_values(
+            array_diff(
+                $messageSegmentNames,
+                $this->context->profileSegmentNames
+            )
+        );
+
+        $this->context->notPresentSegments = array_values(
+            array_diff(
+                $this->context->profileSegmentNames,
+                $messageSegmentNames
+            )
+        );
 
         $this->log('-Validator- Validation started');
         return $this->validationResult;

@@ -156,6 +156,22 @@ class Message
     }
 
     /**
+     * Get all segment names.
+     *
+     * @return list<string>
+     */
+    public function getSegmentNames(): array
+    {
+        $segmentNames = [];
+
+        foreach ($this->segments as $segment) {
+            $segmentNames[] = $segment->getName();
+        }
+
+        return $segmentNames;
+    }
+
+    /**
      * Count segments
      *
      * @return int
