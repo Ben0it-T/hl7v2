@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace HL7v2\Validation;
 
+use HL7v2\Model\Message;
+
 final class ValidationContext
 {
     /**
@@ -58,4 +60,68 @@ final class ValidationContext
      * @var list<string>
      */
     public array $notPresentSegments = [];
+
+
+
+    /**
+     * Count group repetitions in message,
+     * starting from the current message position.
+     *
+     * @param Message $message
+     * @param string $firstSegmentNameInGroup
+     * @param string[] $segmentsInGroup
+     *
+     * @return int
+     */
+    public function countGroupRepetitions(Message $message, string $firstSegmentNameInGroup, array $segmentsInGroup): int
+    {
+        $groupRepetitions = 0;
+
+        for ($i = $this->messageSegmentIndex; $i < $message->countSegments(); $i++) {
+            $segment = $message->getSegment($i);
+
+            if ($segment === null) {
+                break;
+            }
+
+            $segmentName = $segment->getName();
+
+            if ($segmentName === $firstSegmentNameInGroup) {
+                $groupRepetitions++;
+            }
+
+            if (in_array($segmentName, $this->notDefinedSegments, true)) {
+                // Segment is not defined in profile.
+                // It does not break the current group.
+                // Ignore it when counting the group boundary.
+                continue;
+            }
+
+            if (!in_array($segmentName, $segmentsInGroup, true)) {
+                // not in the group
+                break;
+            }
+        }
+
+        return $groupRepetitions;
+    }
+
+    /**
+     * Check whether a segment appears later in the profile structure.
+     *
+     * @param string $segmentName
+     *
+     * @return bool
+     */
+    public function isSegmentLaterInProfileStructure(string $segmentName): bool
+    {
+        $profileNextSegmentsNames = [];
+
+        for ($i = $this->profileSegmentIndex + 1; $i < count($this->profileSegmentNames); $i++) {
+            $profileNextSegmentsNames[] = $this->profileSegmentNames[$i];
+        }
+
+        return in_array($segmentName, $profileNextSegmentsNames, true);
+    }
+
 }

@@ -181,4 +181,35 @@ class Message
         return count($this->segments);
     }
 
+    /**
+     * Count consecutive repetitions of a segment,
+     * starting from the specified segment index.
+     *
+     * @param string $segmentName
+     * @param int $segmentIndex
+     *
+     * @return int
+     */
+    public function countSegmentRepetitions(string $segmentName, int $segmentIndex): int
+    {
+        $segmentReps = 0;
+        $segment = $this->getSegment($segmentIndex);
+
+        if ($segment !== null && $segment->getName() === $segmentName) {
+            $segmentReps++;
+
+            for ($i = $segmentIndex + 1; $i < $this->countSegments(); $i++) {
+                $segment = $this->getSegment($i);
+
+                if ($segment !== null && $segment->getName() === $segmentName) {
+                    $segmentReps++;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        return $segmentReps;
+    }
+
 }
