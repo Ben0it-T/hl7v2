@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace HL7v2\Validation;
 
 use HL7v2\Model\Message;
+use HL7v2\Model\Field;
+use HL7v2\Model\FieldRepeat;
 use HL7v2\Model\Component;
 use HL7v2\Model\SubComponent;
 
@@ -326,6 +328,386 @@ class Validator
 
 
     /**
+     * Validate field.
+     *
+     * Validates the field against its profile definition,
+     * updates validation reports,
+     * and returns the profiled representation of the field.
+     *
+     * TODO:
+     * Refactor after complete Validator migration.
+     *
+     * @param Field|null $field
+     * @param array<string, mixed> $fieldDef
+     * @param string $location
+     *
+     * @return list<array<string, mixed>>
+     */
+    private function validateField(?Field $field, array $fieldDef, string $location): array
+    {
+        $value = $field !== null
+            ? $this->serializer->serializeField($field, $this->message)
+            : '';
+        $repeats = $field !== null
+            ? $field->countRepeats()
+            : 0;
+        $exists = (
+            $field !== null
+            && $value !== ''
+        );
+        $elementName = "'{$fieldDef['LongName']}' ({$fieldDef['Name']})";
+        $hasError = false;
+        $comments = '';
+        $fieldArray = [];
+
+        $this->log(
+            "-Field- $location : field exists: "
+            . ($exists ? 'true' : 'false')
+            . " ({$fieldDef['Usage']}) "
+            . " - repeats: {$repeats}"
+        );
+
+        // check usage
+        $usage = $this->checkUsage(
+            $fieldDef['Usage'],
+            $exists,
+            'Field',
+            $elementName
+        );
+
+        $this->validationResult->addTestReport([
+            'Location'    => $location,
+            'Description' => $usage['description'],
+            'Type'        => $usage['type'],
+            'Result'      => $usage['result'],
+        ]);
+
+        if (!$usage['result']) {
+            $hasError = true;
+            $comments .= $usage['description'] . " ";
+        }
+
+
+        // check cardinality
+        $cardinality = $this->checkCardinality(
+            $fieldDef['Min'],
+            $fieldDef['Max'],
+            $repeats,
+            $fieldDef['Usage'],
+            'Field',
+            $elementName
+        );
+
+        $this->validationResult->addTestReport([
+            'Location'    => $location,
+            'Description' => $cardinality['description'],
+            'Type'        => $cardinality['type'],
+            'Result'      => $cardinality['result'],
+        ]);
+
+        if (!$cardinality['result']) {
+            $hasError = true;
+            $comments .= $cardinality['description'] . " ";
+        }
+
+        if ($exists) {
+            foreach ($field->getRepeats() as $repeatIndex => $fieldRepeat) {
+                $fieldValue = $this->serializer->serializeFieldRepeat(
+                    $fieldRepeat,
+                    $this->message
+                );
+                $repeatHasError = $hasError;
+                $repeatComments = $comments;
+
+                // check length
+                if ($fieldDef["Length"] !== "") {
+                    $lengthCheck = $this->checkLength(
+                        (int) $fieldDef["Length"],
+                        $fieldValue,
+                        'Field',
+                        $elementName
+                    );
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $location,
+                        'Description' => $lengthCheck['description'],
+                        'Type'        => $lengthCheck['type'],
+                        'Result'      => $lengthCheck['result'],
+                    ]);
+
+                    if (!$lengthCheck['result']) {
+                        $repeatHasError = true;
+                        $repeatComments .= $lengthCheck['description'] . " ";
+                    }
+                }
+
+                // check table - only if has no components
+                if (
+                    !isset($fieldDef['components'])
+                    && $fieldDef['Table'] !== ""
+                    && isset($this->hl7Tables[$fieldDef['Table']])
+                ) {
+                    if (!empty($this->hl7Tables[$fieldDef['Table']]['elements'])) {
+                        $tableCheck = $this->checkHL7Table(
+                            $fieldDef["Table"],
+                            $fieldValue,
+                            'Field',
+                            $elementName
+                        );
+
+                        $this->validationResult->addTestReport([
+                            'Location'    => $location,
+                            'Description' => $tableCheck['description'],
+                            'Type'        => $tableCheck['type'],
+                            'Result'      => $tableCheck['result'],
+                        ]);
+
+                        if (!$tableCheck['result']) {
+                            $repeatHasError = true;
+                            $repeatComments .= $tableCheck['description'] . " ";
+                        }
+                    }
+                }
+
+                // TODO:
+                // Field validation report is currently emitted before validation of
+                // unexpected components. Review whether field errors should aggregate
+                // descendant structural errors.
+
+                // TODO:
+                // Legacy behaviour:
+                // errors from unexpected child elements are not propagated to parent
+                // Field/Component validation reports.
+                //
+                // Review after complete Validator migration.
+                //
+                $this->validationResult->addValidationReport([
+                    "type"            => "Field",
+                    "location"        => $location,
+                    "name"            => $fieldDef["Name"] . ( ($repeats > 1) ? " (Rep. " . ($repeatIndex + 1) . ")" : ""),
+                    "longName"        => $fieldDef["LongName"],
+                    "usage"           => $fieldDef["Usage"],
+                    "card"            => "[". $fieldDef["Min"] . ".." . $fieldDef["Max"] . "]",
+                    "datatype"        => $fieldDef["Datatype"],
+                    "length"          => $fieldDef["Length"],
+                    "itemNo"          => $fieldDef["Item"],
+                    "table"           => $fieldDef["Table"],
+                    "reference"       => $fieldDef["Chapter"],
+                    "impNote"         => "",
+                    "elementValue"    => $fieldValue,
+                    "elementExists"   => $exists,
+                    "elementError"    => $repeatHasError,
+                    "elementComments" => trim($repeatComments),
+                ]);
+
+
+                // Create field structure
+                $repeatArray = [
+                    "Type"     => "field",
+                    "Name"     => $fieldDef["Name"],
+                    "LocName"  => $location,
+                    "LongName" => $fieldDef["LongName"],
+                    "Datatype" => $fieldDef["Datatype"],
+                    "hasError" => $repeatHasError,
+                    "comments" => trim($repeatComments),
+                    "value"    => $fieldValue,
+                ];
+
+
+
+                // Validate components
+                if (isset($fieldDef["components"])) {
+                    $repeatArray["components"] = [];
+
+                    foreach ($fieldDef['components'] as $i => $componentDef) {
+                        $component = $fieldRepeat->getComponent($i + 1);
+                        $profiledComponent = $this->validateComponent(
+                            $component,
+                            $componentDef,
+                            "{$location}." . ($i + 1)
+                        );
+                        //
+                        // Legacy validator adds the component only when the profiled
+                        // representation is not empty (count($data) > 0).
+                        // Current implementation always returns a profiled component.
+                        //
+                        // TODO:
+                        // Decide whether to preserve this behaviour or always include
+                        // profile-defined components in the profiled message.
+                        if (count($profiledComponent) > 0) {
+                            $repeatArray['components'][$i + 1] = $profiledComponent;
+                        }
+                    }
+
+                    // Check if there are more components in message
+                    if ($fieldRepeat->countComponents() > count($fieldDef["components"])) {
+                        $this->log(
+                            "-Field- There are more components in Field '{$location}'."
+                        );
+                        for ($i = count($fieldDef["components"]); $i < $fieldRepeat->countComponents(); $i++) {
+                            $component = $fieldRepeat->getComponent($i + 1);
+
+                            if ($component === null) {
+                                throw new \LogicException('Unexpected null component.');
+                            }
+
+                            $componentPosition = $i + 1;
+                            $componentLocation = "{$location}.{$componentPosition}";
+
+                            $description = "Component '{$componentLocation}' is not expected in Field '$location' structure.";
+
+                            $notDefinedComponent = $this->createNotDefinedComponent($component, $location, $componentPosition);
+                            $notDefinedComponent["hasError"] = true;
+                            $notDefinedComponent["comments"] = $description;
+                            $repeatArray["components"][$i + 1] = $notDefinedComponent;
+
+                            $this->log(
+                                "-Component- {$componentLocation} :  {$description}"
+                            );
+
+                            $this->validationResult->addTestReport([
+                                'Location'    => $componentLocation,
+                                'Description' => $description,
+                                'Type'        => "Element not expected",
+                                'Result'      => false,
+                            ]);
+
+                            $this->validationResult->addValidationReport([
+                                "type"            => "Component",
+                                "location"        => $componentLocation,
+                                "name"            => "UNKNOWN.{$componentPosition}",
+                                "longName"        => "Not defined component",
+                                "usage"           => "",
+                                "datatype"        => "UNKNOWN",
+                                "length"          => "",
+                                "table"           => "",
+                                "impNote"         => "",
+                                "elementValue"    => $this->serializer->serializeComponent($component, $this->message),
+                                "elementExists"   => true,
+                                "elementError"    => true,
+                                "elementComments" => trim($description),
+                            ]);
+                        }
+                    }
+                } elseif ($fieldRepeat->countComponents() > 1) {
+                    // There is no Component in the profile
+                    // Check if there are more than one Component in message
+                    $this->log(
+                        "-Field- Components are not expected in Field '{$location}' structure."
+                    );
+                    for ($i = 0; $i < $fieldRepeat->countComponents(); $i++) {
+                        $component = $fieldRepeat->getComponent($i + 1);
+
+                        if ($component === null) {
+                            throw new \LogicException('Unexpected null component.');
+                        }
+
+                        $componentPosition = $i + 1;
+                        $componentLocation = "{$location}.{$componentPosition}";
+
+                        $description = "Component '{$componentLocation}' is not expected in Field '$location' structure.";
+
+                        $notDefinedComponent = $this->createNotDefinedComponent($component, $location, $componentPosition);
+                        $notDefinedComponent["hasError"] = true;
+                        $notDefinedComponent["comments"] = $description;
+                        $repeatArray["components"][$i + 1] = $notDefinedComponent;
+
+                        $this->log(
+                            "-Component- {$componentLocation} :  {$description}"
+                        );
+
+                        $this->validationResult->addTestReport([
+                            'Location'    => $componentLocation,
+                            'Description' => $description,
+                            'Type'        => "Element not expected",
+                            'Result'      => false,
+                        ]);
+
+                        $this->validationResult->addValidationReport([
+                            "type"            => "Component",
+                            "location"        => $componentLocation,
+                            "name"            => "UNKNOWN.{$componentPosition}",
+                            "longName"        => "Not defined component",
+                            "usage"           => "",
+                            "datatype"        => "UNKNOWN",
+                            "length"          => "",
+                            "table"           => "",
+                            "impNote"         => "",
+                            "elementValue"    => $this->serializer->serializeComponent($component, $this->message),
+                            "elementExists"   => true,
+                            "elementError"    => true,
+                            "elementComments" => trim($description),
+                        ]);
+                    }
+                }
+
+                $fieldArray[] = $repeatArray;
+            }
+        } else {
+            // Profiled representation rules
+            //
+            // A field is represented in the profiled message only if it is
+            // physically present in the HL7 message.
+            //
+            // Examples
+            //
+            // PD1||U||||||||||N
+            //
+            //     PD1-1 is represented (present, empty)
+            //     PD1-2 is represented (value = U)
+            //     ...
+            //     PD1-12 is represented (value = N)
+            //
+            //     PD1-13 is not represented
+            //     PD1-14 is not represented
+            //     PD1-15 is not represented
+            //
+            // PD1||U||||||||||N|
+            //
+            //     PD1-13 is represented (present, empty)
+            //
+            // PD1||U||||||||||N|||
+            //
+            //     PD1-13 is represented (present, empty)
+            //     PD1-14 is represented (present, empty)
+            //     PD1-15 is represented (present, empty)
+            if ($field !== null && $value === '') {
+                $fieldArray[0] = [
+                    "Type"     => "field",
+                    "Name"     => $fieldDef["Name"],
+                    "LocName"  => $location,
+                    "LongName" => $fieldDef["LongName"],
+                    "Datatype" => $fieldDef["Datatype"],
+                    "hasError" => $hasError,
+                    "comments" => trim($comments),
+                    "value"    => "",
+                ];
+            }
+
+            $this->validationResult->addValidationReport([
+                "type"            => "Field",
+                "location"        => $location,
+                "name"            => $fieldDef["Name"],
+                "longName"        => $fieldDef["LongName"],
+                "usage"           => $fieldDef["Usage"],
+                "card"            => "[". $fieldDef["Min"] . ".." . $fieldDef["Max"] . "]",
+                "datatype"        => $fieldDef["Datatype"],
+                "length"          => $fieldDef["Length"],
+                "itemNo"          => $fieldDef["Item"],
+                "table"           => $fieldDef["Table"],
+                "reference"       => $fieldDef["Chapter"],
+                "impNote"         => "",
+                "elementValue"    => "",
+                "elementExists"   => $exists,
+                "elementError"    => $hasError,
+                "elementComments" => trim($comments),
+            ]);
+        }
+
+        return $fieldArray;
+    }
+
+    /**
      * Validate component.
      *
      * Validates the component against its profile definition,
@@ -594,8 +976,6 @@ class Validator
         return $componentArray;
     }
 
-
-
     /**
      * Validate sub-component.
      *
@@ -735,6 +1115,42 @@ class Validator
     // ---
     // --- Create not defined element functions
     // ---
+
+    /**
+     * Create profiled representation of a component
+     * not defined in the profile.
+     *
+     * @param Component $component
+     * @param string $location
+     * @param int $position
+     *
+     * @return array<string, mixed>
+     */
+    private function createNotDefinedComponent(Component $component, string $location, int $position): array
+    {
+        $profiledComponent = [
+            "Type" => "component",
+            "Name" => "UNKNOWN.$position",
+            "LocName" => "$location.$position",
+            "LongName" => "",
+            "Datatype" => "UNKNOWN",
+            "hasError" => "",
+            "comments" => "",
+            "value" => $this->serializer->serializeComponent($component, $this->message),
+        ];
+
+        if ($component->countSubComponents() > 1) {
+            $profiledSubComponents = [];
+
+            foreach ($component->getSubComponents() as $index => $subComponent) {
+                $profiledSubComponents[$index + 1] = $this->createNotDefinedSubComponent($subComponent, "$location.$position", $index + 1);
+            }
+
+            $profiledComponent["subcomponents"] = $profiledSubComponents;
+        }
+
+        return $profiledComponent;
+    }
 
     /**
      * Create profiled representation of a sub-component
