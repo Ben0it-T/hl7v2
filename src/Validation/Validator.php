@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace HL7v2\Validation;
 
 use HL7v2\Model\Message;
+use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
 use HL7v2\Model\FieldRepeat;
 use HL7v2\Model\Component;
@@ -328,6 +329,120 @@ class Validator
 
 
     /**
+     * Validate segment.
+     *
+     * Validates the segment against its profile definition,
+     * updates validation reports,
+     * and returns the profiled representation of the segment.
+     *
+     * TODO:
+     * Refactor after complete Validator migration.
+     *
+     * @param Segment|null $segment
+     * @param array<string, mixed> $segmentDef
+     * @param string $location
+     *
+     * @return array<string, mixed>
+     */
+    private function validateSegment(?Segment $segment, array $segmentDef, string $location): array
+    {
+        $elementName = $segmentDef["Name"];
+
+        // Create segment structure
+        $segmentArray = [
+            "Type"     => $segmentDef["Type"],
+            "Name"     => $segmentDef["Name"],
+            "LongName" => $segmentDef["LongName"],
+            "hasError" => "",
+            "comments" => "",
+            "fields"   => [],
+        ];
+
+        foreach ($segmentDef['fields'] as $i => $fieldDef) {
+            $field = $segment !== null
+                ? $segment->getField($i + 1)
+                : null;
+
+            $profiledField = $this->validateField(
+                $field,
+                $fieldDef,
+                "{$location}-" . ($i + 1)
+            );
+            //
+            // Legacy validator adds the field only when the profiled
+            // representation is not empty (count($data) > 0).
+            // Current implementation always returns a profiled field.
+            //
+            // TODO:
+            // Decide whether to preserve this behaviour or always include
+            // profile-defined fields in the profiled message.
+            if (count($profiledField) > 0) {
+                $segmentArray['fields'][$i + 1] = $profiledField;
+            }
+        }
+
+        // Check if there are more fields in message Segment
+        if ($segment !== null && $segment->countFields() > count($segmentDef['fields'])) {
+            $this->log(
+                "-Segment- There are more fields in segment '{$elementName}'."
+            );
+
+            for ($i = count($segmentDef["fields"]); $i < $segment->countFields(); $i++) {
+                $field = $segment->getField($i + 1);
+
+                if ($field === null) {
+                    throw new \LogicException('Unexpected null field.');
+                }
+
+                $fieldPosition = $i + 1;
+                $fieldLocation = "{$elementName}-{$fieldPosition}";
+                $description = "Field '{$fieldLocation}' is not expected in segment '$elementName' structure.";
+
+                $notDefinedField = $this->createNotDefinedField($field, $location, $fieldPosition);
+                foreach ($notDefinedField as &$repeat) {
+                    $repeat["hasError"] = true;
+                    $repeat["comments"] = $description;
+                }
+                unset($repeat);
+
+                $segmentArray["fields"][$i + 1] = $notDefinedField;
+
+                $this->log(
+                    "-Field- {$fieldLocation} : {$description} Found {$field->countRepeats()} rep(s)."
+                );
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $fieldLocation,
+                    'Description' => $description,
+                    'Type'        => "Element not expected",
+                    'Result'      => false,
+                ]);
+
+                $this->validationResult->addValidationReport([
+                    "type"            => "Field",
+                    "location"        => $fieldLocation,
+                    "name"            => "{$elementName}.{$fieldPosition}",
+                    "longName"        => "Not defined field",
+                    "usage"           => "",
+                    "card"            => "",
+                    "datatype"        => "UNKNOWN",
+                    "length"          => "",
+                    "itemNo"          => "",
+                    "table"           => "",
+                    "reference"       => "",
+                    "impNote"         => "",
+                    "elementValue"    => $this->serializer->serializeField($field, $this->message),
+                    "elementExists"   => true,
+                    "elementError"    => true,
+                    "elementComments" => trim($description),
+                ]);
+            }
+        }
+
+        return $segmentArray;
+    }
+
+    /**
      * Validate field.
      *
      * Validates the field against its profile definition,
@@ -341,7 +456,7 @@ class Validator
      * @param array<string, mixed> $fieldDef
      * @param string $location
      *
-     * @return list<array<string, mixed>>
+     * @return array<int, array<string, mixed>>
      */
     private function validateField(?Field $field, array $fieldDef, string $location): array
     {
@@ -1115,6 +1230,46 @@ class Validator
     // ---
     // --- Create not defined element functions
     // ---
+
+    /**
+     * Create profiled representation of a field
+     * not defined in the profile.
+     *
+     * @param Field $field
+     * @param string $location
+     * @param int $position
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    private function createNotDefinedField(Field $field, string $location, int $position): array
+    {
+        $profiledField = [];
+
+        foreach ($field->getRepeats() as $index => $repeat) {
+            $profiledField[$index] = [
+                "Type"     => "field",
+                "Name"     => "$location.$position",
+                "LocName"  => "$location-$position",
+                "LongName" => "",
+                "Datatype" => "UNKNOWN",
+                "hasError" => "",
+                "comments" => "",
+                "value"    => $this->serializer->serializeFieldRepeat($repeat, $this->message),
+            ];
+
+            if ($repeat->countComponents() > 1) {
+                $profiledComponents = [];
+
+                foreach ($repeat->getComponents() as $idx => $component) {
+                    $profiledComponents[$idx + 1] = $this->createNotDefinedComponent($component, "{$location}-{$position}", $idx + 1);
+                }
+
+                $profiledField[$index]["components"] = $profiledComponents;
+            }
+        }
+
+        return $profiledField;
+    }
 
     /**
      * Create profiled representation of a component
