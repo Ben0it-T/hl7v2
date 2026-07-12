@@ -347,6 +347,35 @@ class Validator
     // --- Validate functions
     // ---
 
+    /**
+     * Validate a segment that is defined in the profile
+     * but not expected at the current position.
+     *
+     * Validates the segment against its profile definition,
+     * and returns the profiled representation of the segment.
+     *
+     * The resulting profiled representation is flagged as
+     * invalid due to the segment positioning error.
+     *
+     * @param Segment $segment
+     * @param array<string, mixed> $segmentDef
+     * @param string $location
+     *
+     * @return array<string, mixed>
+     */
+    private function validateNotExpectedSegment(Segment $segment, array $segmentDef, string $location): array
+    {
+        $segmentArray = $this->validateSegment(
+            $segment,
+            $segmentDef,
+            $location
+        );
+
+        $segmentArray['hasError'] = true;
+        $segmentArray['comments'] = "Segment '" . $segment->getName() . "' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure.";
+
+        return $segmentArray;
+    }
 
     /**
      * Validate segment.
@@ -1250,6 +1279,40 @@ class Validator
     // ---
     // --- Create not defined element functions
     // ---
+
+    /**
+     * Create profiled representation of a segment
+     * not defined in the profile.
+     *
+     * @param Segment $segment
+     *
+     * @return array<string, mixed>
+     */
+    private function createNotDefinedSegment(Segment $segment): array
+    {
+        $segmentName = $segment->getName();
+
+        $profiledSegment = [
+            "Type"     => "segment",
+            "Name"     => "$segmentName",
+            "LongName" => "not defined segment",
+            "hasError" => true,
+            "comments" => "Segment '{$segmentName}' is not defined in the message profile.",
+            "fields"   => [],
+        ];
+
+
+        for ($fieldPosition = 1; $fieldPosition <= $segment->countFields(); $fieldPosition++) {
+            $field = $segment->getField($fieldPosition);
+
+            if ($field === null) {
+                continue;
+            }
+
+            $profiledSegment['fields'][$fieldPosition] = $this->createNotDefinedField($field, $segmentName, $fieldPosition);
+        }
+        return $profiledSegment;
+    }
 
     /**
      * Create profiled representation of a field
