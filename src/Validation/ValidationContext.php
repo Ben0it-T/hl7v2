@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace HL7v2\Validation;
 
 use HL7v2\Model\Message;
+use HL7v2\Model\Validation\NavigationState;
 
 final class ValidationContext
 {
@@ -62,6 +63,26 @@ final class ValidationContext
     public array $notPresentSegments = [];
 
 
+
+
+    /**
+     * Check whether a group exists in the message, starting from the current message position.
+     *
+     * A group is considered to exist if its first segment appears later in the message.
+     *
+     * @param Message $message
+     * @param string $firstSegmentNameInGroup
+     *
+     * @return bool
+     */
+    public function isGroupExists(Message $message, string $firstSegmentNameInGroup): bool
+    {
+        $messageSegmentNames = $message->getSegmentNames();
+
+        $remainingSegments = array_slice($messageSegmentNames, $this->messageSegmentIndex);
+
+        return in_array($firstSegmentNameInGroup, $remainingSegments, true);
+    }
 
     /**
      * Count group repetitions in message,

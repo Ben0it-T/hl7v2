@@ -348,6 +348,101 @@ class Validator
     // ---
 
     /**
+     * Validates the group against its profile definition.
+     * updates validation reports,
+     * returns the profiled representation of the group.
+     *
+     * This method is primarily a navigation engine
+     * synchronizing Profile and Message structures.
+     *
+     * It is based on five navigation states:
+     * - Group not found
+     * - Segment not defined
+     * - Segment not expected
+     * - Segment appears later
+     * - Segment matched
+     *
+     * @param array<string, mixed> $groupDef
+     * @param string $location
+     *
+     * @return array list<array<string, mixed>>
+     */
+    private function validateGroup(array $groupDef, string $location): array
+    {
+        // ---
+        // Group state
+        // ---
+
+        // Segments defined in the group.
+        $segmentsInGroup = [];
+
+        // First segment names in group hierarchy.
+        $firstSegmentsInGroup = [];
+
+        // Current message segment.
+        $currentSegment = null;
+
+        // Current message segment name.
+        $currentSegmentName = '';
+
+        // Group existence.
+        $isGroupExists = false;
+
+        // Group repetitions.
+        $groupRepetitions = 0;
+
+        // Repeating group flag.
+        $isGroupRepeating = false;
+
+        // Navigation state.
+        $navigationState = null;
+
+
+        // ---
+        // Group validation
+        // ---
+
+        // Usage.
+
+        // Cardinality.
+
+
+        // ---
+        // Navigation state resolution
+        // ---
+
+        // GROUP_NOT_FOUND
+
+        // SEGMENT_NOT_DEFINED
+
+        // SEGMENT_NOT_EXPECTED
+
+        // SEGMENT_APPEARS_LATER
+
+        // SEGMENT_MATCHED
+
+
+        // ---
+        // Group repetitions
+        // ---
+
+        // Parent repeating groups.
+
+        // Current group repetitions.
+
+
+        // ---
+        // Group children
+        // ---
+
+        // Segment.
+
+        // Nested group.
+
+        return [];
+    }
+
+    /**
      * Validate a segment that is defined in the profile
      * but not expected at the current position.
      *
