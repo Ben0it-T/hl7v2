@@ -386,6 +386,8 @@ class Validator
      */
     private function validateGroup(array $groupDef, string $location): array
     {
+        $groupArray = [];
+
         // ---
         // Group state
         // ---
@@ -481,20 +483,191 @@ class Validator
         // Navigation state resolution
         // ---
 
-        // GROUP_NOT_FOUND
+        if (!$isGroupExists) {
+            // The group does not exist in message.
+            $navigationState = NavigationState::GROUP_NOT_FOUND;
 
-        // SEGMENT_NOT_DEFINED
+        } elseif (in_array($currentSegmentName, $this->context->notDefinedSegments, true)) {
+            // The group exists but message segment is not defined.
+            $navigationState = NavigationState::SEGMENT_NOT_DEFINED;
 
-        // SEGMENT_NOT_EXPECTED
+        } elseif ($currentSegmentName !== $firstSegmentNameInGroup && !in_array($currentSegmentName, $this->context->parentGroupFirstSegments, true)) {
+            // The group exists but message segment is not the first segment of the group or of the parent group.
+            $navigationState = NavigationState::SEGMENT_NOT_EXPECTED;
 
-        // SEGMENT_APPEARS_LATER
+        } else {
+            // The group exists and message segment is the first segment of the group or of the parent group.
+            $navigationState = NavigationState::SEGMENT_MATCHED;
+        }
 
-        // SEGMENT_MATCHED
+        $this->log("-Group- Navigation state: {$navigationState->name}");
 
+
+        // ---
+        // Navigation state handling
+        // ---
+
+        switch ($navigationState) {
+
+            case NavigationState::GROUP_NOT_FOUND:
+                // Move on and return.
+                $this->log("-Group- Group '{$groupDef['Name']}' not found in message. Move on.");
+                $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $this->message->getStructure(),
+                    'Description' => $usage['description'],
+                    'Type'        => $usage['type'],
+                    'Result'      => $usage['result'],
+                ]);
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $this->message->getStructure(),
+                    'Description' => $cardinality['description'],
+                    'Type'        => $cardinality['type'],
+                    'Result'      => $cardinality['result'],
+                ]);
+
+                $this->validationResult->addValidationReport([
+                    "type"            => "Group",
+                    "name"            => "---",
+                    "longName"        => "--- {$groupDef["Name"]} begin",
+                    "usage"           => $groupDef["Usage"],
+                    "card"            => "[" . $groupDef["Min"] . ".." . $groupDef["Max"] . "]",
+                    "elementExists"   => $isGroupExists,
+                    "elementError"    => $groupError,
+                    "elementReps"     => $groupRepetitions,
+                    "elementComments" => trim($groupComments),
+                ]);
+
+                $this->validationResult->addValidationReport([
+                    "type"            => "Group",
+                    "name"            => "---",
+                    "longName"        => "--- {$groupDef["Name"]} end",
+                    "usage"           => $groupDef["Usage"],
+                    "card"            => "[" . $groupDef["Min"] . ".." . $groupDef["Max"] . "]",
+                    "elementExists"   => $isGroupExists,
+                    "elementError"    => $groupError,
+                    "elementReps"     => "",
+                    "elementComments" => "",
+                ]);
+
+                // Profile moves on. Message does not move.
+                $this->context->profileSegmentIndex += count($segmentsInGroup);
+
+                return $groupArray;
+
+            case NavigationState::SEGMENT_NOT_DEFINED:
+                // Move back and return.
+                $this->log("-Group- Group '{$groupDef['Name']}' found in message.");
+                $this->log("-Group- Segment '{$currentSegmentName}' is not defined. Move back.");
+                $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
+
+                $segmentRepetitions = $this->message->countSegmentRepetitions($currentSegmentName, $this->context->messageSegmentIndex);
+                $description = "Segment '{$currentSegmentName}' is not defined in the message profile. Found {$segmentRepetitions} time(s).";
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $this->message->getStructure(),
+                    'Description' => $description,
+                    'Type'        => "Structure",
+                    'Result'      => false,
+                ]);
+
+                $this->validationResult->addValidationReport([
+                    "type"            => "Segment",
+                    "name"            => $currentSegmentName,
+                    "longName"        => "Not defined segment",
+                    "usage"           => "",
+                    "card"            => "",
+                    "elementExists"   => true,
+                    "elementError"    => true,
+                    "elementReps"     => $segmentRepetitions,
+                    "elementComments" => $description,
+                ]);
+
+                // Create not defined segments and move message on.
+                for ($i = 0; $i < $segmentRepetitions; $i++) {
+                    $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+
+                    if ($segment === null) {
+                        throw new \LogicException('Expected segment repetition.');
+                    }
+
+                    $groupArray[] = $this->createNotDefinedSegment($segment);
+                    $this->context->messageSegmentIndex++; // Move message on.
+                }
+
+                // Move back.
+                $this->context->moveBack = true;
+
+                return $groupArray;
+
+            case NavigationState::SEGMENT_NOT_EXPECTED:
+                // Move back and return.
+                $this->log("-Group- Group '{$groupDef['Name']}' found in message.");
+                $this->log("-Group- Segment '{$currentSegmentName}' exists in profile but is not expected here. Move back.");
+                $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
+
+                $segmentRepetitions = $this->message->countSegmentRepetitions($currentSegmentName, $this->context->messageSegmentIndex);
+                $segmentDef = $this->profile->findSegmentDefinition($currentSegmentName);
+
+                if ($segmentDef === []) {
+                    throw new \LogicException("Segment definition '{$currentSegmentName}' not found.");
+                }
+
+                $description = "Segment '{$currentSegmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentRepetitions} time(s).";
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $this->message->getStructure(),
+                    'Description' => $description,
+                    'Type'        => "Structure",
+                    'Result'      => false,
+                ]);
+
+                $this->validationResult->addValidationReport([
+                    "type"            => "Segment",
+                    "name"            => $currentSegmentName,
+                    "longName"        => $segmentDef["LongName"],
+                    "usage"           => $segmentDef["Usage"],
+                    "card"            => "[" . $segmentDef["Min"] . ".." . $segmentDef["Max"] . "]",
+                    "elementExists"   => true,
+                    "elementError"    => true,
+                    "elementReps"     => $segmentRepetitions,
+                    "elementComments" => $description,
+                ]);
+
+                // Create not expected segments and move message on.
+                for ($i = 0; $i < $segmentRepetitions; $i++) {
+                    $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+
+                    if ($segment === null) {
+                        throw new \LogicException('Expected segment repetition.');
+                    }
+
+                    $groupArray[] = $this->validateNotExpectedSegment($segment, $segmentDef, $location);
+                    $this->context->messageSegmentIndex++; // Move message on.
+                }
+
+                // Move back.
+                $this->context->moveBack = true;
+
+                return $groupArray;
+
+            case NavigationState::SEGMENT_MATCHED:
+                // Continue validation
+                $this->log("-Group- Group '{$groupDef['Name']}' found in message.");
+
+                break;
+
+            default:
+                throw new \LogicException('Unsupported navigation state.');
+        }
 
         // ---
         // Group repetitions
         // ---
+
+        // SEGMENT_APPEARS_LATER
 
         // Parent repeating groups.
 
