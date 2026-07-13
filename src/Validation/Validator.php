@@ -25,6 +25,7 @@ class Validator
     private bool $debug = false;
 
     private Message $message;
+    private Profile $profile;
     private HL7StringSerializer $serializer;
 
     /**
@@ -80,9 +81,9 @@ class Validator
         $this->hl7Tables = $tables->getTables();
         $this->validationResult = new ValidationResult();
         $this->message = $message;
+        $this->profile = $profile;
 
         $messageSegmentNames = $message->getSegmentNames();
-
         $this->context = new ValidationContext();
         $this->context->profileSegmentNames = $profile->getSegmentNames();
         $this->context->notDefinedSegments = array_values(
@@ -99,7 +100,23 @@ class Validator
             )
         );
 
+        $rootGroupDef = [
+            'Type'     => 'group',
+            'Name'     => $this->message->getStructure(),
+            'Usage'    => 'R',
+            'Min'      => '1',
+            'Max'      => '1',
+            'LongName' => $this->message->getStructure(),
+            'segments' => $this->profile->getDefinition(),
+        ];
+
         $this->log('-Validator- Validation started');
+
+        $this->validateGroup(
+            $rootGroupDef,
+            $this->message->getStructure()
+        );
+
         return $this->validationResult;
     }
 
@@ -365,7 +382,7 @@ class Validator
      * @param array<string, mixed> $groupDef
      * @param string $location
      *
-     * @return array list<array<string, mixed>>
+     * @return list<array<string, mixed>>
      */
     private function validateGroup(array $groupDef, string $location): array
     {
@@ -374,37 +391,90 @@ class Validator
         // ---
 
         // Segments defined in the group.
-        $segmentsInGroup = [];
+        $segmentsInGroup = $this->profile->getSegmentNamesInGroup($groupDef);
 
         // First segment names in group hierarchy.
-        $firstSegmentsInGroup = [];
+        $firstSegmentsInGroup = $this->profile->getFirstSegmentNamesInGroup($groupDef);
+        $firstSegmentNameInGroup = $firstSegmentsInGroup[0];
 
         // Current message segment.
-        $currentSegment = null;
+        $currentSegment = $this->message->getSegment($this->context->messageSegmentIndex);
 
         // Current message segment name.
-        $currentSegmentName = '';
+        $currentSegmentName = $currentSegment?->getName() ?? '';
 
         // Group existence.
-        $isGroupExists = false;
+        $isGroupExists = $this->context->isGroupExists($this->message, $firstSegmentNameInGroup);
 
         // Group repetitions.
-        $groupRepetitions = 0;
+        $groupRepetitions = $groupDef['Name'] === $this->message->getStructure()
+            ? 1
+            : $this->context->countGroupRepetitions($this->message, $firstSegmentNameInGroup, $segmentsInGroup);
+
+        if ($groupRepetitions === 0) {
+            $isGroupExists = false;
+        }
 
         // Repeating group flag.
-        $isGroupRepeating = false;
+        $isGroupRepeating = $groupRepetitions > 1;
+
+        if ($isGroupRepeating) {
+            $this->context->parentGroupFirstSegments[] = $firstSegmentNameInGroup;
+        }
 
         // Navigation state.
+        /** @var NavigationState|null $navigationState */
         $navigationState = null;
+
+        $this->log("-Group- --- Group '{$groupDef["Name"]}' begin.");
+        $this->log("-Group- Group '".$groupDef["Name"]."' " . (($groupDef["Name"] === $this->message->getStructure()) ? "is" : "is not") . " the root group.");
+        $this->log("-Group- First segment name in group: ".$firstSegmentNameInGroup);
+        $this->log("-Group- First segment names in group hierarchy: " . (implode(", ", $firstSegmentsInGroup)));
+        $this->log("-Group- Segments defined in the group: " . (implode(", ", $segmentsInGroup)));
+        $this->log("-Group- Segments in message: " . (implode(", ", $this->message->getSegmentNames())));
+
+        $this->log("-Group- isGroupExists: " . ($isGroupExists ? "true" : "false"));
+        $this->log("-Group- groupRepetitions: $groupRepetitions");
+        $this->log("-Group- isGroupRepeating: " . ($isGroupRepeating ? "true" : "false"));
+
+        $this->log("-Group- First segment names of repeating parent groups: " . (implode(", ", $this->context->parentGroupFirstSegments)));
+        $this->log("-Group- Segment found: {$currentSegmentName} - location: {$this->context->messageSegmentIndex}");
 
 
         // ---
         // Group validation
         // ---
 
+        $groupError = false;
+        $groupComments = '';
+
         // Usage.
+        $usage = $this->checkUsage(
+            $groupDef['Usage'],
+            $isGroupExists,
+            'Group',
+            "'{$groupDef["Name"]}'"
+        );
+
+        if (!$usage['result']) {
+            $groupError = true;
+            $groupComments .= $usage['description'] . " ";
+        }
 
         // Cardinality.
+        $cardinality = $this->checkCardinality(
+            $groupDef['Min'],
+            $groupDef['Max'],
+            $groupRepetitions,
+            $groupDef['Usage'],
+            'Group',
+            "'{$groupDef["Name"]}'"
+        );
+
+        if (!$cardinality['result']) {
+            $groupError = true;
+        }
+        $groupComments .= $cardinality['description'] . " ";
 
 
         // ---
@@ -439,6 +509,8 @@ class Validator
 
         // Nested group.
 
+
+        $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
         return [];
     }
 
@@ -666,8 +738,8 @@ class Validator
 
         if (!$cardinality['result']) {
             $hasError = true;
-            $comments .= $cardinality['description'] . " ";
         }
+        $comments .= $cardinality['description'] . " ";
 
         if ($exists) {
             foreach ($field->getRepeats() as $repeatIndex => $fieldRepeat) {
