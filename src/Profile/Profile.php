@@ -88,7 +88,7 @@ class Profile
      */
     public function getSegmentNamesInGroup(array $segGroup): array
     {
-        return $this->getSegmentNamesInDefinition($segGroup);
+        return $this->getSegmentNamesInDefinition($segGroup['segments']);
     }
 
     /**
