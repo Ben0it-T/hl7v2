@@ -100,6 +100,7 @@ class Validator
             )
         );
 
+        // Create root group
         $rootGroupDef = [
             'Type'     => 'group',
             'Name'     => $this->message->getStructure(),
@@ -112,10 +113,14 @@ class Validator
 
         $this->log('-Validator- Validation started');
 
-        $this->validateGroup(
+        // Validate root group
+        $res = $this->validateGroup(
             $rootGroupDef,
             $this->message->getStructure()
         );
+
+        // Todo : checks for remaining message segments
+
 
         return $this->validationResult;
     }
@@ -367,9 +372,9 @@ class Validator
     /**
      * Validates the group against its profile definition.
      * updates validation reports,
-     * returns the profiled representation of the group.
+     * and returns its profiled representation.
      *
-     * This method is primarily a navigation engine
+     * This method primarily acts as a navigation engine
      * synchronizing Profile and Message structures.
      *
      * It is based on five navigation states:
@@ -657,6 +662,22 @@ class Validator
                 // Continue validation
                 $this->log("-Group- Group '{$groupDef['Name']}' found in message.");
 
+                if ($groupDef["Name"] !== $this->message->getStructure()) {
+                    $this->validationResult->addTestReport([
+                        'Location'    => $this->message->getStructure(),
+                        'Description' => $usage['description'],
+                        'Type'        => $usage['type'],
+                        'Result'      => $usage['result'],
+                    ]);
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $this->message->getStructure(),
+                        'Description' => $cardinality['description'],
+                        'Type'        => $cardinality['type'],
+                        'Result'      => $cardinality['result'],
+                    ]);
+                }
+
                 break;
 
             default:
@@ -667,24 +688,424 @@ class Validator
         // Group repetitions
         // ---
 
-        // SEGMENT_APPEARS_LATER
+        $profileSegmentIndex = $this->context->profileSegmentIndex;
 
-        // Parent repeating groups.
+        // Current group repetitions
 
-        // Current group repetitions.
+        for ($groupRep = 1; $groupRep <= $groupRepetitions; $groupRep++) {
+            $this->context->profileSegmentIndex = $profileSegmentIndex;
+
+            $this->log("-Group- group '{$groupDef['Name']}' rep $groupRep/$groupRepetitions");
+            if ($groupDef["Name"] !== $this->message->getStructure()) {
+                $this->validationResult->addValidationReport([
+                    "type"            => "Group",
+                    "name"            => "---",
+                    "longName"        => "--- {$groupDef["Name"]} begin" . (($groupRepetitions > 1) ? " (Rep. $groupRep/$groupRepetitions)" : ""),
+                    "usage"           => $groupDef["Usage"],
+                    "card"            => "[" . $groupDef["Min"] . ".." . $groupDef["Max"] . "]",
+                    "elementExists"   => $isGroupExists,
+                    "elementError"    => $groupError,
+                    "elementReps"     => $groupRepetitions,
+                    "elementComments" => trim($groupComments),
+                ]);
+            }
+
+            // Create group structure
+            $group = [
+                "Type"     => $groupDef["Type"],
+                "Name"     => $groupDef["Name"],
+                "LongName" => $groupDef["LongName"],
+                "segments" => [],
+            ];
+
+            // ---
+            // Group children
+            // ---
+
+            $childCount = count($groupDef['segments']);
+
+            for ($childIndex = 0; $childIndex < $childCount; $childIndex++) {
+
+                $childDef = $groupDef['segments'][$childIndex];
+
+                if ($childDef['Type'] === 'segment') {
+
+                    // Segment.
+                    $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+                    $segmentName = $segment?->getName() ?? '';
+                    $this->log("-Segment- Profile segment: {$childDef["Name"]} (location: {$this->context->profileSegmentIndex}). Message segment: {$segmentName} (location: {$this->context->messageSegmentIndex})");
+
+                    if ($childDef["Name"] === $segmentName) {
+                        // SEGMENT_MATCHED
+                        $this->log("-Segment- >> Profile segment found. Validate '{$segmentName}' segment. Move on");
+
+                        $segmentComments = "";
+                        $segmentError = false;
+                        $segmentReps = 1;
+
+                        // if segment is not the first segment of the group
+                        if ($childIndex > 0) {
+                            $segmentReps = $this->message->countSegmentRepetitions($segmentName, $this->context->messageSegmentIndex);
+                        }
+
+                        // check usage
+                        $segmentUsage = $this->checkUsage(
+                            $childDef['Usage'],
+                            true,
+                            'Segment',
+                            "'{$childDef["Name"]}'"
+                        );
+
+                        if (!$segmentUsage['result']) {
+                            $segmentError = true;
+                            $segmentComments .= $segmentUsage['description'] . " ";
+                        }
+
+                        // check cardinality
+                        $segmentCardinality = $this->checkCardinality(
+                            $childDef['Min'],
+                            $childDef['Max'],
+                            $segmentReps,
+                            $childDef['Usage'],
+                            'Segment',
+                             "'{$childDef["Name"]}'"
+                        );
+
+                        if (!$segmentCardinality['result']) {
+                            $segmentError = true;
+                        }
+                        $segmentComments .= $segmentCardinality['description'] . " ";
+
+
+                        // addTestReport
+                        $this->validationResult->addTestReport([
+                            'Location'    => $this->message->getStructure(),
+                            'Description' => $segmentUsage['description'],
+                            'Type'        => $segmentUsage['type'],
+                            'Result'      => $segmentUsage['result'],
+                        ]);
+
+                        $this->validationResult->addTestReport([
+                            'Location'    => $this->message->getStructure(),
+                            'Description' => $segmentCardinality['description'],
+                            'Type'        => $segmentCardinality['type'],
+                            'Result'      => $segmentCardinality['result'],
+                        ]);
+
+                        // addValidationReport
+                        $this->validationResult->addValidationReport([
+                            "type"            => "Segment",
+                            "name"            => $childDef["Name"],
+                            "longName"        => $childDef["LongName"],
+                            "usage"           => $childDef["Usage"],
+                            "card"            => "[" . $childDef["Min"] . ".." . $childDef["Max"] . "]",
+                            "elementExists"   => true,
+                            "elementError"    => $segmentError,
+                            "elementReps"     => $segmentReps,
+                            "elementComments" => trim($segmentComments),
+                        ]);
+
+                        // Validate segment
+                        for ($cnt = 0; $cnt < $segmentReps; $cnt++) {
+                            $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+
+                            if ($segment === null) {
+                                throw new \LogicException('Expected segment repetition.');
+                            }
+
+                            $segmentArray = $this->validateSegment($segment, $childDef, $childDef["Name"]);
+                            $segmentArray["hasError"] = $segmentError;
+                            $segmentArray["comments"] = trim($segmentComments);
+                            $group["segments"][] = $segmentArray;
+                            $this->context->messageSegmentIndex++; // Message: Move on
+                        }
+
+                        // Profile: Move On.
+                        $this->context->profileSegmentIndex++;
+
+                    } else {
+                        $this->log("-Segment- >> Profile segment not found.");
+                        $segmentComments = "";
+                        $segmentError = false;
+
+                        // check usage
+                        $segmentUsage = $this->checkUsage(
+                            $childDef['Usage'],
+                            false,
+                            'Segment',
+                            "'{$childDef["Name"]}'"
+                        );
+
+                        if (!$segmentUsage['result']) {
+                            $segmentError = true;
+                            $segmentComments .= $segmentUsage['description'] . " ";
+                        }
+
+                        // check cardinality
+                        $segmentCardinality = $this->checkCardinality(
+                            $childDef['Min'],
+                            $childDef['Max'],
+                            0,
+                            $childDef['Usage'],
+                            'Segment',
+                             "'{$childDef["Name"]}'"
+                        );
+
+                        if (!$segmentCardinality['result']) {
+                            $segmentError = true;
+                        }
+                        $segmentComments .= $segmentCardinality['description'] . " ";
+
+                        if (in_array($childDef["Name"], $this->context->notPresentSegments, true)) {
+                            // Case 1: profile segment name is not present in message. Move On.
+                            $this->log("-Segment- >> profile segment '{$childDef["Name"]}' is not present in message (Case 1). Move on.");
+
+                            $this->validationResult->addTestReport([
+                                'Location'    => $this->message->getStructure(),
+                                'Description' => $segmentUsage['description'],
+                                'Type'        => $segmentUsage['type'],
+                                'Result'      => $segmentUsage['result'],
+                            ]);
+
+                            $this->validationResult->addTestReport([
+                                'Location'    => $this->message->getStructure(),
+                                'Description' => $segmentCardinality['description'],
+                                'Type'        => $segmentCardinality['type'],
+                                'Result'      => $segmentCardinality['result'],
+                            ]);
+
+                            $this->validationResult->addValidationReport([
+                                "type"            => "Segment",
+                                "name"            => $childDef["Name"],
+                                "longName"        => $childDef["LongName"],
+                                "usage"           => $childDef["Usage"],
+                                "card"            => "[" . $childDef["Min"] . ".." . $childDef["Max"] . "]",
+                                "elementExists"   => true,
+                                "elementError"    => $segmentError,
+                                "elementReps"     => 0,
+                                "elementComments" => trim($segmentComments),
+                            ]);
+
+                            // Profile: Move On.
+                            $this->context->profileSegmentIndex++;
+
+                        } elseif (in_array($segmentName, $this->context->notDefinedSegments, true)) {
+                            // Case 2: message segment is not defined. Message: move on. Profile: move back.
+                            $this->log("-Segment- >> message segment '{$segmentName}' is not defined (Case 2). Move back.");
+                            $segmentReps = $this->message->countSegmentRepetitions($segmentName, $this->context->messageSegmentIndex);
+                            $description = "Segment '{$segmentName}' is not defined in the message profile. Found {$segmentReps} time(s).";
+
+                            $this->validationResult->addTestReport([
+                                'Location'    => $this->message->getStructure(),
+                                'Description' => $description,
+                                'Type'        => "Structure",
+                                'Result'      => false,
+                            ]);
+
+                            $this->validationResult->addValidationReport([
+                                "type"            => "Segment",
+                                "name"            => $segmentName,
+                                "longName"        => "Not defined segment",
+                                "usage"           => "",
+                                "card"            => "",
+                                "elementExists"   => true,
+                                "elementError"    => true,
+                                "elementReps"     => $segmentReps,
+                                "elementComments" => trim($description),
+                            ]);
+
+                            for ($cnt = 0; $cnt < $segmentReps; $cnt++) {
+                                $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+
+                                if ($segment === null) {
+                                    throw new \LogicException('Expected segment repetition.');
+                                }
+
+                                $group["segments"][] = $this->createNotDefinedSegment($segment);
+                                $this->context->messageSegmentIndex++; // Message: Move on
+                            }
+
+                            // Move back.
+                            $this->context->moveBack = true;
+
+                        } else {
+                            // Case 3: message segment exists in profile but is not expected here
+                            $this->log("-Segment- >> message '{$segmentName}' segment exists in profile but is not expected here (Case 3).");
+
+                            $nextSegmentsOfTheGroup = array_slice($segmentsInGroup, $childIndex + 1);
+                            $this->log("-Segment- >> next segments in group: " . (implode(", ", $nextSegmentsOfTheGroup)));
+
+                            if (in_array($segmentName, $nextSegmentsOfTheGroup, true)) {
+                                // a. message segment name appears later in the group. Move on.
+                                $case = NavigationState::SEGMENT_APPEARS_LATER;
+                                $this->log("-Segment- >> message '{$segmentName}' segment appears later in the group (a). Move on.");
+
+                            } elseif (in_array($segmentName, $segmentsInGroup, true) && !$isGroupRepeating) {
+                                // b. message segment name is in the group but is not expected here. Move back.
+                                $case = NavigationState::SEGMENT_NOT_EXPECTED;
+                                $this->log("-Segment- >> message '{$segmentName}' segment is in the group but is not expected here (b). Move back.");
+
+                            } elseif (in_array($segmentName, $segmentsInGroup, true)) {
+                                // c. message segment name appears later in a repetition of the group. Move on.
+                                $case = NavigationState::SEGMENT_APPEARS_LATER;
+                                $this->log("-Segment- >> message '{$segmentName}' segment appears later in a repetition of the group (c). Move on.");
+
+                            } elseif (in_array($segmentName, $this->context->parentGroupFirstSegments, true)) {
+                                // d. message segment name appears in a repetition of the parent group. Move on.
+                                $case = NavigationState::SEGMENT_APPEARS_LATER;
+                                $this->log("-Segment- >> message '{$segmentName}' segment appears in a repetition of the parent group (d). Move on.");
+
+                            } elseif ($this->context->isSegmentLaterInProfileStructure($segmentName)) {
+                                // e. message segment name appears later in the profile. Move on.
+                                $case = NavigationState::SEGMENT_APPEARS_LATER;
+                                $this->log("-Segment- >> message '{$segmentName}' segment appears later in the profile (e). Move on.");
+
+                            } elseif ($segmentName != "") {
+                                // f. segment exists in profile but is not expected here
+                                $case = NavigationState::SEGMENT_NOT_EXPECTED;
+                                $this->log("-Segment- >> message '{$segmentName}' segment exists in profile but is not expected here (f). Move back.");
+
+                            } else {
+                                // g. end of message
+                                $case = NavigationState::SEGMENT_APPEARS_LATER;
+                                $this->log("-Segment- >> End of msgParse (g). childIndex: {$childIndex}. Profile segment index: {$this->context->profileSegmentIndex}. Segment name: '$segmentName' ({$this->context->messageSegmentIndex}). Move on.");
+
+                            }
+
+                            switch ($case) {
+
+                                case NavigationState::SEGMENT_APPEARS_LATER:
+                                    // Message: doesn't move. Profile: move on.
+                                    $this->validationResult->addTestReport([
+                                        'Location'    => $this->message->getStructure(),
+                                        'Description' => $segmentUsage['description'],
+                                        'Type'        => $segmentUsage['type'],
+                                        'Result'      => $segmentUsage['result'],
+                                    ]);
+
+                                    $this->validationResult->addTestReport([
+                                        'Location'    => $this->message->getStructure(),
+                                        'Description' => $segmentCardinality['description'],
+                                        'Type'        => $segmentCardinality['type'],
+                                        'Result'      => $segmentCardinality['result'],
+                                    ]);
+
+                                    $this->validationResult->addValidationReport([
+                                        "type"            => "Segment",
+                                        "name"            => $childDef["Name"],
+                                        "longName"        => $childDef["LongName"],
+                                        "usage"           => $childDef["Usage"],
+                                        "card"            => "[" . $childDef["Min"] . ".." . $childDef["Max"] . "]",
+                                        "elementExists"   => false,
+                                        "elementError"    => $segmentError,
+                                        "elementReps"     => 0,
+                                        "elementComments" => trim($segmentComments),
+                                    ]);
+
+                                    // Profile: Move On.
+                                    $this->context->profileSegmentIndex++;
+
+                                    break;
+
+                                case NavigationState::SEGMENT_NOT_EXPECTED:
+                                    // Message: move on. Profile: move back.
+
+                                    $segmentReps = $this->message->countSegmentRepetitions($segmentName, $this->context->messageSegmentIndex);
+                                    $segmentDef  = $this->profile->findSegmentDefinition($segmentName);
+
+                                    if ($segmentDef === []) {
+                                        throw new \LogicException("Segment definition '{$segmentName}' not found.");
+                                    }
+
+                                    $description = "Segment '{$segmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentReps} time(s).";
+
+                                    $this->validationResult->addTestReport([
+                                        'Location'    => $this->message->getStructure(),
+                                        'Description' => $description,
+                                        'Type'        => "Structure",
+                                        'Result'      => false,
+                                    ]);
+
+                                    $this->validationResult->addValidationReport([
+                                        "type"            => "Segment",
+                                        "name"            => $segmentName,
+                                        "longName"        => $segmentDef["LongName"],
+                                        "usage"           => $segmentDef["Usage"],
+                                        "card"            => "[" . $segmentDef["Min"] . ".." . $segmentDef["Max"] . "]",
+                                        "elementExists"   => true,
+                                        "elementError"    => true,
+                                        "elementReps"     => $segmentReps,
+                                        "elementComments" => trim($description),
+                                    ]);
+
+                                    for ($cnt = 0; $cnt < $segmentReps; $cnt++) {
+                                        $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+
+                                        if ($segment === null) {
+                                            throw new \LogicException('Expected segment repetition.');
+                                        }
+
+                                        $group["segments"][] = $this->validateNotExpectedSegment($segment, $segmentDef, $location);
+                                        $this->context->messageSegmentIndex++; // Message: Move on
+                                    }
+
+                                    // Move back.
+                                    $this->context->moveBack = true;
+
+                                    break;
+                            }
+
+                        }
+                    }
+
+                } elseif ($childDef['Type'] === 'group') {
+
+                    // Nested group.
+
+                    $data = $this->validateGroup($childDef, $location);
+                    foreach ($data as $occurrence) {
+                        $group["segments"][] = $occurrence;
+                    }
+
+                }
+
+                // Move back - Reprocess current profile child.
+                if ($this->context->moveBack) {
+                    $childIndex--;
+                    $this->context->moveBack = false;
+                }
+            }
+
+
+            $groupArray[] = $group;
+
+            if ($groupDef["Name"] !== $this->message->getStructure()) {
+                $this->validationResult->addValidationReport([
+                    "type"            => "Group",
+                    "name"            => "---",
+                    "longName"        => "--- {$groupDef["Name"]} end",
+                    "usage"           => "",
+                    "card"            => "",
+                    "elementExists"   => $isGroupExists,
+                    "elementError"    => $groupError,
+                    "elementReps"     => "",
+                    "elementComments" => "",
+                ]);
+            }
+        }
 
 
         // ---
-        // Group children
+        // Group repetitions cleanup
         // ---
 
-        // Segment.
-
-        // Nested group.
+        if ($isGroupRepeating) {
+            array_pop($this->context->parentGroupFirstSegments);
+        }
 
 
         $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
-        return [];
+        return $groupArray;
     }
 
     /**
