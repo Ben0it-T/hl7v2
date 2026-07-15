@@ -118,4 +118,25 @@ class ValidationResult
         return $this->errorCount;
     }
 
+
+    /**
+     * Check if message has errors according to profile.
+     *
+     * @return bool
+     */
+    public function hasErrors(): bool
+    {
+        return $this->errorCount > 0;
+    }
+
+    /**
+     * Check if message is valid according to profile.
+     *
+     * @return bool
+     */
+    public function isValid(): bool
+    {
+        return !$this->hasErrors();
+    }
+
 }

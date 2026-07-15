@@ -39,6 +39,15 @@ class Validator
     private ValidationContext $context;
     private ValidationResult $validationResult;
 
+    /**
+     * Profiled message representation
+     * Legacy equivalent of msgData.
+     *
+     * @var array<string, mixed>
+     */
+    private array $profiledMessage = [];
+
+
     public function __construct(?LoggerInterface $logger = null)
     {
         $this->logger = $logger;
@@ -68,6 +77,17 @@ class Validator
     }
 
     /**
+     * Get profiled message.
+     *
+     * @return array<string, mixed>
+     */
+    public function getProfiledMessage(): array
+    {
+        return $this->profiledMessage;
+    }
+
+
+    /**
      * Validate HL7 message against profile.
      *
      * @param Message $message
@@ -78,10 +98,13 @@ class Validator
      */
     public function validate(Message $message, Profile $profile, HL7Tables $tables): ValidationResult
     {
-        $this->hl7Tables = $tables->getTables();
-        $this->validationResult = new ValidationResult();
-        $this->message = $message;
         $this->profile = $profile;
+        $this->hl7Tables = $tables->getTables();
+
+        $this->validationResult = new ValidationResult();
+        $this->profiledMessage = [];
+
+        $this->message = $message;
 
         $messageSegmentNames = $message->getSegmentNames();
         $this->context = new ValidationContext();
@@ -114,10 +137,19 @@ class Validator
         $this->log('-Validator- Validation started');
 
         // Validate root group
-        $res = $this->validateGroup(
+        $profiledMessage = $this->validateGroup(
             $rootGroupDef,
             $this->message->getStructure()
         );
+
+
+        if (!isset($profiledMessage[0])) {
+            throw new \LogicException(
+                'Expected root profiled message.'
+            );
+        }
+
+        $this->profiledMessage = $profiledMessage[0];
 
         // Todo : checks for remaining message segments
 
