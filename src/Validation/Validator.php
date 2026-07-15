@@ -40,7 +40,7 @@ class Validator
     private ValidationResult $validationResult;
 
     /**
-     * Profiled message representation
+     * Profiled message representation.
      * Legacy equivalent of msgData.
      *
      * @var array<string, mixed>
@@ -123,7 +123,7 @@ class Validator
             )
         );
 
-        // Create root group
+        // Create root group definition.
         $rootGroupDef = [
             'Type'     => 'group',
             'Name'     => $this->message->getStructure(),
@@ -134,14 +134,18 @@ class Validator
             'segments' => $this->profile->getDefinition(),
         ];
 
-        $this->log('-Validator- Validation started');
+        $this->log("-Validator- Validation begin.");
+
+        $this->log("-Validator- Segment names in profile: " . implode(", ", $this->context->profileSegmentNames));
+        $this->log("-Validator- Segment names in message: " . implode(", ", $messageSegmentNames));
+        $this->log("-Validator- Not defined segments: " . implode(", ", $this->context->notDefinedSegments));
+        $this->log("-Validator- Not present segments: " . implode(", ", $this->context->notPresentSegments));
 
         // Validate root group
         $profiledMessage = $this->validateGroup(
             $rootGroupDef,
             $this->message->getStructure()
         );
-
 
         if (!isset($profiledMessage[0])) {
             throw new \LogicException(
@@ -151,8 +155,89 @@ class Validator
 
         $this->profiledMessage = $profiledMessage[0];
 
-        // Todo : checks for remaining message segments
+        // Process remaining message segments
+        if ($this->context->messageSegmentIndex < $this->message->countSegments()) {
+            $this->log("-Validator- There are remaining message segments.");
 
+            while ($this->context->messageSegmentIndex < $this->message->countSegments()) {
+                // Current message segment.
+                $segment = $this->message->getSegment($this->context->messageSegmentIndex);
+
+                // Current message segment name.
+                if ($segment === null) {
+                    throw new \LogicException('Expected segment.');
+                }
+
+                $segmentName = $segment->getName();
+
+                if (in_array($segmentName, $this->context->notDefinedSegments, true)) {
+                    // not defined segment
+                    $description = "Segment '{$segmentName}' is not defined in the message profile.";
+                    $this->log("-Segment- >> message '{$segmentName}' segment is not defined.");
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $this->message->getStructure(),
+                        'Description' => $description,
+                        'Type'        => "Structure",
+                        'Result'      => false,
+                    ]);
+
+                    $this->validationResult->addValidationReport([
+                        "type"            => "Segment",
+                        "name"            => $segmentName,
+                        "longName"        => "Not defined segment",
+                        "usage"           => "",
+                        "card"            => "",
+                        "elementExists"   => true,
+                        "elementError"    => true,
+                        "elementReps"     => 1,
+                        "elementComments" => $description,
+                    ]);
+
+                    $this->profiledMessage["segments"][] = $this->createNotDefinedSegment($segment);
+
+                } else {
+                    // segment is not expected here
+                    $segmentDef = $this->profile->findSegmentDefinition($segmentName);
+
+                    if ($segmentDef === []) {
+                        throw new \LogicException(
+                            "Segment definition '{$segmentName}' not found."
+                        );
+                    }
+
+                    $description = "Segment '{$segmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure.";
+                    $this->log("-Segment- >> message '{$segmentName}' segment is not expected here.");
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $this->message->getStructure(),
+                        'Description' => $description,
+                        'Type'        => "Structure",
+                        'Result'      => false,
+                    ]);
+
+                    $this->validationResult->addValidationReport([
+                        "type"            => "Segment",
+                        "name"            => $segmentName,
+                        "longName"        => $segmentDef["LongName"],
+                        "usage"           => $segmentDef["Usage"],
+                        "card"            => "[" . $segmentDef["Min"] . ".." . $segmentDef["Max"] . "]",
+                        "elementExists"   => true,
+                        "elementError"    => true,
+                        "elementReps"     => 1,
+                        "elementComments" => $description,
+                    ]);
+
+                    $this->profiledMessage["segments"][] = $this->validateNotExpectedSegment($segment, $segmentDef, $this->message->getStructure());
+
+                }
+
+                $this->context->messageSegmentIndex++;
+
+            }
+        }
+
+        $this->log("-Validator- Validation end.");
 
         return $this->validationResult;
     }
