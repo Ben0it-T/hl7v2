@@ -81,14 +81,6 @@ class ValidationResult
     }
 
     /**
-     * Increment validation error counter.
-     */
-    public function incrementErrorCount(): void
-    {
-        $this->errorCount++;
-    }
-
-    /**
      * Get test report.
      *
      * @return array<int, array<string, mixed>>
@@ -117,7 +109,6 @@ class ValidationResult
     {
         return $this->errorCount;
     }
-
 
     /**
      * Check if message has errors according to profile.
