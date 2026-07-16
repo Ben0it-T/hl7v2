@@ -21,12 +21,15 @@ use Psr\Log\LoggerInterface;
 
 class Validator
 {
-
     private bool $debug = false;
+
+    private ?LoggerInterface $logger = null;
+    private HL7StringSerializer $serializer;
 
     private Message $message;
     private Profile $profile;
-    private HL7StringSerializer $serializer;
+    private ValidationContext $context;
+    private ValidationResult $validationResult;
 
     /**
      * HL7 tables indexed by table number.
@@ -34,10 +37,6 @@ class Validator
      * @var array<string, mixed>
      */
     private array $hl7Tables = [];
-
-    private ?LoggerInterface $logger = null;
-    private ValidationContext $context;
-    private ValidationResult $validationResult;
 
     /**
      * Profiled message representation.
