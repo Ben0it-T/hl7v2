@@ -69,13 +69,7 @@ class HL7StructuralXmlSerializer
         $parent->appendChild($segmentElement);
 
         foreach ($segment->getFields() as $fieldIndex => $field) {
-            $this->appendField(
-                $dom,
-                $segmentElement,
-                $segment->getName(),
-                $fieldIndex + 1,
-                $field
-            );
+            $this->appendField($dom, $segmentElement, $segment->getName(), $fieldIndex + 1, $field);
         }
     }
 
@@ -218,7 +212,8 @@ class HL7StructuralXmlSerializer
      *
      * @return void
      */
-    private function appendSubComponent(\DOMDocument $dom, \DOMElement $parent, string $componentName, int $subComponentPosition, SubComponent $subComponent): void {
+    private function appendSubComponent(\DOMDocument $dom, \DOMElement $parent, string $componentName, int $subComponentPosition, SubComponent $subComponent): void
+    {
         $subComponentName = sprintf('%s.%d', $componentName, $subComponentPosition);
         $subComponentElement = $dom->createElement($subComponentName);
 
