@@ -10,6 +10,7 @@ use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 use HL7v2\Profile\ProfileLoader;
 use HL7v2\Profile\HL7TableLoader;
+use HL7v2\Serializer\HL7StructuralXmlSerializer;
 use HL7v2\Validation\Validator;
 use HL7v2\Validation\ValidationResult;
 
@@ -131,6 +132,28 @@ class HL7Message
     }
 
     /**
+     * Convert parsed message to structural XML.
+     *
+     * @param bool $includeNamespace
+     *
+     * @return string
+     *
+     * @throws HL7Exception If no message has been parsed.
+     */
+    public function toStructuralXml(bool $includeNamespace = true): string
+    {
+        if ($this->message === null) {
+            throw new HL7Exception(
+                'No message parsed.'
+            );
+        }
+
+        $serializer = new HL7StructuralXmlSerializer();
+
+        return $serializer->serialize($this->message, $includeNamespace);
+    }
+
+    /**
      * Get message
      *
      * @return Message|null
@@ -160,4 +183,5 @@ class HL7Message
     {
         return $this->validationResult;
     }
+
 }
