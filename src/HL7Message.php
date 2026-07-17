@@ -11,6 +11,7 @@ use HL7v2\Profile\HL7Tables;
 use HL7v2\Profile\ProfileLoader;
 use HL7v2\Profile\HL7TableLoader;
 use HL7v2\Serializer\HL7DatatypeXmlSerializer;
+use HL7v2\Serializer\HL7StringSerializer;
 use HL7v2\Serializer\HL7StructuralXmlSerializer;
 use HL7v2\Validation\Validator;
 use HL7v2\Validation\ValidationResult;
@@ -161,7 +162,7 @@ class HL7Message
      *
      * @return string
      *
-     * @throws HL7Exception If no message has been parsed.
+     * @throws HL7Exception If the message has not been validated.
      */
     public function toDatatypeXml(bool $includeNamespace = true): string
     {
@@ -176,6 +177,37 @@ class HL7Message
         return $serializer->serialize($this->profiledMessage, $includeNamespace);
     }
 
+    /**
+     * Convert parsed message to HL7 string representation.
+     *
+     * @return string
+     *
+     * @throws HL7Exception If no message has been parsed.
+     */
+    public function toHl7(): string
+    {
+        if ($this->message === null) {
+            throw new HL7Exception(
+                'No message parsed.'
+            );
+        }
+
+        $serializer = new HL7StringSerializer();
+
+        return $serializer->serialize($this->message);
+    }
+
+    /**
+     * Alias of toHl7().
+     *
+     * @return string
+     *
+     * @throws HL7Exception If no message has been parsed.
+     */
+    public function toString(): string
+    {
+        return $this->toHl7();
+    }
 
     /**
      * Get message
