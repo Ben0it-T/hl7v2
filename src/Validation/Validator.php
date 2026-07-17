@@ -1389,7 +1389,7 @@ class Validator
         $value = $field !== null
             ? $this->serializer->serializeField($field, $this->message)
             : '';
-        $repeats = $field !== null
+        $repeats = $field !== null && $value !== ''
             ? $field->countRepeats()
             : 0;
         $exists = (
