@@ -97,7 +97,7 @@ class HL7StructuralXmlSerializer
         $fieldName = sprintf('%s.%d', $segmentName, $fieldPosition);
 
         // MSH-1 and MSH-2
-        if ($segmentName === 'MSH' && ($fieldPosition === 1 || $fieldPosition === 2)) {
+        if ($fieldName === 'MSH.1' || $fieldName === 'MSH.2') {
             $fieldElement = $dom->createElement($fieldName);
 
             $repeat = $field->getRepeat(0);
