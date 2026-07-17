@@ -1570,7 +1570,6 @@ class Validator
                         //
                         // Legacy validator adds the component only when the profiled
                         // representation is not empty (count($data) > 0).
-                        // Current implementation always returns a profiled component.
                         //
                         // TODO:
                         // Decide whether to preserve this behaviour or always include
@@ -1897,12 +1896,21 @@ class Validator
 
                 foreach ($componentDef['components'] as $i => $subComponentDef) {
                     $subComponent = $component->getSubComponent($i + 1);
-
-                    $componentArray['subcomponents'][$i + 1] = $this->validateSubComponent(
+                    $profiledSubComponent = $this->validateSubComponent(
                         $subComponent,
                         $subComponentDef,
                         "{$location}." . ($i + 1)
                     );
+                    //
+                    // Legacy validator adds the sub-component only when the profiled
+                    // representation is not empty (count($data) > 0).
+                    //
+                    // TODO:
+                    // Decide whether to preserve this behaviour or always include
+                    // profile-defined sub-components in the profiled message.
+                    if (count($profiledSubComponent) > 0) {
+                        $componentArray['subcomponents'][$i + 1] = $profiledSubComponent;
+                    }
                 }
 
                 // Check if there are more subComponent in message - Element not expected
@@ -2014,7 +2022,7 @@ class Validator
 
         }
 
-        return $componentArray;
+        return $component !== null ? $componentArray : [];
     }
 
     /**
@@ -2149,7 +2157,7 @@ class Validator
             "value"    => $value,
         ];
 
-        return $subComponentArray;
+        return $subComponent !== null ? $subComponentArray : [];
     }
 
 
