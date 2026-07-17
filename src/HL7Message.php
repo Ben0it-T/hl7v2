@@ -10,6 +10,7 @@ use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 use HL7v2\Profile\ProfileLoader;
 use HL7v2\Profile\HL7TableLoader;
+use HL7v2\Serializer\HL7DatatypeXmlSerializer;
 use HL7v2\Serializer\HL7StructuralXmlSerializer;
 use HL7v2\Validation\Validator;
 use HL7v2\Validation\ValidationResult;
@@ -152,6 +153,29 @@ class HL7Message
 
         return $serializer->serialize($this->message, $includeNamespace);
     }
+
+    /**
+     * Convert profiled message to HL7 datatype-aware XML representation.
+     *
+     * @param bool $includeNamespace Export HL7 XML namespace.
+     *
+     * @return string
+     *
+     * @throws HL7Exception If no message has been parsed.
+     */
+    public function toDatatypeXml(bool $includeNamespace = true): string
+    {
+        if ($this->profiledMessage === []) {
+            throw new HL7Exception(
+                'No profiled message available. Validate the message first.'
+            );
+        }
+
+        $serializer = new HL7DatatypeXmlSerializer();
+
+        return $serializer->serialize($this->profiledMessage, $includeNamespace);
+    }
+
 
     /**
      * Get message
