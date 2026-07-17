@@ -154,8 +154,7 @@ class HL7StructuralXmlSerializer
     /**
      * Append component XML node.
      *
-     * Present empty components are exported.
-     * Absent components are not exported.
+     * Empty components are not exported.
      *
      * @param \DOMDocument $dom
      * @param \DOMElement $parent
@@ -178,7 +177,7 @@ class HL7StructuralXmlSerializer
         $componentElement = $dom->createElement($componentName);
         $parent->appendChild($componentElement);
 
-        // Case 1 : simple component
+        // Simple component
         if (count($subComponents) === 1) {
             $value = $subComponents[0]->getValue();
             if ($value !== '') {
@@ -188,7 +187,7 @@ class HL7StructuralXmlSerializer
             return;
         }
 
-        // Case 2 : composite component
+        // Composite component
         $hasValue = false;
         foreach ($subComponents as $subComponent) {
             if ($subComponent->getValue() !== '') {
@@ -209,8 +208,7 @@ class HL7StructuralXmlSerializer
     /**
      * Append sub-component XML node.
      *
-     * Present empty elements are exported.
-     * Absent elements are not exported.
+     * Empty sub-components are not exported.
      *
      * @param \DOMDocument $dom
      * @param \DOMElement $parent
