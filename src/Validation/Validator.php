@@ -1510,19 +1510,15 @@ class Validator
                     }
                 }
 
-                // TODO:
-                // Field validation report is currently emitted before validation of
-                // unexpected components. Review whether field errors should aggregate
-                // descendant structural errors.
-
-                // TODO:
-                // Legacy behaviour:
-                // errors from unexpected child elements are not propagated to parent
-                // Field/Component validation reports.
                 //
-                // Review after complete Validator migration.
+                // Legacy validator did not propagate errors from unexpected child
+                // elements to parent Field validation reports.
                 //
-                $this->validationResult->addValidationReport([
+                // The refactored validator updates the field validation report after
+                // child validation so that structural errors detected on unexpected
+                // components are also reflected on the parent field.
+                //
+                $reportIndex = $this->validationResult->addValidationReport([
                     "type"            => "Field",
                     "location"        => $location,
                     "name"            => $fieldDef["Name"] . ( ($repeats > 1) ? " (Rep. " . ($repeatIndex + 1) . ")" : ""),
@@ -1541,7 +1537,6 @@ class Validator
                     "elementComments" => trim($repeatComments),
                 ]);
 
-
                 // Create field structure
                 $repeatArray = [
                     "Type"     => "field",
@@ -1553,8 +1548,6 @@ class Validator
                     "comments" => trim($repeatComments),
                     "value"    => $fieldValue,
                 ];
-
-
 
                 // Validate components
                 if (isset($fieldDef["components"])) {
@@ -1612,6 +1605,9 @@ class Validator
                                 'Result'      => false,
                             ]);
 
+                            $repeatHasError = true;
+                            $repeatComments .= $description . ' ';
+
                             $this->validationResult->addValidationReport([
                                 "type"            => "Component",
                                 "location"        => $componentLocation,
@@ -1663,6 +1659,9 @@ class Validator
                             'Result'      => false,
                         ]);
 
+                        $repeatHasError = true;
+                        $repeatComments .= $description . ' ';
+
                         $this->validationResult->addValidationReport([
                             "type"            => "Component",
                             "location"        => $componentLocation,
@@ -1680,6 +1679,15 @@ class Validator
                         ]);
                     }
                 }
+
+                // Update field validation report
+                $this->validationResult->updateValidationReport(
+                    $reportIndex,
+                    [
+                        'elementError'    => $repeatHasError,
+                        'elementComments' => trim($repeatComments),
+                    ]
+                );
 
                 $fieldArray[] = $repeatArray;
             }

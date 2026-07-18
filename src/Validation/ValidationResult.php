@@ -74,10 +74,33 @@ class ValidationResult
      * Add validation report entry.
      *
      * @param array<string, mixed> $entry
+     *
+     * @return int Index of the inserted entry.
      */
-    public function addValidationReport(array $entry): void
+    public function addValidationReport(array $entry): int
     {
-        $this->validationReport[] = $entry;
+        $index = count($this->validationReport);
+        $this->validationReport[$index] = $entry;
+
+        return $index;
+    }
+
+    /**
+     * Update validation report entry.
+     *
+     * @param int $reportIndex
+     * @param array<string,mixed> $elements
+     */
+    public function updateValidationReport(int $reportIndex, array $elements): void
+    {
+        if (!isset($this->validationReport[$reportIndex])) {
+            throw new \OutOfBoundsException("Validation report entry {$reportIndex} does not exist.");
+        }
+
+        $this->validationReport[$reportIndex] = array_merge(
+            $this->validationReport[$reportIndex],
+            $elements
+        );
     }
 
     /**
