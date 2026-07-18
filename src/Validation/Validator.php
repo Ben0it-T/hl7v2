@@ -1689,6 +1689,9 @@ class Validator
                     ]
                 );
 
+                $repeatArray['hasError'] = $repeatHasError;
+                $repeatArray['comments'] = trim($repeatComments);
+
                 $fieldArray[] = $repeatArray;
             }
         } else {
@@ -1865,7 +1868,16 @@ class Validator
 
         }
 
-        $this->validationResult->addValidationReport([
+        //
+        // Legacy validator did not propagate errors from unexpected child
+        // elements to parent Component validation reports.
+        //
+        // The refactored validator updates the component validation report
+        // after child validation so that structural errors detected on
+        // unexpected sub-components are also reflected on the parent
+        // component.
+        //
+        $reportIndex = $this->validationResult->addValidationReport([
             "type"            => "Component",
             "location"        => $location,
             "name"            => $componentDef["Name"],
@@ -1899,7 +1911,7 @@ class Validator
             //  Don't validate sub-component
 
             if (isset($componentDef["components"])) {
-                // validate subComponents
+                // Validate subComponents
                 $componentArray["subcomponents"] = [];
 
                 foreach ($componentDef['components'] as $i => $subComponentDef) {
@@ -1953,6 +1965,9 @@ class Validator
                             'Type'        => "Element not expected",
                             'Result'      => false,
                         ]);
+
+                        $hasError = true;
+                        $comments .= $description . ' ';
 
                         $this->validationResult->addValidationReport([
                             "type"            => "SubComponent",
@@ -2009,6 +2024,9 @@ class Validator
                         'Result'      => false,
                     ]);
 
+                    $hasError = true;
+                    $comments .= $description . ' ';
+
                     $this->validationResult->addValidationReport([
                         "type"            => "SubComponent",
                         "location"        => $subComponentLocation,
@@ -2029,6 +2047,18 @@ class Validator
             }
 
         }
+
+        // Update component validation report
+        $this->validationResult->updateValidationReport(
+            $reportIndex,
+            [
+                'elementError'    => $hasError,
+                'elementComments' => trim($comments),
+            ]
+        );
+
+        $componentArray['hasError'] = $hasError;
+        $componentArray['comments'] = trim($comments);
 
         return $component !== null ? $componentArray : [];
     }
