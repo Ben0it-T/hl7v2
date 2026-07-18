@@ -1505,8 +1505,8 @@ class Validator
 
                         if (!$tableCheck['result']) {
                             $repeatHasError = true;
-                            $repeatComments .= $tableCheck['description'] . " ";
                         }
+                        $repeatComments .= $tableCheck['description'] . " ";
                     }
                 }
 
@@ -1850,8 +1850,8 @@ class Validator
 
                     if (!$tableCheck['result']) {
                         $hasError = true;
-                        $comments .= $tableCheck['description'] . " ";
                     }
+                    $comments .= $tableCheck['description'] . " ";
                 }
             }
 
@@ -2121,8 +2121,8 @@ class Validator
 
                     if (!$tableCheck['result']) {
                         $hasError = true;
-                        $comments .= $tableCheck['description'] . " ";
                     }
+                    $comments .= $tableCheck['description'] . " ";
                 }
             }
 
