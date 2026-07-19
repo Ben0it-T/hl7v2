@@ -1,6 +1,6 @@
 <?php
 /**
- * Create JSON profile from JSON schema.
+ * Create JSON profiles from JSON schemas.
  *
  * Usage:
  * php 06-create-json-profile.php
@@ -141,35 +141,35 @@ class HL7jsonProfilesGenerator
         // Create profiles
         foreach ($this->messageType as $type => $event) {
             if (in_array($type, $messageType)) {
-                foreach ($event as $eventName => $strucureName) {
+                foreach ($event as $eventName => $structureName) {
                     if (in_array($eventName, $ignoreEvents)) {
                         continue;
                     }
                     $this->eventName = $eventName;
                     $this->messageProfile = [];
 
-                    // get strucureId
-                    $nameParts = explode("-", $strucureName);
-                    $strucureId = end($nameParts);
+                    // get structureId
+                    $nameParts = explode("-", $structureName);
+                    $structureId = end($nameParts);
                     
                     // get message structure
-                    if (!isset($this->structuresSchemas[$strucureName])) {
-                        $this->structuresSchemas[$strucureName] = $this->loadJson($this->structuresInputDir . "/" . $strucureName . ".json");
+                    if (!isset($this->structuresSchemas[$structureName])) {
+                        $this->structuresSchemas[$structureName] = $this->loadJson($this->structuresInputDir . "/" . $structureName . ".json");
                     }
 
-                    // 'root' groupName is strucureId
-                    $groupName = $strucureId;
-                    foreach ($this->structuresSchemas[$strucureName][$groupName]["elements"] as $element) {
+                    // 'root' groupName is structureId
+                    $groupName = $structureId;
+                    foreach ($this->structuresSchemas[$structureName][$groupName]["elements"] as $element) {
                         $attributes = $this->getElementAttributes($element);
                         if ($attributes["Type"] == "segment") {
                             $this->messageProfile[] = $this->addSegment($element["segment"], $attributes);
                         }
                         else if ($attributes["Type"] == "group") {
-                            $this->messageProfile[] = $this->addSegGroup($strucureName, $element["group"], $attributes);
+                            $this->messageProfile[] = $this->addSegGroup($structureName, $element["group"], $attributes);
                         }
                     }
 
-                    $outputFilename = "$type-$eventName-$strucureId.json";
+                    $outputFilename = "$type-$eventName-$structureId.json";
                     echo "- {$outputFilename}\n";
                     //file_put_contents($this->profilesOutputDir . "/" . $outputFilename, json_encode($this->messageProfile, JSON_PRETTY_PRINT));
                     if ($this->pretty) {
@@ -332,23 +332,23 @@ class HL7jsonProfilesGenerator
     /**
      * Add segment group
      * 
-     * @param string $strucureName (strucureId)
+     * @param string $structureName (structureId)
      * @param string $segGroupName
      * @param array $segGroupAttributes
      * @return array $segGroup
      */
-    private function addSegGroup(string $strucureName, string $segGroupName, array $segGroupAttributes): array
+    private function addSegGroup(string $structureName, string $segGroupName, array $segGroupAttributes): array
     {
         // set segGroup attributes
         $segGroupAttributes["LongName"] = $segGroupAttributes["Name"];
         $group = [];
-        foreach ($this->structuresSchemas[$strucureName][$segGroupName]["elements"] as $element) {
+        foreach ($this->structuresSchemas[$structureName][$segGroupName]["elements"] as $element) {
             $attributes = $this->getElementAttributes($element);
             if ($attributes["Type"] == "segment") {
                 $group[] = $this->addSegment($element["segment"], $attributes);
             }
             else if ($attributes["Type"] == "group") {
-                $group[] = $this->addSegGroup($strucureName, $element["group"], $attributes);
+                $group[] = $this->addSegGroup($structureName, $element["group"], $attributes);
             }
         }
         // add group

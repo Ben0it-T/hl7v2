@@ -16,7 +16,7 @@ return [
 
     'fieldsConstraints' => true,
 
-    'indent' => 4,
+    'indent' => 2,
 
     'pretty' => true,
 ];
