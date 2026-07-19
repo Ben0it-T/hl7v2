@@ -1,14 +1,15 @@
 <?php
 /**
- * Create json profile from json schema
- * 
+ * Create JSON profile from JSON schema.
+ *
+ * Usage:
+ * php 06-create-json-profile.php
  */
 
 declare(strict_types=1);
-require_once("config.php");
 
-
-class HL7jsonProfilesGenerator {
+class HL7jsonProfilesGenerator
+{
     /**
      * @access public
      */
@@ -38,16 +39,18 @@ class HL7jsonProfilesGenerator {
     /**
      * Create a new instance
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->setDefaults();
         
     }
 
-    private function setDefaults() {
-        $this->structuresSchemas = array();
-        $this->segmentsSchemas = array();
-        $this->fieldsSchemas = array();
-        $this->dataTypesSchemas = array();
+    private function setDefaults(): void
+    {
+        $this->structuresSchemas = [];
+        $this->segmentsSchemas = [];
+        $this->fieldsSchemas = [];
+        $this->dataTypesSchemas = [];
         $this->eventName = "";
         $this->indent = 4;
         $this->pretty = true;
@@ -59,27 +62,33 @@ class HL7jsonProfilesGenerator {
      * 
      * @param string $filename / $directory
      */
-    public function setDataTypesFilename($filename) {
+    public function setDataTypesFilename(string $filename): void
+    {
         $this->dataTypesFilename = $filename;
     }
 
-    public function setFieldsFilename($filename) {
+    public function setFieldsFilename(string $filename): void
+    {
         $this->fieldsFilename = $filename;
     }
 
-    public function setSegmentsFilename($filename) {
+    public function setSegmentsFilename(string $filename): void
+    {
         $this->segmentsFilename = $filename;
     }
 
-    public function setMessageTypeFilename($filename) {
+    public function setMessageTypeFilename(string $filename): void
+    {
         $this->messageTypeFilename = $filename;
     }
 
-    public function setStructuresInputDir($directory) {
+    public function setStructuresInputDir(string $directory): void
+    {
         $this->structuresInputDir = $directory;
     }
 
-    public function setProfilesOutputDir($directory) {
+    public function setProfilesOutputDir(string $directory): void
+    {
         $this->profilesOutputDir = $directory;
     }
 
@@ -88,7 +97,8 @@ class HL7jsonProfilesGenerator {
      * 
      * @param int $indent (nb of spaces)
      */
-    public function setIndentationLevel($indent = 4) {
+    public function setIndentationLevel(int $indent = 4): void
+    {
         $this->indent = intval($indent);
     }
 
@@ -97,7 +107,8 @@ class HL7jsonProfilesGenerator {
      * 
      * @param bool $pretty
      */
-    public function setPretty($pretty) {
+    public function setPretty(bool $pretty): void
+    {
         $this->pretty = $pretty;
     }
 
@@ -106,7 +117,8 @@ class HL7jsonProfilesGenerator {
      * 
      * @param bool $fieldsConstraints
      */
-    public function setFieldsConstraints($fieldsConstraints) {
+    public function setFieldsConstraints(bool $fieldsConstraints): void
+    {
         $this->fieldsConstraints = $fieldsConstraints;
     }
 
@@ -118,12 +130,13 @@ class HL7jsonProfilesGenerator {
      * @param array $messageType
      * @param array $ignoreEvents
      */
-    public function createJsonProfiles($messageType, $ignoreEvents = array()) {
+    public function createJsonProfiles(array $messageType, array $ignoreEvents = []): void
+    {
         // Load json schemas
-        $this->messageType = $this->loadJsonSchemas($this->messageTypeFilename);
-        $this->dataTypesSchemas = $this->loadJsonSchemas($this->dataTypesFilename);
-        $this->fieldsSchemas = $this->loadJsonSchemas($this->fieldsFilename);
-        $this->segmentsSchemas = $this->loadJsonSchemas($this->segmentsFilename);
+        $this->messageType = $this->loadJson($this->messageTypeFilename);
+        $this->dataTypesSchemas = $this->loadJson($this->dataTypesFilename);
+        $this->fieldsSchemas = $this->loadJson($this->fieldsFilename);
+        $this->segmentsSchemas = $this->loadJson($this->segmentsFilename);
 
         // Create profiles
         foreach ($this->messageType as $type => $event) {
@@ -133,7 +146,7 @@ class HL7jsonProfilesGenerator {
                         continue;
                     }
                     $this->eventName = $eventName;
-                    $this->messageProfile = array();
+                    $this->messageProfile = [];
 
                     // get strucureId
                     $nameParts = explode("-", $strucureName);
@@ -141,7 +154,7 @@ class HL7jsonProfilesGenerator {
                     
                     // get message structure
                     if (!isset($this->structuresSchemas[$strucureName])) {
-                        $this->structuresSchemas[$strucureName] = $this->loadJsonSchemas($this->structuresInputDir . "/" . $strucureName . ".json");
+                        $this->structuresSchemas[$strucureName] = $this->loadJson($this->structuresInputDir . "/" . $strucureName . ".json");
                     }
 
                     // 'root' groupName is strucureId
@@ -157,28 +170,28 @@ class HL7jsonProfilesGenerator {
                     }
 
                     $outputFilename = "$type-$eventName-$strucureId.json";
-                    echo "- $outputFilename<br/>";
+                    echo "- {$outputFilename}\n";
                     //file_put_contents($this->profilesOutputDir . "/" . $outputFilename, json_encode($this->messageProfile, JSON_PRETTY_PRINT));
                     if ($this->pretty) {
                         if ($this->indent == 4) {
-                            $json = json_encode($this->messageProfile, JSON_PRETTY_PRINT);
+                            $json = json_encode($this->messageProfile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
                         } else {
                             $json = preg_replace_callback(
                                 '/^(?: {4})+/m',
                                 function($m) {
                                     return str_repeat(' ', $this->indent * (strlen($m[0]) / 4));
                                 },
-                                json_encode($this->messageProfile, JSON_PRETTY_PRINT)
+                                json_encode($this->messageProfile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
                             );
                         }
                     } else {
-                        $json = json_encode($this->messageProfile);
+                        $json = json_encode($this->messageProfile, JSON_UNESCAPED_SLASHES);
                     }
                     file_put_contents($this->profilesOutputDir . "/" . $outputFilename, $json);
                 }
             }
         }
-        echo "Done.";
+        echo "Done.\n";
     }
 
     /**
@@ -187,12 +200,30 @@ class HL7jsonProfilesGenerator {
      * @param $filename
      * @return array $data
      */
-    private function loadJsonSchemas($filename) {
-        $data = array();
-        if (file_exists($filename) && is_file($filename)) {
-            $jsonStr = file_get_contents($filename);
-            $data = json_decode($jsonStr, true);
+    private function loadJson(string $filename): array
+    {
+        if (!is_file($filename)) {
+            throw new RuntimeException(
+                "File not found: {$filename}"
+            );
         }
+
+        $json = file_get_contents($filename);
+
+        if ($json === false) {
+            throw new RuntimeException(
+                "Unable to read file: {$filename}"
+            );
+        }
+
+        $data = json_decode($json, true);
+
+        if (!is_array($data)) {
+            throw new RuntimeException(
+                "Invalid JSON file: {$filename}"
+            );
+        }
+
         return $data;
     }
 
@@ -203,7 +234,8 @@ class HL7jsonProfilesGenerator {
      * @param string $maxOccurs
      * @return string $usage
      */
-    private function getElementUsage($minOccurs = "0", $maxOccurs = "0") {
+    private function getElementUsage(string $minOccurs = "0", string $maxOccurs = "0"): string
+    {
         $usage = "O";
         if ($minOccurs == "0" && $maxOccurs == "0") {
             $usage = "X";
@@ -220,7 +252,8 @@ class HL7jsonProfilesGenerator {
      * @param array $element
      * @return array $attributes
      */
-    private function getElementAttributes($element) {
+    private function getElementAttributes(array $element): array
+    {
         $elementType = (isset($element["segment"]) ? "segment" : "group");
         $elementName = trim($element[$elementType]);
         $elementMin = trim($element["minOccurs"]);
@@ -248,7 +281,8 @@ class HL7jsonProfilesGenerator {
      * @param array $field
      * @return array $fieldAttributes
      */
-    private function getFieldAttributes($field) {
+    private function getFieldAttributes(array $field): array
+    {
         $fieldName = trim($field["field"]);
         $fieldMin = trim($field["minOccurs"]);
         $fieldMax = trim($field["maxOccurs"]);
@@ -274,7 +308,8 @@ class HL7jsonProfilesGenerator {
      * @param array $component
      * @return array $componentAttributes
      */
-    private function getComponentAttributes($component) {
+    private function getComponentAttributes(array $component): array
+    {
         $componentName = trim($component["dataType"]);
         $componentMin = trim($component["minOccurs"]);
         $componentMax = trim($component["maxOccurs"]);
@@ -302,10 +337,11 @@ class HL7jsonProfilesGenerator {
      * @param array $segGroupAttributes
      * @return array $segGroup
      */
-    private function addSegGroup($strucureName, $segGroupName, $segGroupAttributes) {
+    private function addSegGroup(string $strucureName, string $segGroupName, array $segGroupAttributes): array
+    {
         // set segGroup attributes
         $segGroupAttributes["LongName"] = $segGroupAttributes["Name"];
-        $group = array();
+        $group = [];
         foreach ($this->structuresSchemas[$strucureName][$segGroupName]["elements"] as $element) {
             $attributes = $this->getElementAttributes($element);
             if ($attributes["Type"] == "segment") {
@@ -327,13 +363,14 @@ class HL7jsonProfilesGenerator {
      * @param array $segAttributes
      * @return array $segment
      */
-    private function addSegment($segName, $segAttributes) {
+    private function addSegment(string $segName, array $segAttributes): array
+    {
         // set segment attributes
         $segAttributes["LongName"] = trim($this->segmentsSchemas[$segName]["LongName"]);
         $segAttributes["Chapter"] = trim($this->segmentsSchemas[$segName]["Chapter"]);
         
         // get fields
-        $fields = array();
+        $fields = [];
         foreach ($this->segmentsSchemas[$segName]["fields"] as $field) {
             // field attributes
             $fieldAttributes = $this->getFieldAttributes($field);
@@ -352,7 +389,8 @@ class HL7jsonProfilesGenerator {
      * @param array $fieldAttributes
      * @return array $field
      */
-    private function addField($fieldName, $fieldAttributes) {
+    private function addField(string $fieldName, array $fieldAttributes): array
+    {
         // set field attributes
         $fieldTable = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? $this->fieldsSchemas[$fieldName]["Table"] : "";
         $fieldTable = (substr($fieldTable,0,3) == "HL7") ? substr($fieldTable,3) : $fieldTable;
@@ -465,7 +503,7 @@ class HL7jsonProfilesGenerator {
         // If dataType has components
         $dataType = $this->fieldsSchemas[$fieldName]["Type"];
         if (isset($this->dataTypesSchemas[$dataType]["components"])) {
-            $components = array();
+            $components = [];
             foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $component) {
                 // component attributes
                 $componentAttributes = $this->getComponentAttributes($component);
@@ -492,7 +530,8 @@ class HL7jsonProfilesGenerator {
      * @param bool $isSubComponent
      * @return array $component
      */
-    private function addComponent($componentName, $componentAttributes, $isSubComponent = false) {
+    private function addComponent(string $componentName, array $componentAttributes, bool $isSubComponent = false): array
+    {
         // get component attributes
         $componentTable = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? $this->dataTypesSchemas[$componentName]["Table"] : "";
         $componentTable = (substr($componentTable,0,3) == "HL7") ? substr($componentTable,3) : $componentTable;
@@ -509,7 +548,7 @@ class HL7jsonProfilesGenerator {
         // if dataType (component) has (sub)components
         $dataType = $this->dataTypesSchemas[$componentName]["Type"];
         if (isset($this->dataTypesSchemas[$dataType]["components"]) && ! $isSubComponent) {
-            $subcomponents = array();
+            $subcomponents = [];
             foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $subcomponent) {
                 // subcomponent attributes
                 $subcomponentAttributes = $this->getComponentAttributes($subcomponent);
@@ -529,18 +568,59 @@ class HL7jsonProfilesGenerator {
 }
 
 
+$configDist = __DIR__ . '/06-create-json-profile.config.dist.php';
+$configFile = __DIR__ . '/06-create-json-profile.config.php';
 
+if (!is_file($configFile)) {
+    if (!copy($configDist, $configFile)) {
+        throw new RuntimeException(
+            'Unable to create configuration file.'
+        );
+    }
 
+    echo "Configuration file created: {$configFile}\n";
+}
 
+$config = require $configFile;
+
+if (!is_array($config)) {
+    throw new RuntimeException(
+        'Invalid configuration file.'
+    );
+}
 
 // config
-$inputDir     = $createJsonProfile["inputDir"];
-$outputDir    = $createJsonProfile["outputDir"];
-$msgType      = $createJsonProfile["msgType"];
-$ignoreEvents = $createJsonProfile["ignoreEvents"];
-$fieldsConstr = $createJsonProfile["fieldsConstraints"];
-$indent       = $createJsonProfile["indent"];
-$pretty       = $createJsonProfile["pretty"];
+$inputDir     = $config["inputDir"];
+$outputDir    = $config["outputDir"];
+$msgType      = $config["msgType"];
+$ignoreEvents = $config["ignoreEvents"];
+$fieldsConstr = $config["fieldsConstraints"];
+$indent       = $config["indent"];
+$pretty       = $config["pretty"];
+
+if (!is_string($inputDir) || $inputDir === '') {
+    throw new RuntimeException(
+        'Missing inputDir configuration.'
+    );
+}
+
+if (!is_dir($inputDir)) {
+    throw new RuntimeException(
+        "Directory not found: {$inputDir}"
+    );
+}
+
+if (!is_dir($outputDir) && !mkdir($outputDir, 0777, true) && !is_dir($outputDir)) {
+    throw new RuntimeException(
+        "Unable to create directory: {$outputDir}"
+    );
+}
+
+if ($inputDir === $outputDir) {
+    throw new RuntimeException(
+        'Input and output directories must be different.'
+    );
+}
 
 // main
 $profilesGen = new HL7jsonProfilesGenerator();
@@ -564,8 +644,3 @@ $profilesGen->setFieldsConstraints($fieldsConstr);
 
 // create profile
 $profilesGen->createJsonProfiles($msgType, $ignoreEvents);
-
-
-
-
-
