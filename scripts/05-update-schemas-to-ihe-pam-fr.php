@@ -1,62 +1,134 @@
 <?php
+
+declare(strict_types=1);
+
 /**
- * Update json schemas
- * From HL7 2.5 IHE PAM to HL7 2.5 IHE PAM FR 2.11.1
+ * Update JSON schemas.
+ *
+ * From HL7 2.5 IHE PAM to HL7 2.5 IHE PAM FR 2.11.2.
+ *
+ * Usage:
+ * php 05-update-schemas-to-ihe-pam-fr.php \
+ *     --input-dir=<directory> \
+ *     --output-dir=<directory>
+ *
+ * Example:
+ * php 05-update-schemas-to-ihe-pam-fr.php \
+ *     --input-dir=../schemas/json-2.5 \
+ *     --output-dir=../schemas/json-2.5-IHEPAMFR
  */
 
-require_once("config.php");
+$options = getopt('', [
+    'input-dir:',
+    'output-dir:',
+]);
 
-// config
-$inputDir  = $uptadeSchemasToIHEPAMFR["inputDir"];
-$outputDir = $uptadeSchemasToIHEPAMFR["outputDir"];
+$inputDir = $options['input-dir'] ?? null;
+$outputDir = $options['output-dir'] ?? null;
 
-if ($inputDir == $outputDir) {
-    echo "Error: inputDir and outputDir must be different.";
-    exit;
+if (!is_string($inputDir) || $inputDir === '') {
+    throw new RuntimeException(
+        'Missing --input-dir option.'
+    );
+}
+
+if (!is_string($outputDir) || $outputDir === '') {
+    throw new RuntimeException(
+        'Missing --output-dir option.'
+    );
+}
+
+if (!is_dir($inputDir)) {
+    throw new RuntimeException(
+        "Directory not found: {$inputDir}"
+    );
+}
+
+if ($inputDir === $outputDir) {
+    throw new RuntimeException(
+        'Input and output directories must be different.'
+    );
 }
 
 /**
- * Load JSON structure schemas
+ * Load JSON.
  *
- * @param $filename
- * @return array $data
+ * @return array<string, mixed>
  */
-function loadJsonSchemas($filename) {
-    $data = array();
-    if (file_exists($filename) && is_file($filename)) {
-        $jsonStr = file_get_contents($filename);
-        $data = json_decode($jsonStr, true);
+function loadJson(string $filename): array
+{
+    if (!is_file($filename)) {
+        throw new RuntimeException(
+            "File not found: {$filename}"
+        );
     }
+
+    $json = file_get_contents($filename);
+
+    if ($json === false) {
+        throw new RuntimeException(
+            "Unable to read file: {$filename}"
+        );
+    }
+
+    $data = json_decode($json, true);
+
+    if (!is_array($data)) {
+        throw new RuntimeException(
+            "Invalid JSON file: {$filename}"
+        );
+    }
+
     return $data;
 }
 
 /**
- * Create directory, if needed
+ * Create directory.
  *
- * @param $directory
  */
-function createDirectory($directory) {
-    if (!file_exists($directory)) {
-        if (!mkdir($directory, 0777, true)) {
-            die('Failed to create directories...');
-        }
+function createDirectory(string $directory): void
+{
+    if (!is_dir($directory) && !mkdir($directory, 0777, true) && !is_dir($directory)) {
+        throw new RuntimeException(
+            "Unable to create directory: {$directory}"
+        );
     }
 }
 
+/**
+ * Save JSON.
+ *
+ * @param array<string, mixed> $data
+ */
+function saveJson(string $filename, array $data): void
+{
+    $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
+    if ($json === false) {
+        throw new RuntimeException(
+            "Unable to encode JSON: {$filename}"
+        );
+    }
+
+    file_put_contents($filename, $json);
+}
+
+
 
 // Load json schemas
-$messageType = loadJsonSchemas($inputDir . "/messageType.json");
-$eventDesc = loadJsonSchemas($inputDir . "/eventDesc.json");
-$segmentsSchemas = loadJsonSchemas($inputDir . "/segments/segments.json");
-$fieldsSchemas = loadJsonSchemas($inputDir . "/fields/fields.json");
-$dataTypesSchemas = loadJsonSchemas($inputDir . "/dataTypes/dataTypes.json");
-$structuresSchemas = array();
+$messageType       = loadJson($inputDir . "/messageType.json");
+$eventDesc         = loadJson($inputDir . "/eventDesc.json");
+$segmentsSchemas   = loadJson($inputDir . "/segments/segments.json");
+$fieldsSchemas     = loadJson($inputDir . "/fields/fields.json");
+$dataTypesSchemas  = loadJson($inputDir . "/dataTypes/dataTypes.json");
+$structuresSchemas = [];
 
 // Create output directories
 createDirectory($outputDir . "/dataTypes");
 createDirectory($outputDir . "/fields");
 createDirectory($outputDir . "/segments");
 createDirectory($outputDir . "/structures");
+
 
 
 /**
@@ -69,23 +141,25 @@ createDirectory($outputDir . "/structures");
 
 // PID segment
 foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
-    if (in_array($field["field"], array("PID.10", "PID.17", "PID.22"))) {
+    if (in_array($field["field"], ["PID.10", "PID.17", "PID.22"], true)) {
         $segmentsSchemas["PID"]["fields"][$key]["minOccurs"] = "0";
         $segmentsSchemas["PID"]["fields"][$key]["maxOccurs"] = "0";
         $segmentsSchemas["PID"]["fields"][$key]["Usage"] = "X";
+        // TODO: ImpNote
     }
 }
 
 // NK1 segment
 foreach ($segmentsSchemas["NK1"]["fields"] as $key => $field) {
-    if (in_array($field["field"], array("NK1.25", "NK1.28", "NK1.35"))) {
+    if (in_array($field["field"], ["NK1.25", "NK1.28", "NK1.35"], true)) {
         $segmentsSchemas["NK1"]["fields"][$key]["minOccurs"] = "0";
         $segmentsSchemas["NK1"]["fields"][$key]["maxOccurs"] = "0";
         $segmentsSchemas["NK1"]["fields"][$key]["Usage"] = "X";
-        break;
+        // TODO: ImpNote
     }
 }
-echo "Forbidden fields: done.<br/>";
+
+echo "Forbidden fields: done.\n";
 
 
 
@@ -101,9 +175,12 @@ echo "Forbidden fields: done.<br/>";
  * ZBE : Action sur un mouvement (Movement segment)
  */
 
+// TODO: replace array() to []
+
 //
 // ZFA : Statut DMP du patient
 //
+
 // Add segment
 $ZFAsegment = array(
     "ZFA" => array(
@@ -114,8 +191,8 @@ $ZFAsegment = array(
             array("field" => "ZFA.4",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
             array("field" => "ZFA.5",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
             array("field" => "ZFA.6",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
-            array("field" => "ZFA.7", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
-            array("field" => "ZFA.8", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
+            array("field" => "ZFA.7",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
+            array("field" => "ZFA.8",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
             array("field" => "ZFA.9",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
             array("field" => "ZFA.10", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
             array("field" => "ZFA.11", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
@@ -125,6 +202,7 @@ $ZFAsegment = array(
         "Chapter" => ""
     )
 );
+
 // Add fields
 $ZFAfields = array(
     "ZFA.1"  => array("Item" => "", "Type" => "ID", "Table" => "IHE-FRANCE-ZFA-1", "LongName" => "Statut du DMP du patient", "maxLength" => "20", "Chapter" => ""),
@@ -147,12 +225,13 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFAfields);
 //
 // ZFP : Situation professionnelle
 //
+
 // Add segment
 $ZFPsegment = array(
     "ZFP" => array(
         "fields" => array(
-            array("field" => "ZFP.1",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
-            array("field" => "ZFP.2",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFP.1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFP.2", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
         ),
         "LongName" => "Situation professionnelle",
         "Chapter" => ""
@@ -170,6 +249,7 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFPfields);
 //
 // ZFV : Complément d'information sur la venue
 //
+
 // Add segment
 $ZFVsegment = array(
     "ZFV" => array(
@@ -190,6 +270,7 @@ $ZFVsegment = array(
         "Chapter" => ""
     )
 );
+
 // Add fields
 $ZFVfields = array(
     "ZFV.1"  => array("Item" => "", "Type" => "DLD", "Table" => "HL70113", "LongName" => "Etablissement de provenance et date de dernier séjour dans cet établissement", "maxLength" => "47", "Chapter" => ""),
@@ -211,20 +292,22 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFVfields);
 //
 // ZFM : Mouvement PMSI
 //
+
 // Add segment
 $ZFMsegment = array(
     "ZFM" => array(
         "fields" => array(
-            array("field" => "ZFM.1",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFM.2",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFM.3",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFM.4",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFM.5",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFM.1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFM.2", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFM.3", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFM.4", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFM.5", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
         ),
         "LongName" => "Mouvement PMSI",
         "Chapter" => ""
     )
 );
+
 // Add fields
 $ZFMfields = array(
     "ZFM.1"  => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFM-1", "LongName" => "Mode d'entrée PMSI", "maxLength" => "1", "Chapter" => ""),
@@ -240,23 +323,25 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFMfields);
 //
 // ZFD : Complément démographique
 //
+
 // Add segment
 $ZFDsegment = array(
     "ZFD" => array(
         "fields" => array(
-            array("field" => "ZFD.1",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFD.2",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFD.3",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFD.4",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
-            array("field" => "ZFD.5",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
-            array("field" => "ZFD.6",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
-            array("field" => "ZFD.7",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
-            array("field" => "ZFD.8",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFD.1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFD.2", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFD.3", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFD.4", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFD.5", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFD.6", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFD.7", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFD.8", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
         ),
         "LongName" => "Complément démographique",
         "Chapter" => ""
     )
 );
+
 // Add fields
 $ZFDfields = array(
     "ZFD.1"  => array("Item" => "", "Type" => "NA", "Table" => "", "LongName" => "Date Lunaire", "maxLength" => "8", "Chapter" => ""),
@@ -275,23 +360,25 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFDfields);
 //
 // ZFS : Mode légal de soins en psychiatrie
 //
+
 // Add segment
 $ZFSsegment = array(
     "ZFS" => array(
         "fields" => array(
-            array("field" => "ZFS.1",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZFS.2",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZFS.3",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZFS.4",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
-            array("field" => "ZFS.5",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZFS.6",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZFS.7",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFS.8",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFS.1", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZFS.2", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZFS.3", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZFS.4", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"),
+            array("field" => "ZFS.5", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZFS.6", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZFS.7", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFS.8", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
         ),
         "LongName" => "Mode légal de soins en psychiatrie",
         "Chapter" => ""
     )
 );
+
 // Add fields
 $ZFSfields = array(
     "ZFS.1"  => array("Item" => "", "Type" => "SI", "Table" => "", "LongName" => "Set ID - ZFS", "maxLength" => "4", "Chapter" => ""),
@@ -310,24 +397,26 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFSfields);
 //
 // ZBE : Action sur un mouvement - Movement segment
 //
+
 // Add segment
 $ZBEsegment = array(
     "ZBE" => array(
         "fields" => array(
-            array("field" => "ZBE.1",  "minOccurs" => "1", "maxOccurs" => "unbounded", "Usage" => "R"),
-            array("field" => "ZBE.2",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZBE.3",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
-            array("field" => "ZBE.4",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZBE.5",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-            array("field" => "ZBE.6",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"),
+            array("field" => "ZBE.1", "minOccurs" => "1", "maxOccurs" => "unbounded", "Usage" => "R"),
+            array("field" => "ZBE.2", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZBE.3", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
+            array("field" => "ZBE.4", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZBE.5", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZBE.6", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"),
             array("field" => "ZBE.7", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"),
             array("field" => "ZBE.8", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"),
-            array("field" => "ZBE.9",  "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
+            array("field" => "ZBE.9", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
         ),
         "LongName" => "Movement segment",
         "Chapter" => ""
     )
 );
+
 // Add fields
 $ZBEfields = array(
     "ZBE.1"  => array("Item" => "", "Type" => "EI", "Table" => "", "LongName" => "Movement ID", "maxLength" => "427", "Chapter" => ""),
@@ -344,17 +433,21 @@ $ZBEfields = array(
 $segmentsSchemas = array_merge($segmentsSchemas, $ZBEsegment);
 $fieldsSchemas = array_merge($fieldsSchemas, $ZBEfields);
 
-echo "Create Z-segments: done.<br/>";
+echo "Create Z-segments: done.\n";
+
 
 
 /**
  * Update segments
  * -------------------------------------
+ *
+ *
  */
 
 //
 // MSH segment
 //
+
 foreach ($segmentsSchemas["MSH"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'MSH.1':
@@ -402,9 +495,11 @@ foreach ($segmentsSchemas["MSH"]["fields"] as $key => $field) {
             break;
     }
 }
+
 // 
 // EVN segment
 //
+
 foreach ($segmentsSchemas["EVN"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'EVN.1':
@@ -422,14 +517,15 @@ foreach ($segmentsSchemas["EVN"]["fields"] as $key => $field) {
             $segmentsSchemas["EVN"]["fields"][$key]["Usage"] = "RE";
             break;
 
-        
         default:
             break;
     }
 }
+
 //
 // PID segment
 //
+
 foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'PID.2':
@@ -480,9 +576,11 @@ foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
             break;
     }
 }
+
 //
 // ROL segment
 //
+
 foreach ($segmentsSchemas["ROL"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'ROL.1':
@@ -500,10 +598,13 @@ foreach ($segmentsSchemas["ROL"]["fields"] as $key => $field) {
         default:
             break;
     }
+
 }
+
 //
 // NK1 segment
 //
+
 foreach ($segmentsSchemas["NK1"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'NK1.25':
@@ -524,10 +625,13 @@ foreach ($segmentsSchemas["NK1"]["fields"] as $key => $field) {
             break;
     }
 }
+
 $fieldsSchemas["NK1.11"]["Table"] = "HL70327,HL70328";
+
 //
 // PV1 segment
 //
+
 foreach ($segmentsSchemas["PV1"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'PV1.3':
@@ -557,11 +661,14 @@ foreach ($segmentsSchemas["PV1"]["fields"] as $key => $field) {
             break;
     }
 }
+
 $fieldsSchemas["PV1.9"]["Table"] = "";
 $fieldsSchemas["PV1.52"]["Table"] = "";
+
 //
 // PV2 segment
 //
+
 foreach ($segmentsSchemas["PV2"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'PV2.3':
@@ -582,10 +689,13 @@ foreach ($segmentsSchemas["PV2"]["fields"] as $key => $field) {
             break;
     }
 }
+
 $fieldsSchemas["PV2.3"]["Table"] = ""; // IHE PAM FR 2.11.2 : Usage X
+
 //
 // ACC segment
 //
+
 foreach ($segmentsSchemas["ACC"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'ACC.1':
@@ -604,18 +714,17 @@ foreach ($segmentsSchemas["ACC"]["fields"] as $key => $field) {
             $segmentsSchemas["ACC"]["fields"][$key]["Usage"] = "X";
             break;
 
-        case 'ACC.':
-            $segmentsSchemas["ACC"]["fields"][$key]["Usage"] = "RE";
-            break;
-
         default:
             break;
     }
 }
+
 $fieldsSchemas["ACC.4"]["Table"] = "";
+
 //
 // IN1 segment
 //
+
 foreach ($segmentsSchemas["IN1"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'IN1.3':
@@ -653,11 +762,14 @@ foreach ($segmentsSchemas["IN1"]["fields"] as $key => $field) {
             break;
     }
 }
+
 $fieldsSchemas["IN1.2"]["Table"] = "HL70072";
 $fieldsSchemas["IN1.35"]["maxLength"] = "20";
+
 //
 // IN2 segment
 //
+
 foreach ($segmentsSchemas["IN2"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'IN2.63':
@@ -670,9 +782,11 @@ foreach ($segmentsSchemas["IN2"]["fields"] as $key => $field) {
             break;
     }
 }
+
 //
 // IN3 segment
 //
+
 foreach ($segmentsSchemas["IN3"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'IN3.5':
@@ -685,10 +799,13 @@ foreach ($segmentsSchemas["IN3"]["fields"] as $key => $field) {
             break;
     }
 }
+
 $fieldsSchemas["IN3.5"]["Table"] = "HL70148";
+
 //
 // GT1 segment
 //
+
 foreach ($segmentsSchemas["GT1"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'GT1.4':
@@ -721,9 +838,11 @@ foreach ($segmentsSchemas["GT1"]["fields"] as $key => $field) {
             break;
     }
 }
+
 //
 // OBX segment
 //
+
 foreach ($segmentsSchemas["OBX"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'OBX.1':
@@ -761,9 +880,11 @@ foreach ($segmentsSchemas["OBX"]["fields"] as $key => $field) {
             break;
     }
 }
+
 //
 // AL1
 //
+
 foreach ($segmentsSchemas["AL1"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'AL1.6':
@@ -776,9 +897,11 @@ foreach ($segmentsSchemas["AL1"]["fields"] as $key => $field) {
             break;
     }
 }
+
 //
 // MRG
 //
+
 foreach ($segmentsSchemas["MRG"]["fields"] as $key => $field) {
     switch ($field["field"]) {
         case 'MRG.2':
@@ -795,17 +918,21 @@ foreach ($segmentsSchemas["MRG"]["fields"] as $key => $field) {
     }
 }
 
-echo "Update segments: done.<br/>";
+echo "Update segments: done.\n";
+
 
 
 /**
  * Update data types
  * -------------------------------------
+ *
+ *
  */
 
 //
 // CX
 //
+
 foreach ($dataTypesSchemas["CX"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'CX.4':
@@ -828,10 +955,13 @@ foreach ($dataTypesSchemas["CX"]["components"] as $key => $component) {
             break;
     }
 }
+
 $dataTypesSchemas["CX.1"]["maxLength"] = "128";
+
 //
 // EI
 //
+
 foreach ($dataTypesSchemas["EI"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'EI.1':
@@ -850,10 +980,13 @@ foreach ($dataTypesSchemas["EI"]["components"] as $key => $component) {
             break;
     }
 }
+
 $dataTypesSchemas["EI.1"]["maxLength"] = "128";
+
 //
 // HD
 //
+
 foreach ($dataTypesSchemas["HD"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'HD.1':
@@ -871,9 +1004,11 @@ foreach ($dataTypesSchemas["HD"]["components"] as $key => $component) {
             break;
     }
 }
+
 //
 // PL
 //
+
 foreach ($dataTypesSchemas["PL"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'PL.6':
@@ -884,9 +1019,11 @@ foreach ($dataTypesSchemas["PL"]["components"] as $key => $component) {
             break;
     }
 }
+
 //
 // TS
 //
+
 foreach ($dataTypesSchemas["TS"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'TS.2':
@@ -899,9 +1036,11 @@ foreach ($dataTypesSchemas["TS"]["components"] as $key => $component) {
             break;
     }
 }
+
 //
 // VID
 //
+
 foreach ($dataTypesSchemas["VID"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'VID.1':
@@ -916,9 +1055,11 @@ foreach ($dataTypesSchemas["VID"]["components"] as $key => $component) {
             break;
     }
 }
+
 //
 // XAD
 //
+
 foreach ($dataTypesSchemas["XAD"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'XAD.12':
@@ -931,9 +1072,11 @@ foreach ($dataTypesSchemas["XAD"]["components"] as $key => $component) {
             break;
     }
 }
+
 //
 // SAD
 //
+
 foreach ($dataTypesSchemas["SAD"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'SAD.2':
@@ -947,9 +1090,11 @@ foreach ($dataTypesSchemas["SAD"]["components"] as $key => $component) {
             break;
     }
 }
+
 //
 // XCN
 //
+
 foreach ($dataTypesSchemas["XCN"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'XCN.1':
@@ -989,10 +1134,13 @@ foreach ($dataTypesSchemas["XCN"]["components"] as $key => $component) {
             break;
     }
 }
+
 $dataTypesSchemas["XCN.1"]["maxLength"] = "199";
+
 //
 // XON
 //
+
 foreach ($dataTypesSchemas["XON"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'XON.1':
@@ -1019,10 +1167,13 @@ foreach ($dataTypesSchemas["XON"]["components"] as $key => $component) {
             break;
     }
 }
+
 $dataTypesSchemas["XON.10"]["maxLength"] = "64";
+
 //
 // XPN
 //
+
 foreach ($dataTypesSchemas["XPN"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'XPN.1':
@@ -1062,11 +1213,14 @@ foreach ($dataTypesSchemas["XPN"]["components"] as $key => $component) {
             break;
     }
 }
+
 $dataTypesSchemas["XPN.2"]["maxLength"] = "194";
 $dataTypesSchemas["XPN.3"]["maxLength"] = "194";
+
 //
 // XTN
 //
+
 foreach ($dataTypesSchemas["XTN"]["components"] as $key => $component) {
     switch ($component["dataType"]) {
         case 'XTN.1':
@@ -1093,17 +1247,21 @@ foreach ($dataTypesSchemas["XTN"]["components"] as $key => $component) {
     }
 }
 
-echo "Update data types: done.<br/>";
+echo "Update data types: done.\n";
+
+
 
 /**
  * Update structures
  * -------------------------------------
  *
+ * TODO: fix IHE PAM FR 2.11.2 Z-segments usage.
+ *
  */
 
-$messageStructures = array();
-$messageDesc = array();
-$ADTevents = array(
+$messageStructures = [];
+$messageDesc = [];
+$ADTevents = [
     "A01","A02","A03","A04","A05","A06","A07","A09",
     "A10","A11","A12","A13","A14","A15","A16",
     "A21","A22","A25","A26","A27","A28",
@@ -1111,36 +1269,39 @@ $ADTevents = array(
     "A40","A44","A47","A49",
     "A52","A53","A54","A55",
     "Z99"
-);
+];
 
-$SIUevents = array(
+$SIUevents = [
     "S12","S14","S15","S26"
-);
+];
 
 // Create event desc.
 foreach ($eventDesc as $type => $event) {
-    $messageDesc[$type] = array();
+    $messageDesc[$type] = [];
     foreach ($event as $eventName => $desc) {
-        if ($type == "ADT" && ! in_array($eventName, $ADTevents)) {
+        if ($type === "ADT" && ! in_array($eventName, $ADTevents, true)) {
             continue;
         }
-        else if ($type == "SIU" && ! in_array($eventName, $SIUevents)) {
+
+        if ($type === "SIU" && ! in_array($eventName, $SIUevents, true)) {
             continue;
         }
+
         $messageDesc[$type][$eventName] = $desc;
     }
 }
-echo "Create event desc.: done.<br/>";
 
+echo "Create event desc.: done.\n";
 
 // Create message structures
 foreach ($messageType as $type => $event) {
     $messageStructures[$type] = array();
     foreach ($event as $eventName => $strucureId) {
-        if ($type == "ADT" && ! in_array($eventName, $ADTevents)) {
+        if ($type === "ADT" && ! in_array($eventName, $ADTevents, true)) {
             continue;
         }
-        else if ($type == "SIU" && ! in_array($eventName, $SIUevents)) {
+
+        if ($type === "SIU" && ! in_array($eventName, $SIUevents, true)) {
             continue;
         }
         
@@ -1151,376 +1312,392 @@ foreach ($messageType as $type => $event) {
         }
     }
 }
-echo "Create message structures: done.<br/>";
-
+echo "Create message structures: done.\n";
 
 // Update message structures
 foreach ($messageStructures as $type => $event) {
     foreach ($event as $eventName => $strucureId) {
-        if (file_exists($outputDir . "/structures/" . $strucureId . ".json")) {
-            $msgStruct = loadJsonSchemas($outputDir . "/structures/" . $strucureId . ".json");
-            
-            // Update INSURANCE group (IN3)
-            if (isset($msgStruct["INSURANCE"])) {
-                foreach ($msgStruct["INSURANCE"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'IN3':
-                                $msgStruct["INSURANCE"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["INSURANCE"]["elements"][$key]["maxOccurs"] = "1";
-                                $msgStruct["INSURANCE"]["elements"][$key]["Usage"] = "O";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
-
-            //
-            // ITI-30
-            //
-
-            // ADT^A28^ADT_A05
-            // ADT^A31^ADT_A05
-            if (in_array($eventName, array("A28", "A31"))) {
-                $ROL = 0;
-                $ZFA = array("segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE");
-                $ZFD = array("segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE");
-                $ZFS = array("segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "C");
-                foreach ($msgStruct["ADT_A05"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'NK1':
-                                $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "unbounded";
-                                $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "RE";
-                                break;
-
-                            case 'PV2':
-                                $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            case 'ROL':
-                                $ROL++;
-                                if ($ROL == 2) {
-                                    $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
-                                    $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "0";
-                                    $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "X";
-                                }
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, array($ZFA, $ZFD, $ZFS));
-            }
-
-            // ADT^A40^ADT_A39
-            if (in_array($eventName, array("A40"))) {
-                foreach ($msgStruct["ADT_A39"]["elements"] as $key => $element) {
-                    if (isset($element["group"])) {
-                        switch ($element["group"]) {
-                            case 'PATIENT':
-                                $msgStruct["ADT_A39"]["elements"][$key]["minOccurs"] = "1";
-                                $msgStruct["ADT_A39"]["elements"][$key]["maxOccurs"] = "1";
-                                $msgStruct["ADT_A39"]["elements"][$key]["Usage"] = "R";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                foreach ($msgStruct["PATIENT"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'PV1':
-                                $msgStruct["PATIENT"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["PATIENT"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["PATIENT"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
-
-            // ADT^A47^ADT_A30
-            if (in_array($eventName, array("A47"))) {
-                $msgStruct = array(
-                    "PATIENT" => array(
-                        "elements" => array(
-                            0 => array("segment" => "PID", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-                            1 => array("segment" => "PD1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-                            2 => array("segment" => "MRG", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R")
-                        )
-                    ),
-                    "ADT_A30" => array(
-                        "elements" => array(
-                            0 => array("segment" => "MSH", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-                            1 => array("segment" => "SFT", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"),
-                            2 => array("segment" => "EVN", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-                            3 => array("group" => "PATIENT", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"),
-                        )
-                    )
-                );
-            }
-
-
-            //
-            // ITI-31
-            //
-            $ZBE = array("segment" => "ZBE", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R");
-            $ZFA = array("segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O");
-            $ZFP = array("segment" => "ZFP", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O");
-            $ZFV = array("segment" => "ZFV", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O");
-            $ZFM = array("segment" => "ZFM", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O");
-            $ZFD = array("segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O");
-            $ZFS = array("segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O");
-
-            // ADT^A01^ADT_A01
-            // ADT^A04^ADT_A01
-            // ADT^Z99^ADT_A01
-            if (in_array($eventName, array("A01", "A04", "Z99"))) {
-                array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, array($ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD));
-            }
-
-            // ADT^A01^ADT_A01
-            // ADT^A04^ADT_A01
-            if (in_array($eventName, array("A01", "A04"))) {
-                $ROL = 0;
-                foreach ($msgStruct["ADT_A01"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'ROL':
-                                $ROL++;
-                                if ($ROL == 1) {
-                                    $msgStruct["ADT_A01"]["elements"][$key]["minOccurs"] = "0";
-                                    $msgStruct["ADT_A01"]["elements"][$key]["maxOccurs"] = "unbounded";
-                                    $msgStruct["ADT_A01"]["elements"][$key]["Usage"] = "RE";
-                                }
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
-
-
-            // ADT^A09^ADT_A09
-            if (in_array($eventName, array("A09"))) {
-                array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, array($ZBE));
-            }
-
-            // ADT^A10^ADT_A09
-            // ADT^A11^ADT_A09
-            if (in_array($eventName, array("A10", "A11"))) {
-                foreach ($msgStruct["ADT_A09"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'DG1':
-                                $msgStruct["ADT_A09"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A09"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["ADT_A09"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, array($ZBE));
-            }
-
-            // ADT^A03^ADT_A03
-            if (in_array($eventName, array("A03"))) {
-                foreach ($msgStruct["ADT_A03"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'PV2':
-                                $msgStruct["ADT_A03"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A03"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["ADT_A03"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                array_splice( $msgStruct["ADT_A03"]["elements"], 9, 0, array($ZBE, $ZFV, $ZFM));
-            }
-
-            // ADT^A13^ADT_A01
-            if (in_array($eventName, array("A13"))) {
-                array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, array($ZBE));
-            }
-
-            // ADT^A05^ADT_A05
-            // ADT^A14^ADT_A05
-            if (in_array($eventName, array("A05", "A14"))) {
-                foreach ($msgStruct["ADT_A05"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'PV2':
-                                $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                $PDA = array("segment" => "PDA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O");
-                array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, array($ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD));
-                array_splice($msgStruct["ADT_A05"]["elements"], count($msgStruct["ADT_A05"]["elements"]), 0, array($PDA));
-            }
-
-            // ADT^A38^ADT_A38
-            if (in_array($eventName, array("A38"))) {
-                array_splice($msgStruct["ADT_A38"]["elements"], 7, 0, array($ZBE));
-            }
-
-            // ADT^A06^ADT_A06
-            // ADT^A07^ADT_A06
-            if (in_array($eventName, array("A06", "A07"))) {
-                foreach ($msgStruct["ADT_A06"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'MRG':
-                                $msgStruct["ADT_A06"]["elements"][$key]["Usage"] = "C";
-                                break;
-
-                            case 'PV2':
-                                $msgStruct["ADT_A06"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A06"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["ADT_A06"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
-
-            // ADT^A06^ADT_A06
-            if (in_array($eventName, array("A06"))) {
-                array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, array($ZBE, $ZFM));
-            }
-            // ADT^A07^ADT_A06
-            if (in_array($eventName, array("A07"))) {
-                array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, array($ZBE));
-            }
-
-            // ADT^A02^ADT_A02
-            if (in_array($eventName, array("A02"))) {
-                array_splice($msgStruct["ADT_A02"]["elements"], 8, 0, array($ZBE, $ZFV, $ZFM));
-            }
-
-            // ADT^A12^ADT_A12
-            if (in_array($eventName, array("A12"))) {
-                foreach ($msgStruct["ADT_A12"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'DG1':
-                                $msgStruct["ADT_A12"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A12"]["elements"][$key]["maxOccurs"] = "0";
-                                $msgStruct["ADT_A12"]["elements"][$key]["Usage"] = "X";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                array_splice($msgStruct["ADT_A12"]["elements"], 7, 0, array($ZBE));
-            }
-
-            // ADT^A21^ADT_A21
-            if (in_array($eventName, array("A21"))) {
-                array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, array($ZBE, $ZFV, $ZFM));
-            }
-
-            // ADT^A22^ADT_A21
-            if (in_array($eventName, array("A22"))) {
-                array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, array($ZBE, $ZFM));
-            }
-
-            // ADT^A25^ADT_A21
-            // ADT^A26^ADT_A21
-            // ADT^A27^ADT_A21
-            // ADT^A32^ADT_A21
-            // ADT^A33^ADT_A21
-            if (in_array($eventName, array("A25", "A26", "A27", "A32", "A33"))) {
-                array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, array($ZBE));
-            }
-
-            // ADT^A15^ADT_A15
-            if (in_array($eventName, array("A15"))) {
-                array_splice($msgStruct["ADT_A15"]["elements"], 8, 0, array($ZBE));
-            }
-
-            // ADT^A16^ADT_A16
-            if (in_array($eventName, array("A16"))) {
-                foreach ($msgStruct["ADT_A16"]["elements"] as $key => $element) {
-                    if (isset($element["segment"])) {
-                        switch ($element["segment"]) {
-                            case 'PV2':
-                                $msgStruct["ADT_A16"]["elements"][$key]["minOccurs"] = "0";
-                                $msgStruct["ADT_A16"]["elements"][$key]["maxOccurs"] = "1";
-                                $msgStruct["ADT_A16"]["elements"][$key]["Usage"] = "RE";
-                                break;
-
-                            default:
-                                break;
-                        }
-                    }
-                }
-                array_splice($msgStruct["ADT_A16"]["elements"], 9, 0, array($ZBE));
-            }
-
-            // ADT^A54^ADT_A54
-            if (in_array($eventName, array("A54"))) {
-                array_splice($msgStruct["ADT_A54"]["elements"], 8, 0, array($ZBE));
-            }
-
-            // ADT^A52^ADT_A52
-            // ADT^A53^ADT_A52
-            // ADT^A55^ADT_A52
-            if (in_array($eventName, array("A52", "A53", "A55"))) {
-                array_splice($msgStruct["ADT_A52"]["elements"], 7, 0, array($ZBE));
-            }
-
-            file_put_contents($outputDir . "/structures/" . $strucureId . ".json", json_encode($msgStruct, JSON_PRETTY_PRINT));
+        if (!file_exists($outputDir . "/structures/" . $strucureId . ".json")) {
+            continue;
         }
+
+        $msgStruct = loadJson($outputDir . "/structures/" . $strucureId . ".json");
+
+        // Update INSURANCE group (IN3)
+        if (isset($msgStruct["INSURANCE"])) {
+            foreach ($msgStruct["INSURANCE"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'IN3':
+                            $msgStruct["INSURANCE"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["INSURANCE"]["elements"][$key]["maxOccurs"] = "1";
+                            $msgStruct["INSURANCE"]["elements"][$key]["Usage"] = "O";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+        //
+        // ITI-30
+        //
+
+        // ADT^A28^ADT_A05
+        // ADT^A31^ADT_A05
+        if (in_array($eventName, ["A28", "A31"], true)) {
+
+            $ROL = 0;
+            $ZFA = ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"];
+            $ZFD = ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"];
+            $ZFS = ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "C"];
+
+            foreach ($msgStruct["ADT_A05"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'NK1':
+                            $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "unbounded";
+                            $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "RE";
+                            break;
+
+                        case 'PV2':
+                            $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        case 'ROL':
+                            $ROL++;
+                            if ($ROL == 2) {
+                                $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
+                                $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "0";
+                                $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "X";
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, [$ZFA, $ZFD, $ZFS]);
+        }
+
+        // ADT^A40^ADT_A39
+        if (in_array($eventName, ["A40"], true)) {
+
+            foreach ($msgStruct["ADT_A39"]["elements"] as $key => $element) {
+                if (isset($element["group"])) {
+                    switch ($element["group"]) {
+                        case 'PATIENT':
+                            $msgStruct["ADT_A39"]["elements"][$key]["minOccurs"] = "1";
+                            $msgStruct["ADT_A39"]["elements"][$key]["maxOccurs"] = "1";
+                            $msgStruct["ADT_A39"]["elements"][$key]["Usage"] = "R";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            foreach ($msgStruct["PATIENT"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'PV1':
+                            $msgStruct["PATIENT"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["PATIENT"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["PATIENT"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+        }
+
+        // ADT^A47^ADT_A30
+        if (in_array($eventName, ["A47"], true)) {
+            $msgStruct = [
+                "PATIENT" => [
+                    "elements" => [
+                        0 => ["segment" => "PID", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                        1 => ["segment" => "PD1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
+                        2 => ["segment" => "MRG", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                    ]
+                ],
+                "ADT_A30" => [
+                    "elements" => [
+                        0 => ["segment" => "MSH", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                        1 => ["segment" => "SFT", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"],
+                        2 => ["segment" => "EVN", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                        3 => ["group" => "PATIENT", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                    ]
+                ]
+            ];
+        }
+
+
+        //
+        // ITI-31
+        //
+
+        $ZBE = ["segment" => "ZBE", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"];
+        $ZFA = ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+        $ZFP = ["segment" => "ZFP", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+        $ZFV = ["segment" => "ZFV", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+        $ZFM = ["segment" => "ZFM", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+        $ZFD = ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+        $ZFS = ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"];
+
+        // ADT^A01^ADT_A01
+        // ADT^A04^ADT_A01
+        // ADT^Z99^ADT_A01
+        if (in_array($eventName, ["A01", "A04", "Z99"], true)) {
+            array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD]);
+        }
+
+        // ADT^A01^ADT_A01
+        // ADT^A04^ADT_A01
+        if (in_array($eventName, ["A01", "A04"])) {
+            $ROL = 0;
+
+            foreach ($msgStruct["ADT_A01"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'ROL':
+                            $ROL++;
+                            if ($ROL == 1) {
+                                $msgStruct["ADT_A01"]["elements"][$key]["minOccurs"] = "0";
+                                $msgStruct["ADT_A01"]["elements"][$key]["maxOccurs"] = "unbounded";
+                                $msgStruct["ADT_A01"]["elements"][$key]["Usage"] = "RE";
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+
+        // ADT^A09^ADT_A09
+        if (in_array($eventName, ["A09"], true)) {
+            array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, [$ZBE]);
+        }
+
+        // ADT^A10^ADT_A09
+        // ADT^A11^ADT_A09
+        if (in_array($eventName, ["A10", "A11"], true)) {
+            foreach ($msgStruct["ADT_A09"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'DG1':
+                            $msgStruct["ADT_A09"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A09"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["ADT_A09"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, [$ZBE]);
+        }
+
+        // ADT^A03^ADT_A03
+        if (in_array($eventName, ["A03"], true)) {
+            foreach ($msgStruct["ADT_A03"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'PV2':
+                            $msgStruct["ADT_A03"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A03"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["ADT_A03"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            array_splice( $msgStruct["ADT_A03"]["elements"], 9, 0, [$ZBE, $ZFV, $ZFM]);
+        }
+
+        // ADT^A13^ADT_A01
+        if (in_array($eventName, ["A13"], true)) {
+            array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, [$ZBE]);
+        }
+
+        // ADT^A05^ADT_A05
+        // ADT^A14^ADT_A05
+        if (in_array($eventName, ["A05", "A14"], true)) {
+            foreach ($msgStruct["ADT_A05"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'PV2':
+                            $msgStruct["ADT_A05"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A05"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["ADT_A05"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            $PDA = ["segment" => "PDA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+
+            array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD]);
+            array_splice($msgStruct["ADT_A05"]["elements"], count($msgStruct["ADT_A05"]["elements"]), 0, [$PDA]);
+        }
+
+        // ADT^A38^ADT_A38
+        if (in_array($eventName, ["A38"], true)) {
+            array_splice($msgStruct["ADT_A38"]["elements"], 7, 0, [$ZBE]);
+        }
+
+        // ADT^A06^ADT_A06
+        // ADT^A07^ADT_A06
+        if (in_array($eventName, ["A06", "A07"], true)) {
+            foreach ($msgStruct["ADT_A06"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'MRG':
+                            $msgStruct["ADT_A06"]["elements"][$key]["Usage"] = "C";
+                            break;
+
+                        case 'PV2':
+                            $msgStruct["ADT_A06"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A06"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["ADT_A06"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+
+        // ADT^A06^ADT_A06
+        if (in_array($eventName, ["A06"], true)) {
+            array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, [$ZBE, $ZFM]);
+        }
+        // ADT^A07^ADT_A06
+        if (in_array($eventName, ["A07"], true)) {
+            array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, [$ZBE]);
+        }
+
+        // ADT^A02^ADT_A02
+        if (in_array($eventName, ["A02"], true)) {
+            array_splice($msgStruct["ADT_A02"]["elements"], 8, 0, [$ZBE, $ZFV, $ZFM]);
+        }
+
+        // ADT^A12^ADT_A12
+        if (in_array($eventName, array("A12"))) {
+            foreach ($msgStruct["ADT_A12"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'DG1':
+                            $msgStruct["ADT_A12"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A12"]["elements"][$key]["maxOccurs"] = "0";
+                            $msgStruct["ADT_A12"]["elements"][$key]["Usage"] = "X";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            array_splice($msgStruct["ADT_A12"]["elements"], 7, 0, [$ZBE]);
+        }
+
+        // ADT^A21^ADT_A21
+        if (in_array($eventName, ["A21"], true)) {
+            array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE, $ZFV, $ZFM]);
+        }
+
+        // ADT^A22^ADT_A21
+        if (in_array($eventName, ["A22"], true)) {
+            array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE, $ZFM]);
+        }
+
+        // ADT^A25^ADT_A21
+        // ADT^A26^ADT_A21
+        // ADT^A27^ADT_A21
+        // ADT^A32^ADT_A21
+        // ADT^A33^ADT_A21
+        if (in_array($eventName, ["A25", "A26", "A27", "A32", "A33"], true)) {
+            array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE]);
+        }
+
+        // ADT^A15^ADT_A15
+        if (in_array($eventName, ["A15"], true)) {
+            array_splice($msgStruct["ADT_A15"]["elements"], 8, 0, [$ZBE]);
+        }
+
+        // ADT^A16^ADT_A16
+        if (in_array($eventName, ["A16"], true)) {
+            foreach ($msgStruct["ADT_A16"]["elements"] as $key => $element) {
+                if (isset($element["segment"])) {
+                    switch ($element["segment"]) {
+                        case 'PV2':
+                            $msgStruct["ADT_A16"]["elements"][$key]["minOccurs"] = "0";
+                            $msgStruct["ADT_A16"]["elements"][$key]["maxOccurs"] = "1";
+                            $msgStruct["ADT_A16"]["elements"][$key]["Usage"] = "RE";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            array_splice($msgStruct["ADT_A16"]["elements"], 9, 0, [$ZBE]);
+        }
+
+        // ADT^A54^ADT_A54
+        if (in_array($eventName, array("A54"))) {
+            array_splice($msgStruct["ADT_A54"]["elements"], 8, 0, [$ZBE]);
+        }
+
+        // ADT^A52^ADT_A52
+        // ADT^A53^ADT_A52
+        // ADT^A55^ADT_A52
+        if (in_array($eventName, ["A52", "A53", "A55"], true)) {
+            array_splice($msgStruct["ADT_A52"]["elements"], 7, 0, [$ZBE]);
+        }
+
+        saveJson($outputDir . "/structures/" . $strucureId . ".json", $msgStruct);
+
     }
 }
 
-echo "Update message structures: done.<br/>";
-
+echo "Update message structures: done.\n";
 
 
 
 ksort($segmentsSchemas);
 ksort($fieldsSchemas);
 ksort($dataTypesSchemas);
-file_put_contents($outputDir . "/segments/segments.json", json_encode($segmentsSchemas, JSON_PRETTY_PRINT));
-file_put_contents($outputDir . "/fields/fields.json", json_encode($fieldsSchemas, JSON_PRETTY_PRINT));
-file_put_contents($outputDir . "/dataTypes/dataTypes.json", json_encode($dataTypesSchemas, JSON_PRETTY_PRINT));
-file_put_contents($outputDir . "/messageType.json", json_encode($messageStructures, JSON_PRETTY_PRINT));
-file_put_contents($outputDir . "/eventDesc.json", json_encode($messageDesc, JSON_PRETTY_PRINT));
 
-echo "Done.";
+saveJson($outputDir . "/segments/segments.json",   $segmentsSchemas);
+saveJson($outputDir . "/fields/fields.json",       $fieldsSchemas);
+saveJson($outputDir . "/dataTypes/dataTypes.json", $dataTypesSchemas);
+saveJson($outputDir . "/messageType.json",         $messageStructures);
+saveJson($outputDir . "/eventDesc.json",           $messageDesc);
+
+echo "Done.\n";
