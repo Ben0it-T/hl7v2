@@ -1,12 +1,12 @@
 <?php
 /**
- * Create json profile from json schema
+ * Create XML profiles from JSON schemas.
  * 
+ * Usage:
+ * php 07-create-xml-profile.php
  */
 
 declare(strict_types=1);
-require_once("config.php");
-
 
 class HL7xmlProfilesGenerator {
     /**
@@ -33,21 +33,23 @@ class HL7xmlProfilesGenerator {
     private array $segmentsSchemas;
     private array $fieldsSchemas;
     private array $dataTypesSchemas;
-    private object $messageProfile;
+    private DOMDocument $messageProfile;
 
     /**
      * Create a new instance
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->setDefaults();
         
     }
 
-    private function setDefaults() {
-        $this->structuresSchemas = array();
-        $this->segmentsSchemas = array();
-        $this->fieldsSchemas = array();
-        $this->dataTypesSchemas = array();
+    private function setDefaults(): void
+    {
+        $this->structuresSchemas = [];
+        $this->segmentsSchemas = [];
+        $this->fieldsSchemas = [];
+        $this->dataTypesSchemas = [];
         $this->eventName = "";
         $this->fieldsConstraints = false;
     }
@@ -57,31 +59,38 @@ class HL7xmlProfilesGenerator {
      * 
      * @param string $filename / $directory
      */
-    public function setDataTypesFilename($filename) {
+    public function setDataTypesFilename(string $filename): void
+    {
         $this->dataTypesFilename = $filename;
     }
 
-    public function setFieldsFilename($filename) {
+    public function setFieldsFilename(string $filename): void
+    {
         $this->fieldsFilename = $filename;
     }
 
-    public function setSegmentsFilename($filename) {
+    public function setSegmentsFilename(string $filename): void
+    {
         $this->segmentsFilename = $filename;
     }
 
-    public function setMessageTypeFilename($filename) {
+    public function setMessageTypeFilename(string $filename): void
+    {
         $this->messageTypeFilename = $filename;
     }
 
-    public function setEventDescFilename($filename) {
+    public function setEventDescFilename(string $filename): void
+    {
         $this->eventDescFilename = $filename;
     }
 
-    public function setStructuresInputDir($directory) {
+    public function setStructuresInputDir(string $directory): void
+    {
         $this->structuresInputDir = $directory;
     }
 
-    public function setProfilesOutputDir($directory) {
+    public function setProfilesOutputDir(string $directory): void
+    {
         $this->profilesOutputDir = $directory;
     }
 
@@ -90,7 +99,8 @@ class HL7xmlProfilesGenerator {
      * 
      * @param bool $fieldsConstraints
      */
-    public function setFieldsConstraints($fieldsConstraints) {
+    public function setFieldsConstraints(bool $fieldsConstraints): void
+    {
         $this->fieldsConstraints = $fieldsConstraints;
     }
 
@@ -102,30 +112,31 @@ class HL7xmlProfilesGenerator {
      * @param array $messageType
      * @param array $ignoreEvents
      */
-    public function createXmlProfiles($HL7Version, $messageType, $ignoreEvents = array()) {
+    public function createXmlProfiles(string $HL7Version, array $messageType, array $ignoreEvents = []): void
+    {
         // Load json schemas
-        $this->messageType = $this->loadJsonSchemas($this->messageTypeFilename);
-        $this->eventDesc = $this->loadJsonSchemas($this->eventDescFilename);
+        $this->messageType = $this->loadJson($this->messageTypeFilename);
+        $this->eventDesc = $this->loadJson($this->eventDescFilename);
         
-        $this->dataTypesSchemas = $this->loadJsonSchemas($this->dataTypesFilename);
-        $this->fieldsSchemas = $this->loadJsonSchemas($this->fieldsFilename);
-        $this->segmentsSchemas = $this->loadJsonSchemas($this->segmentsFilename);
+        $this->dataTypesSchemas = $this->loadJson($this->dataTypesFilename);
+        $this->fieldsSchemas = $this->loadJson($this->fieldsFilename);
+        $this->segmentsSchemas = $this->loadJson($this->segmentsFilename);
 
         // Create profiles
         foreach ($this->messageType as $type => $event) {
             if (in_array($type, $messageType)) {
-                foreach ($event as $eventName => $strucureName) {
+                foreach ($event as $eventName => $structureName) {
                     if (in_array($eventName, $ignoreEvents)) {
                         continue;
                     }
                     $this->eventName = $eventName;
                     $xmlDoc = new DOMDocument("1.0", "UTF-8" );
 
-                    // get strucureId
-                    $nameParts = explode("-", $strucureName);
-                    $strucureId = end($nameParts);
+                    // get structureId
+                    $nameParts = explode("-", $structureName);
+                    $structureId = end($nameParts);
 
-                    $outputFilename = "$type-$eventName-$strucureId.xml";
+                    $outputFilename = "$type-$eventName-$structureId.xml";
                     $eventDesc = $this->eventDesc[$type][$eventName];
 
                     // output format 
@@ -175,7 +186,7 @@ class HL7xmlProfilesGenerator {
                     $HL7v2xStaticDef = $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("HL7v2xStaticDef"));
                     $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('MsgType'))->appendChild($xmlDoc->createTextNode($type));
                     $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('EventType'))->appendChild($xmlDoc->createTextNode($eventName));
-                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('MsgStructID'))->appendChild($xmlDoc->createTextNode($strucureId));
+                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('MsgStructID'))->appendChild($xmlDoc->createTextNode($structureId));
                     $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('EventDesc'))->appendChild($xmlDoc->createTextNode($eventDesc));
                     $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('Role'))->appendChild($xmlDoc->createTextNode("Sender"));
 
@@ -185,17 +196,17 @@ class HL7xmlProfilesGenerator {
                     $MetaData->appendChild($xmlDoc->createAttribute('OrgName'))->appendChild($xmlDoc->createTextNode("IHE"));
                     $MetaData->appendChild($xmlDoc->createAttribute('Version'))->appendChild($xmlDoc->createTextNode($HL7Version));
                     $MetaData->appendChild($xmlDoc->createAttribute('Status'))->appendChild($xmlDoc->createTextNode("DRAFT"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Topics'))->appendChild($xmlDoc->createTextNode("confsig-IHE-" . $HL7Version . "-static-" . $type . "-" . $eventName . "-null-" . $strucureId . "-" . $HL7Version . "-DRAFT-Sender"));
+                    $MetaData->appendChild($xmlDoc->createAttribute('Topics'))->appendChild($xmlDoc->createTextNode("confsig-IHE-" . $HL7Version . "-static-" . $type . "-" . $eventName . "-null-" . $structureId . "-" . $HL7Version . "-DRAFT-Sender"));
                     
                     // get message structure
-                    if (!isset($this->structuresSchemas[$strucureName])) {
-                        $this->structuresSchemas[$strucureName] = $this->loadJsonSchemas($this->structuresInputDir . "/" . $strucureName . ".json");
+                    if (!isset($this->structuresSchemas[$structureName])) {
+                        $this->structuresSchemas[$structureName] = $this->loadJson($this->structuresInputDir . "/" . $structureName . ".json");
                     }
 
-                    // 'root' groupName is strucureId
-                    $groupName = $strucureId;
+                    // 'root' groupName is structureId
+                    $groupName = $structureId;
                     $this->messageProfile = $xmlDoc;
-                    foreach ($this->structuresSchemas[$strucureName][$groupName]["elements"] as $element) {
+                    foreach ($this->structuresSchemas[$structureName][$groupName]["elements"] as $element) {
                         $attributes = $this->getElementAttributes($element);
                         if ($attributes["Type"] == "segment") {
                             // add segment node
@@ -205,30 +216,48 @@ class HL7xmlProfilesGenerator {
                         else if ($attributes["Type"] == "group") {
                             // add group node
                             $segGroupNode = $HL7v2xStaticDef->appendChild($xmlDoc->createElement("SegGroup"));
-                            $this->addSegGroup($segGroupNode, $strucureName, $element["group"], $attributes);
+                            $this->addSegGroup($segGroupNode, $structureName, $element["group"], $attributes);
                         }
                     }
 
-                    echo "- $outputFilename<br/>";
+                    echo "- {$outputFilename}\n";
                     $xmlDoc->save($this->profilesOutputDir . "/" . $outputFilename);
                 }
             }
         }
-        echo "Done.";
+        echo "Done.\n";
     }
 
     /**
-     * Load JSON structure schemas 
+     * Load JSON structure schemas
      *
      * @param $filename
      * @return array $data
      */
-    private function loadJsonSchemas($filename) {
-        $data = array();
-        if (file_exists($filename) && is_file($filename)) {
-            $jsonStr = file_get_contents($filename);
-            $data = json_decode($jsonStr, true);
+    private function loadJson(string $filename): array
+    {
+        if (!is_file($filename)) {
+            throw new RuntimeException(
+                "File not found: {$filename}"
+            );
         }
+
+        $json = file_get_contents($filename);
+
+        if ($json === false) {
+            throw new RuntimeException(
+                "Unable to read file: {$filename}"
+            );
+        }
+
+        $data = json_decode($json, true);
+
+        if (!is_array($data)) {
+            throw new RuntimeException(
+                "Invalid JSON file: {$filename}"
+            );
+        }
+
         return $data;
     }
 
@@ -239,7 +268,8 @@ class HL7xmlProfilesGenerator {
      * @param string $maxOccurs
      * @return string $usage
      */
-    private function getElementUsage($minOccurs = "0", $maxOccurs = "0") {
+    private function getElementUsage(string $minOccurs = "0", string $maxOccurs = "0"): string
+    {
         $usage = "O";
         if ($minOccurs == "0" && $maxOccurs == "0") {
             $usage = "X";
@@ -256,7 +286,8 @@ class HL7xmlProfilesGenerator {
      * @param array $element
      * @return array $attributes
      */
-    private function getElementAttributes($element) {
+    private function getElementAttributes(array $element): array
+    {
         $elementType = (isset($element["segment"]) ? "segment" : "group");
         $elementName = trim($element[$elementType]);
         $elementMin = trim($element["minOccurs"]);
@@ -284,7 +315,8 @@ class HL7xmlProfilesGenerator {
      * @param array $field
      * @return array $fieldAttributes
      */
-    private function getFieldAttributes($field) {
+    private function getFieldAttributes(array $field): array
+    {
         $fieldName = trim($field["field"]);
         $fieldMin = trim($field["minOccurs"]);
         $fieldMax = trim($field["maxOccurs"]);
@@ -310,7 +342,8 @@ class HL7xmlProfilesGenerator {
      * @param array $component
      * @return array $componentAttributes
      */
-    private function getComponentAttributes($component) {
+    private function getComponentAttributes(array $component): array
+    {
         $componentName = trim($component["dataType"]);
         $componentMin = trim($component["minOccurs"]);
         $componentMax = trim($component["maxOccurs"]);
@@ -333,13 +366,13 @@ class HL7xmlProfilesGenerator {
     /**
      * Add segment group
      * 
-     * @param object $segGroupNode
-     * @param string $strucureName (strucureId)
+     * @param DOMElement $segGroupNode
+     * @param string $structureName (structureId)
      * @param string $segGroupName
      * @param array $segGroupAttributes
-     * @return array $segGroup
      */
-    private function addSegGroup($segGroupNode, $strucureName, $segGroupName, $segGroupAttributes) {
+    private function addSegGroup(DOMElement $segGroupNode, string $structureName, string $segGroupName, array $segGroupAttributes): void
+    {
         // add attributes to segment group node
         $segGroupAttributes["LongName"] = $segGroupAttributes["Name"];
         $segGroupNode->appendChild($this->messageProfile->createAttribute('Name'))->appendChild($this->messageProfile->createTextNode($segGroupName));
@@ -348,7 +381,7 @@ class HL7xmlProfilesGenerator {
         $segGroupNode->appendChild($this->messageProfile->createAttribute('Min'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Min"]));
         $segGroupNode->appendChild($this->messageProfile->createAttribute('Max'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Max"]));
 
-        foreach ($this->structuresSchemas[$strucureName][$segGroupName]["elements"] as $element) {
+        foreach ($this->structuresSchemas[$structureName][$segGroupName]["elements"] as $element) {
             $attributes = $this->getElementAttributes($element);
             if ($attributes["Type"] == "segment") {
                 // add segment node
@@ -358,7 +391,7 @@ class HL7xmlProfilesGenerator {
             else if ($attributes["Type"] == "group") {
                 // add group node
                 $segGrpNode = $segGroupNode->appendChild($this->messageProfile->createElement("SegGroup"));
-                $this->addSegGroup($segGrpNode, $strucureName, $element["group"], $attributes);
+                $this->addSegGroup($segGrpNode, $structureName, $element["group"], $attributes);
             }
         }
     }
@@ -366,12 +399,12 @@ class HL7xmlProfilesGenerator {
     /**
      * Add segment schema
      * 
-     * @param object $segNode
+     * @param DOMElement $segNode
      * @param string $segName
      * @param array $segAttributes
-     * @return array $segment
      */
-    private function addSegment($segNode, $segName, $segAttributes) {
+    private function addSegment(DOMElement $segNode, string $segName, array $segAttributes): void
+    {
         // add attributes to segment node
         $segAttributes["LongName"] = trim($this->segmentsSchemas[$segName]["LongName"]);
         $segAttributes["Chapter"] = trim($this->segmentsSchemas[$segName]["Chapter"]);
@@ -383,7 +416,7 @@ class HL7xmlProfilesGenerator {
         // $segNode->appendChild($this->messageProfile->createAttribute('Chapter'))->appendChild($this->messageProfile->createTextNode($segAttributes["Chapter"]));
 
         // get fields
-        $fields = array();
+        $fields = [];
         foreach ($this->segmentsSchemas[$segName]["fields"] as $field) {
             // field attributes
             $fieldAttributes = $this->getFieldAttributes($field);
@@ -397,12 +430,12 @@ class HL7xmlProfilesGenerator {
     /**
      * Add field schema
      * 
-     * @param object $fieldNode
+     * @param DOMElement $fieldNode
      * @param string $fieldName
      * @param array $fieldAttributes
-     * @return array $field
      */
-    private function addField($fieldNode, $fieldName, $fieldAttributes) {
+    private function addField(DOMElement $fieldNode, string $fieldName, array $fieldAttributes): void
+    {
         // set field attributes
         $fieldTable = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? $this->fieldsSchemas[$fieldName]["Table"] : "";
         $fieldTable = (substr($fieldTable,0,3) == "HL7") ? substr($fieldTable,3) : $fieldTable;
@@ -529,7 +562,7 @@ class HL7xmlProfilesGenerator {
         // If dataType has components
         $dataType = $this->fieldsSchemas[$fieldName]["Type"];
         if (isset($this->dataTypesSchemas[$dataType]["components"])) {
-            $components = array();
+            $components = [];
             foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $component) {
                 // component attributes
                 $componentAttributes = $this->getComponentAttributes($component);
@@ -547,13 +580,13 @@ class HL7xmlProfilesGenerator {
     /**
      * Add component schema
      * 
-     * @param object $componentNode
+     * @param DOMElement $componentNode
      * @param string $componentName
      * @param array $componentAttributes
      * @param bool $isSubComponent
-     * @return array $component
      */
-    private function addComponent($componentNode, $componentName, $componentAttributes, $isSubComponent = false) {
+    private function addComponent(DOMElement $componentNode, string $componentName, array $componentAttributes, bool $isSubComponent = false): void
+    {
         // get component attributes
         $componentTable = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? $this->dataTypesSchemas[$componentName]["Table"] : "";
         $componentTable = (substr($componentTable,0,3) == "HL7") ? substr($componentTable,3) : $componentTable;
@@ -579,7 +612,7 @@ class HL7xmlProfilesGenerator {
         // if dataType (component) has (sub)components
         $dataType = $this->dataTypesSchemas[$componentName]["Type"];
         if (isset($this->dataTypesSchemas[$dataType]["components"]) && ! $isSubComponent) {
-            $subcomponents = array();
+            $subcomponents = [];
             foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $subcomponent) {
                 // subcomponent attributes
                 $subcomponentAttributes = $this->getComponentAttributes($subcomponent);
@@ -596,17 +629,58 @@ class HL7xmlProfilesGenerator {
 }
 
 
+$configDist = __DIR__ . '/07-create-xml-profile.config.dist.php';
+$configFile = __DIR__ . '/07-create-xml-profile.config.php';
 
+if (!is_file($configFile)) {
+    if (!copy($configDist, $configFile)) {
+        throw new RuntimeException(
+            'Unable to create configuration file.'
+        );
+    }
 
+    echo "Configuration file created: {$configFile}\n";
+}
 
+$config = require $configFile;
+
+if (!is_array($config)) {
+    throw new RuntimeException(
+        'Invalid configuration file.'
+    );
+}
 
 // config
-$HL7Version   = $createXmlProfile["HL7Version"];
-$inputDir     = $createXmlProfile["inputDir"];
-$outputDir    = $createXmlProfile["outputDir"];
-$msgType      = $createXmlProfile["msgType"];
-$ignoreEvents = $createXmlProfile["ignoreEvents"];
-$fieldsConstr = $createXmlProfile["fieldsConstraints"];
+$HL7Version   = $config["HL7Version"];
+$inputDir     = $config["inputDir"];
+$outputDir    = $config["outputDir"];
+$msgType      = $config["msgType"];
+$ignoreEvents = $config["ignoreEvents"];
+$fieldsConstr = $config["fieldsConstraints"];
+
+if (!is_string($inputDir) || $inputDir === '') {
+    throw new RuntimeException(
+        'Missing inputDir configuration.'
+    );
+}
+
+if (!is_dir($inputDir)) {
+    throw new RuntimeException(
+        "Directory not found: {$inputDir}"
+    );
+}
+
+if (!is_dir($outputDir) && !mkdir($outputDir, 0777, true) && !is_dir($outputDir)) {
+    throw new RuntimeException(
+        "Unable to create directory: {$outputDir}"
+    );
+}
+
+if ($inputDir === $outputDir) {
+    throw new RuntimeException(
+        'Input and output directories must be different.'
+    );
+}
 
 // main
 $profilesGen = new HL7xmlProfilesGenerator();
@@ -627,8 +701,3 @@ $profilesGen->setFieldsConstraints($fieldsConstr);
 
 // create profile
 $profilesGen->createXmlProfiles($HL7Version, $msgType, $ignoreEvents);
-
-
-
-
-

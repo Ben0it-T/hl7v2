@@ -13,6 +13,7 @@ __*.*
 /schemas/json-2.5-org/
 /schemas/json-2.5-sun/
 /scripts/06-create-json-profile.config.php
+/scripts/07-create-xml-profile.config.php
 /scripts/config.php
 
 # Composer
