@@ -63,8 +63,7 @@ class HL7DatatypeXmlSerializer
             }
 
             if ($element['Type'] === 'group') {
-                $groupElement = $dom->createElement($rootName . '.' . $element['Name']
-);
+                $groupElement = $dom->createElement($rootName . '.' . $element['Name']);
                 $parent->appendChild($groupElement);
 
                 $this->appendGroup($dom, $groupElement, $element, $rootName);
