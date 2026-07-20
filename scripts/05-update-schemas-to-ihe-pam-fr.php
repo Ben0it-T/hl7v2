@@ -555,6 +555,7 @@ foreach ($segmentsSchemas["PID"]["fields"] as $key => $field) {
             break;
 
         case 'PID.31':
+            // IHE-CP-ITI-FR-2015-110
             $segmentsSchemas["PID"]["fields"][$key]["minOccurs"] = "0";
             $segmentsSchemas["PID"]["fields"][$key]["maxOccurs"] = "1";
             $segmentsSchemas["PID"]["fields"][$key]["Usage"] = "CE";
