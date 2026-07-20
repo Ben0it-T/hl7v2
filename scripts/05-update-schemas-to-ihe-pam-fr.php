@@ -263,7 +263,7 @@ $ZFVsegment = array(
             array("field" => "ZFV.7",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
             array("field" => "ZFV.8",  "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"),
             array("field" => "ZFV.9",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
-            array("field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
+            array("field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"),
             array("field" => "ZFV.11", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"),
         ),
         "LongName" => "Complément d'information sur la venue",
@@ -282,7 +282,7 @@ $ZFVfields = array(
     "ZFV.7"  => array("Item" => "", "Type" => "CX", "Table" => "", "LongName" => "NDA de l'établissement de provenance", "maxLength" => "250", "Chapter" => ""),
     "ZFV.8"  => array("Item" => "", "Type" => "CX", "Table" => "", "LongName" => "Numéro d'archives", "maxLength" => "250", "Chapter" => ""),
     "ZFV.9"  => array("Item" => "", "Type" => "IS", "Table" => "", "LongName" => "Mode de sortie personnalisé", "maxLength" => "6", "Chapter" => ""),
-    "ZFV.10" => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFV-10", "LongName" => "Code RIM-P du mode légal de soin transmis dans le PV2-3", "maxLength" => "2", "Chapter" => ""),
+    "ZFV.10" => array("Item" => "", "Type" => "IS", "Table" => "IHE-FRANCE-ZFV-10", "LongName" => "Code RIM-P du mode légal de soin transmis dans le PV2-3 (Obsolète)", "maxLength" => "2", "Chapter" => ""),
     "ZFV.11" => array("Item" => "", "Type" => "CE", "Table" => "IHE-FRANCE-ZFV-11", "LongName" => "Prise en charge durant le transport", "maxLength" => "250", "Chapter" => ""),
 );
 
