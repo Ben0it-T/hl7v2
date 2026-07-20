@@ -27,9 +27,10 @@ class HL7DatatypeXmlSerializer
             $root = $dom->createElement($profiledMessage['Name']);
         }
 
+        $rootName = $profiledMessage['Name'];
         $dom->appendChild($root);
 
-        $this->appendGroup($dom, $root, $profiledMessage);
+        $this->appendGroup($dom, $root, $profiledMessage, $rootName);
 
         $xml = $dom->saveXML();
 
@@ -48,10 +49,11 @@ class HL7DatatypeXmlSerializer
      * @param \DOMDocument $dom
      * @param \DOMElement $parent
      * @param array<string, mixed> $group
+     * @param string $rootName
      *
      * @return void
      */
-    private function appendGroup(\DOMDocument $dom, \DOMElement $parent, array $group): void
+    private function appendGroup(\DOMDocument $dom, \DOMElement $parent, array $group, string $rootName): void
     {
         foreach ($group['segments'] as $element) {
 
@@ -61,10 +63,11 @@ class HL7DatatypeXmlSerializer
             }
 
             if ($element['Type'] === 'group') {
-                $groupElement = $dom->createElement($element['Name']);
+                $groupElement = $dom->createElement($rootName . '.' . $element['Name']
+);
                 $parent->appendChild($groupElement);
 
-                $this->appendGroup($dom, $groupElement, $element);
+                $this->appendGroup($dom, $groupElement, $element, $rootName);
             }
         }
     }
