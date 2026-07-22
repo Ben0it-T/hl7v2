@@ -113,6 +113,45 @@ function saveJson(string $filename, array $data): void
     file_put_contents($filename, $json);
 }
 
+/**
+ * Insert a segment after another segment
+ *
+ * @param array $elements
+ * @param string $segment
+ * @param array $newElements
+ *
+ * @return array $elements
+ */
+function insertAfterSegment(array $elements, string $segment, array $newElements): array {
+    foreach ($elements as $index => $element) {
+        if (($element["segment"] ?? null) === $segment) {
+            array_splice($elements, $index + 1, 0, $newElements);
+            return $elements;
+        }
+    }
+
+    throw new RuntimeException("Segment '$segment' not found");
+}
+
+/**
+ * Insert a segment before another segment
+ *
+ * @param array $elements
+ * @param string $segment
+ * @param array $newElements
+ *
+ * @return array $elements
+ */
+function insertBeforeSegment(array $elements, string $segment, array $newElements): array {
+    foreach ($elements as $index => $element) {
+        if (($element["segment"] ?? null) === $segment) {
+            array_splice($elements, $index, 0, $newElements);
+            return $elements;
+        }
+    }
+
+    throw new RuntimeException("Segment '$segment' not found");
+}
 
 
 // Load json schemas
@@ -1256,8 +1295,42 @@ echo "Update data types: done.\n";
  * Update structures
  * -------------------------------------
  *
- * TODO: fix IHE PAM FR 2.11.2 Z-segments usage.
+ * Fix: IHE PAM FR 2.11.2 Z-segments usage.
  *
+ * IHE-CP-ITI-FR-2016-126
+ * IHE-CP-ITI-FR-2016-127
+ *   Changed all RE Z* segments to O
+ *   Empty Z* segments SHALL NOT be transmitted.
+ *
+ * ITI-30
+ *   The precedence order used by this implementation is:
+ *   1. IHE PAM FR 2.11.2 specification
+ *   2. Integrated Change Proposals (CP)
+ *
+ *   A28/A31 :
+ *     - ZFA : Usage O
+ *     - ZFD : Usage O
+ *     - ZFS : Usage O
+ *
+ *    A40/A47 :
+ *     - ZFA/ZFD/ZFS not present
+ *
+ * ITI-31
+ *   Special case: ZBE
+ *     - PAM FR 2.6 already states:
+ *         "The ZBE segment is required for events:
+ *          A01, A02, A03, A04, A05, A06, A07, A11, A12, A13,
+ *          A14, A15, A16, A21, A22, A25, A26, A27, A38,
+ *          A52, A53, A54, A55 and Z99."
+ *
+ *     - PAM FR 2.11.2 additionally specifies:
+ *         - ADT_A05 structure:
+ *           ZBE Movement segment = R [1..1]
+ *
+ *         - Historic Movement option:
+ *           Usage = R
+ *
+ *   Consequently: ZBE = R
  */
 
 $messageStructures = [];
@@ -1350,11 +1423,17 @@ foreach ($messageStructures as $type => $event) {
         // ADT^A31^ADT_A05
         if (in_array($eventName, ["A28", "A31"], true)) {
 
-            $ROL = 0;
-            $ZFA = ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"];
-            $ZFD = ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"];
-            $ZFS = ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "C"];
 
+
+            // IHE-CP-ITI-FR-2016-126
+            // IHE-CP-ITI-FR-2016-127
+            // ZFA/ZFP/ZFV/ZFM/ZFD/ZFS usages changed from RE to O.
+            // Empty Z* segments SHALL NOT be transmitted.
+            $ZFA = ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+            $ZFD = ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+            $ZFS = ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"];
+
+            $ROL = 0;
             foreach ($msgStruct["ADT_A05"]["elements"] as $key => $element) {
                 if (isset($element["segment"])) {
                     switch ($element["segment"]) {
@@ -1385,7 +1464,15 @@ foreach ($messageStructures as $type => $event) {
                 }
             }
 
-            array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, [$ZFA, $ZFD, $ZFS]);
+            // Legacy implementation:
+            // array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, [$ZFA, $ZFD, $ZFS]);
+
+            // Insert relative to PV2 instead of relying on a hard-coded index.
+            $msgStruct["ADT_A05"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A05"]["elements"],
+                "PV2",
+                [$ZFA, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A40^ADT_A39
@@ -1449,6 +1536,11 @@ foreach ($messageStructures as $type => $event) {
         // ITI-31
         //
 
+        // IHE-CP-ITI-FR-2016-126
+        // IHE-CP-ITI-FR-2016-127
+        // ZFA/ZFP/ZFV/ZFM/ZFD/ZFS usages changed from RE to O.
+        // Empty Z* segments SHALL NOT be transmitted.
+
         $ZBE = ["segment" => "ZBE", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"];
         $ZFA = ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
         $ZFP = ["segment" => "ZFP", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
@@ -1461,7 +1553,15 @@ foreach ($messageStructures as $type => $event) {
         // ADT^A04^ADT_A01
         // ADT^Z99^ADT_A01
         if (in_array($eventName, ["A01", "A04", "Z99"], true)) {
-            array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD]);
+            // Legacy implementation:
+            // array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD]);
+
+            // Insert relative to PV2 instead of relying on a hard-coded index.
+            $msgStruct["ADT_A01"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A01"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A01^ADT_A01
@@ -1491,7 +1591,12 @@ foreach ($messageStructures as $type => $event) {
 
         // ADT^A09^ADT_A09
         if (in_array($eventName, ["A09"], true)) {
-            array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, [$ZBE]);
+            //array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, [$ZBE]);
+            $msgStruct["ADT_A09"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A09"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A10^ADT_A09
@@ -1512,7 +1617,12 @@ foreach ($messageStructures as $type => $event) {
                 }
             }
 
-            array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, [$ZBE]);
+            //array_splice( $msgStruct["ADT_A09"]["elements"], 7, 0, [$ZBE]);
+            $msgStruct["ADT_A09"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A09"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A03^ADT_A03
@@ -1532,12 +1642,22 @@ foreach ($messageStructures as $type => $event) {
                 }
             }
 
-            array_splice( $msgStruct["ADT_A03"]["elements"], 9, 0, [$ZBE, $ZFV, $ZFM]);
+            //array_splice( $msgStruct["ADT_A03"]["elements"], 9, 0, [$ZBE, $ZFV, $ZFM]);
+            $msgStruct["ADT_A03"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A03"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A13^ADT_A01
         if (in_array($eventName, ["A13"], true)) {
-            array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A01"]["elements"], 9, 0, [$ZBE]);
+            $msgStruct["ADT_A01"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A01"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A05^ADT_A05
@@ -1558,15 +1678,30 @@ foreach ($messageStructures as $type => $event) {
                 }
             }
 
-            $PDA = ["segment" => "PDA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+            //array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD]);
+            $msgStruct["ADT_A05"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A05"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
 
-            array_splice($msgStruct["ADT_A05"]["elements"], 9, 0, [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD]);
-            array_splice($msgStruct["ADT_A05"]["elements"], count($msgStruct["ADT_A05"]["elements"]), 0, [$PDA]);
+            $PDA = ["segment" => "PDA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"];
+            // array_splice($msgStruct["ADT_A05"]["elements"], count($msgStruct["ADT_A05"]["elements"]), 0, [$PDA]);
+            $msgStruct["ADT_A05"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A05"]["elements"],
+                "UB2",
+                [$PDA]
+            );
         }
 
         // ADT^A38^ADT_A38
         if (in_array($eventName, ["A38"], true)) {
-            array_splice($msgStruct["ADT_A38"]["elements"], 7, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A38"]["elements"], 7, 0, [$ZBE]);
+            $msgStruct["ADT_A38"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A38"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A06^ADT_A06
@@ -1590,20 +1725,22 @@ foreach ($messageStructures as $type => $event) {
                     }
                 }
             }
-        }
 
-        // ADT^A06^ADT_A06
-        if (in_array($eventName, ["A06"], true)) {
-            array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, [$ZBE, $ZFM]);
-        }
-        // ADT^A07^ADT_A06
-        if (in_array($eventName, ["A07"], true)) {
-            array_splice($msgStruct["ADT_A06"]["elements"], 10, 0, [$ZBE]);
+            $msgStruct["ADT_A06"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A06"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A02^ADT_A02
         if (in_array($eventName, ["A02"], true)) {
-            array_splice($msgStruct["ADT_A02"]["elements"], 8, 0, [$ZBE, $ZFV, $ZFM]);
+            //array_splice($msgStruct["ADT_A02"]["elements"], 8, 0, [$ZBE, $ZFV, $ZFM]);
+            $msgStruct["ADT_A02"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A02"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A12^ADT_A12
@@ -1623,17 +1760,32 @@ foreach ($messageStructures as $type => $event) {
                 }
             }
 
-            array_splice($msgStruct["ADT_A12"]["elements"], 7, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A12"]["elements"], 7, 0, [$ZBE]);
+            $msgStruct["ADT_A12"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A12"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A21^ADT_A21
         if (in_array($eventName, ["A21"], true)) {
-            array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE, $ZFV, $ZFM]);
+            //array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE, $ZFV, $ZFM]);
+            $msgStruct["ADT_A21"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A21"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A22^ADT_A21
         if (in_array($eventName, ["A22"], true)) {
-            array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE, $ZFM]);
+            //array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE, $ZFM]);
+            $msgStruct["ADT_A21"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A21"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A25^ADT_A21
@@ -1642,12 +1794,22 @@ foreach ($messageStructures as $type => $event) {
         // ADT^A32^ADT_A21
         // ADT^A33^ADT_A21
         if (in_array($eventName, ["A25", "A26", "A27", "A32", "A33"], true)) {
-            array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE]);
+            // array_splice($msgStruct["ADT_A21"]["elements"], 7, 0, [$ZBE]);
+            $msgStruct["ADT_A21"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A21"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A15^ADT_A15
         if (in_array($eventName, ["A15"], true)) {
-            array_splice($msgStruct["ADT_A15"]["elements"], 8, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A15"]["elements"], 8, 0, [$ZBE]);
+            $msgStruct["ADT_A15"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A15"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A16^ADT_A16
@@ -1667,19 +1829,34 @@ foreach ($messageStructures as $type => $event) {
                 }
             }
 
-            array_splice($msgStruct["ADT_A16"]["elements"], 9, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A16"]["elements"], 9, 0, [$ZBE]);
+            $msgStruct["ADT_A16"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A16"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A54^ADT_A54
         if (in_array($eventName, array("A54"))) {
-            array_splice($msgStruct["ADT_A54"]["elements"], 8, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A54"]["elements"], 8, 0, [$ZBE]);
+            $msgStruct["ADT_A54"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A54"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         // ADT^A52^ADT_A52
         // ADT^A53^ADT_A52
         // ADT^A55^ADT_A52
         if (in_array($eventName, ["A52", "A53", "A55"], true)) {
-            array_splice($msgStruct["ADT_A52"]["elements"], 7, 0, [$ZBE]);
+            //array_splice($msgStruct["ADT_A52"]["elements"], 7, 0, [$ZBE]);
+            $msgStruct["ADT_A52"]["elements"] = insertAfterSegment(
+                $msgStruct["ADT_A52"]["elements"],
+                "PV2",
+                [$ZBE, $ZFA, $ZFP, $ZFV, $ZFM, $ZFD, $ZFS]
+            );
         }
 
         saveJson($outputDir . "/structures/" . $strucureId . ".json", $msgStruct);
