@@ -382,8 +382,11 @@ $ZFDsegment = array(
 );
 
 // Add fields
+// PAM FR 2.11.2 specifies maxLength=8, but the datatype
+// components (2+2+4) require a serialized HL7 length of 10
+// including component separators (^).
 $ZFDfields = array(
-    "ZFD.1"  => array("Item" => "", "Type" => "NA", "Table" => "", "LongName" => "Date Lunaire", "maxLength" => "8", "Chapter" => ""),
+    "ZFD.1"  => array("Item" => "", "Type" => "NA", "Table" => "", "LongName" => "Date Lunaire", "maxLength" => "10", "Chapter" => ""),
     "ZFD.2"  => array("Item" => "", "Type" => "NM", "Table" => "", "LongName" => "Nombre de semaines de gestation", "maxLength" => "16", "Chapter" => ""),
     "ZFD.3"  => array("Item" => "", "Type" => "ID", "Table" => "HL70136", "LongName" => "Consentement SMS", "maxLength" => "1", "Chapter" => ""),
     "ZFD.4"  => array("Item" => "", "Type" => "IS", "Table" => "HL70136", "LongName" => "Indicateur de date de naissance corrigée", "maxLength" => "1", "Chapter" => ""),
