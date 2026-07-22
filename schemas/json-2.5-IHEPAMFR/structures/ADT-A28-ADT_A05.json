@@ -91,19 +91,19 @@
                 "segment": "ZFA",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "RE"
+                "Usage": "O"
             },
             {
                 "segment": "ZFD",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "RE"
+                "Usage": "O"
             },
             {
                 "segment": "ZFS",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "Usage": "C"
+                "Usage": "O"
             },
             {
                 "segment": "ROL",

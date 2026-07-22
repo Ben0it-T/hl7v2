@@ -217,7 +217,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Date\/Time Of Message",
+        "LongName": "Date/Time Of Message",
         "Chapter": "2.15.9.7",
         "components": [
           {
@@ -1886,7 +1886,7 @@
             "Max": "0",
             "Type": "NM",
             "Table": "",
-            "LongName": "Area\/City Code",
+            "LongName": "Area/City Code",
             "maxLength": "5"
           },
           {

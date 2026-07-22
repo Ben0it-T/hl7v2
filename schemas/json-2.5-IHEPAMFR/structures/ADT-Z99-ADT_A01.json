@@ -122,6 +122,12 @@
                 "Usage": "O"
             },
             {
+                "segment": "ZFS",
+                "minOccurs": "0",
+                "maxOccurs": "unbounded",
+                "Usage": "O"
+            },
+            {
                 "segment": "ROL",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded"

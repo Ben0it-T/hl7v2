@@ -1124,7 +1124,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Blood Product Transfusion\/Disposition",
+        "LongName": "Blood Product Transfusion/Disposition",
         "Chapter": "4.21.3"
     },
     "CDM": {
@@ -2251,7 +2251,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Equipment\/log Service",
+        "LongName": "Equipment/log Service",
         "Chapter": "13.4.12"
     },
     "EQU": {
@@ -2865,7 +2865,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Grouping\/Reimbursement - Visit",
+        "LongName": "Grouping/Reimbursement - Visit",
         "Chapter": "6.5.15"
     },
     "GP2": {
@@ -2941,7 +2941,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Grouping\/Reimbursement - Procedure Line Item",
+        "LongName": "Grouping/Reimbursement - Procedure Line Item",
         "Chapter": "6.5.16"
     },
     "GT1": {
@@ -5187,7 +5187,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Next of Kin \/ Associated Parties",
+        "LongName": "Next of Kin / Associated Parties",
         "Chapter": "3.4.5"
     },
     "NPU": {
@@ -5723,7 +5723,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Observation\/Result",
+        "LongName": "Observation/Result",
         "Chapter": "9.6.2"
     },
     "ODS": {
@@ -6108,7 +6108,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Categorical Service\/Test\/Observation",
+        "LongName": "Categorical Service/Test/Observation",
         "Chapter": "8.8.10"
     },
     "OM4": {
@@ -9170,7 +9170,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Administration",
+        "LongName": "Pharmacy/Treatment Administration",
         "Chapter": "4.18.1"
     },
     "RXC": {
@@ -9221,7 +9221,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Component Order",
+        "LongName": "Pharmacy/Treatment Component Order",
         "Chapter": "4.14.3"
     },
     "RXD": {
@@ -9392,7 +9392,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Dispense",
+        "LongName": "Pharmacy/Treatment Dispense",
         "Chapter": "4.14.5"
     },
     "RXE": {
@@ -9618,7 +9618,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Encoded Order",
+        "LongName": "Pharmacy/Treatment Encoded Order",
         "Chapter": "4.14.4"
     },
     "RXG": {
@@ -9754,7 +9754,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Give",
+        "LongName": "Pharmacy/Treatment Give",
         "Chapter": "4.14.6"
     },
     "RXO": {
@@ -9900,7 +9900,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Order",
+        "LongName": "Pharmacy/Treatment Order",
         "Chapter": "4.14.1"
     },
     "RXR": {
@@ -9936,7 +9936,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Route",
+        "LongName": "Pharmacy/Treatment Route",
         "Chapter": "4.14.2"
     },
     "SAC": {
@@ -10936,7 +10936,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Timing\/Quantity",
+        "LongName": "Timing/Quantity",
         "Chapter": "4.5.4"
     },
     "TQ2": {
@@ -10992,7 +10992,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Timing\/Quantity Relationship",
+        "LongName": "Timing/Quantity Relationship",
         "Chapter": "4.5.5"
     },
     "TXA": {
@@ -11366,7 +11366,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Results\/update Definition",
+        "LongName": "Results/update Definition",
         "Chapter": "5.10.5.7"
     },
     "URS": {
@@ -11846,8 +11846,8 @@
             {
                 "field": "ZFV.10",
                 "minOccurs": "0",
-                "maxOccurs": "1",
-                "Usage": "O"
+                "maxOccurs": "0",
+                "Usage": "X"
             },
             {
                 "field": "ZFV.11",

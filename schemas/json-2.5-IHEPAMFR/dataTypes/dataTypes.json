@@ -151,7 +151,7 @@
     "CCD.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Date\/time",
+        "LongName": "Date/time",
         "maxLength": "26"
     },
     "CCP": {
@@ -240,7 +240,7 @@
     "CD.3": {
         "Type": "CSU",
         "Table": "",
-        "LongName": "Channel Sensitivity\/Units",
+        "LongName": "Channel Sensitivity/Units",
         "maxLength": "478"
     },
     "CD.4": {
@@ -258,7 +258,7 @@
     "CD.6": {
         "Type": "NR",
         "Table": "",
-        "LongName": "Minimum\/Maximum Data Values",
+        "LongName": "Minimum/Maximum Data Values",
         "maxLength": "33"
     },
     "CE": {
@@ -1217,13 +1217,13 @@
     "DR.1": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Range Start Date\/Time",
+        "LongName": "Range Start Date/Time",
         "maxLength": "26"
     },
     "DR.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Range End Date\/Time",
+        "LongName": "Range End Date/Time",
         "maxLength": "26"
     },
     "DT": {
@@ -1589,13 +1589,13 @@
     "FN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Surname Prefix From Partner\/Spouse",
+        "LongName": "Surname Prefix From Partner/Spouse",
         "maxLength": "20"
     },
     "FN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Surname From Partner\/Spouse",
+        "LongName": "Surname From Partner/Spouse",
         "maxLength": "50"
     },
     "FT": {
@@ -1678,7 +1678,7 @@
     "ICD.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Date\/Time Certification Required",
+        "LongName": "Date/Time Certification Required",
         "maxLength": "26"
     },
     "ID": {
@@ -2331,13 +2331,13 @@
     "NDL.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Start Date\/time",
+        "LongName": "Start Date/time",
         "maxLength": "26"
     },
     "NDL.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "End Date\/time",
+        "LongName": "End Date/time",
         "maxLength": "26"
     },
     "NDL.4": {
@@ -2493,7 +2493,7 @@
     "OSD.1": {
         "Type": "ID",
         "Table": "HL70524",
-        "LongName": "Sequence\/Results Flag",
+        "LongName": "Sequence/Results Flag",
         "maxLength": "1"
     },
     "OSD.10": {
@@ -2817,7 +2817,7 @@
     "PLN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "State\/other Qualifying Information",
+        "LongName": "State/other Qualifying Information",
         "maxLength": "62"
     },
     "PLN.4": {
@@ -2989,7 +2989,7 @@
     "PPN.15": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Date\/Time Action Performed",
+        "LongName": "Date/Time Action Performed",
         "maxLength": "26"
     },
     "PPN.16": {
@@ -3388,7 +3388,7 @@
     "RFR.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Race\/subspecies",
+        "LongName": "Race/subspecies",
         "maxLength": "20"
     },
     "RFR.7": {
@@ -3751,7 +3751,7 @@
     "SN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Separator\/Suffix",
+        "LongName": "Separator/Suffix",
         "maxLength": "1"
     },
     "SN.4": {
@@ -4024,13 +4024,13 @@
     "TQ.4": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Start Date\/Time",
+        "LongName": "Start Date/Time",
         "maxLength": "26"
     },
     "TQ.5": {
         "Type": "TS",
         "Table": "",
-        "LongName": "End Date\/Time",
+        "LongName": "End Date/Time",
         "maxLength": "26"
     },
     "TQ.6": {
@@ -4435,7 +4435,7 @@
     "XAD.9": {
         "Type": "IS",
         "Table": "HL70289",
-        "LongName": "County\/Parish Code",
+        "LongName": "County/Parish Code",
         "maxLength": "20"
     },
     "XCN": {
@@ -5134,7 +5134,7 @@
     "XTN.6": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Area\/City Code",
+        "LongName": "Area/City Code",
         "maxLength": "5"
     },
     "XTN.7": {

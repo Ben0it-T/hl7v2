@@ -2826,7 +2826,7 @@
         <Reference>3.4.4.49</Reference>
       </Field>
     </Segment>
-    <Segment Name="ZFA" LongName="Statut DMP" Usage="RE" Min="0" Max="1">
+    <Segment Name="ZFA" LongName="Statut DMP" Usage="O" Min="0" Max="1">
       <Field Name="Statut du DMP du patient" Usage="RE" Min="0" Max="1" Datatype="ID" Length="20" Table="IHE-FRANCE-ZFA-1" ItemNo="">
         <Reference></Reference>
       </Field>
@@ -2894,7 +2894,7 @@
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
     </Segment>
-    <Segment Name="ZFD" LongName="Complément démographique" Usage="RE" Min="0" Max="1">
+    <Segment Name="ZFD" LongName="Complément démographique" Usage="O" Min="0" Max="1">
       <Field Name="Date Lunaire" Usage="O" Min="0" Max="1" Datatype="NA" Length="8" ItemNo="">
         <Reference></Reference>
         <Component Name="Value1" Usage="R" Datatype="NM" Length="16"/>
@@ -2928,7 +2928,7 @@
         <Component Name="Degree of Precision" Usage="X" Datatype="ID" Length="1" Table="0529"/>
       </Field>
     </Segment>
-    <Segment Name="ZFS" LongName="Mode légal de soins en psychiatrie" Usage="C" Min="0" Max="*">
+    <Segment Name="ZFS" LongName="Mode légal de soins en psychiatrie" Usage="O" Min="0" Max="*">
       <Field Name="Set ID - ZFS" Usage="R" Min="1" Max="1" Datatype="SI" Length="4" ItemNo="">
         <Reference></Reference>
       </Field>

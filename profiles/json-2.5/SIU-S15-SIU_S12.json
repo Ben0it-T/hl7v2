@@ -217,7 +217,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Date\/Time Of Message",
+        "LongName": "Date/Time Of Message",
         "Chapter": "2.15.9.7",
         "components": [
           {
@@ -1384,7 +1384,7 @@
             "Max": "1",
             "Type": "TS",
             "Table": "",
-            "LongName": "Start Date\/Time",
+            "LongName": "Start Date/Time",
             "maxLength": "26",
             "components": [
               {
@@ -1416,7 +1416,7 @@
             "Max": "1",
             "Type": "TS",
             "Table": "",
-            "LongName": "End Date\/Time",
+            "LongName": "End Date/Time",
             "maxLength": "26",
             "components": [
               {
@@ -1498,7 +1498,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0524",
-                "LongName": "Sequence\/Results Flag",
+                "LongName": "Sequence/Results Flag",
                 "maxLength": "1"
               },
               {
@@ -1756,7 +1756,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Surname Prefix From Partner\/Spouse",
+                "LongName": "Surname Prefix From Partner/Spouse",
                 "maxLength": "20"
               },
               {
@@ -1766,7 +1766,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Surname From Partner\/Spouse",
+                "LongName": "Surname From Partner/Spouse",
                 "maxLength": "50"
               }
             ]
@@ -2054,7 +2054,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range Start Date\/Time",
+                "LongName": "Range Start Date/Time",
                 "maxLength": "26"
               },
               {
@@ -2064,7 +2064,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range End Date\/Time",
+                "LongName": "Range End Date/Time",
                 "maxLength": "26"
               }
             ]
@@ -2428,7 +2428,7 @@
             "Max": "0",
             "Type": "NM",
             "Table": "",
-            "LongName": "Area\/City Code",
+            "LongName": "Area/City Code",
             "maxLength": "5"
           },
           {
@@ -2624,7 +2624,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0289",
-            "LongName": "County\/Parish Code",
+            "LongName": "County/Parish Code",
             "maxLength": "20"
           },
           {
@@ -2664,7 +2664,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range Start Date\/Time",
+                "LongName": "Range Start Date/Time",
                 "maxLength": "26"
               },
               {
@@ -2674,7 +2674,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range End Date\/Time",
+                "LongName": "Range End Date/Time",
                 "maxLength": "26"
               }
             ]
@@ -3044,7 +3044,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Surname Prefix From Partner\/Spouse",
+                "LongName": "Surname Prefix From Partner/Spouse",
                 "maxLength": "20"
               },
               {
@@ -3054,7 +3054,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Surname From Partner\/Spouse",
+                "LongName": "Surname From Partner/Spouse",
                 "maxLength": "50"
               }
             ]
@@ -3342,7 +3342,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range Start Date\/Time",
+                "LongName": "Range Start Date/Time",
                 "maxLength": "26"
               },
               {
@@ -3352,7 +3352,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range End Date\/Time",
+                "LongName": "Range End Date/Time",
                 "maxLength": "26"
               }
             ]
@@ -3716,7 +3716,7 @@
             "Max": "0",
             "Type": "NM",
             "Table": "",
-            "LongName": "Area\/City Code",
+            "LongName": "Area/City Code",
             "maxLength": "5"
           },
           {
@@ -3912,7 +3912,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0289",
-            "LongName": "County\/Parish Code",
+            "LongName": "County/Parish Code",
             "maxLength": "20"
           },
           {
@@ -3952,7 +3952,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range Start Date\/Time",
+                "LongName": "Range Start Date/Time",
                 "maxLength": "26"
               },
               {
@@ -3962,7 +3962,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range End Date\/Time",
+                "LongName": "Range End Date/Time",
                 "maxLength": "26"
               }
             ]
@@ -4332,7 +4332,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Surname Prefix From Partner\/Spouse",
+                "LongName": "Surname Prefix From Partner/Spouse",
                 "maxLength": "20"
               },
               {
@@ -4342,7 +4342,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Surname From Partner\/Spouse",
+                "LongName": "Surname From Partner/Spouse",
                 "maxLength": "50"
               }
             ]
@@ -4630,7 +4630,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range Start Date\/Time",
+                "LongName": "Range Start Date/Time",
                 "maxLength": "26"
               },
               {
@@ -4640,7 +4640,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Range End Date\/Time",
+                "LongName": "Range End Date/Time",
                 "maxLength": "26"
               }
             ]
@@ -5004,7 +5004,7 @@
             "Max": "0",
             "Type": "NM",
             "Table": "",
-            "LongName": "Area\/City Code",
+            "LongName": "Area/City Code",
             "maxLength": "5"
           },
           {
@@ -5597,7 +5597,7 @@
     "Usage": "O",
     "Min": "0",
     "Max": "*",
-    "LongName": "Timing\/Quantity",
+    "LongName": "Timing/Quantity",
     "Chapter": "4.5.4",
     "fields": [
       {
@@ -6137,7 +6137,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Start date\/time",
+        "LongName": "Start date/time",
         "Chapter": "4.5.4.7",
         "components": [
           {
@@ -6171,7 +6171,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "End date\/time",
+        "LongName": "End date/time",
         "Chapter": "4.5.4.8",
         "components": [
           {
@@ -7741,7 +7741,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -7751,7 +7751,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -7915,7 +7915,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -7925,7 +7925,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -8075,7 +8075,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -8085,7 +8085,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -8249,7 +8249,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -8259,7 +8259,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -8359,7 +8359,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Date\/Time of Birth",
+            "LongName": "Date/Time of Birth",
             "Chapter": "3.4.2.7",
             "components": [
               {
@@ -8455,7 +8455,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -8465,7 +8465,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -8629,7 +8629,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -8639,7 +8639,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -8935,7 +8935,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0289",
-                "LongName": "County\/Parish Code",
+                "LongName": "County/Parish Code",
                 "maxLength": "20"
               },
               {
@@ -8975,7 +8975,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -8985,7 +8985,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -9137,7 +9137,7 @@
                 "Max": "0",
                 "Type": "NM",
                 "Table": "",
-                "LongName": "Area\/City Code",
+                "LongName": "Area/City Code",
                 "maxLength": "5"
               },
               {
@@ -9271,7 +9271,7 @@
                 "Max": "0",
                 "Type": "NM",
                 "Table": "",
-                "LongName": "Area\/City Code",
+                "LongName": "Area/City Code",
                 "maxLength": "5"
               },
               {
@@ -10749,7 +10749,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Last Update Date\/Time",
+            "LongName": "Last Update Date/Time",
             "Chapter": "3.4.2.33",
             "components": [
               {
@@ -11438,7 +11438,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -11448,7 +11448,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -11736,7 +11736,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -11746,7 +11746,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -12870,7 +12870,7 @@
             "Datatype": "IS",
             "Length": "2",
             "Table": "0141",
-            "LongName": "Military Rank\/Grade",
+            "LongName": "Military Rank/Grade",
             "Chapter": "3.4.10.20"
           },
           {
@@ -13823,7 +13823,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -13833,7 +13833,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -14121,7 +14121,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -14131,7 +14131,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -14495,7 +14495,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -14505,7 +14505,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -14793,7 +14793,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -14803,7 +14803,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -15167,7 +15167,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -15177,7 +15177,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -15465,7 +15465,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -15475,7 +15475,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -16141,7 +16141,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -16151,7 +16151,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -16439,7 +16439,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -16449,7 +16449,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -18001,7 +18001,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Admit Date\/Time",
+            "LongName": "Admit Date/Time",
             "Chapter": "3.4.3.44",
             "components": [
               {
@@ -18035,7 +18035,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Discharge Date\/Time",
+            "LongName": "Discharge Date/Time",
             "Chapter": "3.4.3.45",
             "components": [
               {
@@ -18551,7 +18551,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -18561,7 +18561,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -18849,7 +18849,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -18859,7 +18859,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -19662,7 +19662,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Expected Admit Date\/Time",
+            "LongName": "Expected Admit Date/Time",
             "Chapter": "3.4.4.8",
             "components": [
               {
@@ -19696,7 +19696,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Expected Discharge Date\/Time",
+            "LongName": "Expected Discharge Date/Time",
             "Chapter": "3.4.4.9",
             "components": [
               {
@@ -19826,7 +19826,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -19836,7 +19836,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -20124,7 +20124,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -20134,7 +20134,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -21456,7 +21456,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Expected LOA Return Date\/Time",
+            "LongName": "Expected LOA Return Date/Time",
             "Chapter": "3.4.4.47",
             "components": [
               {
@@ -21490,7 +21490,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Expected Pre-admission Testing Date\/Time",
+            "LongName": "Expected Pre-admission Testing Date/Time",
             "Chapter": "3.4.4.48",
             "components": [
               {
@@ -21535,7 +21535,7 @@
         "Usage": "O",
         "Min": "0",
         "Max": "*",
-        "LongName": "Observation\/Result",
+        "LongName": "Observation/Result",
         "Chapter": "9.6.2",
         "fields": [
           {
@@ -21849,7 +21849,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Date\/Time of the Observation",
+            "LongName": "Date/Time of the Observation",
             "Chapter": "7.4.2.14",
             "components": [
               {
@@ -22017,7 +22017,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -22027,7 +22027,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -22315,7 +22315,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -22325,7 +22325,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -22757,7 +22757,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Date\/Time of the Analysis",
+            "LongName": "Date/Time of the Analysis",
             "Chapter": "7.4.2.19",
             "components": [
               {
@@ -22912,7 +22912,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Diagnosis Date\/Time",
+            "LongName": "Diagnosis Date/Time",
             "Chapter": "6.5.2.5",
             "components": [
               {
@@ -23458,7 +23458,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname Prefix From Partner\/Spouse",
+                    "LongName": "Surname Prefix From Partner/Spouse",
                     "maxLength": "20"
                   },
                   {
@@ -23468,7 +23468,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Surname From Partner\/Spouse",
+                    "LongName": "Surname From Partner/Spouse",
                     "maxLength": "50"
                   }
                 ]
@@ -23756,7 +23756,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range Start Date\/Time",
+                    "LongName": "Range Start Date/Time",
                     "maxLength": "26"
                   },
                   {
@@ -23766,7 +23766,7 @@
                     "Max": "1",
                     "Type": "TS",
                     "Table": "",
-                    "LongName": "Range End Date\/Time",
+                    "LongName": "Range End Date/Time",
                     "maxLength": "26"
                   }
                 ]
@@ -24094,7 +24094,7 @@
             "Datatype": "TS",
             "Length": "26",
             "Table": "",
-            "LongName": "Attestation Date\/Time",
+            "LongName": "Attestation Date/Time",
             "Chapter": "6.5.2.19",
             "components": [
               {
@@ -24430,7 +24430,7 @@
                 "Datatype": "TS",
                 "Length": "26",
                 "Table": "",
-                "LongName": "Start Date\/Time",
+                "LongName": "Start Date/Time",
                 "Chapter": "10.6.4.4",
                 "components": [
                   {
@@ -24464,7 +24464,7 @@
                 "Datatype": "NM",
                 "Length": "20",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset",
+                "LongName": "Start Date/Time Offset",
                 "Chapter": "10.6.4.5"
               },
               {
@@ -24476,7 +24476,7 @@
                 "Datatype": "CE",
                 "Length": "250",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset Units",
+                "LongName": "Start Date/Time Offset Units",
                 "Chapter": "10.6.4.6",
                 "components": [
                   {
@@ -25344,7 +25344,7 @@
                 "Datatype": "TS",
                 "Length": "26",
                 "Table": "",
-                "LongName": "Start Date\/Time",
+                "LongName": "Start Date/Time",
                 "Chapter": "10.6.5.8",
                 "components": [
                   {
@@ -25378,7 +25378,7 @@
                 "Datatype": "NM",
                 "Length": "20",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset",
+                "LongName": "Start Date/Time Offset",
                 "Chapter": "10.6.5.9"
               },
               {
@@ -25390,7 +25390,7 @@
                 "Datatype": "CE",
                 "Length": "250",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset Units",
+                "LongName": "Start Date/Time Offset Units",
                 "Chapter": "10.6.5.10",
                 "components": [
                   {
@@ -26180,7 +26180,7 @@
                 "Datatype": "TS",
                 "Length": "26",
                 "Table": "",
-                "LongName": "Start Date\/Time",
+                "LongName": "Start Date/Time",
                 "Chapter": "10.6.6.6",
                 "components": [
                   {
@@ -26214,7 +26214,7 @@
                 "Datatype": "NM",
                 "Length": "20",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset",
+                "LongName": "Start Date/Time Offset",
                 "Chapter": "10.6.6.7"
               },
               {
@@ -26226,7 +26226,7 @@
                 "Datatype": "CE",
                 "Length": "250",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset Units",
+                "LongName": "Start Date/Time Offset Units",
                 "Chapter": "10.6.6.8",
                 "components": [
                   {
@@ -26698,7 +26698,7 @@
                         "Max": "1",
                         "Type": "ST",
                         "Table": "",
-                        "LongName": "Surname Prefix From Partner\/Spouse",
+                        "LongName": "Surname Prefix From Partner/Spouse",
                         "maxLength": "20"
                       },
                       {
@@ -26708,7 +26708,7 @@
                         "Max": "1",
                         "Type": "ST",
                         "Table": "",
-                        "LongName": "Surname From Partner\/Spouse",
+                        "LongName": "Surname From Partner/Spouse",
                         "maxLength": "50"
                       }
                     ]
@@ -26996,7 +26996,7 @@
                         "Max": "1",
                         "Type": "TS",
                         "Table": "",
-                        "LongName": "Range Start Date\/Time",
+                        "LongName": "Range Start Date/Time",
                         "maxLength": "26"
                       },
                       {
@@ -27006,7 +27006,7 @@
                         "Max": "1",
                         "Type": "TS",
                         "Table": "",
-                        "LongName": "Range End Date\/Time",
+                        "LongName": "Range End Date/Time",
                         "maxLength": "26"
                       }
                     ]
@@ -27458,7 +27458,7 @@
                 "Datatype": "TS",
                 "Length": "26",
                 "Table": "",
-                "LongName": "Start Date\/Time",
+                "LongName": "Start Date/Time",
                 "Chapter": "10.6.7.6",
                 "components": [
                   {
@@ -27492,7 +27492,7 @@
                 "Datatype": "NM",
                 "Length": "20",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset",
+                "LongName": "Start Date/Time Offset",
                 "Chapter": "10.6.7.7"
               },
               {
@@ -27504,7 +27504,7 @@
                 "Datatype": "CE",
                 "Length": "250",
                 "Table": "",
-                "LongName": "Start Date\/Time Offset Units",
+                "LongName": "Start Date/Time Offset Units",
                 "Chapter": "10.6.7.8",
                 "components": [
                   {
