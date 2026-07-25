@@ -1,12 +1,14 @@
 # HL7v2
 
-PHP library to parse, validate and serialize HL7 v2.x messages.
+PHP library to parse, validate, compare and serialize HL7 v2.x messages.
 
 ## Features
 
 - Parse HL7 v2.x messages
 - Validate messages against HL7 profiles
 - Support HL7 standard and custom tables
+- Compare two HL7 messages
+- Ignore selected fields, repetitions, components or sub-components during comparison
 - Export messages to HL7 text format
 - Export messages to structural XML
 - Export messages to datatype-aware XML
@@ -30,6 +32,17 @@ use HL7v2\HL7Message;
 $hl7 = new HL7Message();
 
 $hl7->parse($raw);
+```
+
+Parsed message object model:
+
+```
+Message
+ └─ Segment
+     └─ Field
+         └─ FieldRepeat
+             └─ Component
+                 └─ SubComponent
 ```
 
 Access parsed message information:
@@ -107,6 +120,61 @@ Comments
 Validation errors
 ```
 
+### Compare two messages
+
+```php
+$hl7a = new HL7Message();
+$hl7a->parse($rawA);
+
+$hl7b = new HL7Message();
+$hl7b->parse($rawB);
+
+$result = $hl7a->compare($hl7b);
+
+if ($result->isIdentical()) {
+    echo 'Messages are identical';
+}
+```
+
+Ignore selected fields, repetitions, components or sub-components:
+
+```php
+$result = $hl7a->compare(
+    $hl7b,
+    [
+        'MSH-7',
+        'MSH-10',
+        'PID-3.4.1',
+    ]
+);
+```
+
+Comparison returns a ComparisonResult object containing all detected differences.
+
+```php
+foreach ($result->getDifferences() as $difference) {
+    printf(
+        "%s [%s] left='%s' right='%s'\n",
+        $difference->getPath(),
+        $difference->getType()->name,
+        $difference->getLeft(),
+        $difference->getRight()
+    );
+}
+```
+
+### Ignore rule syntax
+
+| Rule              | Description                                                      |
+| ----------------- | ---------------------------------------------------------------- |
+| `MSH-7`           | Ignore field MSH-7                                               |
+| `PID-3`           | Ignore field PID-3 and all repetitions/components/sub-components |
+| `PID-3.4`         | Ignore component PID-3.4 and all sub-components                  |
+| `PID-3.4.1`       | Ignore sub-component PID-3.4.1                                   |
+| `PID[*]-3[*].4`   | Ignore component PID-3.4 and all its sub-components for all segment indexes and repetitions |
+| `PID[2]-3[0].4.1` | Ignore only a specific path                                      |
+
+
 ### Serialize to structural XML
 
 ```php
@@ -167,6 +235,7 @@ Methods may throw `HL7Exception` when:
 
 - parsing invalid HL7 content
 - validating before parsing a message
+- comparing messages before parsing them
 - exporting a message that has not been parsed
 - exporting datatype-aware XML before validation
 - loading invalid profile definitions
