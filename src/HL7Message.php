@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace HL7v2;
 
 use HL7v2\Exception\HL7Exception;
+use HL7v2\Comparator\ComparisonResult;
+use HL7v2\Comparator\HL7Comparator;
 use HL7v2\Model\Message;
 use HL7v2\Parser\HL7Parser;
 use HL7v2\Profile\Profile;
@@ -26,6 +28,7 @@ class HL7Message
 
     private ?Message $message = null;
     private HL7Parser $parser;
+    private HL7Comparator $comparator;
     private ?ValidationResult $validationResult = null;
 
     /**
@@ -45,6 +48,7 @@ class HL7Message
     {
         $this->logger = $logger;
         $this->parser = new HL7Parser();
+        $this->comparator = new HL7Comparator();
     }
 
     /**
@@ -131,6 +135,35 @@ class HL7Message
         $this->profiledMessage = $validator->getProfiledMessage();
 
         return $this->validationResult;
+    }
+
+    /**
+     * Compare this HL7 message with another HL7 message.
+     *
+     * @param HL7Message $other
+     * @param string[] $ignoreRules
+     *
+     * @return ComparisonResult
+     *
+     * @throws HL7Exception If one of the messages has not been parsed.
+     */
+    public function compare(HL7Message $other, array $ignoreRules = []): ComparisonResult
+    {
+        if ($this->message === null) {
+            throw new HL7Exception(
+                'Current message has not been parsed.'
+            );
+        }
+
+        $otherMessage = $other->getMessage();
+
+        if ($otherMessage === null) {
+            throw new HL7Exception(
+                'Other message has not been parsed.'
+            );
+        }
+
+        return $this->comparator->compare($this->message, $otherMessage, $ignoreRules);
     }
 
     /**
