@@ -12,6 +12,13 @@ final class ComparisonResult
      */
     private array $differences = [];
 
+    private int $comparedPaths = 0;
+
+    public function __construct(int $comparedPaths)
+    {
+        $this->comparedPaths = $comparedPaths;
+    }
+
     /**
      * Add a difference.
      *
@@ -31,6 +38,16 @@ final class ComparisonResult
     public function getDifferences(): array
     {
         return $this->differences;
+    }
+
+    /**
+     * Get compared paths.
+     *
+     * @return int
+     */
+    public function getComparedPaths(): int
+    {
+        return $this->comparedPaths;
     }
 
     /**

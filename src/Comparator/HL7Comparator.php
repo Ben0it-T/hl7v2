@@ -40,14 +40,14 @@ final class HL7Comparator
             $parsedRules[] = $ruleParser->parse($rule);
         }
 
-        $result = new ComparisonResult();
-
         $allPaths = array_unique(
             array_merge(
                 array_keys($leftPaths),
                 array_keys($rightPaths)
             )
         );
+
+        $result = new ComparisonResult(count($allPaths));
 
         sort($allPaths);
 
