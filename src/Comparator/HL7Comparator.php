@@ -49,7 +49,7 @@ final class HL7Comparator
 
         $result = new ComparisonResult(count($allPaths));
 
-        sort($allPaths);
+        // sort($allPaths);
 
         foreach ($allPaths as $pathString) {
 
