@@ -16932,7 +16932,7 @@
         "Type": "NA",
         "Table": "",
         "LongName": "Date Lunaire",
-        "maxLength": "8",
+        "maxLength": "10",
         "Chapter": ""
     },
     "ZFD.2": {

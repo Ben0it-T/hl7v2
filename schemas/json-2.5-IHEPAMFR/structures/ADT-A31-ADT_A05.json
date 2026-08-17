@@ -108,8 +108,8 @@
             {
                 "segment": "ROL",
                 "minOccurs": "0",
-                "maxOccurs": "0",
-                "Usage": "X"
+                "maxOccurs": "unbounded",
+                "Usage": "O"
             },
             {
                 "segment": "DB1",

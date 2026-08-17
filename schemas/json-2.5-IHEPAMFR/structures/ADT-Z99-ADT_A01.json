@@ -68,12 +68,14 @@
             {
                 "segment": "ROL",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "unbounded",
+                "Usage": "C"
             },
             {
                 "segment": "NK1",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "unbounded",
+                "Usage": "C"
             },
             {
                 "segment": "PV1",
@@ -83,7 +85,8 @@
             {
                 "segment": "PV2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "Usage": "C"
             },
             {
                 "segment": "ZBE",
