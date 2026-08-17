@@ -1179,6 +1179,8 @@ echo "Update data types: done.\n";
  *           Usage = R
  *
  *     - Consequently: ZBE = R
+ *
+ *   A44 : The specifications do not specify where the Z-segments are to be inserted.
  */
 
 $messageStructures = [];
@@ -1933,6 +1935,35 @@ $iti31Rules['Z99'] = [
             'maxOccurs' => '1',
             'Usage' => 'O',
         ],
+
+        [
+            'structure' => 'ADT_A01',
+            'type' => 'segment',
+            'name' => 'NK1',
+            'minOccurs' => '0',
+            'maxOccurs' => 'unbounded',
+            'Usage' => 'C',
+        ],
+
+        [
+            'structure' => 'ADT_A01',
+            'type' => 'segment',
+            'name' => 'PV2',
+            'minOccurs' => '0',
+            'maxOccurs' => '1',
+            'Usage' => 'C',
+        ],
+    ],
+
+    'occurrenceUpdates' => [
+        [
+            'structure' => 'ADT_A01',
+            'segment' => 'ROL',
+            'occurrence' => 1,
+            'minOccurs' => '0',
+            'maxOccurs' => 'unbounded',
+            'Usage' => 'C',
+        ]
     ],
 
     'insertions' => [
