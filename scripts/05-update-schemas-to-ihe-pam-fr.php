@@ -1161,6 +1161,7 @@ echo "Update data types: done.\n";
  *
  *    A40/A47 :
  *     - ZFA/ZFD/ZFS not present
+ *       The specifications do not specify where the Z-segments are to be inserted.
  *
  * ITI-31
  *   Special case: ZBE
@@ -1236,11 +1237,6 @@ foreach ($messageType as $type => $event) {
 echo "Create message structures: done.\n";
 
 // Update message structures
-
-// IHE-CP-ITI-FR-2016-126
-// IHE-CP-ITI-FR-2016-127
-// ZFA/ZFP/ZFV/ZFM/ZFD/ZFS usages changed from RE to O.
-// Empty Z* segments SHALL NOT be transmitted.
 
 $iti30Zsegments = [
     ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
