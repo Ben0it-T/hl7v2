@@ -1276,7 +1276,7 @@ $iti30Rules = [
             ],
 
             [
-                'structure' => 'ADT_A05',
+                'structure' => 'ADT_A05', // IHE ITI TF Vol 2
                 'type' => 'segment',
                 'name' => 'PV2',
                 'minOccurs' => '0',
@@ -1296,7 +1296,7 @@ $iti30Rules = [
 
         'occurrenceUpdates' => [
             [
-                'structure' => 'ADT_A05',
+                'structure' => 'ADT_A05', // IHE ITI TF Vol 2
                 'segment' => 'ROL',
                 'occurrence' => 2,
                 'minOccurs' => '0',
@@ -1326,7 +1326,7 @@ $iti30Rules = [
             ],
 
             [
-                'structure' => 'ADT_A05',
+                'structure' => 'ADT_A05', // IHE ITI TF Vol 2
                 'type' => 'segment',
                 'name' => 'PV2',
                 'minOccurs' => '0',
@@ -1344,14 +1344,17 @@ $iti30Rules = [
             ],
         ],
 
+        // IHE ITI TF Vol 2
+        // - The ROL segment following the PV1/PV2 segments is not supported here.
+        // - In message static definition, ROL-2 Usage is O
         'occurrenceUpdates' => [
             [
                 'structure' => 'ADT_A05',
                 'segment' => 'ROL',
                 'occurrence' => 2,
                 'minOccurs' => '0',
-                'maxOccurs' => '0',
-                'Usage' => 'X',
+                'maxOccurs' => 'unbounded',
+                'Usage' => 'O',
             ]
         ],
 
@@ -1365,7 +1368,6 @@ $iti30Rules = [
     ],
 
     'A40' => [
-
         'elementUpdates' => [
             [
                 'structure' => 'ADT_A39',
@@ -1377,13 +1379,15 @@ $iti30Rules = [
             ],
 
             [
-                'structure' => 'PATIENT',
+                'structure' => 'PATIENT', // IHE ITI TF Vol 2
                 'type' => 'segment',
                 'name' => 'PV1',
                 'minOccurs' => '0',
                 'maxOccurs' => '0',
                 'Usage' => 'X',
             ]
+        // Z-segments
+        // The specifications do not specify where the Z-segments are to be inserted.
         ]
     ],
 
@@ -1405,6 +1409,8 @@ $iti30Rules = [
                 ]
             ]
         ]
+        // Z-segments
+        // The specifications do not specify where the Z-segments are to be inserted.
     ],
 ];
 
