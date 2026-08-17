@@ -13639,7 +13639,7 @@
     "fields": [
       {
         "Name": "PV1.1",
-        "Usage": "O",
+        "Usage": "X",
         "Min": "0",
         "Max": "1",
         "Item": "00131",
