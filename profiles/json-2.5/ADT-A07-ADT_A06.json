@@ -8173,7 +8173,7 @@
     "fields": [
       {
         "Name": "ROL.1",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "01206",
@@ -27304,7 +27304,7 @@
         "Max": "1",
         "Item": "",
         "Datatype": "NA",
-        "Length": "8",
+        "Length": "10",
         "Table": "",
         "LongName": "Date Lunaire",
         "Chapter": "",
@@ -27869,7 +27869,7 @@
     "fields": [
       {
         "Name": "ROL.1",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "01206",
@@ -36020,7 +36020,7 @@
         "fields": [
           {
             "Name": "ROL.1",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "01206",
@@ -59147,7 +59147,7 @@
         "fields": [
           {
             "Name": "ROL.1",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "01206",

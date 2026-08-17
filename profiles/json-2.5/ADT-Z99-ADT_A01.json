@@ -8165,7 +8165,7 @@
   {
     "Type": "segment",
     "Name": "ROL",
-    "Usage": "O",
+    "Usage": "C",
     "Min": "0",
     "Max": "*",
     "LongName": "Role",
@@ -8173,7 +8173,7 @@
     "fields": [
       {
         "Name": "ROL.1",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "01206",
@@ -9738,7 +9738,7 @@
   {
     "Type": "segment",
     "Name": "NK1",
-    "Usage": "O",
+    "Usage": "C",
     "Min": "0",
     "Max": "*",
     "LongName": "Next of Kin / Associated Parties",
@@ -19900,7 +19900,7 @@
   {
     "Type": "segment",
     "Name": "PV2",
-    "Usage": "O",
+    "Usage": "C",
     "Min": "0",
     "Max": "1",
     "LongName": "Patient Visit - Additional Information",
@@ -24787,7 +24787,7 @@
         "Max": "1",
         "Item": "",
         "Datatype": "NA",
-        "Length": "8",
+        "Length": "10",
         "Table": "",
         "LongName": "Date Lunaire",
         "Chapter": "",
@@ -25352,7 +25352,7 @@
     "fields": [
       {
         "Name": "ROL.1",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "01206",
@@ -33503,7 +33503,7 @@
         "fields": [
           {
             "Name": "ROL.1",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "01206",
@@ -56630,7 +56630,7 @@
         "fields": [
           {
             "Name": "ROL.1",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "01206",
