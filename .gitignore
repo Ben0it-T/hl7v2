@@ -7,6 +7,7 @@ __*.*
 
 # Resources
 /profiles/gazelle/
+/profiles/xml-*/
 /schemas/appendixA-2.5/
 /schemas/hl7-xml-v2.5/
 /schemas/hl7v2xsd/
