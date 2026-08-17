@@ -496,7 +496,7 @@ class HL7xmlProfilesGenerator {
                 // PV1 - General conditions of use
                 // All messages of transaction [ITI-30] that use this segment, actually use a pseudo-PV1, which is empty. The only field populated is PV1-2 “Patient Class” values “N” (Not Applicable).
                 if (in_array($this->eventName, array("A28", "A31", "A40", "A47", "A24", "A37"))) {
-                    if (!in_array($fieldName, array("PV1.1", "PV1.2"))) {
+                    if (!in_array($fieldName, array("PV1.2"))) {
                         $fieldAttributes["Usage"] = "X";
                     }
                 }
