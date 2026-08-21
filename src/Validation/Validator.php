@@ -14,6 +14,9 @@ use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 
 use HL7v2\Serializer\HL7StringSerializer;
+
+use HL7v2\Validation\DatatypeValidatorInterface; // TO CHECK
+use HL7v2\Validation\DatatypeRegistryFactory;
 use HL7v2\Validation\ValidationContext;
 use HL7v2\Validation\ValidationResult;
 
@@ -28,6 +31,7 @@ class Validator
 
     private Message $message;
     private Profile $profile;
+    private DatatypeValidatorRegistry $datatypeRegistry;
     private ValidationContext $context;
     private ValidationResult $validationResult;
 
@@ -51,6 +55,9 @@ class Validator
     {
         $this->logger = $logger;
         $this->serializer = new HL7StringSerializer();
+
+        $this->datatypeRegistry = DatatypeRegistryFactory::create();
+
     }
 
     /**
@@ -417,6 +424,59 @@ class Validator
             "$elementType $elementName length "
             . ($result ? 'does not exceed' : 'exceeds')
             . " the length defined in the message profile ($length).";
+
+        $this->log(
+            "-$elementType- $type: $description"
+        );
+
+        return [
+            'result' => $result,
+            'type' => $type,
+            'description' => $description,
+        ];
+    }
+
+    /**
+     * Check element datatype.
+     * Applies to: Field, Component, SubComponent.
+     *
+     * Datatype validation is skipped when:
+     * - the element value is empty
+     * - no validator is registered for the datatype
+     *
+     * @param string $datatype
+     * @param string $elementValue
+     * @param string $elementType
+     * @param string $elementName
+     *
+     * @return array{
+     *     result: bool,
+     *     type: string,
+     *     description: string
+     * }
+     */
+    private function checkDatatype(string $datatype, string $elementValue, string $elementType, string $elementName): array
+    {
+        $type = 'Datatype';
+
+        if ($elementValue === '') {
+            $result = true;
+            $description = "$elementType $elementName has empty value. Datatype validation skipped.";
+
+        } else {
+            $validator = $this->datatypeRegistry->get($datatype);
+
+            if ($validator === null) {
+                $result = true;
+                $description = "$elementType $elementName datatype is '$datatype'. No validator registered for datatype '$datatype'. Datatype validation skipped.";
+
+            } else {
+                $result = $validator->validate($elementValue);
+                $description = $result
+                    ? "$elementType $elementName datatype '$datatype' is valid."
+                    : "$elementType $elementName datatype '$datatype' is not valid: " . $validator->getErrorMessage();
+            }
+        }
 
         $this->log(
             "-$elementType- $type: $description"
@@ -1482,6 +1542,28 @@ class Validator
                     }
                 }
 
+                // check datatype
+                if ($fieldDef["Datatype"] !== "") {
+                    $datatypeCheck = $this->checkDatatype(
+                        $fieldDef['Datatype'],
+                        $fieldValue,
+                        'Field',
+                        $elementName
+                    );
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $location,
+                        'Description' => $datatypeCheck['description'],
+                        'Type'        => $datatypeCheck['type'],
+                        'Result'      => $datatypeCheck['result'],
+                    ]);
+
+                    if (!$datatypeCheck['result']) {
+                        $repeatHasError = true;
+                        $repeatComments .= $datatypeCheck['description'] . ' ';
+                    }
+                }
+
                 // check table - only if has no components
                 if (
                     !isset($fieldDef['components'])
@@ -1838,6 +1920,28 @@ class Validator
                 }
             }
 
+            // check datatype
+            if ($componentDef["Type"] !== "") {
+                $datatypeCheck = $this->checkDatatype(
+                    $componentDef['Type'],
+                    $value,
+                    'Component',
+                    $elementName
+                );
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $location,
+                    'Description' => $datatypeCheck['description'],
+                    'Type'        => $datatypeCheck['type'],
+                    'Result'      => $datatypeCheck['result'],
+                ]);
+
+                if (!$datatypeCheck['result']) {
+                    $hasError = true;
+                    $comments .= $datatypeCheck['description'] . ' ';
+                }
+            }
+
             // check table - only if simple component
             if (
                 !isset($componentDef['components'])
@@ -2137,6 +2241,28 @@ class Validator
                 if (!$lengthCheck['result']) {
                     $hasError = true;
                     $comments .= $lengthCheck['description'] . " ";
+                }
+            }
+
+            // check datatype
+            if ($subComponentDef["Type"] !== "") {
+                $datatypeCheck = $this->checkDatatype(
+                    $subComponentDef['Type'],
+                    $value,
+                    'SubComponent',
+                    $elementName
+                );
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $location,
+                    'Description' => $datatypeCheck['description'],
+                    'Type'        => $datatypeCheck['type'],
+                    'Result'      => $datatypeCheck['result'],
+                ]);
+
+                if (!$datatypeCheck['result']) {
+                    $hasError = true;
+                    $comments .= $datatypeCheck['description'] . ' ';
                 }
             }
 
