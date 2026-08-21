@@ -15,7 +15,6 @@ use HL7v2\Profile\HL7Tables;
 
 use HL7v2\Serializer\HL7StringSerializer;
 
-use HL7v2\Validation\DatatypeValidatorInterface; // TO CHECK
 use HL7v2\Validation\DatatypeRegistryFactory;
 use HL7v2\Validation\ValidationContext;
 use HL7v2\Validation\ValidationResult;
