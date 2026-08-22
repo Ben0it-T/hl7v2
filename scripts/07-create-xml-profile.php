@@ -620,10 +620,14 @@ class HL7xmlProfilesGenerator {
             foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $subcomponent) {
                 // subcomponent attributes
                 $subcomponentAttributes = $this->getComponentAttributes($subcomponent);
-                if ($key == 0 && $componentTable != "") {
-                    // send hl7 tabme to first component
-                    $subcomponentAttributes["Table"] =  $componentTable;
-                }
+
+                // Note: fix.
+                // The table associated with the component is not used to validate the sub-components.
+                //if ($key == 0 && $componentTable != "") {
+                //    // send hl7 tabme to first component
+                //    $subcomponentAttributes["Table"] =  $componentTable;
+                //}
+
                 // add subcomponent node
                 $subcomponentNode = $componentNode->appendChild($this->messageProfile->createElement("SubComponent"));
                 $this->addComponent($subcomponentNode, $subcomponent["dataType"], $subcomponentAttributes, true);
