@@ -507,10 +507,14 @@ class HL7jsonProfilesGenerator
             foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $component) {
                 // component attributes
                 $componentAttributes = $this->getComponentAttributes($component);
-                if ($key == 0 && $fieldTable != "") {
-                    // send hl7 tabme to first component
-                    $componentAttributes["Table"] =  $fieldTable;
-                }
+
+                // Note: fix.
+                // The table associated with the field is not used to validate the components.
+                //if ($key == 0 && $fieldTable != "") {
+                //    // send hl7 table to first component
+                //    $componentAttributes["Table"] =  $fieldTable;
+                //}
+
                 $components[] = $this->addComponent($component["dataType"], $componentAttributes);
             }
             $field = array_merge($fieldAttributes, array("components" => $components));
