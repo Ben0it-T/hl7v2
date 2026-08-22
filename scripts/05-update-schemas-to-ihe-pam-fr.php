@@ -448,8 +448,6 @@ $ZBEfields = [
 $segmentsSchemas = array_merge($segmentsSchemas, $ZBEsegment);
 $fieldsSchemas = array_merge($fieldsSchemas, $ZBEfields);
 
-echo "Create Z-segments: done.\n";
-
 //
 // ZFA : Statut DMP du patient
 //
@@ -670,7 +668,7 @@ $ZFSfields = [
 $segmentsSchemas = array_merge($segmentsSchemas, $ZFSsegment);
 $fieldsSchemas = array_merge($fieldsSchemas, $ZFSfields);
 
-
+echo "Create Z-segments: done.\n";
 
 
 
