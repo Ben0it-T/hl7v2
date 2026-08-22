@@ -50,7 +50,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -94,7 +94,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -138,7 +138,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -182,7 +182,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -1084,7 +1084,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0357",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1359,7 +1359,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0357",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1475,7 +1475,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0533",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1627,7 +1627,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0518",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },
@@ -1731,7 +1731,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0519",
+            "Table": "",
             "LongName": "Identifier",
             "maxLength": "20"
           },

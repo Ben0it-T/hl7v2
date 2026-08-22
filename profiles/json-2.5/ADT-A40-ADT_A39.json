@@ -50,7 +50,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -94,7 +94,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -138,7 +138,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -182,7 +182,7 @@
             "Min": "1",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
+            "Table": "0300",
             "LongName": "Namespace ID",
             "maxLength": "20"
           },
@@ -1116,7 +1116,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0188",
+            "Table": "",
             "LongName": "ID Number",
             "maxLength": "199"
           },
@@ -4031,7 +4031,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0005",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4637,7 +4637,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0296",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4711,7 +4711,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0002",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -4785,7 +4785,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0006",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5639,7 +5639,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0189",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5749,7 +5749,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0171",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5823,7 +5823,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0172",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -5897,7 +5897,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0212",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6119,7 +6119,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0446",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6193,7 +6193,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0447",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6279,7 +6279,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0429",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -6353,7 +6353,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0171",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -7764,7 +7764,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0215",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -8040,7 +8040,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0435",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -11572,7 +11572,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0010",
+                "Table": "",
                 "LongName": "ID Number",
                 "maxLength": "199"
               },
@@ -12244,7 +12244,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0010",
+                "Table": "",
                 "LongName": "ID Number",
                 "maxLength": "199"
               },
@@ -13890,7 +13890,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0010",
+                "Table": "",
                 "LongName": "ID Number",
                 "maxLength": "199"
               },
@@ -15240,7 +15240,7 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0114",
+                "Table": "",
                 "LongName": "Identifier",
                 "maxLength": "20"
               },
@@ -15926,7 +15926,7 @@
                 "Min": "1",
                 "Max": "1",
                 "Type": "ST",
-                "Table": "0203",
+                "Table": "",
                 "LongName": "ID Number",
                 "maxLength": "128"
               },
