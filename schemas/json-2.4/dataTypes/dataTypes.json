@@ -46,49 +46,49 @@
     "AD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "street address (ST)",
+        "LongName": "Street address",
         "maxLength": ""
     },
     "AD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other designation",
+        "LongName": "Other designation",
         "maxLength": ""
     },
     "AD.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "city",
+        "LongName": "City",
         "maxLength": ""
     },
     "AD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "state or province",
+        "LongName": "State or province",
         "maxLength": ""
     },
     "AD.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "zip or postal code",
+        "LongName": "Zip or postal code",
         "maxLength": ""
     },
     "AD.6": {
         "Type": "ID",
         "Table": "",
-        "LongName": "country",
+        "LongName": "Country",
         "maxLength": ""
     },
     "AD.7": {
         "Type": "ID",
         "Table": "",
-        "LongName": "address type",
+        "LongName": "Address type",
         "maxLength": ""
     },
     "AD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other geographic designation",
+        "LongName": "Other geographic designation",
         "maxLength": ""
     },
     "AUI": {
@@ -113,19 +113,19 @@
     "AUI.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "authorization number",
+        "LongName": "Authorization number",
         "maxLength": ""
     },
     "AUI.2": {
         "Type": "DT",
         "Table": "",
-        "LongName": "date",
+        "LongName": "Date",
         "maxLength": ""
     },
     "AUI.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "source",
+        "LongName": "Source",
         "maxLength": ""
     },
     "CCD": {
@@ -145,13 +145,13 @@
     "CCD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "when to charge code",
+        "LongName": "When to charge code",
         "maxLength": ""
     },
     "CCD.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "date\/time",
+        "LongName": "Date/time",
         "maxLength": ""
     },
     "CCP": {
@@ -176,19 +176,19 @@
     "CCP.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "channel calibration sensitivity correction factor",
+        "LongName": "Channel calibration sensitivity correction factor",
         "maxLength": ""
     },
     "CCP.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "channel calibration baseline",
+        "LongName": "Channel calibration baseline",
         "maxLength": ""
     },
     "CCP.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "channel calibration time skew",
+        "LongName": "Channel calibration time skew",
         "maxLength": ""
     },
     "CD": {
@@ -228,37 +228,37 @@
     "CD.1": {
         "Type": "WVI",
         "Table": "",
-        "LongName": "channel identifier",
+        "LongName": "Channel identifier",
         "maxLength": ""
     },
     "CD.2": {
         "Type": "WVS",
         "Table": "",
-        "LongName": "waveform source",
+        "LongName": "Waveform source",
         "maxLength": ""
     },
     "CD.3": {
         "Type": "CSU",
         "Table": "",
-        "LongName": "channel sensitivity\/units",
+        "LongName": "Channel sensitivity/units",
         "maxLength": ""
     },
     "CD.4": {
         "Type": "CCP",
         "Table": "",
-        "LongName": "channel calibration parameters",
+        "LongName": "Channel calibration parameters",
         "maxLength": ""
     },
     "CD.5": {
         "Type": "NM",
         "Table": "",
-        "LongName": "channel sampling frequency",
+        "LongName": "Channel sampling frequency",
         "maxLength": ""
     },
     "CD.6": {
         "Type": "NR",
         "Table": "",
-        "LongName": "minimum\/maximum data values",
+        "LongName": "Minimum/maximum data values",
         "maxLength": ""
     },
     "CE": {
@@ -298,37 +298,37 @@
     "CE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "identifier (ST)",
+        "LongName": "Identifier",
         "maxLength": ""
     },
     "CE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "text",
+        "LongName": "Text",
         "maxLength": ""
     },
     "CE.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of coding system",
+        "LongName": "Name of coding system",
         "maxLength": ""
     },
     "CE.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate identifier (ST)",
+        "LongName": "Alternate identifier",
         "maxLength": ""
     },
     "CE.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate text",
+        "LongName": "Alternate text",
         "maxLength": ""
     },
     "CE.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of alternate coding system",
+        "LongName": "Name of alternate coding system",
         "maxLength": ""
     },
     "CF": {
@@ -368,37 +368,37 @@
     "CF.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "identifier (ID)",
+        "LongName": "Identifier",
         "maxLength": ""
     },
     "CF.2": {
         "Type": "FT",
         "Table": "",
-        "LongName": "formatted text",
+        "LongName": "Formatted text",
         "maxLength": ""
     },
     "CF.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of coding system",
+        "LongName": "Name of coding system",
         "maxLength": ""
     },
     "CF.4": {
         "Type": "ID",
         "Table": "",
-        "LongName": "alternate identifier (ID)",
+        "LongName": "Alternate identifier",
         "maxLength": ""
     },
     "CF.5": {
         "Type": "FT",
         "Table": "",
-        "LongName": "alternate formatted text",
+        "LongName": "Alternate formatted text",
         "maxLength": ""
     },
     "CF.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of alternate coding system",
+        "LongName": "Name of alternate coding system",
         "maxLength": ""
     },
     "CK": {
@@ -428,25 +428,25 @@
     "CK.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "ID number (NM)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "CK.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "check digit (NM)",
+        "LongName": "Check digit",
         "maxLength": ""
     },
     "CK.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "code identifying the check digit scheme employed",
+        "LongName": "Code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "CK.4": {
         "Type": "HD",
         "Table": "HL70363",
-        "LongName": "assigning authority",
+        "LongName": "Assigning authority",
         "maxLength": ""
     },
     "CN": {
@@ -501,55 +501,55 @@
     "CN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number (ST)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "CN.2": {
         "Type": "FN",
         "Table": "",
-        "LongName": "family name",
+        "LongName": "Family name",
         "maxLength": ""
     },
     "CN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "given name",
+        "LongName": "Given name",
         "maxLength": ""
     },
     "CN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "second and further given names or initials thereof",
+        "LongName": "Second and further given names or initials thereof",
         "maxLength": ""
     },
     "CN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": ""
     },
     "CN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": ""
     },
     "CN.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": ""
     },
     "CN.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "source table",
+        "LongName": "Source table",
         "maxLength": ""
     },
     "CN.9": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning authority",
+        "LongName": "Assigning authority",
         "maxLength": ""
     },
     "CNE": {
@@ -604,55 +604,55 @@
     "CNE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "identifier (ST)",
+        "LongName": "Identifier",
         "maxLength": ""
     },
     "CNE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "text",
+        "LongName": "Text",
         "maxLength": ""
     },
     "CNE.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of coding system",
+        "LongName": "Name of coding system",
         "maxLength": ""
     },
     "CNE.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate identifier (ST)",
+        "LongName": "Alternate identifier",
         "maxLength": ""
     },
     "CNE.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate text",
+        "LongName": "Alternate text",
         "maxLength": ""
     },
     "CNE.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of alternate coding system",
+        "LongName": "Name of alternate coding system",
         "maxLength": ""
     },
     "CNE.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "coding system version ID",
+        "LongName": "Coding system version ID",
         "maxLength": ""
     },
     "CNE.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate coding system version ID",
+        "LongName": "Alternate coding system version ID",
         "maxLength": ""
     },
     "CNE.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "original text",
+        "LongName": "Original text",
         "maxLength": ""
     },
     "CNN": {
@@ -717,67 +717,67 @@
     "CNN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number (ST)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "CNN.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "assigning authority universal ID",
+        "LongName": "Assigning authority universal ID",
         "maxLength": ""
     },
     "CNN.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "assigning authority universal ID type",
+        "LongName": "Assigning authority universal ID type",
         "maxLength": ""
     },
     "CNN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "family name",
+        "LongName": "Family name",
         "maxLength": ""
     },
     "CNN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "given name",
+        "LongName": "Given name",
         "maxLength": ""
     },
     "CNN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "second and further given names or initials thereof",
+        "LongName": "Second and further given names or initials thereof",
         "maxLength": ""
     },
     "CNN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": ""
     },
     "CNN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": ""
     },
     "CNN.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": ""
     },
     "CNN.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "source table",
+        "LongName": "Source table",
         "maxLength": ""
     },
     "CNN.9": {
         "Type": "IS",
         "Table": "",
-        "LongName": "assigning authority namespace ID",
+        "LongName": "Assigning authority namespace ID",
         "maxLength": ""
     },
     "CP": {
@@ -817,37 +817,37 @@
     "CP.1": {
         "Type": "MO",
         "Table": "",
-        "LongName": "price",
+        "LongName": "Price",
         "maxLength": ""
     },
     "CP.2": {
         "Type": "ID",
         "Table": "HL70205",
-        "LongName": "price type",
+        "LongName": "Price type",
         "maxLength": ""
     },
     "CP.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "from value",
+        "LongName": "From value",
         "maxLength": ""
     },
     "CP.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "to value",
+        "LongName": "To value",
         "maxLength": ""
     },
     "CP.5": {
         "Type": "CE",
         "Table": "",
-        "LongName": "range units",
+        "LongName": "Range units",
         "maxLength": ""
     },
     "CP.6": {
         "Type": "ID",
         "Table": "HL70298",
-        "LongName": "range type",
+        "LongName": "Range type",
         "maxLength": ""
     },
     "CQ": {
@@ -867,13 +867,13 @@
     "CQ.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "quantity",
+        "LongName": "Quantity",
         "maxLength": ""
     },
     "CQ.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "units",
+        "LongName": "Units",
         "maxLength": ""
     },
     "CSU": {
@@ -918,43 +918,43 @@
     "CSU.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "channel sensitivity",
+        "LongName": "Channel sensitivity",
         "maxLength": ""
     },
     "CSU.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "unit of measure identifier",
+        "LongName": "Unit of measure identifier",
         "maxLength": ""
     },
     "CSU.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "unit of measure description",
+        "LongName": "Unit of measure description",
         "maxLength": ""
     },
     "CSU.4": {
         "Type": "IS",
         "Table": "",
-        "LongName": "unit of measure coding system",
+        "LongName": "Unit of measure coding system",
         "maxLength": ""
     },
     "CSU.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate unit of measure identifier",
+        "LongName": "Alternate unit of measure identifier",
         "maxLength": ""
     },
     "CSU.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate unit of measure description",
+        "LongName": "Alternate unit of measure description",
         "maxLength": ""
     },
     "CSU.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "alternate unit of measure coding system",
+        "LongName": "Alternate unit of measure coding system",
         "maxLength": ""
     },
     "CWE": {
@@ -1009,55 +1009,55 @@
     "CWE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "identifier (ST)",
+        "LongName": "Identifier",
         "maxLength": ""
     },
     "CWE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "text",
+        "LongName": "Text",
         "maxLength": ""
     },
     "CWE.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of coding system",
+        "LongName": "Name of coding system",
         "maxLength": ""
     },
     "CWE.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate identifier (ST)",
+        "LongName": "Alternate identifier",
         "maxLength": ""
     },
     "CWE.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate text",
+        "LongName": "Alternate text",
         "maxLength": ""
     },
     "CWE.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "name of alternate coding system",
+        "LongName": "Name of alternate coding system",
         "maxLength": ""
     },
     "CWE.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "coding system version ID",
+        "LongName": "Coding system version ID",
         "maxLength": ""
     },
     "CWE.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "alternate coding system version ID",
+        "LongName": "Alternate coding system version ID",
         "maxLength": ""
     },
     "CWE.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "original text",
+        "LongName": "Original text",
         "maxLength": ""
     },
     "CX": {
@@ -1113,43 +1113,43 @@
     "CX.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "check digit (ST)",
+        "LongName": "Check digit",
         "maxLength": ""
     },
     "CX.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "code identifying the check digit scheme employed",
+        "LongName": "Code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "CX.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning authority",
+        "LongName": "Assigning authority",
         "maxLength": ""
     },
     "CX.5": {
         "Type": "ID",
         "Table": "HL70203",
-        "LongName": "identifier type code (ID)",
+        "LongName": "Identifier type code",
         "maxLength": ""
     },
     "CX.6": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning facility",
+        "LongName": "Assigning facility",
         "maxLength": ""
     },
     "CX.7": {
         "Type": "DT",
         "Table": "",
-        "LongName": "effective date (DT)",
+        "LongName": "Effective date",
         "maxLength": ""
     },
     "CX.8": {
         "Type": "DT",
         "Table": "",
-        "LongName": "expiration date",
+        "LongName": "Expiration date",
         "maxLength": ""
     },
     "DDI": {
@@ -1174,19 +1174,19 @@
     "DDI.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "delay days",
+        "LongName": "Delay days",
         "maxLength": ""
     },
     "DDI.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "amount",
+        "LongName": "Amount",
         "maxLength": ""
     },
     "DDI.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "number of days",
+        "LongName": "Number of days",
         "maxLength": ""
     },
     "DIN": {
@@ -1206,13 +1206,13 @@
     "DIN.1": {
         "Type": "TS",
         "Table": "",
-        "LongName": "date",
+        "LongName": "Date",
         "maxLength": ""
     },
     "DIN.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "institution name",
+        "LongName": "Institution name",
         "maxLength": ""
     },
     "DLD": {
@@ -1232,13 +1232,13 @@
     "DLD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "discharge location",
+        "LongName": "Discharge location",
         "maxLength": ""
     },
     "DLD.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "effective date",
+        "LongName": "Effective date",
         "maxLength": ""
     },
     "DLN": {
@@ -1275,7 +1275,7 @@
     "DLN.3": {
         "Type": "DT",
         "Table": "",
-        "LongName": "expiration date",
+        "LongName": "Expiration date",
         "maxLength": ""
     },
     "DLT": {
@@ -1311,19 +1311,19 @@
     "DLT.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "numeric threshold",
+        "LongName": "Numeric threshold",
         "maxLength": ""
     },
     "DLT.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "change computation",
+        "LongName": "Change computation",
         "maxLength": ""
     },
     "DLT.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "length of time-days",
+        "LongName": "Length of time-days",
         "maxLength": ""
     },
     "DR": {
@@ -1343,13 +1343,13 @@
     "DR.1": {
         "Type": "TS",
         "Table": "",
-        "LongName": "range start date\/time",
+        "LongName": "Range start date/time",
         "maxLength": ""
     },
     "DR.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "range end date\/time",
+        "LongName": "Range end date/time",
         "maxLength": ""
     },
     "DT": {
@@ -1372,13 +1372,13 @@
     "DTN.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "day type",
+        "LongName": "Day type",
         "maxLength": ""
     },
     "DTN.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "number of days",
+        "LongName": "Number of days",
         "maxLength": ""
     },
     "ED": {
@@ -1413,31 +1413,31 @@
     "ED.1": {
         "Type": "HD",
         "Table": "",
-        "LongName": "source application",
+        "LongName": "Source application",
         "maxLength": ""
     },
     "ED.2": {
         "Type": "ID",
         "Table": "HL70191",
-        "LongName": "type of data",
+        "LongName": "Type of data",
         "maxLength": ""
     },
     "ED.3": {
         "Type": "ID",
         "Table": "HL70291",
-        "LongName": "data subtype",
+        "LongName": "Data subtype",
         "maxLength": ""
     },
     "ED.4": {
         "Type": "ID",
         "Table": "HL70299",
-        "LongName": "encoding",
+        "LongName": "Encoding",
         "maxLength": ""
     },
     "ED.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "data",
+        "LongName": "Data",
         "maxLength": ""
     },
     "EI": {
@@ -1467,25 +1467,25 @@
     "EI.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "entity identifier",
+        "LongName": "Entity identifier",
         "maxLength": ""
     },
     "EI.2": {
         "Type": "IS",
         "Table": "HL70300",
-        "LongName": "namespace ID",
+        "LongName": "Namespace ID",
         "maxLength": ""
     },
     "EI.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "universal ID",
+        "LongName": "Universal ID",
         "maxLength": ""
     },
     "EI.4": {
         "Type": "ID",
         "Table": "HL70301",
-        "LongName": "universal ID type",
+        "LongName": "Universal ID type",
         "maxLength": ""
     },
     "EIP": {
@@ -1505,13 +1505,13 @@
     "EIP.1": {
         "Type": "EI",
         "Table": "",
-        "LongName": "parent's placer order number",
+        "LongName": "Parent's placer order number",
         "maxLength": ""
     },
     "EIP.2": {
         "Type": "EI",
         "Table": "",
-        "LongName": "parent's filler order number",
+        "LongName": "Parent's filler order number",
         "maxLength": ""
     },
     "ELD": {
@@ -1541,25 +1541,25 @@
     "ELD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "segment ID",
+        "LongName": "Segment ID",
         "maxLength": ""
     },
     "ELD.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sequence",
+        "LongName": "Sequence",
         "maxLength": ""
     },
     "ELD.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "field position",
+        "LongName": "Field position",
         "maxLength": ""
     },
     "ELD.4": {
         "Type": "CE",
         "Table": "",
-        "LongName": "code identifying error",
+        "LongName": "Code identifying error",
         "maxLength": ""
     },
     "FC": {
@@ -1585,7 +1585,7 @@
     "FC.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Effective Date (TS)",
+        "LongName": "Effective Date",
         "maxLength": ""
     },
     "FN": {
@@ -1620,31 +1620,31 @@
     "FN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "surname",
+        "LongName": "Surname",
         "maxLength": ""
     },
     "FN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "own surname prefix",
+        "LongName": "Own surname prefix",
         "maxLength": ""
     },
     "FN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "own surname",
+        "LongName": "Own surname",
         "maxLength": ""
     },
     "FN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "surname prefix from partner\/spouse",
+        "LongName": "Surname prefix from partner/spouse",
         "maxLength": ""
     },
     "FN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "surname from partner\/spouse",
+        "LongName": "Surname from partner/spouse",
         "maxLength": ""
     },
     "FT": {
@@ -1672,19 +1672,19 @@
     "HD.1": {
         "Type": "IS",
         "Table": "HL70300",
-        "LongName": "namespace ID",
+        "LongName": "Namespace ID",
         "maxLength": ""
     },
     "HD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "universal ID",
+        "LongName": "Universal ID",
         "maxLength": ""
     },
     "HD.3": {
         "Type": "ID",
         "Table": "HL70301",
-        "LongName": "universal ID type",
+        "LongName": "Universal ID type",
         "maxLength": ""
     },
     "ID": {
@@ -1710,13 +1710,13 @@
     "JCC.1": {
         "Type": "IS",
         "Table": "HL70327",
-        "LongName": "job code",
+        "LongName": "Job code",
         "maxLength": ""
     },
     "JCC.2": {
         "Type": "IS",
         "Table": "HL70328",
-        "LongName": "job class",
+        "LongName": "Job class",
         "maxLength": ""
     },
     "LA1": {
@@ -1771,55 +1771,55 @@
     "LA1.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "point of care (IS)",
+        "LongName": "Point of care",
         "maxLength": ""
     },
     "LA1.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "room",
+        "LongName": "Room",
         "maxLength": ""
     },
     "LA1.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "bed",
+        "LongName": "Bed",
         "maxLength": ""
     },
     "LA1.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "facility (HD)",
+        "LongName": "Facility",
         "maxLength": ""
     },
     "LA1.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "location status",
+        "LongName": "Location status",
         "maxLength": ""
     },
     "LA1.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "person location type",
+        "LongName": "Person location type",
         "maxLength": ""
     },
     "LA1.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "building",
+        "LongName": "Building",
         "maxLength": ""
     },
     "LA1.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "floor",
+        "LongName": "Floor",
         "maxLength": ""
     },
     "LA1.9": {
         "Type": "AD",
         "Table": "",
-        "LongName": "address",
+        "LongName": "Address",
         "maxLength": ""
     },
     "LA2": {
@@ -1909,97 +1909,97 @@
     "LA2.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "point of care (IS)",
+        "LongName": "Point of care",
         "maxLength": ""
     },
     "LA2.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other designation",
+        "LongName": "Other designation",
         "maxLength": ""
     },
     "LA2.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "city",
+        "LongName": "City",
         "maxLength": ""
     },
     "LA2.12": {
         "Type": "ST",
         "Table": "",
-        "LongName": "state or province",
+        "LongName": "State or province",
         "maxLength": ""
     },
     "LA2.13": {
         "Type": "ST",
         "Table": "",
-        "LongName": "zip or postal code",
+        "LongName": "Zip or postal code",
         "maxLength": ""
     },
     "LA2.14": {
         "Type": "ID",
         "Table": "",
-        "LongName": "country",
+        "LongName": "Country",
         "maxLength": ""
     },
     "LA2.15": {
         "Type": "ID",
         "Table": "",
-        "LongName": "address type",
+        "LongName": "Address type",
         "maxLength": ""
     },
     "LA2.16": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other geographic designation",
+        "LongName": "Other geographic designation",
         "maxLength": ""
     },
     "LA2.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "room",
+        "LongName": "Room",
         "maxLength": ""
     },
     "LA2.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "bed",
+        "LongName": "Bed",
         "maxLength": ""
     },
     "LA2.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "facility (HD)",
+        "LongName": "Facility",
         "maxLength": ""
     },
     "LA2.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "location status",
+        "LongName": "Location status",
         "maxLength": ""
     },
     "LA2.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "person location type",
+        "LongName": "Person location type",
         "maxLength": ""
     },
     "LA2.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "building",
+        "LongName": "Building",
         "maxLength": ""
     },
     "LA2.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "floor",
+        "LongName": "Floor",
         "maxLength": ""
     },
     "LA2.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "street address (ST)",
+        "LongName": "Street address",
         "maxLength": ""
     },
     "MA": {
@@ -2039,37 +2039,37 @@
     "MA.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sample 1 from channel 1",
+        "LongName": "Sample 1 from channel 1",
         "maxLength": ""
     },
     "MA.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sample 1 from channel 2",
+        "LongName": "Sample 1 from channel 2",
         "maxLength": ""
     },
     "MA.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sample 1 from channel 3",
+        "LongName": "Sample 1 from channel 3",
         "maxLength": ""
     },
     "MA.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sample 1 from channel 4",
+        "LongName": "Sample 1 from channel 4",
         "maxLength": ""
     },
     "MA.5": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sample 1 from channel 5",
+        "LongName": "Sample 1 from channel 5",
         "maxLength": ""
     },
     "MA.6": {
         "Type": "NM",
         "Table": "",
-        "LongName": "sample 1 from channel 6",
+        "LongName": "Sample 1 from channel 6",
         "maxLength": ""
     },
     "MO": {
@@ -2089,13 +2089,13 @@
     "MO.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "quantity",
+        "LongName": "Quantity",
         "maxLength": ""
     },
     "MO.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "denomination",
+        "LongName": "Denomination",
         "maxLength": ""
     },
     "MOC": {
@@ -2115,13 +2115,13 @@
     "MOC.1": {
         "Type": "MO",
         "Table": "",
-        "LongName": "dollar amount",
+        "LongName": "Dollar amount",
         "maxLength": ""
     },
     "MOC.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "charge code",
+        "LongName": "Charge code",
         "maxLength": ""
     },
     "MOP": {
@@ -2141,13 +2141,13 @@
     "MOP.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "money or percentage indicator",
+        "LongName": "Money or percentage indicator",
         "maxLength": ""
     },
     "MOP.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "money or percentage quantity",
+        "LongName": "Money or percentage quantity",
         "maxLength": ""
     },
     "MSG": {
@@ -2172,19 +2172,19 @@
     "MSG.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "message type",
+        "LongName": "Message type",
         "maxLength": ""
     },
     "MSG.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "trigger event",
+        "LongName": "Trigger event",
         "maxLength": ""
     },
     "MSG.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "message structure",
+        "LongName": "Message structure",
         "maxLength": ""
     },
     "NA": {
@@ -2214,25 +2214,25 @@
     "NA.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "value1",
+        "LongName": "Value1",
         "maxLength": ""
     },
     "NA.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "value2",
+        "LongName": "Value2",
         "maxLength": ""
     },
     "NA.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "value3",
+        "LongName": "Value3",
         "maxLength": ""
     },
     "NA.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "value4",
+        "LongName": "Value4",
         "maxLength": ""
     },
     "NDL": {
@@ -2297,67 +2297,67 @@
     "NDL.1": {
         "Type": "CNN",
         "Table": "",
-        "LongName": "name",
+        "LongName": "Name",
         "maxLength": ""
     },
     "NDL.10": {
         "Type": "IS",
         "Table": "",
-        "LongName": "building",
+        "LongName": "Building",
         "maxLength": ""
     },
     "NDL.11": {
         "Type": "IS",
         "Table": "",
-        "LongName": "floor",
+        "LongName": "Floor",
         "maxLength": ""
     },
     "NDL.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "start date\/time",
+        "LongName": "Start date/time",
         "maxLength": ""
     },
     "NDL.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "end date\/time",
+        "LongName": "End date/time",
         "maxLength": ""
     },
     "NDL.4": {
         "Type": "IS",
         "Table": "",
-        "LongName": "point of care (IS)",
+        "LongName": "Point of care",
         "maxLength": ""
     },
     "NDL.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "room",
+        "LongName": "Room",
         "maxLength": ""
     },
     "NDL.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "bed",
+        "LongName": "Bed",
         "maxLength": ""
     },
     "NDL.7": {
         "Type": "HD",
         "Table": "",
-        "LongName": "facility (HD)",
+        "LongName": "Facility",
         "maxLength": ""
     },
     "NDL.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "location status",
+        "LongName": "Location status",
         "maxLength": ""
     },
     "NDL.9": {
         "Type": "IS",
         "Table": "",
-        "LongName": "person location type",
+        "LongName": "Person location type",
         "maxLength": ""
     },
     "NM": {
@@ -2406,13 +2406,13 @@
     "OCD.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "occurrence code",
+        "LongName": "Occurrence code",
         "maxLength": ""
     },
     "OCD.2": {
         "Type": "DT",
         "Table": "",
-        "LongName": "occurrence date",
+        "LongName": "Occurrence date",
         "maxLength": ""
     },
     "OSD": {
@@ -2477,67 +2477,67 @@
     "OSD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "sequence\/results flag",
+        "LongName": "Sequence/results flag",
         "maxLength": ""
     },
     "OSD.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "filler order number: universal ID",
+        "LongName": "Filler order number: universal ID",
         "maxLength": ""
     },
     "OSD.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "filler order number: universal ID type",
+        "LongName": "Filler order number: universal ID type",
         "maxLength": ""
     },
     "OSD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "placer order number: entity identifier",
+        "LongName": "Placer order number: entity identifier",
         "maxLength": ""
     },
     "OSD.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "placer order number: namespace ID",
+        "LongName": "Placer order number: namespace ID",
         "maxLength": ""
     },
     "OSD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "filler order number: entity identifier",
+        "LongName": "Filler order number: entity identifier",
         "maxLength": ""
     },
     "OSD.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "filler order number: namespace ID",
+        "LongName": "Filler order number: namespace ID",
         "maxLength": ""
     },
     "OSD.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "sequence condition value",
+        "LongName": "Sequence condition value",
         "maxLength": ""
     },
     "OSD.7": {
         "Type": "NM",
         "Table": "",
-        "LongName": "maximum number of repeats",
+        "LongName": "Maximum number of repeats",
         "maxLength": ""
     },
     "OSD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "placer order number: universal ID",
+        "LongName": "Placer order number: universal ID",
         "maxLength": ""
     },
     "OSD.9": {
         "Type": "ID",
         "Table": "",
-        "LongName": "placer order number; universal ID type",
+        "LongName": "Placer order number; universal ID type",
         "maxLength": ""
     },
     "OSP": {
@@ -2562,19 +2562,19 @@
     "OSP.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "occurrence span code",
+        "LongName": "Occurrence span code",
         "maxLength": ""
     },
     "OSP.2": {
         "Type": "DT",
         "Table": "",
-        "LongName": "occurrence span start date",
+        "LongName": "Occurrence span start date",
         "maxLength": ""
     },
     "OSP.3": {
         "Type": "DT",
         "Table": "",
-        "LongName": "occurrence span stop date",
+        "LongName": "Occurrence span stop date",
         "maxLength": ""
     },
     "PCF": {
@@ -2599,19 +2599,19 @@
     "PCF.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "pre-certification patient type",
+        "LongName": "Pre-certification patient type",
         "maxLength": ""
     },
     "PCF.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "pre-certification required",
+        "LongName": "Pre-certification required",
         "maxLength": ""
     },
     "PCF.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "pre-certification window",
+        "LongName": "Pre-certification window",
         "maxLength": ""
     },
     "PI": {
@@ -2636,19 +2636,19 @@
     "PI.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number (ST)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "PI.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "type of ID number (IS)",
+        "LongName": "Type of ID number",
         "maxLength": ""
     },
     "PI.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other qualifying info",
+        "LongName": "Other qualifying info",
         "maxLength": ""
     },
     "PIP": {
@@ -2683,31 +2683,31 @@
     "PIP.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "privilege",
+        "LongName": "Privilege",
         "maxLength": ""
     },
     "PIP.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "privilege class",
+        "LongName": "Privilege class",
         "maxLength": ""
     },
     "PIP.3": {
         "Type": "DT",
         "Table": "",
-        "LongName": "expiration date",
+        "LongName": "Expiration date",
         "maxLength": ""
     },
     "PIP.4": {
         "Type": "DT",
         "Table": "",
-        "LongName": "activation date",
+        "LongName": "Activation date",
         "maxLength": ""
     },
     "PIP.5": {
         "Type": "EI",
         "Table": "",
-        "LongName": "facility (EI)",
+        "LongName": "Facility",
         "maxLength": ""
     },
     "PL": {
@@ -2762,49 +2762,49 @@
     "PL.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "point of care",
+        "LongName": "Point of care",
         "maxLength": ""
     },
     "PL.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "room",
+        "LongName": "Room",
         "maxLength": ""
     },
     "PL.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "bed",
+        "LongName": "Bed",
         "maxLength": ""
     },
     "PL.4": {
         "Type": "HD",
         "Table": "HL70300",
-        "LongName": "facility (HD)",
+        "LongName": "Facility",
         "maxLength": ""
     },
     "PL.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "location status",
+        "LongName": "Location status",
         "maxLength": ""
     },
     "PL.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "person location type",
+        "LongName": "Person location type",
         "maxLength": ""
     },
     "PL.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "building",
+        "LongName": "Building",
         "maxLength": ""
     },
     "PL.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "floor",
+        "LongName": "Floor",
         "maxLength": ""
     },
     "PL.9": {
@@ -2840,25 +2840,25 @@
     "PLN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number (ST)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "PLN.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "type of ID number (IS)",
+        "LongName": "Type of ID number",
         "maxLength": ""
     },
     "PLN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "state\/other qualifying info",
+        "LongName": "State/other qualifying info",
         "maxLength": ""
     },
     "PLN.4": {
         "Type": "DT",
         "Table": "",
-        "LongName": "expiration date",
+        "LongName": "Expiration date",
         "maxLength": ""
     },
     "PN": {
@@ -2898,37 +2898,37 @@
     "PN.1": {
         "Type": "FN",
         "Table": "",
-        "LongName": "family name",
+        "LongName": "Family name",
         "maxLength": ""
     },
     "PN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "given name",
+        "LongName": "Given name",
         "maxLength": ""
     },
     "PN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "second and further given names or initials thereof",
+        "LongName": "Second and further given names or initials thereof",
         "maxLength": ""
     },
     "PN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": ""
     },
     "PN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": ""
     },
     "PN.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": ""
     },
     "PPN": {
@@ -3033,43 +3033,43 @@
     "PPN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number (ST)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "PPN.10": {
         "Type": "ID",
         "Table": "",
-        "LongName": "name type code",
+        "LongName": "Name type code",
         "maxLength": ""
     },
     "PPN.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "identifier check digit",
+        "LongName": "Identifier check digit",
         "maxLength": ""
     },
     "PPN.12": {
         "Type": "ID",
         "Table": "",
-        "LongName": "code identifying the check digit scheme employed",
+        "LongName": "Code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "PPN.13": {
         "Type": "IS",
         "Table": "",
-        "LongName": "identifier type code (IS)",
+        "LongName": "Identifier type code",
         "maxLength": ""
     },
     "PPN.14": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning facility",
+        "LongName": "Assigning facility",
         "maxLength": ""
     },
     "PPN.15": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Date\/Time Action Performed",
+        "LongName": "Date/Time Action Performed",
         "maxLength": ""
     },
     "PPN.16": {
@@ -3081,67 +3081,67 @@
     "PPN.17": {
         "Type": "CE",
         "Table": "",
-        "LongName": "name context",
+        "LongName": "Name context",
         "maxLength": ""
     },
     "PPN.18": {
         "Type": "DR",
         "Table": "",
-        "LongName": "name validity range",
+        "LongName": "Name validity range",
         "maxLength": ""
     },
     "PPN.19": {
         "Type": "ID",
         "Table": "",
-        "LongName": "name assembly order",
+        "LongName": "Name assembly order",
         "maxLength": ""
     },
     "PPN.2": {
         "Type": "FN",
         "Table": "",
-        "LongName": "family name",
+        "LongName": "Family name",
         "maxLength": ""
     },
     "PPN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "given name",
+        "LongName": "Given name",
         "maxLength": ""
     },
     "PPN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "second and further given names or initials thereof",
+        "LongName": "Second and further given names or initials thereof",
         "maxLength": ""
     },
     "PPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": ""
     },
     "PPN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": ""
     },
     "PPN.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": ""
     },
     "PPN.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "source table",
+        "LongName": "Source table",
         "maxLength": ""
     },
     "PPN.9": {
         "Type": "HD",
         "Table": "HL70363",
-        "LongName": "assigning authority",
+        "LongName": "Assigning authority",
         "maxLength": ""
     },
     "PRL": {
@@ -3178,7 +3178,7 @@
     "PRL.3": {
         "Type": "TX",
         "Table": "",
-        "LongName": "part of OBX-5 observation result from parent",
+        "LongName": "Part of OBX-5 observation result from parent",
         "maxLength": ""
     },
     "PT": {
@@ -3198,13 +3198,13 @@
     "PT.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "processing ID",
+        "LongName": "Processing ID",
         "maxLength": ""
     },
     "PT.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "processing mode",
+        "LongName": "Processing mode",
         "maxLength": ""
     },
     "PTA": {
@@ -3229,19 +3229,19 @@
     "PTA.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "policy type",
+        "LongName": "Policy type",
         "maxLength": ""
     },
     "PTA.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "amount class",
+        "LongName": "Amount class",
         "maxLength": ""
     },
     "PTA.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "amount",
+        "LongName": "Amount",
         "maxLength": ""
     },
     "QIP": {
@@ -3261,13 +3261,13 @@
     "QIP.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "segment field name",
+        "LongName": "Segment field name",
         "maxLength": ""
     },
     "QIP.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "value1&value2&value3",
+        "LongName": "Value1&value2&value3",
         "maxLength": ""
     },
     "QSC": {
@@ -3297,13 +3297,13 @@
     "QSC.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "segment field name",
+        "LongName": "Segment field name",
         "maxLength": ""
     },
     "QSC.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "relational operator",
+        "LongName": "Relational operator",
         "maxLength": ""
     },
     "QSC.3": {
@@ -3315,7 +3315,7 @@
     "QSC.4": {
         "Type": "ID",
         "Table": "",
-        "LongName": "relational conjunction",
+        "LongName": "Relational conjunction",
         "maxLength": ""
     },
     "RCD": {
@@ -3340,7 +3340,7 @@
     "RCD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "segment field name",
+        "LongName": "Segment field name",
         "maxLength": ""
     },
     "RCD.2": {
@@ -3352,7 +3352,7 @@
     "RCD.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "maximum column width",
+        "LongName": "Maximum column width",
         "maxLength": ""
     },
     "RFR": {
@@ -3397,43 +3397,43 @@
     "RFR.1": {
         "Type": "NR",
         "Table": "",
-        "LongName": "numeric range",
+        "LongName": "Numeric range",
         "maxLength": ""
     },
     "RFR.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "administrative sex",
+        "LongName": "Administrative sex",
         "maxLength": ""
     },
     "RFR.3": {
         "Type": "NR",
         "Table": "",
-        "LongName": "age range",
+        "LongName": "Age range",
         "maxLength": ""
     },
     "RFR.4": {
         "Type": "NR",
         "Table": "",
-        "LongName": "gestational range",
+        "LongName": "Gestational range",
         "maxLength": ""
     },
     "RFR.5": {
         "Type": "TX",
         "Table": "",
-        "LongName": "species",
+        "LongName": "Species",
         "maxLength": ""
     },
     "RFR.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "race\/subspecies",
+        "LongName": "Race/subspecies",
         "maxLength": ""
     },
     "RFR.7": {
         "Type": "TX",
         "Table": "",
-        "LongName": "conditions",
+        "LongName": "Conditions",
         "maxLength": ""
     },
     "RI": {
@@ -3453,13 +3453,13 @@
     "RI.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "repeat pattern",
+        "LongName": "Repeat pattern",
         "maxLength": ""
     },
     "RI.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "explicit time interval",
+        "LongName": "Explicit time interval",
         "maxLength": ""
     },
     "RMC": {
@@ -3484,19 +3484,19 @@
     "RMC.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "room type",
+        "LongName": "Room type",
         "maxLength": ""
     },
     "RMC.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "amount type",
+        "LongName": "Amount type",
         "maxLength": ""
     },
     "RMC.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "coverage amount",
+        "LongName": "Coverage amount",
         "maxLength": ""
     },
     "RP": {
@@ -3526,25 +3526,25 @@
     "RP.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "pointer",
+        "LongName": "Pointer",
         "maxLength": ""
     },
     "RP.2": {
         "Type": "HD",
         "Table": "",
-        "LongName": "application ID",
+        "LongName": "Application ID",
         "maxLength": ""
     },
     "RP.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "type of data",
+        "LongName": "Type of data",
         "maxLength": ""
     },
     "RP.4": {
         "Type": "ID",
         "Table": "",
-        "LongName": "subtype",
+        "LongName": "Subtype",
         "maxLength": ""
     },
     "SAD": {
@@ -3569,19 +3569,19 @@
     "SAD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "street or mailing address",
+        "LongName": "Street or mailing address",
         "maxLength": ""
     },
     "SAD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "street name",
+        "LongName": "Street name",
         "maxLength": ""
     },
     "SAD.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "dwelling number",
+        "LongName": "Dwelling number",
         "maxLength": ""
     },
     "SCV": {
@@ -3601,13 +3601,13 @@
     "SCV.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "parameter class",
+        "LongName": "Parameter class",
         "maxLength": ""
     },
     "SCV.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "parameter value",
+        "LongName": "Parameter value",
         "maxLength": ""
     },
     "SI": {
@@ -3640,25 +3640,25 @@
     "SN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "comparator",
+        "LongName": "Comparator",
         "maxLength": ""
     },
     "SN.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "num1",
+        "LongName": "Num1",
         "maxLength": ""
     },
     "SN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "separator\/suffix",
+        "LongName": "Separator/suffix",
         "maxLength": ""
     },
     "SN.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "num2",
+        "LongName": "Num2",
         "maxLength": ""
     },
     "SPD": {
@@ -3688,25 +3688,25 @@
     "SPD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "specialty name",
+        "LongName": "Specialty name",
         "maxLength": ""
     },
     "SPD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "governing board",
+        "LongName": "Governing board",
         "maxLength": ""
     },
     "SPD.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "eligible or certified",
+        "LongName": "Eligible or certified",
         "maxLength": ""
     },
     "SPD.4": {
         "Type": "DT",
         "Table": "",
-        "LongName": "date of certification",
+        "LongName": "Date of certification",
         "maxLength": ""
     },
     "SPS": {
@@ -3751,43 +3751,43 @@
     "SPS.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "specimen source name or code",
+        "LongName": "Specimen source name or code",
         "maxLength": ""
     },
     "SPS.2": {
         "Type": "TX",
         "Table": "",
-        "LongName": "additives",
+        "LongName": "Additives",
         "maxLength": ""
     },
     "SPS.3": {
         "Type": "TX",
         "Table": "",
-        "LongName": "freetext",
+        "LongName": "Freetext",
         "maxLength": ""
     },
     "SPS.4": {
         "Type": "CE",
         "Table": "",
-        "LongName": "body site",
+        "LongName": "Body site",
         "maxLength": ""
     },
     "SPS.5": {
         "Type": "CE",
         "Table": "",
-        "LongName": "site modifier",
+        "LongName": "Site modifier",
         "maxLength": ""
     },
     "SPS.6": {
         "Type": "CE",
         "Table": "",
-        "LongName": "collection modifier method code",
+        "LongName": "Collection modifier method code",
         "maxLength": ""
     },
     "SPS.7": {
         "Type": "CE",
         "Table": "",
-        "LongName": "specimen role",
+        "LongName": "Specimen role",
         "maxLength": ""
     },
     "SRT": {
@@ -3807,13 +3807,13 @@
     "SRT.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "sort-by field",
+        "LongName": "Sort-by field",
         "maxLength": ""
     },
     "SRT.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "sequencing",
+        "LongName": "Sequencing",
         "maxLength": ""
     },
     "ST": {
@@ -3892,73 +3892,73 @@
     "TQ.1": {
         "Type": "CQ",
         "Table": "",
-        "LongName": "quantity",
+        "LongName": "Quantity",
         "maxLength": ""
     },
     "TQ.10": {
         "Type": "OSD",
         "Table": "",
-        "LongName": "order sequencing",
+        "LongName": "Order sequencing",
         "maxLength": ""
     },
     "TQ.11": {
         "Type": "CE",
         "Table": "",
-        "LongName": "occurrence duration",
+        "LongName": "Occurrence duration",
         "maxLength": ""
     },
     "TQ.12": {
         "Type": "NM",
         "Table": "",
-        "LongName": "total occurences",
+        "LongName": "Total occurences",
         "maxLength": ""
     },
     "TQ.2": {
         "Type": "RI",
         "Table": "",
-        "LongName": "interval",
+        "LongName": "Interval",
         "maxLength": ""
     },
     "TQ.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "duration",
+        "LongName": "Duration",
         "maxLength": ""
     },
     "TQ.4": {
         "Type": "TS",
         "Table": "",
-        "LongName": "start date\/time",
+        "LongName": "Start date/time",
         "maxLength": ""
     },
     "TQ.5": {
         "Type": "TS",
         "Table": "",
-        "LongName": "end date\/time",
+        "LongName": "End date/time",
         "maxLength": ""
     },
     "TQ.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "priority",
+        "LongName": "Priority",
         "maxLength": ""
     },
     "TQ.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "condition",
+        "LongName": "Condition",
         "maxLength": ""
     },
     "TQ.8": {
         "Type": "TX",
         "Table": "",
-        "LongName": "text (TX)",
+        "LongName": "Text",
         "maxLength": ""
     },
     "TQ.9": {
         "Type": "ID",
         "Table": "",
-        "LongName": "conjunction component",
+        "LongName": "Conjunction component",
         "maxLength": ""
     },
     "TS": {
@@ -3978,13 +3978,13 @@
     "TS.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "time of an event",
+        "LongName": "Time of an event",
         "maxLength": ""
     },
     "TS.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "degree of precision",
+        "LongName": "Degree of precision",
         "maxLength": ""
     },
     "TX": {
@@ -4033,13 +4033,13 @@
     "UVC.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "value code",
+        "LongName": "Value code",
         "maxLength": ""
     },
     "UVC.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "value amount",
+        "LongName": "Value amount",
         "maxLength": ""
     },
     "VH": {
@@ -4069,25 +4069,25 @@
     "VH.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "start day range",
+        "LongName": "Start day range",
         "maxLength": ""
     },
     "VH.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "end day range",
+        "LongName": "End day range",
         "maxLength": ""
     },
     "VH.3": {
         "Type": "TM",
         "Table": "",
-        "LongName": "start hour range",
+        "LongName": "Start hour range",
         "maxLength": ""
     },
     "VH.4": {
         "Type": "TM",
         "Table": "",
-        "LongName": "end hour range",
+        "LongName": "End hour range",
         "maxLength": ""
     },
     "VID": {
@@ -4112,19 +4112,19 @@
     "VID.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "version ID",
+        "LongName": "Version ID",
         "maxLength": ""
     },
     "VID.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "internationalization code",
+        "LongName": "Internationalization code",
         "maxLength": ""
     },
     "VID.3": {
         "Type": "CE",
         "Table": "",
-        "LongName": "international version ID",
+        "LongName": "International version ID",
         "maxLength": ""
     },
     "VR": {
@@ -4144,7 +4144,7 @@
     "VR.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "first data code value",
+        "LongName": "First data code value",
         "maxLength": ""
     },
     "VR.2": {
@@ -4196,13 +4196,13 @@
     "WVS.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "source name 1",
+        "LongName": "Source name 1",
         "maxLength": ""
     },
     "WVS.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "source name 2",
+        "LongName": "Source name 2",
         "maxLength": ""
     },
     "XAD": {
@@ -4272,73 +4272,73 @@
     "XAD.1": {
         "Type": "SAD",
         "Table": "",
-        "LongName": "street address (SAD)",
+        "LongName": "Street address",
         "maxLength": ""
     },
     "XAD.10": {
         "Type": "IS",
         "Table": "",
-        "LongName": "census tract",
+        "LongName": "Census tract",
         "maxLength": ""
     },
     "XAD.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "address representation code",
+        "LongName": "Address representation code",
         "maxLength": ""
     },
     "XAD.12": {
         "Type": "DR",
         "Table": "",
-        "LongName": "address validity range",
+        "LongName": "Address validity range",
         "maxLength": ""
     },
     "XAD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other designation",
+        "LongName": "Other designation",
         "maxLength": ""
     },
     "XAD.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "city",
+        "LongName": "City",
         "maxLength": ""
     },
     "XAD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "state or province",
+        "LongName": "State or province",
         "maxLength": ""
     },
     "XAD.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "zip or postal code",
+        "LongName": "Zip or postal code",
         "maxLength": ""
     },
     "XAD.6": {
         "Type": "ID",
         "Table": "",
-        "LongName": "country",
+        "LongName": "Country",
         "maxLength": ""
     },
     "XAD.7": {
         "Type": "ID",
         "Table": "",
-        "LongName": "address type",
+        "LongName": "Address type",
         "maxLength": ""
     },
     "XAD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "other geographic designation",
+        "LongName": "Other geographic designation",
         "maxLength": ""
     },
     "XAD.9": {
         "Type": "IS",
         "Table": "",
-        "LongName": "county\/parish code",
+        "LongName": "County/parish code",
         "maxLength": ""
     },
     "XCN": {
@@ -4438,37 +4438,37 @@
     "XCN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number (ST)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "XCN.10": {
         "Type": "ID",
         "Table": "",
-        "LongName": "name type code",
+        "LongName": "Name type code",
         "maxLength": ""
     },
     "XCN.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "identifier check digit",
+        "LongName": "Identifier check digit",
         "maxLength": ""
     },
     "XCN.12": {
         "Type": "ID",
         "Table": "",
-        "LongName": "code identifying the check digit scheme employed",
+        "LongName": "Code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "XCN.13": {
         "Type": "IS",
         "Table": "",
-        "LongName": "identifier type code (IS)",
+        "LongName": "Identifier type code",
         "maxLength": ""
     },
     "XCN.14": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning facility",
+        "LongName": "Assigning facility",
         "maxLength": ""
     },
     "XCN.15": {
@@ -4480,67 +4480,67 @@
     "XCN.16": {
         "Type": "CE",
         "Table": "",
-        "LongName": "name context",
+        "LongName": "Name context",
         "maxLength": ""
     },
     "XCN.17": {
         "Type": "DR",
         "Table": "",
-        "LongName": "name validity range",
+        "LongName": "Name validity range",
         "maxLength": ""
     },
     "XCN.18": {
         "Type": "ID",
         "Table": "",
-        "LongName": "name assembly order",
+        "LongName": "Name assembly order",
         "maxLength": ""
     },
     "XCN.2": {
         "Type": "FN",
         "Table": "",
-        "LongName": "family name",
+        "LongName": "Family name",
         "maxLength": ""
     },
     "XCN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "given name",
+        "LongName": "Given name",
         "maxLength": ""
     },
     "XCN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "second and further given names or initials thereof",
+        "LongName": "Second and further given names or initials thereof",
         "maxLength": ""
     },
     "XCN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": ""
     },
     "XCN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": ""
     },
     "XCN.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": ""
     },
     "XCN.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "source table",
+        "LongName": "Source table",
         "maxLength": ""
     },
     "XCN.9": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning authority",
+        "LongName": "Assigning authority",
         "maxLength": ""
     },
     "XON": {
@@ -4595,49 +4595,49 @@
     "XON.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "organization name",
+        "LongName": "Organization name",
         "maxLength": ""
     },
     "XON.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "organization name type code",
+        "LongName": "Organization name type code",
         "maxLength": ""
     },
     "XON.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "ID number (NM)",
+        "LongName": "ID number",
         "maxLength": ""
     },
     "XON.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "check digit (NM)",
+        "LongName": "Check digit",
         "maxLength": ""
     },
     "XON.5": {
         "Type": "ID",
         "Table": "",
-        "LongName": "code identifying the check digit scheme employed",
+        "LongName": "Code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "XON.6": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning authority",
+        "LongName": "Assigning authority",
         "maxLength": ""
     },
     "XON.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "identifier type code (IS)",
+        "LongName": "Identifier type code",
         "maxLength": ""
     },
     "XON.8": {
         "Type": "HD",
         "Table": "",
-        "LongName": "assigning facility ID",
+        "LongName": "Assigning facility ID",
         "maxLength": ""
     },
     "XON.9": {
@@ -4708,55 +4708,55 @@
     "XPN.1": {
         "Type": "FN",
         "Table": "",
-        "LongName": "family name",
+        "LongName": "Family name",
         "maxLength": ""
     },
     "XPN.10": {
         "Type": "DR",
         "Table": "",
-        "LongName": "name validity range",
+        "LongName": "Name validity range",
         "maxLength": ""
     },
     "XPN.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "name assembly order",
+        "LongName": "Name assembly order",
         "maxLength": ""
     },
     "XPN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "given name",
+        "LongName": "Given name",
         "maxLength": ""
     },
     "XPN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "second and further given names or initials thereof",
+        "LongName": "Second and further given names or initials thereof",
         "maxLength": ""
     },
     "XPN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": ""
     },
     "XPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": ""
     },
     "XPN.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": ""
     },
     "XPN.7": {
         "Type": "ID",
         "Table": "",
-        "LongName": "name type code",
+        "LongName": "Name type code",
         "maxLength": ""
     },
     "XPN.8": {
@@ -4768,7 +4768,7 @@
     "XPN.9": {
         "Type": "CE",
         "Table": "",
-        "LongName": "name context",
+        "LongName": "Name context",
         "maxLength": ""
     },
     "XTN": {
@@ -4823,19 +4823,19 @@
     "XTN.1": {
         "Type": "TN",
         "Table": "",
-        "LongName": "[(999)] 999-9999 [X99999][C any text]",
+        "LongName": "Telephone number",
         "maxLength": ""
     },
     "XTN.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "telecommunication use code",
+        "LongName": "Telecommunication use code",
         "maxLength": ""
     },
     "XTN.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "telecommunication equipment type (ID)",
+        "LongName": "Telecommunication equipment type",
         "maxLength": ""
     },
     "XTN.4": {
@@ -4853,7 +4853,7 @@
     "XTN.6": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Area\/city code",
+        "LongName": "Area/city code",
         "maxLength": ""
     },
     "XTN.7": {
@@ -4871,7 +4871,7 @@
     "XTN.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "any text",
+        "LongName": "Any text",
         "maxLength": ""
     },
     "escapeType": {

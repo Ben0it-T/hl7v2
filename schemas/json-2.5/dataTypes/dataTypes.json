@@ -602,19 +602,19 @@
     "CNN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": "20"
     },
     "CNN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": "20"
     },
     "CNN.7": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree (e.g., MD",
+        "LongName": "Degree",
         "maxLength": "5"
     },
     "CNN.8": {
@@ -3056,19 +3056,19 @@
     "PPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": "20"
     },
     "PPN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": "20"
     },
     "PPN.7": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": "5"
     },
     "PPN.8": {
@@ -4650,19 +4650,19 @@
     "XCN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": "20"
     },
     "XCN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": "20"
     },
     "XCN.7": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": "5"
     },
     "XCN.8": {
@@ -4916,19 +4916,19 @@
     "XPN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix (e.g., JR or III)",
+        "LongName": "Suffix",
         "maxLength": "20"
     },
     "XPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix (e.g., DR)",
+        "LongName": "Prefix",
         "maxLength": "20"
     },
     "XPN.6": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree (e.g., MD)",
+        "LongName": "Degree",
         "maxLength": "6"
     },
     "XPN.7": {

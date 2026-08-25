@@ -119,7 +119,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Appointment information - general resource segment",
+        "LongName": "Appointment information - general resource",
         "Chapter": "10"
     },
     "AIL": {
@@ -3464,7 +3464,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Next of kin \/ associated parties segment",
+        "LongName": "Next of kin / associated parties segment",
         "Chapter": "3"
     },
     "NPU": {
@@ -3945,7 +3945,7 @@
                 "maxOccurs": "unbounded"
             }
         ],
-        "LongName": "Observation\/result segment",
+        "LongName": "Observation/result segment",
         "Chapter": "7"
     },
     "ODS": {
@@ -4330,7 +4330,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Categorical test\/observation segment",
+        "LongName": "Categorical test/observation segment",
         "Chapter": "8"
     },
     "OM4": {
@@ -5651,7 +5651,7 @@
                 "maxOccurs": "unbounded"
             }
         ],
-       "LongName": "Product summary header segment",
+        "LongName": "Product summary header segment",
         "Chapter": "7"
     },
     "PTH": {
@@ -6432,7 +6432,7 @@
                 "maxOccurs": "1"
             }
         ],
-         "LongName": "Role segment",
+        "LongName": "Role segment",
         "Chapter": "12"
     },
     "RQ1": {
@@ -6645,7 +6645,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment administration segment",
+        "LongName": "Pharmacy/treatment administration segment",
         "Chapter": "4"
     },
     "RXC": {
@@ -6681,7 +6681,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment component order segment",
+        "LongName": "Pharmacy/treatment component order segment",
         "Chapter": "4"
     },
     "RXD": {
@@ -6807,7 +6807,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment dispense segment",
+        "LongName": "Pharmacy/treatment dispense segment",
         "Chapter": "4"
     },
     "RXE": {
@@ -6963,7 +6963,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment encoded order segment",
+        "LongName": "Pharmacy/treatment encoded order segment",
         "Chapter": "4"
     },
     "RXG": {
@@ -7079,7 +7079,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment give segment",
+        "LongName": "Pharmacy/treatment give segment",
         "Chapter": "4"
     },
     "RXO": {
@@ -7195,7 +7195,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment prescription order segment",
+        "LongName": "Pharmacy/treatment prescription order segment",
         "Chapter": "4"
     },
     "RXR": {
@@ -7221,7 +7221,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/treatment route segment",
+        "LongName": "Pharmacy/treatment route segment",
         "Chapter": "4"
     },
     "SCH": {
@@ -7888,7 +7888,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Results\/update definition segment",
+        "LongName": "Results/update definition segment",
         "Chapter": "2"
     },
     "URS": {

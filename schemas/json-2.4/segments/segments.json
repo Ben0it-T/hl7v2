@@ -1642,7 +1642,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Equipment\/log Service",
+        "LongName": "Equipment/log Service",
         "Chapter": "13"
     },
     "EQU": {
@@ -2172,7 +2172,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Grouping\/Reimbursement - Visit",
+        "LongName": "Grouping/Reimbursement - Visit",
         "Chapter": "6"
     },
     "GP2": {
@@ -2248,7 +2248,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Grouping\/Reimbursement - Procedure Line Item",
+        "LongName": "Grouping/Reimbursement - Procedure Line Item",
         "Chapter": "6"
     },
     "GT1": {
@@ -4255,7 +4255,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Next of kin \/ associated parties",
+        "LongName": "Next of kin / associated parties",
         "Chapter": "3"
     },
     "NPU": {
@@ -4713,7 +4713,7 @@
             {
                 "field": "OBX.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "5"
             },
             {
                 "field": "OBX.9",
@@ -5156,7 +5156,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Categorical Service\/Test\/Observation",
+        "LongName": "Categorical Service/Test/Observation",
         "Chapter": "8"
     },
     "OM4": {
@@ -5824,7 +5824,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "patient additional demographic",
+        "LongName": "Patient additional demographic",
         "Chapter": "3"
     },
     "PDA": {
@@ -8120,7 +8120,7 @@
                 "maxOccurs": "unbounded"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Component Order",
+        "LongName": "Pharmacy/Treatment Component Order",
         "Chapter": "4"
     },
     "RXD": {
@@ -8261,7 +8261,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Dispense",
+        "LongName": "Pharmacy/Treatment Dispense",
         "Chapter": "4"
     },
     "RXE": {
@@ -8422,7 +8422,7 @@
                 "maxOccurs": "unbounded"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Encoded Order",
+        "LongName": "Pharmacy/Treatment Encoded Order",
         "Chapter": "4"
     },
     "RXG": {
@@ -8538,7 +8538,7 @@
                 "maxOccurs": "unbounded"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Give",
+        "LongName": "Pharmacy/Treatment Give",
         "Chapter": "4"
     },
     "RXO": {
@@ -8664,7 +8664,7 @@
                 "maxOccurs": "unbounded"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Order",
+        "LongName": "Pharmacy/Treatment Order",
         "Chapter": "4"
     },
     "RXR": {
@@ -8695,7 +8695,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Pharmacy\/Treatment Route",
+        "LongName": "Pharmacy/Treatment Route",
         "Chapter": "4"
     },
     "SAC": {
@@ -9761,7 +9761,7 @@
                 "maxOccurs": "1"
             }
         ],
-        "LongName": "Results\/update Definition",
+        "LongName": "Results/update Definition",
         "Chapter": "5"
     },
     "URS": {
