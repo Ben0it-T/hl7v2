@@ -8,11 +8,10 @@ __*.*
 # Resources
 /profiles/gazelle/
 /profiles/xml-*/
-/schemas/appendixA-2.5/
-/schemas/hl7-xml-v2.5/
-/schemas/hl7v2xsd/
-/schemas/json-2.5-org/
-/schemas/json-2.5-sun/
+/schemas/appendix*/
+/schemas/hl7*/
+/schemas/json-*-org/
+/schemas/json-*-sun/
 /scripts/06-create-json-profile.config.php
 /scripts/07-create-xml-profile.config.php
 
