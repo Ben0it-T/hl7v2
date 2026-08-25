@@ -11070,12 +11070,7 @@
         "id": "0300",
         "name": "Namespace ID",
         "type": "User",
-        "elements": [
-            {
-                "code": "\u0085",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0301": {
         "id": "0301",
@@ -14989,10 +14984,6 @@
             {
                 "code": "2",
                 "description": "for ranked secondary procedures"
-            },
-            {
-                "code": "\u0085",
-                "description": ""
             }
         ]
     },
