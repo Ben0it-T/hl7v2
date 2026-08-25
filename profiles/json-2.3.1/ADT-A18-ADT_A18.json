@@ -50,8 +50,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -61,7 +61,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -71,7 +71,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -94,8 +94,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -105,7 +105,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -115,7 +115,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -138,8 +138,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -149,7 +149,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -159,7 +159,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -182,8 +182,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -193,7 +193,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -203,7 +203,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -217,7 +217,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Date\/Time Of Message",
+        "LongName": "Date/Time Of Message",
         "Chapter": "",
         "components": [
           {
@@ -227,7 +227,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -272,8 +272,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "0076",
-            "LongName": "message type",
+            "Table": "",
+            "LongName": "Message type",
             "maxLength": ""
           },
           {
@@ -283,7 +283,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "trigger event",
+            "LongName": "Trigger event",
             "maxLength": ""
           },
           {
@@ -293,7 +293,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "message structure",
+            "LongName": "Message structure",
             "maxLength": ""
           }
         ]
@@ -329,7 +329,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "processing ID",
+            "LongName": "Processing ID",
             "maxLength": ""
           },
           {
@@ -339,7 +339,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "processing mode",
+            "LongName": "Processing mode",
             "maxLength": ""
           }
         ]
@@ -362,8 +362,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "0104",
-            "LongName": "version ID",
+            "Table": "",
+            "LongName": "Version ID",
             "maxLength": ""
           },
           {
@@ -373,7 +373,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "internationalization code",
+            "LongName": "Internationalization code",
             "maxLength": "",
             "components": [
               {
@@ -383,7 +383,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "identifier",
+                "LongName": "Identifier",
                 "maxLength": ""
               },
               {
@@ -393,7 +393,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "text",
+                "LongName": "Text",
                 "maxLength": ""
               },
               {
@@ -403,7 +403,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of coding system",
+                "LongName": "Name of coding system",
                 "maxLength": ""
               },
               {
@@ -413,7 +413,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate identifier",
+                "LongName": "Alternate identifier",
                 "maxLength": ""
               },
               {
@@ -423,7 +423,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate text",
+                "LongName": "Alternate text",
                 "maxLength": ""
               },
               {
@@ -433,7 +433,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of alternate coding system",
+                "LongName": "Name of alternate coding system",
                 "maxLength": ""
               }
             ]
@@ -445,7 +445,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "international version ID",
+            "LongName": "International version ID",
             "maxLength": "",
             "components": [
               {
@@ -455,7 +455,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "identifier",
+                "LongName": "Identifier",
                 "maxLength": ""
               },
               {
@@ -465,7 +465,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "text",
+                "LongName": "Text",
                 "maxLength": ""
               },
               {
@@ -475,7 +475,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of coding system",
+                "LongName": "Name of coding system",
                 "maxLength": ""
               },
               {
@@ -485,7 +485,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate identifier",
+                "LongName": "Alternate identifier",
                 "maxLength": ""
               },
               {
@@ -495,7 +495,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate text",
+                "LongName": "Alternate text",
                 "maxLength": ""
               },
               {
@@ -505,7 +505,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of alternate coding system",
+                "LongName": "Name of alternate coding system",
                 "maxLength": ""
               }
             ]
@@ -603,7 +603,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -613,7 +613,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -623,7 +623,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -633,7 +633,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -643,7 +643,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -653,7 +653,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -702,7 +702,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Recorded Date\/Time",
+        "LongName": "Recorded Date/Time",
         "Chapter": "",
         "components": [
           {
@@ -712,7 +712,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -722,7 +722,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -736,7 +736,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Date\/Time Planned Event",
+        "LongName": "Date/Time Planned Event",
         "Chapter": "",
         "components": [
           {
@@ -746,7 +746,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -756,7 +756,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -791,8 +791,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0188",
-            "LongName": "ID number (ST)",
+            "Table": "",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -802,7 +802,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -812,7 +812,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -822,7 +822,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -834,7 +834,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -844,7 +844,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -854,7 +854,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -864,7 +864,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -874,7 +874,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -884,7 +884,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -894,7 +894,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -904,7 +904,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -914,7 +914,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -924,7 +924,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -936,7 +936,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -946,7 +946,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -956,7 +956,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -966,7 +966,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -976,7 +976,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -986,7 +986,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -996,7 +996,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1006,7 +1006,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1042,7 +1042,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -1052,7 +1052,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -1109,7 +1109,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -1119,7 +1119,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -1129,7 +1129,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -1139,7 +1139,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -1149,7 +1149,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1159,7 +1159,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1171,7 +1171,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -1181,7 +1181,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -1191,7 +1191,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -1201,7 +1201,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1211,7 +1211,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1247,7 +1247,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -1257,7 +1257,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -1267,7 +1267,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -1277,7 +1277,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -1287,7 +1287,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1297,7 +1297,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1309,7 +1309,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -1319,7 +1319,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -1329,7 +1329,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -1339,7 +1339,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1349,7 +1349,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1385,7 +1385,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -1395,7 +1395,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -1405,7 +1405,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -1415,7 +1415,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -1425,7 +1425,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1435,7 +1435,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1447,7 +1447,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -1457,7 +1457,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -1467,7 +1467,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -1477,7 +1477,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -1487,7 +1487,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -1513,7 +1513,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family+last name",
             "maxLength": "",
             "components": [
               {
@@ -1523,7 +1523,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -1533,7 +1533,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -1545,7 +1545,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -1555,7 +1555,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -1565,7 +1565,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -1575,7 +1575,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -1585,7 +1585,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -1595,7 +1595,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -1629,7 +1629,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family+last name",
             "maxLength": "",
             "components": [
               {
@@ -1639,7 +1639,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -1649,7 +1649,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -1661,7 +1661,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -1671,7 +1671,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -1681,7 +1681,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -1691,7 +1691,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -1701,7 +1701,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -1711,7 +1711,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -1735,7 +1735,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Date\/Time Of Birth",
+        "LongName": "Date/Time Of Birth",
         "Chapter": "",
         "components": [
           {
@@ -1745,7 +1745,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -1755,7 +1755,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -1791,7 +1791,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family+last name",
             "maxLength": "",
             "components": [
               {
@@ -1801,7 +1801,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -1811,7 +1811,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -1823,7 +1823,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -1833,7 +1833,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -1843,7 +1843,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -1853,7 +1853,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -1863,7 +1863,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -1873,7 +1873,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -1906,8 +1906,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0005",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -1917,7 +1917,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -1927,7 +1927,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -1937,7 +1937,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -1947,7 +1947,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -1957,7 +1957,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -1981,7 +1981,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "street address",
+            "LongName": "Street address",
             "maxLength": ""
           },
           {
@@ -1991,7 +1991,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "other designation",
+            "LongName": "Other designation",
             "maxLength": ""
           },
           {
@@ -2001,7 +2001,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "city",
+            "LongName": "City",
             "maxLength": ""
           },
           {
@@ -2011,7 +2011,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "state or province",
+            "LongName": "State or province",
             "maxLength": ""
           },
           {
@@ -2021,7 +2021,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "zip or postal code",
+            "LongName": "Zip or postal code",
             "maxLength": ""
           },
           {
@@ -2031,7 +2031,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "country",
+            "LongName": "Country",
             "maxLength": ""
           },
           {
@@ -2041,7 +2041,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "address type",
+            "LongName": "Address type",
             "maxLength": ""
           },
           {
@@ -2051,7 +2051,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "other geographic designation",
+            "LongName": "Other geographic designation",
             "maxLength": ""
           },
           {
@@ -2061,7 +2061,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "county\/parish code",
+            "LongName": "County/parish code",
             "maxLength": ""
           },
           {
@@ -2071,7 +2071,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "census tract",
+            "LongName": "Census tract",
             "maxLength": ""
           },
           {
@@ -2081,7 +2081,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "address representation code",
+            "LongName": "Address representation code",
             "maxLength": ""
           }
         ]
@@ -2117,7 +2117,7 @@
             "Max": "1",
             "Type": "TN",
             "Table": "",
-            "LongName": "[(999)] 999-9999 [X99999][C any text]",
+            "LongName": "Telephone number",
             "maxLength": ""
           },
           {
@@ -2127,7 +2127,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "telecommunication use code",
+            "LongName": "Telecommunication use code",
             "maxLength": ""
           },
           {
@@ -2137,7 +2137,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "telecommunication equipment type (ID)",
+            "LongName": "Telecommunication equipment type",
             "maxLength": ""
           },
           {
@@ -2167,7 +2167,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "Area\/city code",
+            "LongName": "Area/city code",
             "maxLength": ""
           },
           {
@@ -2197,7 +2197,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "any text",
+            "LongName": "Any text",
             "maxLength": ""
           }
         ]
@@ -2221,7 +2221,7 @@
             "Max": "1",
             "Type": "TN",
             "Table": "",
-            "LongName": "[(999)] 999-9999 [X99999][C any text]",
+            "LongName": "Telephone number",
             "maxLength": ""
           },
           {
@@ -2231,7 +2231,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "telecommunication use code",
+            "LongName": "Telecommunication use code",
             "maxLength": ""
           },
           {
@@ -2241,7 +2241,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "telecommunication equipment type (ID)",
+            "LongName": "Telecommunication equipment type",
             "maxLength": ""
           },
           {
@@ -2271,7 +2271,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "Area\/city code",
+            "LongName": "Area/city code",
             "maxLength": ""
           },
           {
@@ -2301,7 +2301,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "any text",
+            "LongName": "Any text",
             "maxLength": ""
           }
         ]
@@ -2324,8 +2324,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0296",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -2335,7 +2335,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -2345,7 +2345,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -2355,7 +2355,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -2365,7 +2365,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -2375,7 +2375,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -2398,8 +2398,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0002",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -2409,7 +2409,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -2419,7 +2419,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -2429,7 +2429,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -2439,7 +2439,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -2449,7 +2449,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -2472,8 +2472,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0006",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -2483,7 +2483,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -2493,7 +2493,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -2503,7 +2503,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -2513,7 +2513,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -2523,7 +2523,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -2557,7 +2557,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -2567,7 +2567,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -2577,7 +2577,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -2587,7 +2587,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -2597,7 +2597,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -2607,7 +2607,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -2619,7 +2619,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -2629,7 +2629,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -2639,7 +2639,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -2649,7 +2649,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -2659,7 +2659,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -2717,7 +2717,7 @@
             "Max": "1",
             "Type": "DT",
             "Table": "",
-            "LongName": "expiration date",
+            "LongName": "Expiration date",
             "maxLength": ""
           }
         ]
@@ -2751,7 +2751,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -2761,7 +2761,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -2771,7 +2771,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -2781,7 +2781,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -2791,7 +2791,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -2801,7 +2801,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -2813,7 +2813,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -2823,7 +2823,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -2833,7 +2833,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -2843,7 +2843,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -2853,7 +2853,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -2878,8 +2878,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0189",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -2889,7 +2889,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -2899,7 +2899,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -2909,7 +2909,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -2919,7 +2919,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -2929,7 +2929,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -2988,8 +2988,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0171",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -2999,7 +2999,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -3009,7 +3009,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -3019,7 +3019,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -3029,7 +3029,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -3039,7 +3039,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -3062,8 +3062,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0172",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -3073,7 +3073,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -3083,7 +3083,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -3093,7 +3093,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -3103,7 +3103,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -3113,7 +3113,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -3136,8 +3136,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0212",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -3147,7 +3147,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -3157,7 +3157,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -3167,7 +3167,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -3177,7 +3177,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -3187,7 +3187,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -3211,7 +3211,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -3221,7 +3221,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -3292,7 +3292,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "organization name",
+            "LongName": "Organization name",
             "maxLength": ""
           },
           {
@@ -3302,7 +3302,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "organization name type code",
+            "LongName": "Organization name type code",
             "maxLength": ""
           },
           {
@@ -3312,7 +3312,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "ID number (NM)",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -3322,7 +3322,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -3332,7 +3332,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -3342,7 +3342,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -3352,7 +3352,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -3362,7 +3362,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -3372,7 +3372,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -3384,7 +3384,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -3394,7 +3394,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility ID",
+            "LongName": "Assigning facility ID",
             "maxLength": "",
             "components": [
               {
@@ -3404,7 +3404,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -3414,7 +3414,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -3424,7 +3424,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -3460,7 +3460,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "ID number (ST)",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -3470,7 +3470,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -3480,7 +3480,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -3490,7 +3490,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -3502,7 +3502,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -3512,7 +3512,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -3522,7 +3522,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -3532,7 +3532,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -3542,7 +3542,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -3552,7 +3552,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -3562,7 +3562,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -3572,7 +3572,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -3582,7 +3582,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -3592,7 +3592,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -3604,7 +3604,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -3614,7 +3614,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -3624,7 +3624,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -3634,7 +3634,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -3644,7 +3644,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -3654,7 +3654,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -3664,7 +3664,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -3674,7 +3674,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -3780,7 +3780,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -3790,7 +3790,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -3800,7 +3800,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -3810,7 +3810,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -3820,7 +3820,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -3830,7 +3830,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -3842,7 +3842,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -3852,7 +3852,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -3862,7 +3862,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -3872,7 +3872,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -3882,7 +3882,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -3907,8 +3907,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0215",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -3918,7 +3918,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -3928,7 +3928,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -3938,7 +3938,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -3948,7 +3948,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -3958,7 +3958,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -4015,7 +4015,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -4025,7 +4025,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -4035,7 +4035,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -4045,7 +4045,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4055,7 +4055,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4065,7 +4065,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4077,7 +4077,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -4087,7 +4087,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -4097,7 +4097,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4107,7 +4107,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4117,7 +4117,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4153,7 +4153,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -4163,7 +4163,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -4173,7 +4173,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -4183,7 +4183,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4193,7 +4193,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4203,7 +4203,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4215,7 +4215,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -4225,7 +4225,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -4235,7 +4235,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4245,7 +4245,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4255,7 +4255,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4291,7 +4291,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -4301,7 +4301,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -4311,7 +4311,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -4321,7 +4321,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4331,7 +4331,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4341,7 +4341,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4353,7 +4353,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -4363,7 +4363,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -4373,7 +4373,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4383,7 +4383,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4393,7 +4393,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4429,7 +4429,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -4439,7 +4439,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -4449,7 +4449,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -4459,7 +4459,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4469,7 +4469,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4479,7 +4479,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4491,7 +4491,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -4501,7 +4501,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -4511,7 +4511,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4521,7 +4521,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4531,7 +4531,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4567,7 +4567,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -4577,7 +4577,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -4587,7 +4587,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -4597,7 +4597,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4607,7 +4607,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4617,7 +4617,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4629,7 +4629,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -4639,7 +4639,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -4649,7 +4649,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4659,7 +4659,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4669,7 +4669,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4705,7 +4705,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -4715,7 +4715,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -4725,7 +4725,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -4735,7 +4735,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4745,7 +4745,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4755,7 +4755,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4767,7 +4767,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -4777,7 +4777,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -4787,7 +4787,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -4797,7 +4797,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -4807,7 +4807,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4833,7 +4833,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family+last name",
             "maxLength": "",
             "components": [
               {
@@ -4843,7 +4843,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -4853,7 +4853,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -4865,7 +4865,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -4875,7 +4875,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -4885,7 +4885,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -4895,7 +4895,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -4905,7 +4905,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -4915,7 +4915,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -4984,7 +4984,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "point of care",
+            "LongName": "Point of care",
             "maxLength": ""
           },
           {
@@ -4994,7 +4994,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "room",
+            "LongName": "Room",
             "maxLength": ""
           },
           {
@@ -5004,7 +5004,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "bed",
+            "LongName": "Bed",
             "maxLength": ""
           },
           {
@@ -5014,7 +5014,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "facility (HD)",
+            "LongName": "Facility",
             "maxLength": "",
             "components": [
               {
@@ -5024,7 +5024,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5034,7 +5034,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5044,7 +5044,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5056,7 +5056,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "location status",
+            "LongName": "Location status",
             "maxLength": ""
           },
           {
@@ -5066,7 +5066,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "person location type",
+            "LongName": "Person location type",
             "maxLength": ""
           },
           {
@@ -5076,7 +5076,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "building",
+            "LongName": "Building",
             "maxLength": ""
           },
           {
@@ -5086,7 +5086,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "floor",
+            "LongName": "Floor",
             "maxLength": ""
           },
           {
@@ -5142,7 +5142,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -5152,7 +5152,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -5162,7 +5162,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -5172,7 +5172,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5182,7 +5182,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5192,7 +5192,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5204,7 +5204,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -5214,7 +5214,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -5224,7 +5224,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5234,7 +5234,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5244,7 +5244,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5270,7 +5270,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "point of care",
+            "LongName": "Point of care",
             "maxLength": ""
           },
           {
@@ -5280,7 +5280,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "room",
+            "LongName": "Room",
             "maxLength": ""
           },
           {
@@ -5290,7 +5290,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "bed",
+            "LongName": "Bed",
             "maxLength": ""
           },
           {
@@ -5300,7 +5300,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "facility (HD)",
+            "LongName": "Facility",
             "maxLength": "",
             "components": [
               {
@@ -5310,7 +5310,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5320,7 +5320,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5330,7 +5330,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5342,7 +5342,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "location status",
+            "LongName": "Location status",
             "maxLength": ""
           },
           {
@@ -5352,7 +5352,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "person location type",
+            "LongName": "Person location type",
             "maxLength": ""
           },
           {
@@ -5362,7 +5362,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "building",
+            "LongName": "Building",
             "maxLength": ""
           },
           {
@@ -5372,7 +5372,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "floor",
+            "LongName": "Floor",
             "maxLength": ""
           },
           {
@@ -5405,8 +5405,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0010",
-            "LongName": "ID number (ST)",
+            "Table": "",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -5416,7 +5416,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -5426,7 +5426,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -5436,7 +5436,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -5448,7 +5448,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -5458,7 +5458,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -5468,7 +5468,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -5478,7 +5478,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -5488,7 +5488,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -5498,7 +5498,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -5508,7 +5508,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -5518,7 +5518,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5528,7 +5528,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5538,7 +5538,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5550,7 +5550,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -5560,7 +5560,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -5570,7 +5570,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -5580,7 +5580,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -5590,7 +5590,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -5600,7 +5600,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5610,7 +5610,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5620,7 +5620,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5655,8 +5655,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0010",
-            "LongName": "ID number (ST)",
+            "Table": "",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -5666,7 +5666,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -5676,7 +5676,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -5686,7 +5686,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -5698,7 +5698,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -5708,7 +5708,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -5718,7 +5718,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -5728,7 +5728,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -5738,7 +5738,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -5748,7 +5748,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -5758,7 +5758,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -5768,7 +5768,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5778,7 +5778,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5788,7 +5788,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5800,7 +5800,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -5810,7 +5810,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -5820,7 +5820,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -5830,7 +5830,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -5840,7 +5840,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -5850,7 +5850,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -5860,7 +5860,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -5870,7 +5870,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -5905,8 +5905,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0010",
-            "LongName": "ID number (ST)",
+            "Table": "",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -5916,7 +5916,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -5926,7 +5926,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -5936,7 +5936,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -5948,7 +5948,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -5958,7 +5958,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -5968,7 +5968,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -5978,7 +5978,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -5988,7 +5988,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -5998,7 +5998,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -6008,7 +6008,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -6018,7 +6018,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6028,7 +6028,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6038,7 +6038,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6050,7 +6050,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -6060,7 +6060,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -6070,7 +6070,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -6080,7 +6080,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -6090,7 +6090,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -6100,7 +6100,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6110,7 +6110,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6120,7 +6120,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6168,7 +6168,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "point of care",
+            "LongName": "Point of care",
             "maxLength": ""
           },
           {
@@ -6178,7 +6178,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "room",
+            "LongName": "Room",
             "maxLength": ""
           },
           {
@@ -6188,7 +6188,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "bed",
+            "LongName": "Bed",
             "maxLength": ""
           },
           {
@@ -6198,7 +6198,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "facility (HD)",
+            "LongName": "Facility",
             "maxLength": "",
             "components": [
               {
@@ -6208,7 +6208,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6218,7 +6218,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6228,7 +6228,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6240,7 +6240,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "location status",
+            "LongName": "Location status",
             "maxLength": ""
           },
           {
@@ -6250,7 +6250,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "person location type",
+            "LongName": "Person location type",
             "maxLength": ""
           },
           {
@@ -6260,7 +6260,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "building",
+            "LongName": "Building",
             "maxLength": ""
           },
           {
@@ -6270,7 +6270,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "floor",
+            "LongName": "Floor",
             "maxLength": ""
           },
           {
@@ -6363,8 +6363,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0010",
-            "LongName": "ID number (ST)",
+            "Table": "",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -6374,7 +6374,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -6384,7 +6384,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -6394,7 +6394,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -6406,7 +6406,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -6416,7 +6416,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -6426,7 +6426,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -6436,7 +6436,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -6446,7 +6446,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -6456,7 +6456,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -6466,7 +6466,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -6476,7 +6476,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6486,7 +6486,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6496,7 +6496,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6508,7 +6508,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -6518,7 +6518,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -6528,7 +6528,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -6538,7 +6538,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -6548,7 +6548,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -6558,7 +6558,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6568,7 +6568,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6578,7 +6578,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6636,7 +6636,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -6646,7 +6646,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -6656,7 +6656,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -6666,7 +6666,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6676,7 +6676,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6686,7 +6686,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6698,7 +6698,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -6708,7 +6708,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -6718,7 +6718,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -6728,7 +6728,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -6738,7 +6738,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -6784,7 +6784,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "time of an event",
+                "LongName": "Time of an event",
                 "maxLength": ""
               },
               {
@@ -6794,7 +6794,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "degree of precision",
+                "LongName": "Degree of precision",
                 "maxLength": ""
               }
             ]
@@ -7011,8 +7011,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0113",
-            "LongName": "discharge location",
+            "Table": "",
+            "LongName": "Discharge location",
             "maxLength": ""
           },
           {
@@ -7022,7 +7022,7 @@
             "Max": "1",
             "Type": "TS",
             "Table": "",
-            "LongName": "effective date",
+            "LongName": "Effective date",
             "maxLength": "",
             "components": [
               {
@@ -7032,7 +7032,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "time of an event",
+                "LongName": "Time of an event",
                 "maxLength": ""
               },
               {
@@ -7042,7 +7042,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "degree of precision",
+                "LongName": "Degree of precision",
                 "maxLength": ""
               }
             ]
@@ -7067,8 +7067,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0114",
-            "LongName": "identifier",
+            "Table": "",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -7078,7 +7078,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -7088,7 +7088,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -7098,7 +7098,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -7108,7 +7108,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -7118,7 +7118,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -7178,7 +7178,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "point of care",
+            "LongName": "Point of care",
             "maxLength": ""
           },
           {
@@ -7188,7 +7188,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "room",
+            "LongName": "Room",
             "maxLength": ""
           },
           {
@@ -7198,7 +7198,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "bed",
+            "LongName": "Bed",
             "maxLength": ""
           },
           {
@@ -7208,7 +7208,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "facility (HD)",
+            "LongName": "Facility",
             "maxLength": "",
             "components": [
               {
@@ -7218,7 +7218,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -7228,7 +7228,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -7238,7 +7238,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -7250,7 +7250,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "location status",
+            "LongName": "Location status",
             "maxLength": ""
           },
           {
@@ -7260,7 +7260,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "person location type",
+            "LongName": "Person location type",
             "maxLength": ""
           },
           {
@@ -7270,7 +7270,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "building",
+            "LongName": "Building",
             "maxLength": ""
           },
           {
@@ -7280,7 +7280,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "floor",
+            "LongName": "Floor",
             "maxLength": ""
           },
           {
@@ -7314,7 +7314,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "point of care",
+            "LongName": "Point of care",
             "maxLength": ""
           },
           {
@@ -7324,7 +7324,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "room",
+            "LongName": "Room",
             "maxLength": ""
           },
           {
@@ -7334,7 +7334,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "bed",
+            "LongName": "Bed",
             "maxLength": ""
           },
           {
@@ -7344,7 +7344,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "facility (HD)",
+            "LongName": "Facility",
             "maxLength": "",
             "components": [
               {
@@ -7354,7 +7354,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -7364,7 +7364,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -7374,7 +7374,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -7386,7 +7386,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "location status",
+            "LongName": "Location status",
             "maxLength": ""
           },
           {
@@ -7396,7 +7396,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "person location type",
+            "LongName": "Person location type",
             "maxLength": ""
           },
           {
@@ -7406,7 +7406,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "building",
+            "LongName": "Building",
             "maxLength": ""
           },
           {
@@ -7416,7 +7416,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "floor",
+            "LongName": "Floor",
             "maxLength": ""
           },
           {
@@ -7440,7 +7440,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Admit Date\/Time",
+        "LongName": "Admit Date/Time",
         "Chapter": "",
         "components": [
           {
@@ -7450,7 +7450,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -7460,7 +7460,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -7474,7 +7474,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Discharge Date\/Time",
+        "LongName": "Discharge Date/Time",
         "Chapter": "",
         "components": [
           {
@@ -7484,7 +7484,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -7494,7 +7494,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -7565,7 +7565,7 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0203",
+            "Table": "",
             "LongName": "ID",
             "maxLength": ""
           },
@@ -7576,7 +7576,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "check digit",
+            "LongName": "Check digit",
             "maxLength": ""
           },
           {
@@ -7586,7 +7586,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -7596,7 +7596,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -7606,7 +7606,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -7616,7 +7616,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -7626,7 +7626,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -7638,7 +7638,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0203",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -7648,7 +7648,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -7658,7 +7658,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -7668,7 +7668,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -7678,7 +7678,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -7715,8 +7715,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ST",
-            "Table": "0010",
-            "LongName": "ID number (ST)",
+            "Table": "",
+            "LongName": "ID number",
             "maxLength": ""
           },
           {
@@ -7726,7 +7726,7 @@
             "Max": "1",
             "Type": "FN",
             "Table": "",
-            "LongName": "family+last name",
+            "LongName": "Family name",
             "maxLength": "",
             "components": [
               {
@@ -7736,7 +7736,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "family name",
+                "LongName": "Family name",
                 "maxLength": ""
               },
               {
@@ -7746,7 +7746,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "last name prefix",
+                "LongName": "Last name prefix",
                 "maxLength": ""
               }
             ]
@@ -7758,7 +7758,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "given name",
+            "LongName": "Given name",
             "maxLength": ""
           },
           {
@@ -7768,7 +7768,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "middle initial or name",
+            "LongName": "Middle initial or name",
             "maxLength": ""
           },
           {
@@ -7778,7 +7778,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "suffix (e.g., JR or III)",
+            "LongName": "Suffix",
             "maxLength": ""
           },
           {
@@ -7788,7 +7788,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "prefix (e.g., DR)",
+            "LongName": "Prefix",
             "maxLength": ""
           },
           {
@@ -7798,7 +7798,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "degree (e.g., MD)",
+            "LongName": "Degree",
             "maxLength": ""
           },
           {
@@ -7808,7 +7808,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "source table",
+            "LongName": "Source table",
             "maxLength": ""
           },
           {
@@ -7818,7 +7818,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning authority",
+            "LongName": "Assigning authority",
             "maxLength": "",
             "components": [
               {
@@ -7828,7 +7828,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -7838,7 +7838,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -7848,7 +7848,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]
@@ -7860,7 +7860,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "name type code",
+            "LongName": "Name type code",
             "maxLength": ""
           },
           {
@@ -7870,7 +7870,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier check digit",
+            "LongName": "Identifier check digit",
             "maxLength": ""
           },
           {
@@ -7880,7 +7880,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "code identifying the check digit scheme employed",
+            "LongName": "Code identifying the check digit scheme employed",
             "maxLength": ""
           },
           {
@@ -7890,7 +7890,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "",
-            "LongName": "identifier type code",
+            "LongName": "Identifier type code",
             "maxLength": ""
           },
           {
@@ -7900,7 +7900,7 @@
             "Max": "1",
             "Type": "HD",
             "Table": "",
-            "LongName": "assigning facility",
+            "LongName": "Assigning facility",
             "maxLength": "",
             "components": [
               {
@@ -7910,7 +7910,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0300",
-                "LongName": "namespace ID",
+                "LongName": "Namespace ID",
                 "maxLength": ""
               },
               {
@@ -7920,7 +7920,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "universal ID",
+                "LongName": "Universal ID",
                 "maxLength": ""
               },
               {
@@ -7930,7 +7930,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "0301",
-                "LongName": "universal ID type",
+                "LongName": "Universal ID type",
                 "maxLength": ""
               }
             ]

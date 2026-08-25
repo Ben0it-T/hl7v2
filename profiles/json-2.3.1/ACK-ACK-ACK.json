@@ -50,8 +50,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -61,7 +61,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -71,7 +71,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -94,8 +94,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -105,7 +105,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -115,7 +115,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -138,8 +138,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0361",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -149,7 +149,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -159,7 +159,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -182,8 +182,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "0362",
-            "LongName": "namespace ID",
+            "Table": "0300",
+            "LongName": "Namespace ID",
             "maxLength": ""
           },
           {
@@ -193,7 +193,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "universal ID",
+            "LongName": "Universal ID",
             "maxLength": ""
           },
           {
@@ -203,7 +203,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "universal ID type",
+            "LongName": "Universal ID type",
             "maxLength": ""
           }
         ]
@@ -217,7 +217,7 @@
         "Datatype": "TS",
         "Length": "26",
         "Table": "",
-        "LongName": "Date\/Time Of Message",
+        "LongName": "Date/Time Of Message",
         "Chapter": "",
         "components": [
           {
@@ -227,7 +227,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "time of an event",
+            "LongName": "Time of an event",
             "maxLength": ""
           },
           {
@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "degree of precision",
+            "LongName": "Degree of precision",
             "maxLength": ""
           }
         ]
@@ -272,8 +272,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "0076",
-            "LongName": "message type",
+            "Table": "",
+            "LongName": "Message type",
             "maxLength": ""
           },
           {
@@ -283,7 +283,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "trigger event",
+            "LongName": "Trigger event",
             "maxLength": ""
           },
           {
@@ -293,7 +293,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "message structure",
+            "LongName": "Message structure",
             "maxLength": ""
           }
         ]
@@ -329,7 +329,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "processing ID",
+            "LongName": "Processing ID",
             "maxLength": ""
           },
           {
@@ -339,7 +339,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "processing mode",
+            "LongName": "Processing mode",
             "maxLength": ""
           }
         ]
@@ -362,8 +362,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "0104",
-            "LongName": "version ID",
+            "Table": "",
+            "LongName": "Version ID",
             "maxLength": ""
           },
           {
@@ -373,7 +373,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "internationalization code",
+            "LongName": "Internationalization code",
             "maxLength": "",
             "components": [
               {
@@ -383,7 +383,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "identifier",
+                "LongName": "Identifier",
                 "maxLength": ""
               },
               {
@@ -393,7 +393,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "text",
+                "LongName": "Text",
                 "maxLength": ""
               },
               {
@@ -403,7 +403,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of coding system",
+                "LongName": "Name of coding system",
                 "maxLength": ""
               },
               {
@@ -413,7 +413,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate identifier",
+                "LongName": "Alternate identifier",
                 "maxLength": ""
               },
               {
@@ -423,7 +423,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate text",
+                "LongName": "Alternate text",
                 "maxLength": ""
               },
               {
@@ -433,7 +433,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of alternate coding system",
+                "LongName": "Name of alternate coding system",
                 "maxLength": ""
               }
             ]
@@ -445,7 +445,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "international version ID",
+            "LongName": "International version ID",
             "maxLength": "",
             "components": [
               {
@@ -455,7 +455,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "identifier",
+                "LongName": "Identifier",
                 "maxLength": ""
               },
               {
@@ -465,7 +465,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "text",
+                "LongName": "Text",
                 "maxLength": ""
               },
               {
@@ -475,7 +475,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of coding system",
+                "LongName": "Name of coding system",
                 "maxLength": ""
               },
               {
@@ -485,7 +485,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate identifier",
+                "LongName": "Alternate identifier",
                 "maxLength": ""
               },
               {
@@ -495,7 +495,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate text",
+                "LongName": "Alternate text",
                 "maxLength": ""
               },
               {
@@ -505,7 +505,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of alternate coding system",
+                "LongName": "Name of alternate coding system",
                 "maxLength": ""
               }
             ]
@@ -603,7 +603,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -613,7 +613,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -623,7 +623,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -633,7 +633,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -643,7 +643,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -653,7 +653,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -760,7 +760,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "identifier",
+            "LongName": "Identifier",
             "maxLength": ""
           },
           {
@@ -770,7 +770,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "text",
+            "LongName": "Text",
             "maxLength": ""
           },
           {
@@ -780,7 +780,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of coding system",
+            "LongName": "Name of coding system",
             "maxLength": ""
           },
           {
@@ -790,7 +790,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate identifier",
+            "LongName": "Alternate identifier",
             "maxLength": ""
           },
           {
@@ -800,7 +800,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "alternate text",
+            "LongName": "Alternate text",
             "maxLength": ""
           },
           {
@@ -810,7 +810,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "name of alternate coding system",
+            "LongName": "Name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -845,7 +845,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "segment ID",
+            "LongName": "Segment ID",
             "maxLength": ""
           },
           {
@@ -855,7 +855,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "sequence",
+            "LongName": "Sequence",
             "maxLength": ""
           },
           {
@@ -865,7 +865,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "field position",
+            "LongName": "Field position",
             "maxLength": ""
           },
           {
@@ -875,7 +875,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "code identifying error",
+            "LongName": "Code identifying error",
             "maxLength": "",
             "components": [
               {
@@ -885,7 +885,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "identifier",
+                "LongName": "Identifier",
                 "maxLength": ""
               },
               {
@@ -895,7 +895,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "text",
+                "LongName": "Text",
                 "maxLength": ""
               },
               {
@@ -905,7 +905,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of coding system",
+                "LongName": "Name of coding system",
                 "maxLength": ""
               },
               {
@@ -915,7 +915,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate identifier",
+                "LongName": "Alternate identifier",
                 "maxLength": ""
               },
               {
@@ -925,7 +925,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "alternate text",
+                "LongName": "Alternate text",
                 "maxLength": ""
               },
               {
@@ -935,7 +935,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "name of alternate coding system",
+                "LongName": "Name of alternate coding system",
                 "maxLength": ""
               }
             ]
