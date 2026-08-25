@@ -139,18 +139,24 @@ class HL7jsonProfilesGenerator
         $this->segmentsSchemas = $this->loadJson($this->segmentsFilename);
 
         // Create profiles
+        $messageStructures = [];
         foreach ($this->messageType as $type => $event) {
             if (in_array($type, $messageType)) {
+                $messageStructures[$type] = [];
+
                 foreach ($event as $eventName => $structureName) {
                     if (in_array($eventName, $ignoreEvents)) {
                         continue;
                     }
+
                     $this->eventName = $eventName;
                     $this->messageProfile = [];
 
                     // get structureId
                     $nameParts = explode("-", $structureName);
                     $structureId = end($nameParts);
+
+                    $messageStructures[$type][$eventName] = $structureId;
                     
                     // get message structure
                     if (!isset($this->structuresSchemas[$structureName])) {
@@ -191,6 +197,7 @@ class HL7jsonProfilesGenerator
                 }
             }
         }
+        file_put_contents($this->profilesOutputDir . "/messageType.json", json_encode($messageStructures, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
         echo "Done.\n";
     }
 
