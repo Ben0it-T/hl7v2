@@ -190,7 +190,21 @@ $changes = '';
 
 foreach ($dataSource as $fieldKey => $fieldVal) {
     foreach ($fieldVal as $key => $val) {
+
+        if (!isset($dataTarget[$fieldKey][$key])) {
+            continue;
+        }
+
         if ($val !== '' && $dataTarget[$fieldKey][$key] !== $val) {
+
+            if ($key === 'Type' && $dataTarget[$fieldKey][$key] === "CE" && substr($val, 0, 3) === "CE_") {
+                continue;
+            }
+
+            if ($key === 'Type' && $dataTarget[$fieldKey][$key] === "TX" && substr($val, 0, 3) === "TX_") {
+                continue;
+            }
+
             $hasChanged = true;
             $changes .= sprintf("%s: %s (%s -> %s)\n", $fieldKey, $key, $dataTarget[$fieldKey][$key], $val);
             $dataTarget[$fieldKey][$key] = $val;
