@@ -80,7 +80,7 @@
             "A51",
             "C01",
             "C02",
-            "C02",
+            "C03",
             "C04",
             "C05",
             "C06",
@@ -109,7 +109,6 @@
             "M01",
             "M02",
             "M03",
-            "varies",
             "M04",
             "M05",
             "M06",
@@ -120,19 +119,35 @@
             "M11",
             "O01",
             "O02",
-            "R05",
-            "R06",
-            "RAR",
-            "RDR",
-            "RER",
-            "RGR",
-            "ROR",
             "P01",
             "P02",
             "P03",
             "P04",
             "P05",
             "P06",
+            "P07",
+            "P08",
+            "P09",
+            "PC1",
+            "PC2",
+            "PC3",
+            "PC4",
+            "PC5",
+            "PC6",
+            "PC7",
+            "PC8",
+            "PC9",
+            "PCA",
+            "PCB",
+            "PCC",
+            "PCD",
+            "PCE",
+            "PCF",
+            "PCG",
+            "PCH",
+            "PCJ",
+            "PCK",
+            "PCL",
             "Q01",
             "Q02",
             "Q03",
@@ -142,9 +157,13 @@
             "R02",
             "R03",
             "R04",
+            "R05",
+            "R06",
             "RAR",
+            "RDR",
             "RER",
-            "R0R",
+            "RGR",
+            "ROR",
             "S01",
             "S02",
             "S03",
@@ -180,12 +199,17 @@
             "T07",
             "T08",
             "T09",
+            "T10",
+            "T11",
+            "T12",
             "V01",
             "V02",
             "V03",
             "V04",
             "W01",
-            "W02"
+            "W02",
+            "X01",
+            "varies"
         ]
     },
     "0004": {
@@ -193,12 +217,12 @@
         "name": "Patient Class",
         "type": "User",
         "elements": [
+            "B",
             "E",
             "I",
             "O",
             "P",
-            "R",
-            "B"
+            "R"
         ]
     },
     "0005": {
@@ -226,7 +250,7 @@
     },
     "0008": {
         "id": "0008",
-        "name": "Acknowledgment Code",
+        "name": "Acknowledgement Code",
         "type": "HL7",
         "elements": [
             "AA",
@@ -271,10 +295,10 @@
         "name": "Transaction Type",
         "type": "User",
         "elements": [
-            "CG",
+            "AJ",
             "CD",
-            "PY",
-            "AJ"
+            "CG",
+            "PY"
         ]
     },
     "0018": {
@@ -291,7 +315,7 @@
     },
     "0021": {
         "id": "0021",
-        "name": "Bad Debt Agency Code",
+        "name": "Bad Dept Agency Code",
         "type": "User",
         "elements": []
     },
@@ -318,16 +342,16 @@
         "name": "Priority",
         "type": "HL7",
         "elements": [
-            "S",
             "A",
-            "R",
             "P",
+            "R",
+            "S",
             "T"
         ]
     },
     "0032": {
         "id": "0032",
-        "name": "Charge\/Price Indicator",
+        "name": "Charge/Price Indicator",
         "type": "User",
         "elements": []
     },
@@ -384,11 +408,11 @@
         "elements": [
             "ADV",
             "ANU",
+            "APA",
+            "APM",
             "APN",
             "APP",
             "ARN",
-            "APM",
-            "APA",
             "CAN",
             "DEM",
             "FIN",
@@ -402,10 +426,10 @@
             "OTH",
             "PRB",
             "PRO",
-            "RES",
             "RAR",
-            "RER",
             "RDR",
+            "RER",
+            "RES",
             "RGR",
             "ROR",
             "STA",
@@ -436,14 +460,14 @@
         "type": "User",
         "elements": [
             "A",
-            "W",
-            "F"
+            "F",
+            "W"
         ]
     },
     "0053": {
         "id": "0053",
-        "name": "Diagnosis Coding Method",
-        "type": "HL7",
+        "name": "Diagnosis Coding Methed",
+        "type": "User",
         "elements": []
     },
     "0055": {
@@ -478,9 +502,9 @@
         "name": "Event Reason",
         "type": "User",
         "elements": [
-            "1",
-            "2",
-            "3"
+            "01",
+            "02",
+            "03"
         ]
     },
     "0063": {
@@ -517,7 +541,7 @@
     },
     "0068": {
         "id": "0068",
-        "name": "Guarantor Type",
+        "name": "Guarantor Relationship",
         "type": "User",
         "elements": []
     },
@@ -535,28 +559,30 @@
             "ABS",
             "AMN",
             "ASP",
-            "BPH",
-            "BIFL",
-            "BLDA",
             "BBL",
+            "BDY",
+            "BIFL",
+            "BLD",
+            "BLDA",
             "BLDC",
-            "BPU",
             "BLDV",
             "BON",
-            "BRTH",
-            "BRO",
+            "BPH",
+            "BPU",
             "BRN",
+            "BRO",
+            "BRTH",
             "CALC",
+            "CBLD",
             "CDM",
+            "CNJT",
             "CNL",
-            "CTP",
+            "COL",
             "CSF",
+            "CTP",
+            "CUR",
             "CVM",
             "CVX",
-            "COL",
-            "CBLD",
-            "CNJT",
-            "CUR",
             "CYST",
             "DIAF",
             "DOSE",
@@ -568,12 +594,11 @@
             "ENDC",
             "ENDM",
             "EOS",
-            "RBC",
-            "EYE",
             "EXHLD",
+            "EYE",
             "FIB",
-            "FLT",
             "FIST",
+            "FLT",
             "FLU",
             "GAS",
             "GAST",
@@ -583,78 +608,77 @@
             "GENV",
             "HAR",
             "IHG",
-            "IT",
             "ISLT",
+            "IT",
             "LAM",
-            "WBC",
+            "LIQ",
             "LN",
             "LNA",
             "LNV",
-            "LIQ",
             "LYM",
             "MAC",
             "MAR",
-            "MEC",
             "MBLD",
-            "MLK",
+            "MEC",
             "MILK",
+            "MLK",
             "NAIL",
             "NOS",
             "ORH",
             "PAFL",
             "PAT",
-            "PRT",
-            "PLC",
             "PLAS",
             "PLB",
+            "PLC",
             "PLR",
             "PMN",
             "PPP",
             "PRP",
+            "PRT",
             "PUS",
+            "RBC",
             "RT",
             "SAL",
             "SEM",
             "SER",
-            "SKN",
             "SKM",
+            "SKN",
+            "SNV",
             "SPRM",
             "SPT",
             "SPTC",
             "SPTT",
-            "STON",
             "STL",
+            "STON",
             "SWT",
-            "SNV",
             "TEAR",
-            "THRT",
             "THRB",
-            "TISS",
+            "THRT",
             "TISG",
+            "TISPL",
+            "TISS",
+            "TISU",
             "TLGI",
             "TLNG",
-            "TISPL",
             "TSMI",
-            "TISU",
             "TUB",
             "ULC",
             "UMB",
             "UMED",
-            "URTH",
             "UR",
             "URC",
-            "URT",
             "URNS",
+            "URT",
+            "URTH",
             "USUB",
             "VOM",
-            "BLD",
-            "BDY",
             "WAT",
+            "WBC",
             "WICK",
             "WND",
             "WNDA",
-            "WNDE",
             "WNDD",
+            "WNDE",
             "XXX"
         ]
     },
@@ -678,11 +702,11 @@
             "AU",
             "BG",
             "BLB",
-            "CUS",
-            "CTH",
-            "CT",
             "CH",
             "CP",
+            "CT",
+            "CTH",
+            "CUS",
             "EC",
             "EN",
             "HM",
@@ -692,27 +716,27 @@
             "MB",
             "MCB",
             "MYC",
-            "NMS",
             "NMR",
+            "NMS",
             "NRS",
-            "OUS",
+            "OSL",
             "OT",
             "OTH",
-            "OSL",
-            "PHR",
-            "PT",
-            "PHY",
+            "OUS",
             "PF",
+            "PHR",
+            "PHY",
+            "PT",
             "RAD",
-            "RX",
-            "RUS",
             "RC",
             "RT",
-            "SR",
+            "RUS",
+            "RX",
             "SP",
+            "SR",
             "TX",
-            "VUS",
             "VR",
+            "VUS",
             "XRC"
         ]
     },
@@ -729,16 +753,17 @@
             "CNQ",
             "CSU",
             "DFT",
+            "DOC",
             "DSR",
             "EDR",
+            "EQQ",
             "ERP",
             "ERQ",
-            "EQQ",
             "MCF",
             "MDM",
-            "MFN",
-            "MFK",
             "MFD",
+            "MFK",
+            "MFN",
             "MFQ",
             "MFR",
             "ORF",
@@ -747,35 +772,28 @@
             "ORU",
             "OSQ",
             "OSR",
-            "QRY",
             "PEX",
             "PGL",
-            "PGR",
-            "PGQ",
             "PIN",
-            "PPP",
-            "PPR",
+            "PPG",
             "PPR",
             "PPT",
             "PPV",
-            "PRQ",
             "PRR",
-            "PTQ",
             "PTR",
-            "PTU",
-            "PTV",
-            "PIN",
-            "RCI",
+            "QCK",
+            "QRY",
             "RAR",
-            "RCL",
             "RAS",
+            "RCI",
+            "RCL",
             "RDE",
             "RDR",
             "RDS",
-            "RGV",
-            "RGR",
             "REF",
             "RER",
+            "RGR",
+            "RGV",
             "ROC",
             "ROD",
             "ROR",
@@ -784,7 +802,9 @@
             "RPL",
             "RPR",
             "RQA",
+            "RQC",
             "RQI",
+            "RQP",
             "RRA",
             "RRD",
             "RRE",
@@ -795,15 +815,14 @@
             "SQM",
             "SQR",
             "SRM",
-            "SRM",
             "SRR",
             "TBR",
             "UDM",
             "VQQ",
             "VXQ",
-            "VXX",
             "VXR",
-            "VXU"
+            "VXU",
+            "VXX"
         ]
     },
     "0078": {
@@ -811,25 +830,25 @@
         "name": "Abnormal Flags",
         "type": "HL7",
         "elements": [
-            "L",
-            "H",
-            "LL",
-            "HH",
             "<",
             ">",
-            "N",
             "A",
             "AA",
-            "null",
-            "U",
-            "D",
             "B",
-            "W",
-            "S",
-            "R",
+            "D",
+            "H",
+            "HH",
             "I",
+            "L",
+            "LL",
             "MS",
-            "VS"
+            "N",
+            "R",
+            "S",
+            "U",
+            "VS",
+            "W",
+            "null"
         ]
     },
     "0079": {
@@ -873,9 +892,8 @@
             "P",
             "R",
             "S",
-            "X",
             "U",
-            "W"
+            "X"
         ]
     },
     "0086": {
@@ -924,19 +942,18 @@
         "name": "Release Information",
         "type": "User",
         "elements": [
-            "Y",
-            "null",
-            "N"
+            "N",
+            "Y"
         ]
     },
     "0098": {
         "id": "0098",
-        "name": "Type of agreement",
+        "name": "Type of Agreement",
         "type": "User",
         "elements": [
+            "M",
             "S",
-            "U",
-            "M"
+            "U"
         ]
     },
     "0099": {
@@ -959,7 +976,7 @@
     },
     "0102": {
         "id": "0102",
-        "name": "Delayed Acknowledgment Type",
+        "name": "Delayed Acknowledgement Type",
         "type": "HL7",
         "elements": [
             "D",
@@ -994,13 +1011,13 @@
         "type": "HL7",
         "elements": [
             "L",
-            "P",
-            "O"
+            "O",
+            "P"
         ]
     },
     "0106": {
         "id": "0106",
-        "name": "Query\/Response Format Code",
+        "name": "Query/Response Format Code",
         "type": "HL7",
         "elements": [
             "D",
@@ -1080,10 +1097,10 @@
         "elements": [
             "C",
             "H",
-            "O",
-            "U",
+            "I",
             "K",
-            "I"
+            "O",
+            "U"
         ]
     },
     "0117": {
@@ -1103,53 +1120,51 @@
         "name": "Order Control Code",
         "type": "HL7",
         "elements": [
-            "NW",
-            "OK",
-            "UA",
+            "AF",
             "CA",
-            "OC",
-            "CR",
-            "UC",
-            "DC",
-            "OD",
-            "DR",
-            "UD",
-            "HD",
-            "OH",
-            "UH",
-            "HR",
-            "RL",
-            "OE",
-            "OR",
-            "UR",
-            "RP",
-            "RU",
-            "RO",
-            "RQ",
-            "UM",
-            "PA",
             "CH",
-            "XO",
-            "XX",
-            "UX",
-            "XR",
+            "CN",
+            "CR",
+            "DC",
             "DE",
+            "DF",
+            "DR",
+            "FU",
+            "HD",
+            "HR",
+            "NA",
+            "NW",
+            "OC",
+            "OD",
+            "OE",
+            "OF",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
             "RE",
+            "RF",
+            "RL",
+            "RO",
+            "RP",
+            "RQ",
             "RR",
-            "SR",
-            "SS",
+            "RU",
             "SC",
             "SN",
-            "NA",
-            "CN",
-            "RF",
-            "AF",
-            "DF",
-            "FU",
-            "OF",
+            "SR",
+            "SS",
+            "UA",
+            "UC",
+            "UD",
             "UF",
-            "LI",
-            "UN"
+            "UH",
+            "UM",
+            "UR",
+            "UX",
+            "XO",
+            "XR",
+            "XX"
         ]
     },
     "0121": {
@@ -1157,11 +1172,11 @@
         "name": "Response Flag",
         "type": "HL7",
         "elements": [
-            "E",
-            "R",
             "D",
+            "E",
             "F",
-            "N"
+            "N",
+            "R"
         ]
     },
     "0122": {
@@ -1184,14 +1199,14 @@
         "name": "Result Status",
         "type": "HL7",
         "elements": [
-            "O",
-            "I",
-            "S",
             "A",
-            "P",
             "C",
-            "R",
             "F",
+            "I",
+            "O",
+            "P",
+            "R",
+            "S",
             "X",
             "Y",
             "Z"
@@ -1269,9 +1284,9 @@
         "name": "Allergy Severity",
         "type": "User",
         "elements": [
-            "SV",
+            "MI",
             "MO",
-            "MI"
+            "SV"
         ]
     },
     "0129": {
@@ -1291,9 +1306,9 @@
         "name": "Contact Role",
         "type": "User",
         "elements": [
+            "BP",
             "CP",
             "EP",
-            "BP",
             "PR"
         ]
     },
@@ -1301,7 +1316,9 @@
         "id": "0132",
         "name": "Transaction Code",
         "type": "User",
-        "elements": []
+        "elements": [
+            "..."
+        ]
     },
     "0133": {
         "id": "0133",
@@ -1309,14 +1326,14 @@
         "type": "User",
         "elements": [
             "AN",
+            "AS",
+            "CM",
+            "NP",
             "PR",
+            "PS",
             "RD",
             "RS",
-            "NP",
-            "CM",
-            "SN",
-            "PS",
-            "AS"
+            "SN"
         ]
     },
     "0135": {
@@ -1324,18 +1341,18 @@
         "name": "Assignment of Benefits",
         "type": "User",
         "elements": [
-            "Y",
+            "M",
             "N",
-            "M"
+            "Y"
         ]
     },
     "0136": {
         "id": "0136",
-        "name": "Yes\/No Indicator",
+        "name": "Yes/No Indicator",
         "type": "HL7",
         "elements": [
-            "Y",
-            "N"
+            "N",
+            "Y"
         ]
     },
     "0137": {
@@ -1364,7 +1381,7 @@
     },
     "0141": {
         "id": "0141",
-        "name": "Champus Rank\/Grade",
+        "name": "Champus Rank/Grade",
         "type": "User",
         "elements": []
     },
@@ -1399,12 +1416,12 @@
         "name": "Room Type",
         "type": "User",
         "elements": [
-            "PRI",
+            "2ICU",
             "2PRI",
-            "SPR",
             "2SPR",
             "ICU",
-            "2ICU"
+            "PRI",
+            "SPR"
         ]
     },
     "0146": {
@@ -1424,11 +1441,11 @@
         "name": "Policy Type",
         "type": "User",
         "elements": [
-            "ANC",
             "2ANC",
-            "MMD",
             "2MMD",
-            "3MMD"
+            "3MMD",
+            "ANC",
+            "MMD"
         ]
     },
     "0148": {
@@ -1442,7 +1459,7 @@
     },
     "0149": {
         "id": "0149",
-        "name": "Days Type",
+        "name": "Day Type",
         "type": "User",
         "elements": [
             "AP",
@@ -1481,45 +1498,45 @@
     },
     "0155": {
         "id": "0155",
-        "name": "Accept\/Application Acknowledgment Conditions",
+        "name": "Accept/Application Acknowledgement Conditions",
         "type": "HL7",
         "elements": [
             "AL",
-            "NE",
             "ER",
+            "NE",
             "SU"
         ]
     },
     "0156": {
         "id": "0156",
-        "name": "Which Date\/Time Qualifier",
+        "name": "Which Date/Time Qualifier",
         "type": "HL7",
         "elements": [
-            "ORD",
+            "ANY",
             "CAN",
-            "SCHED",
             "COL",
+            "ORD",
             "RCT",
             "REP",
-            "ANY"
+            "SCHED"
         ]
     },
     "0157": {
         "id": "0157",
-        "name": "Which Date\/Time Status Qualifier",
+        "name": "Which Date/Time Status Qualifier",
         "type": "HL7",
         "elements": [
-            "PRE",
-            "REP",
+            "ANY",
             "CFN",
-            "FIN",
             "COR",
-            "ANY"
+            "FIN",
+            "PRE",
+            "REP"
         ]
     },
     "0158": {
         "id": "0158",
-        "name": "Date\/Time Selection Qualifier",
+        "name": "Date/Time Selection Qualifier",
         "type": "HL7",
         "elements": [
             "1ST",
@@ -1534,8 +1551,8 @@
         "type": "HL7",
         "elements": [
             "D",
-            "S",
-            "P"
+            "P",
+            "S"
         ]
     },
     "0160": {
@@ -1544,10 +1561,10 @@
         "type": "HL7",
         "elements": [
             "EARLY",
-            "LATE",
             "GUEST",
-            "NO",
-            "MSG"
+            "LATE",
+            "MSG",
+            "NO"
         ]
     },
     "0161": {
@@ -1555,8 +1572,8 @@
         "name": "Allow Substitution",
         "type": "HL7",
         "elements": [
-            "N",
             "G",
+            "N",
             "T"
         ]
     },
@@ -1572,17 +1589,17 @@
             "ET",
             "GTT",
             "GU",
-            "IMR",
             "IA",
             "IB",
             "IC",
             "ICV",
             "ID",
             "IH",
+            "IMR",
             "MM",
-            "NS",
             "NG",
             "NP",
+            "NS",
             "NT",
             "OP",
             "OT",
@@ -1591,18 +1608,17 @@
             "PO",
             "PR",
             "RM",
-            "SD",
             "SC",
+            "SD",
             "SL",
-            "TP",
-            "TRA",
             "TD",
             "TL",
+            "TP",
+            "TRA",
             "UR",
             "VG",
             "VM",
-            "WND",
-            "*"
+            "WND"
         ]
     },
     "0163": {
@@ -1611,7 +1627,6 @@
         "type": "HL7",
         "elements": [
             "BE",
-            "OU",
             "BN",
             "BU",
             "CT",
@@ -1621,7 +1636,6 @@
             "LD",
             "LE",
             "LEJ",
-            "OS",
             "LF",
             "LG",
             "LH",
@@ -1630,15 +1644,20 @@
             "LLFA",
             "LMFA",
             "LN",
+            "LNB",
             "LPC",
             "LSC",
             "LT",
             "LUA",
             "LUAQ",
             "LUFA",
+            "LV",
             "LVG",
             "LVL",
             "NB",
+            "OD",
+            "OS",
+            "OU",
             "PA",
             "PERIN",
             "RA",
@@ -1647,7 +1666,6 @@
             "RD",
             "RE",
             "REJ",
-            "OD",
             "RF",
             "RG",
             "RH",
@@ -1662,13 +1680,13 @@
             "RUA",
             "RUAQ",
             "RUFA",
-            "RVL",
-            "RVG"
+            "RVG",
+            "RVL"
         ]
     },
     "0164": {
         "id": "0164",
-        "name": "Administration Device",
+        "name": "Adminstration Device",
         "type": "HL7",
         "elements": [
             "AP",
@@ -1691,13 +1709,13 @@
             "DI",
             "DU",
             "IF",
-            "IS",
             "IR",
-            "IVPB",
+            "IS",
             "IVP",
+            "IVPB",
             "NB",
-            "PT",
             "PF",
+            "PT",
             "SH",
             "SO",
             "WA",
@@ -1709,8 +1727,8 @@
         "name": "RX Component Type",
         "type": "HL7",
         "elements": [
-            "B",
-            "A"
+            "A",
+            "B"
         ]
     },
     "0167": {
@@ -1718,8 +1736,8 @@
         "name": "Substitution Status",
         "type": "HL7",
         "elements": [
-            "N",
             "G",
+            "N",
             "T"
         ]
     },
@@ -1728,13 +1746,13 @@
         "name": "Processing Priority",
         "type": "HL7",
         "elements": [
-            "S",
             "A",
-            "R",
-            "P",
-            "T",
+            "B",
             "C",
-            "B"
+            "P",
+            "R",
+            "S",
+            "T"
         ]
     },
     "0169": {
@@ -1751,14 +1769,14 @@
         "name": "Derived Specimen",
         "type": "HL7",
         "elements": [
-            "P",
             "C",
-            "N"
+            "N",
+            "P"
         ]
     },
     "0171": {
         "id": "0171",
-        "name": "Citizenship",
+        "name": "Country Code",
         "type": "User",
         "elements": []
     },
@@ -1779,14 +1797,14 @@
     },
     "0174": {
         "id": "0174",
-        "name": "Nature of Test\/Observation",
-        "type": "HL7",
+        "name": "Nature of Test/Observation",
+        "type": "User",
         "elements": [
-            "P",
-            "F",
             "A",
-            "S",
-            "C"
+            "C",
+            "F",
+            "P",
+            "S"
         ]
     },
     "0175": {
@@ -1799,7 +1817,13 @@
             "CM1",
             "CM2",
             "LOC",
+            "OM1",
             "OM1-OM6",
+            "OM2",
+            "OM3",
+            "OM4",
+            "OM5",
+            "OM6",
             "PRA",
             "STF"
         ]
@@ -1815,16 +1839,16 @@
         "name": "Confidentiality code",
         "type": "User",
         "elements": [
-            "V",
+            "AID",
+            "EMP",
+            "ETH",
+            "HIV",
+            "PSY",
             "R",
             "U",
-            "EMP",
             "UWM",
-            "VIP",
-            "PSY",
-            "AID",
-            "HIV",
-            "ETH"
+            "V",
+            "VIP"
         ]
     },
     "0178": {
@@ -1841,9 +1865,9 @@
         "name": "Response Level",
         "type": "HL7",
         "elements": [
-            "NE",
-            "ER",
             "AL",
+            "ER",
+            "NE",
             "SU"
         ]
     },
@@ -1852,11 +1876,11 @@
         "name": "Record Level Event Code",
         "type": "HL7",
         "elements": [
+            "MAC",
             "MAD",
-            "MDL",
-            "MUP",
             "MDC",
-            "MAC"
+            "MDL",
+            "MUP"
         ]
     },
     "0181": {
@@ -1876,7 +1900,7 @@
     },
     "0183": {
         "id": "0183",
-        "name": "Active\/Inactive",
+        "name": "Active/Inactive",
         "type": "HL7",
         "elements": [
             "A",
@@ -1894,18 +1918,17 @@
         "name": "Preferred Method of Contact",
         "type": "HL7",
         "elements": [
-            "H",
-            "O",
-            "F",
-            "C",
             "B",
+            "C",
             "E",
-            "M"
+            "F",
+            "H",
+            "O"
         ]
     },
     "0186": {
         "id": "0186",
-        "name": "Practitioner Category",
+        "name": "Practioner Category",
         "type": "User",
         "elements": []
     },
@@ -1914,8 +1937,8 @@
         "name": "Provider Billing",
         "type": "HL7",
         "elements": [
-            "P",
-            "I"
+            "I",
+            "P"
         ]
     },
     "0188": {
@@ -1935,29 +1958,28 @@
         "name": "Address Type",
         "type": "HL7",
         "elements": [
+            "B",
             "C",
-            "P",
-            "M",
-            "B",
-            "O",
+            "F",
             "H",
-            "B",
-            "F"
+            "M",
+            "O",
+            "P"
         ]
     },
     "0191": {
         "id": "0191",
-        "name": "Main Type of Reference Data",
-        "type": "HL7",
+        "name": "Main type of referenced Data",
+        "type": "User",
         "elements": [
-            "SI",
-            "NS",
-            "SD",
-            "TX",
+            "AP",
+            "AU",
             "FT",
             "IM",
-            "AU",
-            "AP"
+            "NS",
+            "SD",
+            "SI",
+            "TX"
         ]
     },
     "0192": {
@@ -1983,10 +2005,10 @@
         "type": "HL7",
         "elements": [
             "A",
-            "L",
-            "D",
-            "M",
             "C",
+            "D",
+            "L",
+            "M",
             "O"
         ]
     },
@@ -1995,14 +2017,13 @@
         "name": "Telecommunication Use Code",
         "type": "HL7",
         "elements": [
-            "PRN",
-            "ORN",
-            "WPN",
-            "VHN",
             "ASN",
             "EMR",
             "NET",
-            "BPN"
+            "ORN",
+            "PRN",
+            "VHN",
+            "WPN"
         ]
     },
     "0202": {
@@ -2010,12 +2031,12 @@
         "name": "Telecommunication Equipment Type",
         "type": "HL7",
         "elements": [
-            "PH",
-            "FX",
-            "MD",
-            "CP",
             "BP",
+            "CP",
+            "FX",
             "Internet",
+            "MD",
+            "PH",
             "X.400"
         ]
     },
@@ -2025,6 +2046,7 @@
         "type": "User",
         "elements": [
             "AM",
+            "AN",
             "BR",
             "DI",
             "DL",
@@ -2034,18 +2056,17 @@
             "EN",
             "GI",
             "GN",
-            "MS",
             "MA",
             "MC",
             "MR",
+            "MS",
             "PI",
             "PT",
             "RR",
             "SS",
-            "XX",
-            "VS",
             "VN",
-            "AN"
+            "VS",
+            "XX"
         ]
     },
     "0204": {
@@ -2054,8 +2075,8 @@
         "type": "User",
         "elements": [
             "A",
-            "L",
             "D",
+            "L",
             "SL"
         ]
     },
@@ -2065,12 +2086,12 @@
         "type": "HL7",
         "elements": [
             "AP",
-            "PF",
-            "UP",
-            "TF",
             "DC",
             "IC",
-            "TP"
+            "PF",
+            "TF",
+            "TP",
+            "UP"
         ]
     },
     "0206": {
@@ -2089,9 +2110,9 @@
         "type": "HL7",
         "elements": [
             "A",
-            "R",
             "I",
-            "Not present"
+            "Not present",
+            "R"
         ]
     },
     "0208": {
@@ -2099,9 +2120,8 @@
         "name": "Query Response Status",
         "type": "User",
         "elements": [
-            "OK",
             "NF",
-            "AR"
+            "OK"
         ]
     },
     "0209": {
@@ -2109,14 +2129,14 @@
         "name": "Relational Operator",
         "type": "HL7",
         "elements": [
+            "CT",
             "EQ",
-            "NE",
-            "LT",
+            "GE",
+            "GN",
             "GT",
             "LE",
-            "GE",
-            "CT",
-            "GN"
+            "LT",
+            "NE"
         ]
     },
     "0210": {
@@ -2133,19 +2153,19 @@
         "name": "Alternate Character Sets",
         "type": "HL7",
         "elements": [
+            "8859/1",
+            "8859/2",
+            "8859/3",
+            "8859/4",
+            "8859/5",
+            "8859/6",
+            "8859/7",
+            "8859/8",
+            "8859/9",
             "ASCII",
-            "8859\/1",
-            "8859\/2",
-            "8859\/3",
-            "8859\/4",
-            "8859\/5",
-            "8859\/6",
-            "8859\/7",
-            "8859\/8",
-            "8859\/9",
             "JAS2020",
-            "UNICODE",
-            "JIS X 0202"
+            "JIS X 0202",
+            "UNICODE"
         ]
     },
     "0212": {
@@ -2159,9 +2179,9 @@
         "name": "Purge Status",
         "type": "User",
         "elements": [
-            "P",
             "D",
-            "I"
+            "I",
+            "P"
         ]
     },
     "0214": {
@@ -2202,15 +2222,15 @@
     },
     "0220": {
         "id": "0220",
-        "name": "Living Arrangement",
+        "name": "Living Arrangements",
         "type": "User",
         "elements": [
             "A",
             "F",
             "I",
             "R",
-            "U",
-            "S"
+            "S",
+            "U"
         ]
     },
     "0222": {
@@ -2224,11 +2244,11 @@
         "name": "Living Dependency",
         "type": "User",
         "elements": [
+            "CB",
             "D",
             "M",
             "S",
-            "WU",
-            "CB"
+            "WU"
         ]
     },
     "0224": {
@@ -2246,14 +2266,14 @@
         "name": "Escort Required",
         "type": "HL7",
         "elements": [
-            "R",
             "N",
+            "R",
             "U"
         ]
     },
     "0227": {
         "id": "0227",
-        "name": "Manufacturers of vaccines (code = MVX)",
+        "name": "Manufacturers of Vaccines",
         "type": "HL7",
         "elements": [
             "AB",
@@ -2266,26 +2286,26 @@
             "CON",
             "EVN",
             "GRE",
+            "IM",
             "IUS",
+            "JPN",
             "KGC",
             "LED",
             "MA",
-            "MSD",
-            "IM",
-            "MIP",
-            "JPN",
             "MIL",
-            "NYB",
+            "MIP",
+            "MSD",
             "NAB",
+            "NYB",
             "OTC",
             "OTH",
             "PD",
             "PRX",
             "SCL",
-            "SKB",
             "SI",
-            "WA",
-            "UNK"
+            "SKB",
+            "UNK",
+            "WA"
         ]
     },
     "0228": {
@@ -2295,12 +2315,12 @@
         "elements": [
             "C",
             "D",
+            "I",
             "M",
             "O",
             "R",
             "S",
-            "T",
-            "I"
+            "T"
         ]
     },
     "0229": {
@@ -2308,9 +2328,9 @@
         "name": "Outlier Type",
         "type": "User",
         "elements": [
-            "M",
             "C",
-            "G"
+            "G",
+            "M"
         ]
     },
     "0230": {
@@ -2319,9 +2339,9 @@
         "type": "User",
         "elements": [
             "A",
-            "P",
+            "D",
             "I",
-            "D"
+            "P"
         ]
     },
     "0231": {
@@ -2330,8 +2350,8 @@
         "type": "User",
         "elements": [
             "F",
-            "P",
-            "N"
+            "N",
+            "P"
         ]
     },
     "0232": {
@@ -2339,14 +2359,14 @@
         "name": "Insurance Company Contact Reason",
         "type": "User",
         "elements": [
-            "1",
-            "2",
-            "3"
+            "01",
+            "02",
+            "03"
         ]
     },
     "0233": {
         "id": "0233",
-        "name": "Non-concur Code\/Description",
+        "name": "Non-concur Code/Description",
         "type": "User",
         "elements": []
     },
@@ -2355,16 +2375,16 @@
         "name": "Report Timing",
         "type": "HL7",
         "elements": [
-            "CO",
-            "AD",
-            "RQ",
-            "DE",
-            "PD",
-            "3D",
-            "7D",
             "10D",
             "15D",
-            "30D"
+            "30D",
+            "3D",
+            "7D",
+            "AD",
+            "CO",
+            "DE",
+            "PD",
+            "RQ"
         ]
     },
     "0235": {
@@ -2373,15 +2393,15 @@
         "type": "HL7",
         "elements": [
             "C",
-            "L",
-            "H",
-            "R",
             "D",
-            "N",
-            "P",
-            "M",
             "E",
-            "O"
+            "H",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "R"
         ]
     },
     "0236": {
@@ -2389,10 +2409,10 @@
         "name": "Reported To",
         "type": "HL7",
         "elements": [
-            "M",
+            "D",
             "L",
-            "R",
-            "D"
+            "M",
+            "R"
         ]
     },
     "0237": {
@@ -2400,14 +2420,14 @@
         "name": "Event Qualification",
         "type": "HL7",
         "elements": [
-            "I",
-            "O",
             "A",
-            "M",
+            "B",
             "D",
+            "I",
             "L",
-            "W",
-            "B"
+            "M",
+            "O",
+            "W"
         ]
     },
     "0238": {
@@ -2415,9 +2435,9 @@
         "name": "Event Seriousness",
         "type": "HL7",
         "elements": [
-            "Y",
+            "N",
             "S",
-            "N"
+            "Y"
         ]
     },
     "0239": {
@@ -2425,9 +2445,9 @@
         "name": "Event Expected",
         "type": "HL7",
         "elements": [
-            "Y",
             "N",
-            "U"
+            "U",
+            "Y"
         ]
     },
     "0240": {
@@ -2435,15 +2455,15 @@
         "name": "Event Consequence",
         "type": "HL7",
         "elements": [
-            "D",
-            "L",
-            "H",
-            "P",
             "C",
+            "D",
+            "H",
             "I",
             "J",
-            "R",
-            "O"
+            "L",
+            "O",
+            "P",
+            "R"
         ]
     },
     "0241": {
@@ -2452,12 +2472,12 @@
         "type": "HL7",
         "elements": [
             "D",
-            "R",
-            "N",
-            "W",
-            "S",
             "F",
-            "U"
+            "N",
+            "R",
+            "S",
+            "U",
+            "W"
         ]
     },
     "0242": {
@@ -2465,13 +2485,13 @@
         "name": "Primary Observer's Qualification",
         "type": "HL7",
         "elements": [
-            "P",
-            "R",
-            "M",
-            "H",
             "C",
+            "H",
             "L",
-            "O"
+            "M",
+            "O",
+            "P",
+            "R"
         ]
     },
     "0243": {
@@ -2479,9 +2499,9 @@
         "name": "Identity may be Divulged",
         "type": "HL7",
         "elements": [
-            "Y",
             "N",
-            "NA"
+            "NA",
+            "Y"
         ]
     },
     "0244": {
@@ -2507,18 +2527,18 @@
         "name": "Start of Evaluation",
         "type": "HL7",
         "elements": [
-            "Y",
-            "P",
-            "K",
-            "X",
             "A",
-            "D",
             "C",
+            "D",
             "I",
-            "U",
+            "K",
+            "O",
+            "P",
             "Q",
             "R",
-            "O"
+            "U",
+            "X",
+            "Y"
         ]
     },
     "0248": {
@@ -2528,8 +2548,8 @@
         "elements": [
             "A",
             "L",
-            "R",
-            "N"
+            "N",
+            "R"
         ]
     },
     "0249": {
@@ -2544,10 +2564,10 @@
         "type": "HL7",
         "elements": [
             "H",
-            "M",
-            "S",
             "I",
-            "N"
+            "M",
+            "N",
+            "S"
         ]
     },
     "0251": {
@@ -2555,12 +2575,12 @@
         "name": "Action Taken in Response to the Event",
         "type": "HL7",
         "elements": [
-            "WP",
-            "WT",
-            "DR",
             "DI",
+            "DR",
+            "N",
             "OT",
-            "N"
+            "WP",
+            "WT"
         ]
     },
     "0252": {
@@ -2570,15 +2590,15 @@
         "elements": [
             "AW",
             "BE",
-            "LI",
-            "IN",
-            "EX",
-            "PL",
-            "TC",
             "DR",
-            "SE",
+            "EX",
+            "IN",
+            "LI",
             "OE",
-            "OT"
+            "OT",
+            "PL",
+            "SE",
+            "TC"
         ]
     },
     "0253": {
@@ -2587,29 +2607,204 @@
         "type": "HL7",
         "elements": [
             "B",
-            "P",
             "F",
-            "X",
-            "O"
+            "O",
+            "P",
+            "X"
         ]
     },
     "0254": {
         "id": "0254",
         "name": "Kind of Quantity",
         "type": "HL7",
-        "elements": []
+        "elements": [
+            "ABS",
+            "ACNC",
+            "ACT",
+            "APER",
+            "ARB",
+            "AREA",
+            "ASPECT",
+            "CACT",
+            "CCNT",
+            "CCRTO",
+            "CFR",
+            "CLAS",
+            "CNC",
+            "CNST",
+            "COEF",
+            "COLOR",
+            "CONS",
+            "CRAT",
+            "CRTO",
+            "DEN",
+            "DEV",
+            "DIFF",
+            "ELAS",
+            "ELPOT",
+            "ELRAT",
+            "ELRES",
+            "ENGR",
+            "ENT",
+            "ENTCAT",
+            "ENTNUM",
+            "ENTSUB",
+            "ENTVOL",
+            "EQL",
+            "FORCE",
+            "FREQ",
+            "IMP",
+            "KINV",
+            "LEN",
+            "LINC",
+            "LIQ",
+            "MASS",
+            "MCNC",
+            "MCNT",
+            "MCRTO",
+            "MFR",
+            "MGFLUX",
+            "MINC",
+            "MORPH",
+            "MOTIL",
+            "MRAT",
+            "MRTO",
+            "NCNC",
+            "NCNT",
+            "NFR",
+            "NRTO",
+            "NUM",
+            "OD",
+            "OSMOL",
+            "PRES",
+            "PRID",
+            "PWR",
+            "RANGE",
+            "RATIO",
+            "RCRLTM",
+            "RDEN",
+            "REL",
+            "RLMCNC",
+            "RLSCNC",
+            "RLTM",
+            "SATFR",
+            "SCNC",
+            "SCNCIN",
+            "SCNT",
+            "SCNTR",
+            "SCRTO",
+            "SFR",
+            "SHAPE",
+            "SMELL",
+            "SRAT",
+            "SRTO",
+            "SUB",
+            "SUSC",
+            "TASTE",
+            "TEMP",
+            "TEMPDF",
+            "TEMPIN",
+            "THRMCNC",
+            "THRSCNC",
+            "TIME",
+            "TITR",
+            "TMDF",
+            "TMSTP",
+            "TRTO",
+            "TYPE",
+            "VCNT",
+            "VEL",
+            "VELRT",
+            "VFR",
+            "VISC",
+            "VOL",
+            "VRAT",
+            "VRTO"
+        ]
     },
     "0255": {
         "id": "0255",
         "name": "Duration Categories",
-        "type": "HL7",
-        "elements": []
+        "type": "User",
+        "elements": [
+            "*",
+            "12H",
+            "1H",
+            "1L",
+            "1W",
+            "2.5H",
+            "24H",
+            "2D",
+            "2H",
+            "2L",
+            "2W",
+            "30M",
+            "3D",
+            "3H",
+            "3L",
+            "3W",
+            "4D",
+            "4H",
+            "4W",
+            "5D",
+            "5H",
+            "6D",
+            "6H",
+            "7H",
+            "8H",
+            "PT"
+        ]
     },
     "0256": {
         "id": "0256",
         "name": "Time Delay Post Challenge",
         "type": "HL7",
-        "elements": []
+        "elements": [
+            "10D",
+            "10M",
+            "12H",
+            "15M",
+            "1H",
+            "1L",
+            "1M",
+            "1W",
+            "2.5H",
+            "20M",
+            "24H",
+            "25M",
+            "2D",
+            "2H",
+            "2L",
+            "2M",
+            "2W",
+            "30M",
+            "3D",
+            "3H",
+            "3L",
+            "3M",
+            "3W",
+            "4D",
+            "4H",
+            "4M",
+            "4W",
+            "5D",
+            "5H",
+            "5M",
+            "6D",
+            "6H",
+            "6M",
+            "7D",
+            "7H",
+            "7M",
+            "8H",
+            "8H SHIFT",
+            "8M",
+            "9M",
+            "BS",
+            "PEAK",
+            "RANDOM",
+            "TROUGH"
+        ]
     },
     "0257": {
         "id": "0257",
@@ -2626,10 +2821,10 @@
         "name": "Relationship Modifier",
         "type": "HL7",
         "elements": [
+            "BPU",
             "CONTROL",
-            "PATIENT",
             "DONOR",
-            "BPU"
+            "PATIENT"
         ]
     },
     "0259": {
@@ -2670,14 +2865,14 @@
         "name": "Patient Location Type",
         "type": "User",
         "elements": [
-            "N",
-            "R",
             "B",
-            "E",
-            "O",
             "C",
             "D",
-            "L"
+            "E",
+            "L",
+            "N",
+            "O",
+            "R"
         ]
     },
     "0261": {
@@ -2685,14 +2880,14 @@
         "name": "Location Equipment",
         "type": "User",
         "elements": [
-            "OXY",
-            "SUC",
-            "VIT",
-            "INF",
-            "IVP",
             "EEG",
             "EKG",
-            "VEN"
+            "INF",
+            "IVP",
+            "OXY",
+            "SUC",
+            "VEN",
+            "VIT"
         ]
     },
     "0262": {
@@ -2701,8 +2896,8 @@
         "type": "User",
         "elements": [
             "F",
-            "P",
             "J",
+            "P",
             "Q",
             "S",
             "W"
@@ -2714,10 +2909,10 @@
         "type": "User",
         "elements": [
             "A",
+            "C",
             "E",
             "F",
             "N",
-            "C",
             "R",
             "S"
         ]
@@ -2733,42 +2928,32 @@
         "name": "Specialty Type",
         "type": "User",
         "elements": [
-            "AMB",
-            "PSY",
-            "PPS",
-            "REH",
-            "PRE",
-            "ISO",
-            "OBG",
-            "PIN",
-            "INT",
-            "SUR",
-            "PSI",
-            "EDI",
-            "CAR",
-            "NBI",
-            "CCR",
-            "PED",
-            "EMR",
-            "OBS",
-            "WIC",
-            "PHY",
             "ALC",
-            "FPC",
-            "CHI",
+            "AMB",
             "CAN",
+            "CAR",
+            "CCR",
+            "CHI",
+            "EDI",
+            "EMR",
+            "FPC",
+            "INT",
+            "ISO",
             "NAT",
-            "OTH"
-        ]
-    },
-    "0266": {
-        "id": "0266",
-        "name": "Gender Indicator",
-        "type": "User",
-        "elements": [
-            "M",
-            "F",
-            "E"
+            "NBI",
+            "OBG",
+            "OBS",
+            "OTH",
+            "PED",
+            "PHY",
+            "PIN",
+            "PPS",
+            "PRE",
+            "PSI",
+            "PSY",
+            "REH",
+            "SUR",
+            "WIC"
         ]
     },
     "0267": {
@@ -2776,13 +2961,13 @@
         "name": "Days of the Week",
         "type": "HL7",
         "elements": [
+            "FRI",
+            "MON",
             "SAT",
             "SUN",
-            "MON",
-            "TUE",
-            "WED",
             "THU",
-            "FRI"
+            "TUE",
+            "WED"
         ]
     },
     "0268": {
@@ -2790,9 +2975,9 @@
         "name": "Override",
         "type": "User",
         "elements": [
-            "X",
             "A",
-            "R"
+            "R",
+            "X"
         ]
     },
     "0269": {
@@ -2806,7 +2991,7 @@
     },
     "0270": {
         "id": "0270",
-        "name": "Document Type",
+        "name": "Report Type Code",
         "type": "User",
         "elements": [
             "AR",
@@ -2830,13 +3015,13 @@
         "name": "Document Completion Status",
         "type": "HL7",
         "elements": [
+            "AU",
             "DI",
             "DO",
-            "IP",
             "IN",
-            "PA",
-            "AU",
-            "LA"
+            "IP",
+            "LA",
+            "PA"
         ]
     },
     "0272": {
@@ -2844,9 +3029,12 @@
         "name": "Document Confidentiality Status",
         "type": "HL7",
         "elements": [
-            "VR",
+            "1",
+            "2",
+            "3",
             "RE",
-            "UC"
+            "UC",
+            "VR"
         ]
     },
     "0273": {
@@ -2858,22 +3046,13 @@
             "UN"
         ]
     },
-    "0274": {
-        "id": "0274",
-        "name": "Document Modification Status",
-        "type": "HL7",
-        "elements": [
-            "RP",
-            "IN"
-        ]
-    },
     "0275": {
         "id": "0275",
         "name": "Document Storage Status",
         "type": "HL7",
         "elements": [
-            "AC",
             "AA",
+            "AC",
             "AR",
             "PU"
         ]
@@ -2883,11 +3062,11 @@
         "name": "Appointment Reason Codes",
         "type": "User",
         "elements": [
-            "ROUTINE",
-            "WALKIN",
             "CHECKUP",
+            "EMERGENCY",
             "FOLLOWUP",
-            "EMERGENCY"
+            "ROUTINE",
+            "WALKIN"
         ]
     },
     "0277": {
@@ -2895,9 +3074,9 @@
         "name": "Appointment Type Codes",
         "type": "User",
         "elements": [
+            "COMPLETE",
             "NORMAL",
-            "TENTATIVE",
-            "COMPLETE"
+            "TENTATIVE"
         ]
     },
     "0278": {
@@ -2905,16 +3084,16 @@
         "name": "Filler Status Codes",
         "type": "User",
         "elements": [
-            "PENDING",
-            "WAITLIST",
-            "BOOKED",
-            "STARTED",
-            "COMPLETE",
-            "CANCELLED",
-            "DC",
-            "DELETED",
             "BLOCKED",
-            "OVERBOOK"
+            "BOOKED",
+            "CANCELLED",
+            "COMPLETE",
+            "DELETED",
+            "Discontinued",
+            "OVERBOOK",
+            "PENDING",
+            "STARTED",
+            "WAITLIST"
         ]
     },
     "0279": {
@@ -2922,8 +3101,8 @@
         "name": "Allow Substitution Codes",
         "type": "User",
         "elements": [
-            "NO",
             "CONFIRM",
+            "NO",
             "NOTIFY",
             "YES"
         ]
@@ -2933,9 +3112,9 @@
         "name": "Referral Priority",
         "type": "User",
         "elements": [
-            "S",
             "A",
-            "R"
+            "R",
+            "S"
         ]
     },
     "0281": {
@@ -2943,12 +3122,12 @@
         "name": "Referral Type",
         "type": "User",
         "elements": [
+            "HOM",
             "LAB",
-            "RAD",
             "MED",
-            "SKN",
             "PSY",
-            "HOM"
+            "RAD",
+            "SKN"
         ]
     },
     "0282": {
@@ -2956,10 +3135,10 @@
         "name": "Referral Disposition",
         "type": "User",
         "elements": [
-            "WR",
-            "RP",
             "AM",
-            "SO"
+            "RP",
+            "SO",
+            "WR"
         ]
     },
     "0283": {
@@ -2968,9 +3147,9 @@
         "type": "User",
         "elements": [
             "A",
+            "E",
             "P",
-            "R",
-            "E"
+            "R"
         ]
     },
     "0284": {
@@ -2978,10 +3157,10 @@
         "name": "Referral Category",
         "type": "User",
         "elements": [
-            "I",
-            "O",
             "A",
-            "E"
+            "E",
+            "I",
+            "O"
         ]
     },
     "0285": {
@@ -2995,9 +3174,9 @@
         "name": "Provider Role",
         "type": "User",
         "elements": [
-            "RP",
-            "PP",
             "CP",
+            "PP",
+            "RP",
             "RT"
         ]
     },
@@ -3023,7 +3202,7 @@
     },
     "0289": {
         "id": "0289",
-        "name": "County\/parish",
+        "name": "County/parish",
         "type": "User",
         "elements": []
     },
@@ -3031,25 +3210,91 @@
         "id": "0290",
         "name": "MIME base64 encoding Characters",
         "type": "HL7",
-        "elements": []
+        "elements": [
+            "(pad)",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63"
+        ]
     },
     "0291": {
         "id": "0291",
         "name": "Subtype of Referenced Data",
         "type": "HL7",
         "elements": [
-            "TIFF",
-            "PICT",
+            "BASIC",
             "DICOM",
             "FAX",
-            "JOT",
-            "BASIC",
-            "Octet-stream",
-            "PostScript",
-            "JPEG",
             "GIF",
             "HTML",
-            "RTF"
+            "JOT",
+            "JPEG",
+            "Octet-stream",
+            "PICT",
+            "PostScript",
+            "RTF",
+            "TIFF"
         ]
     },
     "0292": {
@@ -3057,58 +3302,58 @@
         "name": "Vaccines Administered",
         "type": "HL7",
         "elements": [
-            "24",
-            "19",
-            "27",
-            "26",
-            "29",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
             "12",
-            "28",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
             "20",
-            "50",
-            "1",
+            "21",
             "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
             "30",
             "31",
-            "52",
-            "8",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
             "42",
             "43",
             "44",
             "45",
-            "17",
             "46",
             "47",
             "48",
             "49",
+            "50",
             "51",
-            "14",
-            "15",
-            "16",
-            "10",
-            "39",
-            "3",
-            "4",
-            "5",
-            "32",
-            "7",
-            "11",
-            "23",
-            "33",
-            "2",
-            "18",
-            "40",
-            "34",
-            "6",
-            "38",
-            "9",
-            "35",
-            "13",
-            "25",
-            "41",
-            "21",
-            "36",
-            "37"
+            "52"
         ]
     },
     "0293": {
@@ -3122,15 +3367,15 @@
         "name": "Time Selection Criteria Parameter Class Codes",
         "type": "User",
         "elements": [
-            "PREFSTART",
-            "PREFEND",
-            "MON",
-            "TUE",
-            "WED",
-            "THU",
             "FRI",
+            "MON",
+            "PREFEND",
+            "PREFSTART",
             "SAT",
-            "SUN"
+            "SUN",
+            "THU",
+            "TUE",
+            "WED"
         ]
     },
     "0295": {
@@ -3145,21 +3390,108 @@
         "type": "User",
         "elements": []
     },
+    "0297": {
+        "id": "0297",
+        "name": "CN ID source",
+        "type": "User",
+        "elements": []
+    },
+    "0298": {
+        "id": "0298",
+        "name": "CP Range Type",
+        "type": "User",
+        "elements": [
+            "F",
+            "P"
+        ]
+    },
+    "0299": {
+        "id": "0299",
+        "name": "Encoding",
+        "type": "User",
+        "elements": [
+            "A",
+            "Base64",
+            "Hex"
+        ]
+    },
+    "0300": {
+        "id": "0300",
+        "name": "Namespace ID",
+        "type": "User",
+        "elements": []
+    },
+    "0301": {
+        "id": "0301",
+        "name": "Universal ID type",
+        "type": "User",
+        "elements": [
+            "DNS",
+            "GUID",
+            "HCD",
+            "HL7",
+            "ISO",
+            "L",
+            "L,M,N",
+            "M",
+            "N",
+            "Random",
+            "UUID",
+            "x400",
+            "x500"
+        ]
+    },
+    "0302": {
+        "id": "0302",
+        "name": "Point Of Care",
+        "type": "User",
+        "elements": []
+    },
+    "0303": {
+        "id": "0303",
+        "name": "Room",
+        "type": "User",
+        "elements": []
+    },
+    "0304": {
+        "id": "0304",
+        "name": "Bed",
+        "type": "User",
+        "elements": []
+    },
+    "0305": {
+        "id": "0305",
+        "name": "Person Location Type",
+        "type": "User",
+        "elements": []
+    },
+    "0306": {
+        "id": "0306",
+        "name": "Location Status",
+        "type": "User",
+        "elements": []
+    },
+    "0307": {
+        "id": "0307",
+        "name": "Building",
+        "type": "User",
+        "elements": []
+    },
+    "0308": {
+        "id": "0308",
+        "name": "Floor",
+        "type": "User",
+        "elements": []
+    },
     "0309": {
         "id": "0309",
         "name": "Coverage Type",
         "type": "User",
         "elements": [
+            "B",
             "H",
-            "P",
-            "B"
+            "P"
         ]
-    },
-    "0310": {
-        "id": "0310",
-        "name": "Handicap",
-        "type": "User",
-        "elements": []
     },
     "0311": {
         "id": "0311",
@@ -3179,22 +3511,16 @@
         "type": "User",
         "elements": []
     },
-    "0314": {
-        "id": "0314",
-        "name": "Document Change Reason",
-        "type": "HL7",
-        "elements": []
-    },
     "0315": {
         "id": "0315",
         "name": "Living Will",
         "type": "HL7",
         "elements": [
-            "Y",
             "F",
-            "N",
             "I",
-            "U"
+            "N",
+            "U",
+            "Y"
         ]
     },
     "0316": {
@@ -3202,10 +3528,10 @@
         "name": "Organ Donor",
         "type": "HL7",
         "elements": [
-            "Y",
             "F",
             "N",
-            "U"
+            "U",
+            "Y"
         ]
     },
     "0317": {
@@ -3219,12 +3545,6 @@
             "9903",
             "9904"
         ]
-    },
-    "0318": {
-        "id": "0318",
-        "name": "Confirmation Provided By",
-        "type": "HL7",
-        "elements": []
     },
     "0319": {
         "id": "0319",
@@ -3243,10 +3563,10 @@
         "name": "Dispense Method",
         "type": "HL7",
         "elements": [
-            "TR",
-            "UD",
+            "AD",
             "F",
-            "AD"
+            "TR",
+            "UD"
         ]
     },
     "0322": {
@@ -3255,9 +3575,9 @@
         "type": "HL7",
         "elements": [
             "CP",
-            "RE",
             "NA",
-            "PA"
+            "PA",
+            "RE"
         ]
     },
     "0323": {
@@ -3265,9 +3585,9 @@
         "name": "Action Code",
         "type": "HL7",
         "elements": [
+            "A",
             "D",
-            "U",
-            "A"
+            "U"
         ]
     },
     "0324": {
@@ -3275,17 +3595,17 @@
         "name": "Location Characteristic ID",
         "type": "User",
         "elements": [
-            "SMK",
-            "LIC",
-            "IMP",
-            "SHA",
-            "INF",
-            "PRL",
-            "LCR",
-            "OVR",
-            "STF",
-            "SET",
             "GEN",
+            "IMP",
+            "INF",
+            "LCR",
+            "LIC",
+            "OVR",
+            "PRL",
+            "SET",
+            "SHA",
+            "SMK",
+            "STF",
             "TEA"
         ]
     },
@@ -3294,13 +3614,13 @@
         "name": "Location Relationship ID",
         "type": "User",
         "elements": [
-            "RX",
-            "RX2",
+            "ALI",
+            "DTY",
             "LAB",
             "LB2",
-            "DTY",
-            "ALI",
-            "PAR"
+            "PAR",
+            "RX",
+            "RX2"
         ]
     },
     "0326": {
@@ -3338,12 +3658,12 @@
         "name": "Marketing Basis",
         "type": "HL7",
         "elements": [
-            "510K",
             "510E",
+            "510K",
+            "522S",
             "PMA",
             "PRE",
-            "TXN",
-            "522S"
+            "TXN"
         ]
     },
     "0331": {
@@ -3351,10 +3671,10 @@
         "name": "Facility Type",
         "type": "HL7",
         "elements": [
-            "U",
-            "M",
+            "A",
             "D",
-            "A"
+            "M",
+            "U"
         ]
     },
     "0332": {
@@ -3362,19 +3682,42 @@
         "name": "Network Source Type",
         "type": "HL7",
         "elements": [
-            "I",
-            "A"
+            "A",
+            "I"
         ]
+    },
+    "0333": {
+        "id": "0333",
+        "name": "Driver\u00b4s License Issuing Authority",
+        "type": "User",
+        "elements": []
     },
     "0334": {
         "id": "0334",
         "name": "Disabled Person",
         "type": "User",
         "elements": [
-            "PT",
+            "AP",
             "GT",
             "IN",
-            "AP"
+            "PT"
+        ]
+    },
+    "0335": {
+        "id": "0335",
+        "name": "Repeat Pattern",
+        "type": "User",
+        "elements": []
+    },
+    "0336": {
+        "id": "0336",
+        "name": "Referral Reason",
+        "type": "User",
+        "elements": [
+            "O",
+            "P",
+            "S",
+            "W"
         ]
     },
     "0337": {
@@ -3382,8 +3725,8 @@
         "name": "Certification Status",
         "type": "HL7",
         "elements": [
-            "E",
-            "C"
+            "C",
+            "E"
         ]
     },
     "0338": {
@@ -3391,17 +3734,23 @@
         "name": "Practitioner ID number type",
         "type": "User",
         "elements": [
-            "UPIN",
-            "SL",
-            "MCD",
-            "GL",
             "CY",
-            "TAX",
             "DEA",
-            "MCR",
+            "GL",
             "L&I",
+            "MCD",
+            "MCR",
             "QA",
-            "TRL"
+            "SL",
+            "TAX",
+            "TRL",
+            "UPIN"
         ]
+    },
+    "4000": {
+        "id": "4000",
+        "name": "Name Representation",
+        "type": "User",
+        "elements": []
     }
 }

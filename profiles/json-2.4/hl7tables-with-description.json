@@ -1,7 +1,7 @@
 {
     "0001": {
         "id": "0001",
-        "name": "Administrative sex",
+        "name": "Administrative Sex",
         "type": "User",
         "elements": [
             {
@@ -32,7 +32,7 @@
     },
     "0002": {
         "id": "0002",
-        "name": "Marital status",
+        "name": "Marital Status",
         "type": "User",
         "elements": [
             {
@@ -103,264 +103,264 @@
     },
     "0003": {
         "id": "0003",
-        "name": "Event type",
+        "name": "Event",
         "type": "HL7",
         "elements": [
             {
                 "code": "A01",
-                "description": "ADT\/ACK - Admit\/visit notification"
+                "description": "ADT/ACK - Admit/visit notification"
             },
             {
                 "code": "A02",
-                "description": "ADT\/ACK - Transfer a patient"
+                "description": "ADT/ACK - Transfer a patient"
             },
             {
                 "code": "A03",
-                "description": "ADT\/ACK - Discharge\/end visit"
+                "description": "ADT/ACK -  Discharge/end visit"
             },
             {
                 "code": "A04",
-                "description": "ADT\/ACK - Register a patient"
+                "description": "ADT/ACK -  Register a patient"
             },
             {
                 "code": "A05",
-                "description": "ADT\/ACK - Pre-admit a patient"
+                "description": "ADT/ACK -  Pre-admit a patient"
             },
             {
                 "code": "A06",
-                "description": "ADT\/ACK - Change an outpatient to an inpatient"
+                "description": "ADT/ACK -  Change an outpatient to an inpatient"
             },
             {
                 "code": "A07",
-                "description": "ADT\/ACK - Change an inpatient to an outpatient"
+                "description": "ADT/ACK -  Change an inpatient to an outpatient"
             },
             {
                 "code": "A08",
-                "description": "ADT\/ACK - Update patient information"
+                "description": "ADT/ACK -  Update patient information"
             },
             {
                 "code": "A09",
-                "description": "ADT\/ACK - Patient departing - tracking"
+                "description": "ADT/ACK -  Patient departing - tracking"
             },
             {
                 "code": "A10",
-                "description": "ADT\/ACK - Patient arriving - tracking"
+                "description": "ADT/ACK -  Patient arriving - tracking"
             },
             {
                 "code": "A11",
-                "description": "ADT\/ACK - Cancel admit\/visit notification"
+                "description": "ADT/ACK -  Cancel admit/visit notification"
             },
             {
                 "code": "A12",
-                "description": "ADT\/ACK - Cancel transfer"
+                "description": "ADT/ACK -  Cancel transfer"
             },
             {
                 "code": "A13",
-                "description": "ADT\/ACK - Cancel discharge\/end visit"
+                "description": "ADT/ACK -  Cancel discharge/end visit"
             },
             {
                 "code": "A14",
-                "description": "ADT\/ACK - Pending admit"
+                "description": "ADT/ACK -  Pending admit"
             },
             {
                 "code": "A15",
-                "description": "ADT\/ACK - Pending transfer"
+                "description": "ADT/ACK -  Pending transfer"
             },
             {
                 "code": "A16",
-                "description": "ADT\/ACK - Pending discharge"
+                "description": "ADT/ACK -  Pending discharge"
             },
             {
                 "code": "A17",
-                "description": "ADT\/ACK - Swap patients"
+                "description": "ADT/ACK -  Swap patients"
             },
             {
                 "code": "A18",
-                "description": "ADT\/ACK - Merge patient information (for backward compatibility only)"
+                "description": "ADT/ACK -  Merge patient information (for backward compatibility only)"
             },
             {
                 "code": "A19",
-                "description": "QRY\/ADR - Patient query"
+                "description": "QRY/ADR -  Patient query"
             },
             {
                 "code": "A20",
-                "description": "ADT\/ACK - Bed status update"
+                "description": "ADT/ACK -  Bed status update"
             },
             {
                 "code": "A21",
-                "description": "ADT\/ACK - Patient goes on a \"leave of absence\""
+                "description": "ADT/ACK -  Patient goes on a \"leave of absence\""
             },
             {
                 "code": "A22",
-                "description": "ADT\/ACK - Patient returns from a \"leave of absence\""
+                "description": "ADT/ACK -  Patient returns from a \"leave of absence\""
             },
             {
                 "code": "A23",
-                "description": "ADT\/ACK - Delete a patient record"
+                "description": "ADT/ACK -  Delete a patient record"
             },
             {
                 "code": "A24",
-                "description": "ADT\/ACK - Link patient information"
+                "description": "ADT/ACK -  Link patient information"
             },
             {
                 "code": "A25",
-                "description": "ADT\/ACK - Cancel pending discharge"
+                "description": "ADT/ACK -  Cancel pending discharge"
             },
             {
                 "code": "A26",
-                "description": "ADT\/ACK - Cancel pending transfer"
+                "description": "ADT/ACK -  Cancel pending transfer"
             },
             {
                 "code": "A27",
-                "description": "ADT\/ACK - Cancel pending admit"
+                "description": "ADT/ACK -  Cancel pending admit"
             },
             {
                 "code": "A28",
-                "description": "ADT\/ACK - Add person information"
+                "description": "ADT/ACK -  Add person information"
             },
             {
                 "code": "A29",
-                "description": "ADT\/ACK - Delete person information"
+                "description": "ADT/ACK -  Delete person information"
             },
             {
                 "code": "A30",
-                "description": "ADT\/ACK - Merge person information (for backward compatibility only)"
+                "description": "ADT/ACK -  Merge person information (for backward compatibility only)"
             },
             {
                 "code": "A31",
-                "description": "ADT\/ACK - Update person information"
+                "description": "ADT/ACK -  Update person information"
             },
             {
                 "code": "A32",
-                "description": "ADT\/ACK - Cancel patient arriving - tracking"
+                "description": "ADT/ACK -  Cancel patient arriving - tracking"
             },
             {
                 "code": "A33",
-                "description": "ADT\/ACK - Cancel patient departing - tracking"
+                "description": "ADT/ACK -  Cancel patient departing - tracking"
             },
             {
                 "code": "A34",
-                "description": "ADT\/ACK - Merge patient information - patient ID only (for backward compatibility only)"
+                "description": "ADT/ACK -  Merge patient information - patient ID only (for backward compatibility only)"
             },
             {
                 "code": "A35",
-                "description": "ADT\/ACK - Merge patient information - account number only (for backward compatibility only)"
+                "description": "ADT/ACK -  Merge patient information - account number only (for backward compatibility only)"
             },
             {
                 "code": "A36",
-                "description": "ADT\/ACK - Merge patient information - patient ID and account number (for backward compatibility only)"
+                "description": "ADT/ACK -  Merge patient information - patient ID and account number (for backward compatibility only)"
             },
             {
                 "code": "A37",
-                "description": "ADT\/ACK - Unlink patient information"
+                "description": "ADT/ACK -  Unlink patient information"
             },
             {
                 "code": "A38",
-                "description": "ADT\/ACK - Cancel pre-admit"
+                "description": "ADT/ACK - Cancel pre-admit"
             },
             {
                 "code": "A39",
-                "description": "ADT\/ACK - Merge person - patient ID (for backward compatibility only)"
+                "description": "ADT/ACK - Merge person - patient ID (for backward compatibility only)"
             },
             {
                 "code": "A40",
-                "description": "ADT\/ACK - Merge patient - patient identifier list"
+                "description": "ADT/ACK - Merge patient - patient identifier list"
             },
             {
                 "code": "A41",
-                "description": "ADT\/ACK - Merge account - patient account number"
+                "description": "ADT/ACK - Merge account - patient account number"
             },
             {
                 "code": "A42",
-                "description": "ADT\/ACK - Merge visit - visit number"
+                "description": "ADT/ACK - Merge visit - visit number"
             },
             {
                 "code": "A43",
-                "description": "ADT\/ACK - Move patient information - patient identifier list"
+                "description": "ADT/ACK - Move patient information - patient identifier list"
             },
             {
                 "code": "A44",
-                "description": "ADT\/ACK - Move account information - patient account number"
+                "description": "ADT/ACK - Move account information - patient account number"
             },
             {
                 "code": "A45",
-                "description": "ADT\/ACK - Move visit information - visit number"
+                "description": "ADT/ACK - Move visit information - visit number"
             },
             {
                 "code": "A46",
-                "description": "ADT\/ACK - Change patient ID (for backward compatibility only)"
+                "description": "ADT/ACK - Change patient ID (for backward compatibility only)"
             },
             {
                 "code": "A47",
-                "description": "ADT\/ACK - Change patient identifier list"
+                "description": "ADT/ACK - Change patient identifier list"
             },
             {
                 "code": "A48",
-                "description": "ADT\/ACK - Change alternate patient ID (for backward compatibility only)"
+                "description": "ADT/ACK - Change alternate patient ID (for backward compatibility only)"
             },
             {
                 "code": "A49",
-                "description": "ADT\/ACK - Change patient account number"
+                "description": "ADT/ACK - Change patient account number"
             },
             {
                 "code": "A50",
-                "description": "ADT\/ACK - Change visit number"
+                "description": "ADT/ACK - Change visit number"
             },
             {
                 "code": "A51",
-                "description": "ADT\/ACK - Change alternate visit ID"
+                "description": "ADT/ACK - Change alternate visit ID"
             },
             {
                 "code": "A52",
-                "description": "ADT\/ACK - Cancel leave of absence for a patient"
+                "description": "ADT/ACK - Cancel leave of absence for a patient"
             },
             {
                 "code": "A53",
-                "description": "ADT\/ACK - Cancel patient returns from a leave of absence"
+                "description": "ADT/ACK - Cancel patient returns from a leave of absence"
             },
             {
                 "code": "A54",
-                "description": "ADT\/ACK - Change attending doctor"
+                "description": "ADT/ACK - Change attending doctor"
             },
             {
                 "code": "A55",
-                "description": "ADT\/ACK - Cancel change attending doctor"
+                "description": "ADT/ACK - Cancel change attending doctor"
             },
             {
                 "code": "A60",
-                "description": "ADT\/ACK - Update allergy information"
+                "description": "ADT/ACK -  Update allergy information"
             },
             {
                 "code": "A61",
-                "description": "ADT\/ACK - Change consulting doctor"
+                "description": "ADT/ACK - Change consulting doctor"
             },
             {
                 "code": "A62",
-                "description": "ADT\/ACK - Cancel change consulting doctor"
+                "description": "ADT/ACK - Cancel change consulting doctor"
             },
             {
                 "code": "B01",
-                "description": "PMU\/ACK - Add personnel record"
+                "description": "PMU/ACK - Add personnel record"
             },
             {
                 "code": "B02",
-                "description": "PMU\/ACK - Update personnel record"
+                "description": "PMU/ACK - Update personnel record"
             },
             {
                 "code": "B03",
-                "description": "PMU\/ACK - Delete personnel re cord"
+                "description": "PMU/ACK - Delete personnel re cord"
             },
             {
                 "code": "B04",
-                "description": "PMU\/ACK - Active practicing person"
+                "description": "PMU/ACK - Active practicing person"
             },
             {
                 "code": "B05",
-                "description": "PMU\/ACK - Deactivate practicing person"
+                "description": "PMU/ACK - Deactivate practicing person"
             },
             {
                 "code": "B06",
-                "description": "PMU\/ACK - Terminate practicing person"
+                "description": "PMU/ACK - Terminate practicing person"
             },
             {
                 "code": "C01",
@@ -372,7 +372,7 @@
             },
             {
                 "code": "C03",
-                "description": "CRM - Correct\/update registration information"
+                "description": "CRM - Correct/update registration information"
             },
             {
                 "code": "C04",
@@ -388,7 +388,7 @@
             },
             {
                 "code": "C07",
-                "description": "CRM - Correct\/update phase information"
+                "description": "CRM - Correct/update phase information"
             },
             {
                 "code": "C08",
@@ -408,87 +408,79 @@
             },
             {
                 "code": "C12",
-                "description": "CSU - Update\/correction of patient order\/result information"
+                "description": "CSU - Update/correction of patient order/result information"
+            },
+            {
+                "code": "CNQ",
+                "description": "QRY/EQQ/SPQ/VQQ/RQQ - Cancel query"
             },
             {
                 "code": "I01",
-                "description": "RQI\/RPI - Request for insurance information"
+                "description": "RQI/RPI - Request for insurance information"
             },
             {
                 "code": "I02",
-                "description": "RQI\/RPL - Request\/receipt of patient selection display list"
+                "description": "RQI/RPL - Request/receipt of patient selection display list"
             },
             {
                 "code": "I03",
-                "description": "RQI\/RPR - Request\/receipt of patient selection list"
+                "description": "RQI/RPR - Request/receipt of patient selection list"
             },
             {
                 "code": "I04",
-                "description": "RQD\/RPI - Request for patient demographic data"
+                "description": "RQD/RPI - Request for patient demographic data"
             },
             {
                 "code": "I05",
-                "description": "RQC\/RCI - Request for patient clinical information"
+                "description": "RQC/RCI - Request for patient clinical information"
             },
             {
                 "code": "I06",
-                "description": "RQC\/RCL - Request\/receipt of clinical data listing"
+                "description": "RQC/RCL - Request/receipt of clinical data listing"
             },
             {
                 "code": "I07",
-                "description": "PIN\/ACK - Unsolicited insurance information"
+                "description": "PIN/ACK - Unsolicited insurance information"
             },
             {
                 "code": "I08",
-                "description": "RQA\/RPA - Request for treatment authorization information"
+                "description": "RQA/RPA - Request for treatment authorization information"
             },
             {
                 "code": "I09",
-                "description": "RQA\/RPA - Request for modification to an authorization"
+                "description": "RQA/RPA - Request for modification to an authorization"
             },
             {
                 "code": "I10",
-                "description": "RQA\/RPA - Request for resubmission of an authorization"
+                "description": "RQA/RPA - Request for resubmission of an authorization"
             },
             {
                 "code": "I11",
-                "description": "RQA\/RPA - Request for cancellation of an authorization"
+                "description": "RQA/RPA - Request for cancellation of an authorization"
             },
             {
                 "code": "I12",
-                "description": "REF\/RRI - Patient referral"
+                "description": "REF/RRI - Patient referral"
             },
             {
                 "code": "I13",
-                "description": "REF\/RRI - Modify patient referral"
+                "description": "REF/RRI - Modify patient referral"
             },
             {
                 "code": "I14",
-                "description": "REF\/RRI - Cancel patient referral"
+                "description": "REF/RRI - Cancel patient referral"
             },
             {
                 "code": "I15",
-                "description": "REF\/RRI - Request patient referral status"
+                "description": "REF/RRI - Request patient referral status"
             },
             {
                 "code": "J01",
-                "description": "QCN\/ACK - Cancel query\/acknowledge message"
+                "description": "QCN/ACK - Cancel query/acknowledge message"
             },
             {
                 "code": "J02",
-                "description": "QSX\/ACK - Cancel subscription\/acknowledge message"
-            },
-            {
-                "code": "K11",
-                "description": "RSP - Segment pattern response"
-            },
-            {
-                "code": "K13",
-                "description": "RTB - Tabular response"
-            },
-            {
-                "code": "K1",
-                "description": "RDY - Display response"
+                "description": "QSX/ACK - Cancel subscription/acknowledge message"
             },
             {
                 "code": "K21",
@@ -512,59 +504,59 @@
             },
             {
                 "code": "M01",
-                "description": "MFN\/MFK - Master file not otherwise specified (for backward compatibility only)"
+                "description": "MFN/MFK - Master file not otherwise specified (for backward compatibility only)"
             },
             {
                 "code": "M02",
-                "description": "MFN\/MFK - Master file - staff practitioner"
+                "description": "MFN/MFK - Master file - staff practitioner"
             },
             {
                 "code": "M03",
-                "description": "MFN\/MFK - Master file - test\/observation (for backward compatibility only)"
+                "description": "MFN/MFK - Master file - test/observation (for backward compatibility only)"
             },
             {
                 "code": "M04",
-                "description": "MFN\/MFK - Master files charge description"
+                "description": "MFN/MFK - Master files charge description"
             },
             {
                 "code": "M05",
-                "description": "MFN\/MFK - Patient location master file"
+                "description": "MFN/MFK - Patient location master file"
             },
             {
                 "code": "M06",
-                "description": "MFN\/MFK - Clinical study with phases and schedules master file"
+                "description": "MFN/MFK - Clinical study with phases and schedules master file"
             },
             {
                 "code": "M07",
-                "description": "MFN\/MFK - Clinical study without phases but with schedules master file"
+                "description": "MFN/MFK - Clinical study without phases but with schedules master file"
             },
             {
                 "code": "M08",
-                "description": "MFN\/MFK - Test\/observation (numeric) master file"
+                "description": "MFN/MFK - Test/observation (numeric) master file"
             },
             {
                 "code": "M09",
-                "description": "MFN\/MFK - Test\/observation (categorical) master file"
+                "description": "MFN/MFK - Test/observation (categorical) master file"
             },
             {
                 "code": "M10",
-                "description": "MFN\/MFK - Test \/observation batteries master file"
+                "description": "MFN/MFK - Test /observation batteries master file"
             },
             {
                 "code": "M11",
-                "description": "MFN\/MFK - Test\/calculated observations master file"
+                "description": "MFN/MFK - Test/calculated observations master file"
             },
             {
                 "code": "M12",
-                "description": "MFN\/MFK - Master file notification message"
+                "description": "MFN/MFK - Master file notification message"
             },
             {
                 "code": "N01",
-                "description": "NMQ\/NMR - Application management query message"
+                "description": "NMQ/NMR - Application management query message"
             },
             {
                 "code": "N02",
-                "description": "NMD\/ACK - Application management data message (unsolicited)"
+                "description": "NMD/ACK - Application management data message (unsolicited)"
             },
             {
                 "code": "O01",
@@ -600,43 +592,43 @@
             },
             {
                 "code": "O09",
-                "description": "OMP - Pharmacy\/treatment order"
+                "description": "OMP - Pharmacy/treatment order"
             },
             {
                 "code": "O10",
-                "description": "ORP - Pharmacy\/treatment order acknowledgement"
+                "description": "ORP - Pharmacy/treatment order acknowledgement"
             },
             {
                 "code": "O11",
-                "description": "RDE - Pharmacy\/treatment encoded order"
+                "description": "RDE - Pharmacy/treatment encoded order"
             },
             {
                 "code": "O12",
-                "description": "RRE - Pharmacy\/treatment encoded order acknowledgement"
+                "description": "RRE - Pharmacy/treatment encoded order acknowledgement"
             },
             {
                 "code": "O13",
-                "description": "RDS - Pharmacy\/treatment dispense"
+                "description": "RDS - Pharmacy/treatment dispense"
             },
             {
                 "code": "O14",
-                "description": "RRD - Pharmacy\/treatment dispense acknowledgement"
+                "description": "RRD - Pharmacy/treatment dispense acknowledgement"
             },
             {
                 "code": "O15",
-                "description": "RGV - Pharmacy\/treatment give"
+                "description": "RGV - Pharmacy/treatment give"
             },
             {
                 "code": "O16",
-                "description": "RRG - Pharmacy\/treatment give acknowledgement"
+                "description": "RRG - Pharmacy/treatment give acknowledgement"
             },
             {
                 "code": "O17",
-                "description": "RAS - Pharmacy\/treatment administration"
+                "description": "RAS - Pharmacy/treatment administration"
             },
             {
                 "code": "O18",
-                "description": "RRA - Pharmacy\/treatment administration acknowledgement"
+                "description": "RRA - Pharmacy/treatment administration acknowledgement"
             },
             {
                 "code": "O19",
@@ -644,39 +636,35 @@
             },
             {
                 "code": "O20",
-                "description": "ORG\/ORL - General clinical order response"
+                "description": "ORG/ORL - General clinical order response"
             },
             {
                 "code": "O21",
                 "description": "OML - Laboratory order"
             },
             {
-                "code": "O22",
-                "description": "ORL - General laboratory order response message to any OML"
-            },
-            {
                 "code": "P01",
-                "description": "BAR\/ACK - Add patient accounts"
+                "description": "BAR/ACK - Add patient accounts"
             },
             {
                 "code": "P02",
-                "description": "BAR\/ACK - Purge patient accounts"
+                "description": "BAR/ACK - Purge patient accounts"
             },
             {
                 "code": "P03",
-                "description": "DFT\/ACK - Post detail financial transaction"
+                "description": "DFT/ACK - Post detail financial transaction"
             },
             {
                 "code": "P04",
-                "description": "QRY\/DSP - Generate bill and A\/R statements"
+                "description": "QRY/DSP - Generate bill and A/R statements"
             },
             {
                 "code": "P05",
-                "description": "BAR\/ACK - Update account"
+                "description": "BAR/ACK - Update account"
             },
             {
                 "code": "P06",
-                "description": "BAR\/ACK - End account"
+                "description": "BAR/ACK - End account"
             },
             {
                 "code": "P07",
@@ -692,99 +680,99 @@
             },
             {
                 "code": "P10",
-                "description": "BAR\/ACK -Transmit Ambulatory Payment Classification(APC)"
+                "description": "BAR/ACK -Transmit  Ambulatory Payment  Classification(APC)"
             },
             {
                 "code": "PC1",
-                "description": "PPR - PC\/ problem add"
+                "description": "PPR - PC/ problem add"
             },
             {
                 "code": "PC2",
-                "description": "PPR - PC\/ problem update"
+                "description": "PPR - PC/ problem update"
             },
             {
                 "code": "PC3",
-                "description": "PPR - PC\/ problem delete"
+                "description": "PPR - PC/ problem delete"
             },
             {
                 "code": "PC4",
-                "description": "QRY - PC\/ problem query"
+                "description": "QRY - PC/ problem query"
             },
             {
                 "code": "PC5",
-                "description": "PRR - PC\/ problem response"
+                "description": "PRR - PC/ problem response"
             },
             {
                 "code": "PC6",
-                "description": "PGL - PC\/ goal add"
+                "description": "PGL - PC/ goal add"
             },
             {
                 "code": "PC7",
-                "description": "PGL - PC\/ goal update"
+                "description": "PGL - PC/ goal update"
             },
             {
                 "code": "PC8",
-                "description": "PGL - PC\/ goal delete"
+                "description": "PGL - PC/ goal delete"
             },
             {
                 "code": "PC9",
-                "description": "QRY - PC\/ goal query"
+                "description": "QRY - PC/ goal query"
             },
             {
                 "code": "PCA",
-                "description": "PPV - PC\/ goal response"
+                "description": "PPV - PC/ goal response"
             },
             {
                 "code": "PCB",
-                "description": "PPP - PC\/ pathway (problem-oriented) add"
+                "description": "PPP - PC/ pathway (problem-oriented) add"
             },
             {
                 "code": "PCC",
-                "description": "PPP - PC\/ pathway (problem-oriented) update"
+                "description": "PPP - PC/ pathway (problem-oriented) update"
             },
             {
                 "code": "PCD",
-                "description": "PPP - PC\/ pathway (problem-oriented) delete"
+                "description": "PPP - PC/ pathway (problem-oriented) delete"
             },
             {
                 "code": "PCE",
-                "description": "QRY - PC\/ pathway (problem-oriented) query"
+                "description": "QRY - PC/ pathway (problem-oriented) query"
             },
             {
                 "code": "PCF",
-                "description": "PTR - PC\/ pathway (problem-oriented) query response"
+                "description": "PTR - PC/ pathway (problem-oriented) query response"
             },
             {
                 "code": "PCG",
-                "description": "PPG - PC\/ pathway (goal-oriented) add"
+                "description": "PPG - PC/ pathway (goal-oriented) add"
             },
             {
                 "code": "PCH",
-                "description": "PPG - PC\/ pathway (goal-oriented) update"
+                "description": "PPG - PC/ pathway (goal-oriented) update"
             },
             {
                 "code": "PCJ",
-                "description": "PPG - PC\/ pathway (goal-oriented) delete"
+                "description": "PPG - PC/ pathway (goal-oriented) delete"
             },
             {
                 "code": "PCK",
-                "description": "QRY - PC\/ pathway (goal-oriented) query"
+                "description": "QRY - PC/ pathway (goal-oriented) query"
             },
             {
                 "code": "PCL",
-                "description": "PPT - PC\/ pathway (goal-oriented) query response"
+                "description": "PPT - PC/ pathway (goal-oriented) query response"
             },
             {
                 "code": "Q01",
-                "description": "QRY\/DSR - Query sent for immediate response"
+                "description": "QRY/DSR - Query sent for immediate response"
             },
             {
                 "code": "Q02",
-                "description": "QRY\/QCK - Query sent for deferred response"
+                "description": "QRY/QCK - Query sent for deferred response"
             },
             {
                 "code": "Q03",
-                "description": "DSR\/ACK - Deferred response to a query"
+                "description": "DSR/ACK - Deferred response to a query"
             },
             {
                 "code": "Q04",
@@ -792,11 +780,11 @@
             },
             {
                 "code": "Q05",
-                "description": "UDM\/ACK - Unsolicited display update message"
+                "description": "UDM/ACK - Unsolicited display update message"
             },
             {
                 "code": "Q06",
-                "description": "OSQ\/OSR - Query for order status"
+                "description": "OSQ/OSR - Query for order status"
             },
             {
                 "code": "Q07",
@@ -839,32 +827,8 @@
                 "description": "QBP - Personnel Information by Segment Query"
             },
             {
-                "code": "Q26",
-                "description": "ROR - Pharmacy\/treatment order response"
-            },
-            {
-                "code": "Q27",
-                "description": "RAR - Pharmacy\/treatment administration information"
-            },
-            {
-                "code": "Q28",
-                "description": "RDR - Pharmacy\/treatment dispense information"
-            },
-            {
-                "code": "Q29",
-                "description": "RER- Pharmacy\/treatment encoded order information"
-            },
-            {
-                "code": "Q30",
-                "description": "RGR - Pharmacy\/treatment dose information"
-            },
-            {
-                "code": "QNC",
-                "description": "Varies - Query cancellation"
-            },
-            {
                 "code": "R01",
-                "description": "ORU\/ACK - Unsolicited transmission of an observation message"
+                "description": "ORU/ACK - Unsolicited transmission of an observation message"
             },
             {
                 "code": "R02",
@@ -872,27 +836,55 @@
             },
             {
                 "code": "R03",
-                "description": "QRY\/DSR Display-oriented results, query\/unsol. update (for backward compatibility only) (Replaced by Q05)"
+                "description": "QRY/DSR Display-oriented results, query/unsol. update (for backward compatibility only) (Replaced by Q05)"
             },
             {
                 "code": "R04",
                 "description": "ORF - Response to query; transmission of requested observation"
             },
             {
+                "code": "R05",
+                "description": "QRY/DSR - query for display results (See Q01)"
+            },
+            {
+                "code": "R06",
+                "description": "UDM - unsolicited update/display results (See Q05)"
+            },
+            {
                 "code": "R07",
-                "description": "EDR - Enhanced Display Response"
+                "description": "EDR - enhanced display response"
             },
             {
                 "code": "R08",
-                "description": "TBR - Tabular Data Response"
+                "description": "TBR - tabular data response"
             },
             {
                 "code": "R09",
-                "description": "ERP - Event Replay Response"
+                "description": "ERP - event replay response"
+            },
+            {
+                "code": "R0R",
+                "description": ""
             },
             {
                 "code": "R21",
                 "description": "OUL - Unsolicited laboratory observation"
+            },
+            {
+                "code": "RAR",
+                "description": "RAR - Pharmacy administration information query response"
+            },
+            {
+                "code": "RDR",
+                "description": "RDR - Pharmacy dispense information query response"
+            },
+            {
+                "code": "RER",
+                "description": "RER - Pharmacy encoded order information query response"
+            },
+            {
+                "code": "RGR",
+                "description": "RGR - Pharmacy dose information query response"
             },
             {
                 "code": "ROR",
@@ -900,207 +892,207 @@
             },
             {
                 "code": "S01",
-                "description": "SRM\/SRR - Request new appointment booking"
+                "description": "SRM/SRR - Request new appointment booking"
             },
             {
                 "code": "S02",
-                "description": "SRM\/SRR - Request appointment rescheduling"
+                "description": "SRM/SRR - Request appointment rescheduling"
             },
             {
                 "code": "S03",
-                "description": "SRM\/SRR - Request appointment modification"
+                "description": "SRM/SRR - Request appointment modification"
             },
             {
                 "code": "S04",
-                "description": "SRM\/SRR - Request appointment cancellation"
+                "description": "SRM/SRR - Request appointment cancellation"
             },
             {
                 "code": "S05",
-                "description": "SRM\/SRR - Request appointment discontinuation"
+                "description": "SRM/SRR - Request appointment discontinuation"
             },
             {
                 "code": "S06",
-                "description": "SRM\/SRR - Request appointment deletion"
+                "description": "SRM/SRR - Request appointment deletion"
             },
             {
                 "code": "S07",
-                "description": "SRM\/SRR - Request addition of service\/resource on appointment"
+                "description": "SRM/SRR - Request addition of service/resource on appointment"
             },
             {
                 "code": "S08",
-                "description": "SRM\/SRR - Request modification of service\/resource on appointment"
+                "description": "SRM/SRR - Request modification of service/resource on appointment"
             },
             {
                 "code": "S09",
-                "description": "SRM\/SRR - Request cancellation of service\/resource on appointment"
+                "description": "SRM/SRR - Request cancellation of service/resource on appointment"
             },
             {
                 "code": "S10",
-                "description": "SRM\/SRR - Request discontinuation of service\/resource on appointment"
+                "description": "SRM/SRR - Request discontinuation of service/resource on appointment"
             },
             {
                 "code": "S11",
-                "description": "SRM\/SRR - Request deletion of service\/resource on appointment"
+                "description": "SRM/SRR - Request deletion of service/resource on appointment"
             },
             {
                 "code": "S12",
-                "description": "SIU\/ACK - Notification of new appointment booking"
+                "description": "SIU/ACK - Notification of new appointment booking"
             },
             {
                 "code": "S13",
-                "description": "SIU\/ACK - Notification of appointment rescheduling"
+                "description": "SIU/ACK - Notification of appointment rescheduling"
             },
             {
                 "code": "S14",
-                "description": "SIU\/ACK - Notification of appointment modification"
+                "description": "SIU/ACK - Notification of appointment modification"
             },
             {
                 "code": "S15",
-                "description": "SIU\/ACK - Notification of appointment cancellation"
+                "description": "SIU/ACK - Notification of appointment cancellation"
             },
             {
                 "code": "S16",
-                "description": "SIU\/ACK - Notification of appointment discontinuation"
+                "description": "SIU/ACK - Notification of appointment discontinuation"
             },
             {
                 "code": "S17",
-                "description": "SIU\/ACK - Notification of appointment deletion"
+                "description": "SIU/ACK - Notification of appointment deletion"
             },
             {
                 "code": "S18",
-                "description": "SIU\/ACK - Notification of addition of service\/resource on appointment"
+                "description": "SIU/ACK - Notification of addition of service/resource on appointment"
             },
             {
                 "code": "S19",
-                "description": "SIU\/ACK - Notification of modification of service\/resource on appointment"
+                "description": "SIU/ACK - Notification of modification of service/resource on appointment"
             },
             {
                 "code": "S20",
-                "description": "SIU\/ACK - Notification of cancellation of service\/resource on appointment"
+                "description": "SIU/ACK - Notification of cancellation of service/resource on appointment"
             },
             {
                 "code": "S21",
-                "description": "SIU\/ACK - Notification of discontinuation of service\/resource on appointment"
+                "description": "SIU/ACK - Notification of discontinuation of service/resource on appointment"
             },
             {
                 "code": "S22",
-                "description": "SIU\/ACK - Notification of deletion of service\/resource on appointment"
+                "description": "SIU/ACK - Notification of deletion of service/resource on appointment"
             },
             {
                 "code": "S23",
-                "description": "SIU\/ACK - Notification of blocked schedule time slot(s)"
+                "description": "SIU/ACK - Notification of blocked schedule time slot(s)"
             },
             {
                 "code": "S24",
-                "description": "SIU\/ACK - Notification of opened (\"unblocked\") schedule time slot(s)"
+                "description": "SIU/ACK - Notification of opened (\"unblocked\") schedule time slot(s)"
             },
             {
                 "code": "S25",
-                "description": "SQM\/SQR - Schedule query message and response"
+                "description": "SQM/SQR - Schedule query message and response"
             },
             {
                 "code": "S26",
-                "description": "SIU\/ACK Notification that patient did not show up for schedule appointment"
+                "description": "SIU/ACK Notification that patient did not show up for schedule appointment"
             },
             {
                 "code": "T01",
-                "description": "MDM\/ACK - Original document notification"
+                "description": "MDM/ACK - Original document notification"
             },
             {
                 "code": "T02",
-                "description": "MDM\/ACK - Original document notification and content"
+                "description": "MDM/ACK - Original document notification and content"
             },
             {
                 "code": "T03",
-                "description": "MDM\/ACK - Document status change notification"
+                "description": "MDM/ACK - Document status change notification"
             },
             {
                 "code": "T04",
-                "description": "MDM\/ACK - Document status change notification and content"
+                "description": "MDM/ACK - Document status change notification and content"
             },
             {
                 "code": "T05",
-                "description": "MDM\/ACK - Document addendum notification"
+                "description": "MDM/ACK - Document addendum notification"
             },
             {
                 "code": "T06",
-                "description": "MDM\/ACK - Document addendum notification and content"
+                "description": "MDM/ACK - Document addendum notification and content"
             },
             {
                 "code": "T07",
-                "description": "MDM\/ACK - Document edit notification"
+                "description": "MDM/ACK - Document edit notification"
             },
             {
                 "code": "T08",
-                "description": "MDM\/ACK - Document edit notification and content"
+                "description": "MDM/ACK - Document edit notification and content"
             },
             {
                 "code": "T09",
-                "description": "MDM\/ACK - Document replacement notification"
+                "description": "MDM/ACK - Document replacement notification"
             },
             {
                 "code": "T10",
-                "description": "MDM\/ACK - Document replacement notification and content"
+                "description": "MDM/ACK - Document replacement notification and content"
             },
             {
                 "code": "T11",
-                "description": "MDM\/ACK - Document cancel notification"
+                "description": "MDM/ACK - Document cancel notification"
             },
             {
                 "code": "T12",
-                "description": "QRY\/DOC - Document query"
+                "description": "QRY/DOC - Document query"
             },
             {
                 "code": "U01",
-                "description": "ESU\/ACK - Automated equipment status update"
+                "description": "ESU/ACK - Automated equipment status update"
             },
             {
                 "code": "U02",
-                "description": "ESR\/ACK - Automated equipment status request"
+                "description": "ESR/ACK - Automated equipment status request"
             },
             {
                 "code": "U03",
-                "description": "SSU\/ACK - Specimen status update"
+                "description": "SSU/ACK - Specimen status update"
             },
             {
                 "code": "U04",
-                "description": "SSR\/ACK - specimen status request"
+                "description": "SSR/ACK - specimen status request"
             },
             {
                 "code": "U05",
-                "description": "INU\/ACK - Automated equipment inventory update"
+                "description": "INU/ACK  - Automated equipment inventory update"
             },
             {
                 "code": "U06",
-                "description": "INR\/ACK - Automated equipment inventory request"
+                "description": "INR/ACK - Automated equipment inventory request"
             },
             {
                 "code": "U07",
-                "description": "EAC\/ACK - Automated equipment command"
+                "description": "EAC/ACK - Automated equipment command"
             },
             {
                 "code": "U08",
-                "description": "EAR\/ACK - Automated equipment response"
+                "description": "EAR/ACK - Automated equipment response"
             },
             {
                 "code": "U09",
-                "description": "EAN\/ACK - Automated equipment notification"
+                "description": "EAN/ACK - Automated equipment notification"
             },
             {
                 "code": "U10",
-                "description": "TCU\/ACK - Automated equipment test code settings update"
+                "description": "TCU/ACK - Automated equipment test code settings update"
             },
             {
                 "code": "U11",
-                "description": "TCR\/ACK - Automated equipment test code settings request"
+                "description": "TCR/ACK - Automated equipment test code settings request"
             },
             {
                 "code": "U12",
-                "description": "LSU\/ACK - Automated equipment log\/service update"
+                "description": "LSU/ACK - Automated equipment log/service update"
             },
             {
                 "code": "U13",
-                "description": "LSR\/ACK - Automated equipment log\/service request"
+                "description": "LSR/ACK - Automated equipment log/service request"
             },
             {
                 "code": "V01",
@@ -1120,7 +1112,7 @@
             },
             {
                 "code": "Varies",
-                "description": "MFQ\/MFR - Master files query (use event same as asking for e.g., M05 - location)"
+                "description": "MFQ/MFR - Master files query (use event same as asking for e.g., M05 - location)"
             },
             {
                 "code": "W01",
@@ -1129,12 +1121,16 @@
             {
                 "code": "W02",
                 "description": "QRF - Waveform result, response to query"
+            },
+            {
+                "code": "X01",
+                "description": ""
             }
         ]
     },
     "0004": {
         "id": "0004",
-        "name": "Patient class",
+        "name": "Patient Class",
         "type": "User",
         "elements": [
             {
@@ -1547,7 +1543,7 @@
     },
     "0007": {
         "id": "0007",
-        "name": "Admission type",
+        "name": "Admission Type",
         "type": "User",
         "elements": [
             {
@@ -1582,7 +1578,7 @@
     },
     "0008": {
         "id": "0008",
-        "name": "Acknowledgment code",
+        "name": "Acknowledgment Code",
         "type": "HL7",
         "elements": [
             {
@@ -1613,7 +1609,7 @@
     },
     "0009": {
         "id": "0009",
-        "name": "Ambulatory status",
+        "name": "Ambulatory Status",
         "type": "User",
         "elements": [
             {
@@ -1626,7 +1622,7 @@
             },
             {
                 "code": "A2",
-                "description": "Wheelchair\/stretcher bound"
+                "description": "Wheelchair/stretcher bound"
             },
             {
                 "code": "A3",
@@ -1690,7 +1686,7 @@
     },
     "0017": {
         "id": "0017",
-        "name": "Transaction type",
+        "name": "Transaction Type",
         "type": "User",
         "elements": [
             {
@@ -1717,13 +1713,13 @@
     },
     "0018": {
         "id": "0018",
-        "name": "Patient type",
+        "name": "Patient Type",
         "type": "User",
         "elements": []
     },
     "0019": {
         "id": "0019",
-        "name": "Anesthesia code",
+        "name": "Anesthesia Code",
         "type": "User",
         "elements": []
     },
@@ -1735,13 +1731,13 @@
     },
     "0022": {
         "id": "0022",
-        "name": "Billing status",
+        "name": "Billing Status",
         "type": "User",
         "elements": []
     },
     "0023": {
         "id": "0023",
-        "name": "Admit source",
+        "name": "Admit Source",
         "type": "User",
         "elements": [
             {
@@ -1774,7 +1770,7 @@
             },
             {
                 "code": "8",
-                "description": "Court\/law enforcement"
+                "description": "Court/law enforcement"
             },
             {
                 "code": "9",
@@ -1784,7 +1780,7 @@
     },
     "0024": {
         "id": "0024",
-        "name": "Fee schedule",
+        "name": "Fee Schedule",
         "type": "User",
         "elements": []
     },
@@ -1817,7 +1813,7 @@
     },
     "0032": {
         "id": "0032",
-        "name": "Charge\/price indicator",
+        "name": "Charge/price indicator",
         "type": "User",
         "elements": []
     },
@@ -1876,51 +1872,71 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Military service related"
             },
             {
-                "code": "2",
+                "code": "02",
                 "description": "Condition is employment related"
             },
             {
-                "code": "3",
+                "code": "03",
                 "description": "Patient covered by insurance not reflected here"
             },
             {
-                "code": "4",
+                "code": "04",
                 "description": "HMO enrollee"
             },
             {
-                "code": "5",
+                "code": "05",
                 "description": "Lien has been filed"
             },
             {
-                "code": "6",
+                "code": "06",
                 "description": "ESRD patient in first 18 months of entitlement covered by employer group health insurance"
             },
             {
-                "code": "7",
+                "code": "07",
                 "description": "Treatment of non-terminal condition for hospice patient"
             },
             {
-                "code": "8",
+                "code": "08",
                 "description": "Beneficiary would not provide information concerning other insurance coverage"
             },
             {
-                "code": "9",
+                "code": "09",
                 "description": "Neither patient nor spouse is employed"
             },
             {
                 "code": "10",
-                "description": "Patient and\/or spouse is employed but no EGHP exists"
+                "description": "Patient and/or spouse is employed but no EGHP exists"
             },
             {
                 "code": "11",
                 "description": "Disabled beneficiary but no LGHP"
             },
             {
+                "code": "12",
+                "description": "Payer codes."
+            },
+            {
                 "code": "12 ... 16",
+                "description": "Payer codes."
+            },
+            {
+                "code": "13",
+                "description": "Payer codes."
+            },
+            {
+                "code": "14",
+                "description": "Payer codes."
+            },
+            {
+                "code": "15",
+                "description": "Payer codes."
+            },
+            {
+                "code": "16",
                 "description": "Payer codes."
             },
             {
@@ -1949,11 +1965,11 @@
             },
             {
                 "code": "28",
-                "description": "Patient and\/or spouse's EGHP is secondary to Medicare"
+                "description": "Patient and/or spouse's EGHP is secondary to Medicare"
             },
             {
                 "code": "29",
-                "description": "Disabled beneficiary and\/or family member's LGHP is secondary to Medicare"
+                "description": "Disabled beneficiary and/or family member's LGHP is secondary to Medicare"
             },
             {
                 "code": "31",
@@ -1961,7 +1977,7 @@
             },
             {
                 "code": "32",
-                "description": "Patient is student (cooperative\/work study program)"
+                "description": "Patient is student (cooperative/work study program)"
             },
             {
                 "code": "33",
@@ -2069,7 +2085,7 @@
             },
             {
                 "code": "77",
-                "description": "Provider accepts or is obligated\/required due to a contractual arrangement or law to accept payment by a primary payer as payment in full"
+                "description": "Provider accepts or is obligated/required due to a contractual arrangement or law to accept payment by a primary payer as payment in full"
             },
             {
                 "code": "78",
@@ -2110,7 +2126,7 @@
         "elements": [
             {
                 "code": "ADV",
-                "description": "Advice\/diagnosis"
+                "description": "Advice/diagnosis"
             },
             {
                 "code": "ANU",
@@ -2138,7 +2154,7 @@
             },
             {
                 "code": "CAN",
-                "description": "Cancel. Used to cancel a query"
+                "description": "Cancel.  Used to cancel a query"
             },
             {
                 "code": "DEM",
@@ -2230,7 +2246,7 @@
             },
             {
                 "code": "SOF",
-                "description": "First open slot on the identified schedule after the start date\/time"
+                "description": "First open slot on the identified schedule after the start date/time"
             },
             {
                 "code": "SOP",
@@ -2348,15 +2364,15 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Patient request"
             },
             {
-                "code": "2",
-                "description": "Physician\/health practitioner order"
+                "code": "02",
+                "description": "Physician/health practitioner order"
             },
             {
-                "code": "3",
+                "code": "03",
                 "description": "Census management"
             }
         ]
@@ -2668,11 +2684,11 @@
             },
             {
                 "code": "BLDA",
-                "description": "Blood arterial"
+                "description": "Blood  arterial"
             },
             {
                 "code": "BLDC",
-                "description": "Blood capillary"
+                "description": "Blood  capillary"
             },
             {
                 "code": "BLDCO",
@@ -2680,7 +2696,7 @@
             },
             {
                 "code": "BLDV",
-                "description": "Blood venous"
+                "description": "Blood  venous"
             },
             {
                 "code": "BON",
@@ -2828,7 +2844,7 @@
             },
             {
                 "code": "GAST",
-                "description": "Gastric fluid\/contents"
+                "description": "Gastric fluid/contents"
             },
             {
                 "code": "GEN",
@@ -2960,7 +2976,7 @@
             },
             {
                 "code": "PRT",
-                "description": "Peritoneal fluid \/ascites"
+                "description": "Peritoneal fluid /ascites"
             },
             {
                 "code": "PUS",
@@ -3203,7 +3219,7 @@
             },
             {
                 "code": "EC",
-                "description": "Electrocardiac (e.g., EKG, EEC, Holter)"
+                "description": "Electrocardiac (e.g., EKG,  EEC, Holter)"
             },
             {
                 "code": "EN",
@@ -3362,7 +3378,7 @@
             },
             {
                 "code": "BAR",
-                "description": "Add\/change billing account"
+                "description": "Add/change billing account"
             },
             {
                 "code": "CRM",
@@ -3426,11 +3442,11 @@
             },
             {
                 "code": "LSR",
-                "description": "Automated equipment log\/service request message"
+                "description": "Automated equipment log/service request message"
             },
             {
                 "code": "LSU",
-                "description": "Automated equipment log\/service update message"
+                "description": "Automated equipment log/service update message"
             },
             {
                 "code": "MCF",
@@ -3490,7 +3506,7 @@
             },
             {
                 "code": "OMP",
-                "description": "Pharmacy\/treatment order message"
+                "description": "Pharmacy/treatment order message"
             },
             {
                 "code": "OMS",
@@ -3514,7 +3530,7 @@
             },
             {
                 "code": "ORM",
-                "description": "Pharmacy\/treatment order message"
+                "description": "Pharmacy/treatment order message"
             },
             {
                 "code": "ORN",
@@ -3522,7 +3538,7 @@
             },
             {
                 "code": "ORP",
-                "description": "Pharmacy\/treatment order acknowledgement message"
+                "description": "Pharmacy/treatment order acknowledgement message"
             },
             {
                 "code": "ORR",
@@ -3614,7 +3630,7 @@
             },
             {
                 "code": "QSX",
-                "description": "Cancel subscription\/acknowledge message"
+                "description": "Cancel subscription/acknowledge message"
             },
             {
                 "code": "QVR",
@@ -3622,11 +3638,11 @@
             },
             {
                 "code": "RAR",
-                "description": "Pharmacy\/treatment administration information"
+                "description": "Pharmacy/treatment administration information"
             },
             {
                 "code": "RAS",
-                "description": "Pharmacy\/treatment administration message"
+                "description": "Pharmacy/treatment administration message"
             },
             {
                 "code": "RCI",
@@ -3638,15 +3654,15 @@
             },
             {
                 "code": "RDE",
-                "description": "Pharmacy\/treatment encoded order message"
+                "description": "Pharmacy/treatment encoded order message"
             },
             {
                 "code": "RDR",
-                "description": "Pharmacy\/treatment dispense information"
+                "description": "Pharmacy/treatment dispense information"
             },
             {
                 "code": "RDS",
-                "description": "Pharmacy\/treatment dispense message"
+                "description": "Pharmacy/treatment dispense message"
             },
             {
                 "code": "RDY",
@@ -3658,19 +3674,19 @@
             },
             {
                 "code": "RER",
-                "description": "Pharmacy\/treatment encoded order information"
+                "description": "Pharmacy/treatment encoded order information"
             },
             {
                 "code": "RGR",
-                "description": "Pharmacy\/treatment dose information"
+                "description": "Pharmacy/treatment dose information"
             },
             {
                 "code": "RGV",
-                "description": "Pharmacy\/treatment give message"
+                "description": "Pharmacy/treatment give message"
             },
             {
                 "code": "ROR",
-                "description": "Pharmacy\/treatment order response"
+                "description": "Pharmacy/treatment order response"
             },
             {
                 "code": "RPA",
@@ -3710,19 +3726,19 @@
             },
             {
                 "code": "RRA",
-                "description": "Pharmacy\/treatment administration acknowledgement message"
+                "description": "Pharmacy/treatment administration acknowledgement message"
             },
             {
                 "code": "RRD",
-                "description": "Pharmacy\/treatment dispense acknowledgment message"
+                "description": "Pharmacy/treatment dispense acknowledgment message"
             },
             {
                 "code": "RRE",
-                "description": "Pharmacy\/treatment encoded order acknowledgment message"
+                "description": "Pharmacy/treatment encoded order acknowledgment message"
             },
             {
                 "code": "RRG",
-                "description": "Pharmacy\/treatment give acknowledgment message"
+                "description": "Pharmacy/treatment give acknowledgment message"
             },
             {
                 "code": "RRI",
@@ -3868,10 +3884,6 @@
                 "description": "Normal (applies to non-numeric results)"
             },
             {
-                "code": "null",
-                "description": "No range defined, or normal ranges don't apply"
-            },
-            {
                 "code": "R",
                 "description": "Resistant*"
             },
@@ -3890,6 +3902,10 @@
             {
                 "code": "W",
                 "description": "Worse--use when direction not relevant"
+            },
+            {
+                "code": "null",
+                "description": "No range defined, or normal ranges don't apply"
             }
         ]
     },
@@ -3980,7 +3996,7 @@
             },
             {
                 "code": "U",
-                "description": "Results status change to final without retransmitting results already sent as 'preliminary.' E.g., radiology changes status from preliminary to final"
+                "description": "Results status change to final without retransmitting results already sent as 'preliminary.'  E.g., radiology changes status from preliminary to final"
             },
             {
                 "code": "W",
@@ -4109,7 +4125,7 @@
             },
             {
                 "code": "T",
-                "description": "At a designated date\/time"
+                "description": "At a designated date/time"
             }
         ]
     },
@@ -4203,7 +4219,7 @@
     },
     "0106": {
         "id": "0106",
-        "name": "Query\/response format code",
+        "name": "Query/response format code",
         "type": "HL7",
         "elements": [
             {
@@ -4227,11 +4243,11 @@
         "elements": [
             {
                 "code": "B",
-                "description": "Before the Date\/Time specified"
+                "description": "Before the Date/Time specified"
             },
             {
                 "code": "L",
-                "description": "Later than the Date\/Time specified"
+                "description": "Later than the Date/Time specified"
             }
         ]
     },
@@ -4291,51 +4307,127 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Discharged to home or self care (routine discharge)"
             },
             {
-                "code": "2",
-                "description": "Discharged\/transferred to another short term general hospital for inpatient care"
+                "code": "02",
+                "description": "Discharged/transferred to another short term general hospital for inpatient care"
             },
             {
-                "code": "3",
-                "description": "Discharged\/transferred to skilled nursing facility (SNF)"
+                "code": "03",
+                "description": "Discharged/transferred to skilled nursing facility (SNF)"
             },
             {
-                "code": "4",
-                "description": "Discharged\/transferred to an intermediate care facility (ICF)"
+                "code": "04",
+                "description": "Discharged/transferred to an intermediate care facility (ICF)"
             },
             {
-                "code": "5",
-                "description": "Discharged\/transferred to another type of institution for inpatient care or referred for outpatient services to another institution"
+                "code": "05",
+                "description": "Discharged/transferred to another type of institution for inpatient care or referred for outpatient services to another institution"
             },
             {
-                "code": "6",
-                "description": "Discharged\/transferred to home under care of organized home health service organization"
+                "code": "06",
+                "description": "Discharged/transferred to home under care of organized home health service organization"
             },
             {
-                "code": "7",
+                "code": "07",
                 "description": "Left against medical advice or discontinued care"
             },
             {
-                "code": "8",
-                "description": "Discharged\/transferred to home under care of Home IV provider"
+                "code": "08",
+                "description": "Discharged/transferred to home under care of Home IV provider"
             },
             {
-                "code": "9",
+                "code": "09",
                 "description": "Admitted as an inpatient to this hospital"
             },
             {
-                "code": "10 ...19",
+                "code": "10",
+                "description": ""
+            },
+            {
+                "code": "10 \u0085 19",
                 "description": "Discharge to be defined at state level, if necessary"
+            },
+            {
+                "code": "11",
+                "description": ""
+            },
+            {
+                "code": "12",
+                "description": ""
+            },
+            {
+                "code": "13",
+                "description": ""
+            },
+            {
+                "code": "14",
+                "description": ""
+            },
+            {
+                "code": "15",
+                "description": ""
+            },
+            {
+                "code": "16",
+                "description": ""
+            },
+            {
+                "code": "17",
+                "description": ""
+            },
+            {
+                "code": "18",
+                "description": ""
+            },
+            {
+                "code": "19",
+                "description": ""
             },
             {
                 "code": "20",
                 "description": "Expired (i.e. dead)"
             },
             {
+                "code": "21",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
                 "code": "21 ... 29",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "22",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "23",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "24",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "25",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "26",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "27",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "28",
+                "description": "Expired to be defined at state level, if necessary"
+            },
+            {
+                "code": "29",
                 "description": "Expired to be defined at state level, if necessary"
             },
             {
@@ -4343,8 +4435,44 @@
                 "description": "Still patient or expected to return for outpatient services (i.e. still a patient)"
             },
             {
+                "code": "31",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
                 "code": "31 ... 39",
-                "description": "Still patient to be defined at state level, if necessary (i.e. still a patient)"
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "32",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "33",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "34",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "35",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "36",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "37",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "38",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
+            },
+            {
+                "code": "39",
+                "description": "Still patient to be defined at state level, if necessary  (i.e. still a patient)"
             },
             {
                 "code": "40",
@@ -4356,7 +4484,7 @@
             },
             {
                 "code": "42",
-                "description": "Expired (i.e. died) - place unknown"
+                "description": "Expired (i.e. died)  - place unknown"
             }
         ]
     },
@@ -4424,8 +4552,201 @@
     "0119": {
         "id": "0119",
         "name": "Order Control codes",
-        "type": "User",
-        "elements": []
+        "type": "HL7",
+        "elements": [
+            {
+                "code": "AF",
+                "description": "Order/service refill request approval"
+            },
+            {
+                "code": "CA",
+                "description": "Cancel order/service request"
+            },
+            {
+                "code": "CH",
+                "description": "Child order/service"
+            },
+            {
+                "code": "CN",
+                "description": "Combined result"
+            },
+            {
+                "code": "CR",
+                "description": "Canceled as requested"
+            },
+            {
+                "code": "DC",
+                "description": "Discontinue order/service request"
+            },
+            {
+                "code": "DE",
+                "description": "Data errors"
+            },
+            {
+                "code": "DF",
+                "description": "Order/service refill request denied"
+            },
+            {
+                "code": "DR",
+                "description": "Discontinued as requested"
+            },
+            {
+                "code": "FU",
+                "description": "\"Order/service refilled, unsolicited\""
+            },
+            {
+                "code": "HD",
+                "description": "Hold order request"
+            },
+            {
+                "code": "HR",
+                "description": "On hold as requested"
+            },
+            {
+                "code": "LI",
+                "description": "Link order/service to patient care problem or goal"
+            },
+            {
+                "code": "NA",
+                "description": "Number assigned"
+            },
+            {
+                "code": "NW",
+                "description": "New order/service"
+            },
+            {
+                "code": "OC",
+                "description": "Order/service canceled"
+            },
+            {
+                "code": "OD",
+                "description": "Order/service discontinued"
+            },
+            {
+                "code": "OE",
+                "description": "Order/service released"
+            },
+            {
+                "code": "OF",
+                "description": "Order/service refilled as requested"
+            },
+            {
+                "code": "OH",
+                "description": "Order/service held"
+            },
+            {
+                "code": "OK",
+                "description": "Order/service accepted & OK"
+            },
+            {
+                "code": "OR",
+                "description": "Released as requested"
+            },
+            {
+                "code": "PA",
+                "description": "Parent order/service"
+            },
+            {
+                "code": "PR",
+                "description": "Previous Results with new order/service"
+            },
+            {
+                "code": "RE",
+                "description": "Observations/Performed Service to follow"
+            },
+            {
+                "code": "RF",
+                "description": "Refill order/service request"
+            },
+            {
+                "code": "RL",
+                "description": "Release previous hold"
+            },
+            {
+                "code": "RO",
+                "description": "Replacement order"
+            },
+            {
+                "code": "RP",
+                "description": "Order/service replace request"
+            },
+            {
+                "code": "RQ",
+                "description": "Replaced as requested"
+            },
+            {
+                "code": "RR",
+                "description": "Request received"
+            },
+            {
+                "code": "RU",
+                "description": "Replaced unsolicited"
+            },
+            {
+                "code": "SC",
+                "description": "Status changed"
+            },
+            {
+                "code": "SN",
+                "description": "Send order/service number"
+            },
+            {
+                "code": "SR",
+                "description": "Response to send order/service status request"
+            },
+            {
+                "code": "SS",
+                "description": "Send order/service status request"
+            },
+            {
+                "code": "UA",
+                "description": "Unable to accept order/service"
+            },
+            {
+                "code": "UC",
+                "description": "Unable to cancel"
+            },
+            {
+                "code": "UD",
+                "description": "Unable to discontinue"
+            },
+            {
+                "code": "UF",
+                "description": "Unable to refill"
+            },
+            {
+                "code": "UH",
+                "description": "Unable to put on hold"
+            },
+            {
+                "code": "UM",
+                "description": "Unable to replace"
+            },
+            {
+                "code": "UN",
+                "description": "Unlink order/service from patient care problem or goal"
+            },
+            {
+                "code": "UR",
+                "description": "Unable to release"
+            },
+            {
+                "code": "UX",
+                "description": "Unable to change"
+            },
+            {
+                "code": "XO",
+                "description": "Change order/service request"
+            },
+            {
+                "code": "XR",
+                "description": "Changed as requested"
+            },
+            {
+                "code": "XX",
+                "description": "Order/service changed, unsol."
+            }
+        ]
     },
     "0121": {
         "id": "0121",
@@ -4508,7 +4829,7 @@
             },
             {
                 "code": "F",
-                "description": "Final results; results stored and verified. Can only be changed with a corrected result."
+                "description": "Final results; results stored and verified.  Can only be changed with a corrected result."
             },
             {
                 "code": "I",
@@ -4536,7 +4857,7 @@
             },
             {
                 "code": "Y",
-                "description": "No order on record for this test. (Used only on queries)"
+                "description": "No order on record for this test.  (Used only on queries)"
             },
             {
                 "code": "Z",
@@ -4792,6 +5113,12 @@
             }
         ]
     },
+    "0131": {
+        "id": "0131",
+        "name": "Contact Role",
+        "type": "User",
+        "elements": []
+    },
     "0132": {
         "id": "0132",
         "name": "Transaction code",
@@ -4805,7 +5132,7 @@
         "elements": [
             {
                 "code": "AN",
-                "description": "Anesthesiologist\/Anesthetist"
+                "description": "Anesthesiologist/Anesthetist"
             },
             {
                 "code": "AS",
@@ -4821,7 +5148,7 @@
             },
             {
                 "code": "PR",
-                "description": "Procedure MD\/ Surgeon"
+                "description": "Procedure MD/ Surgeon"
             },
             {
                 "code": "PS",
@@ -4862,7 +5189,7 @@
     },
     "0136": {
         "id": "0136",
-        "name": "Yes\/no indicator",
+        "name": "Yes/no indicator",
         "type": "HL7",
         "elements": [
             {
@@ -4961,20 +5288,112 @@
     },
     "0141": {
         "id": "0141",
-        "name": "Military rank\/grade",
+        "name": "Military rank/grade",
         "type": "User",
         "elements": [
             {
+                "code": "E1",
+                "description": "Enlisted"
+            },
+            {
                 "code": "E1 ... E9",
                 "description": "Enlisted"
+            },
+            {
+                "code": "E2",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E3",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E4",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E5",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E6",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E7",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E8",
+                "description": "Enlisted"
+            },
+            {
+                "code": "E9",
+                "description": "Enlisted"
+            },
+            {
+                "code": "O1",
+                "description": "Officers"
             },
             {
                 "code": "O1 ... O10",
                 "description": "Officers"
             },
             {
+                "code": "O10",
+                "description": "Officers"
+            },
+            {
+                "code": "O2",
+                "description": "Officers"
+            },
+            {
+                "code": "O3",
+                "description": "Officers"
+            },
+            {
+                "code": "O4",
+                "description": "Officers"
+            },
+            {
+                "code": "O5",
+                "description": "Officers"
+            },
+            {
+                "code": "O6",
+                "description": "Officers"
+            },
+            {
+                "code": "O7",
+                "description": "Officers"
+            },
+            {
+                "code": "O8",
+                "description": "Officers"
+            },
+            {
+                "code": "O9",
+                "description": "Officers"
+            },
+            {
+                "code": "W1",
+                "description": ""
+            },
+            {
                 "code": "W1 ... W4",
                 "description": "Warrant Officers"
+            },
+            {
+                "code": "W2",
+                "description": ""
+            },
+            {
+                "code": "W3",
+                "description": ""
+            },
+            {
+                "code": "W4",
+                "description": ""
             }
         ]
     },
@@ -5198,31 +5617,31 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Most common semi-private rate"
             },
             {
-                "code": "2",
+                "code": "02",
                 "description": "Hospital has no semi-private rooms"
             },
             {
-                "code": "4",
+                "code": "04",
                 "description": "Inpatient professional component charges which are combined billed"
             },
             {
-                "code": "5",
+                "code": "05",
                 "description": "Professional component included in charges and also billed separate to carrier"
             },
             {
-                "code": "6",
+                "code": "06",
                 "description": "Medicare blood deductible"
             },
             {
-                "code": "8",
+                "code": "08",
                 "description": "Medicare life time reserve amount in the first calendar year"
             },
             {
-                "code": "9",
+                "code": "09",
                 "description": "Medicare co-insurance amount in the first calendar year"
             },
             {
@@ -5235,7 +5654,7 @@
             },
             {
                 "code": "12",
-                "description": "Working aged beneficiary\/spouse with employer group health plan"
+                "description": "Working aged beneficiary/spouse with employer group health plan"
             },
             {
                 "code": "13",
@@ -5243,7 +5662,7 @@
             },
             {
                 "code": "14",
-                "description": "No Fault including auto\/other"
+                "description": "No Fault including auto/other"
             },
             {
                 "code": "15",
@@ -5378,11 +5797,43 @@
                 "description": "EPO-drug"
             },
             {
+                "code": "70",
+                "description": "Payer codes"
+            },
+            {
                 "code": "70 ... 72",
                 "description": "Payer codes"
             },
             {
+                "code": "71",
+                "description": "Payer codes"
+            },
+            {
+                "code": "72",
+                "description": "Payer codes"
+            },
+            {
+                "code": "75",
+                "description": "Payer codes"
+            },
+            {
                 "code": "75 ... 79",
+                "description": "Payer codes"
+            },
+            {
+                "code": "76",
+                "description": "Payer codes"
+            },
+            {
+                "code": "77",
+                "description": "Payer codes"
+            },
+            {
+                "code": "78",
+                "description": "Payer codes"
+            },
+            {
+                "code": "79",
                 "description": "Payer codes"
             },
             {
@@ -5417,7 +5868,7 @@
     },
     "0155": {
         "id": "0155",
-        "name": "Accept\/application acknowledgment conditions",
+        "name": "Accept/application acknowledgment conditions",
         "type": "HL7",
         "elements": [
             {
@@ -5426,7 +5877,7 @@
             },
             {
                 "code": "ER",
-                "description": "Error\/reject conditions only"
+                "description": "Error/reject conditions only"
             },
             {
                 "code": "NE",
@@ -5440,38 +5891,38 @@
     },
     "0156": {
         "id": "0156",
-        "name": "Which date\/time qualifier",
+        "name": "Which date/time qualifier",
         "type": "HL7",
         "elements": [
             {
                 "code": "ANY",
-                "description": "Any date\/time within a range"
+                "description": "Any date/time within a range"
             },
             {
                 "code": "COL",
-                "description": "Collection date\/time, equivalent to film or sample collection date\/time"
+                "description": "Collection date/time, equivalent to film or sample collection date/time"
             },
             {
                 "code": "ORD",
-                "description": "Order date\/time"
+                "description": "Order date/time"
             },
             {
                 "code": "RCT",
-                "description": "Specimen receipt date\/time, receipt of specimen in filling ancillary (Lab)"
+                "description": "Specimen receipt date/time, receipt of specimen in filling ancillary (Lab)"
             },
             {
                 "code": "REP",
-                "description": "Report date\/time, report date\/time at filing ancillary (i.e., Lab)"
+                "description": "Report date/time, report date/time at filing ancillary (i.e., Lab)"
             },
             {
                 "code": "SCHED",
-                "description": "Schedule date\/time"
+                "description": "Schedule date/time"
             }
         ]
     },
     "0157": {
         "id": "0157",
-        "name": "Which date\/time status qualifier",
+        "name": "Which date/time status qualifier",
         "type": "HL7",
         "elements": [
             {
@@ -5496,13 +5947,13 @@
             },
             {
                 "code": "REP",
-                "description": "Report completion date\/time"
+                "description": "Report completion date/time"
             }
         ]
     },
     "0158": {
         "id": "0158",
-        "name": "Date\/time selection qualifier",
+        "name": "Date/time selection qualifier",
         "type": "HL7",
         "elements": [
             {
@@ -5580,7 +6031,7 @@
             },
             {
                 "code": "N",
-                "description": "Substitutions are NOT authorized. (This is the default - null.)"
+                "description": "Substitutions are NOT authorized.  (This is the default - null.)"
             },
             {
                 "code": "T",
@@ -5611,7 +6062,7 @@
             },
             {
                 "code": "ET",
-                "description": "Endotrachial Tube*"
+                "description": "Endotrachial Tube"
             },
             {
                 "code": "GTT",
@@ -5691,7 +6142,7 @@
             },
             {
                 "code": "MTH",
-                "description": "Mouth\/Throat"
+                "description": "Mouth/Throat"
             },
             {
                 "code": "NG",
@@ -5699,7 +6150,7 @@
             },
             {
                 "code": "NP",
-                "description": "Nasal Prongs*"
+                "description": "Nasal Prongs"
             },
             {
                 "code": "NS",
@@ -5719,7 +6170,7 @@
             },
             {
                 "code": "OTH",
-                "description": "Other\/Miscellaneous"
+                "description": "Other/Miscellaneous"
             },
             {
                 "code": "PF",
@@ -5735,7 +6186,7 @@
             },
             {
                 "code": "RM",
-                "description": "Rebreather Mask*"
+                "description": "Rebreather Mask"
             },
             {
                 "code": "SC",
@@ -5763,7 +6214,7 @@
             },
             {
                 "code": "TRA",
-                "description": "Tracheostomy*"
+                "description": "Tracheostomy"
             },
             {
                 "code": "UR",
@@ -6174,7 +6625,7 @@
             },
             {
                 "code": "N",
-                "description": "No substitute was dispensed. This is equivalent to the default (null) value."
+                "description": "No substitute was dispensed.  This is equivalent to the default (null) value."
             },
             {
                 "code": "T",
@@ -6280,12 +6731,12 @@
     },
     "0174": {
         "id": "0174",
-        "name": "Nature of service\/test\/observation",
+        "name": "Nature of service/test/observation",
         "type": "User",
         "elements": [
             {
                 "code": "A",
-                "description": "Atomic service\/test\/observation (test code or treatment code)"
+                "description": "Atomic service/test/observation (test code or treatment code)"
             },
             {
                 "code": "C",
@@ -6293,7 +6744,7 @@
             },
             {
                 "code": "F",
-                "description": "Functional procedure that may consist of one or more interrelated measures (e.g., glucose tolerance test, creatinine clearance), usually done at different times and\/or on different specimens"
+                "description": "Functional procedure that may consist of one or more interrelated measures (e.g., glucose tolerance test, creatinine clearance), usually done at different times and/or on different specimens"
             },
             {
                 "code": "P",
@@ -6301,7 +6752,7 @@
             },
             {
                 "code": "S",
-                "description": "Superset--a set of batteries or procedures ordered under a single code unit but processed as separate batteries (e.g., routines = CBC, UA, electrolytes); This set indicates that the code being described is used to order multiple service\/test\/observation b"
+                "description": "Superset--a set of batteries or procedures ordered under a single code unit but processed as separate batteries (e.g., routines = CBC, UA, electrolytes); This set indicates that the code being described is used to order multiple service/test/observation b"
             }
         ]
     },
@@ -6348,7 +6799,7 @@
             },
             {
                 "code": "OME",
-                "description": "Other basic observation\/service attributes"
+                "description": "Other basic observation/service attributes"
             },
             {
                 "code": "PRA",
@@ -6375,7 +6826,7 @@
             },
             {
                 "code": "ETH",
-                "description": "Alcohol\/drug treatment patient"
+                "description": "Alcohol/drug treatment patient"
             },
             {
                 "code": "HIV",
@@ -6433,15 +6884,15 @@
             },
             {
                 "code": "ER",
-                "description": "Error\/Reject conditions only. Only MFA segments denoting errors must be returned via the application-level acknowledgment for this message"
+                "description": "Error/Reject conditions only.  Only MFA segments denoting errors must be returned via the application-level acknowledgment for this message"
             },
             {
                 "code": "NE",
-                "description": "Never. No application-level response needed"
+                "description": "Never.  No application-level response needed"
             },
             {
                 "code": "SU",
-                "description": "Success. Only MFA segments denoting success must be returned via the application-level acknowledgment for this message"
+                "description": "Success.  Only MFA segments denoting success must be returned via the application-level acknowledgment for this message"
             }
         ]
     },
@@ -6500,7 +6951,7 @@
     },
     "0183": {
         "id": "0183",
-        "name": "Active\/inactive",
+        "name": "Active/inactive",
         "type": "HL7",
         "elements": [
             {
@@ -6588,10 +7039,6 @@
         "type": "User",
         "elements": [
             {
-                "code": "...",
-                "description": "see chapter 3"
-            },
-            {
                 "code": "H",
                 "description": "Hispanic or Latino"
             },
@@ -6612,7 +7059,7 @@
         "elements": [
             {
                 "code": "B",
-                "description": "Firm\/Business"
+                "description": "Firm/Business"
             },
             {
                 "code": "BA",
@@ -6624,7 +7071,7 @@
             },
             {
                 "code": "BR",
-                "description": "Residence at birth (home address at time of birth)"
+                "description": "Residence  at birth (home address at time of birth)"
             },
             {
                 "code": "C",
@@ -6660,7 +7107,7 @@
             },
             {
                 "code": "RH",
-                "description": "Registry home. Refers to the information system, typically managed by a public health agency, that stores patient information such as immunization histories or cancer data, regardless of where the patient obtains services."
+                "description": "Registry home.  Refers to the information system, typically managed by a public health agency, that stores patient information such as immunization histories or cancer data, regardless of where the patient obtains services."
             }
         ]
     },
@@ -6671,11 +7118,11 @@
         "elements": [
             {
                 "code": "AP",
-                "description": "Other application data, typically uninterpreted binary data (HL7 V2.3 and later)"
+                "description": "Other application data, typically uninterpreted binary data  (HL7 V2.3 and later)"
             },
             {
                 "code": "AU",
-                "description": "Audio data (HL7 V2.3 and later)"
+                "description": "Audio data  (HL7 V2.3 and later)"
             },
             {
                 "code": "FT",
@@ -6683,11 +7130,7 @@
             },
             {
                 "code": "IM",
-                "description": "Image data (HL7 V2.3 and later)"
-            },
-            {
-                "code": "multipart",
-                "description": "MIME multipart package"
+                "description": "Image data  (HL7 V2.3 and later)"
             },
             {
                 "code": "NS",
@@ -6708,6 +7151,10 @@
             {
                 "code": "TX",
                 "description": "Machine readable text document (HL7 V2.2 only)"
+            },
+            {
+                "code": "multipart",
+                "description": "MIME multipart package"
             }
         ]
     },
@@ -6769,11 +7216,11 @@
             },
             {
                 "code": "N",
-                "description": "Nickname \/\"Call me\" Name\/Street Name"
+                "description": "Nickname /\"Call me\" Name/Street Name"
             },
             {
                 "code": "P",
-                "description": "Name of Partner\/Spouse (retained for backward compatibility only)"
+                "description": "Name of Partner/Spouse (retained for backward compatibility only)"
             },
             {
                 "code": "R",
@@ -6785,7 +7232,7 @@
             },
             {
                 "code": "T",
-                "description": "Indigenous\/Tribal\/Community Name"
+                "description": "Indigenous/Tribal/Community Name"
             },
             {
                 "code": "U",
@@ -6930,7 +7377,7 @@
             },
             {
                 "code": "GN",
-                "description": "Guarantor external identifier"
+                "description": "Guarantor external  identifier"
             },
             {
                 "code": "HC",
@@ -6982,7 +7429,7 @@
             },
             {
                 "code": "NNxxx",
-                "description": "National Person Identifier where the xxx is the ISO table 3166 3-character (alphabetic) country code"
+                "description": "National Person Identifier where the xxx is the ISO table 3166  3-character (alphabetic) country code"
             },
             {
                 "code": "NPI",
@@ -7034,7 +7481,7 @@
             },
             {
                 "code": "UPIN",
-                "description": "Medicare\/HCFA's Universal Physician Identification numbers"
+                "description": "Medicare/HCFA's Universal Physician Identification numbers"
             },
             {
                 "code": "VN",
@@ -7123,7 +7570,7 @@
         "elements": [
             {
                 "code": "A",
-                "description": "Add\/Insert"
+                "description": "Add/Insert"
             },
             {
                 "code": "D",
@@ -7150,7 +7597,7 @@
             },
             {
                 "code": "Not present",
-                "description": "Not present (the default, meaning current processing)"
+                "description": "Not present (the default, meaning current  processing)"
             },
             {
                 "code": "R",
@@ -7245,40 +7692,40 @@
         "type": "HL7",
         "elements": [
             {
-                "code": "8859\/1",
-                "description": "The printable characters from the ISO 8859\/1 Character set"
+                "code": "8859/1",
+                "description": "The printable characters from the ISO 8859/1 Character set"
             },
             {
-                "code": "8859\/2",
-                "description": "The printable characters from the ISO 8859\/2 Character set"
+                "code": "8859/2",
+                "description": "The printable characters from the ISO 8859/2 Character set"
             },
             {
-                "code": "8859\/3",
-                "description": "The printable characters from the ISO 8859\/3 Character set"
+                "code": "8859/3",
+                "description": "The printable characters from the ISO 8859/3 Character set"
             },
             {
-                "code": "8859\/4",
-                "description": "The printable characters from the ISO 8859\/4 Character set"
+                "code": "8859/4",
+                "description": "The printable characters from the ISO 8859/4 Character set"
             },
             {
-                "code": "8859\/5",
-                "description": "The printable characters from the ISO 8859\/5 Character set"
+                "code": "8859/5",
+                "description": "The printable characters from the ISO 8859/5 Character set"
             },
             {
-                "code": "8859\/6",
-                "description": "The printable characters from the ISO 8859\/6 Character set"
+                "code": "8859/6",
+                "description": "The printable characters from the ISO 8859/6 Character set"
             },
             {
-                "code": "8859\/7",
-                "description": "The printable characters from the ISO 8859\/7 Character set"
+                "code": "8859/7",
+                "description": "The printable characters from the ISO 8859/7 Character set"
             },
             {
-                "code": "8859\/8",
-                "description": "The printable characters from the ISO 8859\/8 Character set"
+                "code": "8859/8",
+                "description": "The printable characters from the ISO 8859/8 Character set"
             },
             {
-                "code": "8859\/9",
-                "description": "The printable characters from the ISO 8859\/9 Character set"
+                "code": "8859/9",
+                "description": "The printable characters from the ISO 8859/9 Character set"
             },
             {
                 "code": "ASCII",
@@ -7286,7 +7733,7 @@
             },
             {
                 "code": "ISO IR14",
-                "description": "Code for Information Exchange (one byte)(JIS X 0201-1976). Note that the code contains a space, i.e. \"ISO IR14\"."
+                "description": "Code for Information Exchange (one byte)(JIS X 0201-1976).  Note that the code contains a space, i.e. \"ISO IR14\"."
             },
             {
                 "code": "ISO IR159",
@@ -7298,7 +7745,7 @@
             },
             {
                 "code": "UNICODE",
-                "description": "The world wide character standard from ISO\/IEC 10646-1-19931"
+                "description": "The world wide character standard from ISO/IEC 10646-1-19931"
             }
         ]
     },
@@ -7323,7 +7770,7 @@
             },
             {
                 "code": "P",
-                "description": "Marked for purge. User is no longer able to update the visit."
+                "description": "Marked for purge.  User is no longer able to update the visit."
             }
         ]
     },
@@ -7771,22 +8218,22 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Medicare claim status"
             },
             {
-                "code": "2",
+                "code": "02",
                 "description": "Medicaid claim status"
             },
             {
-                "code": "3",
-                "description": "Name\/address change"
+                "code": "03",
+                "description": "Name/address change"
             }
         ]
     },
     "0233": {
         "id": "0233",
-        "name": "Non-concur code\/description",
+        "name": "Non-concur code/description",
         "type": "User",
         "elements": []
     },
@@ -7848,7 +8295,7 @@
             },
             {
                 "code": "D",
-                "description": "Database\/registry\/poison control center"
+                "description": "Database/registry/poison control center"
             },
             {
                 "code": "E",
@@ -7864,7 +8311,7 @@
             },
             {
                 "code": "M",
-                "description": "Manufacturer\/marketing authority holder"
+                "description": "Manufacturer/marketing authority holder"
             },
             {
                 "code": "N",
@@ -7895,7 +8342,7 @@
             },
             {
                 "code": "L",
-                "description": "Local facility\/user facility"
+                "description": "Local facility/user facility"
             },
             {
                 "code": "M",
@@ -7991,7 +8438,7 @@
         "elements": [
             {
                 "code": "C",
-                "description": "Congenital anomaly\/birth defect"
+                "description": "Congenital anomaly/birth defect"
             },
             {
                 "code": "D",
@@ -8023,7 +8470,7 @@
             },
             {
                 "code": "R",
-                "description": "Required intervention to prevent permanent impairment\/damage"
+                "description": "Required intervention to prevent permanent impairment/damage"
             }
         ]
     },
@@ -8042,7 +8489,7 @@
             },
             {
                 "code": "N",
-                "description": "Not recovering\/unchanged"
+                "description": "Not recovering/unchanged"
             },
             {
                 "code": "R",
@@ -8069,7 +8516,7 @@
         "elements": [
             {
                 "code": "C",
-                "description": "Health care consumer\/patient"
+                "description": "Health care consumer/patient"
             },
             {
                 "code": "H",
@@ -8077,7 +8524,7 @@
             },
             {
                 "code": "L",
-                "description": "Lawyer\/attorney"
+                "description": "Lawyer/attorney"
             },
             {
                 "code": "M",
@@ -8173,7 +8620,7 @@
             },
             {
                 "code": "R",
-                "description": "Product under recall\/corrective action"
+                "description": "Product under recall/corrective action"
             },
             {
                 "code": "U",
@@ -8204,7 +8651,7 @@
             },
             {
                 "code": "N",
-                "description": "A product from a controlled\/non-related inventory was evaluated"
+                "description": "A product from a controlled/non-related inventory was evaluated"
             },
             {
                 "code": "R",
@@ -8501,7 +8948,7 @@
             },
             {
                 "code": "IMP",
-                "description": "Impression\/ interpretation of study"
+                "description": "Impression/ interpretation of study"
             },
             {
                 "code": "KINV",
@@ -8597,7 +9044,7 @@
             },
             {
                 "code": "PRID",
-                "description": "Presence\/Identity\/Existence"
+                "description": "Presence/Identity/Existence"
             },
             {
                 "code": "PWR",
@@ -8776,7 +9223,7 @@
         "elements": [
             {
                 "code": "*",
-                "description": "(asterisk) Life of the \"unit.\" Used for blood products."
+                "description": "(asterisk) Life of the \"unit.\"  Used for blood products."
             },
             {
                 "code": "12H",
@@ -8796,7 +9243,7 @@
             },
             {
                 "code": "2.5H",
-                "description": "21\/2 hours"
+                "description": "2 1/2 hours"
             },
             {
                 "code": "24H",
@@ -8876,7 +9323,7 @@
             },
             {
                 "code": "PT",
-                "description": "To identify measures at a point in time. This is a synonym for \"spot\" or \"random\" as applied to urine measurements."
+                "description": "To identify measures at a point in time.  This is a synonym for \"spot\" or \"random\" as applied to urine measurements."
             }
         ]
     },
@@ -8919,7 +9366,7 @@
             },
             {
                 "code": "2.5H",
-                "description": "2 1\/2 hours post challenge"
+                "description": "2 1/2 hours post challenge"
             },
             {
                 "code": "20M",
@@ -8999,7 +9446,7 @@
             },
             {
                 "code": "5H",
-                "description": "5 hours post challenge"
+                "description": "5  hours post challenge"
             },
             {
                 "code": "5M",
@@ -9385,7 +9832,7 @@
             },
             {
                 "code": "CAR",
-                "description": "Coronary\/cardiac care"
+                "description": "Coronary/cardiac care"
             },
             {
                 "code": "CCR",
@@ -9441,11 +9888,11 @@
             },
             {
                 "code": "PHY",
-                "description": "General\/family practice"
+                "description": "General/family practice"
             },
             {
                 "code": "PIN",
-                "description": "Pediatric\/neonatal intensive care"
+                "description": "Pediatric/neonatal intensive care"
             },
             {
                 "code": "PPS",
@@ -9742,15 +10189,15 @@
         "type": "User",
         "elements": [
             {
-                "code": "COMPLETE",
+                "code": "Complete",
                 "description": "A request to add a completed appointment, used to maintain records of completed appointments that did not appear in the schedule (e.g., STAT, walk-in, etc.)"
             },
             {
-                "code": "NORMAL",
+                "code": "Normal",
                 "description": "Routine schedule request type - default if not valued"
             },
             {
-                "code": "TENTATIVE",
+                "code": "Tentative",
                 "description": "A request for a tentative (e.g., \"penciled in\") appointment"
             }
         ]
@@ -9761,43 +10208,43 @@
         "type": "User",
         "elements": [
             {
-                "code": "BLOCKED",
+                "code": "Blocked",
                 "description": "The indicated time slot(s) is(are) blocked"
             },
             {
-                "code": "BOOKED",
+                "code": "Booked",
                 "description": "The indicated appointment is booked"
             },
             {
-                "code": "CANCELLED",
+                "code": "Cancelled",
                 "description": "The indicated appointment was stopped from occurring (canceled prior to starting)"
             },
             {
-                "code": "COMPLETE",
+                "code": "Complete",
                 "description": "The indicated appointment has completed normally (was not discontinued, canceled, or deleted)"
             },
             {
-                "code": "DC",
-                "description": "The indicated appointment was discontinued (DC'ed while in progress, discontinued parent appointment, or discontinued child appointment)"
-            },
-            {
-                "code": "DELETED",
+                "code": "Deleted",
                 "description": "The indicated appointment was deleted from the filler application"
             },
             {
-                "code": "OVERBOOK",
+                "code": "Discontinued",
+                "description": "The indicated appointment was discontinued (DC'ed while in progress, discontinued parent appointment, or discontinued child appointment)"
+            },
+            {
+                "code": "Overbook",
                 "description": "The appointment has been confirmed; however it is confirmed in an overbooked state"
             },
             {
-                "code": "PENDING",
+                "code": "Pending",
                 "description": "Appointment has not yet been confirmed"
             },
             {
-                "code": "STARTED",
+                "code": "Started",
                 "description": "The indicated appointment has begun and is currently in progress"
             },
             {
-                "code": "WAITLIST",
+                "code": "Waitlist",
                 "description": "Appointment has been placed on a waiting list for a particular slot, or set of slots"
             }
         ]
@@ -9975,7 +10422,7 @@
     },
     "0287": {
         "id": "0287",
-        "name": "Problem\/goal action code",
+        "name": "Problem/goal action code",
         "type": "HL7",
         "elements": [
             {
@@ -9996,7 +10443,7 @@
             },
             {
                 "code": "UC",
-                "description": "UNCHANGED *"
+                "description": "UNCHANGED"
             },
             {
                 "code": "UN",
@@ -10016,7 +10463,7 @@
     },
     "0289": {
         "id": "0289",
-        "name": "County\/parish",
+        "name": "County/parish",
         "type": "User",
         "elements": []
     },
@@ -10219,39 +10666,39 @@
             },
             {
                 "code": "51",
-                "description": "51 z"
+                "description": "z"
             },
             {
                 "code": "52",
-                "description": "52 0"
+                "description": "0"
             },
             {
                 "code": "53",
-                "description": "53 1"
+                "description": "1"
             },
             {
                 "code": "54",
-                "description": "54 2"
+                "description": "2"
             },
             {
                 "code": "55",
-                "description": "55 3"
+                "description": "3"
             },
             {
                 "code": "56",
-                "description": "56 4"
+                "description": "4"
             },
             {
                 "code": "57",
-                "description": "57 5"
+                "description": "5"
             },
             {
                 "code": "58",
-                "description": "58 6"
+                "description": "6"
             },
             {
                 "code": "59",
-                "description": "59 7"
+                "description": "7"
             },
             {
                 "code": "6",
@@ -10259,19 +10706,19 @@
             },
             {
                 "code": "60",
-                "description": "60 8"
+                "description": "8"
             },
             {
                 "code": "61",
-                "description": "61 9"
+                "description": "9"
             },
             {
                 "code": "62",
-                "description": "62 +"
+                "description": "+"
             },
             {
                 "code": "63",
-                "description": "63 \/"
+                "description": "/"
             },
             {
                 "code": "7",
@@ -10289,7 +10736,7 @@
     },
     "0291": {
         "id": "0291",
-        "name": "Subtype of referenced data",
+        "name": "Subtype of Referenced Data",
         "type": "HL7",
         "elements": [
             {
@@ -10345,54 +10792,54 @@
                 "description": "TIFF image data"
             },
             {
-                "code": "x-hl7-cda-level-one",
-                "description": "HL7 Clinical Document Architecture Level One document"
-            },
-            {
                 "code": "XML",
                 "description": "Extensible Markup Language (HL7 V2.3.1 and later)"
+            },
+            {
+                "code": "x-hl7-cda-level-one",
+                "description": "HL7 Clinical Document Architecture Level One document"
             }
         ]
     },
     "0292": {
         "id": "0292",
-        "name": "Vaccines administered (code = CVX)(parenteral, unless oral is noted)",
+        "name": "Vaccines administered",
         "type": "HL7",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "diphtheria, tetanus toxoids and pertussis vaccine"
             },
             {
-                "code": "2",
+                "code": "02",
                 "description": "poliovirus vaccine, live, oral"
             },
             {
-                "code": "3",
+                "code": "03",
                 "description": "measles, mumps and rubella virus vaccine"
             },
             {
-                "code": "4",
+                "code": "04",
                 "description": "measles and rubella virus vaccine"
             },
             {
-                "code": "5",
+                "code": "05",
                 "description": "measles virus vaccine"
             },
             {
-                "code": "6",
+                "code": "06",
                 "description": "rubella virus vaccine"
             },
             {
-                "code": "7",
+                "code": "07",
                 "description": "mumps virus vaccine"
             },
             {
-                "code": "8",
-                "description": "hepatitis B vaccine, pediatric or pediatric\/adolescent dosage"
+                "code": "08",
+                "description": "hepatitis B vaccine, pediatric or pediatric/adolescent dosage"
             },
             {
-                "code": "9",
+                "code": "09",
                 "description": "tetanus and diphtheria toxoids, adsorbed for adult use"
             },
             {
@@ -10497,7 +10944,7 @@
             },
             {
                 "code": "33",
-                "description": "pneumococcal polysaccharide vaccine"
+                "description": "pneumococcal  polysaccharide vaccine"
             },
             {
                 "code": "34",
@@ -10533,7 +10980,7 @@
             },
             {
                 "code": "42",
-                "description": "hepatitis B vaccine, adolescent\/high risk infant dosage"
+                "description": "hepatitis B vaccine, adolescent/high risk infant dosage"
             },
             {
                 "code": "43",
@@ -10697,11 +11144,11 @@
             },
             {
                 "code": "83",
-                "description": "hepatitis A vaccine, pediatric\/adolescent dosage, 2 dose schedule"
+                "description": "hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule"
             },
             {
                 "code": "84",
-                "description": "hepatitis A vaccine, pediatric\/adolescent dosage, 3 dose schedule"
+                "description": "hepatitis A vaccine, pediatric/adolescent dosage, 3 dose schedule"
             },
             {
                 "code": "85",
@@ -10782,35 +11229,35 @@
         "elements": [
             {
                 "code": "Fri",
-                "description": "An indicator that Friday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day; NO = Day is not preferred"
+                "description": "An indicator that Friday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day; NO = Day is not preferred"
             },
             {
                 "code": "Mon",
-                "description": "An indicator that Monday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day; NO = Day is not preferred"
+                "description": "An indicator that Monday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day; NO = Day is not preferred"
             },
             {
                 "code": "Prefend",
-                "description": "The preferred end time for the appointment request, service or resource. Any legal time specification in the format HHMM, using 24-hour clock notation"
+                "description": "The preferred end time for the appointment request, service or resource.  Any legal time specification in the format HHMM, using 24-hour clock notation"
             },
             {
                 "code": "Prefstart",
-                "description": "The preferred start time for the appointment request, service or resource. Any legal time specification in the format HHMM, using 24-hour clock notation"
+                "description": "The preferred start time for the appointment request, service or resource.   Any legal time specification in the format HHMM, using 24-hour clock notation"
             },
             {
                 "code": "Sat",
-                "description": "An indicator that Saturday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day; NO = Day is not preferred"
+                "description": "An indicator that Saturday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day; NO = Day is not preferred"
             },
             {
                 "code": "Sun",
-                "description": "An indicator that Sunday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day; NO = Day is not preferred"
+                "description": "An indicator that Sunday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day; NO = Day is not preferred"
             },
             {
                 "code": "Thu",
-                "description": "An indicator that Thursday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day; NO = Day is not preferred"
+                "description": "An indicator that Thursday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day; NO = Day is not preferred"
             },
             {
                 "code": "Tue",
-                "description": "An indicator that Tuesday is or is not preferred for the day on which the appointment will occur. OK = Preferred appointment day; NO = Day is not preferred"
+                "description": "An indicator that Tuesday is or is not preferred for the day on which the appointment will occur.  OK = Preferred appointment day; NO = Day is not preferred"
             },
             {
                 "code": "Wed",
@@ -10838,16 +11285,16 @@
     },
     "0298": {
         "id": "0298",
-        "name": "CP range type",
+        "name": "CP Range Type",
         "type": "HL7",
         "elements": [
             {
                 "code": "F",
-                "description": "Flat-rate. Apply the entire price to this interval, do not pro-rate the price if the full interval has not occurred\/been consumed"
+                "description": "Flat-rate.  Apply the entire price to this interval, do not pro-rate the price if the full interval has not occurred/been consumed"
             },
             {
                 "code": "P",
-                "description": "Pro-rate. Apply this price to this interval, pro-rated by whatever portion of the interval has occurred\/been consumed"
+                "description": "Pro-rate.  Apply this price to this interval, pro-rated by whatever portion of the interval has occurred/been consumed"
             }
         ]
     },
@@ -10862,7 +11309,7 @@
             },
             {
                 "code": "Base64",
-                "description": "Encoding as defined by MIME (Multipurpose Internet Mail Extensions) standard RFC 1521. Four consecutive ASCII characters represent three consecutive octets of binary data. Base64 utilizes a 65-character subset of US-ASCII, consisting of both the upper a"
+                "description": "Encoding as defined by MIME (Multipurpose Internet Mail Extensions) standard RFC 1521.  Four consecutive ASCII characters represent three consecutive octets of binary data.  Base64 utilizes a 65-character subset of US-ASCII, consisting of both the upper a"
             },
             {
                 "code": "Hex",
@@ -10902,12 +11349,24 @@
                 "description": "An International Standards Organization Object Identifier"
             },
             {
+                "code": "L",
+                "description": "These are reserved for locally defined coding schemes."
+            },
+            {
                 "code": "L,M,N",
                 "description": "These are reserved for locally defined coding schemes."
             },
             {
+                "code": "M",
+                "description": "These are reserved for locally defined coding schemes."
+            },
+            {
+                "code": "N",
+                "description": "These are reserved for locally defined coding schemes."
+            },
+            {
                 "code": "Random",
-                "description": "Usually a base64 encoded string of random bits. The uniqueness depends on the length of the bits. Mail systems often generate ASCII string \"unique names,\" from a combination of random bits and system names. Obviously, such identifiers will not be con"
+                "description": "Usually a base64 encoded string of random bits.   The uniqueness depends on the length of the bits.  Mail systems often generate ASCII string  \"unique names,\" from a combination of random bits and system names.  Obviously, such identifiers will not be con"
             },
             {
                 "code": "UUID",
@@ -11005,11 +11464,11 @@
             },
             {
                 "code": "H",
-                "description": "Hospital\/institutional"
+                "description": "Hospital/institutional"
             },
             {
                 "code": "P",
-                "description": "Physician\/professional"
+                "description": "Physician/professional"
             }
         ]
     },
@@ -11202,7 +11661,7 @@
         "elements": [
             {
                 "code": "A",
-                "description": "Add\/Insert"
+                "description": "Add/Insert"
             },
             {
                 "code": "D",
@@ -11280,11 +11739,11 @@
             },
             {
                 "code": "DTY",
-                "description": "Nearest dietary location"
+                "description": "Nearest  dietary location"
             },
             {
                 "code": "LAB",
-                "description": "Nearest lab"
+                "description": "Nearest  lab"
             },
             {
                 "code": "LB2",
@@ -11296,7 +11755,7 @@
             },
             {
                 "code": "RX",
-                "description": "Nearest pharmacy"
+                "description": "Nearest  pharmacy"
             },
             {
                 "code": "RX2",
@@ -11321,7 +11780,7 @@
     },
     "0327": {
         "id": "0327",
-        "name": "Job code\/class",
+        "name": "Job code/class",
         "type": "User",
         "elements": []
     },
@@ -11417,7 +11876,7 @@
     },
     "0333": {
         "id": "0333",
-        "name": "Driver's license issuing authority",
+        "name": "Driver\u0092s license issuing authority",
         "type": "User",
         "elements": []
     },
@@ -11475,11 +11934,11 @@
             },
             {
                 "code": "Meal Related Timings",
-                "description": "<timing>C (\"cum\")<meal>"
+                "description": "C (\"cum\")"
             },
             {
                 "code": "Once",
-                "description": "one time only. This is also the default when this component is null."
+                "description": "one time only.  This is also the default when this component is null."
             },
             {
                 "code": "P",
@@ -11495,31 +11954,31 @@
             },
             {
                 "code": "Q<integer>D",
-                "description": "every <integer> days"
+                "description": "every  days"
             },
             {
                 "code": "Q<integer>H",
-                "description": "every <integer> hours"
+                "description": "every  hours"
             },
             {
                 "code": "Q<integer>J<day#>",
-                "description": "repeats on a particular day of the week, from the French jour (day). If <integer> is missing, the repeat rate is assumed to be 1. Day numbers are counted from 1=Monday to 7=Sunday. So Q2J2 means every second Tuesday; Q1J6 means every Saturday."
+                "description": "repeats on a particular day of the week, from the French jour (day).  If  is missing, the repeat rate is assumed to be 1.  Day numbers are counted from 1=Monday to 7=Sunday.  So Q2J2 means every second Tuesday; Q1J6 means every Saturday."
             },
             {
                 "code": "Q<integer>L",
-                "description": "every <integer> months (Lunar cycle)"
+                "description": "every  months (Lunar cycle)"
             },
             {
                 "code": "Q<integer>M",
-                "description": "every <integer> minutes"
+                "description": "every  minutes"
             },
             {
                 "code": "Q<integer>S",
-                "description": "every <integer> seconds"
+                "description": "every  seconds"
             },
             {
                 "code": "Q<integer>W",
-                "description": "every <integer> weeks"
+                "description": "every  weeks"
             },
             {
                 "code": "QAM",
@@ -11551,7 +12010,7 @@
             },
             {
                 "code": "U <spec>",
-                "description": "for future use, where <spec> is an interval specification as defined by the UNIX cron specification."
+                "description": "for future use, where  is an interval specification as defined by the UNIX cron specification."
             },
             {
                 "code": "V",
@@ -11559,7 +12018,7 @@
             },
             {
                 "code": "xID",
-                "description": "\"X\" times per day at institution-specified times, where X is a numeral 5 or greater. E.g., 5ID=five times per day; 8ID=8 times per day"
+                "description": "\"X\" times per day at institution-specified times, where X is a numeral 5 or greater.  E.g., 5ID=five times per day; 8ID=8 times per day"
             }
         ]
     },
@@ -11705,39 +12164,39 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Patient is insured"
             },
             {
-                "code": "2",
+                "code": "02",
                 "description": "Spouse"
             },
             {
-                "code": "3",
-                "description": "Natural child\/insured financial responsibility"
+                "code": "03",
+                "description": "Natural child/insured financial responsibility"
             },
             {
-                "code": "4",
-                "description": "Natural child\/Insured does not have financial responsibility"
+                "code": "04",
+                "description": "Natural child/Insured does not have financial responsibility"
             },
             {
-                "code": "5",
+                "code": "05",
                 "description": "Step child"
             },
             {
-                "code": "6",
+                "code": "06",
                 "description": "Foster child"
             },
             {
-                "code": "7",
+                "code": "07",
                 "description": "Ward of the court"
             },
             {
-                "code": "8",
+                "code": "08",
                 "description": "Employee"
             },
             {
-                "code": "9",
+                "code": "09",
                 "description": "Unknown"
             },
             {
@@ -11758,7 +12217,7 @@
             },
             {
                 "code": "14",
-                "description": "Niece\/nephew"
+                "description": "Niece/nephew"
             },
             {
                 "code": "15",
@@ -11806,47 +12265,47 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "EPSDT-CHAP"
             },
             {
-                "code": "2",
+                "code": "02",
                 "description": "Physically handicapped children's program"
             },
             {
-                "code": "3",
+                "code": "03",
                 "description": "Special federal funding"
             },
             {
-                "code": "4",
+                "code": "04",
                 "description": "Family planning"
             },
             {
-                "code": "5",
+                "code": "05",
                 "description": "Disability"
             },
             {
-                "code": "6",
-                "description": "PPV\/Medicare 100% payment"
+                "code": "06",
+                "description": "PPV/Medicare 100% payment"
             },
             {
-                "code": "7",
+                "code": "07",
                 "description": "Induced abortion-danger to life"
             },
             {
-                "code": "8",
-                "description": "Induced abortion victim rape\/incest"
+                "code": "08",
+                "description": "Induced abortion victim rape/incest"
             }
         ]
     },
     "0349": {
         "id": "0349",
-        "name": "PSRO\/UR approval indicator",
+        "name": "PSRO/UR approval indicator",
         "type": "User",
         "elements": [
             {
                 "code": "1",
-                "description": "Approved by the PSRO\/UR as billed"
+                "description": "Approved by the PSRO/UR as billed"
             },
             {
                 "code": "2",
@@ -11872,31 +12331,31 @@
         "type": "User",
         "elements": [
             {
-                "code": "1",
+                "code": "01",
                 "description": "Auto accident"
             },
             {
-                "code": "2",
-                "description": "No fault insurance involved-including auto accident\/other"
+                "code": "02",
+                "description": "No fault insurance involved-including auto accident/other"
             },
             {
-                "code": "3",
-                "description": "Accident\/tort liability"
+                "code": "03",
+                "description": "Accident/tort liability"
             },
             {
-                "code": "4",
-                "description": "Accident\/employment related"
+                "code": "04",
+                "description": "Accident/employment related"
             },
             {
-                "code": "5",
+                "code": "05",
                 "description": "Other accident"
             },
             {
-                "code": "6",
+                "code": "06",
                 "description": "Crime victim"
             },
             {
-                "code": "9",
+                "code": "09",
                 "description": "Start of infertility treatment cycle"
             },
             {
@@ -11905,7 +12364,7 @@
             },
             {
                 "code": "11",
-                "description": "Onset of symptoms\/illness"
+                "description": "Onset of symptoms/illness"
             },
             {
                 "code": "12",
@@ -11917,7 +12376,7 @@
             },
             {
                 "code": "18",
-                "description": "Date of retirement patient\/beneficiary"
+                "description": "Date of retirement patient/beneficiary"
             },
             {
                 "code": "19",
@@ -12020,7 +12479,19 @@
                 "description": "Date treatment started for cardiac rehab."
             },
             {
+                "code": "47",
+                "description": "Payer codes"
+            },
+            {
                 "code": "47 ... 49",
+                "description": "Payer codes"
+            },
+            {
+                "code": "48",
+                "description": "Payer codes"
+            },
+            {
+                "code": "49",
                 "description": "Payer codes"
             },
             {
@@ -12032,7 +12503,127 @@
                 "description": "Date treatment started for psychiatric care"
             },
             {
+                "code": "70",
+                "description": "Occurrence span codes and dates"
+            },
+            {
                 "code": "70 ... 99",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "71",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "72",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "73",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "74",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "75",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "76",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "77",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "78",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "79",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "80",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "81",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "82",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "83",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "84",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "85",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "86",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "87",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "88",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "89",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "90",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "91",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "92",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "93",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "94",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "95",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "96",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "97",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "98",
+                "description": "Occurrence span codes and dates"
+            },
+            {
+                "code": "99",
                 "description": "Occurrence span codes and dates"
             },
             {
@@ -12064,7 +12655,7 @@
             },
             {
                 "code": "72",
-                "description": "First\/last visit"
+                "description": "First/last visit"
             },
             {
                 "code": "73",
@@ -12096,7 +12687,7 @@
             },
             {
                 "code": "M0",
-                "description": "PSRO\/UR approved stay dates"
+                "description": "PSRO/UR approved stay dates"
             }
         ]
     },
@@ -12186,7 +12777,7 @@
             },
             {
                 "code": "ADT_A21",
-                "description": "A21"
+                "description": "A21, A22, A23, A25, A26, A27, A29, A32, A33"
             },
             {
                 "code": "ADT_A24",
@@ -12514,11 +13105,11 @@
             },
             {
                 "code": "PPG_PCG",
-                "description": "PCC, PCG, PCH, PCJ"
+                "description": "PCG, PCH, PCJ"
             },
             {
                 "code": "PPP_PCB",
-                "description": "PCB, PCD"
+                "description": "PCB, PCC, PCD"
             },
             {
                 "code": "PPR_PC1",
@@ -12625,20 +13216,12 @@
                 "description": "O13"
             },
             {
+                "code": "RDY_K11",
+                "description": "K11"
+            },
+            {
                 "code": "RDY_K15",
                 "description": "K15"
-            },
-            {
-                "code": "RRA_O02",
-                "description": "O02 (backwards compatibility)"
-            },
-            {
-                "code": "RRE_O02",
-                "description": "O02 (backwards compatibility)"
-            },
-            {
-                "code": "RTB_K13",
-                "description": "K13"
             },
             {
                 "code": "REF_I12",
@@ -12721,10 +13304,6 @@
                 "description": "I12, I13, I14, I15"
             },
             {
-                "code": "RSP_K11",
-                "description": "K11"
-            },
-            {
                 "code": "RSP_K21",
                 "description": "K21"
             },
@@ -12743,6 +13322,10 @@
             {
                 "code": "RSP_K25",
                 "description": "K25"
+            },
+            {
+                "code": "RTB_K13",
+                "description": "K13"
             },
             {
                 "code": "SIU_S12",
@@ -12811,14 +13394,6 @@
             {
                 "code": "VXX_V02",
                 "description": "V02"
-            },
-            {
-                "code": "ORU_W01",
-                "description": "W01"
-            },
-            {
-                "code": "QRF_W02",
-                "description": "W02"
             }
         ]
     },
@@ -12843,16 +13418,16 @@
         "type": "HL7",
         "elements": [
             {
-                "code": "null",
+                "code": "2.3",
+                "description": "The character set switching mode specified in HL7 2.3, sections 2.8.28.6.1, and 2.9.2.  Note that the escape sequences used in this mode do not use the ASCII \"esc\" character. They are \"HL7 escape sequences\" as defined in HL7 2.3, sec.  2.9 as defined in I"
+            },
+            {
+                "code": "<null>",
                 "description": "This is the default, indicating that there is no character set switching occurring in this message."
             },
             {
-                "code": "2.3",
-                "description": "The character set switching mode specified in HL7 2.3, sections 2.8.28.6.1, and 2.9.2. Note that the escape sequences used in this mode do not use the ASCII \"esc\" character. They are \"HL7 escape sequences\" as defined in HL7 2.3, sec. 2.9 as defined in I"
-            },
-            {
                 "code": "ISO 2022-1994",
-                "description": "This standard is titled \"Information Technology - Character Code Structure and Extension Technique\". This standard specifies an escape sequence from basic one byte character set to specified other character set, and vice versa. The escape sequence explic"
+                "description": "This standard is titled \"Information Technology - Character Code Structure and Extension Technique\". This standard specifies an escape sequence from basic one byte character set to specified other character set, and vice versa.  The escape sequence explic"
             }
         ]
     },
@@ -12912,18 +13487,6 @@
             {
                 "code": "207",
                 "description": "Application internal error"
-            },
-            {
-                "code": "Errors",
-                "description": ""
-            },
-            {
-                "code": "Rejection",
-                "description": ""
-            },
-            {
-                "code": "Success",
-                "description": ""
             }
         ]
     },
@@ -13094,10 +13657,6 @@
                 "description": "Non-Graduate"
             },
             {
-                "code": "PharmD",
-                "description": "Doctor of Pharmacy"
-            },
-            {
                 "code": "PHD",
                 "description": "Doctor of Philosophy"
             },
@@ -13108,6 +13667,10 @@
             {
                 "code": "PHS",
                 "description": "Doctor of Science"
+            },
+            {
+                "code": "PharmD",
+                "description": "Doctor of Pharmacy"
             },
             {
                 "code": "SEC",
@@ -13121,13 +13684,13 @@
     },
     "0361": {
         "id": "0361",
-        "name": "Sending\/receiving application",
+        "name": "Sending/receiving application",
         "type": "User",
         "elements": []
     },
     "0362": {
         "id": "0362",
-        "name": "Sending\/receiving facility",
+        "name": "Sending/receiving facility",
         "type": "User",
         "elements": []
     },
@@ -13233,7 +13796,7 @@
             },
             {
                 "code": "DR",
-                "description": "Duplicate\/Interaction Reason"
+                "description": "Duplicate/Interaction Reason"
             },
             {
                 "code": "GI",
@@ -13298,7 +13861,7 @@
     },
     "0366": {
         "id": "0366",
-        "name": "Local\/remote control state",
+        "name": "Local/remote control state",
         "type": "HL7",
         "elements": [
             {
@@ -13369,7 +13932,7 @@
             },
             {
                 "code": "IN",
-                "description": "Initialize\/Initiate"
+                "description": "Initialize/Initiate"
             },
             {
                 "code": "LC",
@@ -13494,7 +14057,7 @@
             },
             {
                 "code": "C32",
-                "description": "3.2% Citrate"
+                "description": "3.2%  Citrate"
             },
             {
                 "code": "C38",
@@ -13502,11 +14065,11 @@
             },
             {
                 "code": "EDTK",
-                "description": "Potassium\/K EDTA"
+                "description": "Potassium/K EDTA"
             },
             {
                 "code": "EDTN",
-                "description": "Sodium\/Na EDTA"
+                "description": "Sodium/Na EDTA"
             },
             {
                 "code": "HCL6",
@@ -13514,11 +14077,11 @@
             },
             {
                 "code": "HEPL",
-                "description": "Lithium\/Li Heparin"
+                "description": "Lithium/Li  Heparin"
             },
             {
                 "code": "HEPN",
-                "description": "Sodium\/Na Heparin"
+                "description": "Sodium/Na  Heparin"
             }
         ]
     },
@@ -13668,7 +14231,7 @@
             },
             {
                 "code": "ATM",
-                "description": "Opened container, atmosphere\/duration unspecified"
+                "description": "Opened container, atmosphere/duration unspecified"
             }
         ]
     },
@@ -13891,10 +14454,6 @@
         "type": "HL7",
         "elements": [
             {
-                "code": "etc",
-                "description": ""
-            },
-            {
                 "code": "OBRG",
                 "description": "OBR group"
             },
@@ -13921,6 +14480,10 @@
             {
                 "code": "RXOG",
                 "description": "RXO group"
+            },
+            {
+                "code": "etc",
+                "description": ""
             }
         ]
     },
@@ -14015,7 +14578,7 @@
             },
             {
                 "code": "AS4",
-                "description": "ASTM E1238\/ E1467 Universal"
+                "description": "ASTM E1238/ E1467 Universal"
             },
             {
                 "code": "AS4E",
@@ -14047,7 +14610,7 @@
             },
             {
                 "code": "CDCM",
-                "description": "CDC Methods\/Instruments Codes"
+                "description": "CDC Methods/Instruments Codes"
             },
             {
                 "code": "CDS",
@@ -14091,7 +14654,7 @@
             },
             {
                 "code": "E5",
-                "description": "Euclides quantity codes"
+                "description": "Euclides  quantity codes"
             },
             {
                 "code": "E6",
@@ -14147,7 +14710,7 @@
             },
             {
                 "code": "I10P",
-                "description": "ICD-10 Procedure Codes"
+                "description": "ICD-10  Procedure Codes"
             },
             {
                 "code": "I9",
@@ -14183,11 +14746,11 @@
             },
             {
                 "code": "IUPC",
-                "description": "IUPAC\/IFCC Component Codes"
+                "description": "IUPAC/IFCC Component Codes"
             },
             {
                 "code": "IUPP",
-                "description": "IUPAC\/IFCC Property Codes"
+                "description": "IUPAC/IFCC Property Codes"
             },
             {
                 "code": "JC8",
@@ -15260,7 +15823,7 @@
             },
             {
                 "code": "VAT",
-                "description": "HOLY SEE (VATICAN CITY STATE)"
+                "description": "HOLY SEE  (VATICAN CITY STATE)"
             },
             {
                 "code": "VCT",
@@ -15420,7 +15983,7 @@
     },
     "0406": {
         "id": "0406",
-        "name": "Organization unit type",
+        "name": "Participant Organization Unit Type",
         "type": "User",
         "elements": [
             {
@@ -15498,8 +16061,8 @@
                 "description": "Fifth"
             },
             {
-                "code": "A\/P",
-                "description": "Anterior\/Posterior"
+                "code": "A/P",
+                "description": "Anterior/Posterior"
             },
             {
                 "code": "ANT",
@@ -15732,8 +16295,12 @@
                 "description": "the primary procedure"
             },
             {
-                "code": "2 ...",
+                "code": "2",
                 "description": "for ranked secondary procedures"
+            },
+            {
+                "code": "\u0085",
+                "description": ""
             }
         ]
     },
@@ -15805,7 +16372,7 @@
         "elements": [
             {
                 "code": "1",
-                "description": "Premature \/ Pre-term"
+                "description": "Premature / Pre-term"
             },
             {
                 "code": "2",
@@ -15813,7 +16380,7 @@
             },
             {
                 "code": "3",
-                "description": "Overdue \/ Post-term"
+                "description": "Overdue / Post-term"
             }
         ]
     },
@@ -16000,7 +16567,7 @@
         "elements": [
             {
                 "code": "BR",
-                "description": "Breeding\/genetic stock"
+                "description": "Breeding/genetic stock"
             },
             {
                 "code": "DA",
@@ -16370,7 +16937,7 @@
             },
             {
                 "code": "DR",
-                "description": "Date\/time range"
+                "description": "Date/time range"
             },
             {
                 "code": "DT",
@@ -16410,7 +16977,7 @@
             },
             {
                 "code": "JCC",
-                "description": "Job code\/class"
+                "description": "Job code/class"
             },
             {
                 "code": "MA",
@@ -16498,7 +17065,7 @@
             },
             {
                 "code": "TQ",
-                "description": "Timing\/quantity"
+                "description": "Timing/quantity"
             },
             {
                 "code": "TS",
@@ -16653,19 +17220,19 @@
         "elements": [
             {
                 "code": "AL",
-                "description": "Patient\/Person Name is an Alias"
+                "description": "Patient/Person Name is an Alias"
             },
             {
                 "code": "UA",
-                "description": "Unknown\/Default Address"
+                "description": "Unknown/Default Address"
             },
             {
                 "code": "UD",
-                "description": "Unknown\/Default Date of Birth"
+                "description": "Unknown/Default Date of Birth"
             },
             {
                 "code": "US",
-                "description": "Unknown\/Default Social Security Number"
+                "description": "Unknown/Default Social Security Number"
             }
         ]
     },
@@ -16737,7 +17304,7 @@
         "elements": [
             {
                 "code": "SUGGESTION",
-                "description": "ANSI ASC X12 Health Care Provider Taxonomy, Level 2 - Classification"
+                "description": "ANSI ASC X12 Health Care Provider Taxonomy, Level 2 -  Classification"
             }
         ]
     },
@@ -16790,19 +17357,19 @@
             },
             {
                 "code": "301",
-                "description": "Lab\/Chemistry"
+                "description": "Lab/Chemistry"
             },
             {
                 "code": "991",
-                "description": "Cafeteria \/Guest Tray"
+                "description": "Cafeteria /Guest Tray"
             },
             {
                 "code": "993",
-                "description": "Telephone\/Telegraph"
+                "description": "Telephone/Telegraph"
             },
             {
                 "code": "994",
-                "description": "TV\/Radio"
+                "description": "TV/Radio"
             }
         ]
     },
@@ -16848,7 +17415,7 @@
             },
             {
                 "code": "10",
-                "description": "Non-covered service submitted for verification of denial (condition code 21 from header information on claim)"
+                "description": "Non-covered  service submitted for verification of denial (condition code 21 from header information on claim)"
             },
             {
                 "code": "11",
@@ -16955,11 +17522,11 @@
                 "description": "Partial hospitalization claim spans more than 3 days with insufficient number of days meeting partial hospitalization criteria"
             },
             {
-                "code": "35.",
-                "description": "Only activity therapy and\/or occupational therapy services provided"
+                "code": "35",
+                "description": "Only activity therapy and/or occupational therapy services provided"
             },
             {
-                "code": "36.",
+                "code": "36",
                 "description": "Extensive mental health services provided on day of ECT or significant procedure"
             },
             {
@@ -16967,11 +17534,11 @@
                 "description": "Terminated bilateral procedure or terminated procedure with units greater than one"
             },
             {
-                "code": "38.",
+                "code": "38",
                 "description": "Inconsistency between implanted device and implantation procedure"
             },
             {
-                "code": "39.",
+                "code": "39",
                 "description": "Mutually exclusive procedure that would be allowed if appropriate modifier were present"
             },
             {
@@ -16979,15 +17546,15 @@
                 "description": "Medicare secondary payer alert"
             },
             {
-                "code": "40.",
+                "code": "40",
                 "description": "Component of a comprehensive procedure that would be allowed if appropriate modifier were present"
             },
             {
-                "code": "41.",
+                "code": "41",
                 "description": "Invalid revenue code"
             },
             {
-                "code": "42.",
+                "code": "42",
                 "description": "Multiple medical visits on same day with same revenue code without condition code G0 (see Appendix B)"
             },
             {
@@ -17080,7 +17647,7 @@
     },
     "0465": {
         "id": "0465",
-        "name": "Name\/address representation",
+        "name": "Name/address representation",
         "type": "HL7",
         "elements": [
             {
@@ -17107,12 +17674,12 @@
                 "description": ""
             },
             {
-                "code": "31",
+                "code": "031",
                 "description": "Dental procedures"
             },
             {
                 "code": "163",
-                "description": "Excision\/biopsy"
+                "description": "Excision/biopsy"
             },
             {
                 "code": "181",
@@ -17139,11 +17706,11 @@
             },
             {
                 "code": "3",
-                "description": "Modifier NOT approved for ASC\/HOPD use"
+                "description": "Modifier NOT approved for ASC/HOPD use"
             },
             {
                 "code": "4",
-                "description": "Modifier approved for ASC\/HOPD use, inappropriate for code"
+                "description": "Modifier approved for ASC/HOPD use, inappropriate for code"
             },
             {
                 "code": "U",
@@ -17257,15 +17824,15 @@
         "elements": [
             {
                 "code": "A",
-                "description": "Asynchronous: Do the next specification in parallel with this one (unless otherwise constrained by the following components: ORC-7^4-start date\/time and ORC-7^5-end date\/time). The conjunction of \"A\" specifies two parallel instructions, as are sometimes"
+                "description": "Asynchronous: Do the next specification in parallel with this one (unless otherwise constrained by the following components: ORC-7^4-start date/time and ORC-7^5-end date/time).  The conjunction of \"A\" specifies two parallel instructions, as are sometimes"
             },
             {
                 "code": "C",
-                "description": "This is an actuation time. It will be followed by a completion time for the service. This code allows one to distinguish between the time and priority at which a service should be actuated (e.g., blood should be drawn) and the time and priority at which"
+                "description": "This is an actuation time.  It will be followed by a completion time for the service.  This code allows one to distinguish between the time and priority at which a service should be actuated (e.g., blood should be drawn) and the time and priority at which"
             },
             {
                 "code": "S",
-                "description": "Synchronous. Do the next specification after this one (unless otherwise constrained by the following components: ORC-7^4-start date\/time and ORC-7^5-end date\/time). An \"S\" specification implies that the second timing sequence follows the first, e.g., when"
+                "description": "Synchronous. Do the next specification after this one (unless otherwise constrained by the following components: ORC-7^4-start date/time and ORC-7^5-end date/time). An \"S\" specification implies that the second timing sequence follows the first, e.g., when"
             }
         ]
     },
@@ -17276,25 +17843,25 @@
         "elements": [
             {
                 "code": "G",
-                "description": "This observation\/service is on the formulary, and has guidelines"
+                "description": "This observation/service is on the formulary, and has guidelines"
             },
             {
                 "code": "N",
-                "description": "This observation\/service is not on the formulary"
+                "description": "This observation/service is not on the formulary"
             },
             {
                 "code": "R",
-                "description": "This observation\/service is on the formulary, but is restricted"
+                "description": "This observation/service is on the formulary, but is restricted"
             },
             {
                 "code": "Y",
-                "description": "This observation\/service is on the formulary"
+                "description": "This observation/service is on the formulary"
             }
         ]
     },
     "0474": {
         "id": "0474",
-        "name": "Organization unit type - ORG",
+        "name": "Practitioner Organization Unit Type",
         "type": "User",
         "elements": [
             {
@@ -17326,12 +17893,6 @@
                 "description": "Division"
             }
         ]
-    },
-    "4000": {
-        "id": "4000",
-        "name": "Name\/address representation",
-        "type": "HL7",
-        "elements": []
     },
     "9999": {
         "id": "9999",
