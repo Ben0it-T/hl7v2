@@ -1205,10 +1205,6 @@
             {
                 "code": "W02",
                 "description": "QRF - Waveform result, response to query"
-            },
-            {
-                "code": "Z99",
-                "description": "Event"
             }
         ]
     },
