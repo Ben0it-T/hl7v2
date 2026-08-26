@@ -53,7 +53,7 @@
     },
     "ORU": {
         "R01": "Unsolicited transmission of an observation message",
-        "R30": "Unsolicited Point-Of-Care Observation Message Without Existing Order \u2013 Place An Order",
+        "R30": "Unsolicited Point-Of-Care Observation Message Without Existing Order - Place An Order",
         "R31": "Unsolicited New Point-Of-Care Observation Message - Search For An Order",
         "R32": "Unsolicited Pre-Ordered Point-Of-Care Observation",
         "W01": "Waveform result, unsolicited transmission of requested information"
