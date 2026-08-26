@@ -1303,7 +1303,6 @@
         "name": "Release information",
         "type": "User",
         "elements": [
-            "...",
             "N",
             "Y"
         ]
@@ -2424,9 +2423,7 @@
         "id": "0182",
         "name": "Staff type",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0183": {
         "id": "0183",
@@ -2441,9 +2438,7 @@
         "id": "0184",
         "name": "Department",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0185": {
         "id": "0185",
@@ -6286,7 +6281,6 @@
         "name": "Type of bill code",
         "type": "User",
         "elements": [
-            "...",
             "131",
             "141"
         ]
@@ -6296,7 +6290,6 @@
         "name": "Revenue code",
         "type": "User",
         "elements": [
-            "...",
             "260",
             "280",
             "301",
@@ -6322,7 +6315,6 @@
         "name": "OCE edit code",
         "type": "User",
         "elements": [
-            "...",
             "1",
             "2",
             "3",
@@ -6427,7 +6419,6 @@
         "name": "Ambulatory payment classification code",
         "type": "User",
         "elements": [
-            "...",
             "031",
             "163",
             "181"

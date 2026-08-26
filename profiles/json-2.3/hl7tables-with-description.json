@@ -3464,12 +3464,7 @@
         "id": "0132",
         "name": "Transaction Code",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0133": {
         "id": "0133",

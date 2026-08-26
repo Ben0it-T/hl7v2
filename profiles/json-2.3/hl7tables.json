@@ -1316,9 +1316,7 @@
         "id": "0132",
         "name": "Transaction Code",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0133": {
         "id": "0133",

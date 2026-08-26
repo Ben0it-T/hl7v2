@@ -4064,10 +4064,6 @@
         "type": "User",
         "elements": [
             {
-                "code": "...",
-                "description": "user-defined codes"
-            },
-            {
                 "code": "N",
                 "description": "No"
             },
@@ -6942,12 +6938,7 @@
         "id": "0182",
         "name": "Staff type",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0183": {
         "id": "0183",
@@ -6968,12 +6959,7 @@
         "id": "0184",
         "name": "Department",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0185": {
         "id": "0185",
@@ -17321,10 +17307,6 @@
         "type": "User",
         "elements": [
             {
-                "code": "...",
-                "description": ""
-            },
-            {
                 "code": "131",
                 "description": "Hospital - Outpatient - Admit thru Discharge Claim"
             },
@@ -17339,10 +17321,6 @@
         "name": "Revenue code",
         "type": "User",
         "elements": [
-            {
-                "code": "...",
-                "description": ""
-            },
             {
                 "code": "260",
                 "description": "IV Therapy"
@@ -17401,10 +17379,6 @@
         "name": "OCE edit code",
         "type": "User",
         "elements": [
-            {
-                "code": "...",
-                "description": ""
-            },
             {
                 "code": "1",
                 "description": "Invalid diagnosis code"
@@ -17665,10 +17639,6 @@
         "name": "Ambulatory payment classification code",
         "type": "User",
         "elements": [
-            {
-                "code": "...",
-                "description": ""
-            },
             {
                 "code": "031",
                 "description": "Dental procedures"
