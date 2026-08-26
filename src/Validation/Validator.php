@@ -520,9 +520,30 @@ class Validator
         //);
         $result = in_array($elementValue, $this->hl7Tables[$table]['elements'], true);
 
+        // Local extension of HL7 table
+        $extensibleHL7Tables = [
+            '0003', // Event Type
+            '0076', // Message Type
+            '0354', // Message Structure
+        ];
+
+        $extension = false;
+        if (!$result
+            && $this->hl7Tables[$table]['type'] === 'HL7'
+            && in_array($table, $extensibleHL7Tables, true)
+            && preg_match('/^Z[A-Z0-9_]*$/', $elementValue)
+        ) {
+            $result = true;
+            $extension = true;
+        }
+
         $description =
             "$elementType $elementName value ($elementValue) "
-            . ($result ? 'exists in' : 'not in')
+            . ($result
+                ? ($extension
+                    ? 'accepted as local extension of'
+                    : 'exists in')
+                : 'not in')
             . " table $table ("
             . ($this->hl7Tables[$table]['type'] === 'HL7'
                 ? 'HL7 standard'
