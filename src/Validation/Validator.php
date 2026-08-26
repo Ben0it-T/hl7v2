@@ -511,13 +511,14 @@ class Validator
 
         // Preserve legacy behaviour (case-insensitive comparison).
         // TODO: Audit HL7 tables and switch to strict case-sensitive validation.
-        $result = in_array(
-            strtoupper($elementValue),
-            array_map(
-                'strtoupper',
-                $this->hl7Tables[$table]['elements']
-            )
-        );
+        //$result = in_array(
+        //    strtoupper($elementValue),
+        //    array_map(
+        //        'strtoupper',
+        //        $this->hl7Tables[$table]['elements']
+        //    )
+        //);
+        $result = in_array($elementValue, $this->hl7Tables[$table]['elements'], true);
 
         $description =
             "$elementType $elementName value ($elementValue) "
