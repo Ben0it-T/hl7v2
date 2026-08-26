@@ -116,143 +116,143 @@
             },
             {
                 "code": "A03",
-                "description": "ADT/ACK -  Discharge/end visit"
+                "description": "ADT/ACK - Discharge/end visit"
             },
             {
                 "code": "A04",
-                "description": "ADT/ACK -  Register a patient"
+                "description": "ADT/ACK - Register a patient"
             },
             {
                 "code": "A05",
-                "description": "ADT/ACK -  Pre-admit a patient"
+                "description": "ADT/ACK - Pre-admit a patient"
             },
             {
                 "code": "A06",
-                "description": "ADT/ACK -  Change an outpatient to an inpatient"
+                "description": "ADT/ACK - Change an outpatient to an inpatient"
             },
             {
                 "code": "A07",
-                "description": "ADT/ACK -  Change an inpatient to an outpatient"
+                "description": "ADT/ACK - Change an inpatient to an outpatient"
             },
             {
                 "code": "A08",
-                "description": "ADT/ACK -  Update patient information"
+                "description": "ADT/ACK - Update patient information"
             },
             {
                 "code": "A09",
-                "description": "ADT/ACK -  Patient departing - tracking"
+                "description": "ADT/ACK - Patient departing - tracking"
             },
             {
                 "code": "A10",
-                "description": "ADT/ACK -  Patient arriving - tracking"
+                "description": "ADT/ACK - Patient arriving - tracking"
             },
             {
                 "code": "A11",
-                "description": "ADT/ACK -  Cancel admit/visit notification"
+                "description": "ADT/ACK - Cancel admit/visit notification"
             },
             {
                 "code": "A12",
-                "description": "ADT/ACK -  Cancel transfer"
+                "description": "ADT/ACK - Cancel transfer"
             },
             {
                 "code": "A13",
-                "description": "ADT/ACK -  Cancel discharge/end visit"
+                "description": "ADT/ACK - Cancel discharge/end visit"
             },
             {
                 "code": "A14",
-                "description": "ADT/ACK -  Pending admit"
+                "description": "ADT/ACK - Pending admit"
             },
             {
                 "code": "A15",
-                "description": "ADT/ACK -  Pending transfer"
+                "description": "ADT/ACK - Pending transfer"
             },
             {
                 "code": "A16",
-                "description": "ADT/ACK -  Pending discharge"
+                "description": "ADT/ACK - Pending discharge"
             },
             {
                 "code": "A17",
-                "description": "ADT/ACK -  Swap patients"
+                "description": "ADT/ACK - Swap patients"
             },
             {
                 "code": "A18",
-                "description": "ADT/ACK -  Merge patient information (for backward compatibility only)"
+                "description": "ADT/ACK - Merge patient information (for backward compatibility only)"
             },
             {
                 "code": "A19",
-                "description": "QRY/ADR -  Patient query"
+                "description": "QRY/ADR - Patient query"
             },
             {
                 "code": "A20",
-                "description": "ADT/ACK -  Bed status update"
+                "description": "ADT/ACK - Bed status update"
             },
             {
                 "code": "A21",
-                "description": "ADT/ACK -  Patient goes on a 'leave of absence'"
+                "description": "ADT/ACK - Patient goes on a _leave of absence_"
             },
             {
                 "code": "A22",
-                "description": "ADT/ACK -  Patient returns from a 'leave of absence'"
+                "description": "ADT/ACK - Patient returns from a _leave of absence_"
             },
             {
                 "code": "A23",
-                "description": "ADT/ACK -  Delete a patient record"
+                "description": "ADT/ACK - Delete a patient record"
             },
             {
                 "code": "A24",
-                "description": "ADT/ACK -  Link patient information"
+                "description": "ADT/ACK - Link patient information"
             },
             {
                 "code": "A25",
-                "description": "ADT/ACK -  Cancel pending discharge"
+                "description": "ADT/ACK - Cancel pending discharge"
             },
             {
                 "code": "A26",
-                "description": "ADT/ACK -  Cancel pending transfer"
+                "description": "ADT/ACK - Cancel pending transfer"
             },
             {
                 "code": "A27",
-                "description": "ADT/ACK -  Cancel pending admit"
+                "description": "ADT/ACK - Cancel pending admit"
             },
             {
                 "code": "A28",
-                "description": "ADT/ACK -  Add person information"
+                "description": "ADT/ACK - Add person information"
             },
             {
                 "code": "A29",
-                "description": "ADT/ACK -  Delete person information"
+                "description": "ADT/ACK - Delete person information"
             },
             {
                 "code": "A30",
-                "description": "ADT/ACK -  Merge person information (for backward compatibility only)"
+                "description": "ADT/ACK - Merge person information (for backward compatibility only)"
             },
             {
                 "code": "A31",
-                "description": "ADT/ACK -  Update person information"
+                "description": "ADT/ACK - Update person information"
             },
             {
                 "code": "A32",
-                "description": "ADT/ACK -  Cancel patient arriving - tracking"
+                "description": "ADT/ACK - Cancel patient arriving - tracking"
             },
             {
                 "code": "A33",
-                "description": "ADT/ACK -  Cancel patient departing - tracking"
+                "description": "ADT/ACK - Cancel patient departing - tracking"
             },
             {
                 "code": "A34",
-                "description": "ADT/ACK -  Merge patient information - patient ID only (for backward compatibility only)"
+                "description": "ADT/ACK - Merge patient information - patient ID only (for backward compatibility only)"
             },
             {
                 "code": "A35",
-                "description": "ADT/ACK -  Merge patient information - account number only (for backward compatibility only)"
+                "description": "ADT/ACK - Merge patient information - account number only (for backward compatibility only)"
             },
             {
                 "code": "A36",
-                "description": "ADT/ACK -  Merge patient information - patient ID and account number (for backward compatibility only)"
+                "description": "ADT/ACK - Merge patient information - patient ID and account number (for backward compatibility only)"
             },
             {
                 "code": "A37",
-                "description": "ADT/ACK -  Unlink patient information"
+                "description": "ADT/ACK - Unlink patient information"
             },
             {
                 "code": "A38",
@@ -772,7 +772,7 @@
             },
             {
                 "code": "P10",
-                "description": "BAR/ACK - Transmit Ambulatory Payment  Classification(APC)"
+                "description": "BAR/ACK _Transmit Ambulatory Payment  Classification(APC)"
             },
             {
                 "code": "P11",
@@ -975,14 +975,6 @@
                 "description": "ORF - Response to query; transmission of requested observation"
             },
             {
-                "code": "R05",
-                "description": ""
-            },
-            {
-                "code": "R06",
-                "description": ""
-            },
-            {
                 "code": "R07",
                 "description": "EDR - Enhanced Display Response"
             },
@@ -993,10 +985,6 @@
             {
                 "code": "R09",
                 "description": "ERP - Event Replay Response"
-            },
-            {
-                "code": "R0R",
-                "description": ""
             },
             {
                 "code": "R21",
@@ -1025,22 +1013,6 @@
             {
                 "code": "R32",
                 "description": "ORU - Unsolicited Pre-Ordered Point-Of-Care Observation"
-            },
-            {
-                "code": "RAR",
-                "description": ""
-            },
-            {
-                "code": "RDR",
-                "description": ""
-            },
-            {
-                "code": "RER",
-                "description": ""
-            },
-            {
-                "code": "RGR",
-                "description": ""
             },
             {
                 "code": "ROR",
@@ -1140,7 +1112,7 @@
             },
             {
                 "code": "S24",
-                "description": "SIU/ACK - Notification of opened (\"unblocked\") schedule time slot(s)"
+                "description": "SIU/ACK - Notification of opened (_unblocked_) schedule time slot(s)"
             },
             {
                 "code": "S25",
@@ -1279,8 +1251,8 @@
                 "description": "QRF - Waveform result, response to query"
             },
             {
-                "code": "X01",
-                "description": ""
+                "code": "Z99",
+                "description": "Event"
             }
         ]
     },
@@ -1332,10 +1304,6 @@
         "name": "Race",
         "type": "User",
         "elements": [
-            {
-                "code": "...",
-                "description": "see chapter 3"
-            },
             {
                 "code": "1002-5",
                 "description": "American Indian or Alaska Native"
@@ -2586,16 +2554,64 @@
                 "description": "Abscess"
             },
             {
+                "code": "ACNE",
+                "description": "Tissue, Acne"
+            },
+            {
+                "code": "ACNFLD",
+                "description": "Fluid, Acne"
+            },
+            {
+                "code": "AIRS",
+                "description": "Air Sample"
+            },
+            {
+                "code": "ALL",
+                "description": "Allograft"
+            },
+            {
                 "code": "AMN",
                 "description": "Amniotic fluid"
+            },
+            {
+                "code": "AMP",
+                "description": "Amputation"
+            },
+            {
+                "code": "ANGI",
+                "description": "Catheter Tip, Angio"
+            },
+            {
+                "code": "ARTC",
+                "description": "Catheter Tip, Arterial"
+            },
+            {
+                "code": "ASERU",
+                "description": "Serum, Acute"
             },
             {
                 "code": "ASP",
                 "description": "Aspirate"
             },
             {
+                "code": "ATTE",
+                "description": "Environmental, Autoclave Ampule"
+            },
+            {
+                "code": "AUTOC",
+                "description": "Environment, Attest"
+            },
+            {
+                "code": "AUTP",
+                "description": "Autopsy"
+            },
+            {
                 "code": "BBL",
                 "description": "Blood bag"
+            },
+            {
+                "code": "BCYST",
+                "description": "Cyst, Baker's"
             },
             {
                 "code": "BDY",
@@ -2604,6 +2620,10 @@
             {
                 "code": "BIFL",
                 "description": "Bile fluid"
+            },
+            {
+                "code": "BITE",
+                "description": "Bite"
             },
             {
                 "code": "BLD",
@@ -2626,8 +2646,24 @@
                 "description": "Blood  venous"
             },
             {
+                "code": "BLEB",
+                "description": "Bleb"
+            },
+            {
+                "code": "BLIST",
+                "description": "Blister"
+            },
+            {
+                "code": "BOIL",
+                "description": "Boil"
+            },
+            {
                 "code": "BON",
                 "description": "Bone"
+            },
+            {
+                "code": "BOWL",
+                "description": "Bowel contents"
             },
             {
                 "code": "BPH",
@@ -2646,16 +2682,52 @@
                 "description": "Bronchial"
             },
             {
+                "code": "BRSH",
+                "description": "Brush"
+            },
+            {
                 "code": "BRTH",
                 "description": "Breath (use EXHLD)"
+            },
+            {
+                "code": "BRUS",
+                "description": "Brushing"
+            },
+            {
+                "code": "BUB",
+                "description": "Bubo"
+            },
+            {
+                "code": "BULLA",
+                "description": "Bulla/Bullae"
+            },
+            {
+                "code": "BX",
+                "description": "Biopsy"
             },
             {
                 "code": "CALC",
                 "description": "Calculus (=Stone)"
             },
             {
+                "code": "CARBU",
+                "description": "Carbuncle"
+            },
+            {
+                "code": "CAT",
+                "description": "Catheter"
+            },
+            {
+                "code": "CBITE",
+                "description": "Bite, Cat"
+            },
+            {
                 "code": "CDM",
                 "description": "Cardiac muscle"
+            },
+            {
+                "code": "CLIPP",
+                "description": "Clippings"
             },
             {
                 "code": "CNJT",
@@ -2670,8 +2742,36 @@
                 "description": "Colostrum"
             },
             {
+                "code": "CONE",
+                "description": "Biospy, Cone"
+            },
+            {
+                "code": "CSCR",
+                "description": "Scratch, Cat"
+            },
+            {
+                "code": "CSERU",
+                "description": "Serum, Convalescent"
+            },
+            {
                 "code": "CSF",
                 "description": "Cerebral spinal fluid"
+            },
+            {
+                "code": "CSITE",
+                "description": "Catheter Insertion Site"
+            },
+            {
+                "code": "CSMY",
+                "description": "Fluid,  Cystostomy Tube"
+            },
+            {
+                "code": "CST",
+                "description": "Fluid, Cyst"
+            },
+            {
+                "code": "CSVR",
+                "description": "Blood, Cell Saver"
             },
             {
                 "code": "CTP",
@@ -2686,16 +2786,56 @@
                 "description": "Cervical mucus"
             },
             {
+                "code": "CVPS",
+                "description": "Site, CVP"
+            },
+            {
+                "code": "CVPT",
+                "description": "Catheter Tip, CVP"
+            },
+            {
                 "code": "CVX",
                 "description": "Cervix"
+            },
+            {
+                "code": "CYN",
+                "description": "Nodule, Cystic"
             },
             {
                 "code": "CYST",
                 "description": "Cyst"
             },
             {
+                "code": "DBITE",
+                "description": "Bite, Dog"
+            },
+            {
+                "code": "DCS",
+                "description": "Sputum, Deep Cough"
+            },
+            {
+                "code": "DEC",
+                "description": "Ulcer, Decubitus"
+            },
+            {
+                "code": "DEION",
+                "description": "Environmental, Water  (Deionized)"
+            },
+            {
+                "code": "DIA",
+                "description": "Dialysate"
+            },
+            {
                 "code": "DIAF",
                 "description": "Dialysis fluid"
+            },
+            {
+                "code": "DISCHG",
+                "description": "Discharge"
+            },
+            {
+                "code": "DIV",
+                "description": "Diverticulum"
             },
             {
                 "code": "DOSE",
@@ -2704,6 +2844,14 @@
             {
                 "code": "DRN",
                 "description": "Drain"
+            },
+            {
+                "code": "DRNG",
+                "description": "Drainage, Tube"
+            },
+            {
+                "code": "DRNGP",
+                "description": "Drainage, Penrose"
             },
             {
                 "code": "DUFL",
@@ -2718,6 +2866,30 @@
                 "description": "Ear wax (cerumen)"
             },
             {
+                "code": "EBRUSH",
+                "description": "Brush, Esophageal"
+            },
+            {
+                "code": "EEYE",
+                "description": "Environmental, Eye Wash"
+            },
+            {
+                "code": "EFF",
+                "description": "Environmental, Effluent"
+            },
+            {
+                "code": "EFFUS",
+                "description": "Effusion"
+            },
+            {
+                "code": "EFOD",
+                "description": "Environmental, Food"
+            },
+            {
+                "code": "EISO",
+                "description": "Environmental, Isolette"
+            },
+            {
                 "code": "ELT",
                 "description": "Electrode"
             },
@@ -2730,16 +2902,68 @@
                 "description": "Endometrium"
             },
             {
+                "code": "ENVIR",
+                "description": "Environmental, Unidentified Substance"
+            },
+            {
                 "code": "EOS",
                 "description": "Eosinophils"
+            },
+            {
+                "code": "EOTH",
+                "description": "Environmental, Other Substance"
+            },
+            {
+                "code": "ESOI",
+                "description": "Environmental, Soil"
+            },
+            {
+                "code": "ESOS",
+                "description": "Environmental, Solution (Sterile)"
+            },
+            {
+                "code": "ETA",
+                "description": "Aspirate,  Endotrach"
+            },
+            {
+                "code": "ETTP",
+                "description": "Catheter Tip, Endotracheal"
+            },
+            {
+                "code": "ETTUB",
+                "description": "Tube, Endotracheal"
+            },
+            {
+                "code": "EWHI",
+                "description": "Environmental, Whirlpool"
             },
             {
                 "code": "EXG",
                 "description": "Exhaled gas (=breath)"
             },
             {
+                "code": "EXS",
+                "description": "Shunt, External"
+            },
+            {
+                "code": "EXUDTE",
+                "description": "Exudate"
+            },
+            {
                 "code": "EYE",
                 "description": "Eye"
+            },
+            {
+                "code": "FAW",
+                "description": "Environmental, Water  (Well)"
+            },
+            {
+                "code": "FBLOOD",
+                "description": "Blood, Fetal"
+            },
+            {
+                "code": "FGA",
+                "description": "Fluid,  Abdomen"
             },
             {
                 "code": "FIB",
@@ -2750,6 +2974,10 @@
                 "description": "Fistula"
             },
             {
+                "code": "FLD",
+                "description": "Fluid, Other"
+            },
+            {
                 "code": "FLT",
                 "description": "Filter"
             },
@@ -2758,8 +2986,44 @@
                 "description": "Body fluid, unsp"
             },
             {
+                "code": "FLUID",
+                "description": "Fluid"
+            },
+            {
+                "code": "FOLEY",
+                "description": "Catheter Tip, Foley"
+            },
+            {
+                "code": "FRS",
+                "description": "Fluid, Respiratory"
+            },
+            {
+                "code": "FSCLP",
+                "description": "Scalp, Fetal"
+            },
+            {
+                "code": "FUR",
+                "description": "Furuncle"
+            },
+            {
                 "code": "GAS",
                 "description": "Gas"
+            },
+            {
+                "code": "GASA",
+                "description": "Aspirate, Gastric"
+            },
+            {
+                "code": "GASAN",
+                "description": "Antrum, Gastric"
+            },
+            {
+                "code": "GASBR",
+                "description": "Brushing, Gastric"
+            },
+            {
+                "code": "GASD",
+                "description": "Drainage, Gastric"
             },
             {
                 "code": "GAST",
@@ -2782,12 +3046,112 @@
                 "description": "Genital vaginal"
             },
             {
+                "code": "GRAFT",
+                "description": "Graft"
+            },
+            {
+                "code": "GRANU",
+                "description": "Granuloma"
+            },
+            {
+                "code": "GROSH",
+                "description": "Catheter, Groshong"
+            },
+            {
+                "code": "GSOL",
+                "description": "Solution, Gastrostomy"
+            },
+            {
+                "code": "GSPEC",
+                "description": "Biopsy, Gastric"
+            },
+            {
+                "code": "GT",
+                "description": "Tube, Gastric"
+            },
+            {
+                "code": "GTUBE",
+                "description": "Drainage Tube, Drainage (Gastrostomy)"
+            },
+            {
                 "code": "HAR",
                 "description": "Hair"
             },
             {
+                "code": "HBITE",
+                "description": "Bite, Human"
+            },
+            {
+                "code": "HBLUD",
+                "description": "Blood, Autopsy"
+            },
+            {
+                "code": "HEMAQ",
+                "description": "Catheter Tip, Hemaquit"
+            },
+            {
+                "code": "HEMO",
+                "description": "Catheter Tip, Hemovac"
+            },
+            {
+                "code": "HERNI",
+                "description": "Tissue, Herniated"
+            },
+            {
+                "code": "HEV",
+                "description": "Drain, Hemovac"
+            },
+            {
+                "code": "HIC",
+                "description": "Catheter, Hickman"
+            },
+            {
+                "code": "HYDC",
+                "description": "Fluid, Hydrocele"
+            },
+            {
+                "code": "IBITE",
+                "description": "Bite, Insect"
+            },
+            {
+                "code": "ICYST",
+                "description": "Cyst, Inclusion"
+            },
+            {
+                "code": "IDC",
+                "description": "Catheter Tip, Indwelling"
+            },
+            {
                 "code": "IHG",
                 "description": "Inhaled Gas"
+            },
+            {
+                "code": "ILEO",
+                "description": "Drainage, Ileostomy"
+            },
+            {
+                "code": "ILLEG",
+                "description": "Source of Specimen Is Illegible"
+            },
+            {
+                "code": "IMP",
+                "description": "Implant"
+            },
+            {
+                "code": "INCI",
+                "description": "Site, Incision/Surgical"
+            },
+            {
+                "code": "INFIL",
+                "description": "Infiltrate"
+            },
+            {
+                "code": "INS",
+                "description": "Insect"
+            },
+            {
+                "code": "INTRD",
+                "description": "Catheter Tip, Introducer"
             },
             {
                 "code": "ISLT",
@@ -2798,12 +3162,80 @@
                 "description": "Intubation tube"
             },
             {
+                "code": "IUD",
+                "description": "Intrauterine Device"
+            },
+            {
+                "code": "IVCAT",
+                "description": "Catheter Tip, IV"
+            },
+            {
+                "code": "IVFLD",
+                "description": "Fluid, IV"
+            },
+            {
+                "code": "IVTIP",
+                "description": "Tubing Tip, IV"
+            },
+            {
+                "code": "JEJU",
+                "description": "Drainage, Jejunal"
+            },
+            {
+                "code": "JNTFLD",
+                "description": "Fluid, Joint"
+            },
+            {
+                "code": "JP",
+                "description": "Drainage, Jackson Pratt"
+            },
+            {
+                "code": "KELOI",
+                "description": "Lavage"
+            },
+            {
+                "code": "KIDFLD",
+                "description": "Fluid, Kidney"
+            },
+            {
                 "code": "LAM",
                 "description": "Lamella"
             },
             {
+                "code": "LAVG",
+                "description": "Lavage, Bronhial"
+            },
+            {
+                "code": "LAVGG",
+                "description": "Lavage, Gastric"
+            },
+            {
+                "code": "LAVGP",
+                "description": "Lavage, Peritoneal"
+            },
+            {
+                "code": "LAVPG",
+                "description": "Lavage, Pre-Bronch"
+            },
+            {
+                "code": "LENS1",
+                "description": "Contact Lens"
+            },
+            {
+                "code": "LENS2",
+                "description": "Contact Lens Case"
+            },
+            {
+                "code": "LESN",
+                "description": "Lesion"
+            },
+            {
                 "code": "LIQ",
                 "description": "Liquid NOS"
+            },
+            {
+                "code": "LIQO",
+                "description": "Liquid, Other"
             },
             {
                 "code": "LN",
@@ -2818,6 +3250,10 @@
                 "description": "Line venous"
             },
             {
+                "code": "LSAC",
+                "description": "Fluid, Lumbar Sac"
+            },
+            {
                 "code": "LYM",
                 "description": "Lymphocytes"
             },
@@ -2826,8 +3262,16 @@
                 "description": "Macrophages"
             },
             {
+                "code": "MAHUR",
+                "description": "Catheter Tip, Makurkour"
+            },
+            {
                 "code": "MAR",
                 "description": "Marrow"
+            },
+            {
+                "code": "MASS",
+                "description": "Mass"
             },
             {
                 "code": "MBLD",
@@ -2846,16 +3290,68 @@
                 "description": "Milk"
             },
             {
+                "code": "MUCOS",
+                "description": "Mucosa"
+            },
+            {
+                "code": "MUCUS",
+                "description": "Mucus"
+            },
+            {
                 "code": "NAIL",
                 "description": "Nail"
+            },
+            {
+                "code": "NASDR",
+                "description": "Drainage, Nasal"
+            },
+            {
+                "code": "NEDL",
+                "description": "Needle"
+            },
+            {
+                "code": "NEPH",
+                "description": "Site, Nephrostomy"
+            },
+            {
+                "code": "NGASP",
+                "description": "Aspirate, Nasogastric"
+            },
+            {
+                "code": "NGAST",
+                "description": "Drainage, Nasogastric"
+            },
+            {
+                "code": "NGS",
+                "description": "Site, Naso/Gastric"
+            },
+            {
+                "code": "NODUL",
+                "description": "Nodule(s)"
             },
             {
                 "code": "NOS",
                 "description": "Nose (nasal passage)"
             },
             {
+                "code": "NSECR",
+                "description": "Secretion, Nasal"
+            },
+            {
                 "code": "ORH",
                 "description": "Other"
+            },
+            {
+                "code": "ORL",
+                "description": "Lesion, Oral"
+            },
+            {
+                "code": "OTH",
+                "description": "Source, Other"
+            },
+            {
+                "code": "PACEM",
+                "description": "Pacemaker"
             },
             {
                 "code": "PAFL",
@@ -2864,6 +3360,46 @@
             {
                 "code": "PAT",
                 "description": "Patient"
+            },
+            {
+                "code": "PCFL",
+                "description": "Fluid, Pericardial"
+            },
+            {
+                "code": "PDSIT",
+                "description": "Site, Peritoneal Dialysis"
+            },
+            {
+                "code": "PDTS",
+                "description": "Site, Peritoneal Dialysis Tunnel"
+            },
+            {
+                "code": "PELVA",
+                "description": "Abscess, Pelvic"
+            },
+            {
+                "code": "PENIL",
+                "description": "Lesion, Penile"
+            },
+            {
+                "code": "PERIA",
+                "description": "Abscess, Perianal"
+            },
+            {
+                "code": "PILOC",
+                "description": "Cyst, Pilonidal"
+            },
+            {
+                "code": "PINS",
+                "description": "Site, Pin"
+            },
+            {
+                "code": "PIS",
+                "description": "Site, Pacemaker Insetion"
+            },
+            {
+                "code": "PLAN",
+                "description": "Plant Material"
             },
             {
                 "code": "PLAS",
@@ -2878,6 +3414,10 @@
                 "description": "Placenta"
             },
             {
+                "code": "PLEVS",
+                "description": "Serum, Peak Level"
+            },
+            {
                 "code": "PLR",
                 "description": "Pleural fluid (thoracentesis fld)"
             },
@@ -2886,8 +3426,36 @@
                 "description": "Polymorphonuclear neutrophils"
             },
             {
+                "code": "PND",
+                "description": "Drainage, Penile"
+            },
+            {
+                "code": "POL",
+                "description": "Polyps"
+            },
+            {
+                "code": "POPGS",
+                "description": "Graft Site, Popliteal"
+            },
+            {
+                "code": "POPLG",
+                "description": "Graft, Popliteal"
+            },
+            {
+                "code": "POPLV",
+                "description": "Site, Popliteal Vein"
+            },
+            {
+                "code": "PORTA",
+                "description": "Catheter, Porta"
+            },
+            {
                 "code": "PPP",
                 "description": "Platelet poor plasma"
+            },
+            {
+                "code": "PROST",
+                "description": "Prosthetic Device"
             },
             {
                 "code": "PRP",
@@ -2898,12 +3466,60 @@
                 "description": "Peritoneal fluid /ascites"
             },
             {
+                "code": "PSC",
+                "description": "Pseudocyst"
+            },
+            {
+                "code": "PUNCT",
+                "description": "Wound, Puncture"
+            },
+            {
                 "code": "PUS",
                 "description": "Pus"
             },
             {
+                "code": "PUSFR",
+                "description": "Pustule"
+            },
+            {
+                "code": "PUST",
+                "description": "Pus"
+            },
+            {
+                "code": "QC3",
+                "description": "Quality Control"
+            },
+            {
+                "code": "RANDU",
+                "description": "Urine, Random"
+            },
+            {
                 "code": "RBC",
                 "description": "Erythrocytes"
+            },
+            {
+                "code": "RBITE",
+                "description": "Bite, Reptile"
+            },
+            {
+                "code": "RECT",
+                "description": "Drainage, Rectal"
+            },
+            {
+                "code": "RECTA",
+                "description": "Abscess, Rectal"
+            },
+            {
+                "code": "RENALC",
+                "description": "Cyst, Renal"
+            },
+            {
+                "code": "RENC",
+                "description": "Fluid, Renal Cyst"
+            },
+            {
+                "code": "RES",
+                "description": "Respiratory"
             },
             {
                 "code": "RT",
@@ -2914,8 +3530,44 @@
                 "description": "Saliva"
             },
             {
+                "code": "SCAR",
+                "description": "Tissue, Keloid (Scar)"
+            },
+            {
+                "code": "SCLV",
+                "description": "Catheter Tip, Subclavian"
+            },
+            {
+                "code": "SCROA",
+                "description": "Abscess, Scrotal"
+            },
+            {
+                "code": "SECRE",
+                "description": "Secretion(s)"
+            },
+            {
                 "code": "SER",
                 "description": "Serum"
+            },
+            {
+                "code": "SHU",
+                "description": "Site, Shunt"
+            },
+            {
+                "code": "SHUNF",
+                "description": "Fluid, Shunt"
+            },
+            {
+                "code": "SHUNT",
+                "description": "Shunt"
+            },
+            {
+                "code": "SITE",
+                "description": "Site"
+            },
+            {
+                "code": "SKBP",
+                "description": "Biopsy, Skin"
             },
             {
                 "code": "SKM",
@@ -2924,6 +3576,10 @@
             {
                 "code": "SKN",
                 "description": "Skin"
+            },
+            {
+                "code": "SMM",
+                "description": "Mass, Sub-Mandibular"
             },
             {
                 "code": "SMN",
@@ -2938,6 +3594,18 @@
                 "description": "Spermatozoa"
             },
             {
+                "code": "SPRP",
+                "description": "Catheter Tip, Suprapubic"
+            },
+            {
+                "code": "SPRPB",
+                "description": "Cathether Tip, Suprapubic"
+            },
+            {
+                "code": "SPS",
+                "description": "Environmental, Spore Strip"
+            },
+            {
                 "code": "SPT",
                 "description": "Sputum"
             },
@@ -2950,6 +3618,22 @@
                 "description": "Sputum - tracheal aspirate"
             },
             {
+                "code": "SPUT1",
+                "description": "Sputum, Simulated"
+            },
+            {
+                "code": "SPUTIN",
+                "description": "Sputum, Inducted"
+            },
+            {
+                "code": "SPUTSP",
+                "description": "Sputum, Spontaneous"
+            },
+            {
+                "code": "STER",
+                "description": "Environmental, Sterrad"
+            },
+            {
                 "code": "STL",
                 "description": "Stool = Fecal"
             },
@@ -2958,8 +3642,40 @@
                 "description": "Stone (use CALC)"
             },
             {
+                "code": "STONE",
+                "description": "Stone, Kidney"
+            },
+            {
+                "code": "SUBMA",
+                "description": "Abscess, Submandibular"
+            },
+            {
+                "code": "SUBMX",
+                "description": "Abscess, Submaxillary"
+            },
+            {
+                "code": "SUMP",
+                "description": "Drainage, Sump"
+            },
+            {
+                "code": "SUP",
+                "description": "Suprapubic Tap"
+            },
+            {
+                "code": "SUTUR",
+                "description": "Suture"
+            },
+            {
+                "code": "SWGZ",
+                "description": "Catheter Tip, Swan Gantz"
+            },
+            {
                 "code": "SWT",
                 "description": "Sweat"
+            },
+            {
+                "code": "TASP",
+                "description": "Aspirate, Tracheal"
             },
             {
                 "code": "TEAR",
@@ -2990,6 +3706,10 @@
                 "description": "Tissue ulcer"
             },
             {
+                "code": "TLC",
+                "description": "Cathether Tip, Triple Lumen"
+            },
+            {
                 "code": "TLGI",
                 "description": "Tissue large intestine"
             },
@@ -2998,12 +3718,48 @@
                 "description": "Tissue lung"
             },
             {
+                "code": "TRAC",
+                "description": "Site, Tracheostomy"
+            },
+            {
+                "code": "TRANS",
+                "description": "Transudate"
+            },
+            {
+                "code": "TSERU",
+                "description": "Serum, Trough"
+            },
+            {
                 "code": "TSMI",
                 "description": "Tissue small intestine"
             },
             {
+                "code": "TSTES",
+                "description": "Abscess, Testicular"
+            },
+            {
+                "code": "TTRA",
+                "description": "Aspirate, Transtracheal"
+            },
+            {
                 "code": "TUB",
                 "description": "Tube NOS"
+            },
+            {
+                "code": "TUBES",
+                "description": "Tubes"
+            },
+            {
+                "code": "TUMOR",
+                "description": "Tumor"
+            },
+            {
+                "code": "TZANC",
+                "description": "Smear, Tzanck"
+            },
+            {
+                "code": "UDENT",
+                "description": "Source, Unidentified"
             },
             {
                 "code": "ULC",
@@ -3026,6 +3782,26 @@
                 "description": "Urine clean catch"
             },
             {
+                "code": "URINB",
+                "description": "Urine, Bladder Washings"
+            },
+            {
+                "code": "URINC",
+                "description": "Urine, Catheterized"
+            },
+            {
+                "code": "URINM",
+                "description": "Urine, Midstream"
+            },
+            {
+                "code": "URINN",
+                "description": "Urine, Nephrostomy"
+            },
+            {
+                "code": "URINP",
+                "description": "Urine, Pedibag"
+            },
+            {
                 "code": "URNS",
                 "description": "Urine sediment"
             },
@@ -3038,8 +3814,24 @@
                 "description": "Urethra"
             },
             {
+                "code": "USCOP",
+                "description": "Urine, Cystoscopy"
+            },
+            {
+                "code": "USPEC",
+                "description": "Source, Unspecified"
+            },
+            {
                 "code": "USUB",
                 "description": "Unknown substance"
+            },
+            {
+                "code": "VASTIP",
+                "description": "Catheter Tip, Vas"
+            },
+            {
+                "code": "VENT",
+                "description": "Catheter Tip, Ventricular"
             },
             {
                 "code": "VITF",
@@ -3050,12 +3842,28 @@
                 "description": "Vomitus"
             },
             {
+                "code": "WASH",
+                "description": "Wash"
+            },
+            {
+                "code": "WASI",
+                "description": "Washing, e.g. bronchial washing"
+            },
+            {
                 "code": "WAT",
                 "description": "Water"
             },
             {
+                "code": "WB",
+                "description": "Blood, Whole"
+            },
+            {
                 "code": "WBC",
                 "description": "Leukocytes"
+            },
+            {
+                "code": "WEN",
+                "description": "Wen"
             },
             {
                 "code": "WICK",
@@ -3076,6 +3884,26 @@
             {
                 "code": "WNDE",
                 "description": "Wound exudate"
+            },
+            {
+                "code": "WORM",
+                "description": "Worm"
+            },
+            {
+                "code": "WRT",
+                "description": "Wart"
+            },
+            {
+                "code": "WWA",
+                "description": "Environmental, Water"
+            },
+            {
+                "code": "WWO",
+                "description": "Environmental, Water (Ocean)"
+            },
+            {
+                "code": "WWT",
+                "description": "Environmental, Water  (Tap)"
             },
             {
                 "code": "XXX",
@@ -3967,12 +4795,7 @@
         "id": "0088",
         "name": "Procedure Code",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": ""
-            }
-        ]
+        "elements": []
     },
     "0089": {
         "id": "0089",
@@ -4011,10 +4834,6 @@
         "name": "Release Information",
         "type": "User",
         "elements": [
-            {
-                "code": "...",
-                "description": "user-defined codes"
-            },
             {
                 "code": "N",
                 "description": "No"
@@ -6671,12 +7490,7 @@
         "id": "0182",
         "name": "Staff type",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0183": {
         "id": "0183",
@@ -6697,12 +7511,7 @@
         "id": "0184",
         "name": "Department",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0185": {
         "id": "0185",
@@ -10200,6 +11009,10 @@
                 "description": "The indicated appointment has completed normally (was not discontinued, canceled, or deleted)"
             },
             {
+                "code": "Dc",
+                "description": "The indicated appointment was discontinued (DC'ed while in progress, discontinued parent appointment, or discontinued child appointment)"
+            },
+            {
                 "code": "Deleted",
                 "description": "The indicated appointment was deleted from the filler application"
             },
@@ -10757,7 +11570,7 @@
             },
             {
                 "code": "50",
-                "description": "DTaP-Hib\u00a0"
+                "description": "DTaP-Hib"
             },
             {
                 "code": "51",
@@ -10841,7 +11654,7 @@
             },
             {
                 "code": "71",
-                "description": "RSV-IGIV\u00a0"
+                "description": "RSV-IGIV"
             },
             {
                 "code": "72",
@@ -11835,10 +12648,6 @@
                 "description": "General ledger number"
             },
             {
-                "code": "L&I",
-                "description": "Labor and industries number"
-            },
-            {
                 "code": "LI",
                 "description": "Labor and industries number"
             },
@@ -12116,6 +12925,10 @@
             {
                 "code": "ADT_A09",
                 "description": "A09, A10, A11, A12"
+            },
+            {
+                "code": "ADT_A12",
+                "description": "A12"
             },
             {
                 "code": "ADT_A15",
@@ -14294,6 +15107,14 @@
                 "description": "Local general code (where z is an alphanumeric character)"
             },
             {
+                "code": "99zzz",
+                "description": "Local general code (where z is an alphanumeric character)"
+            },
+            {
+                "code": "L",
+                "description": "Local general code"
+            },
+            {
                 "code": "ACR",
                 "description": "American College of Radiology finding codes"
             },
@@ -14791,7 +15612,7 @@
     },
     "0406": {
         "id": "0406",
-        "name": "Participant Organization Unit Type",
+        "name": "Organization unit type",
         "type": "User",
         "elements": [
             {
@@ -16137,7 +16958,7 @@
         "elements": [
             {
                 "code": "SUGGESTION",
-                "description": "ANSI ASC X12 Health Care Provider Taxonomy, Level 2 -  Classification"
+                "description": "ANSI ASC X12 Health Care Provider Taxonomy, Level 2 - Classification"
             }
         ]
     },
@@ -16156,23 +16977,13 @@
         "id": "0455",
         "name": "Type of Bill Code",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values"
-            }
-        ]
+        "elements": []
     },
     "0456": {
         "id": "0456",
         "name": "Revenue code",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values"
-            }
-        ]
+        "elements": []
     },
     "0457": {
         "id": "0457",
@@ -16654,7 +17465,7 @@
     },
     "0474": {
         "id": "0474",
-        "name": "Practitioner Organization Unit Type",
+        "name": "Organization Unit Type",
         "type": "User",
         "elements": [
             {
@@ -19604,12 +20415,7 @@
         "id": "0519",
         "name": "Override reason",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values"
-            }
-        ]
+        "elements": []
     },
     "0521": {
         "id": "0521",
@@ -19959,12 +20765,7 @@
         "id": "0537",
         "name": "Institution",
         "type": "User",
-        "elements": [
-            {
-                "code": "...",
-                "description": "No suggested values defined"
-            }
-        ]
+        "elements": []
     },
     "0538": {
         "id": "0538",

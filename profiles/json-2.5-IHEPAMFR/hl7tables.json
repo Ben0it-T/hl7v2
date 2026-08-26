@@ -336,7 +336,6 @@
         "name": "Race",
         "type": "User",
         "elements": [
-            "...",
             "1002-5",
             "2028-9",
             "2054-5",
@@ -1327,6 +1326,8 @@
         "name": "Abnormal flags",
         "type": "User",
         "elements": [
+            "<",
+            ">",
             "A",
             "AA",
             "B",
@@ -1338,7 +1339,6 @@
             "LL",
             "MS",
             "N",
-            "null",
             "R",
             "S",
             "U",
@@ -1371,12 +1371,21 @@
     },
     "0085": {
         "id": "0085",
-        "name": "Observation status",
-        "type": "User",
+        "name": "Observation result status codes interpretation",
+        "type": "HL7",
         "elements": [
+            "C",
             "D",
             "F",
-            "R"
+            "I",
+            "N",
+            "O",
+            "P",
+            "R",
+            "S",
+            "U",
+            "W",
+            "X"
         ]
     },
     "0091": {
@@ -1401,7 +1410,6 @@
         "name": "Release Information",
         "type": "User",
         "elements": [
-            "_",
             "N",
             "Y"
         ]
@@ -1474,7 +1482,7 @@
     },
     "0106": {
         "id": "0106",
-        "name": "Query\/response format code",
+        "name": "Query/response format code",
         "type": "HL7",
         "elements": [
             "D",
@@ -1823,7 +1831,7 @@
     },
     "0136": {
         "id": "0136",
-        "name": "Yes\/no indicator",
+        "name": "Yes/no indicator",
         "type": "HL7",
         "elements": [
             "N",
@@ -1862,12 +1870,34 @@
     },
     "0141": {
         "id": "0141",
-        "name": "Military Rank\/Grade",
+        "name": "Military Rank/Grade",
         "type": "User",
         "elements": [
-            "E1...E9",
-            "O1...O9",
-            "W1...W4"
+            "E1",
+            "E1 ... E9",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6",
+            "E7",
+            "E8",
+            "E9",
+            "O1",
+            "O1 ... O9",
+            "O2",
+            "O3",
+            "O4",
+            "O5",
+            "O6",
+            "O7",
+            "O8",
+            "O9",
+            "W1",
+            "W1 ... W4",
+            "W2",
+            "W3",
+            "W4"
         ]
     },
     "0142": {
@@ -1966,7 +1996,7 @@
     },
     "0155": {
         "id": "0155",
-        "name": "Accept\/application acknowledgment conditions",
+        "name": "Accept/application acknowledgment conditions",
         "type": "HL7",
         "elements": [
             "AL",
@@ -1977,7 +2007,7 @@
     },
     "0156": {
         "id": "0156",
-        "name": "Which date\/time qualifier",
+        "name": "Which date/time qualifier",
         "type": "HL7",
         "elements": [
             "ANY",
@@ -1990,7 +2020,7 @@
     },
     "0157": {
         "id": "0157",
-        "name": "Which date\/time status qualifier",
+        "name": "Which date/time status qualifier",
         "type": "HL7",
         "elements": [
             "ANY",
@@ -2003,7 +2033,7 @@
     },
     "0158": {
         "id": "0158",
-        "name": "Date\/time selection qualifier",
+        "name": "Date/time selection qualifier",
         "type": "HL7",
         "elements": [
             "1ST",
@@ -2268,7 +2298,7 @@
     },
     "0174": {
         "id": "0174",
-        "name": "Nature of Service\/Test\/Observation",
+        "name": "Nature of Service/Test/Observation",
         "type": "User",
         "elements": [
             "A",
@@ -2360,13 +2390,11 @@
         "id": "0182",
         "name": "Staff type",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0183": {
         "id": "0183",
-        "name": "Active\/Inactive",
+        "name": "Active/Inactive",
         "type": "HL7",
         "elements": [
             "A",
@@ -2377,9 +2405,7 @@
         "id": "0184",
         "name": "Department",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0185": {
         "id": "0185",
@@ -2408,7 +2434,6 @@
         "name": "Ethnic Group",
         "type": "User",
         "elements": [
-            "...",
             "H",
             "N",
             "U"
@@ -2446,12 +2471,12 @@
             "AU",
             "FT",
             "IM",
-            "multipart",
             "NS",
             "SD",
             "SI",
             "TEXT",
-            "TX"
+            "TX",
+            "multipart"
         ]
     },
     "0193": {
@@ -2956,7 +2981,7 @@
     },
     "0242": {
         "id": "0242",
-        "name": "Primary Observer\u2019s Qualification",
+        "name": "Primary Observer's Qualification",
         "type": "HL7",
         "elements": [
             "C",
@@ -3177,12 +3202,13 @@
         "name": "Duration categories",
         "type": "User",
         "elements": [
+            "*",
             "12H",
             "1H",
             "1L",
             "1W",
-            "24H",
             "2.5H",
+            "24H",
             "2D",
             "2H",
             "2L",
@@ -3217,9 +3243,9 @@
             "1L",
             "1M",
             "1W",
+            "2.5H",
             "20M",
             "24H",
-            "2.5H",
             "25M",
             "2D",
             "2H",
@@ -3246,7 +3272,7 @@
             "7H",
             "7M",
             "8H",
-            "8HSHIFT",
+            "8H SHIFT",
             "8M",
             "9M",
             "BS",
@@ -3532,6 +3558,7 @@
             "Complete",
             "Dc",
             "Deleted",
+            "Discontinued",
             "Noshow",
             "Overbook",
             "Pending",
@@ -3619,7 +3646,7 @@
     },
     "0287": {
         "id": "0287",
-        "name": "Problem\/Goal action code",
+        "name": "Problem/Goal action code",
         "type": "User",
         "elements": [
             "AD",
@@ -4033,21 +4060,21 @@
             "P",
             "PRN",
             "PRNxxx",
+            "Q<integer>D",
+            "Q<integer>H",
+            "Q<integer>J<day#>",
+            "Q<integer>L",
+            "Q<integer>M",
+            "Q<integer>S",
+            "Q<integer>W",
             "QAM",
             "QHS",
             "QID",
-            "QintegerD",
-            "QintegerH",
-            "QintegerJday",
-            "QintegerL",
-            "QintegerM",
-            "QintegerS",
-            "QintegerW",
             "QOD",
             "QPM",
             "QSHIFT",
             "TID",
-            "Uspec",
+            "U <spec>",
             "V",
             "xID"
         ]
@@ -4081,7 +4108,6 @@
             "DEA",
             "GL",
             "LI",
-            "LI",
             "MCD",
             "MCR",
             "QA",
@@ -4104,7 +4130,7 @@
     },
     "0344": {
         "id": "0344",
-        "name": "Patient_s Relationship to Insured",
+        "name": "Patient's Relationship to Insured",
         "type": "User",
         "elements": [
             "01",
@@ -4130,7 +4156,7 @@
     },
     "0347": {
         "id": "0347",
-        "name": "State\/province",
+        "name": "State/province",
         "type": "User",
         "elements": [
             "AB",
@@ -4189,6 +4215,7 @@
             "BAR_P12",
             "BPS_O29",
             "BRP_030",
+            "BRP_O30",
             "BRT_O32",
             "BTS_O31",
             "CRM_C01",
@@ -4366,8 +4393,8 @@
         "type": "HL7",
         "elements": [
             "2.3",
-            "ISO2022-1994",
-            "null"
+            "<null>",
+            "ISO 2022-1994"
         ]
     },
     "0357": {
@@ -4397,12 +4424,12 @@
         "elements": [
             "0",
             "1",
-            "2_"
+            "2 ..."
         ]
     },
     "0360": {
         "id": "0360",
-        "name": "Degree\/license\/certificate",
+        "name": "Degree/license/certificate",
         "type": "User",
         "elements": [
             "AA",
@@ -4454,11 +4481,11 @@
             "NG",
             "NP",
             "PA",
-            "PharmD",
             "PHD",
             "PHE",
             "PHS",
             "PN",
+            "PharmD",
             "RMA",
             "RPH",
             "SEC",
@@ -4498,7 +4525,7 @@
     },
     "0366": {
         "id": "0366",
-        "name": "Local\/remote control state",
+        "name": "Local/remote control state",
         "type": "HL7",
         "elements": [
             "L",
@@ -4577,7 +4604,7 @@
     },
     "0371": {
         "id": "0371",
-        "name": "Additive\/Preservative",
+        "name": "Additive/Preservative",
         "type": "HL7",
         "elements": [
             "ACDA",
@@ -4600,7 +4627,7 @@
             "EDTK75",
             "EDTN",
             "ENT",
-            "ENT",
+            "ENT+",
             "F10",
             "FDP",
             "FL10",
@@ -4846,10 +4873,11 @@
         "name": "Coding system",
         "type": "HL7",
         "elements": [
-            "L",
+            "99zzz or L",
+            "99zzz",
             "L",
             "ACR",
-            "ANS",
+            "ANS+",
             "ART",
             "AS4",
             "AS4E",
@@ -4895,7 +4923,7 @@
             "ICDO",
             "ICS",
             "ICSD",
-            "ISO",
+            "ISO+",
             "ISOnnnn",
             "IUPC",
             "IUPP",
@@ -5309,7 +5337,7 @@
         "elements": [
             "0",
             "1",
-            "2_"
+            "2"
         ]
     },
     "0421": {
@@ -5778,17 +5806,13 @@
         "id": "0455",
         "name": "Type of Bill Code",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0456": {
         "id": "0456",
         "name": "Revenue code",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0457": {
         "id": "0457",
@@ -5808,6 +5832,14 @@
         "type": "User",
         "elements": [
             "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
             "10",
             "11",
             "12",
@@ -5818,7 +5850,6 @@
             "17",
             "18",
             "19",
-            "2",
             "20",
             "21",
             "22",
@@ -5829,26 +5860,19 @@
             "27",
             "28",
             "29",
-            "3",
             "30",
             "31",
             "32",
             "33",
             "34",
-            "35.",
-            "36.",
+            "35",
+            "36",
             "37",
-            "38.",
-            "39.",
-            "4",
-            "40.",
-            "41.",
-            "42.",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"
+            "38",
+            "39",
+            "40",
+            "41",
+            "42"
         ]
     },
     "0459": {
@@ -5874,7 +5898,7 @@
     },
     "0465": {
         "id": "0465",
-        "name": "Name\/address representation",
+        "name": "Name/address representation",
         "type": "HL7",
         "elements": [
             "A",
@@ -5991,7 +6015,7 @@
     },
     "0477": {
         "id": "0477",
-        "name": "Controlled Substance Schedule*",
+        "name": "Controlled Substance Schedule",
         "type": "User",
         "elements": [
             "I",
@@ -6077,12 +6101,12 @@
             "R",
             "S",
             "T",
-            "TDinteger",
-            "THinteger",
-            "TLinteger",
-            "TMinteger",
-            "TSinteger",
-            "TWinteger"
+            "TD<integer>",
+            "TH<integer>",
+            "TL<integer>",
+            "TM<integer>",
+            "TS<integer>",
+            "TW<integer>"
         ]
     },
     "0487": {
@@ -6091,117 +6115,273 @@
         "type": "HL7",
         "elements": [
             "ABS",
-            "AMN",
+            "ACNE",
+            "ACNFLD",
+            "AIRS",
+            "ALL",
+            "AMP",
+            "ANGI",
+            "ARTC",
+            "ASERU",
             "ASP",
-            "BIFL",
-            "BLDA",
+            "ATTE",
+            "AUTOC",
+            "AUTP",
             "BBL",
-            "BLDC",
-            "BPU",
-            "BLDV",
+            "BCYST",
+            "BITE",
+            "BLEB",
+            "BLIST",
+            "BOIL",
             "BON",
-            "BRO",
+            "BONE",
+            "BOWL",
+            "BPU",
             "BRN",
+            "BRSH",
+            "BRTH",
+            "BRUS",
+            "BUB",
+            "BULLA",
+            "BX",
             "CALC",
-            "CDM",
-            "CNL",
-            "CTP",
-            "CSF",
-            "CVM",
-            "CVX",
-            "COL",
-            "BLDCO",
+            "CARBU",
+            "CAT",
+            "CBITE",
+            "CLIPP",
             "CNJT",
-            "CUR",
+            "COL",
+            "CONE",
+            "CSCR",
+            "CSERU",
+            "CSITE",
+            "CSMY",
+            "CST",
+            "CSVR",
+            "CTP",
+            "CVPS",
+            "CVPT",
+            "CYN",
             "CYST",
-            "DIAF",
-            "DOSE",
+            "DBITE",
+            "DCS",
+            "DEC",
+            "DEION",
+            "DIA",
+            "DISCHG",
+            "DIV",
             "DRN",
-            "DUFL",
-            "EAR",
+            "DRNG",
+            "DRNGP",
             "EARW",
+            "EBRUSH",
+            "EEYE",
+            "EFF",
+            "EFFUS",
+            "EFOD",
+            "EISO",
             "ELT",
-            "ENDC",
-            "ENDM",
-            "EYE",
+            "ENVIR",
+            "EOTH",
+            "ESOI",
+            "ESOS",
+            "ETA",
+            "ETTP",
+            "ETTUB",
+            "EWHI",
             "EXG",
-            "FLT",
+            "EXS",
+            "EXUDTE",
+            "FAW",
+            "FBLOOD",
+            "FGA",
             "FIST",
+            "FLD",
+            "FLT",
             "FLU",
+            "FLUID",
+            "FOLEY",
+            "FRS",
+            "FSCLP",
+            "FUR",
             "GAS",
+            "GASA",
+            "GASAN",
+            "GASBR",
+            "GASD",
             "GAST",
-            "GEN",
-            "GENC",
-            "GENL",
             "GENV",
-            "HAR",
+            "GRAFT",
+            "GRANU",
+            "GROSH",
+            "GSOL",
+            "GSPEC",
+            "GT",
+            "GTUBE",
+            "HBITE",
+            "HBLUD",
+            "HEMAQ",
+            "HEMO",
+            "HERNI",
+            "HEV",
+            "HIC",
+            "HYDC",
+            "IBITE",
+            "ICYST",
+            "IDC",
             "IHG",
+            "ILEO",
+            "ILLEG",
+            "IMP",
+            "INCI",
+            "INFIL",
+            "INS",
+            "INTRD",
             "IT",
-            "ISLT",
-            "LAM",
-            "LN",
-            "LNA",
-            "LNV",
+            "IUD",
+            "IVCAT",
+            "IVFLD",
+            "IVTIP",
+            "JEJU",
+            "JNTFLD",
+            "JP",
+            "KELOI",
+            "KIDFLD",
+            "LAVG",
+            "LAVGG",
+            "LAVGP",
+            "LAVPG",
+            "LENS1",
+            "LENS2",
+            "LESN",
             "LIQ",
-            "MAR",
-            "MEC",
+            "LIQO",
+            "LSAC",
+            "MAHUR",
+            "MASS",
             "MBLD",
-            "MLK",
-            "MILK",
-            "NAIL",
-            "NOS",
+            "MUCOS",
+            "MUCUS",
+            "NASDR",
+            "NEDL",
+            "NEPH",
+            "NGASP",
+            "NGAST",
+            "NGS",
+            "NODUL",
+            "NSECR",
             "ORH",
-            "PAFL",
-            "PRT",
-            "PLC",
+            "ORL",
+            "OTH",
+            "PACEM",
+            "PCFL",
+            "PDSIT",
+            "PDTS",
+            "PELVA",
+            "PENIL",
+            "PERIA",
+            "PILOC",
+            "PINS",
+            "PIS",
+            "PLAN",
             "PLAS",
             "PLB",
-            "PLR",
+            "PLEVS",
+            "PND",
+            "POL",
+            "POPGS",
+            "POPLG",
+            "POPLV",
+            "PORTA",
             "PPP",
+            "PROST",
             "PRP",
-            "PUS",
-            "RT",
+            "PSC",
+            "PUNCT",
+            "PUSFR",
+            "PUST",
+            "QC3",
+            "RANDU",
+            "RBITE",
+            "RECT",
+            "RECTA",
+            "RENALC",
+            "RENC",
+            "RES",
             "SAL",
-            "SMN",
+            "SCAR",
+            "SCLV",
+            "SCROA",
+            "SECRE",
             "SER",
+            "SHU",
+            "SHUNF",
+            "SHUNT",
+            "SITE",
+            "SKBP",
             "SKN",
-            "SKM",
+            "SMM",
+            "SNV",
             "SPRM",
+            "SPRP",
+            "SPRPB",
+            "SPS",
             "SPT",
             "SPTC",
             "SPTT",
+            "SPUT1",
+            "SPUTIN",
+            "SPUTSP",
+            "STER",
             "STL",
-            "SWT",
-            "SNV",
-            "TEAR",
-            "THRT",
+            "STONE",
+            "SUBMA",
+            "SUBMX",
+            "SUMP",
+            "SUP",
+            "SUTUR",
+            "SWGZ",
+            "TASP",
             "TISS",
-            "TISG",
-            "TLGI",
-            "TLNG",
-            "TISPL",
-            "TSMI",
             "TISU",
-            "TUB",
-            "ULC",
-            "UMB",
-            "UMED",
-            "URTH",
+            "TLC",
+            "TRAC",
+            "TRANS",
+            "TSERU",
+            "TSTES",
+            "TTRA",
+            "TUBES",
+            "TUMOR",
+            "TZANC",
+            "UDENT",
             "UR",
             "URC",
+            "URINB",
+            "URINC",
+            "URINM",
+            "URINN",
+            "URINP",
             "URT",
-            "URNS",
-            "USUB",
+            "USCOP",
+            "USPEC",
+            "VASTIP",
+            "VENT",
             "VITF",
-            "VOM",
-            "BLD",
-            "BDY",
+            "WASH",
+            "WASI",
             "WAT",
+            "WB",
+            "WEN",
             "WICK",
             "WND",
             "WNDA",
+            "WNDD",
             "WNDE",
-            "WNDD"
+            "WORM",
+            "WRT",
+            "WWA",
+            "WWO",
+            "WWT"
         ]
     },
     "0488": {
@@ -6308,6 +6488,7 @@
         "name": "Specimen Appropriateness",
         "type": "HL7",
         "elements": [
+            "??",
             "A",
             "I",
             "P"
@@ -6480,7 +6661,6 @@
             "111",
             "112",
             "113",
-            "1137",
             "114",
             "115",
             "116",
@@ -6503,7 +6683,8 @@
             "133",
             "134",
             "135",
-            "136"
+            "136",
+            "1137"
         ]
     },
     "0497": {
@@ -6570,7 +6751,7 @@
     },
     "0503": {
         "id": "0503",
-        "name": "Sequence\/Results Flag",
+        "name": "Sequence/Results Flag",
         "type": "HL7",
         "elements": [
             "C",
@@ -6591,9 +6772,12 @@
     },
     "0505": {
         "id": "0505",
-        "name": "Cyclic Entry\/Exit Indicator",
+        "name": "Cyclic Entry/Exit Indicator",
         "type": "HL7",
-        "elements": []
+        "elements": [
+            "#",
+            "*"
+        ]
     },
     "0506": {
         "id": "0506",
@@ -6667,7 +6851,7 @@
     },
     "0513": {
         "id": "0513",
-        "name": "Blood Product Transfusion\/Disposition Status",
+        "name": "Blood Product Transfusion/Disposition Status",
         "type": "HL7",
         "elements": [
             "RA",
@@ -6738,15 +6922,14 @@
         "id": "0519",
         "name": "Override reason",
         "type": "User",
-        "elements": [
-            "_"
-        ]
+        "elements": []
     },
     "0523": {
         "id": "0523",
         "name": "Computation type",
         "type": "HL7",
         "elements": [
+            "%",
             "a"
         ]
     },
@@ -6810,7 +6993,7 @@
     },
     "0530": {
         "id": "0530",
-        "name": "Organization, agency, department ",
+        "name": "Organization, agency, department",
         "type": "User",
         "elements": [
             "AE",
@@ -6823,7 +7006,7 @@
     },
     "0532": {
         "id": "0532",
-        "name": "Expanded yes\/no indicator",
+        "name": "Expanded yes/no indicator",
         "type": "HL7",
         "elements": [
             "ASKU",
@@ -6876,9 +7059,7 @@
         "id": "0537",
         "name": "Institution",
         "type": "User",
-        "elements": [
-            "..."
-        ]
+        "elements": []
     },
     "0538": {
         "id": "0538",
@@ -6913,7 +7094,7 @@
     },
     "0548": {
         "id": "0548",
-        "name": "Signatory_s Relationship to Subject",
+        "name": "Signatory's Relationship to Subject",
         "type": "User",
         "elements": [
             "1",
@@ -7134,6 +7315,7 @@
             "ISCHI",
             "ISH",
             "JAW",
+            "JUGE",
             "JUGI",
             "KIDN",
             "KNEE",
@@ -7403,7 +7585,7 @@
     },
     "IHE-FRANCE-ZFA-1": {
         "id": "IHE-FRANCE-ZFA-1",
-        "name": "Patient PHR\u2019s status",
+        "name": "Patient PHR's status",
         "type": "User",
         "elements": [
             "ACTIF",
@@ -7423,7 +7605,7 @@
     },
     "IHE-FRANCE-ZFA-9": {
         "id": "IHE-FRANCE-ZFA-9",
-        "name": "Information et opposition \u00e0 l\u2019alimentation",
+        "name": "Information et opposition \u00e0 l'alimentation",
         "type": "User",
         "elements": [
             "NA",
@@ -7433,7 +7615,7 @@
     },
     "IHE-FRANCE-ZFD-5": {
         "id": "IHE-FRANCE-ZFD-5",
-        "name": "Mode d\u2019obtention de l\u2019identit\u00e9",
+        "name": "Mode d'obtention de l'identit\u00e9",
         "type": "User",
         "elements": [
             "CB",
@@ -7445,7 +7627,7 @@
     },
     "IHE-FRANCE-ZFD-7": {
         "id": "IHE-FRANCE-ZFD-7",
-        "name": "Type de justificatif d\u2019identit\u00e9",
+        "name": "Type de justificatif d'identit\u00e9",
         "type": "User",
         "elements": [
             "AN",
