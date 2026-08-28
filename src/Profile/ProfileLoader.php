@@ -61,7 +61,15 @@ class ProfileLoader
         string $triggerEvent
     ): string {
 
-        $filename = sprintf('%s/json-%s/messageType.json', $this->profilePath, $versionId);
+        $versionPath = sprintf('%s/json-%s', $this->profilePath, $versionId);
+
+        if (!is_dir($versionPath)) {
+            throw new HL7Exception(
+                sprintf('HL7 version %s is not supported.', $versionId)
+            );
+        }
+
+        $filename = $versionPath . '/messageType.json';
         if (!is_file($filename)) {
             throw new HL7Exception(
                 'messageType.json not found.'
