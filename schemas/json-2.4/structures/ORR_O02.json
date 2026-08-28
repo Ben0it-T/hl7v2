@@ -45,7 +45,8 @@
                 "minOccurs": "1",
                 "maxOccurs": "1"
             }
-        ]
+        ],
+        "type": "choice"
     },
     "ORDER": {
         "elements": [
