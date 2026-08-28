@@ -381,6 +381,11 @@ class HL7xmlProfilesGenerator {
         $segGroupNode->appendChild($this->messageProfile->createAttribute('Min'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Min"]));
         $segGroupNode->appendChild($this->messageProfile->createAttribute('Max'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Max"]));
 
+        if (isset($this->structuresSchemas[$structureName][$segGroupName]['type']) && $this->structuresSchemas[$structureName][$segGroupName]['type'] === "choice") {
+            $segGroupNode->appendChild($this->messageProfile->createAttribute('kind'))->appendChild($this->messageProfile->createTextNode("choice"));
+            $attributes["kind"] = "choice";
+        }
+
         foreach ($this->structuresSchemas[$structureName][$segGroupName]["elements"] as $element) {
             $attributes = $this->getElementAttributes($element);
             if ($attributes["Type"] == "segment") {

@@ -348,6 +348,9 @@ class HL7jsonProfilesGenerator
     {
         // set segGroup attributes
         $segGroupAttributes["LongName"] = $segGroupAttributes["Name"];
+        if (isset($this->structuresSchemas[$structureName][$segGroupName]['type']) && $this->structuresSchemas[$structureName][$segGroupName]['type'] === "choice") {
+            $segGroupAttributes["kind"] = "choice";
+        }
         $group = [];
         foreach ($this->structuresSchemas[$structureName][$segGroupName]["elements"] as $element) {
             $attributes = $this->getElementAttributes($element);

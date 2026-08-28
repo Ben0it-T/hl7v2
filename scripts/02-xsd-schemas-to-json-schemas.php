@@ -472,8 +472,26 @@ foreach ($files as $file) {
         $groupName = (count($nameParts) > 1) ? $nameParts[1] : $name;
         $structureArray[$groupName] = ["elements" => []];
 
-        $elmts = $xpath->query('xsd:complexType[@name="'.$fullname.'"]//xsd:element[@ref]', $contextNode);
+        // sequence
+        $elmts = $xpath->query('xsd:complexType[@name="'.$fullname.'"]/xsd:sequence/xsd:element[@ref]', $contextNode);
         if ($elmts->length > 0) {
+            foreach ($elmts as $elmt) {
+                $ref = $elmt->getAttribute("ref");
+                $refParts = explode(".", $ref);
+                $theRef = (count($refParts) > 1) ? $refParts[1] : $ref;
+                $type = (strlen($ref) > 3) ? "group" : "segment";
+                $structureArray[$groupName]["elements"][] = [
+                    $type => $theRef,
+                    "minOccurs" => $elmt->getAttribute("minOccurs"),
+                    "maxOccurs" => $elmt->getAttribute("maxOccurs"),
+                ];
+            }
+        }
+
+        // choice
+        $elmts = $xpath->query('xsd:complexType[@name="'.$fullname.'"]/xsd:choice/xsd:element[@ref]', $contextNode);
+        if ($elmts->length > 0) {
+            $structureArray[$groupName]["type"] = "choice";
             foreach ($elmts as $elmt) {
                 $ref = $elmt->getAttribute("ref");
                 $refParts = explode(".", $ref);
