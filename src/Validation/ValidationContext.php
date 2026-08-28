@@ -31,13 +31,11 @@ final class ValidationContext
     public bool $moveBack = false;
 
     /**
-     * First segment names of repeating parent groups.
+     * Segments that may start a repeating parent groups.
      *
-     * Note : equivalent of legacy $profileParentGroupFirstSegmentsName.
-     *
-     * @var list<string>
+     * @var array<mixed>
      */
-    public array $parentGroupFirstSegments = [];
+    public array $parentGroupEntrySegmentsStack = [];
 
     /**
      * All segment names from profile.
@@ -68,33 +66,40 @@ final class ValidationContext
     /**
      * Check whether a group exists in the message, starting from the current message position.
      *
-     * A group is considered to exist if its first segment appears later in the message.
+     * A group is considered to exist if one of its entry segments appears later in the message.
      *
      * @param Message $message
-     * @param string $firstSegmentNameInGroup
+     * @param string[] $entrySegments Segments that may start the group.
      *
      * @return bool
      */
-    public function isGroupExists(Message $message, string $firstSegmentNameInGroup): bool
+    public function isGroupExists(Message $message, array $entrySegments): bool
     {
         $messageSegmentNames = $message->getSegmentNames();
 
         $remainingSegments = array_slice($messageSegmentNames, $this->messageSegmentIndex);
 
-        return in_array($firstSegmentNameInGroup, $remainingSegments, true);
+        foreach ($remainingSegments as $segmentName) {
+            if (in_array($segmentName, $entrySegments, true)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
-     * Count group repetitions in message,
-     * starting from the current message position.
+     * Count group repetitions in message, starting from the current message position.
+     *
+     * A new repetition is detected whenever a group entry segment is encountered.
      *
      * @param Message $message
-     * @param string $firstSegmentNameInGroup
-     * @param string[] $segmentsInGroup
+     * @param string[] $entrySegments Segments that may start a group occurrence.
+     * @param string[] $segmentsInGroup Segments belonging to the group.
      *
-     * @return int
+     * @return int Number of detected group occurrences.
      */
-    public function countGroupRepetitions(Message $message, string $firstSegmentNameInGroup, array $segmentsInGroup): int
+    public function countGroupRepetitions(Message $message, array $entrySegments, array $segmentsInGroup): int
     {
         $groupRepetitions = 0;
 
@@ -107,7 +112,7 @@ final class ValidationContext
 
             $segmentName = $segment->getName();
 
-            if ($segmentName === $firstSegmentNameInGroup) {
+            if (in_array($segmentName, $entrySegments, true)) {
                 $groupRepetitions++;
             }
 

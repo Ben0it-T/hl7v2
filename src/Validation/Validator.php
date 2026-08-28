@@ -596,10 +596,7 @@ class Validator
 
         // Segments defined in the group.
         $segmentsInGroup = $this->profile->getSegmentNamesInGroup($groupDef);
-
-        // First segment names in group hierarchy.
-        $firstSegmentsInGroup = $this->profile->getFirstSegmentNamesInGroup($groupDef);
-        $firstSegmentNameInGroup = $firstSegmentsInGroup[0];
+        $entrySegments = $this->profile->getGroupEntrySegmentNames($groupDef);
 
         // Current message segment.
         $currentSegment = $this->message->getSegment($this->context->messageSegmentIndex);
@@ -608,12 +605,12 @@ class Validator
         $currentSegmentName = $currentSegment?->getName() ?? '';
 
         // Group existence.
-        $isGroupExists = $this->context->isGroupExists($this->message, $firstSegmentNameInGroup);
+        $isGroupExists = $this->context->isGroupExists($this->message, $entrySegments);
 
         // Group repetitions.
         $groupRepetitions = $groupDef['Name'] === $this->message->getStructure()
             ? 1
-            : $this->context->countGroupRepetitions($this->message, $firstSegmentNameInGroup, $segmentsInGroup);
+            : $this->context->countGroupRepetitions($this->message, $entrySegments, $segmentsInGroup);
 
         if ($groupRepetitions === 0) {
             $isGroupExists = false;
@@ -623,17 +620,24 @@ class Validator
         $isGroupRepeating = $groupRepetitions > 1;
 
         if ($isGroupRepeating) {
-            $this->context->parentGroupFirstSegments[] = $firstSegmentNameInGroup;
+            $this->context->parentGroupEntrySegmentsStack[] = $entrySegments;
         }
 
         // Navigation state.
         /** @var NavigationState|null $navigationState */
         $navigationState = null;
 
+        $parentEntrySegments = [];
+        foreach ($this->context->parentGroupEntrySegmentsStack as $segments) {
+            $parentEntrySegments = array_merge(
+                $parentEntrySegments,
+                $segments
+            );
+        }
+
         $this->log("-Group- --- Group '{$groupDef["Name"]}' begin.");
         $this->log("-Group- Group '".$groupDef["Name"]."' " . (($groupDef["Name"] === $this->message->getStructure()) ? "is" : "is not") . " the root group.");
-        $this->log("-Group- First segment name in group: ".$firstSegmentNameInGroup);
-        $this->log("-Group- First segment names in group hierarchy: " . (implode(", ", $firstSegmentsInGroup)));
+        $this->log("-Group- Names of the segments that may start a group: " . (implode(", ", $entrySegments)));
         $this->log("-Group- Segments defined in the group: " . (implode(", ", $segmentsInGroup)));
         $this->log("-Group- Segments in message: " . (implode(", ", $this->message->getSegmentNames())));
 
@@ -641,7 +645,7 @@ class Validator
         $this->log("-Group- groupRepetitions: $groupRepetitions");
         $this->log("-Group- isGroupRepeating: " . ($isGroupRepeating ? "true" : "false"));
 
-        $this->log("-Group- First segment names of repeating parent groups: " . (implode(", ", $this->context->parentGroupFirstSegments)));
+        $this->log("-Group- Parent group entry segments: " . (implode(", ", $parentEntrySegments)));
         $this->log("-Group- Segment found: {$currentSegmentName} - location: {$this->context->messageSegmentIndex}");
 
 
@@ -685,6 +689,9 @@ class Validator
         // Navigation state resolution
         // ---
 
+        $isGroupEntrySegment = in_array($currentSegmentName, $entrySegments, true);
+        $isParentGroupEntrySegment = in_array($currentSegmentName, $parentEntrySegments, true);
+
         if (!$isGroupExists) {
             // The group does not exist in message.
             $navigationState = NavigationState::GROUP_NOT_FOUND;
@@ -693,7 +700,7 @@ class Validator
             // The group exists but message segment is not defined.
             $navigationState = NavigationState::SEGMENT_NOT_DEFINED;
 
-        } elseif ($currentSegmentName !== $firstSegmentNameInGroup && !in_array($currentSegmentName, $this->context->parentGroupFirstSegments, true)) {
+        } elseif (!$isGroupEntrySegment && !$isParentGroupEntrySegment) {
             // The group exists but message segment is not the first segment of the group or of the parent group.
             $navigationState = NavigationState::SEGMENT_NOT_EXPECTED;
 
@@ -888,6 +895,7 @@ class Validator
         $profileSegmentIndex = $this->context->profileSegmentIndex;
 
         // Current group repetitions
+        $isChoice = (($groupDef['kind'] ?? null) === 'choice');
 
         for ($groupRep = 1; $groupRep <= $groupRepetitions; $groupRep++) {
             $this->context->profileSegmentIndex = $profileSegmentIndex;
@@ -921,6 +929,7 @@ class Validator
 
             $childCount = count($groupDef['segments']);
 
+            $choiceMatched = false;
             for ($childIndex = 0; $childIndex < $childCount; $childIndex++) {
 
                 $childDef = $groupDef['segments'][$childIndex];
@@ -936,6 +945,7 @@ class Validator
                         // SEGMENT_MATCHED
                         $this->log("-Segment- >> Profile segment found. Validate '{$segmentName}' segment. Move on");
 
+                        $choiceMatched = true;
                         $segmentComments = "";
                         $segmentError = false;
                         $segmentReps = 1;
@@ -1019,6 +1029,10 @@ class Validator
 
                         // Profile: Move On.
                         $this->context->profileSegmentIndex++;
+
+                    } elseif ($isChoice) {
+                        // The other alternatives are neither absent nor in error.
+                        continue;
 
                     } else {
                         $this->log("-Segment- >> Profile segment not found.");
@@ -1147,7 +1161,7 @@ class Validator
                                 $case = NavigationState::SEGMENT_APPEARS_LATER;
                                 $this->log("-Segment- >> message '{$segmentName}' segment appears later in a repetition of the group (c). Move on.");
 
-                            } elseif (in_array($segmentName, $this->context->parentGroupFirstSegments, true)) {
+                            } elseif (in_array($segmentName, $parentEntrySegments, true)) {
                                 // d. message segment name appears in a repetition of the parent group. Move on.
                                 $case = NavigationState::SEGMENT_APPEARS_LATER;
                                 $this->log("-Segment- >> message '{$segmentName}' segment appears in a repetition of the parent group (d). Move on.");
@@ -1273,6 +1287,19 @@ class Validator
                 }
             }
 
+            if ($isChoice && !$choiceMatched) {
+                $description = "No valid alternative was selected in choice group '{$groupDef['Name']}'.";
+
+                $this->validationResult->addTestReport([
+                    'Location'    => $this->message->getStructure(),
+                    'Description' => $description,
+                    'Type'        => 'Structure',
+                    'Result'      => false,
+                ]);
+
+                $groupError = true;
+                $groupComments .= $description . " ";
+            }
 
             $groupArray[] = $group;
 
@@ -1297,7 +1324,7 @@ class Validator
         // ---
 
         if ($isGroupRepeating) {
-            array_pop($this->context->parentGroupFirstSegments);
+            array_pop($this->context->parentGroupEntrySegmentsStack);
         }
 
 

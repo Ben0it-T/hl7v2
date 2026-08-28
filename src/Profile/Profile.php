@@ -115,6 +115,15 @@ class Profile
     /**
      * Get names of the first segments in a profile group and its child groups (group and sub-goup).
      *
+     * @deprecated Use getGroupEntrySegmentNames() instead.
+     *
+     * This method returns the first segments of descendant groups and
+     * does not correctly model XSD choice groups.
+     *
+     * This method has been superseded by getGroupEntrySegmentNames(),
+     * which correctly supports choice groups and returns the actual
+     * entry segments of a group.
+     *
      * @param array<mixed,mixed> $segGroup
      * @return string[]
      */
@@ -131,6 +140,51 @@ class Profile
         }
 
         return $segmentNames;
+    }
+
+    /**
+     * Returns the names of the segments that may start a group.
+     *
+     * For a sequential group, returns the first reachable segment.
+     * For a choice group, returns all possible entry segments.
+     *
+     * @param array<mixed,mixed> $segGroup Profile group definition.
+     *
+     * @return string[] Group entry segment names.
+     */
+
+    public function getGroupEntrySegmentNames(array $segGroup): array
+    {
+        if (($segGroup['kind'] ?? null) === 'choice') {
+            $segmentNames = [];
+
+            foreach ($segGroup['segments'] as $child) {
+
+                if ($child['Type'] === 'segment') {
+                    $segmentNames[] = $child['Name'];
+
+                } elseif ($child['Type'] === 'group') {
+                    $segmentNames = array_merge(
+                        $segmentNames,
+                        $this->getGroupEntrySegmentNames($child)
+                    );
+                }
+            }
+
+            return array_values(array_unique($segmentNames));
+        }
+
+        $firstChild = $segGroup['segments'][0] ?? null;
+        if ($firstChild === null) {
+            return [];
+        }
+
+        if ($firstChild['Type'] === 'segment') {
+            return [$firstChild['Name']];
+        }
+
+        return $this->getGroupEntrySegmentNames($firstChild);
+
     }
 
 }
