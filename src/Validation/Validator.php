@@ -508,16 +508,6 @@ class Validator
     private function checkHL7Table(string $table, string $elementValue, string $elementType, string $elementName): array
     {
         $type = 'Table';
-
-        // Preserve legacy behaviour (case-insensitive comparison).
-        // TODO: Audit HL7 tables and switch to strict case-sensitive validation.
-        //$result = in_array(
-        //    strtoupper($elementValue),
-        //    array_map(
-        //        'strtoupper',
-        //        $this->hl7Tables[$table]['elements']
-        //    )
-        //);
         $result = in_array($elementValue, $this->hl7Tables[$table]['elements'], true);
 
         // Local extension of HL7 table
