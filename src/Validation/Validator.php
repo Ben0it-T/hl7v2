@@ -1604,30 +1604,37 @@ class Validator
 
                 // check table - only if has no components
                 if (
-                    !isset($fieldDef['components'])
-                    && $fieldDef['Table'] !== ""
+                    $fieldDef['Table'] !== ""
                     && isset($this->hl7Tables[$fieldDef['Table']])
+                    && !empty($this->hl7Tables[$fieldDef['Table']]['elements'])
+                    && in_array($fieldDef['Datatype'], ['ID', 'IS', 'CE', 'CF', 'CNE', 'CWE'], true)
                 ) {
-                    if (!empty($this->hl7Tables[$fieldDef['Table']]['elements'])) {
-                        $tableCheck = $this->checkHL7Table(
-                            $fieldDef["Table"],
-                            $fieldValue,
-                            'Field',
-                            $elementName
-                        );
+                    $valueToValidate = $fieldValue;
 
-                        $this->validationResult->addTestReport([
-                            'Location'    => $location,
-                            'Description' => $tableCheck['description'],
-                            'Type'        => $tableCheck['type'],
-                            'Result'      => $tableCheck['result'],
-                        ]);
-
-                        if (!$tableCheck['result']) {
-                            $repeatHasError = true;
-                        }
-                        $repeatComments .= $tableCheck['description'] . " ";
+                    if (in_array($fieldDef['Datatype'], ['CE', 'CF', 'CNE', 'CWE'], true)) {
+                        $valueToValidate = $fieldRepeat->hasComponent(1)
+                            ? $fieldRepeat->getComponent(1)?->getSubComponent(1)?->getValue()
+                            : '';
                     }
+
+                    $tableCheck = $this->checkHL7Table(
+                        $fieldDef["Table"],
+                        (string) $valueToValidate,
+                        'Field',
+                        $elementName
+                    );
+
+                    $this->validationResult->addTestReport([
+                        'Location'    => $location,
+                        'Description' => $tableCheck['description'],
+                        'Type'        => $tableCheck['type'],
+                        'Result'      => $tableCheck['result'],
+                    ]);
+
+                    if (!$tableCheck['result']) {
+                        $repeatHasError = true;
+                    }
+                    $repeatComments .= $tableCheck['description'] . " ";
                 }
 
                 //
