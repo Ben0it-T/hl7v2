@@ -1602,7 +1602,7 @@ class Validator
                     }
                 }
 
-                // check table - only if has no components
+                // check table
                 if (
                     $fieldDef['Table'] !== ""
                     && isset($this->hl7Tables[$fieldDef['Table']])
@@ -1617,24 +1617,26 @@ class Validator
                             : '';
                     }
 
-                    $tableCheck = $this->checkHL7Table(
-                        $fieldDef["Table"],
-                        (string) $valueToValidate,
-                        'Field',
-                        $elementName
-                    );
+                    if ($valueToValidate !== '') {
+                        $tableCheck = $this->checkHL7Table(
+                            $fieldDef["Table"],
+                            (string) $valueToValidate,
+                            'Field',
+                            $elementName
+                        );
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $location,
-                        'Description' => $tableCheck['description'],
-                        'Type'        => $tableCheck['type'],
-                        'Result'      => $tableCheck['result'],
-                    ]);
+                        $this->validationResult->addTestReport([
+                            'Location'    => $location,
+                            'Description' => $tableCheck['description'],
+                            'Type'        => $tableCheck['type'],
+                            'Result'      => $tableCheck['result'],
+                        ]);
 
-                    if (!$tableCheck['result']) {
-                        $repeatHasError = true;
+                        if (!$tableCheck['result']) {
+                            $repeatHasError = true;
+                        }
+                        $repeatComments .= $tableCheck['description'] . " ";
                     }
-                    $repeatComments .= $tableCheck['description'] . " ";
                 }
 
                 //
