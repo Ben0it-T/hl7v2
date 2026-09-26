@@ -2083,7 +2083,7 @@
         "Item": "01024",
         "Type": "SI",
         "Table": "",
-        "LongName": "Set ID- CM2",
+        "LongName": "Set ID - CM2",
         "maxLength": "4",
         "Chapter": "8.11.4.1"
     },
@@ -6571,7 +6571,7 @@
         "Item": "00969",
         "Type": "TS",
         "Table": "",
-        "LongName": "Activation Date  LDP",
+        "LongName": "Activation Date - LDP",
         "maxLength": "26",
         "Chapter": "8.9.5.7"
     },
@@ -7955,7 +7955,7 @@
         "Item": "01028",
         "Type": "NM",
         "Table": "",
-        "LongName": "Number of Sample Containers *",
+        "LongName": "Number of Sample Containers",
         "maxLength": "4",
         "Chapter": "4.5.3.37"
     },
@@ -7971,7 +7971,7 @@
         "Item": "01030",
         "Type": "CE",
         "Table": "",
-        "LongName": "Collector's Comment *",
+        "LongName": "Collector's Comment",
         "maxLength": "250",
         "Chapter": "4.5.3.39"
     },
@@ -12682,7 +12682,7 @@
     "RCP.7": {
         "Item": "01594",
         "Type": "ID",
-        "Table": "",
+        "Table": "HL70391",
         "LongName": "Segment group inclusion",
         "maxLength": "256",
         "Chapter": "5.5.6.7"
@@ -15891,7 +15891,7 @@
         "Item": "01640",
         "Type": "NM",
         "Table": "",
-        "LongName": "Total occurrence's",
+        "LongName": "Total Occurrences",
         "maxLength": "10",
         "Chapter": "4.5.4.14"
     },
@@ -16043,7 +16043,7 @@
         "Item": "00914",
         "Type": "SI",
         "Table": "",
-        "LongName": "Set ID- TXA",
+        "LongName": "Set ID - TXA",
         "maxLength": "4",
         "Chapter": "9.6.1.1"
     },
@@ -16299,7 +16299,7 @@
         "Item": "00547",
         "Type": "DT",
         "Table": "",
-        "LongName": "Occur Span Start Date(33)",
+        "LongName": "Occur Span Start Date (33)",
         "maxLength": "8",
         "Chapter": "6.5.10.18"
     },
@@ -16315,7 +16315,7 @@
         "Item": "00531",
         "Type": "NM",
         "Table": "",
-        "LongName": "Blood Deductible  (43)",
+        "LongName": "Blood Deductible (43)",
         "maxLength": "1",
         "Chapter": "6.5.10.2"
     },
@@ -16371,7 +16371,7 @@
         "Item": "00534",
         "Type": "NM",
         "Table": "",
-        "LongName": "Blood Not Replaced-Pints(42)",
+        "LongName": "Blood Not Replaced-Pints (42)",
         "maxLength": "2",
         "Chapter": "6.5.10.5"
     },
@@ -16395,7 +16395,7 @@
         "Item": "00537",
         "Type": "NM",
         "Table": "",
-        "LongName": "Covered Days - (23)",
+        "LongName": "Covered Days (23)",
         "maxLength": "3",
         "Chapter": "6.5.10.8"
     },
@@ -16403,7 +16403,7 @@
         "Item": "00538",
         "Type": "NM",
         "Table": "",
-        "LongName": "Non Covered Days - (24)",
+        "LongName": "Non Covered Days (24)",
         "maxLength": "3",
         "Chapter": "6.5.10.9"
     },

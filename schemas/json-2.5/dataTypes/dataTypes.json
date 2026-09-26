@@ -4,42 +4,50 @@
             {
                 "dataType": "AD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -96,17 +104,20 @@
             {
                 "dataType": "AUI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AUI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AUI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -133,12 +144,14 @@
             {
                 "dataType": "CCD.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "CCD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -159,17 +172,20 @@
             {
                 "dataType": "CCP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CCP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CCP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -196,32 +212,38 @@
             {
                 "dataType": "CD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -266,32 +288,38 @@
             {
                 "dataType": "CE.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -336,32 +364,38 @@
             {
                 "dataType": "CF.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -406,47 +440,56 @@
             {
                 "dataType": "CNE.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "CNE.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CNE.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -509,57 +552,68 @@
             {
                 "dataType": "CNN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CNN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CNN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CNN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             }
         ]
     },
@@ -572,13 +626,13 @@
     "CNN.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Assigning Authority  - Universal ID",
+        "LongName": "Assigning Authority - Universal ID",
         "maxLength": "199"
     },
     "CNN.11": {
         "Type": "ID",
         "Table": "HL70301",
-        "LongName": "Assigning Authority  - Universal ID Type",
+        "LongName": "Assigning Authority - Universal ID Type",
         "maxLength": "6"
     },
     "CNN.2": {
@@ -602,19 +656,19 @@
     "CNN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "Suffix (e.g., JR or III)",
         "maxLength": "20"
     },
     "CNN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "Prefix (e.g., DR)",
         "maxLength": "20"
     },
     "CNN.7": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree",
+        "LongName": "Degree (e.g., MD",
         "maxLength": "5"
     },
     "CNN.8": {
@@ -626,7 +680,7 @@
     "CNN.9": {
         "Type": "IS",
         "Table": "HL70363",
-        "LongName": "Assigning Authority   - Namespace ID",
+        "LongName": "Assigning Authority - Namespace ID",
         "maxLength": "20"
     },
     "CP": {
@@ -634,32 +688,38 @@
             {
                 "dataType": "CP.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "CP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -704,12 +764,14 @@
             {
                 "dataType": "CQ.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CQ.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -730,37 +792,44 @@
             {
                 "dataType": "CSU.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "CSU.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CSU.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CSU.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CSU.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -811,47 +880,56 @@
             {
                 "dataType": "CWE.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "CWE.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -914,52 +992,62 @@
             {
                 "dataType": "CX.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "CX.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1028,17 +1116,20 @@
             {
                 "dataType": "DDI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DDI.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "DDI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1065,12 +1156,14 @@
             {
                 "dataType": "DIN.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "DIN.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -1091,12 +1184,14 @@
             {
                 "dataType": "DLD.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "DLD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1117,17 +1212,20 @@
             {
                 "dataType": "DLN.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "DLN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1154,22 +1252,26 @@
             {
                 "dataType": "DLT.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLT.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLT.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1202,12 +1304,14 @@
             {
                 "dataType": "DR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1234,12 +1338,14 @@
             {
                 "dataType": "DTN.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "DTN.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -1260,27 +1366,32 @@
             {
                 "dataType": "ED.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ED.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "ED.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ED.4",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "ED.5",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -1319,22 +1430,26 @@
             {
                 "dataType": "EI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "EI.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             }
         ]
     },
@@ -1367,12 +1482,14 @@
             {
                 "dataType": "EIP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EIP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1393,22 +1510,26 @@
             {
                 "dataType": "ELD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ELD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ELD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ELD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1441,32 +1562,38 @@
             {
                 "dataType": "ERL.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "ERL.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "ERL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ERL.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ERL.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ERL.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1511,12 +1638,14 @@
             {
                 "dataType": "FC.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "FC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1537,27 +1666,32 @@
             {
                 "dataType": "FN.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "FN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1602,17 +1736,20 @@
             {
                 "dataType": "HD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "HD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "HD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             }
         ]
     },
@@ -1639,17 +1776,20 @@
             {
                 "dataType": "ICD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ICD.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "ICD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1682,17 +1822,20 @@
             {
                 "dataType": "JCC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "JCC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "JCC.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1719,47 +1862,56 @@
             {
                 "dataType": "LA1.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1822,82 +1974,98 @@
             {
                 "dataType": "LA2.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.15",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.16",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2002,32 +2170,38 @@
             {
                 "dataType": "MA.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2072,12 +2246,14 @@
             {
                 "dataType": "MO.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MO.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2098,12 +2274,14 @@
             {
                 "dataType": "MOC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MOC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2124,17 +2302,20 @@
             {
                 "dataType": "MOP.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "MOP.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "MOP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2161,17 +2342,20 @@
             {
                 "dataType": "MSG.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "MSG.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "MSG.3",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -2198,22 +2382,26 @@
             {
                 "dataType": "NA.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "NA.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NA.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NA.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2246,57 +2434,68 @@
             {
                 "dataType": "NDL.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2374,12 +2573,14 @@
             {
                 "dataType": "NR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2400,12 +2601,14 @@
             {
                 "dataType": "OCD.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OCD.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -2426,57 +2629,68 @@
             {
                 "dataType": "OSD.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OSD.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OSD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.4",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OSD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.8",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OSD.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.10",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OSD.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2551,17 +2765,20 @@
             {
                 "dataType": "OSP.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "OSP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "OSP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             }
         ]
     },
@@ -2588,27 +2805,32 @@
             {
                 "dataType": "PIP.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "PIP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2647,57 +2869,68 @@
             {
                 "dataType": "PL.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "PL.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2772,22 +3005,26 @@
             {
                 "dataType": "PLN.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "PLN.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "PLN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PLN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2820,122 +3057,146 @@
             {
                 "dataType": "PPN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "PPN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "PPN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "PPN.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.15",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.16",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.17",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.18",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "PPN.19",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.20",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.21",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.22",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.23",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.24",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3056,19 +3317,19 @@
     "PPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "Suffix (e.g., JR or III)",
         "maxLength": "20"
     },
     "PPN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "Prefix (e.g., DR)",
         "maxLength": "20"
     },
     "PPN.7": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree",
+        "LongName": "Degree (e.g., MD)",
         "maxLength": "5"
     },
     "PPN.8": {
@@ -3088,17 +3349,20 @@
             {
                 "dataType": "PRL.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "PRL.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PRL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3125,12 +3389,14 @@
             {
                 "dataType": "PT.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3151,22 +3417,26 @@
             {
                 "dataType": "PTA.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "PTA.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PTA.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "PTA.4",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -3199,12 +3469,14 @@
             {
                 "dataType": "QIP.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "QIP.2",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -3225,22 +3497,26 @@
             {
                 "dataType": "QSC.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "QSC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "QSC.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "QSC.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3273,17 +3549,20 @@
             {
                 "dataType": "RCD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RCD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RCD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3310,37 +3589,44 @@
             {
                 "dataType": "RFR.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "RFR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3391,12 +3677,14 @@
             {
                 "dataType": "RI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3417,22 +3705,26 @@
             {
                 "dataType": "RMC.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "RMC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RMC.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "RMC.4",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             }
         ]
     },
@@ -3465,22 +3757,26 @@
             {
                 "dataType": "RP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RP.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3513,57 +3809,68 @@
             {
                 "dataType": "RPT.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "RPT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "RPT.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RPT.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "RPT.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3638,17 +3945,20 @@
             {
                 "dataType": "SAD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SAD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SAD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3675,12 +3985,14 @@
             {
                 "dataType": "SCV.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SCV.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3704,22 +4016,26 @@
             {
                 "dataType": "SN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3752,22 +4068,26 @@
             {
                 "dataType": "SPD.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "SPD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3800,37 +4120,44 @@
             {
                 "dataType": "SPS.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3881,12 +4208,14 @@
             {
                 "dataType": "SRT.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "SRT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3913,62 +4242,74 @@
             {
                 "dataType": "TQ.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4049,12 +4390,14 @@
             {
                 "dataType": "TS.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "TS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             }
         ]
     },
@@ -4078,12 +4421,14 @@
             {
                 "dataType": "UVC.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "UVC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4104,22 +4449,26 @@
             {
                 "dataType": "VH.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VH.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VH.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VH.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4152,17 +4501,20 @@
             {
                 "dataType": "VID.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VID.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VID.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4189,12 +4541,14 @@
             {
                 "dataType": "VR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4215,12 +4569,14 @@
             {
                 "dataType": "WVI.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "WVI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4241,12 +4597,14 @@
             {
                 "dataType": "WVS.1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "R"
             },
             {
                 "dataType": "WVS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4267,72 +4625,86 @@
             {
                 "dataType": "XAD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XAD.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4425,117 +4797,140 @@
             {
                 "dataType": "XCN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XCN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "XCN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             },
             {
                 "dataType": "XCN.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.15",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.16",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.17",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XCN.18",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.19",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.20",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.21",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.22",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.23",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4650,19 +5045,19 @@
     "XCN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "Suffix (e.g., JR or III)",
         "maxLength": "20"
     },
     "XCN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "Prefix (e.g., DR)",
         "maxLength": "20"
     },
     "XCN.7": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree",
+        "LongName": "Degree (e.g., MD)",
         "maxLength": "5"
     },
     "XCN.8": {
@@ -4682,52 +5077,62 @@
             {
                 "dataType": "XON.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XON.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4796,72 +5201,86 @@
             {
                 "dataType": "XPN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XPN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XPN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4916,19 +5335,19 @@
     "XPN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "Suffix (e.g., JR or III)",
         "maxLength": "20"
     },
     "XPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "Prefix (e.g., DR)",
         "maxLength": "20"
     },
     "XPN.6": {
         "Type": "IS",
         "Table": "HL70360",
-        "LongName": "Degree",
+        "LongName": "Degree (e.g., MD)",
         "maxLength": "6"
     },
     "XPN.7": {
@@ -4954,62 +5373,74 @@
             {
                 "dataType": "XTN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             },
             {
                 "dataType": "XTN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "C"
             }
         ]
     },

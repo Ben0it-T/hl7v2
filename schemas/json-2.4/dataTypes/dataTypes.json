@@ -4,91 +4,99 @@
             {
                 "dataType": "AD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AD.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "AD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Street address",
+        "LongName": "street address (ST)",
         "maxLength": ""
     },
     "AD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other designation",
+        "LongName": "other designation",
         "maxLength": ""
     },
     "AD.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "City",
+        "LongName": "city",
         "maxLength": ""
     },
     "AD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "State or province",
+        "LongName": "state or province",
         "maxLength": ""
     },
     "AD.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Zip or postal code",
+        "LongName": "zip or postal code",
         "maxLength": ""
     },
     "AD.6": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Country",
+        "Table": "HL70399",
+        "LongName": "country",
         "maxLength": ""
     },
     "AD.7": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Address type",
+        "Table": "HL70190",
+        "LongName": "address type",
         "maxLength": ""
     },
     "AD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other geographic designation",
+        "LongName": "other geographic designation",
         "maxLength": ""
     },
     "AUI": {
@@ -96,36 +104,39 @@
             {
                 "dataType": "AUI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AUI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "AUI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "AUI.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Authorization number",
+        "LongName": "authorization number",
         "maxLength": ""
     },
     "AUI.2": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Date",
+        "LongName": "date",
         "maxLength": ""
     },
     "AUI.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Source",
+        "LongName": "source",
         "maxLength": ""
     },
     "CCD": {
@@ -133,25 +144,27 @@
             {
                 "dataType": "CCD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CCD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CCD.1": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "When to charge code",
+        "Table": "HL70100",
+        "LongName": "when to charge code",
         "maxLength": ""
     },
     "CCD.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Date/time",
+        "LongName": "date/time",
         "maxLength": ""
     },
     "CCP": {
@@ -159,36 +172,39 @@
             {
                 "dataType": "CCP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CCP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CCP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CCP.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Channel calibration sensitivity correction factor",
+        "LongName": "channel calibration sensitivity correction factor",
         "maxLength": ""
     },
     "CCP.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Channel calibration baseline",
+        "LongName": "channel calibration baseline",
         "maxLength": ""
     },
     "CCP.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Channel calibration time skew",
+        "LongName": "channel calibration time skew",
         "maxLength": ""
     },
     "CD": {
@@ -196,69 +212,75 @@
             {
                 "dataType": "CD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CD.1": {
         "Type": "WVI",
         "Table": "",
-        "LongName": "Channel identifier",
+        "LongName": "channel identifier",
         "maxLength": ""
     },
     "CD.2": {
         "Type": "WVS",
         "Table": "",
-        "LongName": "Waveform source",
+        "LongName": "waveform source",
         "maxLength": ""
     },
     "CD.3": {
         "Type": "CSU",
         "Table": "",
-        "LongName": "Channel sensitivity/units",
+        "LongName": "channel sensitivity/units",
         "maxLength": ""
     },
     "CD.4": {
         "Type": "CCP",
         "Table": "",
-        "LongName": "Channel calibration parameters",
+        "LongName": "channel calibration parameters",
         "maxLength": ""
     },
     "CD.5": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Channel sampling frequency",
+        "LongName": "channel sampling frequency",
         "maxLength": ""
     },
     "CD.6": {
         "Type": "NR",
         "Table": "",
-        "LongName": "Minimum/maximum data values",
+        "LongName": "minimum/maximum data values",
         "maxLength": ""
     },
     "CE": {
@@ -266,69 +288,75 @@
             {
                 "dataType": "CE.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CE.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Identifier",
+        "LongName": "identifier (ST)",
         "maxLength": ""
     },
     "CE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Text",
+        "LongName": "text",
         "maxLength": ""
     },
     "CE.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of coding system",
+        "Table": "HL70396",
+        "LongName": "name of coding system",
         "maxLength": ""
     },
     "CE.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate identifier",
+        "LongName": "alternate identifier (ST)",
         "maxLength": ""
     },
     "CE.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate text",
+        "LongName": "alternate text",
         "maxLength": ""
     },
     "CE.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of alternate coding system",
+        "Table": "HL70396",
+        "LongName": "name of alternate coding system",
         "maxLength": ""
     },
     "CF": {
@@ -336,69 +364,75 @@
             {
                 "dataType": "CF.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CF.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CF.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Identifier",
+        "LongName": "identifier (ID)",
         "maxLength": ""
     },
     "CF.2": {
         "Type": "FT",
         "Table": "",
-        "LongName": "Formatted text",
+        "LongName": "formatted text",
         "maxLength": ""
     },
     "CF.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of coding system",
+        "Table": "HL70396",
+        "LongName": "name of coding system",
         "maxLength": ""
     },
     "CF.4": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Alternate identifier",
+        "LongName": "alternate identifier (ID)",
         "maxLength": ""
     },
     "CF.5": {
         "Type": "FT",
         "Table": "",
-        "LongName": "Alternate formatted text",
+        "LongName": "alternate formatted text",
         "maxLength": ""
     },
     "CF.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of alternate coding system",
+        "Table": "HL70396",
+        "LongName": "name of alternate coding system",
         "maxLength": ""
     },
     "CK": {
@@ -406,47 +440,51 @@
             {
                 "dataType": "CK.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CK.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CK.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CK.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CK.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (NM)",
         "maxLength": ""
     },
     "CK.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Check digit",
+        "LongName": "check digit (NM)",
         "maxLength": ""
     },
     "CK.3": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Code identifying the check digit scheme employed",
+        "Table": "HL70061",
+        "LongName": "code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "CK.4": {
         "Type": "HD",
         "Table": "HL70363",
-        "LongName": "Assigning authority",
+        "LongName": "assigning authority",
         "maxLength": ""
     },
     "CN": {
@@ -454,102 +492,111 @@
             {
                 "dataType": "CN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "CN.2": {
         "Type": "FN",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "CN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "CN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "CN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "CN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "CN.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Degree",
+        "Table": "HL70360",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "CN.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Source table",
+        "Table": "HL70297",
+        "LongName": "source table",
         "maxLength": ""
     },
     "CN.9": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning authority",
+        "LongName": "assigning authority",
         "maxLength": ""
     },
     "CNE": {
@@ -557,102 +604,111 @@
             {
                 "dataType": "CNE.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNE.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CNE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Identifier",
+        "LongName": "identifier (ST)",
         "maxLength": ""
     },
     "CNE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Text",
+        "LongName": "text",
         "maxLength": ""
     },
     "CNE.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of coding system",
+        "Table": "HL70396",
+        "LongName": "name of coding system",
         "maxLength": ""
     },
     "CNE.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate identifier",
+        "LongName": "alternate identifier (ST)",
         "maxLength": ""
     },
     "CNE.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate text",
+        "LongName": "alternate text",
         "maxLength": ""
     },
     "CNE.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of alternate coding system",
+        "Table": "HL70396",
+        "LongName": "name of alternate coding system",
         "maxLength": ""
     },
     "CNE.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Coding system version ID",
+        "LongName": "coding system version ID",
         "maxLength": ""
     },
     "CNE.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate coding system version ID",
+        "LongName": "alternate coding system version ID",
         "maxLength": ""
     },
     "CNE.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Original text",
+        "LongName": "original text",
         "maxLength": ""
     },
     "CNN": {
@@ -660,124 +716,135 @@
             {
                 "dataType": "CNN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CNN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CNN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "CNN.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Assigning authority universal ID",
+        "LongName": "assigning authority universal ID",
         "maxLength": ""
     },
     "CNN.11": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Assigning authority universal ID type",
+        "Table": "HL70301",
+        "LongName": "assigning authority universal ID type",
         "maxLength": ""
     },
     "CNN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "CNN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "CNN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "CNN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "CNN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "CNN.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Degree",
+        "Table": "HL70360",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "CNN.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Source table",
+        "Table": "HL70297",
+        "LongName": "source table",
         "maxLength": ""
     },
     "CNN.9": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Assigning authority namespace ID",
+        "Table": "HL70363",
+        "LongName": "assigning authority namespace ID",
         "maxLength": ""
     },
     "CP": {
@@ -785,69 +852,75 @@
             {
                 "dataType": "CP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CP.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CP.1": {
         "Type": "MO",
         "Table": "",
-        "LongName": "Price",
+        "LongName": "price",
         "maxLength": ""
     },
     "CP.2": {
         "Type": "ID",
         "Table": "HL70205",
-        "LongName": "Price type",
+        "LongName": "price type",
         "maxLength": ""
     },
     "CP.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "From value",
+        "LongName": "from value",
         "maxLength": ""
     },
     "CP.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "To value",
+        "LongName": "to value",
         "maxLength": ""
     },
     "CP.5": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Range units",
+        "LongName": "range units",
         "maxLength": ""
     },
     "CP.6": {
         "Type": "ID",
         "Table": "HL70298",
-        "LongName": "Range type",
+        "LongName": "range type",
         "maxLength": ""
     },
     "CQ": {
@@ -855,25 +928,27 @@
             {
                 "dataType": "CQ.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CQ.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CQ.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Quantity",
+        "LongName": "quantity",
         "maxLength": ""
     },
     "CQ.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Units",
+        "LongName": "units",
         "maxLength": ""
     },
     "CSU": {
@@ -881,80 +956,87 @@
             {
                 "dataType": "CSU.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CSU.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CSU.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Channel sensitivity",
+        "LongName": "channel sensitivity",
         "maxLength": ""
     },
     "CSU.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Unit of measure identifier",
+        "LongName": "unit of measure identifier",
         "maxLength": ""
     },
     "CSU.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Unit of measure description",
+        "LongName": "unit of measure description",
         "maxLength": ""
     },
     "CSU.4": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Unit of measure coding system",
+        "LongName": "unit of measure coding system",
         "maxLength": ""
     },
     "CSU.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate unit of measure identifier",
+        "LongName": "alternate unit of measure identifier",
         "maxLength": ""
     },
     "CSU.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate unit of measure description",
+        "LongName": "alternate unit of measure description",
         "maxLength": ""
     },
     "CSU.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Alternate unit of measure coding system",
+        "LongName": "alternate unit of measure coding system",
         "maxLength": ""
     },
     "CWE": {
@@ -962,102 +1044,111 @@
             {
                 "dataType": "CWE.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CWE.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "CWE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Identifier",
+        "LongName": "identifier (ST)",
         "maxLength": ""
     },
     "CWE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Text",
+        "LongName": "text",
         "maxLength": ""
     },
     "CWE.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of coding system",
+        "Table": "HL70396",
+        "LongName": "name of coding system",
         "maxLength": ""
     },
     "CWE.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate identifier",
+        "LongName": "alternate identifier (ST)",
         "maxLength": ""
     },
     "CWE.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate text",
+        "LongName": "alternate text",
         "maxLength": ""
     },
     "CWE.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Name of alternate coding system",
+        "Table": "HL70396",
+        "LongName": "name of alternate coding system",
         "maxLength": ""
     },
     "CWE.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Coding system version ID",
+        "LongName": "coding system version ID",
         "maxLength": ""
     },
     "CWE.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Alternate coding system version ID",
+        "LongName": "alternate coding system version ID",
         "maxLength": ""
     },
     "CWE.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Original text",
+        "LongName": "original text",
         "maxLength": ""
     },
     "CX": {
@@ -1065,42 +1156,50 @@
             {
                 "dataType": "CX.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "CX.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1113,43 +1212,43 @@
     "CX.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Check digit",
+        "LongName": "check digit (ST)",
         "maxLength": ""
     },
     "CX.3": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Code identifying the check digit scheme employed",
+        "Table": "HL70061",
+        "LongName": "code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "CX.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning authority",
+        "LongName": "assigning authority",
         "maxLength": ""
     },
     "CX.5": {
         "Type": "ID",
         "Table": "HL70203",
-        "LongName": "Identifier type code",
+        "LongName": "identifier type code (ID)",
         "maxLength": ""
     },
     "CX.6": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning facility",
+        "LongName": "assigning facility",
         "maxLength": ""
     },
     "CX.7": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Effective date",
+        "LongName": "effective date (DT)",
         "maxLength": ""
     },
     "CX.8": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Expiration date",
+        "LongName": "expiration date",
         "maxLength": ""
     },
     "DDI": {
@@ -1157,36 +1256,39 @@
             {
                 "dataType": "DDI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DDI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DDI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "DDI.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Delay days",
+        "LongName": "delay days",
         "maxLength": ""
     },
     "DDI.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Amount",
+        "LongName": "amount",
         "maxLength": ""
     },
     "DDI.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Number of days",
+        "LongName": "number of days",
         "maxLength": ""
     },
     "DIN": {
@@ -1194,25 +1296,27 @@
             {
                 "dataType": "DIN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DIN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "DIN.1": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Date",
+        "LongName": "date",
         "maxLength": ""
     },
     "DIN.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Institution name",
+        "LongName": "institution name",
         "maxLength": ""
     },
     "DLD": {
@@ -1220,25 +1324,27 @@
             {
                 "dataType": "DLD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "DLD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Discharge location",
+        "LongName": "discharge location",
         "maxLength": ""
     },
     "DLD.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Effective date",
+        "LongName": "effective date",
         "maxLength": ""
     },
     "DLN": {
@@ -1246,17 +1352,20 @@
             {
                 "dataType": "DLN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1268,14 +1377,14 @@
     },
     "DLN.2": {
         "Type": "IS",
-        "Table": "",
+        "Table": "HL70333",
         "LongName": "Issuing State, province, country",
         "maxLength": ""
     },
     "DLN.3": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Expiration date",
+        "LongName": "expiration date",
         "maxLength": ""
     },
     "DLT": {
@@ -1283,22 +1392,26 @@
             {
                 "dataType": "DLT.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLT.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DLT.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1311,19 +1424,19 @@
     "DLT.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Numeric threshold",
+        "LongName": "numeric threshold",
         "maxLength": ""
     },
     "DLT.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Change computation",
+        "LongName": "change computation",
         "maxLength": ""
     },
     "DLT.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Length of time-days",
+        "LongName": "length of time-days",
         "maxLength": ""
     },
     "DR": {
@@ -1331,25 +1444,27 @@
             {
                 "dataType": "DR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "DR.1": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Range start date/time",
+        "LongName": "range start date/time",
         "maxLength": ""
     },
     "DR.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Range end date/time",
+        "LongName": "range end date/time",
         "maxLength": ""
     },
     "DT": {
@@ -1360,25 +1475,27 @@
             {
                 "dataType": "DTN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "DTN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "DTN.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Day type",
+        "Table": "HL70149",
+        "LongName": "day type",
         "maxLength": ""
     },
     "DTN.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Number of days",
+        "LongName": "number of days",
         "maxLength": ""
     },
     "ED": {
@@ -1386,58 +1503,63 @@
             {
                 "dataType": "ED.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ED.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ED.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ED.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ED.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "ED.1": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Source application",
+        "LongName": "source application",
         "maxLength": ""
     },
     "ED.2": {
         "Type": "ID",
         "Table": "HL70191",
-        "LongName": "Type of data",
+        "LongName": "type of data",
         "maxLength": ""
     },
     "ED.3": {
         "Type": "ID",
         "Table": "HL70291",
-        "LongName": "Data subtype",
+        "LongName": "data subtype",
         "maxLength": ""
     },
     "ED.4": {
         "Type": "ID",
         "Table": "HL70299",
-        "LongName": "Encoding",
+        "LongName": "encoding",
         "maxLength": ""
     },
     "ED.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Data",
+        "LongName": "data",
         "maxLength": ""
     },
     "EI": {
@@ -1445,47 +1567,51 @@
             {
                 "dataType": "EI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EI.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "EI.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Entity identifier",
+        "LongName": "entity identifier",
         "maxLength": ""
     },
     "EI.2": {
         "Type": "IS",
-        "Table": "HL70300",
-        "LongName": "Namespace ID",
+        "Table": "HL70363",
+        "LongName": "namespace ID",
         "maxLength": ""
     },
     "EI.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Universal ID",
+        "LongName": "universal ID",
         "maxLength": ""
     },
     "EI.4": {
         "Type": "ID",
         "Table": "HL70301",
-        "LongName": "Universal ID type",
+        "LongName": "universal ID type",
         "maxLength": ""
     },
     "EIP": {
@@ -1493,25 +1619,27 @@
             {
                 "dataType": "EIP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "EIP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "EIP.1": {
         "Type": "EI",
         "Table": "",
-        "LongName": "Parent's placer order number",
+        "LongName": "parent's placer order number",
         "maxLength": ""
     },
     "EIP.2": {
         "Type": "EI",
         "Table": "",
-        "LongName": "Parent's filler order number",
+        "LongName": "parent's filler order number",
         "maxLength": ""
     },
     "ELD": {
@@ -1519,47 +1647,51 @@
             {
                 "dataType": "ELD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ELD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ELD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "ELD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "ELD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Segment ID",
+        "LongName": "segment ID",
         "maxLength": ""
     },
     "ELD.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence",
+        "LongName": "sequence",
         "maxLength": ""
     },
     "ELD.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Field position",
+        "LongName": "field position",
         "maxLength": ""
     },
     "ELD.4": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Code identifying error",
+        "LongName": "code identifying error",
         "maxLength": ""
     },
     "FC": {
@@ -1567,12 +1699,14 @@
             {
                 "dataType": "FC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -1585,7 +1719,7 @@
     "FC.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Effective Date",
+        "LongName": "Effective Date (TS)",
         "maxLength": ""
     },
     "FN": {
@@ -1593,58 +1727,63 @@
             {
                 "dataType": "FN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "FN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "FN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Surname",
+        "LongName": "surname",
         "maxLength": ""
     },
     "FN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Own surname prefix",
+        "LongName": "own surname prefix",
         "maxLength": ""
     },
     "FN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Own surname",
+        "LongName": "own surname",
         "maxLength": ""
     },
     "FN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Surname prefix from partner/spouse",
+        "LongName": "surname prefix from partner/spouse",
         "maxLength": ""
     },
     "FN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Surname from partner/spouse",
+        "LongName": "surname from partner/spouse",
         "maxLength": ""
     },
     "FT": {
@@ -1655,36 +1794,39 @@
             {
                 "dataType": "HD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "HD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "HD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "HD.1": {
         "Type": "IS",
         "Table": "HL70300",
-        "LongName": "Namespace ID",
+        "LongName": "namespace ID",
         "maxLength": ""
     },
     "HD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Universal ID",
+        "LongName": "universal ID",
         "maxLength": ""
     },
     "HD.3": {
         "Type": "ID",
         "Table": "HL70301",
-        "LongName": "Universal ID type",
+        "LongName": "universal ID type",
         "maxLength": ""
     },
     "ID": {
@@ -1698,25 +1840,27 @@
             {
                 "dataType": "JCC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "JCC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "JCC.1": {
         "Type": "IS",
         "Table": "HL70327",
-        "LongName": "Job code",
+        "LongName": "job code",
         "maxLength": ""
     },
     "JCC.2": {
         "Type": "IS",
         "Table": "HL70328",
-        "LongName": "Job class",
+        "LongName": "job class",
         "maxLength": ""
     },
     "LA1": {
@@ -1724,102 +1868,111 @@
             {
                 "dataType": "LA1.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA1.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "LA1.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Point of care",
+        "LongName": "point of care (IS)",
         "maxLength": ""
     },
     "LA1.2": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Room",
+        "Table": "HL70303",
+        "LongName": "room",
         "maxLength": ""
     },
     "LA1.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Bed",
+        "Table": "HL70304",
+        "LongName": "bed",
         "maxLength": ""
     },
     "LA1.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Facility",
+        "LongName": "facility (HD)",
         "maxLength": ""
     },
     "LA1.5": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Location status",
+        "Table": "HL70306",
+        "LongName": "location status",
         "maxLength": ""
     },
     "LA1.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Person location type",
+        "Table": "HL70305",
+        "LongName": "person location type",
         "maxLength": ""
     },
     "LA1.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Building",
+        "Table": "HL70307",
+        "LongName": "building",
         "maxLength": ""
     },
     "LA1.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Floor",
+        "Table": "HL70308",
+        "LongName": "floor",
         "maxLength": ""
     },
     "LA1.9": {
         "Type": "AD",
         "Table": "",
-        "LongName": "Address",
+        "LongName": "address",
         "maxLength": ""
     },
     "LA2": {
@@ -1827,179 +1980,195 @@
             {
                 "dataType": "LA2.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.15",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "LA2.16",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "LA2.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Point of care",
+        "LongName": "point of care (IS)",
         "maxLength": ""
     },
     "LA2.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other designation",
+        "LongName": "other designation",
         "maxLength": ""
     },
     "LA2.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "City",
+        "LongName": "city",
         "maxLength": ""
     },
     "LA2.12": {
         "Type": "ST",
         "Table": "",
-        "LongName": "State or province",
+        "LongName": "state or province",
         "maxLength": ""
     },
     "LA2.13": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Zip or postal code",
+        "LongName": "zip or postal code",
         "maxLength": ""
     },
     "LA2.14": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Country",
+        "Table": "HL70399",
+        "LongName": "country",
         "maxLength": ""
     },
     "LA2.15": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Address type",
+        "Table": "HL70190",
+        "LongName": "address type",
         "maxLength": ""
     },
     "LA2.16": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other geographic designation",
+        "LongName": "other geographic designation",
         "maxLength": ""
     },
     "LA2.2": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Room",
+        "Table": "HL70303",
+        "LongName": "room",
         "maxLength": ""
     },
     "LA2.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Bed",
+        "Table": "HL70304",
+        "LongName": "bed",
         "maxLength": ""
     },
     "LA2.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Facility",
+        "LongName": "facility (HD)",
         "maxLength": ""
     },
     "LA2.5": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Location status",
+        "Table": "HL70306",
+        "LongName": "location status",
         "maxLength": ""
     },
     "LA2.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Person location type",
+        "Table": "HL70305",
+        "LongName": "person location type",
         "maxLength": ""
     },
     "LA2.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Building",
+        "Table": "HL70307",
+        "LongName": "building",
         "maxLength": ""
     },
     "LA2.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Floor",
+        "Table": "HL70308",
+        "LongName": "floor",
         "maxLength": ""
     },
     "LA2.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Street address",
+        "LongName": "street address (ST)",
         "maxLength": ""
     },
     "MA": {
@@ -2007,69 +2176,75 @@
             {
                 "dataType": "MA.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MA.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "MA.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sample 1 from channel 1",
+        "LongName": "sample 1 from channel 1",
         "maxLength": ""
     },
     "MA.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sample 1 from channel 2",
+        "LongName": "sample 1 from channel 2",
         "maxLength": ""
     },
     "MA.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sample 1 from channel 3",
+        "LongName": "sample 1 from channel 3",
         "maxLength": ""
     },
     "MA.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sample 1 from channel 4",
+        "LongName": "sample 1 from channel 4",
         "maxLength": ""
     },
     "MA.5": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sample 1 from channel 5",
+        "LongName": "sample 1 from channel 5",
         "maxLength": ""
     },
     "MA.6": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sample 1 from channel 6",
+        "LongName": "sample 1 from channel 6",
         "maxLength": ""
     },
     "MO": {
@@ -2077,25 +2252,27 @@
             {
                 "dataType": "MO.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MO.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "MO.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Quantity",
+        "LongName": "quantity",
         "maxLength": ""
     },
     "MO.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Denomination",
+        "LongName": "denomination",
         "maxLength": ""
     },
     "MOC": {
@@ -2103,25 +2280,27 @@
             {
                 "dataType": "MOC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MOC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "MOC.1": {
         "Type": "MO",
         "Table": "",
-        "LongName": "Dollar amount",
+        "LongName": "dollar amount",
         "maxLength": ""
     },
     "MOC.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Charge code",
+        "LongName": "charge code",
         "maxLength": ""
     },
     "MOP": {
@@ -2129,25 +2308,27 @@
             {
                 "dataType": "MOP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MOP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "MOP.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Money or percentage indicator",
+        "Table": "HL70148",
+        "LongName": "money or percentage indicator",
         "maxLength": ""
     },
     "MOP.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Money or percentage quantity",
+        "LongName": "money or percentage quantity",
         "maxLength": ""
     },
     "MSG": {
@@ -2155,36 +2336,39 @@
             {
                 "dataType": "MSG.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MSG.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "MSG.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "MSG.1": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Message type",
+        "Table": "HL70076",
+        "LongName": "message type",
         "maxLength": ""
     },
     "MSG.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Trigger event",
+        "Table": "HL70003",
+        "LongName": "trigger event",
         "maxLength": ""
     },
     "MSG.3": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Message structure",
+        "Table": "HL70354",
+        "LongName": "message structure",
         "maxLength": ""
     },
     "NA": {
@@ -2192,47 +2376,51 @@
             {
                 "dataType": "NA.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NA.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NA.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NA.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "NA.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Value1",
+        "LongName": "value1",
         "maxLength": ""
     },
     "NA.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Value2",
+        "LongName": "value2",
         "maxLength": ""
     },
     "NA.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Value3",
+        "LongName": "value3",
         "maxLength": ""
     },
     "NA.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Value4",
+        "LongName": "value4",
         "maxLength": ""
     },
     "NDL": {
@@ -2240,124 +2428,135 @@
             {
                 "dataType": "NDL.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NDL.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "NDL.1": {
         "Type": "CNN",
         "Table": "",
-        "LongName": "Name",
+        "LongName": "name",
         "maxLength": ""
     },
     "NDL.10": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Building",
+        "Table": "HL70307",
+        "LongName": "building",
         "maxLength": ""
     },
     "NDL.11": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Floor",
+        "Table": "HL70308",
+        "LongName": "floor",
         "maxLength": ""
     },
     "NDL.2": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Start date/time",
+        "LongName": "start date/time",
         "maxLength": ""
     },
     "NDL.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "End date/time",
+        "LongName": "end date/time",
         "maxLength": ""
     },
     "NDL.4": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Point of care",
+        "LongName": "point of care (IS)",
         "maxLength": ""
     },
     "NDL.5": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Room",
+        "Table": "HL70303",
+        "LongName": "room",
         "maxLength": ""
     },
     "NDL.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Bed",
+        "Table": "HL70304",
+        "LongName": "bed",
         "maxLength": ""
     },
     "NDL.7": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Facility",
+        "LongName": "facility (HD)",
         "maxLength": ""
     },
     "NDL.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Location status",
+        "Table": "HL70306",
+        "LongName": "location status",
         "maxLength": ""
     },
     "NDL.9": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Person location type",
+        "Table": "HL70305",
+        "LongName": "person location type",
         "maxLength": ""
     },
     "NM": {
@@ -2368,12 +2567,14 @@
             {
                 "dataType": "NR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "NR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -2394,25 +2595,27 @@
             {
                 "dataType": "OCD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OCD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "OCD.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Occurrence code",
+        "LongName": "occurrence code",
         "maxLength": ""
     },
     "OCD.2": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Occurrence date",
+        "LongName": "occurrence date",
         "maxLength": ""
     },
     "OSD": {
@@ -2420,124 +2623,135 @@
             {
                 "dataType": "OSD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSD.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "OSD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Sequence/results flag",
+        "LongName": "sequence/results flag",
         "maxLength": ""
     },
     "OSD.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler order number: universal ID",
+        "LongName": "filler order number: universal ID",
         "maxLength": ""
     },
     "OSD.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Filler order number: universal ID type",
+        "LongName": "filler order number: universal ID type",
         "maxLength": ""
     },
     "OSD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Placer order number: entity identifier",
+        "LongName": "placer order number: entity identifier",
         "maxLength": ""
     },
     "OSD.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Placer order number: namespace ID",
+        "LongName": "placer order number: namespace ID",
         "maxLength": ""
     },
     "OSD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler order number: entity identifier",
+        "LongName": "filler order number: entity identifier",
         "maxLength": ""
     },
     "OSD.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Filler order number: namespace ID",
+        "LongName": "filler order number: namespace ID",
         "maxLength": ""
     },
     "OSD.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Sequence condition value",
+        "LongName": "sequence condition value",
         "maxLength": ""
     },
     "OSD.7": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Maximum number of repeats",
+        "LongName": "maximum number of repeats",
         "maxLength": ""
     },
     "OSD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Placer order number: universal ID",
+        "LongName": "placer order number: universal ID",
         "maxLength": ""
     },
     "OSD.9": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Placer order number; universal ID type",
+        "LongName": "placer order number; universal ID type",
         "maxLength": ""
     },
     "OSP": {
@@ -2545,36 +2759,39 @@
             {
                 "dataType": "OSP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "OSP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "OSP.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Occurrence span code",
+        "LongName": "occurrence span code",
         "maxLength": ""
     },
     "OSP.2": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Occurrence span start date",
+        "LongName": "occurrence span start date",
         "maxLength": ""
     },
     "OSP.3": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Occurrence span stop date",
+        "LongName": "occurrence span stop date",
         "maxLength": ""
     },
     "PCF": {
@@ -2582,36 +2799,39 @@
             {
                 "dataType": "PCF.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PCF.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PCF.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PCF.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Pre-certification patient type",
+        "Table": "HL70150",
+        "LongName": "pre-certification patient type",
         "maxLength": ""
     },
     "PCF.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Pre-certification required",
+        "Table": "HL70136",
+        "LongName": "pre-certification required",
         "maxLength": ""
     },
     "PCF.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Pre-certification window",
+        "LongName": "pre-certification window",
         "maxLength": ""
     },
     "PI": {
@@ -2619,36 +2839,39 @@
             {
                 "dataType": "PI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PI.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PI.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "PI.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Type of ID number",
+        "LongName": "type of ID number (IS)",
         "maxLength": ""
     },
     "PI.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other qualifying info",
+        "LongName": "other qualifying info",
         "maxLength": ""
     },
     "PIP": {
@@ -2656,58 +2879,63 @@
             {
                 "dataType": "PIP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PIP.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PIP.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Privilege",
+        "LongName": "privilege",
         "maxLength": ""
     },
     "PIP.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Privilege class",
+        "LongName": "privilege class",
         "maxLength": ""
     },
     "PIP.3": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Expiration date",
+        "LongName": "expiration date",
         "maxLength": ""
     },
     "PIP.4": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Activation date",
+        "LongName": "activation date",
         "maxLength": ""
     },
     "PIP.5": {
         "Type": "EI",
         "Table": "",
-        "LongName": "Facility",
+        "LongName": "facility (EI)",
         "maxLength": ""
     },
     "PL": {
@@ -2715,96 +2943,105 @@
             {
                 "dataType": "PL.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PL.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PL.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Point of care",
+        "Table": "HL70302",
+        "LongName": "point of care",
         "maxLength": ""
     },
     "PL.2": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Room",
+        "Table": "HL70303",
+        "LongName": "room",
         "maxLength": ""
     },
     "PL.3": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Bed",
+        "Table": "HL70304",
+        "LongName": "bed",
         "maxLength": ""
     },
     "PL.4": {
         "Type": "HD",
         "Table": "HL70300",
-        "LongName": "Facility",
+        "LongName": "facility (HD)",
         "maxLength": ""
     },
     "PL.5": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Location status",
+        "Table": "HL70306",
+        "LongName": "location status",
         "maxLength": ""
     },
     "PL.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Person location type",
+        "Table": "HL70305",
+        "LongName": "person location type",
         "maxLength": ""
     },
     "PL.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Building",
+        "Table": "HL70307",
+        "LongName": "building",
         "maxLength": ""
     },
     "PL.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Floor",
+        "Table": "HL70308",
+        "LongName": "floor",
         "maxLength": ""
     },
     "PL.9": {
@@ -2818,47 +3055,51 @@
             {
                 "dataType": "PLN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PLN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PLN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PLN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PLN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "PLN.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Type of ID number",
+        "LongName": "type of ID number (IS)",
         "maxLength": ""
     },
     "PLN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "State/other qualifying info",
+        "LongName": "state/other qualifying info",
         "maxLength": ""
     },
     "PLN.4": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Expiration date",
+        "LongName": "expiration date",
         "maxLength": ""
     },
     "PN": {
@@ -2866,69 +3107,75 @@
             {
                 "dataType": "PN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PN.1": {
         "Type": "FN",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "PN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "PN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "PN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "PN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "PN.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Degree",
+        "Table": "HL70360",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "PPN": {
@@ -2936,134 +3183,153 @@
             {
                 "dataType": "PPN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.15",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.16",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.17",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.18",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PPN.19",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PPN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "PPN.10": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Name type code",
+        "Table": "HL70200",
+        "LongName": "name type code",
         "maxLength": ""
     },
     "PPN.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Identifier check digit",
+        "LongName": "identifier check digit",
         "maxLength": ""
     },
     "PPN.12": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Code identifying the check digit scheme employed",
+        "Table": "HL70061",
+        "LongName": "code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "PPN.13": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Identifier type code",
+        "Table": "HL70203",
+        "LongName": "identifier type code (IS)",
         "maxLength": ""
     },
     "PPN.14": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning facility",
+        "LongName": "assigning facility",
         "maxLength": ""
     },
     "PPN.15": {
@@ -3074,74 +3340,74 @@
     },
     "PPN.16": {
         "Type": "ID",
-        "Table": "",
+        "Table": "HL70465",
         "LongName": "Name Representation code",
         "maxLength": ""
     },
     "PPN.17": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Name context",
+        "Table": "HL70448",
+        "LongName": "name context",
         "maxLength": ""
     },
     "PPN.18": {
         "Type": "DR",
         "Table": "",
-        "LongName": "Name validity range",
+        "LongName": "name validity range",
         "maxLength": ""
     },
     "PPN.19": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Name assembly order",
+        "Table": "HL70444",
+        "LongName": "name assembly order",
         "maxLength": ""
     },
     "PPN.2": {
         "Type": "FN",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "PPN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "PPN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "PPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "PPN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "PPN.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Degree",
+        "Table": "HL70360",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "PPN.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Source table",
+        "Table": "HL70297",
+        "LongName": "source table",
         "maxLength": ""
     },
     "PPN.9": {
         "Type": "HD",
         "Table": "HL70363",
-        "LongName": "Assigning authority",
+        "LongName": "assigning authority",
         "maxLength": ""
     },
     "PRL": {
@@ -3149,17 +3415,20 @@
             {
                 "dataType": "PRL.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PRL.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PRL.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -3178,7 +3447,7 @@
     "PRL.3": {
         "Type": "TX",
         "Table": "",
-        "LongName": "Part of OBX-5 observation result from parent",
+        "LongName": "part of OBX-5 observation result from parent",
         "maxLength": ""
     },
     "PT": {
@@ -3186,25 +3455,27 @@
             {
                 "dataType": "PT.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PT.1": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Processing ID",
+        "Table": "HL70103",
+        "LongName": "processing ID",
         "maxLength": ""
     },
     "PT.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Processing mode",
+        "Table": "HL70207",
+        "LongName": "processing mode",
         "maxLength": ""
     },
     "PTA": {
@@ -3212,36 +3483,39 @@
             {
                 "dataType": "PTA.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PTA.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "PTA.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "PTA.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Policy type",
+        "Table": "HL70147",
+        "LongName": "policy type",
         "maxLength": ""
     },
     "PTA.2": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Amount class",
+        "Table": "HL70193",
+        "LongName": "amount class",
         "maxLength": ""
     },
     "PTA.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Amount",
+        "LongName": "amount",
         "maxLength": ""
     },
     "QIP": {
@@ -3249,25 +3523,27 @@
             {
                 "dataType": "QIP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "QIP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "QIP.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Segment field name",
+        "LongName": "segment field name",
         "maxLength": ""
     },
     "QIP.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Value1&value2&value3",
+        "LongName": "value1&value2&value3",
         "maxLength": ""
     },
     "QSC": {
@@ -3275,35 +3551,39 @@
             {
                 "dataType": "QSC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "QSC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "QSC.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "QSC.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "QSC.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Segment field name",
+        "LongName": "segment field name",
         "maxLength": ""
     },
     "QSC.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Relational operator",
+        "Table": "HL70209",
+        "LongName": "relational operator",
         "maxLength": ""
     },
     "QSC.3": {
@@ -3314,8 +3594,8 @@
     },
     "QSC.4": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Relational conjunction",
+        "Table": "HL70210",
+        "LongName": "relational conjunction",
         "maxLength": ""
     },
     "RCD": {
@@ -3323,36 +3603,39 @@
             {
                 "dataType": "RCD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RCD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RCD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "RCD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Segment field name",
+        "LongName": "segment field name",
         "maxLength": ""
     },
     "RCD.2": {
         "Type": "ST",
-        "Table": "",
+        "Table": "HL70440",
         "LongName": "HL7 date type",
         "maxLength": ""
     },
     "RCD.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Maximum column width",
+        "LongName": "maximum column width",
         "maxLength": ""
     },
     "RFR": {
@@ -3360,80 +3643,87 @@
             {
                 "dataType": "RFR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RFR.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "RFR.1": {
         "Type": "NR",
         "Table": "",
-        "LongName": "Numeric range",
+        "LongName": "numeric range",
         "maxLength": ""
     },
     "RFR.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Administrative sex",
+        "LongName": "administrative sex",
         "maxLength": ""
     },
     "RFR.3": {
         "Type": "NR",
         "Table": "",
-        "LongName": "Age range",
+        "LongName": "age range",
         "maxLength": ""
     },
     "RFR.4": {
         "Type": "NR",
         "Table": "",
-        "LongName": "Gestational range",
+        "LongName": "gestational range",
         "maxLength": ""
     },
     "RFR.5": {
         "Type": "TX",
         "Table": "",
-        "LongName": "Species",
+        "LongName": "species",
         "maxLength": ""
     },
     "RFR.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Race/subspecies",
+        "LongName": "race/subspecies",
         "maxLength": ""
     },
     "RFR.7": {
         "Type": "TX",
         "Table": "",
-        "LongName": "Conditions",
+        "LongName": "conditions",
         "maxLength": ""
     },
     "RI": {
@@ -3441,25 +3731,27 @@
             {
                 "dataType": "RI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "RI.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Repeat pattern",
+        "Table": "HL70335",
+        "LongName": "repeat pattern",
         "maxLength": ""
     },
     "RI.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Explicit time interval",
+        "LongName": "explicit time interval",
         "maxLength": ""
     },
     "RMC": {
@@ -3467,36 +3759,39 @@
             {
                 "dataType": "RMC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RMC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RMC.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "RMC.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Room type",
+        "Table": "HL70145",
+        "LongName": "room type",
         "maxLength": ""
     },
     "RMC.2": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Amount type",
+        "Table": "HL70146",
+        "LongName": "amount type",
         "maxLength": ""
     },
     "RMC.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Coverage amount",
+        "LongName": "coverage amount",
         "maxLength": ""
     },
     "RP": {
@@ -3504,47 +3799,51 @@
             {
                 "dataType": "RP.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RP.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RP.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "RP.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "RP.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Pointer",
+        "LongName": "pointer",
         "maxLength": ""
     },
     "RP.2": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Application ID",
+        "LongName": "application ID",
         "maxLength": ""
     },
     "RP.3": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Type of data",
+        "Table": "HL70191",
+        "LongName": "type of data",
         "maxLength": ""
     },
     "RP.4": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Subtype",
+        "Table": "HL70291",
+        "LongName": "subtype",
         "maxLength": ""
     },
     "SAD": {
@@ -3552,36 +3851,39 @@
             {
                 "dataType": "SAD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SAD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SAD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "SAD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Street or mailing address",
+        "LongName": "street or mailing address",
         "maxLength": ""
     },
     "SAD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Street name",
+        "LongName": "street name",
         "maxLength": ""
     },
     "SAD.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Dwelling number",
+        "LongName": "dwelling number",
         "maxLength": ""
     },
     "SCV": {
@@ -3589,25 +3891,27 @@
             {
                 "dataType": "SCV.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SCV.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "SCV.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Parameter class",
+        "Table": "HL70294",
+        "LongName": "parameter class",
         "maxLength": ""
     },
     "SCV.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Parameter value",
+        "LongName": "parameter value",
         "maxLength": ""
     },
     "SI": {
@@ -3618,47 +3922,51 @@
             {
                 "dataType": "SN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "SN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Comparator",
+        "LongName": "comparator",
         "maxLength": ""
     },
     "SN.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Num1",
+        "LongName": "num1",
         "maxLength": ""
     },
     "SN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Separator/suffix",
+        "LongName": "separator/suffix",
         "maxLength": ""
     },
     "SN.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Num2",
+        "LongName": "num2",
         "maxLength": ""
     },
     "SPD": {
@@ -3666,47 +3974,51 @@
             {
                 "dataType": "SPD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "SPD.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Specialty name",
+        "LongName": "specialty name",
         "maxLength": ""
     },
     "SPD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Governing board",
+        "LongName": "governing board",
         "maxLength": ""
     },
     "SPD.3": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Eligible or certified",
+        "LongName": "eligible or certified",
         "maxLength": ""
     },
     "SPD.4": {
         "Type": "DT",
         "Table": "",
-        "LongName": "Date of certification",
+        "LongName": "date of certification",
         "maxLength": ""
     },
     "SPS": {
@@ -3714,80 +4026,87 @@
             {
                 "dataType": "SPS.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SPS.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "SPS.1": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Specimen source name or code",
+        "Table": "HL70070",
+        "LongName": "specimen source name or code",
         "maxLength": ""
     },
     "SPS.2": {
         "Type": "TX",
         "Table": "",
-        "LongName": "Additives",
+        "LongName": "additives",
         "maxLength": ""
     },
     "SPS.3": {
         "Type": "TX",
         "Table": "",
-        "LongName": "Freetext",
+        "LongName": "freetext",
         "maxLength": ""
     },
     "SPS.4": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Body site",
+        "Table": "HL70163",
+        "LongName": "body site",
         "maxLength": ""
     },
     "SPS.5": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Site modifier",
+        "LongName": "site modifier",
         "maxLength": ""
     },
     "SPS.6": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Collection modifier method code",
+        "LongName": "collection modifier method code",
         "maxLength": ""
     },
     "SPS.7": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Specimen role",
+        "Table": "HL70369",
+        "LongName": "specimen role",
         "maxLength": ""
     },
     "SRT": {
@@ -3795,25 +4114,27 @@
             {
                 "dataType": "SRT.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "SRT.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "SRT.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Sort-by field",
+        "LongName": "sort-by field",
         "maxLength": ""
     },
     "SRT.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Sequencing",
+        "Table": "HL70397",
+        "LongName": "sequencing",
         "maxLength": ""
     },
     "ST": {
@@ -3830,135 +4151,147 @@
             {
                 "dataType": "TQ.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TQ.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "TQ.1": {
         "Type": "CQ",
         "Table": "",
-        "LongName": "Quantity",
+        "LongName": "quantity",
         "maxLength": ""
     },
     "TQ.10": {
         "Type": "OSD",
         "Table": "",
-        "LongName": "Order sequencing",
+        "LongName": "order sequencing",
         "maxLength": ""
     },
     "TQ.11": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Occurrence duration",
+        "LongName": "occurrence duration",
         "maxLength": ""
     },
     "TQ.12": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Total occurences",
+        "LongName": "total occurences",
         "maxLength": ""
     },
     "TQ.2": {
         "Type": "RI",
         "Table": "",
-        "LongName": "Interval",
+        "LongName": "interval",
         "maxLength": ""
     },
     "TQ.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Duration",
+        "LongName": "duration",
         "maxLength": ""
     },
     "TQ.4": {
         "Type": "TS",
         "Table": "",
-        "LongName": "Start date/time",
+        "LongName": "start date/time",
         "maxLength": ""
     },
     "TQ.5": {
         "Type": "TS",
         "Table": "",
-        "LongName": "End date/time",
+        "LongName": "end date/time",
         "maxLength": ""
     },
     "TQ.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Priority",
+        "LongName": "priority",
         "maxLength": ""
     },
     "TQ.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Condition",
+        "LongName": "condition",
         "maxLength": ""
     },
     "TQ.8": {
         "Type": "TX",
         "Table": "",
-        "LongName": "Text",
+        "LongName": "text (TX)",
         "maxLength": ""
     },
     "TQ.9": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Conjunction component",
+        "Table": "HL70472",
+        "LongName": "conjunction component",
         "maxLength": ""
     },
     "TS": {
@@ -3966,25 +4299,27 @@
             {
                 "dataType": "TS.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "TS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             }
         ]
     },
     "TS.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Time of an event",
+        "LongName": "time of an event",
         "maxLength": ""
     },
     "TS.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Degree of precision",
+        "LongName": "degree of precision",
         "maxLength": ""
     },
     "TX": {
@@ -4021,25 +4356,27 @@
             {
                 "dataType": "UVC.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "UVC.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "UVC.1": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Value code",
+        "Table": "HL70153",
+        "LongName": "value code",
         "maxLength": ""
     },
     "UVC.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Value amount",
+        "LongName": "value amount",
         "maxLength": ""
     },
     "VH": {
@@ -4047,47 +4384,51 @@
             {
                 "dataType": "VH.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VH.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VH.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VH.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "VH.1": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Start day range",
+        "Table": "HL70267",
+        "LongName": "start day range",
         "maxLength": ""
     },
     "VH.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "End day range",
+        "Table": "HL70267",
+        "LongName": "end day range",
         "maxLength": ""
     },
     "VH.3": {
         "Type": "TM",
         "Table": "",
-        "LongName": "Start hour range",
+        "LongName": "start hour range",
         "maxLength": ""
     },
     "VH.4": {
         "Type": "TM",
         "Table": "",
-        "LongName": "End hour range",
+        "LongName": "end hour range",
         "maxLength": ""
     },
     "VID": {
@@ -4095,36 +4436,39 @@
             {
                 "dataType": "VID.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VID.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VID.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "VID.1": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Version ID",
+        "Table": "HL70104",
+        "LongName": "version ID",
         "maxLength": ""
     },
     "VID.2": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Internationalization code",
+        "Table": "HL70399",
+        "LongName": "internationalization code",
         "maxLength": ""
     },
     "VID.3": {
         "Type": "CE",
         "Table": "",
-        "LongName": "International version ID",
+        "LongName": "international version ID",
         "maxLength": ""
     },
     "VR": {
@@ -4132,19 +4476,21 @@
             {
                 "dataType": "VR.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "VR.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "VR.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "First data code value",
+        "LongName": "first data code value",
         "maxLength": ""
     },
     "VR.2": {
@@ -4158,12 +4504,14 @@
             {
                 "dataType": "WVI.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "WVI.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
@@ -4184,25 +4532,27 @@
             {
                 "dataType": "WVS.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "WVS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "WVS.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Source name 1",
+        "LongName": "source name 1",
         "maxLength": ""
     },
     "WVS.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Source name 2",
+        "LongName": "source name 2",
         "maxLength": ""
     },
     "XAD": {
@@ -4210,135 +4560,147 @@
             {
                 "dataType": "XAD.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XAD.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "XAD.1": {
         "Type": "SAD",
         "Table": "",
-        "LongName": "Street address",
+        "LongName": "street address (SAD)",
         "maxLength": ""
     },
     "XAD.10": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Census tract",
+        "Table": "HL70288",
+        "LongName": "census tract",
         "maxLength": ""
     },
     "XAD.11": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Address representation code",
+        "Table": "HL70465",
+        "LongName": "address representation code",
         "maxLength": ""
     },
     "XAD.12": {
         "Type": "DR",
         "Table": "",
-        "LongName": "Address validity range",
+        "LongName": "address validity range",
         "maxLength": ""
     },
     "XAD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other designation",
+        "LongName": "other designation",
         "maxLength": ""
     },
     "XAD.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "City",
+        "LongName": "city",
         "maxLength": ""
     },
     "XAD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "State or province",
+        "LongName": "state or province",
         "maxLength": ""
     },
     "XAD.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Zip or postal code",
+        "LongName": "zip or postal code",
         "maxLength": ""
     },
     "XAD.6": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Country",
+        "Table": "HL70399",
+        "LongName": "country",
         "maxLength": ""
     },
     "XAD.7": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Address type",
+        "Table": "HL70190",
+        "LongName": "address type",
         "maxLength": ""
     },
     "XAD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other geographic designation",
+        "LongName": "other geographic designation",
         "maxLength": ""
     },
     "XAD.9": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "County/parish code",
+        "Table": "HL70289",
+        "LongName": "county/parish code",
         "maxLength": ""
     },
     "XCN": {
@@ -4346,201 +4708,219 @@
             {
                 "dataType": "XCN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.12",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.13",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.14",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.15",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.16",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.17",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XCN.18",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "XCN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "XCN.10": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Name type code",
+        "Table": "HL70200",
+        "LongName": "name type code",
         "maxLength": ""
     },
     "XCN.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Identifier check digit",
+        "LongName": "identifier check digit",
         "maxLength": ""
     },
     "XCN.12": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Code identifying the check digit scheme employed",
+        "Table": "HL70061",
+        "LongName": "code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "XCN.13": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Identifier type code",
+        "Table": "HL70203",
+        "LongName": "identifier type code (IS)",
         "maxLength": ""
     },
     "XCN.14": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning facility",
+        "LongName": "assigning facility",
         "maxLength": ""
     },
     "XCN.15": {
         "Type": "ID",
-        "Table": "",
+        "Table": "HL70465",
         "LongName": "Name Representation code",
         "maxLength": ""
     },
     "XCN.16": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Name context",
+        "Table": "HL70448",
+        "LongName": "name context",
         "maxLength": ""
     },
     "XCN.17": {
         "Type": "DR",
         "Table": "",
-        "LongName": "Name validity range",
+        "LongName": "name validity range",
         "maxLength": ""
     },
     "XCN.18": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Name assembly order",
+        "Table": "HL70444",
+        "LongName": "name assembly order",
         "maxLength": ""
     },
     "XCN.2": {
         "Type": "FN",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "XCN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "XCN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "XCN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "XCN.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "XCN.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Degree",
+        "Table": "HL70360",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "XCN.8": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Source table",
+        "Table": "HL70297",
+        "LongName": "source table",
         "maxLength": ""
     },
     "XCN.9": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning authority",
+        "LongName": "assigning authority",
         "maxLength": ""
     },
     "XON": {
@@ -4548,101 +4928,110 @@
             {
                 "dataType": "XON.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XON.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "XON.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Organization name",
+        "LongName": "organization name",
         "maxLength": ""
     },
     "XON.2": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Organization name type code",
+        "Table": "HL70204",
+        "LongName": "organization name type code",
         "maxLength": ""
     },
     "XON.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (NM)",
         "maxLength": ""
     },
     "XON.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Check digit",
+        "LongName": "check digit (NM)",
         "maxLength": ""
     },
     "XON.5": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Code identifying the check digit scheme employed",
+        "Table": "HL70061",
+        "LongName": "code identifying the check digit scheme employed",
         "maxLength": ""
     },
     "XON.6": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Assigning authority",
+        "LongName": "assigning authority",
         "maxLength": ""
     },
     "XON.7": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Identifier type code",
+        "Table": "HL70203",
+        "LongName": "identifier type code (IS)",
         "maxLength": ""
     },
     "XON.8": {
         "Type": "HD",
-        "Table": "",
-        "LongName": "Assigning facility ID",
+        "Table": "HL70300",
+        "LongName": "assigning facility ID",
         "maxLength": ""
     },
     "XON.9": {
         "Type": "ID",
-        "Table": "",
+        "Table": "HL70465",
         "LongName": "Name Representation code",
         "maxLength": ""
     },
@@ -4651,124 +5040,135 @@
             {
                 "dataType": "XPN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.10",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XPN.11",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "XPN.1": {
         "Type": "FN",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "XPN.10": {
         "Type": "DR",
         "Table": "",
-        "LongName": "Name validity range",
+        "LongName": "name validity range",
         "maxLength": ""
     },
     "XPN.11": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Name assembly order",
+        "Table": "HL70444",
+        "LongName": "name assembly order",
         "maxLength": ""
     },
     "XPN.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "XPN.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "XPN.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "XPN.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "XPN.6": {
         "Type": "IS",
-        "Table": "",
-        "LongName": "Degree",
+        "Table": "HL70360",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "XPN.7": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Name type code",
+        "Table": "HL70200",
+        "LongName": "name type code",
         "maxLength": ""
     },
     "XPN.8": {
         "Type": "ID",
-        "Table": "",
+        "Table": "HL70465",
         "LongName": "Name Representation code",
         "maxLength": ""
     },
     "XPN.9": {
         "Type": "CE",
-        "Table": "",
-        "LongName": "Name context",
+        "Table": "HL70448",
+        "LongName": "name context",
         "maxLength": ""
     },
     "XTN": {
@@ -4776,66 +5176,75 @@
             {
                 "dataType": "XTN.1",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.3",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.4",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.5",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.6",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.7",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.8",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             },
             {
                 "dataType": "XTN.9",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "O"
             }
         ]
     },
     "XTN.1": {
         "Type": "TN",
         "Table": "",
-        "LongName": "Telephone number",
+        "LongName": "[(999)] 999-9999 [X99999][C any text]",
         "maxLength": ""
     },
     "XTN.2": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Telecommunication use code",
+        "Table": "HL70201",
+        "LongName": "telecommunication use code",
         "maxLength": ""
     },
     "XTN.3": {
         "Type": "ID",
-        "Table": "",
-        "LongName": "Telecommunication equipment type",
+        "Table": "HL70202",
+        "LongName": "telecommunication equipment type (ID)",
         "maxLength": ""
     },
     "XTN.4": {
@@ -4871,7 +5280,7 @@
     "XTN.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Any text",
+        "LongName": "any text",
         "maxLength": ""
     },
     "escapeType": {
