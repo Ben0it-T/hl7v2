@@ -20,7 +20,7 @@
                 "segment": "PV1",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "Usage": "X"
+                "usage": "X"
             }
         ]
     },
@@ -45,7 +45,7 @@
                 "group": "PATIENT",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             }
         ]
     }

@@ -5,19 +5,19 @@
                 "segment": "PID",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             },
             {
                 "segment": "PD1",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "MRG",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             }
         ]
     },
@@ -27,25 +27,25 @@
                 "segment": "MSH",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             },
             {
                 "segment": "SFT",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "EVN",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             },
             {
                 "group": "PATIENT",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             }
         ]
     }

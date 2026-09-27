@@ -40,43 +40,43 @@
                 "segment": "ZBE",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "Usage": "R"
+                "usage": "R"
             },
             {
                 "segment": "ZFA",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "ZFP",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "ZFV",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "ZFM",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "ZFD",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "ZFS",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "Usage": "O"
+                "usage": "O"
             },
             {
                 "segment": "DB1",
@@ -92,7 +92,7 @@
                 "segment": "DG1",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "Usage": "X"
+                "usage": "X"
             }
         ]
     }
