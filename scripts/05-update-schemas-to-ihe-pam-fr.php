@@ -374,7 +374,7 @@ function mergeElementUpdate(array $element, array $update): array
         [
             'minOccurs' => $update['minOccurs'],
             'maxOccurs' => $update['maxOccurs'],
-            'Usage'     => $update['Usage'],
+            'usage'     => $update['usage'],
         ]
     );
 }
@@ -417,15 +417,15 @@ createDirectory($outputDir . "/structures");
 $ZBEsegment = [
     "ZBE" => [
         "fields" => [
-            ["field" => "ZBE.1", "minOccurs" => "1", "maxOccurs" => "unbounded", "Usage" => "R"],
-            ["field" => "ZBE.2", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZBE.3", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZBE.4", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZBE.5", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZBE.6", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"],
-            ["field" => "ZBE.7", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"],
-            ["field" => "ZBE.8", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "C"],
-            ["field" => "ZBE.9", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+            ["field" => "ZBE.1", "minOccurs" => "1", "maxOccurs" => "unbounded", "usage" => "R"],
+            ["field" => "ZBE.2", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZBE.3", "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZBE.4", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZBE.5", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZBE.6", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "C"],
+            ["field" => "ZBE.7", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "C"],
+            ["field" => "ZBE.8", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "C"],
+            ["field" => "ZBE.9", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
         ],
         "LongName" => "Movement segment",
         "Chapter" => ""
@@ -456,18 +456,18 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZBEfields);
 $ZFAsegment = [
     "ZFA" => [
         "fields" => [
-            ["field" => "ZFA.1",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFA.2",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFA.3",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFA.4",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFA.5",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFA.6",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFA.7",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFA.8",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFA.9",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFA.10", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFA.11", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFA.12", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
+            ["field" => "ZFA.1",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFA.2",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFA.3",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFA.4",  "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFA.5",  "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFA.6",  "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFA.7",  "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFA.8",  "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFA.9",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFA.10", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFA.11", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFA.12", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
         ],
         "LongName" => "Statut DMP",
         "Chapter" => ""
@@ -501,8 +501,8 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFAfields);
 $ZFPsegment = [
     "ZFP" => [
         "fields" => [
-            ["field" => "ZFP.1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFP.2", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
+            ["field" => "ZFP.1", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFP.2", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
         ],
         "LongName" => "Situation professionnelle",
         "Chapter" => ""
@@ -525,17 +525,17 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFPfields);
 $ZFVsegment = [
     "ZFV" => [
         "fields" => [
-            ["field" => "ZFV.1",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFV.2",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFV.3",  "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFV.4",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFV.5",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFV.6",  "minOccurs" => "0", "maxOccurs" => "2", "Usage" => "O"],
-            ["field" => "ZFV.7",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFV.8",  "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"],
-            ["field" => "ZFV.9",  "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "0", "Usage" => "X"],
-            ["field" => "ZFV.11", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
+            ["field" => "ZFV.1",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFV.2",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFV.3",  "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFV.4",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFV.5",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFV.6",  "minOccurs" => "0", "maxOccurs" => "2", "usage" => "O"],
+            ["field" => "ZFV.7",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFV.8",  "minOccurs" => "0", "maxOccurs" => "unbounded", "usage" => "O"],
+            ["field" => "ZFV.9",  "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFV.10", "minOccurs" => "0", "maxOccurs" => "0", "usage" => "X"],
+            ["field" => "ZFV.11", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
         ],
         "LongName" => "Complément d'information sur la venue",
         "Chapter" => ""
@@ -568,11 +568,11 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFVfields);
 $ZFMsegment = [
     "ZFM" => [
         "fields" => [
-            ["field" => "ZFM.1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFM.2", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFM.3", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFM.4", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFM.5", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
+            ["field" => "ZFM.1", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFM.2", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFM.3", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFM.4", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFM.5", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
         ],
         "LongName" => "Mouvement PMSI",
         "Chapter" => ""
@@ -599,14 +599,14 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFMfields);
 $ZFDsegment = [
     "ZFD" => [
         "fields" => [
-            ["field" => "ZFD.1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFD.2", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFD.3", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFD.4", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFD.5", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFD.6", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFD.7", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFD.8", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
+            ["field" => "ZFD.1", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFD.2", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFD.3", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFD.4", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFD.5", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFD.6", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFD.7", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFD.8", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
         ],
         "LongName" => "Complément démographique",
         "Chapter" => ""
@@ -639,14 +639,14 @@ $fieldsSchemas = array_merge($fieldsSchemas, $ZFDfields);
 $ZFSsegment = [
     "ZFS" => [
         "fields" => [
-            ["field" => "ZFS.1", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZFS.2", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZFS.3", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZFS.4", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "RE"],
-            ["field" => "ZFS.5", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZFS.6", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-            ["field" => "ZFS.7", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-            ["field" => "ZFS.8", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
+            ["field" => "ZFS.1", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZFS.2", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZFS.3", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZFS.4", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "RE"],
+            ["field" => "ZFS.5", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZFS.6", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+            ["field" => "ZFS.7", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+            ["field" => "ZFS.8", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
         ],
         "LongName" => "Mode légal de soins en psychiatrie",
         "Chapter" => ""
@@ -686,19 +686,19 @@ echo "Create Z-segments: done.\n";
 $rules = array_merge(
     rules(
         ['MSH.1','MSH.2','MSH.3','MSH.4','MSH.5','MSH.6','MSH.7','MSH.9','MSH.10','MSH.11','MSH.12'],
-        ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R']
+        ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R']
     ),
     rules(
         ['MSH.8','MSH.14','MSH.20'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
     ),
     rules(
         ['MSH.17','MSH.19'],
-        ['Usage' => 'RE']
+        ['usage' => 'RE']
     ),
     [
-        'MSH.18' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'C'],
-        'MSH.21' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'O'],
+        'MSH.18' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'C'],
+        'MSH.21' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'O'],
     ]
 
 );
@@ -710,10 +710,10 @@ $segmentsSchemas = applySegmentRules($segmentsSchemas, 'MSH', $rules);
 //
 
 $rules = [
-    'EVN.1' => ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
-    'EVN.3' => ['Usage' => 'C'],
-    'EVN.6' => ['Usage' => 'C'],
-    'EVN.7' => ['Usage' => 'RE'],
+    'EVN.1' => ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
+    'EVN.3' => ['usage' => 'C'],
+    'EVN.6' => ['usage' => 'C'],
+    'EVN.7' => ['usage' => 'RE'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'EVN', $rules);
@@ -726,20 +726,20 @@ $rules = array_merge(
     // Forbidden fields (Race, Religion, Ethnic Group)
     rules(
         ['PID.10','PID.17','PID.22'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
     ),
     rules(
         ['PID.2','PID.4','PID.9','PID.12','PID.19','PID.20','PID.28'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
     ),
     rules(
         ['PID.7','PID.8','PID.11','PID.18','PID.25','PID.33','PID.35','PID.36'],
-        ['Usage' => 'C']
+        ['usage' => 'C']
     ),
     [
-        'PID.31' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'CE'], // IHE-CP-ITI-FR-2015-110
-        'PID.32' => ['minOccurs' => '1', 'maxOccurs' => 'unbounded', 'Usage' => 'R'],
-        'PID.38' => ['minOccurs' => '0', 'maxOccurs' => '2', 'Usage' => 'O'],
+        'PID.31' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'CE'], // IHE-CP-ITI-FR-2015-110
+        'PID.32' => ['minOccurs' => '1', 'maxOccurs' => 'unbounded', 'usage' => 'R'],
+        'PID.38' => ['minOccurs' => '0', 'maxOccurs' => '2', 'usage' => 'O'],
     ]
 
 );
@@ -751,9 +751,9 @@ $segmentsSchemas = applySegmentRules($segmentsSchemas, 'PID', $rules);
 //
 
 $rules = [
-    'ROL.1'  => ['Usage' => 'C'],
-    'ROL.9'  => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'O'],
-    'ROL.11' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'O'],
+    'ROL.1'  => ['usage' => 'C'],
+    'ROL.9'  => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'O'],
+    'ROL.11' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'O'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'ROL', $rules);
@@ -766,10 +766,10 @@ $rules = array_merge(
     rules(
         // Forbidden fields (Religion, Ethnic Group, Race)
         ['NK1.25','NK1.28','NK1.35'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
     ),
     [
-        'NK1.33' => ['minOccurs' => '1', 'maxOccurs' => 'unbounded', 'Usage' => 'R'],
+        'NK1.33' => ['minOccurs' => '1', 'maxOccurs' => 'unbounded', 'usage' => 'R'],
     ]
 
 );
@@ -785,14 +785,14 @@ $fieldsSchemas["NK1.11"]["Table"] = "HL70327,HL70328";
 $rules = array_merge(
     rules(
         ['PV1.3','PV1.5','PV1.6','PV1.11','PV1.19','PV1.42'],
-        ['Usage' => 'C']
+        ['usage' => 'C']
     ),
     rules(
         ['PV1.9','PV1.40','PV1.52'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
     ),
     [
-        'PV1.45' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'O'],
+        'PV1.45' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'O'],
     ]
 
 );
@@ -807,24 +807,24 @@ $fieldsSchemas["PV1.52"]["Table"] = "";
 //
 
 $rules = [
-    'PV2.1'  => ['Usage' => 'C'],
-    'PV2.3'  => ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
-    'PV2.18' => ['Usage' => 'RE'],
-    'PV2.47' => ['Usage' => 'C'],
+    'PV2.1'  => ['usage' => 'C'],
+    'PV2.3'  => ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
+    'PV2.18' => ['usage' => 'RE'],
+    'PV2.47' => ['usage' => 'C'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'PV2', $rules);
 
-$fieldsSchemas["PV2.3"]["Table"] = ""; // IHE PAM FR 2.11.2 : Usage X
+$fieldsSchemas["PV2.3"]["Table"] = ""; // IHE PAM FR 2.11.2 : usage X
 
 //
 // ACC segment
 //
 
 $rules = [
-    'ACC.1' => ['Usage' => 'RE'],
-    'ACC.2' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
-    'ACC.4' => ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+    'ACC.1' => ['usage' => 'RE'],
+    'ACC.2' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
+    'ACC.4' => ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'ACC', $rules);
@@ -837,15 +837,15 @@ $fieldsSchemas["ACC.4"]["Table"] = "";
 
 $rules = array_merge(
     [
-        'IN1.3' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
+        'IN1.3' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
     ],
     rules(
         ['IN1.12','IN1.13','IN1.15','IN1.16','IN1.19','IN1.20','IN1.31','IN1.35','IN1.45','IN1.49'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE']
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE']
     ),
     [
-        'IN1.17' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
-        'IN1.36' => ['Usage' => 'C'],
+        'IN1.17' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
+        'IN1.36' => ['usage' => 'C'],
     ]
 
 );
@@ -860,7 +860,7 @@ $fieldsSchemas["IN1.35"]["maxLength"] = "20";
 //
 
 $rules = [
-    'IN2.63' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
+    'IN2.63' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'IN2', $rules);
@@ -870,7 +870,7 @@ $segmentsSchemas = applySegmentRules($segmentsSchemas, 'IN2', $rules);
 //
 
 $rules = [
-    'IN3.5' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
+    'IN3.5' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'IN3', $rules);
@@ -884,11 +884,11 @@ $fieldsSchemas["IN3.5"]["Table"] = "HL70148";
 $rules = array_merge(
     rules(
         ['GT1.4','GT1.8','GT1.9','GT1.33','GT1.34','GT1.35','GT1.38','GT1.39','GT1.40','GT1.41','GT1.42','GT1.44','GT1.52','GT1.55'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
     ),
     rules(
         ['GT1.29','GT1.51'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'O']
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'O']
     ),
 
 );
@@ -902,16 +902,16 @@ $segmentsSchemas = applySegmentRules($segmentsSchemas, 'GT1', $rules);
 $rules = array_merge(
     rules(
         ['OBX.1','OBX.2','OBX.16'],
-        ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R']
+        ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R']
     ),
     [
-        'OBX.5'  => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'C'],
-        'OBX.6'  => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'C'],
-        'OBX.14' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
+        'OBX.5'  => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'C'],
+        'OBX.6'  => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'C'],
+        'OBX.14' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
     ],
     rules(
         ['OBX.8','OBX.10','OBX.17','OBX.18'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'O']
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'O']
     ),
 );
 
@@ -922,7 +922,7 @@ $segmentsSchemas = applySegmentRules($segmentsSchemas, 'OBX', $rules);
 //
 
 $rules = [
-    'AL1.6' => ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+    'AL1.6' => ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
 ];
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'AL1', $rules);
@@ -933,7 +933,7 @@ $segmentsSchemas = applySegmentRules($segmentsSchemas, 'AL1', $rules);
 
 $rules = rules(
     ['MRG.2','MRG.4','MRG.5','MRG.6'],
-    ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+    ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
 );
 
 $segmentsSchemas = applySegmentRules($segmentsSchemas, 'MRG', $rules);
@@ -954,9 +954,9 @@ echo "Update segments: done.\n";
 //
 
 $rules = [
-    'CX.4' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
-    'CX.5' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
-    'CX.7' => ['Usage' => 'C'],
+    'CX.4' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
+    'CX.5' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
+    'CX.7' => ['usage' => 'C'],
 ];
 
 $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'CX', $rules);
@@ -968,11 +968,11 @@ $dataTypesSchemas["CX.1"]["maxLength"] = "128";
 
 $rules = array_merge(
     [
-        'EI.1' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
+        'EI.1' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
     ],
     rules(
         ['EI.2','EI.3','EI.4'],
-        ['Usage' => 'C']
+        ['usage' => 'C']
     ),
 );
 
@@ -985,11 +985,11 @@ $dataTypesSchemas["EI.1"]["maxLength"] = "128";
 
 $rules = array_merge(
     [
-        'HD.1' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
+        'HD.1' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
     ],
     rules(
         ['HD.2','HD.3'],
-        ['Usage' => 'C']
+        ['usage' => 'C']
     ),
 );
 
@@ -1000,7 +1000,7 @@ $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'HD', $rules);
 //
 
 $rules = [
-    'PL.6' => ['Usage' => 'C'],
+    'PL.6' => ['usage' => 'C'],
 ];
 
 $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'PL', $rules);
@@ -1010,7 +1010,7 @@ $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'PL', $rules);
 //
 
 $rules = [
-    'TS.2' => ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+    'TS.2' => ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
 ];
 
 $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'TS', $rules);
@@ -1021,7 +1021,7 @@ $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'TS', $rules);
 
 $rules = rules(
     ['VID.1','VID.2','VID.3'],
-    ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R']
+    ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R']
 );
 
 $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'VID', $rules);
@@ -1031,7 +1031,7 @@ $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'VID', $rules);
 //
 
 $rules = [
-    'XAD.12' => ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+    'XAD.12' => ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
 ];
 
 $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'XAD', $rules);
@@ -1042,7 +1042,7 @@ $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'XAD', $rules);
 
 $rules = rules(
     ['SAD.2','SAD.3'],
-    ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X']
+    ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X']
 );
 
 $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'SAD', $rules);
@@ -1054,15 +1054,15 @@ $dataTypesSchemas = applyDataTypeRules($dataTypesSchemas, 'SAD', $rules);
 $rules = array_merge(
     rules(
         ['XCN.1','XCN.2','XCN.3','XCN.9'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
     ),
     rules(
         ['XCN.5','XCN.7','XCN.8','XCN.11','XCN.12','XCN.15','XCN.16','XCN.17','XCN.18','XCN.19','XCN.20','XCN.21','XCN.22','XCN.23'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
     ),
     rules(
         ['XCN.10','XCN.13'],
-        ['Usage' => 'C']
+        ['usage' => 'C']
     ),
 );
 
@@ -1077,11 +1077,11 @@ $dataTypesSchemas["XCN.1"]["maxLength"] = "199";
 $rules = array_merge(
     rules(
         ['XON.1','XON.6','XON.7','XON.10'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
     ),
     rules(
         ['XON.2','XON.3','XON.4','XON.5','XON.8','XON.9'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
     )
 );
 
@@ -1095,18 +1095,18 @@ $dataTypesSchemas["XON.10"]["maxLength"] = "64";
 
 $rules = array_merge(
     [
-        'XPN.1' => ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'RE'],
+        'XPN.1' => ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'RE'],
     ],
     rules(
         ['XPN.2','XPN.3'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'C'],
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'C'],
     ),
     rules(
         ['XPN.4','XPN.6','XPN.8','XPN.9','XPN.10','XPN.11','XPN.12','XPN.13','XPN.14'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
     ),
     [
-        'XPN.7' => ['minOccurs' => '1', 'maxOccurs' => '1', 'Usage' => 'R'],
+        'XPN.7' => ['minOccurs' => '1', 'maxOccurs' => '1', 'usage' => 'R'],
     ],
 );
 
@@ -1122,11 +1122,11 @@ $dataTypesSchemas["XPN.3"]["maxLength"] = "194";
 $rules = array_merge(
     rules(
         ['XTN.1','XTN.5','XTN.6','XTN.7','XTN.8','XTN.10','XTN.11'],
-        ['minOccurs' => '0', 'maxOccurs' => '0', 'Usage' => 'X'],
+        ['minOccurs' => '0', 'maxOccurs' => '0', 'usage' => 'X'],
     ),
     rules(
         ['XTN.4','XTN.12'],
-        ['minOccurs' => '0', 'maxOccurs' => '1', 'Usage' => 'C'],
+        ['minOccurs' => '0', 'maxOccurs' => '1', 'usage' => 'C'],
     ),
 );
 
@@ -1153,9 +1153,9 @@ echo "Update data types: done.\n";
  *   2. Integrated Change Proposals (CP)
  *
  *   A28/A31 :
- *     - ZFA : Usage O
- *     - ZFD : Usage O
- *     - ZFS : Usage O
+ *     - ZFA : usage O
+ *     - ZFD : usage O
+ *     - ZFS : usage O
  *
  *    A40/A47 :
  *     - ZFA/ZFD/ZFS not present
@@ -1174,7 +1174,7 @@ echo "Update data types: done.\n";
  *           ZBE Movement segment = R [1..1]
  *
  *         - Historic Movement option:
- *           Usage = R
+ *           usage = R
  *
  *     - Consequently: ZBE = R
  *
@@ -1239,23 +1239,23 @@ echo "Create message structures: done.\n";
 // Update message structures
 
 $iti30Zsegments = [
-    ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"],
+    ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "usage" => "O"],
 ];
 
 $iti31Zsegments = [
-    ["segment" => "ZBE", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-    ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFP", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFV", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFM", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-    ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"],
+    ["segment" => "ZBE", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+    ["segment" => "ZFA", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFP", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFV", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFM", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFD", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+    ["segment" => "ZFS", "minOccurs" => "0", "maxOccurs" => "unbounded", "usage" => "O"],
 ];
 
 $PDA = [
-    ["segment" => "PDA", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
+    ["segment" => "PDA", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
 ];
 
 $iti30Rules = [
@@ -1268,7 +1268,7 @@ $iti30Rules = [
                 'name' => 'NK1',
                 'minOccurs' => '0',
                 'maxOccurs' => 'unbounded',
-                'Usage' => 'RE',
+                'usage' => 'RE',
             ],
 
             [
@@ -1277,7 +1277,7 @@ $iti30Rules = [
                 'name' => 'PV2',
                 'minOccurs' => '0',
                 'maxOccurs' => '0',
-                'Usage' => 'X',
+                'usage' => 'X',
             ],
 
             [
@@ -1286,7 +1286,7 @@ $iti30Rules = [
                 'name' => 'IN3',
                 'minOccurs' => '0',
                 'maxOccurs' => '1',
-                'Usage' => 'O',
+                'usage' => 'O',
             ],
         ],
 
@@ -1297,7 +1297,7 @@ $iti30Rules = [
                 'occurrence' => 2,
                 'minOccurs' => '0',
                 'maxOccurs' => '0',
-                'Usage' => 'X',
+                'usage' => 'X',
             ]
         ],
 
@@ -1318,7 +1318,7 @@ $iti30Rules = [
                 'name' => 'NK1',
                 'minOccurs' => '0',
                 'maxOccurs' => 'unbounded',
-                'Usage' => 'RE',
+                'usage' => 'RE',
             ],
 
             [
@@ -1327,7 +1327,7 @@ $iti30Rules = [
                 'name' => 'PV2',
                 'minOccurs' => '0',
                 'maxOccurs' => '0',
-                'Usage' => 'X',
+                'usage' => 'X',
             ],
 
             [
@@ -1336,13 +1336,13 @@ $iti30Rules = [
                 'name' => 'IN3',
                 'minOccurs' => '0',
                 'maxOccurs' => '1',
-                'Usage' => 'O',
+                'usage' => 'O',
             ],
         ],
 
         // IHE ITI TF Vol 2
         // - The ROL segment following the PV1/PV2 segments is not supported here.
-        // - In message static definition, ROL-2 Usage is O
+        // - In message static definition, ROL-2 usage is O
         'occurrenceUpdates' => [
             [
                 'structure' => 'ADT_A05',
@@ -1350,7 +1350,7 @@ $iti30Rules = [
                 'occurrence' => 2,
                 'minOccurs' => '0',
                 'maxOccurs' => 'unbounded',
-                'Usage' => 'O',
+                'usage' => 'O',
             ]
         ],
 
@@ -1371,7 +1371,7 @@ $iti30Rules = [
                 'name' => 'PATIENT',
                 'minOccurs' => '1',
                 'maxOccurs' => '1',
-                'Usage' => 'R',
+                'usage' => 'R',
             ],
 
             [
@@ -1380,7 +1380,7 @@ $iti30Rules = [
                 'name' => 'PV1',
                 'minOccurs' => '0',
                 'maxOccurs' => '0',
-                'Usage' => 'X',
+                'usage' => 'X',
             ]
         // Z-segments
         // The specifications do not specify where the Z-segments are to be inserted.
@@ -1391,17 +1391,17 @@ $iti30Rules = [
         'replaceStructure' => [
             'PATIENT' => [
                 'elements' => [
-                    ["segment" => "PID", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-                    ["segment" => "PD1", "minOccurs" => "0", "maxOccurs" => "1", "Usage" => "O"],
-                    ["segment" => "MRG", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                    ["segment" => "PID", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+                    ["segment" => "PD1", "minOccurs" => "0", "maxOccurs" => "1", "usage" => "O"],
+                    ["segment" => "MRG", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
                 ]
             ],
             'ADT_A30' => [
                 'elements' => [
-                    ["segment" => "MSH", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-                    ["segment" => "SFT", "minOccurs" => "0", "maxOccurs" => "unbounded", "Usage" => "O"],
-                    ["segment" => "EVN", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
-                    ["group" => "PATIENT", "minOccurs" => "1", "maxOccurs" => "1", "Usage" => "R"],
+                    ["segment" => "MSH", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+                    ["segment" => "SFT", "minOccurs" => "0", "maxOccurs" => "unbounded", "usage" => "O"],
+                    ["segment" => "EVN", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
+                    ["group" => "PATIENT", "minOccurs" => "1", "maxOccurs" => "1", "usage" => "R"],
                 ]
             ]
         ]
@@ -1422,7 +1422,7 @@ $iti31Rules['A01'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1433,7 +1433,7 @@ $iti31Rules['A01'] = [
             'occurrence' => 1,
             'minOccurs' => '0',
             'maxOccurs' => 'unbounded',
-            'Usage' => 'RE',
+            'usage' => 'RE',
         ]
     ],
 
@@ -1464,7 +1464,7 @@ $iti31Rules['A03'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
 
         [
@@ -1473,7 +1473,7 @@ $iti31Rules['A03'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1494,7 +1494,7 @@ $iti31Rules['A04'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1505,7 +1505,7 @@ $iti31Rules['A04'] = [
             'occurrence' => 1,
             'minOccurs' => '0',
             'maxOccurs' => 'unbounded',
-            'Usage' => 'RE',
+            'usage' => 'RE',
         ]
     ],
 
@@ -1527,7 +1527,7 @@ $iti31Rules['A05'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
 
         [
@@ -1536,7 +1536,7 @@ $iti31Rules['A05'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1563,7 +1563,7 @@ $iti31Rules['A06'] = [
             'name' => 'MRG',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'C',
+            'usage' => 'C',
         ],
 
         [
@@ -1572,7 +1572,7 @@ $iti31Rules['A06'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
 
         [
@@ -1581,7 +1581,7 @@ $iti31Rules['A06'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1602,7 +1602,7 @@ $iti31Rules['A07'] = [
             'name' => 'MRG',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'C',
+            'usage' => 'C',
         ],
 
         [
@@ -1611,7 +1611,7 @@ $iti31Rules['A07'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
 
         [
@@ -1620,7 +1620,7 @@ $iti31Rules['A07'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1651,7 +1651,7 @@ $iti31Rules['A10'] = [
             'name' => 'DG1',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
     ],
 
@@ -1672,7 +1672,7 @@ $iti31Rules['A11'] = [
             'name' => 'DG1',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
     ],
 
@@ -1693,7 +1693,7 @@ $iti31Rules['A12'] = [
             'name' => 'DG1',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
     ],
 
@@ -1714,7 +1714,7 @@ $iti31Rules['A13'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1735,7 +1735,7 @@ $iti31Rules['A14'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '0',
-            'Usage' => 'X',
+            'usage' => 'X',
         ],
 
         [
@@ -1744,7 +1744,7 @@ $iti31Rules['A14'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1781,7 +1781,7 @@ $iti31Rules['A16'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'RE',
+            'usage' => 'RE',
         ],
 
         [
@@ -1790,7 +1790,7 @@ $iti31Rules['A16'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
     ],
 
@@ -1931,7 +1931,7 @@ $iti31Rules['Z99'] = [
             'name' => 'IN3',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'O',
+            'usage' => 'O',
         ],
 
         [
@@ -1940,7 +1940,7 @@ $iti31Rules['Z99'] = [
             'name' => 'NK1',
             'minOccurs' => '0',
             'maxOccurs' => 'unbounded',
-            'Usage' => 'C',
+            'usage' => 'C',
         ],
 
         [
@@ -1949,7 +1949,7 @@ $iti31Rules['Z99'] = [
             'name' => 'PV2',
             'minOccurs' => '0',
             'maxOccurs' => '1',
-            'Usage' => 'C',
+            'usage' => 'C',
         ],
     ],
 
@@ -1960,7 +1960,7 @@ $iti31Rules['Z99'] = [
             'occurrence' => 1,
             'minOccurs' => '0',
             'maxOccurs' => 'unbounded',
-            'Usage' => 'C',
+            'usage' => 'C',
         ]
     ],
 

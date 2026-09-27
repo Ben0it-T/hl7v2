@@ -267,8 +267,8 @@ class HL7jsonProfilesGenerator
         $elementMax = trim($element["maxOccurs"]);
         $elementMax = ($elementMax == "unbounded" ? "*" : $elementMax);
         // Usage
-        if (isset($element["Usage"])) {
-            $elementUsage = trim($element["Usage"]);
+        if (isset($element["usage"])) {
+            $elementUsage = trim($element["usage"]);
         } else {
             $elementUsage = $this->getElementUsage($elementMin, $elementMax);
         }
@@ -295,8 +295,8 @@ class HL7jsonProfilesGenerator
         $fieldMax = trim($field["maxOccurs"]);
         $fieldMax = ($fieldMax == "unbounded" ? "*" : $fieldMax);
         // Usage
-        if (isset($field["Usage"])) {
-            $fieldUsage = trim($field["Usage"]);
+        if (isset($field["usage"])) {
+            $fieldUsage = trim($field["usage"]);
         } else {
             $fieldUsage = $this->getElementUsage($fieldMin, $fieldMax);
         }
@@ -322,8 +322,8 @@ class HL7jsonProfilesGenerator
         $componentMax = trim($component["maxOccurs"]);
         $componentMax = ($componentMax == "unbounded" ? "*" : $componentMax);
         // Usage
-        if (isset($component["Usage"])) {
-            $componentUsage = trim($component["Usage"]);
+        if (isset($component["usage"])) {
+            $componentUsage = trim($component["usage"]);
         } else {
             $componentUsage = $this->getElementUsage($componentMin, $componentMax);
         }
