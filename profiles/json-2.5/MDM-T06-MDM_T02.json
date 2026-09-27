@@ -56,7 +56,7 @@
           },
           {
             "Name": "HD.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -66,7 +66,7 @@
           },
           {
             "Name": "HD.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -100,7 +100,7 @@
           },
           {
             "Name": "HD.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -110,7 +110,7 @@
           },
           {
             "Name": "HD.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -144,7 +144,7 @@
           },
           {
             "Name": "HD.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -154,7 +154,7 @@
           },
           {
             "Name": "HD.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -188,7 +188,7 @@
           },
           {
             "Name": "HD.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -198,7 +198,7 @@
           },
           {
             "Name": "HD.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -232,7 +232,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -704,7 +704,7 @@
           },
           {
             "Name": "EI.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -714,7 +714,7 @@
           },
           {
             "Name": "EI.4",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -769,7 +769,7 @@
           },
           {
             "Name": "XON.3",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "NM",
@@ -819,7 +819,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -829,7 +829,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -871,7 +871,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -881,7 +881,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -985,7 +985,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -1008,7 +1008,7 @@
     "fields": [
       {
         "Name": "EVN.1",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00099",
@@ -1042,7 +1042,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -1076,7 +1076,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -1209,7 +1209,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -1219,22 +1219,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -1264,7 +1264,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -1274,7 +1274,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -1306,7 +1306,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -1346,7 +1346,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -1356,7 +1356,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -1450,7 +1450,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -1512,7 +1512,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -1544,7 +1544,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -1636,7 +1636,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -1738,7 +1738,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -1794,7 +1794,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -1828,7 +1828,7 @@
           },
           {
             "Name": "HD.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -1838,7 +1838,7 @@
           },
           {
             "Name": "HD.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -1873,7 +1873,7 @@
       },
       {
         "Name": "PID.2",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00105",
@@ -1935,7 +1935,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -1945,7 +1945,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -1987,7 +1987,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -1997,7 +1997,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -2099,7 +2099,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2201,7 +2201,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2297,7 +2297,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2307,7 +2307,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -2349,7 +2349,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2359,7 +2359,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -2461,7 +2461,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2563,7 +2563,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2597,7 +2597,7 @@
       },
       {
         "Name": "PID.4",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "*",
         "Item": "00107",
@@ -2659,7 +2659,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2669,7 +2669,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -2711,7 +2711,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2721,7 +2721,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -2823,7 +2823,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -2925,7 +2925,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -3058,7 +3058,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -3068,17 +3068,17 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XPN.6",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "6"
           },
           {
@@ -3175,7 +3175,7 @@
           },
           {
             "Name": "XPN.10",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -3237,7 +3237,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -3269,7 +3269,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -3392,7 +3392,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -3402,17 +3402,17 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XPN.6",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "6"
           },
           {
@@ -3509,7 +3509,7 @@
           },
           {
             "Name": "XPN.10",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -3571,7 +3571,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -3603,7 +3603,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -3649,7 +3649,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -3673,7 +3673,7 @@
       },
       {
         "Name": "PID.9",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "*",
         "Item": "00112",
@@ -3772,7 +3772,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -3782,17 +3782,17 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XPN.6",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "6"
           },
           {
@@ -3889,7 +3889,7 @@
           },
           {
             "Name": "XPN.10",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -3951,7 +3951,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -3983,7 +3983,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -4235,7 +4235,7 @@
           },
           {
             "Name": "XAD.12",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -4287,7 +4287,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -4319,7 +4319,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -4333,7 +4333,7 @@
       },
       {
         "Name": "PID.12",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00115",
@@ -4357,7 +4357,7 @@
         "components": [
           {
             "Name": "XTN.1",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -4467,7 +4467,7 @@
           },
           {
             "Name": "XTN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -4491,7 +4491,7 @@
         "components": [
           {
             "Name": "XTN.1",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -4601,7 +4601,7 @@
           },
           {
             "Name": "XTN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -4897,7 +4897,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -4907,7 +4907,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -4949,7 +4949,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -4959,7 +4959,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -5061,7 +5061,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -5163,7 +5163,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -5197,7 +5197,7 @@
       },
       {
         "Name": "PID.19",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00122",
@@ -5209,7 +5209,7 @@
       },
       {
         "Name": "PID.20",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00123",
@@ -5315,7 +5315,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -5325,7 +5325,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -5367,7 +5367,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -5377,7 +5377,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -5479,7 +5479,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -5581,7 +5581,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -5873,7 +5873,7 @@
       },
       {
         "Name": "PID.28",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00739",
@@ -5969,7 +5969,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -6039,7 +6039,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -6073,7 +6073,7 @@
           },
           {
             "Name": "HD.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -6083,7 +6083,7 @@
           },
           {
             "Name": "HD.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -6095,7 +6095,7 @@
       },
       {
         "Name": "PID.35",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "01539",
@@ -6169,7 +6169,7 @@
       },
       {
         "Name": "PID.36",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "01540",
@@ -6401,7 +6401,7 @@
           },
           {
             "Name": "CWE.7",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -6530,7 +6530,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -6540,7 +6540,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -6562,7 +6562,7 @@
           },
           {
             "Name": "PL.6",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -6632,7 +6632,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -6642,7 +6642,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -6674,7 +6674,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -6684,7 +6684,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -6772,7 +6772,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -6782,7 +6782,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -6824,7 +6824,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -6834,7 +6834,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -6936,7 +6936,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7038,7 +7038,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7134,7 +7134,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7144,7 +7144,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7166,7 +7166,7 @@
           },
           {
             "Name": "PL.6",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -7236,7 +7236,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7246,7 +7246,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7278,7 +7278,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7288,7 +7288,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7411,7 +7411,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -7421,22 +7421,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -7466,7 +7466,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7476,7 +7476,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7508,7 +7508,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -7548,7 +7548,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7558,7 +7558,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7652,7 +7652,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -7714,7 +7714,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7746,7 +7746,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -7838,7 +7838,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -7940,7 +7940,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8083,7 +8083,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -8093,22 +8093,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -8138,7 +8138,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8148,7 +8148,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -8180,7 +8180,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -8220,7 +8220,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8230,7 +8230,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -8324,7 +8324,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -8386,7 +8386,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -8418,7 +8418,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -8510,7 +8510,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8612,7 +8612,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8646,7 +8646,7 @@
       },
       {
         "Name": "PV1.9",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "*",
         "Item": "00139",
@@ -8755,7 +8755,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -8765,22 +8765,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -8810,7 +8810,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8820,7 +8820,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -8852,7 +8852,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -8892,7 +8892,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -8902,7 +8902,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -8996,7 +8996,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -9058,7 +9058,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9090,7 +9090,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9182,7 +9182,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9284,7 +9284,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9392,7 +9392,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9402,7 +9402,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9424,7 +9424,7 @@
           },
           {
             "Name": "PL.6",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -9494,7 +9494,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9504,7 +9504,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9536,7 +9536,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9546,7 +9546,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9729,7 +9729,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -9739,22 +9739,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -9784,7 +9784,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9794,7 +9794,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9826,7 +9826,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -9866,7 +9866,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -9876,7 +9876,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -9970,7 +9970,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -10032,7 +10032,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -10064,7 +10064,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -10156,7 +10156,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -10258,7 +10258,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -10366,7 +10366,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -10376,7 +10376,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -10418,7 +10418,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -10428,7 +10428,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -10530,7 +10530,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -10632,7 +10632,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -10708,7 +10708,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -10956,7 +10956,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11056,7 +11056,7 @@
       },
       {
         "Name": "PV1.40",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00170",
@@ -11142,7 +11142,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11152,7 +11152,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11174,7 +11174,7 @@
           },
           {
             "Name": "PL.6",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -11244,7 +11244,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11254,7 +11254,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11286,7 +11286,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11296,7 +11296,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11372,7 +11372,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11382,7 +11382,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11404,7 +11404,7 @@
           },
           {
             "Name": "PL.6",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -11474,7 +11474,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11484,7 +11484,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11516,7 +11516,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11526,7 +11526,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11562,7 +11562,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -11596,7 +11596,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -11718,7 +11718,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11728,7 +11728,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11770,7 +11770,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11780,7 +11780,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -11882,7 +11882,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -11984,7 +11984,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12030,7 +12030,7 @@
       },
       {
         "Name": "PV1.52",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "*",
         "Item": "01274",
@@ -12139,7 +12139,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -12149,22 +12149,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -12194,7 +12194,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12204,7 +12204,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12236,7 +12236,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -12276,7 +12276,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12286,7 +12286,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12380,7 +12380,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -12442,7 +12442,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12474,7 +12474,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12566,7 +12566,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12668,7 +12668,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12733,7 +12733,7 @@
           },
           {
             "Name": "ORC.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00216",
@@ -12765,7 +12765,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12775,7 +12775,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12787,7 +12787,7 @@
           },
           {
             "Name": "ORC.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00217",
@@ -12819,7 +12819,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12829,7 +12829,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12873,7 +12873,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -12883,7 +12883,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -12919,7 +12919,7 @@
           },
           {
             "Name": "ORC.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "*",
             "Item": "00221",
@@ -13025,7 +13025,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13057,7 +13057,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13357,7 +13357,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -13367,7 +13367,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13409,7 +13409,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -13419,7 +13419,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13455,7 +13455,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -13576,7 +13576,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -13586,22 +13586,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -13631,7 +13631,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -13641,7 +13641,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13673,7 +13673,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -13713,7 +13713,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -13723,7 +13723,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13817,7 +13817,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -13879,7 +13879,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -13911,7 +13911,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -14003,7 +14003,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14105,7 +14105,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14248,7 +14248,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -14258,22 +14258,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -14303,7 +14303,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14313,7 +14313,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -14345,7 +14345,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -14385,7 +14385,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14395,7 +14395,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -14489,7 +14489,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -14551,7 +14551,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -14583,7 +14583,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -14675,7 +14675,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14777,7 +14777,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14920,7 +14920,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -14930,22 +14930,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -14975,7 +14975,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -14985,7 +14985,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15017,7 +15017,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -15057,7 +15057,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -15067,7 +15067,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15161,7 +15161,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -15223,7 +15223,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15255,7 +15255,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15347,7 +15347,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -15449,7 +15449,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -15545,7 +15545,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -15555,7 +15555,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15577,7 +15577,7 @@
               },
               {
                 "Name": "PL.6",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -15647,7 +15647,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -15657,7 +15657,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15689,7 +15689,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -15699,7 +15699,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -15715,7 +15715,7 @@
             "Name": "ORC.14",
             "Usage": "O",
             "Min": "0",
-            "Max": "*",
+            "Max": "2",
             "Item": "00228",
             "Datatype": "XTN",
             "Length": "250",
@@ -15725,7 +15725,7 @@
             "components": [
               {
                 "Name": "XTN.1",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -15835,7 +15835,7 @@
               },
               {
                 "Name": "XTN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -15869,7 +15869,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -16212,7 +16212,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -16222,22 +16222,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -16267,7 +16267,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -16277,7 +16277,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -16309,7 +16309,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -16349,7 +16349,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -16359,7 +16359,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -16453,7 +16453,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -16515,7 +16515,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -16547,7 +16547,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -16639,7 +16639,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -16741,7 +16741,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -16881,7 +16881,7 @@
               },
               {
                 "Name": "XON.3",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "NM",
@@ -16931,7 +16931,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -16941,7 +16941,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -16983,7 +16983,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -16993,7 +16993,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -17181,7 +17181,7 @@
               },
               {
                 "Name": "XAD.12",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -17233,7 +17233,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -17265,7 +17265,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -17291,7 +17291,7 @@
             "components": [
               {
                 "Name": "XTN.1",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -17401,7 +17401,7 @@
               },
               {
                 "Name": "XTN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -17567,7 +17567,7 @@
               },
               {
                 "Name": "XAD.12",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -17619,7 +17619,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -17651,7 +17651,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -17737,7 +17737,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -17769,7 +17769,7 @@
           },
           {
             "Name": "ORC.26",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "01641",
@@ -17841,7 +17841,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -17895,7 +17895,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -17979,7 +17979,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -18083,7 +18083,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -18187,7 +18187,7 @@
               },
               {
                 "Name": "CNE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -18428,7 +18428,7 @@
                       },
                       {
                         "Name": "CWE.7",
-                        "Usage": "O",
+                        "Usage": "C",
                         "Min": "0",
                         "Max": "1",
                         "Type": "ST",
@@ -18500,7 +18500,7 @@
                   },
                   {
                     "Name": "RPT.6",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
@@ -18540,7 +18540,7 @@
                   },
                   {
                     "Name": "RPT.10",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
@@ -18788,7 +18788,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -18822,7 +18822,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -18906,7 +18906,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -18962,7 +18962,7 @@
               },
               {
                 "Name": "TQ1.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01638",
@@ -19077,7 +19077,7 @@
                 "Datatype": "NM",
                 "Length": "10",
                 "Table": "",
-                "LongName": "Total occurrence's",
+                "LongName": "Total Occurrences",
                 "Chapter": "4.5.4.14"
               }
             ]
@@ -19117,7 +19117,7 @@
               },
               {
                 "Name": "TQ2.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "*",
                 "Item": "01650",
@@ -19149,7 +19149,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -19159,7 +19159,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -19171,7 +19171,7 @@
               },
               {
                 "Name": "TQ2.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "*",
                 "Item": "01651",
@@ -19203,7 +19203,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -19213,7 +19213,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -19225,7 +19225,7 @@
               },
               {
                 "Name": "TQ2.5",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "*",
                 "Item": "01652",
@@ -19257,7 +19257,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -19267,7 +19267,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -19279,7 +19279,7 @@
               },
               {
                 "Name": "TQ2.6",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01653",
@@ -19291,7 +19291,7 @@
               },
               {
                 "Name": "TQ2.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01654",
@@ -19411,7 +19411,7 @@
               },
               {
                 "Name": "TQ2.10",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Item": "01657",
@@ -19448,7 +19448,7 @@
           },
           {
             "Name": "OBR.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00216",
@@ -19480,7 +19480,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -19490,7 +19490,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -19502,7 +19502,7 @@
           },
           {
             "Name": "OBR.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00217",
@@ -19534,7 +19534,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -19544,7 +19544,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -19630,7 +19630,7 @@
           },
           {
             "Name": "OBR.5",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Item": "00239",
@@ -19642,7 +19642,7 @@
           },
           {
             "Name": "OBR.6",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Item": "00240",
@@ -19664,7 +19664,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -19676,7 +19676,7 @@
           },
           {
             "Name": "OBR.7",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00241",
@@ -19698,7 +19698,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -19732,7 +19732,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -19949,7 +19949,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -19959,22 +19959,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -20004,7 +20004,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -20014,7 +20014,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -20046,7 +20046,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -20086,7 +20086,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -20096,7 +20096,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -20190,7 +20190,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -20252,7 +20252,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -20284,7 +20284,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -20376,7 +20376,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -20478,7 +20478,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -20610,7 +20610,7 @@
           },
           {
             "Name": "OBR.14",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Item": "00248",
@@ -20632,7 +20632,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -20644,7 +20644,7 @@
           },
           {
             "Name": "OBR.15",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Item": "00249",
@@ -20726,7 +20726,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -20828,7 +20828,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -20940,7 +20940,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21042,7 +21042,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21144,7 +21144,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21246,7 +21246,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21389,7 +21389,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -21399,22 +21399,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -21444,7 +21444,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21454,7 +21454,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -21486,7 +21486,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -21526,7 +21526,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21536,7 +21536,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -21630,7 +21630,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -21692,7 +21692,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -21724,7 +21724,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -21816,7 +21816,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21918,7 +21918,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -21954,7 +21954,7 @@
             "Name": "OBR.17",
             "Usage": "O",
             "Min": "0",
-            "Max": "*",
+            "Max": "2",
             "Item": "00250",
             "Datatype": "XTN",
             "Length": "250",
@@ -21964,7 +21964,7 @@
             "components": [
               {
                 "Name": "XTN.1",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -22074,7 +22074,7 @@
               },
               {
                 "Name": "XTN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -22134,7 +22134,7 @@
           },
           {
             "Name": "OBR.22",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00255",
@@ -22156,7 +22156,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -22298,7 +22298,7 @@
           },
           {
             "Name": "OBR.25",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00258",
@@ -22416,7 +22416,7 @@
           },
           {
             "Name": "OBR.27",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "*",
             "Item": "00221",
@@ -22522,7 +22522,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -22554,7 +22554,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -22921,7 +22921,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -22931,22 +22931,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -22976,7 +22976,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -22986,7 +22986,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23018,7 +23018,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -23058,7 +23058,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -23068,7 +23068,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23162,7 +23162,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -23224,7 +23224,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23256,7 +23256,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23348,7 +23348,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -23450,7 +23450,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -23526,7 +23526,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -23536,7 +23536,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23578,7 +23578,7 @@
                   },
                   {
                     "Name": "EI.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -23588,7 +23588,7 @@
                   },
                   {
                     "Name": "EI.4",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23755,7 +23755,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Suffix",
+                    "LongName": "Suffix (e.g., JR or III)",
                     "maxLength": "20"
                   },
                   {
@@ -23765,7 +23765,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Prefix",
+                    "LongName": "Prefix (e.g., DR)",
                     "maxLength": "20"
                   },
                   {
@@ -23775,12 +23775,12 @@
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0360",
-                    "LongName": "Degree",
+                    "LongName": "Degree (e.g., MD",
                     "maxLength": "5"
                   },
                   {
                     "Name": "CNN.8",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
@@ -23790,32 +23790,32 @@
                   },
                   {
                     "Name": "CNN.9",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0363",
-                    "LongName": "Assigning Authority   - Namespace ID",
+                    "LongName": "Assigning Authority - Namespace ID",
                     "maxLength": "20"
                   },
                   {
                     "Name": "CNN.10",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Assigning Authority  - Universal ID",
+                    "LongName": "Assigning Authority - Universal ID",
                     "maxLength": "199"
                   },
                   {
                     "Name": "CNN.11",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
                     "Table": "0301",
-                    "LongName": "Assigning Authority  - Universal ID Type",
+                    "LongName": "Assigning Authority - Universal ID Type",
                     "maxLength": "6"
                   }
                 ]
@@ -23842,7 +23842,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23874,7 +23874,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -23936,7 +23936,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -23946,7 +23946,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24067,7 +24067,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Suffix",
+                    "LongName": "Suffix (e.g., JR or III)",
                     "maxLength": "20"
                   },
                   {
@@ -24077,7 +24077,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Prefix",
+                    "LongName": "Prefix (e.g., DR)",
                     "maxLength": "20"
                   },
                   {
@@ -24087,12 +24087,12 @@
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0360",
-                    "LongName": "Degree",
+                    "LongName": "Degree (e.g., MD",
                     "maxLength": "5"
                   },
                   {
                     "Name": "CNN.8",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
@@ -24102,32 +24102,32 @@
                   },
                   {
                     "Name": "CNN.9",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0363",
-                    "LongName": "Assigning Authority   - Namespace ID",
+                    "LongName": "Assigning Authority - Namespace ID",
                     "maxLength": "20"
                   },
                   {
                     "Name": "CNN.10",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Assigning Authority  - Universal ID",
+                    "LongName": "Assigning Authority - Universal ID",
                     "maxLength": "199"
                   },
                   {
                     "Name": "CNN.11",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
                     "Table": "0301",
-                    "LongName": "Assigning Authority  - Universal ID Type",
+                    "LongName": "Assigning Authority - Universal ID Type",
                     "maxLength": "6"
                   }
                 ]
@@ -24154,7 +24154,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24186,7 +24186,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24248,7 +24248,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -24258,7 +24258,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24379,7 +24379,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Suffix",
+                    "LongName": "Suffix (e.g., JR or III)",
                     "maxLength": "20"
                   },
                   {
@@ -24389,7 +24389,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Prefix",
+                    "LongName": "Prefix (e.g., DR)",
                     "maxLength": "20"
                   },
                   {
@@ -24399,12 +24399,12 @@
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0360",
-                    "LongName": "Degree",
+                    "LongName": "Degree (e.g., MD",
                     "maxLength": "5"
                   },
                   {
                     "Name": "CNN.8",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
@@ -24414,32 +24414,32 @@
                   },
                   {
                     "Name": "CNN.9",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0363",
-                    "LongName": "Assigning Authority   - Namespace ID",
+                    "LongName": "Assigning Authority - Namespace ID",
                     "maxLength": "20"
                   },
                   {
                     "Name": "CNN.10",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Assigning Authority  - Universal ID",
+                    "LongName": "Assigning Authority - Universal ID",
                     "maxLength": "199"
                   },
                   {
                     "Name": "CNN.11",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
                     "Table": "0301",
-                    "LongName": "Assigning Authority  - Universal ID Type",
+                    "LongName": "Assigning Authority - Universal ID Type",
                     "maxLength": "6"
                   }
                 ]
@@ -24466,7 +24466,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24498,7 +24498,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24560,7 +24560,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -24570,7 +24570,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24691,7 +24691,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Suffix",
+                    "LongName": "Suffix (e.g., JR or III)",
                     "maxLength": "20"
                   },
                   {
@@ -24701,7 +24701,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Prefix",
+                    "LongName": "Prefix (e.g., DR)",
                     "maxLength": "20"
                   },
                   {
@@ -24711,12 +24711,12 @@
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0360",
-                    "LongName": "Degree",
+                    "LongName": "Degree (e.g., MD",
                     "maxLength": "5"
                   },
                   {
                     "Name": "CNN.8",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
@@ -24726,32 +24726,32 @@
                   },
                   {
                     "Name": "CNN.9",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "IS",
                     "Table": "0363",
-                    "LongName": "Assigning Authority   - Namespace ID",
+                    "LongName": "Assigning Authority - Namespace ID",
                     "maxLength": "20"
                   },
                   {
                     "Name": "CNN.10",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Assigning Authority  - Universal ID",
+                    "LongName": "Assigning Authority - Universal ID",
                     "maxLength": "199"
                   },
                   {
                     "Name": "CNN.11",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
                     "Table": "0301",
-                    "LongName": "Assigning Authority  - Universal ID Type",
+                    "LongName": "Assigning Authority - Universal ID Type",
                     "maxLength": "6"
                   }
                 ]
@@ -24778,7 +24778,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24810,7 +24810,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24872,7 +24872,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -24882,7 +24882,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -24958,7 +24958,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -24977,7 +24977,7 @@
             "Datatype": "NM",
             "Length": "4",
             "Table": "",
-            "LongName": "Number of Sample Containers *",
+            "LongName": "Number of Sample Containers",
             "Chapter": "4.5.3.37"
           },
           {
@@ -25063,7 +25063,7 @@
             "Datatype": "CE",
             "Length": "250",
             "Table": "",
-            "LongName": "Collector's Comment *",
+            "LongName": "Collector's Comment",
             "Chapter": "4.5.3.39",
             "components": [
               {
@@ -25598,7 +25598,7 @@
           },
           {
             "Name": "OBR.48",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "01646",
@@ -25670,7 +25670,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -25855,7 +25855,7 @@
         "Datatype": "SI",
         "Length": "4",
         "Table": "",
-        "LongName": "Set ID- TXA",
+        "LongName": "Set ID - TXA",
         "Chapter": "9.6.1.1"
       },
       {
@@ -25872,7 +25872,7 @@
       },
       {
         "Name": "TXA.3",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "00916",
@@ -25906,7 +25906,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -25918,7 +25918,7 @@
       },
       {
         "Name": "TXA.5",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "*",
         "Item": "00918",
@@ -26027,7 +26027,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -26037,22 +26037,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -26082,7 +26082,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -26092,7 +26092,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -26124,7 +26124,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -26164,7 +26164,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -26174,7 +26174,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -26268,7 +26268,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -26330,7 +26330,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -26362,7 +26362,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -26454,7 +26454,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -26556,7 +26556,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -26612,7 +26612,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -26624,7 +26624,7 @@
       },
       {
         "Name": "TXA.7",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "00920",
@@ -26646,7 +26646,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -26680,7 +26680,7 @@
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -26801,7 +26801,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -26811,22 +26811,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -26856,7 +26856,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -26866,7 +26866,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -26898,7 +26898,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -26938,7 +26938,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -26948,7 +26948,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27042,7 +27042,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -27104,7 +27104,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27136,7 +27136,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27228,7 +27228,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -27330,7 +27330,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -27473,7 +27473,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -27483,22 +27483,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -27528,7 +27528,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -27538,7 +27538,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27570,7 +27570,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -27610,7 +27610,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -27620,7 +27620,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27714,7 +27714,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -27776,7 +27776,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27808,7 +27808,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -27900,7 +27900,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -28002,7 +28002,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -28036,7 +28036,7 @@
       },
       {
         "Name": "TXA.11",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "*",
         "Item": "00924",
@@ -28145,7 +28145,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -28155,22 +28155,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -28200,7 +28200,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -28210,7 +28210,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -28242,7 +28242,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -28282,7 +28282,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -28292,7 +28292,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -28386,7 +28386,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -28448,7 +28448,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -28480,7 +28480,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -28572,7 +28572,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -28674,7 +28674,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -28740,7 +28740,7 @@
           },
           {
             "Name": "EI.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -28750,7 +28750,7 @@
           },
           {
             "Name": "EI.4",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -28762,7 +28762,7 @@
       },
       {
         "Name": "TXA.13",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "00926",
@@ -28794,7 +28794,7 @@
           },
           {
             "Name": "EI.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -28804,7 +28804,7 @@
           },
           {
             "Name": "EI.4",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -28848,7 +28848,7 @@
           },
           {
             "Name": "EI.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -28858,7 +28858,7 @@
           },
           {
             "Name": "EI.4",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -28902,7 +28902,7 @@
           },
           {
             "Name": "EI.3",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -28912,7 +28912,7 @@
           },
           {
             "Name": "EI.4",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -28984,7 +28984,7 @@
       },
       {
         "Name": "TXA.21",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "1",
         "Item": "00933",
@@ -28996,7 +28996,7 @@
       },
       {
         "Name": "TXA.22",
-        "Usage": "O",
+        "Usage": "C",
         "Min": "0",
         "Max": "*",
         "Item": "00934",
@@ -29105,7 +29105,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -29115,22 +29115,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "PPN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "PPN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -29160,7 +29160,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -29170,7 +29170,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -29202,7 +29202,7 @@
           },
           {
             "Name": "PPN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -29242,7 +29242,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -29252,7 +29252,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -29284,7 +29284,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -29378,7 +29378,7 @@
           },
           {
             "Name": "PPN.18",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -29440,7 +29440,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -29472,7 +29472,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -29564,7 +29564,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -29666,7 +29666,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -29809,7 +29809,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Suffix",
+            "LongName": "Suffix (e.g., JR or III)",
             "maxLength": "20"
           },
           {
@@ -29819,22 +29819,22 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Prefix",
+            "LongName": "Prefix (e.g., DR)",
             "maxLength": "20"
           },
           {
             "Name": "XCN.7",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
             "Table": "0360",
-            "LongName": "Degree",
+            "LongName": "Degree (e.g., MD)",
             "maxLength": "5"
           },
           {
             "Name": "XCN.8",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "IS",
@@ -29864,7 +29864,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -29874,7 +29874,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -29906,7 +29906,7 @@
           },
           {
             "Name": "XCN.12",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ID",
@@ -29946,7 +29946,7 @@
               },
               {
                 "Name": "HD.2",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -29956,7 +29956,7 @@
               },
               {
                 "Name": "HD.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -30050,7 +30050,7 @@
           },
           {
             "Name": "XCN.17",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "DR",
@@ -30112,7 +30112,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -30144,7 +30144,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -30236,7 +30236,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -30338,7 +30338,7 @@
               },
               {
                 "Name": "CWE.7",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -30403,7 +30403,7 @@
           },
           {
             "Name": "OBX.2",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00570",
@@ -30489,7 +30489,7 @@
           },
           {
             "Name": "OBX.4",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Item": "00572",
@@ -30501,7 +30501,7 @@
           },
           {
             "Name": "OBX.5",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "*",
             "Item": "00573",
@@ -30669,7 +30669,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -30715,7 +30715,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -30910,7 +30910,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Suffix",
+                "LongName": "Suffix (e.g., JR or III)",
                 "maxLength": "20"
               },
               {
@@ -30920,22 +30920,22 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Prefix",
+                "LongName": "Prefix (e.g., DR)",
                 "maxLength": "20"
               },
               {
                 "Name": "XCN.7",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
                 "Table": "0360",
-                "LongName": "Degree",
+                "LongName": "Degree (e.g., MD)",
                 "maxLength": "5"
               },
               {
                 "Name": "XCN.8",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
@@ -30965,7 +30965,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -30975,7 +30975,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -31007,7 +31007,7 @@
               },
               {
                 "Name": "XCN.12",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -31047,7 +31047,7 @@
                   },
                   {
                     "Name": "HD.2",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -31057,7 +31057,7 @@
                   },
                   {
                     "Name": "HD.3",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -31151,7 +31151,7 @@
               },
               {
                 "Name": "XCN.17",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "DR",
@@ -31213,7 +31213,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -31245,7 +31245,7 @@
                   },
                   {
                     "Name": "TS.2",
-                    "Usage": "O",
+                    "Usage": "B",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ID",
@@ -31337,7 +31337,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -31439,7 +31439,7 @@
                   },
                   {
                     "Name": "CWE.7",
-                    "Usage": "O",
+                    "Usage": "C",
                     "Min": "0",
                     "Max": "1",
                     "Type": "ST",
@@ -31579,7 +31579,7 @@
               },
               {
                 "Name": "EI.3",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ST",
@@ -31589,7 +31589,7 @@
               },
               {
                 "Name": "EI.4",
-                "Usage": "O",
+                "Usage": "C",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",
@@ -31623,7 +31623,7 @@
               },
               {
                 "Name": "TS.2",
-                "Usage": "O",
+                "Usage": "B",
                 "Min": "0",
                 "Max": "1",
                 "Type": "ID",

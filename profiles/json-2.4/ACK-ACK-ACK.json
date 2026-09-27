@@ -18,7 +18,7 @@
         "Length": "1",
         "Table": "",
         "LongName": "Field Separator",
-        "Chapter": "2"
+        "Chapter": "2.16.9.1"
       },
       {
         "Name": "MSH.2",
@@ -30,7 +30,7 @@
         "Length": "4",
         "Table": "",
         "LongName": "Encoding Characters",
-        "Chapter": "2"
+        "Chapter": "2.16.9.2"
       },
       {
         "Name": "MSH.3",
@@ -42,7 +42,7 @@
         "Length": "180",
         "Table": "0361",
         "LongName": "Sending Application",
-        "Chapter": "2",
+        "Chapter": "2.16.9.3",
         "components": [
           {
             "Name": "HD.1",
@@ -51,7 +51,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0300",
-            "LongName": "Namespace ID",
+            "LongName": "namespace ID",
             "maxLength": ""
           },
           {
@@ -61,7 +61,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Universal ID",
+            "LongName": "universal ID",
             "maxLength": ""
           },
           {
@@ -71,7 +71,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "Universal ID type",
+            "LongName": "universal ID type",
             "maxLength": ""
           }
         ]
@@ -86,7 +86,7 @@
         "Length": "180",
         "Table": "0362",
         "LongName": "Sending Facility",
-        "Chapter": "2",
+        "Chapter": "2.16.9.4",
         "components": [
           {
             "Name": "HD.1",
@@ -95,7 +95,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0300",
-            "LongName": "Namespace ID",
+            "LongName": "namespace ID",
             "maxLength": ""
           },
           {
@@ -105,7 +105,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Universal ID",
+            "LongName": "universal ID",
             "maxLength": ""
           },
           {
@@ -115,7 +115,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "Universal ID type",
+            "LongName": "universal ID type",
             "maxLength": ""
           }
         ]
@@ -130,7 +130,7 @@
         "Length": "180",
         "Table": "0361",
         "LongName": "Receiving Application",
-        "Chapter": "2",
+        "Chapter": "2.16.9.5",
         "components": [
           {
             "Name": "HD.1",
@@ -139,7 +139,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0300",
-            "LongName": "Namespace ID",
+            "LongName": "namespace ID",
             "maxLength": ""
           },
           {
@@ -149,7 +149,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Universal ID",
+            "LongName": "universal ID",
             "maxLength": ""
           },
           {
@@ -159,7 +159,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "Universal ID type",
+            "LongName": "universal ID type",
             "maxLength": ""
           }
         ]
@@ -174,7 +174,7 @@
         "Length": "180",
         "Table": "0362",
         "LongName": "Receiving Facility",
-        "Chapter": "2",
+        "Chapter": "2.16.9.6",
         "components": [
           {
             "Name": "HD.1",
@@ -183,7 +183,7 @@
             "Max": "1",
             "Type": "IS",
             "Table": "0300",
-            "LongName": "Namespace ID",
+            "LongName": "namespace ID",
             "maxLength": ""
           },
           {
@@ -193,7 +193,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Universal ID",
+            "LongName": "universal ID",
             "maxLength": ""
           },
           {
@@ -203,7 +203,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "0301",
-            "LongName": "Universal ID type",
+            "LongName": "universal ID type",
             "maxLength": ""
           }
         ]
@@ -218,7 +218,7 @@
         "Length": "26",
         "Table": "",
         "LongName": "Date/Time Of Message",
-        "Chapter": "2",
+        "Chapter": "2.16.9.7",
         "components": [
           {
             "Name": "TS.1",
@@ -227,17 +227,17 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Time of an event",
+            "LongName": "time of an event",
             "maxLength": ""
           },
           {
             "Name": "TS.2",
-            "Usage": "O",
+            "Usage": "B",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -252,7 +252,7 @@
         "Length": "40",
         "Table": "",
         "LongName": "Security",
-        "Chapter": "2"
+        "Chapter": "2.16.9.8"
       },
       {
         "Name": "MSH.9",
@@ -264,7 +264,7 @@
         "Length": "15",
         "Table": "0076",
         "LongName": "Message Type",
-        "Chapter": "2",
+        "Chapter": "2.16.9.9",
         "components": [
           {
             "Name": "MSG.1",
@@ -272,8 +272,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
-            "LongName": "Message type",
+            "Table": "0076",
+            "LongName": "message type",
             "maxLength": ""
           },
           {
@@ -282,8 +282,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
-            "LongName": "Trigger event",
+            "Table": "0003",
+            "LongName": "trigger event",
             "maxLength": ""
           },
           {
@@ -292,8 +292,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
-            "LongName": "Message structure",
+            "Table": "0354",
+            "LongName": "message structure",
             "maxLength": ""
           }
         ]
@@ -308,7 +308,7 @@
         "Length": "20",
         "Table": "",
         "LongName": "Message Control ID",
-        "Chapter": "2"
+        "Chapter": "2.16.9.10"
       },
       {
         "Name": "MSH.11",
@@ -320,7 +320,7 @@
         "Length": "3",
         "Table": "",
         "LongName": "Processing ID",
-        "Chapter": "2",
+        "Chapter": "2.16.9.11",
         "components": [
           {
             "Name": "PT.1",
@@ -328,8 +328,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
-            "LongName": "Processing ID",
+            "Table": "0103",
+            "LongName": "processing ID",
             "maxLength": ""
           },
           {
@@ -338,8 +338,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
-            "LongName": "Processing mode",
+            "Table": "0207",
+            "LongName": "processing mode",
             "maxLength": ""
           }
         ]
@@ -354,7 +354,7 @@
         "Length": "60",
         "Table": "0104",
         "LongName": "Version ID",
-        "Chapter": "2",
+        "Chapter": "2.16.9.12",
         "components": [
           {
             "Name": "VID.1",
@@ -362,8 +362,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "ID",
-            "Table": "",
-            "LongName": "Version ID",
+            "Table": "0104",
+            "LongName": "version ID",
             "maxLength": ""
           },
           {
@@ -372,8 +372,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "CE",
-            "Table": "",
-            "LongName": "Internationalization code",
+            "Table": "0399",
+            "LongName": "internationalization code",
             "maxLength": "",
             "components": [
               {
@@ -383,7 +383,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Identifier",
+                "LongName": "identifier (ST)",
                 "maxLength": ""
               },
               {
@@ -393,7 +393,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Text",
+                "LongName": "text",
                 "maxLength": ""
               },
               {
@@ -402,8 +402,8 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
-                "LongName": "Name of coding system",
+                "Table": "0396",
+                "LongName": "name of coding system",
                 "maxLength": ""
               },
               {
@@ -413,7 +413,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Alternate identifier",
+                "LongName": "alternate identifier (ST)",
                 "maxLength": ""
               },
               {
@@ -423,7 +423,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Alternate text",
+                "LongName": "alternate text",
                 "maxLength": ""
               },
               {
@@ -432,8 +432,8 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
-                "LongName": "Name of alternate coding system",
+                "Table": "0396",
+                "LongName": "name of alternate coding system",
                 "maxLength": ""
               }
             ]
@@ -445,7 +445,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "International version ID",
+            "LongName": "international version ID",
             "maxLength": "",
             "components": [
               {
@@ -455,7 +455,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Identifier",
+                "LongName": "identifier (ST)",
                 "maxLength": ""
               },
               {
@@ -465,7 +465,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Text",
+                "LongName": "text",
                 "maxLength": ""
               },
               {
@@ -474,8 +474,8 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
-                "LongName": "Name of coding system",
+                "Table": "0396",
+                "LongName": "name of coding system",
                 "maxLength": ""
               },
               {
@@ -485,7 +485,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Alternate identifier",
+                "LongName": "alternate identifier (ST)",
                 "maxLength": ""
               },
               {
@@ -495,7 +495,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Alternate text",
+                "LongName": "alternate text",
                 "maxLength": ""
               },
               {
@@ -504,8 +504,8 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
-                "LongName": "Name of alternate coding system",
+                "Table": "0396",
+                "LongName": "name of alternate coding system",
                 "maxLength": ""
               }
             ]
@@ -522,7 +522,7 @@
         "Length": "15",
         "Table": "",
         "LongName": "Sequence Number",
-        "Chapter": "2"
+        "Chapter": "2.16.9.13"
       },
       {
         "Name": "MSH.14",
@@ -534,7 +534,7 @@
         "Length": "180",
         "Table": "",
         "LongName": "Continuation Pointer",
-        "Chapter": "2"
+        "Chapter": "2.16.9.14"
       },
       {
         "Name": "MSH.15",
@@ -546,7 +546,7 @@
         "Length": "2",
         "Table": "0155",
         "LongName": "Accept Acknowledgment Type",
-        "Chapter": "2"
+        "Chapter": "2.16.9.15"
       },
       {
         "Name": "MSH.16",
@@ -558,7 +558,7 @@
         "Length": "2",
         "Table": "0155",
         "LongName": "Application Acknowledgment Type",
-        "Chapter": "2"
+        "Chapter": "2.16.9.16"
       },
       {
         "Name": "MSH.17",
@@ -570,7 +570,7 @@
         "Length": "3",
         "Table": "0399",
         "LongName": "Country Code",
-        "Chapter": "2"
+        "Chapter": "2.16.9.17"
       },
       {
         "Name": "MSH.18",
@@ -582,7 +582,7 @@
         "Length": "16",
         "Table": "0211",
         "LongName": "Character Set",
-        "Chapter": "2"
+        "Chapter": "2.16.9.18"
       },
       {
         "Name": "MSH.19",
@@ -594,7 +594,7 @@
         "Length": "250",
         "Table": "",
         "LongName": "Principal Language Of Message",
-        "Chapter": "2",
+        "Chapter": "2.16.9.19",
         "components": [
           {
             "Name": "CE.1",
@@ -603,7 +603,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Identifier",
+            "LongName": "identifier (ST)",
             "maxLength": ""
           },
           {
@@ -613,7 +613,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Text",
+            "LongName": "text",
             "maxLength": ""
           },
           {
@@ -622,8 +622,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
-            "LongName": "Name of coding system",
+            "Table": "0396",
+            "LongName": "name of coding system",
             "maxLength": ""
           },
           {
@@ -633,7 +633,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Alternate identifier",
+            "LongName": "alternate identifier (ST)",
             "maxLength": ""
           },
           {
@@ -643,7 +643,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Alternate text",
+            "LongName": "alternate text",
             "maxLength": ""
           },
           {
@@ -652,8 +652,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
-            "LongName": "Name of alternate coding system",
+            "Table": "0396",
+            "LongName": "name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -668,7 +668,7 @@
         "Length": "20",
         "Table": "0356",
         "LongName": "Alternate Character Set Handling Scheme",
-        "Chapter": "2"
+        "Chapter": "2.16.9.20"
       },
       {
         "Name": "MSH.21",
@@ -680,7 +680,7 @@
         "Length": "10",
         "Table": "0449",
         "LongName": "Conformance Statement ID",
-        "Chapter": "2"
+        "Chapter": "2.16.9.21"
       }
     ]
   },
@@ -702,8 +702,8 @@
         "Datatype": "ID",
         "Length": "2",
         "Table": "0008",
-        "LongName": "Acknowledgement Code",
-        "Chapter": "2"
+        "LongName": "Acknowledgment Code",
+        "Chapter": "2.16.8.1"
       },
       {
         "Name": "MSA.2",
@@ -715,7 +715,7 @@
         "Length": "20",
         "Table": "",
         "LongName": "Message Control ID",
-        "Chapter": "2"
+        "Chapter": "2.16.8.2"
       },
       {
         "Name": "MSA.3",
@@ -727,7 +727,7 @@
         "Length": "80",
         "Table": "",
         "LongName": "Text Message",
-        "Chapter": "2"
+        "Chapter": "2.16.8.3"
       },
       {
         "Name": "MSA.4",
@@ -739,11 +739,11 @@
         "Length": "15",
         "Table": "",
         "LongName": "Expected Sequence Number",
-        "Chapter": "2"
+        "Chapter": "2.16.8.4"
       },
       {
         "Name": "MSA.5",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00022",
@@ -751,7 +751,7 @@
         "Length": "1",
         "Table": "0102",
         "LongName": "Delayed Acknowledgment Type",
-        "Chapter": "2"
+        "Chapter": "2.16.8.5"
       },
       {
         "Name": "MSA.6",
@@ -763,7 +763,7 @@
         "Length": "250",
         "Table": "0357",
         "LongName": "Error Condition",
-        "Chapter": "2",
+        "Chapter": "2.16.8.6",
         "components": [
           {
             "Name": "CE.1",
@@ -772,7 +772,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Identifier",
+            "LongName": "identifier (ST)",
             "maxLength": ""
           },
           {
@@ -782,7 +782,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Text",
+            "LongName": "text",
             "maxLength": ""
           },
           {
@@ -791,8 +791,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
-            "LongName": "Name of coding system",
+            "Table": "0396",
+            "LongName": "name of coding system",
             "maxLength": ""
           },
           {
@@ -802,7 +802,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Alternate identifier",
+            "LongName": "alternate identifier (ST)",
             "maxLength": ""
           },
           {
@@ -812,7 +812,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Alternate text",
+            "LongName": "alternate text",
             "maxLength": ""
           },
           {
@@ -821,8 +821,8 @@
             "Min": "0",
             "Max": "1",
             "Type": "IS",
-            "Table": "",
-            "LongName": "Name of alternate coding system",
+            "Table": "0396",
+            "LongName": "name of alternate coding system",
             "maxLength": ""
           }
         ]
@@ -848,7 +848,7 @@
         "Length": "80",
         "Table": "",
         "LongName": "Error Code and Location",
-        "Chapter": "2",
+        "Chapter": "2.16.5.1",
         "components": [
           {
             "Name": "ELD.1",
@@ -857,7 +857,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Segment ID",
+            "LongName": "segment ID",
             "maxLength": ""
           },
           {
@@ -867,7 +867,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "Sequence",
+            "LongName": "sequence",
             "maxLength": ""
           },
           {
@@ -877,7 +877,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "Field position",
+            "LongName": "field position",
             "maxLength": ""
           },
           {
@@ -887,7 +887,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "Code identifying error",
+            "LongName": "code identifying error",
             "maxLength": "",
             "components": [
               {
@@ -897,7 +897,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Identifier",
+                "LongName": "identifier (ST)",
                 "maxLength": ""
               },
               {
@@ -907,7 +907,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Text",
+                "LongName": "text",
                 "maxLength": ""
               },
               {
@@ -916,8 +916,8 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
-                "LongName": "Name of coding system",
+                "Table": "0396",
+                "LongName": "name of coding system",
                 "maxLength": ""
               },
               {
@@ -927,7 +927,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Alternate identifier",
+                "LongName": "alternate identifier (ST)",
                 "maxLength": ""
               },
               {
@@ -937,7 +937,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Alternate text",
+                "LongName": "alternate text",
                 "maxLength": ""
               },
               {
@@ -946,8 +946,8 @@
                 "Min": "0",
                 "Max": "1",
                 "Type": "IS",
-                "Table": "",
-                "LongName": "Name of alternate coding system",
+                "Table": "0396",
+                "LongName": "name of alternate coding system",
                 "maxLength": ""
               }
             ]

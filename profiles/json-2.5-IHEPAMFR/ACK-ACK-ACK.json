@@ -1032,7 +1032,7 @@
       },
       {
         "Name": "MSA.3",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00020",
@@ -1056,9 +1056,9 @@
       },
       {
         "Name": "MSA.5",
-        "Usage": "O",
+        "Usage": "W",
         "Min": "0",
-        "Max": "1",
+        "Max": "0",
         "Item": "00022",
         "Datatype": "ID",
         "Length": "0",
@@ -1068,7 +1068,7 @@
       },
       {
         "Name": "MSA.6",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "1",
         "Item": "00023",
@@ -1153,7 +1153,7 @@
     "fields": [
       {
         "Name": "ERR.1",
-        "Usage": "O",
+        "Usage": "B",
         "Min": "0",
         "Max": "*",
         "Item": "00024",
@@ -1415,7 +1415,7 @@
           },
           {
             "Name": "CWE.7",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -1531,7 +1531,7 @@
           },
           {
             "Name": "CWE.7",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -1565,7 +1565,7 @@
         "Name": "ERR.6",
         "Usage": "O",
         "Min": "0",
-        "Max": "*",
+        "Max": "10",
         "Item": "01816",
         "Datatype": "ST",
         "Length": "80",
@@ -1683,7 +1683,7 @@
           },
           {
             "Name": "CWE.7",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
@@ -1787,7 +1787,7 @@
           },
           {
             "Name": "CWE.7",
-            "Usage": "O",
+            "Usage": "C",
             "Min": "0",
             "Max": "1",
             "Type": "ST",
