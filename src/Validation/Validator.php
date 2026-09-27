@@ -259,7 +259,9 @@ class Validator
      * Supported usage codes:
      * - R: Required
      * - X: Not allowed
+     * - W: Withdrawn
      * - C: Conditional
+     * - B: Backward compatibility
      * - O: Optional
      *
      * Examples:
@@ -295,6 +297,12 @@ class Validator
             $type = 'Element not allowed';
             $result = false;
 
+        } elseif ($elementUsage === 'W' && $elementExists) {
+
+            $description = "$elementType $elementName is withdrawn and should not be used.";
+            $type = 'Element not allowed';
+            $result = false;
+
         } elseif ($elementUsage === 'C' && $elementExists) {
 
             $description =
@@ -302,6 +310,12 @@ class Validator
                 . "Refer to the specification to check the optionality which applies in the context of this message.";
 
             $type = 'Conditional';
+            $result = true;
+
+        } elseif ($elementUsage === 'B' && $elementExists) {
+
+            $description = "$elementType $elementName is retained for backward compatibility.";
+            $type = 'Usage';
             $result = true;
 
         } else {
