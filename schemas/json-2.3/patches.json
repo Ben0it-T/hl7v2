@@ -1,0 +1,677 @@
+{
+    "dataTypes": {
+        "CM_ABS_RANGE.1": {
+            "Type": "CM_RANGE"
+        },
+        "CM_CCP": {
+            "dataType": null,
+            "components": [
+                {
+                    "dataType": "CM_CCP.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CCP.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CCP.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        },
+        "CM_CCP.1": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Sensitivity Correction Factor",
+            "maxLength": ""
+        },
+        "CM_CCP.2": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Baseline",
+            "maxLength": ""
+        },
+        "CM_CCP.3": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Time Skew",
+            "maxLength": ""
+        },
+        "CM_CD_ELECTRODE": {
+            "dataType": null,
+            "components": [
+                {
+                    "dataType": "CM_CD_ELECTRODE.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CD_ELECTRODE.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        },
+        "CM_CD_ELECTRODE.1": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Source Name 1",
+            "maxLength": ""
+        },
+        "CM_CD_ELECTRODE.2": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Source Name 2",
+            "maxLength": ""
+        },
+        "CM_CSU": {
+            "dataType": null,
+            "components": [
+                {
+                    "dataType": "CM_CSU.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CSU.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CSU.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CSU.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CSU.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CSU.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_CSU.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        },
+        "CM_CSU.1": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Sensitivity",
+            "maxLength": ""
+        },
+        "CM_CSU.2": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Unit Identifier",
+            "maxLength": ""
+        },
+        "CM_CSU.3": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Unit Text",
+            "maxLength": ""
+        },
+        "CM_CSU.4": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Units Name Of Coding System",
+            "maxLength": ""
+        },
+        "CM_CSU.5": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Units Alternate Identifier",
+            "maxLength": ""
+        },
+        "CM_CSU.6": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Units Alternate Text",
+            "maxLength": ""
+        },
+        "CM_CSU.7": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Units Name Of Alternate Coding System",
+            "maxLength": ""
+        },
+        "CM_DLT.1": {
+            "Type": "CM_RANGE"
+        },
+        "CM_LA2": {
+            "components": [
+                {
+                    "dataType": "CM_LA2.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.10",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.11",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.12",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.13",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.14",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.15",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_LA2.16",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        },
+        "CM_LA2.1": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Point of care",
+            "maxLength": ""
+        },
+        "CM_LA2.10": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Other designation",
+            "maxLength": ""
+        },
+        "CM_LA2.11": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "City",
+            "maxLength": ""
+        },
+        "CM_LA2.12": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "State or province",
+            "maxLength": ""
+        },
+        "CM_LA2.13": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Zip or postal code",
+            "maxLength": ""
+        },
+        "CM_LA2.14": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Country",
+            "maxLength": ""
+        },
+        "CM_LA2.15": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Address type",
+            "maxLength": ""
+        },
+        "CM_LA2.16": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Other geographic designation",
+            "maxLength": ""
+        },
+        "CM_LA2.2": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Room",
+            "maxLength": ""
+        },
+        "CM_LA2.3": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Bed",
+            "maxLength": ""
+        },
+        "CM_LA2.4": {
+            "Type": "HD",
+            "Table": "",
+            "LongName": "Facility",
+            "maxLength": ""
+        },
+        "CM_LA2.5": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Location status",
+            "maxLength": ""
+        },
+        "CM_LA2.6": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Person location type",
+            "maxLength": ""
+        },
+        "CM_LA2.7": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Building",
+            "maxLength": ""
+        },
+        "CM_LA2.8": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Floor",
+            "maxLength": ""
+        },
+        "CM_LA2.9": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Street address",
+            "maxLength": ""
+        },
+        "CM_MDV": {
+            "dataType": null,
+            "components": [
+                {
+                    "dataType": "CM_MDV.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_MDV.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        },
+        "CM_MDV.1": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Minimum Value",
+            "maxLength": ""
+        },
+        "CM_MDV.2": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Maximum Value",
+            "maxLength": ""
+        },
+        "CM_OSD": {
+            "dataType": null,
+            "components": [
+                {
+                    "dataType": "CM_OSD.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.2",
+                    "minOccurs": "1",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.4",
+                    "minOccurs": "1",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.8",
+                    "minOccurs": "1",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.10",
+                    "minOccurs": "1",
+                    "maxOccurs": "1"
+                },
+                {
+                    "dataType": "CM_OSD.11",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        },
+        "CM_OSD.1": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Sequence/results Flag",
+            "maxLength": ""
+        },
+        "CM_OSD.10": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Filler Order Number Universal ID",
+            "maxLength": ""
+        },
+        "CM_OSD.11": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Filler Order Number Universal ID Type",
+            "maxLength": ""
+        },
+        "CM_OSD.2": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Placer Order Number Entity Identifier",
+            "maxLength": ""
+        },
+        "CM_OSD.3": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Placer Order Number Namespace ID",
+            "maxLength": ""
+        },
+        "CM_OSD.4": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Filler Order Number Entity Identifier",
+            "maxLength": ""
+        },
+        "CM_OSD.5": {
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Filler Order Number Namespace ID",
+            "maxLength": ""
+        },
+        "CM_OSD.6": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Sequence Condition Value",
+            "maxLength": ""
+        },
+        "CM_OSD.7": {
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Maximum Number Of Repeats",
+            "maxLength": ""
+        },
+        "CM_OSD.8": {
+            "Type": "ST",
+            "Table": "",
+            "LongName": "Placer Order Number Universal ID",
+            "maxLength": ""
+        },
+        "CM_OSD.9": {
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Placer Order Number Universal ID Type",
+            "maxLength": ""
+        },
+        "CM_RANGE.1": {
+            "Type": "ST"
+        },
+        "CM_RANGE.2": {
+            "Type": "ST"
+        },
+        "CM_RFR.1": {
+            "Type": "CM_RANGE"
+        },
+        "CM_RFR.3": {
+            "Type": "CM_RANGE"
+        },
+        "CM_RFR.4": {
+            "Type": "CM_RANGE"
+        }
+    },
+    "fields": {
+        "NSC.9": {
+            "Item": "01196",
+            "Type": "ST",
+            "Table": "",
+            "LongName": "New Facility",
+            "maxLength": "30",
+            "Chapter": "C"
+        },
+        "PRA.8": {
+            "Item": "01296",
+            "Type": "DT",
+            "Table": "",
+            "LongName": "Date Entered Practice",
+            "maxLength": "8",
+            "Chapter": "8.6.3.8"
+        }
+    },
+    "segments": {
+        "DB1": {
+            "LongName": "Disability Segment",
+            "Chapter": "3"
+        },
+        "GOL": {
+            "LongName": "Goal detail segment",
+            "Chapter": "12"
+        },
+        "NCK": {
+            "LongName": "System clock segment",
+            "Chapter": "C"
+        },
+        "NSC": {
+            "fields": [
+                {
+                    "field": "NSC.1",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "NSC.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "NSC.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ],
+            "LongName": "Status change segment",
+            "Chapter": "C"
+        },
+        "NST": {
+            "LongName": "Statistics segment",
+            "Chapter": "C"
+        },
+        "PRA": {
+            "fields": [
+                {
+                    "field": "PRA.1",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "PRA.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "usage": "O"
+                },
+                {
+                    "field": "PRA.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "usage": "O"
+                },
+                {
+                    "field": "PRA.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "PRA.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "usage": "O"
+                },
+                {
+                    "field": "PRA.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "usage": "O"
+                },
+                {
+                    "field": "PRA.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "usage": "O"
+                },
+                {
+                    "field": "PRA.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ]
+        },
+        "PRB": {
+            "LongName": "Problem detail segment",
+            "Chapter": "12"
+        },
+        "PSH": {
+            "LongName": "Product summary header segment",
+            "Chapter": "7"
+        },
+        "PTH": {
+            "LongName": "Pathway segment",
+            "Chapter": "12"
+        },
+        "RGS": {
+            "LongName": "Resource group segment",
+            "Chapter": "10"
+        },
+        "ROL": {
+            "LongName": "Role segment",
+            "Chapter": "12"
+        },
+        "VAR": {
+            "LongName": "Variance segment",
+            "Chapter": "12"
+        }
+    }
+}
