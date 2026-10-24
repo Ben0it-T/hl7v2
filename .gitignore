@@ -10,7 +10,6 @@ build/
 # Resources
 /profiles/gazelle/
 /profiles/xml-*/
-/schemas/appendix*/
 /schemas/hl7*/
 /schemas/json-*-org/
 /schemas/json-*-sun/
