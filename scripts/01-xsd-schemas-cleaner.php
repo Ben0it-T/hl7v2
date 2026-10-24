@@ -5,16 +5,21 @@ declare(strict_types=1);
 /**
  * Clean XSD schemas.
  *
- * Formats XML output with indentation and removes unnecessary whitespace from HL7 XSD schemas.
+ * Formats every .xsd file of the input directory: removes unnecessary whitespace and indents the XML.
+ * Files are rewritten in place.
  *
- * HL7’s Version 2.x xsd schemas : https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
+ * HL7’s Version 2.x XSD schemas : https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
  *
  * Usage:
- * php 01-xsd-schemas-cleaner.php --input-dir=<directory>
+ * php 01-xsd-schemas-cleaner.php \
+ *     --input-dir=<directory>
  *
  * Example:
- * php 01-xsd-schemas-cleaner.php --input-dir=../schemas/hl7-xml-v2.5
- * php 01-xsd-schemas-cleaner.php --input-dir=../schemas/hl7v2xsd/2.5
+ * php 01-xsd-schemas-cleaner.php \
+ *     --input-dir=../schemas/hl7v2org/2.5
+ *
+ * php 01-xsd-schemas-cleaner.php \
+ *     --input-dir=../schemas/hl7v2xsd/2.5
  */
 
 $options = getopt('', [
@@ -45,7 +50,10 @@ if ($files === false) {
     );
 }
 
-// Clean xsd schemas
+//
+// CLEAN XSD SCHEMAS
+//
+
 foreach ($files as $file) {
     $filename = $inputDir . DIRECTORY_SEPARATOR . $file;
 
