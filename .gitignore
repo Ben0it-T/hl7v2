@@ -1,9 +1,11 @@
 # General
 .DS_Store
 ._*
+.notes/
 __*.*
 *.sublime-project
 *.sublime-workspace
+build/
 
 # Resources
 /profiles/gazelle/
