@@ -62,13 +62,21 @@ class HL7Message
     }
 
     /**
-     * Parse HL7 message string
+     * Parse HL7 message string.
+     *
+     * Any previously parsed message, validation result and profiled
+     * message are discarded before parsing, even if parsing fails.
+     * Validate the message again to obtain a new validation result.
      *
      * @param string $rawMessage
+     *
      * @throws HL7Exception If the message cannot be parsed.
      */
     public function parse(string $rawMessage): void
     {
+        $this->message          = null;
+        $this->profiledMessage  = [];
+        $this->validationResult = null;
         $this->message = $this->parser->parse($rawMessage);
     }
 
