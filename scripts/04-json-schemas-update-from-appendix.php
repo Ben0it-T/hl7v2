@@ -151,9 +151,9 @@ $colSeq = array_column($rows, 1);
 array_multisort($colSeg, SORT_ASC, $colSeq, SORT_ASC, $rows);
 
 // load json shemas
-$dataFields = loadJson($jsonDir . '/fields/fields.json');
-$dataSegments = loadJson($jsonDir . '/segments/segments.json');
-$dataTypes = loadJson($jsonDir . '/dataTypes/dataTypes.json');
+$dataFields = loadJson($jsonDir . '/fields.json');
+$dataSegments = loadJson($jsonDir . '/segments.json');
+$dataTypes = loadJson($jsonDir . '/dataTypes.json');
 
 $count = 0;
 
@@ -236,7 +236,7 @@ foreach ($rows as $row) {
 
 }
 
-saveJson($jsonDir . '/fields/fields.json', $dataFields);
+saveJson($jsonDir . '/fields.json', $dataFields);
 echo "- Fields: {$count}\n";
 
 
@@ -276,7 +276,7 @@ foreach ($rows as $row) {
     $dataSegments[$segmentName]['Chapter'] = trim($chapter);
 }
 
-saveJson($jsonDir . '/segments/segments.json', $dataSegments);
+saveJson($jsonDir . '/segments.json', $dataSegments);
 echo "- Segments: {$count}\n";
 
 
@@ -341,10 +341,7 @@ foreach ($rows as $row) {
 
 }
 
-saveJson($jsonDir . '/dataTypes/dataTypes.json', $dataTypes);
+saveJson($jsonDir . '/dataTypes.json', $dataTypes);
 echo "- dataTypes: done\n";
 
 echo "Done.\n";
-
-
-

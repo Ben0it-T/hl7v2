@@ -644,9 +644,9 @@ if ($inputDir === $outputDir) {
 $profilesGen = new HL7jsonProfilesGenerator();
 
 // set input directories
-$profilesGen->setDataTypesFilename($inputDir . "/dataTypes/dataTypes.json");
-$profilesGen->setFieldsFilename($inputDir . "/fields/fields.json");
-$profilesGen->setSegmentsFilename($inputDir . "/segments/segments.json");
+$profilesGen->setDataTypesFilename($inputDir . "/dataTypes.json");
+$profilesGen->setFieldsFilename($inputDir . "/fields.json");
+$profilesGen->setSegmentsFilename($inputDir . "/segments.json");
 $profilesGen->setStructuresInputDir($inputDir . "/structures");
 $profilesGen->setMessageTypeFilename($inputDir . "/messageType.json");
 

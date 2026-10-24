@@ -190,7 +190,7 @@ foreach ($nodes as $node) {
 }
 
 ksort($segments);
-saveJsonSchema('segments', $segments, $outputDir . '/segments');
+saveJsonSchema('segments', $segments, $outputDir);
 
 echo "- Segments: {$cnt}\n";
 
@@ -272,7 +272,7 @@ foreach ($nodes as $node) {
 }
 
 ksort($fields);
-saveJsonSchema("fields", $fields, $outputDir . "/fields");
+saveJsonSchema("fields", $fields, $outputDir);
 
 echo "- Fields: {$cnt}\n";
 
@@ -398,7 +398,7 @@ foreach ($nodes as $node) {
 }
 
 ksort($dataTypes);
-saveJsonSchema("dataTypes", $dataTypes, $outputDir . "/dataTypes");
+saveJsonSchema("dataTypes", $dataTypes, $outputDir);
 
 echo "- Datatypes & Components: {$cnt}\n";
 

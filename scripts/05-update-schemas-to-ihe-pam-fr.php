@@ -384,15 +384,12 @@ function mergeElementUpdate(array $element, array $update): array
 // Load json schemas
 $messageType       = loadJson($inputDir . "/messageType.json");
 $eventDesc         = loadJson($inputDir . "/eventDesc.json");
-$segmentsSchemas   = loadJson($inputDir . "/segments/segments.json");
-$fieldsSchemas     = loadJson($inputDir . "/fields/fields.json");
-$dataTypesSchemas  = loadJson($inputDir . "/dataTypes/dataTypes.json");
+$segmentsSchemas   = loadJson($inputDir . "/segments.json");
+$fieldsSchemas     = loadJson($inputDir . "/fields.json");
+$dataTypesSchemas  = loadJson($inputDir . "/dataTypes.json");
 $structuresSchemas = [];
 
 // Create output directories
-createDirectory($outputDir . "/dataTypes");
-createDirectory($outputDir . "/fields");
-createDirectory($outputDir . "/segments");
 createDirectory($outputDir . "/structures");
 
 
@@ -2012,9 +2009,9 @@ ksort($segmentsSchemas);
 ksort($fieldsSchemas);
 ksort($dataTypesSchemas);
 
-saveJson($outputDir . "/segments/segments.json",   $segmentsSchemas);
-saveJson($outputDir . "/fields/fields.json",       $fieldsSchemas);
-saveJson($outputDir . "/dataTypes/dataTypes.json", $dataTypesSchemas);
+saveJson($outputDir . "/segments.json",   $segmentsSchemas);
+saveJson($outputDir . "/fields.json",       $fieldsSchemas);
+saveJson($outputDir . "/dataTypes.json", $dataTypesSchemas);
 saveJson($outputDir . "/messageType.json",         $messageStructures);
 saveJson($outputDir . "/eventDesc.json",           $messageDesc);
 

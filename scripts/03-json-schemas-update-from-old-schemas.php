@@ -117,8 +117,8 @@ function saveJson(string $filename, array $data): void
 
 echo "Updating datatypes...\n";
 
-$dataSource = loadJson($sourceDir . '/dataTypes/dataTypes.json');
-$dataTarget = loadJson($targetDir . '/dataTypes/dataTypes.json');
+$dataSource = loadJson($sourceDir . '/dataTypes.json');
+$dataTarget = loadJson($targetDir . '/dataTypes.json');
 
 $hasChanged = false;
 $changes = '';
@@ -171,7 +171,7 @@ foreach ($dataSource as $dtKey => $dtVal) {
 
 if ($hasChanged) {
     echo $changes . "\n";
-    saveJson($targetDir . '/dataTypes/dataTypes.json', $dataTarget);
+    saveJson($targetDir . '/dataTypes.json', $dataTarget);
 }
 
 
@@ -182,8 +182,8 @@ if ($hasChanged) {
 
 echo "Updating fields...\n";
 
-$dataSource = loadJson($sourceDir . '/fields/fields.json');
-$dataTarget = loadJson($targetDir . '/fields/fields.json');
+$dataSource = loadJson($sourceDir . '/fields.json');
+$dataTarget = loadJson($targetDir . '/fields.json');
 
 $hasChanged = false;
 $changes = '';
@@ -214,7 +214,7 @@ foreach ($dataSource as $fieldKey => $fieldVal) {
 
 if ($hasChanged) {
     echo $changes . "\n";
-    saveJson($targetDir . '/fields/fields.json', $dataTarget);
+    saveJson($targetDir . '/fields.json', $dataTarget);
 }
 
 
@@ -225,8 +225,8 @@ if ($hasChanged) {
 
 echo "Updating segments...\n";
 
-$dataSource = loadJson($sourceDir . '/segments/segments.json');
-$dataTarget = loadJson($targetDir . '/segments/segments.json');
+$dataSource = loadJson($sourceDir . '/segments.json');
+$dataTarget = loadJson($targetDir . '/segments.json');
 
 $hasChanged = false;
 $changes = '';
@@ -269,7 +269,7 @@ foreach ($dataSource as $segKey => $segVal) {
 
 if ($hasChanged) {
     echo $changes . "\n";
-    saveJson($targetDir . '/segments/segments.json', $dataTarget);
+    saveJson($targetDir . '/segments.json', $dataTarget);
 }
 
 
