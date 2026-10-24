@@ -7,7 +7,7 @@ declare(strict_types=1);
  *
  * HL7’s Version 2.x xsd schemas : https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
  * - segments.xsd
- * - fields.xsd$
+ * - fields.xsd
  * - datatypes.xsd
  * - structures ACK.xsd, ADT_XXX.xsd, SIU_XXX.xsd, ...
  *
@@ -18,7 +18,7 @@ declare(strict_types=1);
  *
  * Example:
  * php 02-xsd-schemas-to-json-schemas.php \
- *     --input-dir=../schemas/hl7-xml-v2.5 \
+ *     --input-dir=../schemas/hl7v2org/2.5 \
  *     --output-dir=../schemas/json-2.5-org
  *
  * php 02-xsd-schemas-to-json-schemas.php \
@@ -60,6 +60,13 @@ if ($inputDir === $outputDir) {
 
 /**
  * Load XSD schema.
+ *
+ * @param string $inputDir Directory containing the XSD schemas.
+ * @param string $filename XSD schema filename.
+ *
+ * @return DOMDocument
+ *
+ * @throws RuntimeException If the file does not exist or cannot be loaded.
  */
 function loadXsdSchema(string $inputDir, string $filename): DOMDocument
 {
@@ -86,7 +93,15 @@ function loadXsdSchema(string $inputDir, string $filename): DOMDocument
 /**
  * Save JSON schema.
  *
- * @param array<string, mixed> $data
+ * Creates the directory if it does not exist.
+ *
+ * @param string $name Schema name, used as filename (<name>.json).
+ * @param array<string, mixed> $data Schema data.
+ * @param string $directory Output directory.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If the data cannot be encoded as JSON.
  */
 function saveJsonSchema(string $name, array $data, string $directory): void
 {
@@ -106,10 +121,19 @@ function saveJsonSchema(string $name, array $data, string $directory): void
 }
 
 /**
- * XPath query helper
+ * Run an XPath query and return the matching elements.
  *
+ * Nodes that are not elements (attributes, text…) are ignored.
+ *
+ * @param DOMXPath $xpath XPath object of the XSD schema.
+ * @param string $expression XPath expression.
+ * @param DOMNode|null $contextNode Context node of the query.
+ *
+ * @return list<DOMElement>
+ *
+ * @throws RuntimeException If the XPath expression is invalid.
  */
-function xpathQuery( DOMXPath $xpath, string $expression, ?DOMNode $contextNode = null): DOMNodeList
+function xpathElements(DOMXPath $xpath, string $expression, ?DOMNode $contextNode = null): array
 {
     $result = $xpath->query($expression, $contextNode);
 
@@ -119,7 +143,39 @@ function xpathQuery( DOMXPath $xpath, string $expression, ?DOMNode $contextNode 
         );
     }
 
-    return $result;
+    $elements = [];
+
+    foreach ($result as $node) {
+        if ($node instanceof DOMElement) {
+            $elements[] = $node;
+        }
+    }
+
+    return $elements;
+}
+
+/**
+ * Create a structure element (segment or group reference).
+ *
+ * A reference longer than 3 characters is a group (e.g. ADT_A01.PROCEDURE),
+ * otherwise a segment (e.g. PID).
+ *
+ * @param DOMElement $element xsd:element with a ref attribute.
+ *
+ * @return array<string, string> Segment or group name, minOccurs and maxOccurs.
+ */
+function structureElement(DOMElement $element): array
+{
+    $ref = $element->getAttribute("ref");
+    $refParts = explode(".", $ref);
+    $theRef = (count($refParts) > 1) ? $refParts[1] : $ref;
+    $type = (strlen($ref) > 3) ? "group" : "segment";
+
+    return [
+        $type => $theRef,
+        "minOccurs" => $element->getAttribute("minOccurs"),
+        "maxOccurs" => $element->getAttribute("maxOccurs"),
+    ];
 }
 
 
@@ -147,18 +203,16 @@ if ($contextNode === null) {
 }
 
 // xsd:element
-$nodes = xpathQuery($xpath, 'xsd:element[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:element[@name]', $contextNode);
 $elements = [];
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $elements[$node->getAttribute('type')] = $node->getAttribute('name');
 }
 
 // xsd:complexType
 $cnt = 0;
-$nodes = xpathQuery($xpath, 'xsd:complexType[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:complexType[@name]', $contextNode);
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $name = $elements[$node->getAttribute('name')] ?? null;
 
     if ($name === null || strlen($name) !== 3) {
@@ -220,36 +274,32 @@ if ($contextNode === null) {
 }
 
 // xsd:element
-$nodes = xpathQuery($xpath, 'xsd:element[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:element[@name]', $contextNode);
 $elements = [];
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $elements[$node->getAttribute('type')] = $node->getAttribute('name');
 }
 
 // xsd:complexType
-$nodes = xpathQuery($xpath, 'xsd:complexType[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:complexType[@name]', $contextNode);
 $attributes = [];
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $type = $node->getAttribute("name");
     $name = $elements[$type] ?? null;
 
     if ($name === null) {
         continue;
     }
-    $attributeGroup = $xpath->query('xsd:complexType[@name="'.$type.'"]//xsd:attributeGroup[@ref]', $contextNode);
-    if ($attributeGroup->length > 0) {
-        $attributeName = $attributeGroup->item(0)->getAttribute("ref") ?? null;
-        $attributes[$attributeName] = $name;
+    $attributeGroup = xpathElements($xpath, 'xsd:complexType[@name="'.$type.'"]//xsd:attributeGroup[@ref]', $contextNode);
+    if ($attributeGroup !== []) {
+        $attributes[$attributeGroup[0]->getAttribute("ref")] = $name;
     }
 }
 
 // xsd:attributeGroup
 $cnt = 0;
-$nodes = xpathQuery($xpath, 'xsd:attributeGroup[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:attributeGroup[@name]', $contextNode);
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $cnt++;
     $name = $attributes[$node->getAttribute("name")] ?? null;
 
@@ -303,7 +353,7 @@ if ($contextNode === null) {
 }
 
 // xsd:element
-$nodes = xpathQuery($xpath, 'xsd:element[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:element[@name]', $contextNode);
 $elements = [];
 foreach ($nodes as $node) {
     $elements[$node->getAttribute("type")] = $node->getAttribute("name");
@@ -311,9 +361,8 @@ foreach ($nodes as $node) {
 
 
 // xsd:simpleType (primitives datatypes)
-$nodes = xpathQuery($xpath, 'xsd:simpleType[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:simpleType[@name]', $contextNode);
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $cnt++;
     $dataTypes[$node->getAttribute("name")] = [
         "dataType" => "STRING",
@@ -321,10 +370,9 @@ foreach ($nodes as $node) {
 }
 
 // xsd:complexType (xsd:complexType name=)
-$nodes = xpathQuery($xpath, 'xsd:complexType[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:complexType[@name]', $contextNode);
 $componentsRef = [];
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     $name = $node->getAttribute("name");
 
     // primitive datatype extension escapeType/varies
@@ -338,21 +386,21 @@ foreach ($nodes as $node) {
     }
 
     // primitive datatypes
-    $primitiveDatatypes = $xpath->query('xsd:complexType[@name="'.$name.'"]/xsd:sequence/xsd:element[@name]', $contextNode);
-    if ($primitiveDatatypes->length === 1) {
+    $primitiveDatatypes = xpathElements($xpath, 'xsd:complexType[@name="'.$name.'"]/xsd:sequence/xsd:element[@name]', $contextNode);
+    if (count($primitiveDatatypes) === 1) {
         $cnt++;
         $dataTypes[$name] = [
             "dataType" => "STRING",
         ];
 
         continue;
-    } elseif ($primitiveDatatypes->length > 1) {
+    } elseif (count($primitiveDatatypes) > 1) {
         echo "Need to check <xsd:complexType name=\"{$name}\"...\n";
     }
 
     // composite datatypes
-    $compositeDatatypes = $xpath->query('xsd:complexType[@name="'.$name.'"]/xsd:sequence/xsd:element[@ref]', $contextNode);
-    if ($compositeDatatypes->length > 0) {
+    $compositeDatatypes = xpathElements($xpath, 'xsd:complexType[@name="'.$name.'"]/xsd:sequence/xsd:element[@ref]', $contextNode);
+    if ($compositeDatatypes !== []) {
         $cnt++;
         $components = [];
         foreach ($compositeDatatypes as $elmt) {
@@ -367,17 +415,16 @@ foreach ($nodes as $node) {
 
     // components attributeGroup ref
     if (isset($elements[$name])) {
-        $attributeGroup = $xpath->query('xsd:complexType[@name="'.$name.'"]//xsd:attributeGroup[@ref]', $contextNode);
-        if ($attributeGroup->length > 0) {
-            $componentsRef[$attributeGroup->item(0)->getAttribute("ref")] = $name;
+        $attributeGroup = xpathElements($xpath, 'xsd:complexType[@name="'.$name.'"]//xsd:attributeGroup[@ref]', $contextNode);
+        if ($attributeGroup !== []) {
+            $componentsRef[$attributeGroup[0]->getAttribute("ref")] = $name;
         }
     }
 }
 
 // xsd:attributeGroup
-$nodes = xpathQuery($xpath, 'xsd:attributeGroup[@name]', $contextNode);
+$nodes = xpathElements($xpath, 'xsd:attributeGroup[@name]', $contextNode);
 foreach ($nodes as $node) {
-    /** @var DOMElement $node */
     if (isset($componentsRef[$node->getAttribute("name")])) {
         $ref = $componentsRef[$node->getAttribute("name")];
         if (isset($elements[$ref])) {
@@ -449,18 +496,16 @@ foreach ($files as $file) {
     $contextNode = $structureXmlDoc->documentElement;
 
     // xsd:element
-    $nodes = xpathQuery($xpath, 'xsd:element[@name]', $contextNode);
+    $nodes = xpathElements($xpath, 'xsd:element[@name]', $contextNode);
     $elements = [];
     foreach ($nodes as $node) {
-        /** @var DOMElement $node */
         $elements[$node->getAttribute("type")] = $node->getAttribute("name");
     }
 
     // xsd:complexType
-    $nodes = xpathQuery($xpath, 'xsd:complexType[@name]', $contextNode);
+    $nodes = xpathElements($xpath, 'xsd:complexType[@name]', $contextNode);
     $structureArray = [];
     foreach ($nodes as $node) {
-        /** @var DOMElement $node */
         $fullname = $node->getAttribute("name");
         $name = $elements[$fullname] ?? null;
 
@@ -470,39 +515,24 @@ foreach ($files as $file) {
 
         $nameParts = explode(".", $name);
         $groupName = (count($nameParts) > 1) ? $nameParts[1] : $name;
-        $structureArray[$groupName] = ["elements" => []];
+        $groupElements = [];
 
         // sequence
-        $elmts = $xpath->query('xsd:complexType[@name="'.$fullname.'"]/xsd:sequence/xsd:element[@ref]', $contextNode);
-        if ($elmts->length > 0) {
-            foreach ($elmts as $elmt) {
-                $ref = $elmt->getAttribute("ref");
-                $refParts = explode(".", $ref);
-                $theRef = (count($refParts) > 1) ? $refParts[1] : $ref;
-                $type = (strlen($ref) > 3) ? "group" : "segment";
-                $structureArray[$groupName]["elements"][] = [
-                    $type => $theRef,
-                    "minOccurs" => $elmt->getAttribute("minOccurs"),
-                    "maxOccurs" => $elmt->getAttribute("maxOccurs"),
-                ];
-            }
+        $sequence = xpathElements($xpath, 'xsd:complexType[@name="'.$fullname.'"]/xsd:sequence/xsd:element[@ref]', $contextNode);
+        foreach ($sequence as $elmt) {
+            $groupElements[] = structureElement($elmt);
         }
 
         // choice
-        $elmts = $xpath->query('xsd:complexType[@name="'.$fullname.'"]/xsd:choice/xsd:element[@ref]', $contextNode);
-        if ($elmts->length > 0) {
+        $choice = xpathElements($xpath, 'xsd:complexType[@name="'.$fullname.'"]/xsd:choice/xsd:element[@ref]', $contextNode);
+        foreach ($choice as $elmt) {
+            $groupElements[] = structureElement($elmt);
+        }
+
+        $structureArray[$groupName] = ["elements" => $groupElements];
+
+        if ($choice !== []) {
             $structureArray[$groupName]["type"] = "choice";
-            foreach ($elmts as $elmt) {
-                $ref = $elmt->getAttribute("ref");
-                $refParts = explode(".", $ref);
-                $theRef = (count($refParts) > 1) ? $refParts[1] : $ref;
-                $type = (strlen($ref) > 3) ? "group" : "segment";
-                $structureArray[$groupName]["elements"][] = [
-                    $type => $theRef,
-                    "minOccurs" => $elmt->getAttribute("minOccurs"),
-                    "maxOccurs" => $elmt->getAttribute("maxOccurs"),
-                ];
-            }
         }
     }
     saveJsonSchema($structureName, $structureArray, $outputDir . "/structures");
