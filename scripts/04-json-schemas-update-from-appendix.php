@@ -182,7 +182,7 @@ foreach ($rows as $row) {
         $dataFields[$fieldName]['Type'] = trim($dt);
     }
 
-    if (trim($item) !== '' && $dataFields[$fieldName]['Item'] !== trim($item)) {
+    if (trim($item) !== '') {
         $dataFields[$fieldName]['Item'] = sprintf('%05d', (int) trim($item));
     }
 
