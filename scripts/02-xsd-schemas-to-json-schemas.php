@@ -34,16 +34,12 @@ $options = getopt('', [
 $inputDir = $options['input-dir'] ?? null;
 $outputDir = $options['output-dir'] ?? null;
 
-if (!is_string($inputDir) || $inputDir === '') {
-    throw new RuntimeException(
-        'Missing --input-dir option.'
+if (!is_string($inputDir) || $inputDir === '' || !is_string($outputDir) || $outputDir === '') {
+    fwrite(
+        STDERR,
+        "Usage: php 02-xsd-schemas-to-json-schemas.php --input-dir=<directory> --output-dir=<directory>\n"
     );
-}
-
-if (!is_string($outputDir) || $outputDir === '') {
-    throw new RuntimeException(
-        'Missing --output-dir option.'
-    );
+    exit(1);
 }
 
 if (!is_dir($inputDir)) {
