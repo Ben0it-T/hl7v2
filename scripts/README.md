@@ -42,7 +42,7 @@ Apply corrections and enrichments using older HL7 schemas.
 _Only from HL7 v2.3.1, v2.4, v2.5, v2.5.1 messaging schemas to Sun_HL7v2xsd._
 
 ```bash
-php 03-json-schemas-update-from-old-schemas.php \
+php 03-json-schemas-update-from-hl7-org-to-sun.php \
     --source-dir=<directory> \
     --target-dir=<directory>
 ```

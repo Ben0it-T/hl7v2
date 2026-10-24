@@ -3,17 +3,30 @@
 declare(strict_types=1);
 
 /**
- * Update JSON schemas from legacy JSON schemas.
+ * Update Sun JSON schemas from HL7 JSON schemas.
  *
- * Only from HL7 v2.3.1, v2.4, v2.5, v2.5.1 messaging schemas to Sun_HL7v2xsd.
+ * Applies the cardinalities (minOccurs, maxOccurs) and non-empty attributes
+ * of the JSON schemas generated from the HL7 XSD schemas (source, json-<v>-org)
+ * to the JSON schemas generated from the Sun XSD schemas (target, json-<v>-sun):
+ * - dataTypes.json
+ * - fields.json
+ * - segments.json
+ * - structures/
+ *
+ * Target files are rewritten in place.
+ *
+ * HL7 XSD schemas exist for HL7 v2.3.1, v2.4, v2.5 and v2.5.1 only:
+ * skip this step for HL7 v2.3.
+ *
+ * HL7’s Version 2.x XSD schemas : https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
  *
  * Usage:
- * php 03-json-schemas-update-from-old-schemas.php \
+ * php 03-json-schemas-update-from-hl7-org-to-sun.php \
  *     --source-dir=<directory> \
  *     --target-dir=<directory>
  *
  * Example:
- * php 03-json-schemas-update-from-old-schemas.php \
+ * php 03-json-schemas-update-from-hl7-org-to-sun.php \
  *     --source-dir=../schemas/json-2.5-org \
  *     --target-dir=../schemas/json-2.5-sun
  */
@@ -26,16 +39,12 @@ $options = getopt('', [
 $sourceDir = $options['source-dir'] ?? null;
 $targetDir = $options['target-dir'] ?? null;
 
-if (!is_string($sourceDir) || $sourceDir === '') {
-    throw new RuntimeException(
-        'Missing --source-dir option.'
+if (!is_string($sourceDir) || $sourceDir === '' || !is_string($targetDir) || $targetDir === '') {
+    fwrite(
+        STDERR,
+        "Usage: php 03-json-schemas-update-from-hl7-org-to-sun.php --source-dir=<directory> --target-dir=<directory>\n"
     );
-}
-
-if (!is_string($targetDir) || $targetDir === '') {
-    throw new RuntimeException(
-        'Missing --target-dir option.'
-    );
+    exit(1);
 }
 
 if (!is_dir($sourceDir)) {
@@ -57,9 +66,13 @@ if ($sourceDir === $targetDir) {
 }
 
 /**
- * Load JSON
+ * Load JSON file.
+ *
+ * @param string $filename JSON filename.
  *
  * @return array<string, mixed>
+ *
+ * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
  */
 function loadJson(string $filename): array
 {
@@ -89,9 +102,14 @@ function loadJson(string $filename): array
 }
 
 /**
- * Save JSON
+ * Save JSON file.
  *
- * @param array<string, mixed> $data
+ * @param string $filename JSON filename.
+ * @param array<string, mixed> $data Data to save.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If the data cannot be encoded as JSON.
  */
 function saveJson(string $filename, array $data): void
 {
