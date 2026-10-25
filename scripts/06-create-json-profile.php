@@ -29,11 +29,17 @@ class HL7jsonProfilesGenerator
      * @access private
      */
     private string $eventName;
+    /** @var array<string, mixed> */
     private array $messageType;
+    /** @var list<array<string, mixed>> */
     private array $messageProfile;
+    /** @var array<string, array<string, mixed>> */
     private array $structuresSchemas;
+    /** @var array<string, mixed> */
     private array $segmentsSchemas;
+    /** @var array<string, mixed> */
     private array $fieldsSchemas;
+    /** @var array<string, mixed> */
     private array $dataTypesSchemas;
 
     /**
@@ -127,8 +133,8 @@ class HL7jsonProfilesGenerator
      * Create json profiles
      * Write json profiles to profilesOutputDir
      * 
-     * @param array $messageType
-     * @param array $ignoreEvents
+     * @param list<string> $messageType
+     * @param list<string> $ignoreEvents
      */
     public function createJsonProfiles(array $messageType, array $ignoreEvents = []): void
     {
@@ -182,12 +188,20 @@ class HL7jsonProfilesGenerator
                         if ($this->indent == 4) {
                             $json = json_encode($this->messageProfile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
                         } else {
+                            $json = json_encode($this->messageProfile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
+                            if ($json === false) {
+                                throw new RuntimeException(
+                                    "Unable to encode JSON: {$outputFilename}"
+                                );
+                            }
+
                             $json = preg_replace_callback(
                                 '/^(?: {4})+/m',
                                 function($m) {
-                                    return str_repeat(' ', $this->indent * (strlen($m[0]) / 4));
+                                    return str_repeat(' ', $this->indent * intdiv(strlen($m[0]), 4));
                                 },
-                                json_encode($this->messageProfile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+                                $json
                             );
                         }
                     } else {
@@ -204,8 +218,8 @@ class HL7jsonProfilesGenerator
     /**
      * Load JSON structure schemas 
      *
-     * @param $filename
-     * @return array $data
+     * @param string $filename
+     * @return array<string, mixed> $data
      */
     private function loadJson(string $filename): array
     {
@@ -256,8 +270,8 @@ class HL7jsonProfilesGenerator
     /**
      * Get group or segment attributes
      * 
-     * @param array $element
-     * @return array $attributes
+     * @param array<string, mixed> $element
+     * @return array<string, string> $attributes
      */
     private function getElementAttributes(array $element): array
     {
@@ -285,8 +299,8 @@ class HL7jsonProfilesGenerator
     /**
      * Get field attributes
      * 
-     * @param array $field
-     * @return array $fieldAttributes
+     * @param array<string, mixed> $field
+     * @return array<string, string> $fieldAttributes
      */
     private function getFieldAttributes(array $field): array
     {
@@ -312,8 +326,8 @@ class HL7jsonProfilesGenerator
     /**
      * Get component attributes
      * 
-     * @param array $component
-     * @return array $componentAttributes
+     * @param array<string, mixed> $component
+     * @return array<string, string> $componentAttributes
      */
     private function getComponentAttributes(array $component): array
     {
@@ -341,8 +355,8 @@ class HL7jsonProfilesGenerator
      * 
      * @param string $structureName (structureId)
      * @param string $segGroupName
-     * @param array $segGroupAttributes
-     * @return array $segGroup
+     * @param array<string, string> $segGroupAttributes
+     * @return array<string, mixed> $segGroup
      */
     private function addSegGroup(string $structureName, string $segGroupName, array $segGroupAttributes): array
     {
@@ -370,8 +384,8 @@ class HL7jsonProfilesGenerator
      * Add segment schema
      * 
      * @param string $segName
-     * @param array $segAttributes
-     * @return array $segment
+     * @param array<string, string> $segAttributes
+     * @return array<string, mixed> $segment
      */
     private function addSegment(string $segName, array $segAttributes): array
     {
@@ -396,8 +410,8 @@ class HL7jsonProfilesGenerator
      * Add field schema
      * 
      * @param string $fieldName
-     * @param array $fieldAttributes
-     * @return array $field
+     * @param array<string, string> $fieldAttributes
+     * @return array<string, mixed> $field
      */
     private function addField(string $fieldName, array $fieldAttributes): array
     {
@@ -540,9 +554,9 @@ class HL7jsonProfilesGenerator
      * Add component schema
      * 
      * @param string $componentName
-     * @param array $componentAttributes
+     * @param array<string, string> $componentAttributes
      * @param bool $isSubComponent
-     * @return array $component
+     * @return array<string, mixed> $component
      */
     private function addComponent(string $componentName, array $componentAttributes, bool $isSubComponent = false): array
     {
