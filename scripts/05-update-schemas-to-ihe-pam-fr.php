@@ -40,7 +40,7 @@ if (!is_dir($inputDir)) {
     );
 }
 
-if ($inputDir === $outputDir) {
+if (is_dir($outputDir) && realpath($inputDir) === realpath($outputDir)) {
     throw new RuntimeException(
         'Input and output directories must be different.'
     );
