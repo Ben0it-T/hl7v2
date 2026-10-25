@@ -3,9 +3,10 @@
 declare(strict_types=1);
 
 /**
- * Update JSON schemas.
+ * Generate the IHE PAM FR JSON schema from the HL7 v2.5 JSON schema.
  *
- * From HL7 2.5 IHE PAM to HL7 2.5 IHE PAM FR 2.11.2.
+ * IHE PAM FR 2.11.2 (national extension of IHE ITI PAM, ITI-30 and ITI-31).
+ * Constraints and rules are defined in this script.
  *
  * Usage:
  * php 05-update-schemas-to-ihe-pam-fr.php \
@@ -47,9 +48,13 @@ if (is_dir($outputDir) && realpath($inputDir) === realpath($outputDir)) {
 }
 
 /**
- * Load JSON.
+ * Load JSON file.
+ *
+ * @param string $filename JSON filename.
  *
  * @return array<string, mixed>
+ *
+ * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
  */
 function loadJson(string $filename): array
 {
@@ -81,6 +86,13 @@ function loadJson(string $filename): array
 /**
  * Create directory.
  *
+ * Parent directories are created if needed. Does nothing if the directory already exists.
+ *
+ * @param string $directory Directory to create.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If the directory cannot be created.
  */
 function createDirectory(string $directory): void
 {
@@ -92,9 +104,14 @@ function createDirectory(string $directory): void
 }
 
 /**
- * Save JSON.
+ * Save JSON file.
  *
- * @param array<string, mixed> $data
+ * @param string $filename JSON filename.
+ * @param array<string, mixed> $data Data to save.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If the data cannot be encoded as JSON.
  */
 function saveJson(string $filename, array $data): void
 {
@@ -169,13 +186,16 @@ function rules(array $fields, array $attributes): array
 }
 
 /**
- * Apply segment rules
+ * Apply segment rules.
  *
- * @param array<string,mixed> $schemas
- * @param string $segmentName
- * @param array<string,array<string,string>> $rules
+ * Merges the rule attributes into the matching fields of the segment.
+ * Does nothing if the segment does not exist.
  *
- * @return array<string,mixed>
+ * @param array<string, mixed> $schemas Segment schemas (segments.json).
+ * @param string $segmentName Segment name (e.g. PID).
+ * @param array<string, array<string, string>> $rules Attributes, by field identifier (see rules()).
+ *
+ * @return array<string, mixed> Updated segment schemas.
  */
 function applySegmentRules(array $schemas, string $segmentName, array $rules): array
 {
@@ -200,13 +220,16 @@ function applySegmentRules(array $schemas, string $segmentName, array $rules): a
 }
 
 /**
- * Apply data type rules
+ * Apply datatype rules.
  *
- * @param array<string,mixed> $schemas
- * @param string $dataType
- * @param array<string,mixed> $rules
+ * Merges the rule attributes into the matching components of the datatype.
+ * Does nothing if the datatype does not exist.
  *
- * @return array<string,mixed>
+ * @param array<string, mixed> $schemas Datatype schemas (dataTypes.json).
+ * @param string $dataType Datatype name (e.g. CX).
+ * @param array<string, array<string, string>> $rules Attributes, by component identifier (see rules()).
+ *
+ * @return array<string, mixed> Updated datatype schemas.
  */
 function applyDataTypeRules(array $schemas, string $dataType, array $rules): array
 {
@@ -231,14 +254,23 @@ function applyDataTypeRules(array $schemas, string $dataType, array $rules): arr
 }
 
 /**
- * Apply ITI rules
+ * Apply ITI rules to a message structure.
  *
+ * Rules of an event, applied in this order:
+ * - replaceStructure: replaces the whole structure (other rules are ignored);
+ * - elementUpdates: updates every segment or group with the given name;
+ * - occurrenceUpdates: updates the n-th occurrence of a segment;
+ * - insertions: inserts segments after a segment.
  *
- * @param array<string,mixed> $msgStruct
- * @param string $eventName
- * @param array<string,mixed> $itiRules
+ * Does nothing if the event has no rules.
  *
- * @return array<string,mixed>
+ * @param array<string, mixed> $msgStruct Message structure.
+ * @param string $eventName Trigger event (e.g. A01).
+ * @param array<string, mixed> $itiRules ITI rules, by trigger event.
+ *
+ * @return array<string, mixed> Updated message structure.
+ *
+ * @throws RuntimeException If the segment of an insertion is not found.
  */
 function applyItiRules(array $msgStruct, string $eventName, array $itiRules): array
 {
@@ -364,10 +396,12 @@ function applyItiRules(array $msgStruct, string $eventName, array $itiRules): ar
 /**
  * Merge element update.
  *
- * @param array<string,mixed> $element
- * @param array<string,mixed> $update
+ * Sets minOccurs, maxOccurs and usage of a structure element from an update rule.
  *
- * @return array<string,mixed>
+ * @param array<string, mixed> $element Structure element (segment or group).
+ * @param array<string, mixed> $update Update rule (minOccurs, maxOccurs, usage).
+ *
+ * @return array<string, mixed> Updated structure element.
  */
 function mergeElementUpdate(array $element, array $update): array
 {
