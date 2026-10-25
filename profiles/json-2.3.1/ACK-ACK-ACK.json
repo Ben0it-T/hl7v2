@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]

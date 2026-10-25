@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -273,7 +273,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Message type",
+            "LongName": "message type",
             "maxLength": ""
           },
           {
@@ -283,7 +283,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Trigger event",
+            "LongName": "trigger event",
             "maxLength": ""
           }
         ]
@@ -506,7 +506,7 @@
       {
         "Name": "EVN.1",
         "Usage": "B",
-        "Min": "1",
+        "Min": "0",
         "Max": "1",
         "Item": "00099",
         "Datatype": "ID",
@@ -544,7 +544,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -578,7 +578,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -842,7 +842,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -1501,7 +1501,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -2625,7 +2625,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -3121,7 +3121,7 @@
         "Item": "00762",
         "Datatype": "CX",
         "Length": "2",
-        "Table": "0000",
+        "Table": "",
         "LongName": "Duplicate Patient",
         "Chapter": "3.3.9.10",
         "components": [
@@ -5073,7 +5073,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -5291,7 +5291,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Discharge location",
+            "LongName": "discharge location",
             "maxLength": ""
           },
           {
@@ -5301,7 +5301,7 @@
             "Max": "1",
             "Type": "TS",
             "Table": "",
-            "LongName": "Effective date",
+            "LongName": "effective date",
             "maxLength": "",
             "components": [
               {
@@ -5321,7 +5321,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -5677,7 +5677,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -5711,7 +5711,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -7019,7 +7019,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -8143,7 +8143,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -8639,7 +8639,7 @@
         "Item": "00762",
         "Datatype": "CX",
         "Length": "2",
-        "Table": "0000",
+        "Table": "",
         "LongName": "Duplicate Patient",
         "Chapter": "3.3.9.10",
         "components": [
@@ -10591,7 +10591,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -10809,7 +10809,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Discharge location",
+            "LongName": "discharge location",
             "maxLength": ""
           },
           {
@@ -10819,7 +10819,7 @@
             "Max": "1",
             "Type": "TS",
             "Table": "",
-            "LongName": "Effective date",
+            "LongName": "effective date",
             "maxLength": "",
             "components": [
               {
@@ -10839,7 +10839,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -11195,7 +11195,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -11229,7 +11229,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]

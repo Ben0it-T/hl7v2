@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -273,7 +273,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Message type",
+            "LongName": "message type",
             "maxLength": ""
           },
           {
@@ -283,7 +283,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Trigger event",
+            "LongName": "trigger event",
             "maxLength": ""
           }
         ]
@@ -506,7 +506,7 @@
       {
         "Name": "EVN.1",
         "Usage": "B",
-        "Min": "1",
+        "Min": "0",
         "Max": "1",
         "Item": "00099",
         "Datatype": "ID",
@@ -544,7 +544,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -578,7 +578,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -842,7 +842,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]

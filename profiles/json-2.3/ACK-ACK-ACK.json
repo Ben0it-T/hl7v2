@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -273,7 +273,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Message type",
+            "LongName": "message type",
             "maxLength": ""
           },
           {
@@ -283,7 +283,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Trigger event",
+            "LongName": "trigger event",
             "maxLength": ""
           }
         ]
@@ -667,7 +667,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Segment ID",
+            "LongName": "segment ID",
             "maxLength": ""
           },
           {
@@ -677,7 +677,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "Sequence",
+            "LongName": "sequence",
             "maxLength": ""
           },
           {
@@ -687,7 +687,7 @@
             "Max": "1",
             "Type": "NM",
             "Table": "",
-            "LongName": "Field position",
+            "LongName": "field position",
             "maxLength": ""
           },
           {
@@ -697,7 +697,7 @@
             "Max": "1",
             "Type": "CE",
             "Table": "",
-            "LongName": "Code identifying error",
+            "LongName": "code identifying error",
             "maxLength": "",
             "components": [
               {

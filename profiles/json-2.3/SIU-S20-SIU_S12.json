@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -273,7 +273,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Message type",
+            "LongName": "message type",
             "maxLength": ""
           },
           {
@@ -283,7 +283,7 @@
             "Max": "1",
             "Type": "ID",
             "Table": "",
-            "LongName": "Trigger event",
+            "LongName": "trigger event",
             "maxLength": ""
           }
         ]
@@ -1120,7 +1120,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "",
-                "LongName": "Repeat pattern",
+                "LongName": "repeat pattern",
                 "maxLength": ""
               },
               {
@@ -1130,7 +1130,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Explicit time interval",
+                "LongName": "explicit time interval",
                 "maxLength": ""
               }
             ]
@@ -1172,7 +1172,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -1204,7 +1204,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -3866,7 +3866,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -4990,7 +4990,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -6743,7 +6743,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -6961,7 +6961,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Discharge location",
+                "LongName": "discharge location",
                 "maxLength": ""
               },
               {
@@ -6971,7 +6971,7 @@
                 "Max": "1",
                 "Type": "TS",
                 "Table": "",
-                "LongName": "Effective date",
+                "LongName": "effective date",
                 "maxLength": "",
                 "components": [
                   {
@@ -6991,7 +6991,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -7347,7 +7347,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -7381,7 +7381,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -8236,7 +8236,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -8270,7 +8270,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -8932,7 +8932,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -9281,7 +9281,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -9327,7 +9327,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -9848,7 +9848,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -10576,7 +10576,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -10846,7 +10846,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -11538,7 +11538,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -12206,7 +12206,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -12956,7 +12956,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]

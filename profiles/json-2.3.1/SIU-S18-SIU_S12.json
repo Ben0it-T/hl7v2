@@ -237,7 +237,7 @@
             "Max": "1",
             "Type": "ST",
             "Table": "",
-            "LongName": "Degree of precision",
+            "LongName": "degree of precision",
             "maxLength": ""
           }
         ]
@@ -1350,7 +1350,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -1382,7 +1382,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -1444,7 +1444,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Sequence/results flag",
+                "LongName": "sequence/results flag",
                 "maxLength": ""
               },
               {
@@ -1454,7 +1454,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Placer order number: entity identifier",
+                "LongName": "placer order number: entity identifier",
                 "maxLength": ""
               },
               {
@@ -1464,7 +1464,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "",
-                "LongName": "Placer order number: namespace ID",
+                "LongName": "placer order number: namespace ID",
                 "maxLength": ""
               },
               {
@@ -1474,7 +1474,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Filler order number: entity identifier",
+                "LongName": "filler order number: entity identifier",
                 "maxLength": ""
               },
               {
@@ -1484,7 +1484,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "",
-                "LongName": "Filler order number: namespace ID",
+                "LongName": "filler order number: namespace ID",
                 "maxLength": ""
               },
               {
@@ -1494,7 +1494,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Sequence condition value",
+                "LongName": "sequence condition value",
                 "maxLength": ""
               },
               {
@@ -1504,7 +1504,7 @@
                 "Max": "1",
                 "Type": "NM",
                 "Table": "",
-                "LongName": "Maximum number of repeats",
+                "LongName": "maximum number of repeats",
                 "maxLength": ""
               },
               {
@@ -1514,7 +1514,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Placer order number: universal ID",
+                "LongName": "placer order number: universal ID",
                 "maxLength": ""
               },
               {
@@ -1524,7 +1524,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Placer order number; universal ID type",
+                "LongName": "placer order number; universal ID type",
                 "maxLength": ""
               },
               {
@@ -1534,7 +1534,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Filler order number: universal ID",
+                "LongName": "filler order number: universal ID",
                 "maxLength": ""
               },
               {
@@ -1544,7 +1544,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Filler order number: universal ID type",
+                "LongName": "filler order number: universal ID type",
                 "maxLength": ""
               }
             ]
@@ -4360,7 +4360,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -5826,7 +5826,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -8444,7 +8444,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -8692,7 +8692,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -9110,7 +9110,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -9144,7 +9144,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -10031,7 +10031,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -10065,7 +10065,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -10831,7 +10831,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -11180,7 +11180,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -11226,7 +11226,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -11779,7 +11779,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -12539,7 +12539,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Degree of precision",
+                "LongName": "degree of precision",
                 "maxLength": ""
               }
             ]
@@ -12809,7 +12809,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -13575,7 +13575,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -14317,7 +14317,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
@@ -15173,7 +15173,7 @@
                     "Max": "1",
                     "Type": "ST",
                     "Table": "",
-                    "LongName": "Degree of precision",
+                    "LongName": "degree of precision",
                     "maxLength": ""
                   }
                 ]
