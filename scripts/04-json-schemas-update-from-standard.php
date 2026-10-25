@@ -154,7 +154,11 @@ if ($publishDir !== null) {
  *
  * Blank lines are skipped.
  *
+ * @param string $filename CSV filename (';' separator, '"' enclosure).
+ *
  * @return list<non-empty-list<string>>
+ *
+ * @throws RuntimeException If the file does not exist or cannot be opened.
  */
 function loadCsv(string $filename): array
 {
@@ -189,9 +193,13 @@ function loadCsv(string $filename): array
 }
 
 /**
- * Load JSON
+ * Load JSON file.
+ *
+ * @param string $filename JSON filename.
  *
  * @return array<string, mixed>
+ *
+ * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
  */
 function loadJson(string $filename): array
 {
@@ -221,9 +229,14 @@ function loadJson(string $filename): array
 }
 
 /**
- * Save JSON
+ * Save JSON file.
  *
- * @param array<string, mixed> $data
+ * @param string $filename JSON filename.
+ * @param array<string, mixed> $data Data to save.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If the data cannot be encoded as JSON.
  */
 function saveJson(string $filename, array $data): void
 {
@@ -244,10 +257,10 @@ function saveJson(string $filename, array $data): void
  * Objects are merged key by key, lists are replaced as a whole
  * and a null value removes the key.
  *
- * @param array<mixed> $schema
- * @param array<mixed> $patch
+ * @param array<mixed> $schema Schema, or part of a schema.
+ * @param array<mixed> $patch Patch to merge, with the same structure as $schema.
  *
- * @return array<mixed>
+ * @return array<mixed> Patched schema.
  */
 function mergePatch(array $schema, array $patch): array
 {
@@ -273,6 +286,14 @@ function mergePatch(array $schema, array $patch): array
 
 /**
  * Remove directory recursively.
+ *
+ * Does nothing if the directory does not exist. Symbolic links are removed, not followed.
+ *
+ * @param string $directory Directory to remove.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If a file or directory cannot be removed.
  */
 function removeDirectory(string $directory): void
 {
@@ -306,6 +327,15 @@ function removeDirectory(string $directory): void
 
 /**
  * Copy directory recursively.
+ *
+ * Creates the target directory if it does not exist. Existing files are overwritten.
+ *
+ * @param string $source Source directory.
+ * @param string $target Target directory.
+ *
+ * @return void
+ *
+ * @throws RuntimeException If a directory cannot be created or a file cannot be copied.
  */
 function copyDirectory(string $source, string $target): void
 {
