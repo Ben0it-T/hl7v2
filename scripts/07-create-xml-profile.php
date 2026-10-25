@@ -27,11 +27,17 @@ class HL7xmlProfilesGenerator {
      * @access private
      */
     private string $eventName;
+    /** @var array<string, mixed> */
     private array $messageType;
+    /** @var array<string, mixed> */
     private array $eventDesc;
+    /** @var array<string, array<string, mixed>> */
     private array $structuresSchemas;
+    /** @var array<string, mixed> */
     private array $segmentsSchemas;
+    /** @var array<string, mixed> */
     private array $fieldsSchemas;
+    /** @var array<string, mixed> */
     private array $dataTypesSchemas;
     private DOMDocument $messageProfile;
 
@@ -109,8 +115,8 @@ class HL7xmlProfilesGenerator {
      * Write json profiles to profilesOutputDir
      * 
      * @param string $HL7Version
-     * @param array $messageType
-     * @param array $ignoreEvents
+     * @param list<string> $messageType
+     * @param list<string> $ignoreEvents
      */
     public function createXmlProfiles(string $HL7Version, array $messageType, array $ignoreEvents = []): void
     {
@@ -231,8 +237,8 @@ class HL7xmlProfilesGenerator {
     /**
      * Load JSON structure schemas
      *
-     * @param $filename
-     * @return array $data
+     * @param string $filename
+     * @return array<string, mixed> $data
      */
     private function loadJson(string $filename): array
     {
@@ -283,8 +289,8 @@ class HL7xmlProfilesGenerator {
     /**
      * Get group or segment attributes
      * 
-     * @param array $element
-     * @return array $attributes
+     * @param array<string, mixed> $element
+     * @return array<string, string> $attributes
      */
     private function getElementAttributes(array $element): array
     {
@@ -312,8 +318,8 @@ class HL7xmlProfilesGenerator {
     /**
      * Get field attributes
      * 
-     * @param array $field
-     * @return array $fieldAttributes
+     * @param array<string, mixed> $field
+     * @return array<string, string> $fieldAttributes
      */
     private function getFieldAttributes(array $field): array
     {
@@ -339,8 +345,8 @@ class HL7xmlProfilesGenerator {
     /**
      * Get component attributes
      * 
-     * @param array $component
-     * @return array $componentAttributes
+     * @param array<string, mixed> $component
+     * @return array<string, string> $componentAttributes
      */
     private function getComponentAttributes(array $component): array
     {
@@ -369,7 +375,7 @@ class HL7xmlProfilesGenerator {
      * @param DOMElement $segGroupNode
      * @param string $structureName (structureId)
      * @param string $segGroupName
-     * @param array $segGroupAttributes
+     * @param array<string, string> $segGroupAttributes
      */
     private function addSegGroup(DOMElement $segGroupNode, string $structureName, string $segGroupName, array $segGroupAttributes): void
     {
@@ -406,7 +412,7 @@ class HL7xmlProfilesGenerator {
      * 
      * @param DOMElement $segNode
      * @param string $segName
-     * @param array $segAttributes
+     * @param array<string, string> $segAttributes
      */
     private function addSegment(DOMElement $segNode, string $segName, array $segAttributes): void
     {
@@ -437,7 +443,7 @@ class HL7xmlProfilesGenerator {
      * 
      * @param DOMElement $fieldNode
      * @param string $fieldName
-     * @param array $fieldAttributes
+     * @param array<string, string> $fieldAttributes
      */
     private function addField(DOMElement $fieldNode, string $fieldName, array $fieldAttributes): void
     {
@@ -591,7 +597,7 @@ class HL7xmlProfilesGenerator {
      * 
      * @param DOMElement $componentNode
      * @param string $componentName
-     * @param array $componentAttributes
+     * @param array<string, string> $componentAttributes
      * @param bool $isSubComponent
      */
     private function addComponent(DOMElement $componentNode, string $componentName, array $componentAttributes, bool $isSubComponent = false): void
