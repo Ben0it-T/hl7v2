@@ -2,6 +2,15 @@
 /**
  * Create JSON profiles from JSON schemas.
  *
+ * Configuration (06-create-json-profile.config.php, created from 06-create-json-profile.config.dist.php if missing):
+ * - inputDir: JSON schema directory (e.g. ../schemas/json-2.5)
+ * - outputDir: profile directory (e.g. ../profiles/json-2.5)
+ * - msgType: message types to generate (e.g. ['ACK', 'ADT', 'SIU'])
+ * - ignoreEvents: trigger events to skip (e.g. ['A08'])
+ * - fieldsConstraints: apply the IHE PAM FR conditional predicates
+ * - indent: number of spaces per indentation level
+ * - pretty: pretty print JSON
+ *
  * Usage:
  * php 06-create-json-profile.php
  */
@@ -10,24 +19,18 @@ declare(strict_types=1);
 
 class HL7jsonProfilesGenerator
 {
-    /**
-     * @access public
-     */
-    // json schemas inputs
+    // JSON schema inputs
     public string $dataTypesFilename;
     public string $fieldsFilename;
     public string $segmentsFilename;
     public string $structuresInputDir;
     public string $messageTypeFilename;
-    // json profiles output directory
+    // JSON profile output directory
     public string $profilesOutputDir;
     public int  $indent;
     public bool $pretty;
     public bool $fieldsConstraints;
 
-    /**
-     * @access private
-     */
     private string $eventName;
     /** @var array<string, mixed> */
     private array $messageType;
@@ -43,7 +46,7 @@ class HL7jsonProfilesGenerator
     private array $dataTypesSchemas;
 
     /**
-     * Create a new instance
+     * Create a new instance.
      */
     public function __construct()
     {
@@ -51,6 +54,11 @@ class HL7jsonProfilesGenerator
         
     }
 
+    /**
+     * Set default values.
+     *
+     * @return void
+     */
     private function setDefaults(): void
     {
         $this->structuresSchemas = [];
@@ -64,44 +72,85 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Set json schemas input and output directories
-     * 
-     * @param string $filename / $directory
+     * Set the datatype schema filename.
+     *
+     * @param string $filename dataTypes.json filename.
+     *
+     * @return void
      */
     public function setDataTypesFilename(string $filename): void
     {
         $this->dataTypesFilename = $filename;
     }
 
+    /**
+     * Set the field schema filename.
+     *
+     * @param string $filename fields.json filename.
+     *
+     * @return void
+     */
     public function setFieldsFilename(string $filename): void
     {
         $this->fieldsFilename = $filename;
     }
 
+    /**
+     * Set the segment schema filename.
+     *
+     * @param string $filename segments.json filename.
+     *
+     * @return void
+     */
     public function setSegmentsFilename(string $filename): void
     {
         $this->segmentsFilename = $filename;
     }
 
+    /**
+     * Set the message type filename.
+     *
+     * @param string $filename messageType.json filename.
+     *
+     * @return void
+     */
     public function setMessageTypeFilename(string $filename): void
     {
         $this->messageTypeFilename = $filename;
     }
 
+    /**
+     * Set the message structure directory.
+     *
+     * @param string $directory Directory containing the message structures (structures/).
+     *
+     * @return void
+     */
     public function setStructuresInputDir(string $directory): void
     {
         $this->structuresInputDir = $directory;
     }
 
+    /**
+     * Set the profile output directory.
+     *
+     * @param string $directory Output directory.
+     *
+     * @return void
+     */
     public function setProfilesOutputDir(string $directory): void
     {
         $this->profilesOutputDir = $directory;
     }
 
     /**
-     * Set indentation level (2 spaces, 4 spaces, etc.)
-     * 
-     * @param int $indent (nb of spaces)
+     * Set the indentation level.
+     *
+     * Used with pretty print only.
+     *
+     * @param int $indent Number of spaces per indentation level.
+     *
+     * @return void
      */
     public function setIndentationLevel(int $indent = 4): void
     {
@@ -109,9 +158,11 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Set pretty print
-     * 
-     * @param bool $pretty
+     * Set pretty print.
+     *
+     * @param bool $pretty Pretty print JSON.
+     *
+     * @return void
      */
     public function setPretty(bool $pretty): void
     {
@@ -119,9 +170,13 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Set fields constraints (update condition predicates)
-     * 
-     * @param bool $fieldsConstraints
+     * Set fields constraints.
+     *
+     * Applies the IHE PAM FR conditional predicates to fields (see addField()).
+     *
+     * @param bool $fieldsConstraints Apply the conditional predicates.
+     *
+     * @return void
      */
     public function setFieldsConstraints(bool $fieldsConstraints): void
     {
@@ -130,11 +185,17 @@ class HL7jsonProfilesGenerator
 
 
     /**
-     * Create json profiles
-     * Write json profiles to profilesOutputDir
-     * 
-     * @param list<string> $messageType
-     * @param list<string> $ignoreEvents
+     * Create JSON profiles.
+     *
+     * Writes one profile per message (<type>-<event>-<structure>.json)
+     * and messageType.json to the output directory.
+     *
+     * @param list<string> $messageType Message types to generate (e.g. ACK, ADT, SIU).
+     * @param list<string> $ignoreEvents Trigger events to skip (e.g. A08).
+     *
+     * @return void
+     *
+     * @throws RuntimeException If a schema cannot be loaded or a profile cannot be encoded as JSON.
      */
     public function createJsonProfiles(array $messageType, array $ignoreEvents = []): void
     {
@@ -216,10 +277,13 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Load JSON structure schemas 
+     * Load JSON file.
      *
-     * @param string $filename
-     * @return array<string, mixed> $data
+     * @param string $filename JSON filename.
+     *
+     * @return array<string, mixed>
+     *
+     * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
      */
     private function loadJson(string $filename): array
     {
@@ -249,11 +313,14 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Get element usage
-     * 
-     * @param string $minOccurs
-     * @param string $maxOccurs
-     * @return string $usage
+     * Get element usage from its cardinality.
+     *
+     * Used when the schema has no usage: 0..0 is X, a minimum of 1 is R, otherwise O.
+     *
+     * @param string $minOccurs Minimum cardinality.
+     * @param string $maxOccurs Maximum cardinality.
+     *
+     * @return string Usage (R, O or X).
      */
     private function getElementUsage(string $minOccurs = "0", string $maxOccurs = "0"): string
     {
@@ -268,10 +335,11 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Get group or segment attributes
-     * 
-     * @param array<string, mixed> $element
-     * @return array<string, string> $attributes
+     * Get group or segment attributes.
+     *
+     * @param array<string, mixed> $element Structure element (segment or group).
+     *
+     * @return array<string, string> Type, Name, Usage, Min and Max.
      */
     private function getElementAttributes(array $element): array
     {
@@ -297,10 +365,11 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Get field attributes
-     * 
-     * @param array<string, mixed> $field
-     * @return array<string, string> $fieldAttributes
+     * Get field attributes.
+     *
+     * @param array<string, mixed> $field Segment field (segments.json).
+     *
+     * @return array<string, string> Name, Usage, Min and Max.
      */
     private function getFieldAttributes(array $field): array
     {
@@ -324,10 +393,11 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Get component attributes
-     * 
-     * @param array<string, mixed> $component
-     * @return array<string, string> $componentAttributes
+     * Get component attributes.
+     *
+     * @param array<string, mixed> $component Datatype component (dataTypes.json).
+     *
+     * @return array<string, string> Name, Usage, Min, Max and Type.
      */
     private function getComponentAttributes(array $component): array
     {
@@ -351,12 +421,15 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Add segment group
-     * 
-     * @param string $structureName (structureId)
-     * @param string $segGroupName
-     * @param array<string, string> $segGroupAttributes
-     * @return array<string, mixed> $segGroup
+     * Add segment group.
+     *
+     * Adds the segments and groups of the group, recursively.
+     *
+     * @param string $structureName Message structure name (structure filename without .json).
+     * @param string $segGroupName Group name (e.g. ADT_A01.PROCEDURE).
+     * @param array<string, string> $segGroupAttributes Group attributes (see getElementAttributes()).
+     *
+     * @return array<string, mixed> Group profile.
      */
     private function addSegGroup(string $structureName, string $segGroupName, array $segGroupAttributes): array
     {
@@ -381,11 +454,12 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Add segment schema
-     * 
-     * @param string $segName
-     * @param array<string, string> $segAttributes
-     * @return array<string, mixed> $segment
+     * Add segment.
+     *
+     * @param string $segName Segment name (e.g. PID).
+     * @param array<string, string> $segAttributes Segment attributes (see getElementAttributes()).
+     *
+     * @return array<string, mixed> Segment profile.
      */
     private function addSegment(string $segName, array $segAttributes): array
     {
@@ -407,11 +481,14 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Add field schema
-     * 
-     * @param string $fieldName
-     * @param array<string, string> $fieldAttributes
-     * @return array<string, mixed> $field
+     * Add field.
+     *
+     * Applies the conditional predicates if fields constraints are enabled.
+     *
+     * @param string $fieldName Field identifier (e.g. PID.3).
+     * @param array<string, string> $fieldAttributes Field attributes (see getFieldAttributes()).
+     *
+     * @return array<string, mixed> Field profile.
      */
     private function addField(string $fieldName, array $fieldAttributes): array
     {
@@ -551,12 +628,15 @@ class HL7jsonProfilesGenerator
     }
 
     /**
-     * Add component schema
-     * 
-     * @param string $componentName
-     * @param array<string, string> $componentAttributes
-     * @param bool $isSubComponent
-     * @return array<string, mixed> $component
+     * Add component.
+     *
+     * Sub-components are added for components only, not recursively.
+     *
+     * @param string $componentName Component identifier (e.g. CX.1).
+     * @param array<string, string> $componentAttributes Component attributes (see getComponentAttributes()).
+     * @param bool $isSubComponent True for a sub-component.
+     *
+     * @return array<string, mixed> Component profile.
      */
     private function addComponent(string $componentName, array $componentAttributes, bool $isSubComponent = false): array
     {
