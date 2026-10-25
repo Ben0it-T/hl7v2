@@ -1,7 +1,15 @@
 <?php
 /**
  * Create XML profiles from JSON schemas.
- * 
+ *
+ * Configuration (07-create-xml-profile.config.php, created from 07-create-xml-profile.config.dist.php if missing):
+ * - HL7Version: HL7 version written in the profiles (e.g. 2.5)
+ * - inputDir: JSON schema directory (e.g. ../schemas/json-2.5)
+ * - outputDir: profile directory (e.g. ../profiles/xml-2.5)
+ * - msgType: message types to generate (e.g. ['ACK', 'ADT', 'SIU'])
+ * - ignoreEvents: trigger events to skip (e.g. ['A08'])
+ * - fieldsConstraints: apply the IHE PAM FR conditional predicates
+ *
  * Usage:
  * php 07-create-xml-profile.php
  */
@@ -9,23 +17,17 @@
 declare(strict_types=1);
 
 class HL7xmlProfilesGenerator {
-    /**
-     * @access public
-     */
-    // json schemas inputs
+    // JSON schema inputs
     public string $dataTypesFilename;
     public string $fieldsFilename;
     public string $segmentsFilename;
     public string $structuresInputDir;
     public string $messageTypeFilename;
     public string $eventDescFilename;
-    // json profiles output directory
+    // XML profile output directory
     public string $profilesOutputDir;
     public bool $fieldsConstraints;
 
-    /**
-     * @access private
-     */
     private string $eventName;
     /** @var array<string, mixed> */
     private array $messageType;
@@ -42,7 +44,7 @@ class HL7xmlProfilesGenerator {
     private DOMDocument $messageProfile;
 
     /**
-     * Create a new instance
+     * Create a new instance.
      */
     public function __construct()
     {
@@ -50,6 +52,11 @@ class HL7xmlProfilesGenerator {
         
     }
 
+    /**
+     * Set default values.
+     *
+     * @return void
+     */
     private function setDefaults(): void
     {
         $this->structuresSchemas = [];
@@ -61,49 +68,97 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Set json schemas input and output directories
-     * 
-     * @param string $filename / $directory
+     * Set the datatype schema filename.
+     *
+     * @param string $filename dataTypes.json filename.
+     *
+     * @return void
      */
     public function setDataTypesFilename(string $filename): void
     {
         $this->dataTypesFilename = $filename;
     }
 
+    /**
+     * Set the field schema filename.
+     *
+     * @param string $filename fields.json filename.
+     *
+     * @return void
+     */
     public function setFieldsFilename(string $filename): void
     {
         $this->fieldsFilename = $filename;
     }
 
+    /**
+     * Set the segment schema filename.
+     *
+     * @param string $filename segments.json filename.
+     *
+     * @return void
+     */
     public function setSegmentsFilename(string $filename): void
     {
         $this->segmentsFilename = $filename;
     }
 
+    /**
+     * Set the message type filename.
+     *
+     * @param string $filename messageType.json filename.
+     *
+     * @return void
+     */
     public function setMessageTypeFilename(string $filename): void
     {
         $this->messageTypeFilename = $filename;
     }
 
+    /**
+     * Set the event description filename.
+     *
+     * @param string $filename eventDesc.json filename.
+     *
+     * @return void
+     */
     public function setEventDescFilename(string $filename): void
     {
         $this->eventDescFilename = $filename;
     }
 
+    /**
+     * Set the message structure directory.
+     *
+     * @param string $directory Directory containing the message structures (structures/).
+     *
+     * @return void
+     */
     public function setStructuresInputDir(string $directory): void
     {
         $this->structuresInputDir = $directory;
     }
 
+    /**
+     * Set the profile output directory.
+     *
+     * @param string $directory Output directory.
+     *
+     * @return void
+     */
     public function setProfilesOutputDir(string $directory): void
     {
         $this->profilesOutputDir = $directory;
     }
 
     /**
-     * Set fields constraints (update condition predicates)
-     * 
-     * @param bool $fieldsConstraints
+     * Set fields constraints.
+     *
+     * Applies the IHE PAM FR conditional predicates to fields (see addField()).
+     *
+     * @param bool $fieldsConstraints Apply the conditional predicates.
+     *
+     * @return void
      */
     public function setFieldsConstraints(bool $fieldsConstraints): void
     {
@@ -111,12 +166,18 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Create json profiles
-     * Write json profiles to profilesOutputDir
-     * 
-     * @param string $HL7Version
-     * @param list<string> $messageType
-     * @param list<string> $ignoreEvents
+     * Create XML profiles.
+     *
+     * Writes one profile per message (<type>-<event>-<structure>.xml)
+     * to the output directory.
+     *
+     * @param string $HL7Version HL7 version written in the profiles (e.g. 2.5).
+     * @param list<string> $messageType Message types to generate (e.g. ACK, ADT, SIU).
+     * @param list<string> $ignoreEvents Trigger events to skip (e.g. A08).
+     *
+     * @return void
+     *
+     * @throws RuntimeException If a schema cannot be loaded.
      */
     public function createXmlProfiles(string $HL7Version, array $messageType, array $ignoreEvents = []): void
     {
@@ -235,10 +296,13 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Load JSON structure schemas
+     * Load JSON file.
      *
-     * @param string $filename
-     * @return array<string, mixed> $data
+     * @param string $filename JSON filename.
+     *
+     * @return array<string, mixed>
+     *
+     * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
      */
     private function loadJson(string $filename): array
     {
@@ -268,11 +332,14 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Get element usage
-     * 
-     * @param string $minOccurs
-     * @param string $maxOccurs
-     * @return string $usage
+     * Get element usage from its cardinality.
+     *
+     * Used when the schema has no usage: 0..0 is X, a minimum of 1 is R, otherwise O.
+     *
+     * @param string $minOccurs Minimum cardinality.
+     * @param string $maxOccurs Maximum cardinality.
+     *
+     * @return string Usage (R, O or X).
      */
     private function getElementUsage(string $minOccurs = "0", string $maxOccurs = "0"): string
     {
@@ -287,10 +354,11 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Get group or segment attributes
-     * 
-     * @param array<string, mixed> $element
-     * @return array<string, string> $attributes
+     * Get group or segment attributes.
+     *
+     * @param array<string, mixed> $element Structure element (segment or group).
+     *
+     * @return array<string, string> Type, Name, Usage, Min and Max.
      */
     private function getElementAttributes(array $element): array
     {
@@ -316,10 +384,11 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Get field attributes
-     * 
-     * @param array<string, mixed> $field
-     * @return array<string, string> $fieldAttributes
+     * Get field attributes.
+     *
+     * @param array<string, mixed> $field Segment field (segments.json).
+     *
+     * @return array<string, string> Name, Usage, Min and Max.
      */
     private function getFieldAttributes(array $field): array
     {
@@ -343,10 +412,11 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Get component attributes
-     * 
-     * @param array<string, mixed> $component
-     * @return array<string, string> $componentAttributes
+     * Get component attributes.
+     *
+     * @param array<string, mixed> $component Datatype component (dataTypes.json).
+     *
+     * @return array<string, string> Name, Usage, Min, Max and Type.
      */
     private function getComponentAttributes(array $component): array
     {
@@ -370,12 +440,16 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Add segment group
-     * 
-     * @param DOMElement $segGroupNode
-     * @param string $structureName (structureId)
-     * @param string $segGroupName
-     * @param array<string, string> $segGroupAttributes
+     * Add segment group.
+     *
+     * Writes the group attributes and its segments and groups, recursively.
+     *
+     * @param DOMElement $segGroupNode SegGroup node to fill.
+     * @param string $structureName Message structure name (structure filename without .json).
+     * @param string $segGroupName Group name (e.g. ADT_A01.PROCEDURE).
+     * @param array<string, string> $segGroupAttributes Group attributes (see getElementAttributes()).
+     *
+     * @return void
      */
     private function addSegGroup(DOMElement $segGroupNode, string $structureName, string $segGroupName, array $segGroupAttributes): void
     {
@@ -408,11 +482,15 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Add segment schema
-     * 
-     * @param DOMElement $segNode
-     * @param string $segName
-     * @param array<string, string> $segAttributes
+     * Add segment.
+     *
+     * Writes the segment attributes and its fields.
+     *
+     * @param DOMElement $segNode Segment node to fill.
+     * @param string $segName Segment name (e.g. PID).
+     * @param array<string, string> $segAttributes Segment attributes (see getElementAttributes()).
+     *
+     * @return void
      */
     private function addSegment(DOMElement $segNode, string $segName, array $segAttributes): void
     {
@@ -439,11 +517,16 @@ class HL7xmlProfilesGenerator {
     }
 
     /**
-     * Add field schema
-     * 
-     * @param DOMElement $fieldNode
-     * @param string $fieldName
-     * @param array<string, string> $fieldAttributes
+     * Add field.
+     *
+     * Writes the field attributes and its components.
+     * Applies the conditional predicates if fields constraints are enabled.
+     *
+     * @param DOMElement $fieldNode Field node to fill.
+     * @param string $fieldName Field identifier (e.g. PID.3).
+     * @param array<string, string> $fieldAttributes Field attributes (see getFieldAttributes()).
+     *
+     * @return void
      */
     private function addField(DOMElement $fieldNode, string $fieldName, array $fieldAttributes): void
     {
@@ -592,13 +675,18 @@ class HL7xmlProfilesGenerator {
         }
     }
 
-    /**
-     * Add component schema
-     * 
-     * @param DOMElement $componentNode
-     * @param string $componentName
-     * @param array<string, string> $componentAttributes
-     * @param bool $isSubComponent
+     /**
+     * Add component.
+     *
+     * Writes the component attributes and its sub-components.
+     * Sub-components are added for components only, not recursively.
+     *
+     * @param DOMElement $componentNode Component or SubComponent node to fill.
+     * @param string $componentName Component identifier (e.g. CX.1).
+     * @param array<string, string> $componentAttributes Component attributes (see getComponentAttributes()).
+     * @param bool $isSubComponent True for a sub-component.
+     *
+     * @return void
      */
     private function addComponent(DOMElement $componentNode, string $componentName, array $componentAttributes, bool $isSubComponent = false): void
     {
