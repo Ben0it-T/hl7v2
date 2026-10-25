@@ -153,7 +153,9 @@ if ($publishDir !== null) {
 /**
  * Load CSV file.
  *
- * @return array<int, array<int, string|null>>
+ * Blank lines are skipped.
+ *
+ * @return list<non-empty-list<string>>
  */
 function loadCsv(string $filename): array
 {
@@ -173,7 +175,12 @@ function loadCsv(string $filename): array
         );
     }
 
-    while (($row = fgetcsv($handle, 1000, ';', '"')) !== false) {
+    while (is_array($row = fgetcsv($handle, 1000, ';', '"'))) {
+        // A blank line is read as [null].
+        if (in_array(null, $row, true)) {
+            continue;
+        }
+
         $rows[] = $row;
     }
 
