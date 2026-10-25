@@ -114,13 +114,15 @@ function saveJson(string $filename, array $data): void
 }
 
 /**
- * Insert a segment after another segment
+ * Insert elements after a segment.
  *
- * @param array $elements
- * @param string $segment
- * @param array $newElements
+ * @param list<array<string, mixed>> $elements Structure elements (segments and groups).
+ * @param string $segment Segment after which the new elements are inserted.
+ * @param list<array<string, mixed>> $newElements Elements to insert.
  *
- * @return array $elements
+ * @return list<array<string, mixed>> Structure elements, with the new elements inserted.
+ *
+ * @throws RuntimeException If the segment is not found.
  */
 function insertAfterSegment(array $elements, string $segment, array $newElements): array {
     foreach ($elements as $index => $element) {
@@ -134,13 +136,15 @@ function insertAfterSegment(array $elements, string $segment, array $newElements
 }
 
 /**
- * Insert a segment before another segment
+ * Insert elements before a segment.
  *
- * @param array $elements
- * @param string $segment
- * @param array $newElements
+ * @param list<array<string, mixed>> $elements Structure elements (segments and groups).
+ * @param string $segment Segment before which the new elements are inserted.
+ * @param list<array<string, mixed>> $newElements Elements to insert.
  *
- * @return array $elements
+ * @return list<array<string, mixed>> Structure elements, with the new elements inserted.
+ *
+ * @throws RuntimeException If the segment is not found.
  */
 function insertBeforeSegment(array $elements, string $segment, array $newElements): array {
     foreach ($elements as $index => $element) {
@@ -154,12 +158,14 @@ function insertBeforeSegment(array $elements, string $segment, array $newElement
 }
 
 /**
- * Create rules
+ * Create rules.
  *
- * @param array $fields
- * @param array $attributes
+ * Applies the same attributes to several fields or components.
  *
- * @return array
+ * @param list<string> $fields Field or component identifiers (e.g. PID.3, CX.1).
+ * @param array<string, string> $attributes Attributes to set (minOccurs, maxOccurs, usage).
+ *
+ * @return array<string, array<string, string>> Attributes, by field or component identifier.
  */
 function rules(array $fields, array $attributes): array
 {
