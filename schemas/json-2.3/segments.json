@@ -1575,7 +1575,7 @@
         "fields": [
             {
                 "field": "EVN.1",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "1",
                 "usage": "B"
             },
@@ -6129,7 +6129,7 @@
             },
             {
                 "field": "PR1.2",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "1",
                 "usage": "B"
             },

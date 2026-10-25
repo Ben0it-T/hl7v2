@@ -6818,7 +6818,7 @@
     "PD1.10": {
         "Item": "00762",
         "Type": "CX",
-        "Table": "HL70000",
+        "Table": "",
         "LongName": "Duplicate Patient",
         "maxLength": "2",
         "Chapter": "3.3.9.10"
@@ -11146,7 +11146,7 @@
     "TXA.21": {
         "Item": "00933",
         "Type": "ST",
-        "Table": "HL70000",
+        "Table": "",
         "LongName": "Document Change Reason",
         "maxLength": "30",
         "Chapter": "9.5.1.21"

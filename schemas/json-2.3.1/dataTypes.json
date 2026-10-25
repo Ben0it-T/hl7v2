@@ -847,67 +847,67 @@
     "CNS.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "ID number",
+        "LongName": "ID number (ST)",
         "maxLength": ""
     },
     "CNS.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Assigning authority universal ID",
+        "LongName": "assigning authority universal ID",
         "maxLength": ""
     },
     "CNS.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Assigning authority universal ID type",
+        "LongName": "assigning authority universal ID type",
         "maxLength": ""
     },
     "CNS.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Family name",
+        "LongName": "family name",
         "maxLength": ""
     },
     "CNS.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Given name",
+        "LongName": "given name",
         "maxLength": ""
     },
     "CNS.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Second and further given names or initials thereof",
+        "LongName": "second and further given names or initials thereof",
         "maxLength": ""
     },
     "CNS.5": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Suffix",
+        "LongName": "suffix (e.g., JR or III)",
         "maxLength": ""
     },
     "CNS.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Prefix",
+        "LongName": "prefix (e.g., DR)",
         "maxLength": ""
     },
     "CNS.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Degree",
+        "LongName": "degree (e.g., MD)",
         "maxLength": ""
     },
     "CNS.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Source table",
+        "LongName": "source table",
         "maxLength": ""
     },
     "CNS.9": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Assigning authority namespace ID",
+        "LongName": "assigning authority namespace ID",
         "maxLength": ""
     },
     "CP": {
@@ -2683,67 +2683,67 @@
     "OSD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Sequence/results flag",
+        "LongName": "sequence/results flag",
         "maxLength": ""
     },
     "OSD.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler order number: universal ID",
+        "LongName": "filler order number: universal ID",
         "maxLength": ""
     },
     "OSD.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Filler order number: universal ID type",
+        "LongName": "filler order number: universal ID type",
         "maxLength": ""
     },
     "OSD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Placer order number: entity identifier",
+        "LongName": "placer order number: entity identifier",
         "maxLength": ""
     },
     "OSD.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Placer order number: namespace ID",
+        "LongName": "placer order number: namespace ID",
         "maxLength": ""
     },
     "OSD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler order number: entity identifier",
+        "LongName": "filler order number: entity identifier",
         "maxLength": ""
     },
     "OSD.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Filler order number: namespace ID",
+        "LongName": "filler order number: namespace ID",
         "maxLength": ""
     },
     "OSD.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Sequence condition value",
+        "LongName": "sequence condition value",
         "maxLength": ""
     },
     "OSD.7": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Maximum number of repeats",
+        "LongName": "maximum number of repeats",
         "maxLength": ""
     },
     "OSD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Placer order number: universal ID",
+        "LongName": "placer order number: universal ID",
         "maxLength": ""
     },
     "OSD.9": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Placer order number; universal ID type",
+        "LongName": "placer order number; universal ID type",
         "maxLength": ""
     },
     "OSP": {
@@ -4206,7 +4206,7 @@
     "TS.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Degree of precision",
+        "LongName": "degree of precision",
         "maxLength": ""
     },
     "TX": {
