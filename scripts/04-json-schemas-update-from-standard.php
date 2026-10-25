@@ -59,16 +59,21 @@ $jsonDir = $options['json-dir'] ?? null;
 $publishDir = $options['publish-dir'] ?? null;
 $patches = [];
 
-if (!is_string($standardDir) || $standardDir === '') {
-    throw new RuntimeException(
-        'Missing --standard-dir option.'
-    );
+// getopt() drops an option given without a value (--publish-dir=).
+if ($publishDir === null && preg_grep('/^--publish-dir(=|$)/', $argv) !== []) {
+    $publishDir = '';
 }
 
-if (!is_string($jsonDir) || $jsonDir === '') {
-    throw new RuntimeException(
-        'Missing --json-dir option.'
+if (
+    !is_string($standardDir) || $standardDir === ''
+    || !is_string($jsonDir) || $jsonDir === ''
+    || ($publishDir !== null && (!is_string($publishDir) || $publishDir === ''))
+) {
+    fwrite(
+        STDERR,
+        "Usage: php 04-json-schemas-update-from-standard.php --standard-dir=<directory> --json-dir=<directory> [--publish-dir=<directory>]\n"
     );
+    exit(1);
 }
 
 if (!is_dir($standardDir)) {
@@ -95,12 +100,6 @@ const PATCH_FILE = 'patches.json';
 const PATCHABLE_SCHEMAS = ['dataTypes', 'fields', 'segments'];
 
 if ($publishDir !== null) {
-    if (!is_string($publishDir) || $publishDir === '') {
-        throw new RuntimeException(
-            'Invalid --publish-dir option.'
-        );
-    }
-
     if (!is_dir($publishDir)) {
         throw new RuntimeException(
             "Directory not found: {$publishDir}"
