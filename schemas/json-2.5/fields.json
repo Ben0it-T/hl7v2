@@ -6940,7 +6940,7 @@
         "Type": "ID",
         "Table": "",
         "LongName": "Delayed Acknowledgment Type",
-        "maxLength": "0",
+        "maxLength": "",
         "Chapter": "2.15.8.5"
     },
     "MSA.6": {

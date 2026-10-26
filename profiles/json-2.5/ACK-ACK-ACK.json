@@ -1061,7 +1061,7 @@
         "Max": "0",
         "Item": "00022",
         "Datatype": "ID",
-        "Length": "0",
+        "Length": "",
         "Table": "",
         "LongName": "Delayed Acknowledgment Type",
         "Chapter": "2.15.8.5"
