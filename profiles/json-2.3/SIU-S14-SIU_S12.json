@@ -1266,7 +1266,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Sequence/results Flag",
+                "LongName": "sequence/results flag",
                 "maxLength": ""
               },
               {
@@ -1276,7 +1276,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Placer Order Number Entity Identifier",
+                "LongName": "placer order number: entity identifier",
                 "maxLength": ""
               },
               {
@@ -1286,7 +1286,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "",
-                "LongName": "Placer Order Number Namespace ID",
+                "LongName": "placer order number: namespace ID",
                 "maxLength": ""
               },
               {
@@ -1296,7 +1296,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Filler Order Number Entity Identifier",
+                "LongName": "filler order number: entity identifier",
                 "maxLength": ""
               },
               {
@@ -1306,7 +1306,7 @@
                 "Max": "1",
                 "Type": "IS",
                 "Table": "",
-                "LongName": "Filler Order Number Namespace ID",
+                "LongName": "filler order number: namespace ID",
                 "maxLength": ""
               },
               {
@@ -1316,7 +1316,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Sequence Condition Value",
+                "LongName": "sequence condition value",
                 "maxLength": ""
               },
               {
@@ -1326,7 +1326,7 @@
                 "Max": "1",
                 "Type": "NM",
                 "Table": "",
-                "LongName": "Maximum Number Of Repeats",
+                "LongName": "maximum number of repeats",
                 "maxLength": ""
               },
               {
@@ -1336,7 +1336,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Placer Order Number Universal ID",
+                "LongName": "placer order number: universal ID",
                 "maxLength": ""
               },
               {
@@ -1346,7 +1346,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Placer Order Number Universal ID Type",
+                "LongName": "placer order number: universal ID type",
                 "maxLength": ""
               },
               {
@@ -1356,7 +1356,7 @@
                 "Max": "1",
                 "Type": "ST",
                 "Table": "",
-                "LongName": "Filler Order Number Universal ID",
+                "LongName": "filler order number: universal ID",
                 "maxLength": ""
               },
               {
@@ -1366,7 +1366,7 @@
                 "Max": "1",
                 "Type": "ID",
                 "Table": "",
-                "LongName": "Filler Order Number Universal ID Type",
+                "LongName": "filler order number: universal ID type",
                 "maxLength": ""
               }
             ]
