@@ -514,25 +514,25 @@
     "CM_ABS_RANGE.1": {
         "Type": "CM_RANGE",
         "Table": "",
-        "LongName": "Range",
+        "LongName": "range",
         "maxLength": ""
     },
     "CM_ABS_RANGE.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Numeric Change",
+        "LongName": "numeric change",
         "maxLength": ""
     },
     "CM_ABS_RANGE.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Percent per Change",
+        "LongName": "percent per change",
         "maxLength": ""
     },
     "CM_ABS_RANGE.4": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Days",
+        "LongName": "days",
         "maxLength": ""
     },
     "CM_RANGE": {
@@ -552,13 +552,13 @@
     "CM_RANGE.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "Low Value",
+        "LongName": "low value",
         "maxLength": ""
     },
     "CM_RANGE.2": {
         "Type": "CE",
         "Table": "",
-        "LongName": "High Value",
+        "LongName": "high value",
         "maxLength": ""
     },
     "CN": {

@@ -512,19 +512,19 @@
     "CM_CCP.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sensitivity Correction Factor",
+        "LongName": "sensitivity correction factor",
         "maxLength": ""
     },
     "CM_CCP.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Baseline",
+        "LongName": "baseline",
         "maxLength": ""
     },
     "CM_CCP.3": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Time Skew",
+        "LongName": "time skew",
         "maxLength": ""
     },
     "CM_CD_ELECTRODE": {
@@ -544,13 +544,13 @@
     "CM_CD_ELECTRODE.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Source Name 1",
+        "LongName": "source name 1",
         "maxLength": ""
     },
     "CM_CD_ELECTRODE.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Source Name 2",
+        "LongName": "source name 2",
         "maxLength": ""
     },
     "CM_CSU": {
@@ -595,43 +595,43 @@
     "CM_CSU.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Sensitivity",
+        "LongName": "sensitivity",
         "maxLength": ""
     },
     "CM_CSU.2": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Unit Identifier",
+        "LongName": "unit identifier",
         "maxLength": ""
     },
     "CM_CSU.3": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Unit Text",
+        "LongName": "unit text",
         "maxLength": ""
     },
     "CM_CSU.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Units Name Of Coding System",
+        "LongName": "units name of coding system",
         "maxLength": ""
     },
     "CM_CSU.5": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Units Alternate Identifier",
+        "LongName": "units alternate identifier",
         "maxLength": ""
     },
     "CM_CSU.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Units Alternate Text",
+        "LongName": "units alternate text",
         "maxLength": ""
     },
     "CM_CSU.7": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Units Name Of Alternate Coding System",
+        "LongName": "units name of alternate coding system",
         "maxLength": ""
     },
     "CM_DDI": {
@@ -1138,97 +1138,97 @@
     "CM_LA2.1": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Point of care",
+        "LongName": "point of care",
         "maxLength": ""
     },
     "CM_LA2.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other designation",
+        "LongName": "other designation",
         "maxLength": ""
     },
     "CM_LA2.11": {
         "Type": "ST",
         "Table": "",
-        "LongName": "City",
+        "LongName": "city",
         "maxLength": ""
     },
     "CM_LA2.12": {
         "Type": "ST",
         "Table": "",
-        "LongName": "State or province",
+        "LongName": "state or province",
         "maxLength": ""
     },
     "CM_LA2.13": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Zip or postal code",
+        "LongName": "zip or postal code",
         "maxLength": ""
     },
     "CM_LA2.14": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Country",
+        "LongName": "country",
         "maxLength": ""
     },
     "CM_LA2.15": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Address type",
+        "LongName": "address type",
         "maxLength": ""
     },
     "CM_LA2.16": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Other geographic designation",
+        "LongName": "other geographic designation",
         "maxLength": ""
     },
     "CM_LA2.2": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Room",
+        "LongName": "room",
         "maxLength": ""
     },
     "CM_LA2.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Bed",
+        "LongName": "bed",
         "maxLength": ""
     },
     "CM_LA2.4": {
         "Type": "HD",
         "Table": "",
-        "LongName": "Facility",
+        "LongName": "facility",
         "maxLength": ""
     },
     "CM_LA2.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Location status",
+        "LongName": "location status",
         "maxLength": ""
     },
     "CM_LA2.6": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Person location type",
+        "LongName": "person location type",
         "maxLength": ""
     },
     "CM_LA2.7": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Building",
+        "LongName": "building",
         "maxLength": ""
     },
     "CM_LA2.8": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Floor",
+        "LongName": "floor",
         "maxLength": ""
     },
     "CM_LA2.9": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Street address",
+        "LongName": "street address",
         "maxLength": ""
     },
     "CM_MDV": {
@@ -1248,13 +1248,13 @@
     "CM_MDV.1": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Minimum Value",
+        "LongName": "minimum value",
         "maxLength": ""
     },
     "CM_MDV.2": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Maximum Value",
+        "LongName": "maximum value",
         "maxLength": ""
     },
     "CM_MOC": {
@@ -1522,67 +1522,67 @@
     "CM_OSD.1": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Sequence/results Flag",
+        "LongName": "sequence/results flag",
         "maxLength": ""
     },
     "CM_OSD.10": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler Order Number Universal ID",
+        "LongName": "filler order number: universal ID",
         "maxLength": ""
     },
     "CM_OSD.11": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Filler Order Number Universal ID Type",
+        "LongName": "filler order number: universal ID type",
         "maxLength": ""
     },
     "CM_OSD.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Placer Order Number Entity Identifier",
+        "LongName": "placer order number: entity identifier",
         "maxLength": ""
     },
     "CM_OSD.3": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Placer Order Number Namespace ID",
+        "LongName": "placer order number: namespace ID",
         "maxLength": ""
     },
     "CM_OSD.4": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler Order Number Entity Identifier",
+        "LongName": "filler order number: entity identifier",
         "maxLength": ""
     },
     "CM_OSD.5": {
         "Type": "IS",
         "Table": "",
-        "LongName": "Filler Order Number Namespace ID",
+        "LongName": "filler order number: namespace ID",
         "maxLength": ""
     },
     "CM_OSD.6": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Sequence Condition Value",
+        "LongName": "sequence condition value",
         "maxLength": ""
     },
     "CM_OSD.7": {
         "Type": "NM",
         "Table": "",
-        "LongName": "Maximum Number Of Repeats",
+        "LongName": "maximum number of repeats",
         "maxLength": ""
     },
     "CM_OSD.8": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Placer Order Number Universal ID",
+        "LongName": "placer order number: universal ID",
         "maxLength": ""
     },
     "CM_OSD.9": {
         "Type": "ID",
         "Table": "",
-        "LongName": "Placer Order Number Universal ID Type",
+        "LongName": "placer order number: universal ID type",
         "maxLength": ""
     },
     "CM_OSP": {
