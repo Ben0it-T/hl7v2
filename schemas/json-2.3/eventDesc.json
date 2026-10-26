@@ -68,8 +68,7 @@
         "T11": "Document cancel notification"
     },
     "ORU": {
-        "R01": "Unsolicited transmission of an observation",
-        "W01": "Waveform result, unsolicited transmission of requested information"
+        "R01": "Unsolicited transmission of an observation"
     },
     "SIU": {
         "S12": "Notification of new appointment booking",
