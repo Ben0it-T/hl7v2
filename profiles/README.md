@@ -23,13 +23,14 @@ json-<v>/
 ├── dataTypes.json                      datatypes and their components
 ├── hl7tables.json                      table codes (read by the validator)
 ├── hl7tables-with-description.json     table codes and descriptions (for display)
-├── constraints.json                    constraints of a derived profile (derived profiles only)
 └── rules.json                          validation rules (maintained by hand)
 ```
 
 Every file is produced by the pipeline, except `rules.json`. Do not edit the others: change the sources in `schemas/` and run the pipeline again.
 
-The format of `constraints.json` and `rules.json` is not defined yet.
+The format of `rules.json` is not defined yet.
+
+A derived profile is resolved like any other profile: the constraints of its specification are already applied to its files.
 
 ## Values
 
@@ -48,6 +49,8 @@ All values are **strings**. An absent value is `""` (not defined by the standard
 | `chapter` | section of the standard, or `""` | `"3.4.2.3"` |
 
 The position of a field or a component is given by its identifier: `PID.3` is the third field of PID, `CX.1` the first component of CX. Lists are always in position order.
+
+In a derived profile, a value changed or added by its specification has a `source` key: the document and section that require it. It is informational and does not change validation.
 
 ## profile.json
 
@@ -100,6 +103,16 @@ One file per message. Each group is a key; the root group is named after the mes
 A choice group has `"choice": true`: exactly one of its elements is expected. Without `choice`, elements form a sequence.
 
 A segment removed from a message by a derived profile does not appear in the message structure at all. A segment that remains in the structure but must not be sent has `"usage": "X"`.
+
+A segment element may carry `fields`: the field definitions that differ for this message from `segments.json`. To get the definition of a field in a message, take the value of the structure element when present, otherwise the value of `segments.json`.
+
+```json
+{ "segment": "PID", "usage": "R", "min": "1", "max": "1",
+  "fields": {
+    "PID.7": { "usage": "RE", "min": "0", "max": "1", "source": "PAMFR 6.6.4" }
+  }
+}
+```
 
 ## segments.json
 
