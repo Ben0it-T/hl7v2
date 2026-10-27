@@ -1,0 +1,821 @@
+{
+    "source": "IHE PAM FR 2.11.2 (IHE France, PAM National Extension)",
+    "segments": {
+        "ZBE": {
+            "fields": [
+                {
+                    "field": "ZBE.1",
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZBE.2",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZBE.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZBE.4",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZBE.5",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZBE.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "field": "ZBE.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "field": "ZBE.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "field": "ZBE.9",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                }
+            ],
+            "LongName": "Movement segment",
+            "Chapter": "6.13",
+            "comment": "ZBE is defined by IHE ITI TF-2 (ITI-31, Movement segment); IHE PAM FR restricts it (§6.13). ZBE.1 is required: minOccurs is 1 as in IHE ITI-31 ([1..*]), although PAM FR 2.11.2 gives [0..*]."
+        },
+        "ZFA": {
+            "fields": [
+                {
+                    "field": "ZFA.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFA.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFA.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFA.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFA.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFA.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFA.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFA.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFA.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFA.10",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFA.11",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFA.12",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                }
+            ],
+            "LongName": "Statut DMP",
+            "Chapter": "6.14"
+        },
+        "ZFP": {
+            "fields": [
+                {
+                    "field": "ZFP.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFP.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                }
+            ],
+            "LongName": "Situation professionnelle",
+            "Chapter": "6.15"
+        },
+        "ZFV": {
+            "fields": [
+                {
+                    "field": "ZFV.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFV.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "2",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFV.10",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "usage": "X"
+                },
+                {
+                    "field": "ZFV.11",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ],
+            "LongName": "Complément d'information sur la venue",
+            "Chapter": "6.16"
+        },
+        "ZFM": {
+            "fields": [
+                {
+                    "field": "ZFM.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFM.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFM.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFM.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFM.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ],
+            "LongName": "Mouvement PMSI",
+            "Chapter": "6.17"
+        },
+        "ZFD": {
+            "fields": [
+                {
+                    "field": "ZFD.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFD.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFD.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFD.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFD.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFD.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFD.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFD.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                }
+            ],
+            "LongName": "Complément démographique",
+            "Chapter": "6.18"
+        },
+        "ZFS": {
+            "fields": [
+                {
+                    "field": "ZFS.1",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZFS.2",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZFS.3",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZFS.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "RE"
+                },
+                {
+                    "field": "ZFS.5",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZFS.6",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "field": "ZFS.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "field": "ZFS.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ],
+            "LongName": "Mode légal de soins en psychiatrie",
+            "Chapter": "6.19"
+        }
+    },
+    "fields": {
+        "ZBE.1": {
+            "Item": "",
+            "Type": "EI",
+            "Table": "",
+            "LongName": "Movement ID",
+            "maxLength": "427",
+            "Chapter": "6.13.1"
+        },
+        "ZBE.2": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Start of Movement Date/Time",
+            "maxLength": "26",
+            "Chapter": "6.13.2"
+        },
+        "ZBE.3": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "End of Movement Date/Time",
+            "maxLength": "26",
+            "Chapter": "6.13.3"
+        },
+        "ZBE.4": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "IHE-FRANCE-ZBE-4",
+            "LongName": "Action on the Movement",
+            "maxLength": "6",
+            "Chapter": "6.13.4"
+        },
+        "ZBE.5": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "HL70136",
+            "LongName": "Indicator Historical movement",
+            "maxLength": "1",
+            "Chapter": "6.13.5"
+        },
+        "ZBE.6": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Original trigger event code",
+            "maxLength": "3",
+            "Chapter": "6.13.6"
+        },
+        "ZBE.7": {
+            "Item": "",
+            "Type": "XON",
+            "Table": "",
+            "LongName": "Ward of medical responsibility in the period starting with this movement",
+            "maxLength": "250",
+            "Chapter": "6.13.7"
+        },
+        "ZBE.8": {
+            "Item": "",
+            "Type": "XON",
+            "Table": "",
+            "LongName": "Ward of care responsibility in the period starting with this movement",
+            "maxLength": "250",
+            "Chapter": "6.13.8"
+        },
+        "ZBE.9": {
+            "Item": "",
+            "Type": "CWE",
+            "Table": "IHE-FRANCE-ZBE-9",
+            "LongName": "Nature of this movement",
+            "maxLength": "3",
+            "Chapter": "6.13.9"
+        },
+        "ZFA.1": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "IHE-FRANCE-ZFA-1",
+            "LongName": "Statut du DMP du patient",
+            "maxLength": "20",
+            "Chapter": "6.14.1"
+        },
+        "ZFA.2": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de recueil du statut du DMP",
+            "maxLength": "26",
+            "Chapter": "6.14.2"
+        },
+        "ZFA.3": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de fermeture du DMP du patient",
+            "maxLength": "26",
+            "Chapter": "6.14.3"
+        },
+        "ZFA.4": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "HL70136",
+            "LongName": "Autorisation d'accès valide au DMP du patient pour l'établissement",
+            "maxLength": "1",
+            "Chapter": "6.14.4"
+        },
+        "ZFA.5": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de recueil de l'état de l'autorisation d'accès au DMP du patient pour l'établissement",
+            "maxLength": "26",
+            "Chapter": "6.14.5"
+        },
+        "ZFA.6": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "HL70136",
+            "LongName": "Opposition du patient à l'accès en mode bris de glace",
+            "maxLength": "1",
+            "Chapter": "6.14.6"
+        },
+        "ZFA.7": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "HL70136",
+            "LongName": "Opposition du patient à l'accès en mode centre de régulation",
+            "maxLength": "1",
+            "Chapter": "6.14.7"
+        },
+        "ZFA.8": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de recueil de l'état des oppositions du patient",
+            "maxLength": "26",
+            "Chapter": "6.14.8"
+        },
+        "ZFA.9": {
+            "Item": "",
+            "Type": "CWE",
+            "Table": "IHE-FRANCE-ZFA-9",
+            "LongName": "Information et opposition à l'alimentation du DMP",
+            "maxLength": "3",
+            "Chapter": "6.14.9"
+        },
+        "ZFA.10": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de recueil de l'information et opposition à l'alimentation",
+            "maxLength": "26",
+            "Chapter": "6.14.10"
+        },
+        "ZFA.11": {
+            "Item": "",
+            "Type": "CWE",
+            "Table": "IHE-FRANCE-ZFA-11",
+            "LongName": "Information et consentement à la consultation du DMP",
+            "maxLength": "3",
+            "Chapter": "6.14.11"
+        },
+        "ZFA.12": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de recueil de l'information et opposition à la consultation",
+            "maxLength": "26",
+            "Chapter": "6.14.12"
+        },
+        "ZFP.1": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "IHE-FRANCE-ZFP-1",
+            "LongName": "Activité socio-professionnelle (nomenclature INSEE)",
+            "maxLength": "1",
+            "Chapter": "6.15.1"
+        },
+        "ZFP.2": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "IHE-FRANCE-ZFP-2",
+            "LongName": "Catégorie socio-professionnelle (nomenclature INSEE)",
+            "maxLength": "2",
+            "Chapter": "6.15.2"
+        },
+        "ZFV.1": {
+            "Item": "",
+            "Type": "DLD",
+            "Table": "HL70113",
+            "LongName": "Etablissement de provenance et date de dernier séjour dans cet établissement",
+            "maxLength": "47",
+            "Chapter": "6.16.1"
+        },
+        "ZFV.2": {
+            "Item": "",
+            "Type": "CE",
+            "Table": "HL70430",
+            "LongName": "Mode de transport de sortie",
+            "maxLength": "250",
+            "Chapter": "6.16.2"
+        },
+        "ZFV.3": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Type de préadmission",
+            "maxLength": "2",
+            "Chapter": "6.16.3"
+        },
+        "ZFV.4": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de début de placement (psy)",
+            "maxLength": "26",
+            "Chapter": "6.16.4"
+        },
+        "ZFV.5": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de fin de placement (psy)",
+            "maxLength": "26",
+            "Chapter": "6.16.5"
+        },
+        "ZFV.6": {
+            "Item": "",
+            "Type": "XAD",
+            "Table": "IHE-FRANCE-ZFV-6",
+            "LongName": "Adresse de l'établissement de provenance ou de destination",
+            "maxLength": "250",
+            "Chapter": "6.16.6"
+        },
+        "ZFV.7": {
+            "Item": "",
+            "Type": "CX",
+            "Table": "",
+            "LongName": "NDA de l'établissement de provenance",
+            "maxLength": "250",
+            "Chapter": "6.16.7"
+        },
+        "ZFV.8": {
+            "Item": "",
+            "Type": "CX",
+            "Table": "",
+            "LongName": "Numéro d'archives",
+            "maxLength": "250",
+            "Chapter": "6.16.8"
+        },
+        "ZFV.9": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "",
+            "LongName": "Mode de sortie personnalisé",
+            "maxLength": "6",
+            "Chapter": "6.16.9"
+        },
+        "ZFV.10": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFV-10",
+            "LongName": "Code RIM-P du mode légal de soin transmis dans le PV2-3 (Obsolète)",
+            "maxLength": "2",
+            "Chapter": "6.16.10"
+        },
+        "ZFV.11": {
+            "Item": "",
+            "Type": "CE",
+            "Table": "IHE-FRANCE-ZFV-11",
+            "LongName": "Prise en charge durant le transport",
+            "maxLength": "250",
+            "Chapter": "6.16.11"
+        },
+        "ZFM.1": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFM-1",
+            "LongName": "Mode d'entrée PMSI",
+            "maxLength": "1",
+            "Chapter": "6.17.1"
+        },
+        "ZFM.2": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFM-2",
+            "LongName": "Mode de sortie PMSI",
+            "maxLength": "1",
+            "Chapter": "6.17.2"
+        },
+        "ZFM.3": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFM-3-4",
+            "LongName": "Mode de provenance PMSI",
+            "maxLength": "1",
+            "Chapter": "6.17.3"
+        },
+        "ZFM.4": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFM-3-4",
+            "LongName": "Mode de destination PMSI",
+            "maxLength": "1",
+            "Chapter": "6.17.4"
+        },
+        "ZFM.5": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFM-5",
+            "LongName": "Passage par une structure des Urgences (PMSI)",
+            "maxLength": "1",
+            "Chapter": "6.17.5"
+        },
+        "ZFD.1": {
+            "Item": "",
+            "Type": "NA",
+            "Table": "",
+            "LongName": "Date Lunaire",
+            "maxLength": "10",
+            "Chapter": "6.18.1",
+            "comment": "PAM FR 2.11.2 gives a length of 8; the HL7 length of the NA components (2+2+4) with their separators is 10."
+        },
+        "ZFD.2": {
+            "Item": "",
+            "Type": "NM",
+            "Table": "",
+            "LongName": "Nombre de semaines de gestation",
+            "maxLength": "16",
+            "Chapter": "6.18.2"
+        },
+        "ZFD.3": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "HL70136",
+            "LongName": "Consentement SMS",
+            "maxLength": "1",
+            "Chapter": "6.18.3"
+        },
+        "ZFD.4": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "HL70136",
+            "LongName": "Indicateur de date de naissance corrigée",
+            "maxLength": "1",
+            "Chapter": "6.18.4"
+        },
+        "ZFD.5": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFD-5",
+            "LongName": "Mode d'obtention de l'identité",
+            "maxLength": "8",
+            "Chapter": "6.18.5"
+        },
+        "ZFD.6": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date d'interrogation du téléservice INSi",
+            "maxLength": "26",
+            "Chapter": "6.18.6"
+        },
+        "ZFD.7": {
+            "Item": "",
+            "Type": "IS",
+            "Table": "IHE-FRANCE-ZFD-7",
+            "LongName": "Type de justificatif d'identité",
+            "maxLength": "16",
+            "Chapter": "6.18.7"
+        },
+        "ZFD.8": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date de fin de validité du document",
+            "maxLength": "26",
+            "Chapter": "6.18.8"
+        },
+        "ZFS.1": {
+            "Item": "",
+            "Type": "SI",
+            "Table": "",
+            "LongName": "Set ID - ZFS",
+            "maxLength": "4",
+            "Chapter": "6.19.1"
+        },
+        "ZFS.2": {
+            "Item": "",
+            "Type": "EI",
+            "Table": "",
+            "LongName": "Identifiant du mode légal de soin",
+            "maxLength": "427",
+            "Chapter": "6.19.2"
+        },
+        "ZFS.3": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date et heure du début du mode légal de soin",
+            "maxLength": "26",
+            "Chapter": "6.19.3"
+        },
+        "ZFS.4": {
+            "Item": "",
+            "Type": "TS",
+            "Table": "",
+            "LongName": "Date et heure de la fin du mode légal de soin",
+            "maxLength": "26",
+            "Chapter": "6.19.4"
+        },
+        "ZFS.5": {
+            "Item": "",
+            "Type": "ID",
+            "Table": "",
+            "LongName": "Action du mode légal de soin",
+            "maxLength": "6",
+            "Chapter": "6.19.5"
+        },
+        "ZFS.6": {
+            "Item": "",
+            "Type": "CWE",
+            "Table": "IHE-FRANCE-ZFS-6",
+            "LongName": "Mode légal de soins",
+            "maxLength": "250",
+            "Chapter": "6.19.6"
+        },
+        "ZFS.7": {
+            "Item": "",
+            "Type": "CNE",
+            "Table": "IHE-FRANCE-ZFS-7",
+            "LongName": "Code RIM-P du mode légal de soin",
+            "maxLength": "2",
+            "Chapter": "6.19.7"
+        },
+        "ZFS.8": {
+            "Item": "",
+            "Type": "FT",
+            "Table": "",
+            "LongName": "Commentaire",
+            "maxLength": "65536",
+            "Chapter": "6.19.8"
+        }
+    }
+}
