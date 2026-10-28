@@ -57,14 +57,18 @@ php 04-json-schemas-update-from-appendix-a.php \
     --json-dir=<directory>
 ```
 
-### 05 - Update schemas for IHE PAM FR
+### 05 - Generate derived schemas
 
-Generate IHE PAM FR specific schemas from HL7 2.5 schemas.
+Generate a derived schema (e.g. IHE PAM FR) from a base schema (e.g. HL7 2.5).
+
+The profile directory holds the sources of the derived schema, maintained by hand: `messageType.json`, `eventDesc.json`, `extensions.json` (Z segments), `constraints.json` (differences with the base schema, each with its source) and `deviations.json` (accepted deviations).
+
+The script writes `segments.json`, `fields.json`, `dataTypes.json` and `structures/` in the profile directory, and stops on any invalid source entry.
 
 ```bash
-php 05-update-schemas-to-ihe-pam-fr.php \
-    --input-dir=<directory> \
-    --output-dir=<directory>
+php 05-derive-schemas.php \
+    --base-dir=<directory> \
+    --profile-dir=<directory>
 ```
 
 ## Generate profiles
