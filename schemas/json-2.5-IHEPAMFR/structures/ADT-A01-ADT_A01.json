@@ -102,7 +102,9 @@
             {
                 "segment": "NK1",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded"
+                "maxOccurs": "unbounded",
+                "usage": "RE",
+                "source": "PAMFR 6.9"
             },
             {
                 "segment": "PV1",

@@ -7,7 +7,7 @@
     "groups": {
         "iti30Zsegments": {
             "source": "PAMFR 4.3",
-            "comment": "PAMFR 4.3 adds ZFA, ZFD and ZFS to ITI-30 but does not say where. They are inserted after PV2, as in the ADT_A05 table of PAMFR 5.2. Usage O (CP-ITI-FR-2016-126 and CP-ITI-FR-2016-127).",
+            "comment": "PAMFR 4.3 adds ZFA, ZFD and ZFS to ITI-30 but does not say where. They are inserted after PV2 in A28 and A31, as in the ADT_A05 table of PAMFR 5.2. A40 and A47 have no PV2 and do not receive them until the position is clarified (InteropSanté point 12). Usage O (CP-ITI-FR-2016-126 and CP-ITI-FR-2016-127).",
             "elements": [
                 {
                     "segment": "ZFA",
@@ -1627,6 +1627,14 @@
                     "comment": "The ROL segment following PID/PD1 carries the attending physician (ROL-3 = ODRP); it is required in A01 and A04 when the attending physician is known."
                 },
                 {
+                    "update": "ADT_A01/NK1",
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.9",
+                    "comment": "NK1 is RE in A28, A01, A04 and Z99 when Z99 updates an A01 or an A04 (PAMFR 6.9)."
+                },
+                {
                     "insert": "iti31Zsegments",
                     "after": "ADT_A01/PV2"
                 }
@@ -1696,6 +1704,14 @@
                     "maxOccurs": "unbounded",
                     "source": "PAMFR 6.8.6",
                     "comment": "The ROL segment following PID/PD1 carries the attending physician (ROL-3 = ODRP); it is required in A01 and A04 when the attending physician is known."
+                },
+                {
+                    "update": "ADT_A01/NK1",
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.9",
+                    "comment": "NK1 is RE in A28, A01, A04 and Z99 when Z99 updates an A01 or an A04 (PAMFR 6.9)."
                 },
                 {
                     "insert": "iti31Zsegments",
