@@ -37,30 +37,5 @@
         "A54": "Change attending doctor",
         "A55": "Cancel change attending doctor",
         "Z99": "Update Patient Movement Information"
-    },
-    "MDM": {
-        "T01": "Original document notification",
-        "T02": "Original document notification and content",
-        "T03": "Document status change notification",
-        "T04": "Document status change notification and content",
-        "T05": "Document addendum notification",
-        "T06": "Document addendum notification and content",
-        "T07": "Document edit notification",
-        "T08": "Document edit notification and content",
-        "T09": "Document replacement notification",
-        "T10": "Document replacement notification and content",
-        "T11": "Document cancel notification"
-    },
-    "ORU": {
-        "R01": "Unsolicited transmission of an observation message",
-        "R30": "Unsolicited Point-Of-Care Observation Message Without Existing Order \u2013 Place An Order",
-        "R31": "Unsolicited New Point-Of-Care Observation Message - Search For An Order",
-        "R32": "Unsolicited Pre-Ordered Point-Of-Care Observation"
-    },
-    "SIU": {
-        "S12": "Notification of new appointment booking",
-        "S14": "Notification of appointment modification",
-        "S15": "Notification of appointment cancellation",
-        "S26": "Notification that patient did not show up for schedule appointment"
     }
 }

@@ -37,30 +37,5 @@
         "A54": "ADT-A54-ADT_A54",
         "A55": "ADT-A55-ADT_A52",
         "Z99": "ADT-Z99-ADT_A01"
-    },
-    "MDM": {
-        "T01": "MDM-T01-MDM_T01",
-        "T02": "MDM-T02-MDM_T02",
-        "T03": "MDM-T03-MDM_T01",
-        "T04": "MDM-T04-MDM_T02",
-        "T05": "MDM-T05-MDM_T01",
-        "T06": "MDM-T06-MDM_T02",
-        "T07": "MDM-T07-MDM_T01",
-        "T08": "MDM-T08-MDM_T02",
-        "T09": "MDM-T09-MDM_T01",
-        "T10": "MDM-T10-MDM_T02",
-        "T11": "MDM-T11-MDM_T01"
-    },
-    "ORU": {
-        "R01": "ORU-R01-ORU_R01",
-        "R30": "ORU-R30-ORU_R30",
-        "R31": "ORU-R31-ORU_R30",
-        "R32": "ORU-R32-ORU_R30"
-    },
-    "SIU": {
-        "S12": "SIU-S12-SIU_S12",
-        "S14": "SIU-S14-SIU_S12",
-        "S15": "SIU-S15-SIU_S12",
-        "S26": "SIU-S26-SIU_S12"
     }
 }
