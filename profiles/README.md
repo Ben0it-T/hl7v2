@@ -17,6 +17,7 @@ A profile directory is self-contained: it never refers to another profile direct
 json-<v>/
 ├── profile.json                        manifest
 ├── messageType.json                    message type → trigger event → message structure
+├── eventDesc.json                      message type → trigger event → description
 ├── structures/<type>-<event>-<structure>.json   one message structure per message
 ├── segments.json                       segments and their fields
 ├── fields.json                         field definitions
@@ -81,6 +82,18 @@ In a derived profile, a value changed or added by its specification has a `sourc
 ```
 
 The structure of a message is in `structures/<type>-<event>-<structure>.json`, for example `structures/ADT-A04-ADT_A01.json`.
+
+## eventDesc.json
+
+```json
+{
+  "ADT": {
+    "A01": "Admit/visit notification"
+  }
+}
+```
+
+It has exactly the messages of `messageType.json`.
 
 ## structures/
 

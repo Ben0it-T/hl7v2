@@ -74,6 +74,7 @@ const FORMAT_VERSION = '1';
 const GENERATED_FILES = [
     'profile.json',
     'messageType.json',
+    'eventDesc.json',
     'segments.json',
     'fields.json',
     'dataTypes.json',
@@ -325,6 +326,7 @@ function convertStructure(array $structure, string $root, array $segments, strin
 // Load schemas
 $profileSource = loadJson($schemaDir . '/profile.json');
 $messageType   = loadJson($schemaDir . '/messageType.json');
+$eventDesc     = loadJson($schemaDir . '/eventDesc.json');
 $segments      = loadJson($schemaDir . '/segments.json');
 $fields        = loadJson($schemaDir . '/fields.json');
 $dataTypes     = loadJson($schemaDir . '/dataTypes.json');
@@ -350,6 +352,7 @@ foreach ($selectedTypes as $type) {
 
 // Messages
 $profileMessageType = [];
+$profileEventDesc = [];
 $structures = [];
 $usedSegments = [];
 
@@ -373,6 +376,7 @@ foreach ($selectedTypes as $type) {
         }
 
         $profileMessageType[$type][$event] = $structureName;
+        $profileEventDesc[$type][$event] = stringOf(entryOf($eventDesc, $type, 'eventDesc.json'), (string) $event, "eventDesc.json: {$type}");
         $structures["{$type}-{$event}-{$structureName}"] = convertStructure(
             loadJson("{$schemaDir}/structures/{$value}.json"),
             $structureName,
@@ -535,6 +539,7 @@ foreach ($structures as $filename => $structure) {
 }
 
 saveJson($profileDir . '/messageType.json', $profileMessageType);
+saveJson($profileDir . '/eventDesc.json', $profileEventDesc);
 saveJson($profileDir . '/segments.json', $profileSegments);
 saveJson($profileDir . '/fields.json', $profileFields);
 saveJson($profileDir . '/dataTypes.json', $profileDataTypes);
