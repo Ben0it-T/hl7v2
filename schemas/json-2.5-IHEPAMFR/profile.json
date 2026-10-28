@@ -1,0 +1,5 @@
+{
+    "name": "IHE PAM FR 2.11.2",
+    "hl7Version": "2.5",
+    "base": "json-2.5"
+}
