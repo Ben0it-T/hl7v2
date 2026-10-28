@@ -1458,7 +1458,7 @@
     "DB1.2": {
         "Item": "01284",
         "Type": "IS",
-        "Table": "HL70034",
+        "Table": "HL70334",
         "LongName": "Disabled person code",
         "maxLength": "2",
         "Chapter": "3.3.10.2"
@@ -1850,7 +1850,7 @@
     "ERR.1": {
         "Item": "00024",
         "Type": "CM_ELD",
-        "Table": "HL70060",
+        "Table": "",
         "LongName": "Error Code and Location",
         "maxLength": "80",
         "Chapter": "2.24.3.1"
@@ -2858,7 +2858,7 @@
     "GT1.52": {
         "Item": "00753",
         "Type": "IS",
-        "Table": "HL70310",
+        "Table": "HL70295",
         "LongName": "Handicap",
         "maxLength": "2",
         "Chapter": "6.4.5.52"
@@ -3258,7 +3258,7 @@
     "IN1.48": {
         "Item": "00753",
         "Type": "IS",
-        "Table": "HL70310",
+        "Table": "HL70295",
         "LongName": "Handicap",
         "maxLength": "2",
         "Chapter": "6.4.6.48"

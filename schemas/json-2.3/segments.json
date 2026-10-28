@@ -4455,7 +4455,7 @@
             },
             {
                 "field": "OBR.27",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "unbounded",
                 "usage": "O"
             },
@@ -5115,7 +5115,7 @@
             },
             {
                 "field": "OM3.7",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "1",
                 "usage": "O"
             }
@@ -5295,7 +5295,7 @@
             },
             {
                 "field": "ORC.7",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "1",
                 "usage": "O"
             },
@@ -6435,7 +6435,7 @@
             },
             {
                 "field": "PRC.2",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "unbounded",
                 "usage": "O"
             },
@@ -8253,7 +8253,7 @@
             },
             {
                 "field": "RXG.2",
-                "minOccurs": "1",
+                "minOccurs": "0",
                 "maxOccurs": "1",
                 "usage": "O"
             },

@@ -4354,13 +4354,13 @@
             {
                 "field": "OBR.5",
                 "minOccurs": "0",
-                "maxOccurs": "1",
+                "maxOccurs": "0",
                 "usage": "X"
             },
             {
                 "field": "OBR.6",
                 "minOccurs": "0",
-                "maxOccurs": "1",
+                "maxOccurs": "0",
                 "usage": "X"
             },
             {
