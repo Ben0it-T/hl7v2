@@ -29,7 +29,8 @@
                 "segment": "IN3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.31.7.1.2"
             },
             {
                 "segment": "ROL",
@@ -58,7 +59,33 @@
             {
                 "segment": "PID",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PID.11": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "unbounded",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.18": {
+                        "usage": "R",
+                        "minOccurs": "1",
+                        "maxOccurs": "1",
+                        "source": "PAMFR 6.6.9"
+                    },
+                    "PID.31": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.33": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    }
+                }
             },
             {
                 "segment": "PD1",
@@ -69,7 +96,8 @@
                 "segment": "ROL",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.8.6"
             },
             {
                 "segment": "NK1",
@@ -79,54 +107,89 @@
             {
                 "segment": "PV1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PV1.3": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.6": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.42": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.4"
+                    }
+                }
             },
             {
                 "segment": "PV2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PV2.38": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "PAMFR 6.11.10"
+                    }
+                }
             },
             {
                 "segment": "ZBE",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ZFA",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ZFP",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ZFV",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ZFM",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ZFD",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ZFS",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 5.2"
             },
             {
                 "segment": "ROL",

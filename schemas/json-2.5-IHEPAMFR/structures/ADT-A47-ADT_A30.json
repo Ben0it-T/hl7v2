@@ -1,51 +1,72 @@
 {
-    "PATIENT": {
-        "elements": [
-            {
-                "segment": "PID",
-                "minOccurs": "1",
-                "maxOccurs": "1",
-                "usage": "R"
-            },
-            {
-                "segment": "PD1",
-                "minOccurs": "0",
-                "maxOccurs": "1",
-                "usage": "O"
-            },
-            {
-                "segment": "MRG",
-                "minOccurs": "1",
-                "maxOccurs": "1",
-                "usage": "R"
-            }
-        ]
-    },
     "ADT_A30": {
         "elements": [
             {
                 "segment": "MSH",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.6.5.2"
             },
             {
                 "segment": "SFT",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.30.6.5.2"
             },
             {
                 "segment": "EVN",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.6.5.2"
             },
             {
                 "group": "PATIENT",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.6.5.2"
+            }
+        ]
+    },
+    "PATIENT": {
+        "elements": [
+            {
+                "segment": "PID",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "usage": "R",
+                "source": "ITI 3.30.6.5.2",
+                "fields": {
+                    "PID.11": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "unbounded",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.31": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    }
+                }
+            },
+            {
+                "segment": "PD1",
+                "minOccurs": "0",
+                "maxOccurs": "1",
+                "usage": "O",
+                "source": "ITI 3.30.6.5.2"
+            },
+            {
+                "segment": "MRG",
+                "minOccurs": "1",
+                "maxOccurs": "1",
+                "usage": "R",
+                "source": "ITI 3.30.6.5.2"
             }
         ]
     }

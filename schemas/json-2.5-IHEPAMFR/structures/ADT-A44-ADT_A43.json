@@ -4,7 +4,27 @@
             {
                 "segment": "PID",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PID.11": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "unbounded",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.18": {
+                        "usage": "R",
+                        "minOccurs": "1",
+                        "maxOccurs": "1",
+                        "source": "PAMFR 6.6.9"
+                    },
+                    "PID.31": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    }
+                }
             },
             {
                 "segment": "PD1",

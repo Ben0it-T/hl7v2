@@ -4,7 +4,21 @@
             {
                 "segment": "PID",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PID.11": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "unbounded",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.31": {
+                        "usage": "O",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    }
+                }
             },
             {
                 "segment": "PD1",
@@ -20,7 +34,8 @@
                 "segment": "PV1",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.6.4.2"
             }
         ]
     },
@@ -45,7 +60,8 @@
                 "group": "PATIENT",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.6.4.2"
             }
         ]
     }

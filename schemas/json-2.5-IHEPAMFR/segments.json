@@ -95,13 +95,15 @@
                 "field": "ACC.1",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.12"
             },
             {
                 "field": "ACC.2",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.12"
             },
             {
                 "field": "ACC.3",
@@ -113,7 +115,8 @@
                 "field": "ACC.4",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.12"
             },
             {
                 "field": "ACC.5",
@@ -569,7 +572,8 @@
                 "field": "AL1.6",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.8"
             }
         ],
         "LongName": "Patient Allergy Information",
@@ -2795,7 +2799,8 @@
                 "field": "EVN.1",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.2"
             },
             {
                 "field": "EVN.2",
@@ -2807,7 +2812,8 @@
                 "field": "EVN.3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "ITI 3.30.5.2"
             },
             {
                 "field": "EVN.4",
@@ -2825,13 +2831,15 @@
                 "field": "EVN.6",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "ITI 3.30.5.2"
             },
             {
                 "field": "EVN.7",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "ITI 3.30.5.2"
             }
         ],
         "LongName": "Event Type",
@@ -3485,7 +3493,8 @@
                 "field": "GT1.4",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.5",
@@ -3509,13 +3518,15 @@
                 "field": "GT1.8",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.9",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.10",
@@ -3635,7 +3646,8 @@
                 "field": "GT1.29",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.30",
@@ -3659,19 +3671,22 @@
                 "field": "GT1.33",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.34",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.35",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.36",
@@ -3689,31 +3704,36 @@
                 "field": "GT1.38",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.39",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.40",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.41",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.42",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.43",
@@ -3725,7 +3745,8 @@
                 "field": "GT1.44",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.45",
@@ -3767,13 +3788,15 @@
                 "field": "GT1.51",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.52",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.53",
@@ -3791,7 +3814,8 @@
                 "field": "GT1.55",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.20.3"
             },
             {
                 "field": "GT1.56",
@@ -4049,7 +4073,8 @@
                 "field": "IN1.3",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.4",
@@ -4103,13 +4128,15 @@
                 "field": "IN1.12",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.13",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.14",
@@ -4121,19 +4148,22 @@
                 "field": "IN1.15",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.16",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.17",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.18",
@@ -4145,13 +4175,15 @@
                 "field": "IN1.19",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.20",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.21",
@@ -4217,7 +4249,8 @@
                 "field": "IN1.31",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.32",
@@ -4241,13 +4274,15 @@
                 "field": "IN1.35",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.36",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.37",
@@ -4301,7 +4336,8 @@
                 "field": "IN1.45",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.46",
@@ -4325,7 +4361,8 @@
                 "field": "IN1.49",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN1.50",
@@ -4733,7 +4770,8 @@
                 "field": "IN2.63",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN2.64",
@@ -4823,7 +4861,8 @@
                 "field": "IN3.5",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.20.1"
             },
             {
                 "field": "IN3.6",
@@ -5567,7 +5606,8 @@
                 "field": "MRG.2",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.5"
             },
             {
                 "field": "MRG.3",
@@ -5579,19 +5619,22 @@
                 "field": "MRG.4",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.5"
             },
             {
                 "field": "MRG.5",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.5"
             },
             {
                 "field": "MRG.6",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.5"
             },
             {
                 "field": "MRG.7",
@@ -5663,25 +5706,29 @@
                 "field": "MSH.3",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.4",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.5",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.6",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.7",
@@ -5693,7 +5740,8 @@
                 "field": "MSH.8",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.9",
@@ -5729,7 +5777,8 @@
                 "field": "MSH.14",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.15",
@@ -5747,31 +5796,36 @@
                 "field": "MSH.17",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.18",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.19",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.20",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.5.1"
             },
             {
                 "field": "MSH.21",
-                "minOccurs": "0",
-                "maxOccurs": "1",
-                "usage": "O"
+                "minOccurs": "1",
+                "maxOccurs": "unbounded",
+                "usage": "R",
+                "source": "PAMFR 6.5"
             }
         ],
         "LongName": "Message Header",
@@ -5969,7 +6023,8 @@
                 "field": "NK1.25",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.3"
             },
             {
                 "field": "NK1.26",
@@ -5987,7 +6042,8 @@
                 "field": "NK1.28",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.3"
             },
             {
                 "field": "NK1.29",
@@ -6017,7 +6073,8 @@
                 "field": "NK1.33",
                 "minOccurs": "1",
                 "maxOccurs": "unbounded",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.9"
             },
             {
                 "field": "NK1.34",
@@ -6029,7 +6086,8 @@
                 "field": "NK1.35",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.3"
             },
             {
                 "field": "NK1.36",
@@ -6569,13 +6627,15 @@
                 "field": "OBX.1",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.21"
             },
             {
                 "field": "OBX.2",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.21"
             },
             {
                 "field": "OBX.3",
@@ -6593,13 +6653,15 @@
                 "field": "OBX.5",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.21"
             },
             {
                 "field": "OBX.6",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.21"
             },
             {
                 "field": "OBX.7",
@@ -6611,7 +6673,8 @@
                 "field": "OBX.8",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.30.5.7"
             },
             {
                 "field": "OBX.9",
@@ -6623,7 +6686,8 @@
                 "field": "OBX.10",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.30.5.7"
             },
             {
                 "field": "OBX.11",
@@ -6647,7 +6711,8 @@
                 "field": "OBX.14",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.21"
             },
             {
                 "field": "OBX.15",
@@ -6659,19 +6724,22 @@
                 "field": "OBX.16",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.21"
             },
             {
                 "field": "OBX.17",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.30.5.7"
             },
             {
                 "field": "OBX.18",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.30.5.7"
             },
             {
                 "field": "OBX.19",
@@ -8405,7 +8473,8 @@
                 "field": "PID.2",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.3",
@@ -8417,7 +8486,8 @@
                 "field": "PID.4",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.5",
@@ -8435,37 +8505,43 @@
                 "field": "PID.7",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.8",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.9",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.10",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.3"
             },
             {
                 "field": "PID.11",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.12",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.13",
@@ -8495,25 +8571,29 @@
                 "field": "PID.17",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.3"
             },
             {
                 "field": "PID.18",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.19",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.20",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.21",
@@ -8525,7 +8605,8 @@
                 "field": "PID.22",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.3"
             },
             {
                 "field": "PID.23",
@@ -8543,7 +8624,8 @@
                 "field": "PID.25",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.26",
@@ -8561,7 +8643,8 @@
                 "field": "PID.28",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.29",
@@ -8579,19 +8662,22 @@
                 "field": "PID.31",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "CE"
+                "usage": "CE",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.32",
                 "minOccurs": "1",
                 "maxOccurs": "unbounded",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.33",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.6"
             },
             {
                 "field": "PID.34",
@@ -9317,7 +9403,8 @@
                 "field": "PV1.3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.4",
@@ -9329,13 +9416,15 @@
                 "field": "PV1.5",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.6",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.7",
@@ -9353,7 +9442,8 @@
                 "field": "PV1.9",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.10",
@@ -9365,7 +9455,8 @@
                 "field": "PV1.11",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.12",
@@ -9413,7 +9504,8 @@
                 "field": "PV1.19",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.20",
@@ -9539,7 +9631,8 @@
                 "field": "PV1.40",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.41",
@@ -9551,7 +9644,8 @@
                 "field": "PV1.42",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.43",
@@ -9569,7 +9663,8 @@
                 "field": "PV1.45",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 6.10"
             },
             {
                 "field": "PV1.46",
@@ -9611,7 +9706,8 @@
                 "field": "PV1.52",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.10"
             }
         ],
         "LongName": "Patient Visit",
@@ -9635,7 +9731,8 @@
                 "field": "PV2.3",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "PAMFR 6.11"
             },
             {
                 "field": "PV2.4",
@@ -9725,7 +9822,8 @@
                 "field": "PV2.18",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "PAMFR 6.11"
             },
             {
                 "field": "PV2.19",
@@ -10421,7 +10519,8 @@
                 "field": "ROL.9",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 6.8"
             },
             {
                 "field": "ROL.10",
@@ -10433,7 +10532,8 @@
                 "field": "ROL.11",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 6.8"
             },
             {
                 "field": "ROL.12",
@@ -13527,7 +13627,8 @@
             }
         ],
         "LongName": "Movement segment",
-        "Chapter": ""
+        "Chapter": "6.13",
+        "source": "PAMFR 6.13"
     },
     "ZFA": {
         "fields": [
@@ -13605,7 +13706,8 @@
             }
         ],
         "LongName": "Statut DMP",
-        "Chapter": ""
+        "Chapter": "6.14",
+        "source": "PAMFR 6.14"
     },
     "ZFD": {
         "fields": [
@@ -13658,8 +13760,9 @@
                 "usage": "RE"
             }
         ],
-        "LongName": "Compl\u00e9ment d\u00e9mographique",
-        "Chapter": ""
+        "LongName": "Complément démographique",
+        "Chapter": "6.18",
+        "source": "PAMFR 6.18"
     },
     "ZFM": {
         "fields": [
@@ -13695,7 +13798,8 @@
             }
         ],
         "LongName": "Mouvement PMSI",
-        "Chapter": ""
+        "Chapter": "6.17",
+        "source": "PAMFR 6.17"
     },
     "ZFP": {
         "fields": [
@@ -13713,7 +13817,8 @@
             }
         ],
         "LongName": "Situation professionnelle",
-        "Chapter": ""
+        "Chapter": "6.15",
+        "source": "PAMFR 6.15"
     },
     "ZFS": {
         "fields": [
@@ -13766,8 +13871,9 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Mode l\u00e9gal de soins en psychiatrie",
-        "Chapter": ""
+        "LongName": "Mode légal de soins en psychiatrie",
+        "Chapter": "6.19",
+        "source": "PAMFR 6.19"
     },
     "ZFV": {
         "fields": [
@@ -13838,7 +13944,8 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Compl\u00e9ment d'information sur la venue",
-        "Chapter": ""
+        "LongName": "Complément d'information sur la venue",
+        "Chapter": "6.16",
+        "source": "PAMFR 6.16"
     }
 }

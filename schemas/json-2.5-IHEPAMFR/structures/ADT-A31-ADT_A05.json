@@ -29,7 +29,8 @@
                 "segment": "IN3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "ITI 3.30.6.3.2"
             },
             {
                 "segment": "ROL",
@@ -58,7 +59,27 @@
             {
                 "segment": "PID",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PID.11": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "unbounded",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.31": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    },
+                    "PID.33": {
+                        "usage": "RE",
+                        "minOccurs": "0",
+                        "maxOccurs": "1",
+                        "source": "ITI 3.30.5.3"
+                    }
+                }
             },
             {
                 "segment": "PD1",
@@ -73,43 +94,353 @@
             {
                 "segment": "NK1",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded",
-                "usage": "RE"
+                "maxOccurs": "unbounded"
             },
             {
                 "segment": "PV1",
                 "minOccurs": "1",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "fields": {
+                    "PV1.1": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.3": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.4": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.5": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.6": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.7": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.8": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.9": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.10": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.11": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.12": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.13": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.14": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.15": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.16": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.17": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.18": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.19": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.20": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.21": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.22": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.23": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.24": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.25": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.26": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.27": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.28": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.29": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.30": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.31": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.32": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.33": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.34": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.35": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.36": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.37": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.38": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.39": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.40": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.41": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.42": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.43": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.44": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.45": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.46": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.47": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.48": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.49": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.50": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.51": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    },
+                    "PV1.52": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4"
+                    }
+                }
             },
             {
                 "segment": "PV2",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "ITI 3.30.6.3.2"
             },
             {
                 "segment": "ZFA",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 4.3"
             },
             {
                 "segment": "ZFD",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 4.3"
             },
             {
                 "segment": "ZFS",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "usage": "O"
+                "usage": "O",
+                "source": "PAMFR 4.3"
             },
             {
                 "segment": "ROL",
                 "minOccurs": "0",
-                "maxOccurs": "unbounded",
-                "usage": "O"
+                "maxOccurs": "unbounded"
             },
             {
                 "segment": "DB1",

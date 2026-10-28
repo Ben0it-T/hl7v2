@@ -1011,13 +1011,15 @@
                 "dataType": "CX.4",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "DTFR N.1"
             },
             {
                 "dataType": "CX.5",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.1"
             },
             {
                 "dataType": "CX.6",
@@ -1029,7 +1031,8 @@
                 "dataType": "CX.7",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "DTFR N.1"
             },
             {
                 "dataType": "CX.8",
@@ -1055,7 +1058,8 @@
         "Type": "ST",
         "Table": "",
         "LongName": "ID Number",
-        "maxLength": "128"
+        "maxLength": "128",
+        "source": "DTFR N.1"
     },
     "CX.10": {
         "Type": "CWE",
@@ -1431,13 +1435,15 @@
                 "dataType": "EI.1",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "ITI N.2"
             },
             {
                 "dataType": "EI.2",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "ITI N.2"
             },
             {
                 "dataType": "EI.3",
@@ -1457,7 +1463,8 @@
         "Type": "ST",
         "Table": "",
         "LongName": "Entity Identifier",
-        "maxLength": "128"
+        "maxLength": "128",
+        "source": "DTFR N.2"
     },
     "EI.2": {
         "Type": "IS",
@@ -1737,7 +1744,8 @@
                 "dataType": "HD.1",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "DTFR N.3"
             },
             {
                 "dataType": "HD.2",
@@ -2321,9 +2329,10 @@
     },
     "MOP.1": {
         "Type": "ID",
-        "Table": "HL70148",
+        "Table": "HL70146",
         "LongName": "Money or Percentage Indicator",
-        "maxLength": "2"
+        "maxLength": "2",
+        "source": "PAMFR 6.20.5"
     },
     "MOP.2": {
         "Type": "NM",
@@ -3952,13 +3961,15 @@
                 "dataType": "SAD.2",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.7"
             },
             {
                 "dataType": "SAD.3",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.7"
             }
         ]
     },
@@ -4397,7 +4408,8 @@
                 "dataType": "TS.2",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.5"
             }
         ]
     },
@@ -4502,19 +4514,22 @@
                 "dataType": "VID.1",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.5"
             },
             {
                 "dataType": "VID.2",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.5"
             },
             {
                 "dataType": "VID.3",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "PAMFR 6.5"
             }
         ]
     },
@@ -4692,7 +4707,8 @@
                 "dataType": "XAD.12",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.6"
             },
             {
                 "dataType": "XAD.13",
@@ -4798,19 +4814,22 @@
                 "dataType": "XCN.1",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.2",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.4",
@@ -4822,7 +4841,8 @@
                 "dataType": "XCN.5",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.6",
@@ -4834,43 +4854,50 @@
                 "dataType": "XCN.7",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.8",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.9",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.10",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.11",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.12",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.13",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.14",
@@ -4882,55 +4909,64 @@
                 "dataType": "XCN.15",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.16",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.17",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.18",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.19",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.20",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.21",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.22",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             },
             {
                 "dataType": "XCN.23",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.8"
             }
         ]
     },
@@ -4938,7 +4974,8 @@
         "Type": "ST",
         "Table": "",
         "LongName": "ID Number",
-        "maxLength": "199"
+        "maxLength": "199",
+        "source": "DTFR N.8"
     },
     "XCN.10": {
         "Type": "ID",
@@ -5078,61 +5115,71 @@
                 "dataType": "XON.1",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.2",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.3",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.4",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.5",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.6",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.7",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.8",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.9",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.9"
             },
             {
                 "dataType": "XON.10",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.9"
             }
         ]
     },
@@ -5146,7 +5193,8 @@
         "Type": "ST",
         "Table": "",
         "LongName": "Organization Identifier",
-        "maxLength": "64"
+        "maxLength": "64",
+        "source": "DTFR N.9"
     },
     "XON.2": {
         "Type": "IS",
@@ -5202,25 +5250,29 @@
                 "dataType": "XPN.1",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "RE"
+                "usage": "RE",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.2",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.4",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.5",
@@ -5232,55 +5284,64 @@
                 "dataType": "XPN.6",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.7",
                 "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "R"
+                "usage": "R",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.8",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.9",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.10",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.11",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.12",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.13",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             },
             {
                 "dataType": "XPN.14",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.10"
             }
         ]
     },
@@ -5324,13 +5385,15 @@
         "Type": "ST",
         "Table": "",
         "LongName": "Given Name",
-        "maxLength": "194"
+        "maxLength": "194",
+        "source": "DTFR N.10"
     },
     "XPN.3": {
         "Type": "ST",
         "Table": "",
         "LongName": "Second and Further Given Names or Initials Thereof",
-        "maxLength": "194"
+        "maxLength": "194",
+        "source": "DTFR N.10"
     },
     "XPN.4": {
         "Type": "ST",
@@ -5374,7 +5437,8 @@
                 "dataType": "XTN.1",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.2",
@@ -5392,31 +5456,36 @@
                 "dataType": "XTN.4",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "C"
+                "usage": "C",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.5",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.6",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.7",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.8",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.9",
@@ -5428,13 +5497,15 @@
                 "dataType": "XTN.10",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.11",
                 "minOccurs": "0",
                 "maxOccurs": "0",
-                "usage": "X"
+                "usage": "X",
+                "source": "DTFR N.11"
             },
             {
                 "dataType": "XTN.12",
