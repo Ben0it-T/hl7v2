@@ -83,7 +83,10 @@ const GENERATED_FILES = [
     'hl7tables-with-description.json',
 ];
 
-// Pseudo-codes describing an empty field: kept for display, not valid values (Q108).
+// Pseudo-codes describing an empty field: kept for display, not valid values.
+// - table 0078 "null"
+// - table 0356 "<null>"
+// HL7 2.5, 2.5.3: an omitted field is not the same as "".
 const PSEUDO_CODES = ['null', '<null>'];
 
 /**
