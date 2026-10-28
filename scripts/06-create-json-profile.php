@@ -12,7 +12,8 @@ declare(strict_types=1);
  * - keys in camelCase.
  *
  * The script replaces the generated files of the profile directory and keeps rules.json.
- * A table cited by a field or a component but absent from hl7tables.json is reported as a warning.
+ * A table cited by a field or a component but absent from hl7tables.json is reported as a warning,
+ * and so is a usage that is not consistent with its cardinality (see occursWarning()).
  *
  * Usage:
  * php 06-create-json-profile.php \
@@ -225,7 +226,64 @@ function convertOccurs(array $entry, string $where): array
         $usage = 'O';
     }
 
-    return ['usage' => $usage, 'min' => $min, 'max' => $max];
+    $occurs = ['usage' => $usage, 'min' => $min, 'max' => $max];
+    $warning = occursWarning($occurs);
+
+    if ($warning !== null) {
+        warn("{$where}: {$warning}");
+    }
+
+    return $occurs;
+}
+
+/**
+ * Check usage and cardinality together.
+ *
+ * R: min >= 1. RE, O, CE, B: min 0. C: min 0 or 1, applied only when the condition is true.
+ * X, W: [0..0]. Except for X and W, max >= 1 and >= min.
+ *
+ * @param array{usage: string, min: string, max: string} $occurs Usage and cardinality.
+ *
+ * @return string|null Why they are not consistent, or null.
+ */
+function occursWarning(array $occurs): ?string
+{
+    ['usage' => $usage, 'min' => $min, 'max' => $max] = $occurs;
+
+    if (!ctype_digit($min) || ($max !== '*' && !ctype_digit($max))) {
+        return "invalid cardinality [{$min}..{$max}]";
+    }
+
+    $minimum = (int) $min;
+    $maximum = $max === '*' ? PHP_INT_MAX : (int) $max;
+
+    $consistent = match ($usage) {
+        'R' => $minimum >= 1 && $maximum >= $minimum,
+        'RE', 'O', 'CE', 'B' => $minimum === 0 && $maximum >= 1,
+        'C' => $minimum <= 1 && $maximum >= 1,
+        'X', 'W' => $minimum === 0 && $maximum === 0,
+        default => false,
+    };
+
+    return $consistent ? null : "usage {$usage} is not consistent with [{$min}..{$max}]";
+}
+
+/**
+ * Record a warning, reported at the end of the script.
+ *
+ * @param string|null $message Warning to record; null returns the recorded warnings.
+ *
+ * @return list<string> Recorded warnings.
+ */
+function warn(?string $message = null): array
+{
+    static $warnings = [];
+
+    if ($message !== null && !in_array($message, $warnings, true)) {
+        $warnings[] = $message;
+    }
+
+    return $warnings;
 }
 
 /**
@@ -551,6 +609,10 @@ echo count($structures) . ' messages, ' . count($profileSegments) . ' segments, 
 
 foreach ($missingTables as $table => $citedBy) {
     fwrite(STDERR, "Warning: table {$table} is not in hl7tables.json (cited by " . implode(', ', $citedBy) . ")\n");
+}
+
+foreach (warn() as $warning) {
+    fwrite(STDERR, "Warning: {$warning}\n");
 }
 
 echo "Done.\n";
