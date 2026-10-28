@@ -59,8 +59,7 @@
         "A55": "Cancel change attending doctor",
         "A60": "Update allergy information",
         "A61": "Change consulting doctor",
-        "A62": "Cancel change consulting doctor",
-        "Z99": "Update Patient Movement Information"
+        "A62": "Cancel change consulting doctor"
     },
     "MDM": {
         "T01": "Original document notification",
