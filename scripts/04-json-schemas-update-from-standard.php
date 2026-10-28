@@ -25,6 +25,8 @@ declare(strict_types=1);
  * Rules:
  * - A 'varies' datatype is kept as 'varies'.
  * - Table 0 (or no table) means no table.
+ * - Usage sets the cardinality it implies: R → minOccurs 1; O, B → minOccurs 0;
+ *   X, W → [0..0] (fields; components: R, O, B, X).
  *
  * Publish (optional, --publish-dir):
  * - Applies <publish-dir>/patches.json, if any, to the updated schema.
@@ -459,13 +461,14 @@ foreach ($rows as $row) {
                 $dataSegments[$seg]['fields'][$idx]['minOccurs'] = "1";
             }
 
-            if ($opt === "B") {
-                // Usage B (backward compatibility) is not required: minOccurs is 0
+            if ($opt === "O" || $opt === "B") {
+                // Usage O (optional) and B (backward compatibility) are not required: minOccurs is 0
                 // HL7 v2.5, 2.5.3.4 and 2.12.6.4.
                 $dataSegments[$seg]['fields'][$idx]['minOccurs'] = "0";
             }
 
-            if ($opt === "W") {
+            if ($opt === "X" || $opt === "W") {
+                // Usage X (not supported) and W (withdrawn) are never sent: [0..0]
                 $dataSegments[$seg]['fields'][$idx]['minOccurs'] = "0";
                 $dataSegments[$seg]['fields'][$idx]['maxOccurs'] = "0";
             }
@@ -575,10 +578,16 @@ foreach ($rows as $row) {
                 $dataTypes[$cmp]['components'][$idx]['minOccurs'] = "1";
             }
 
-            if ($opt === "B") {
-                // Usage B (backward compatibility) is not required: minOccurs is 0
+            if ($opt === "O" || $opt === "B") {
+                // Usage O (optional) and B (backward compatibility) are not required: minOccurs is 0
                 // HL7 v2.5, 2.5.3.4 and 2.12.6.4.
                 $dataTypes[$cmp]['components'][$idx]['minOccurs'] = "0";
+            }
+
+            if ($opt === "X") {
+                // Usage X (not supported) is never sent: [0..0]
+                $dataTypes[$cmp]['components'][$idx]['minOccurs'] = "0";
+                $dataTypes[$cmp]['components'][$idx]['maxOccurs'] = "0";
             }
 
             break;
