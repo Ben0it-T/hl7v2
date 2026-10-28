@@ -73,8 +73,6 @@ php 05-derive-schemas.php \
 
 ## Generate profiles
 
-Script 07 uses a dedicated configuration file instead of command-line parameters.
-
 ### 06 - Create JSON profiles
 
 Generate a JSON profile directory from a JSON schema directory. The format is described in `profiles/README.md`.
@@ -108,33 +106,24 @@ php 06-create-json-profile.php \
 
 ### 07 - Create XML profiles
 
-Generate XML HL7v2xConformanceProfile profiles from JSON schemas.
+Generate XML profiles (`HL7v2xConformanceProfile`) from a JSON profile directory created by 06: one file per message. The script replaces the XML files of the output directory. The `source` keys are not written.
 
-Configuration file:
+The 2002 profile schema does not allow some JSON values: usage B is written O, usage W is written X, an element `[0..0]` is written `Min="0" Max="1"`, and an empty `Length` or `ItemNo` is not written.
 
-```text
-07-create-xml-profile.config.php
-```
-
-If missing, it is automatically created from:
-
-```text
-07-create-xml-profile.config.dist.php
-```
-
-Run:
+With `--xsd`, each XML profile is validated against the profile schema (`HL7MessageProfileSchema.xsd`, not versioned) before it is written.
 
 ```bash
-php 07-create-xml-profile.php
+php 07-create-xml-profile.php \
+    --profile-dir=<directory> \
+    --xml-dir=<directory> \
+    [--xsd=<file>]
 ```
 
-## IHE PAM FR conditional predicates
+Example:
 
-For scripts 06 and 07, enable:
-
-```php
-'fieldsConstraints' => true,
+```bash
+php 07-create-xml-profile.php \
+    --profile-dir=../profiles-next/json-2.5-IHEPAMFR \
+    --xml-dir=../profiles-next/xml-2.5-IHEPAMFR \
+    --xsd=../schemas/hl7v2xsd/profile/HL7MessageProfileSchema.xsd
 ```
-
-to apply IHE PAM FR conditional predicates to generated profiles.
-

@@ -1,810 +1,487 @@
 <?php
-/**
- * Create XML profiles from JSON schemas.
- *
- * Configuration (07-create-xml-profile.config.php, created from 07-create-xml-profile.config.dist.php if missing):
- * - HL7Version: HL7 version written in the profiles (e.g. 2.5)
- * - inputDir: JSON schema directory (e.g. ../schemas/json-2.5)
- * - outputDir: profile directory (e.g. ../profiles/xml-2.5)
- * - msgType: message types to generate (e.g. ['ACK', 'ADT', 'SIU'])
- * - ignoreEvents: trigger events to skip (e.g. ['A08'])
- * - fieldsConstraints: apply the IHE PAM FR conditional predicates
- *
- * Usage:
- * php 07-create-xml-profile.php
- */
 
 declare(strict_types=1);
 
-class HL7xmlProfilesGenerator {
-    // JSON schema inputs
-    public string $dataTypesFilename;
-    public string $fieldsFilename;
-    public string $segmentsFilename;
-    public string $structuresInputDir;
-    public string $messageTypeFilename;
-    public string $eventDescFilename;
-    // XML profile output directory
-    public string $profilesOutputDir;
-    public bool $fieldsConstraints;
+/**
+ * Create XML profiles (HL7v2xConformanceProfile) from a JSON profile directory.
+ *
+ * The JSON profile is the compiled profile written by 06 (format described in profiles/README.md).
+ * The script writes one XML profile per message (<type>-<event>-<structure>.xml) and replaces
+ * the XML files of the output directory. Field definitions of a structure element (message-specific)
+ * take precedence over segments.json. The `source` keys are not written.
+ *
+ * The 2002 profile schema (HL7MessageProfileSchema.xsd) does not allow some JSON values:
+ * - usage B is written O, usage W is written X;
+ * - an element [0..0] is written Min="0" Max="1" (its usage X says it must not be sent);
+ * - an empty Length or ItemNo is not written.
+ * With --xsd, each XML profile is validated against the schema before it is written.
+ *
+ * Usage:
+ * php 07-create-xml-profile.php \
+ *     --profile-dir=<directory> \
+ *     --xml-dir=<directory> \
+ *     [--xsd=<file>]
+ *
+ * Example:
+ * php 07-create-xml-profile.php \
+ *     --profile-dir=../profiles-next/json-2.5-IHEPAMFR \
+ *     --xml-dir=../profiles-next/xml-2.5-IHEPAMFR \
+ *     --xsd=../schemas/hl7v2xsd/profile/HL7MessageProfileSchema.xsd
+ */
 
-    private string $eventName;
-    /** @var array<string, mixed> */
-    private array $messageType;
-    /** @var array<string, mixed> */
-    private array $eventDesc;
-    /** @var array<string, array<string, mixed>> */
-    private array $structuresSchemas;
-    /** @var array<string, mixed> */
-    private array $segmentsSchemas;
-    /** @var array<string, mixed> */
-    private array $fieldsSchemas;
-    /** @var array<string, mixed> */
-    private array $dataTypesSchemas;
-    private DOMDocument $messageProfile;
+$options = getopt('', [
+    'profile-dir:',
+    'xml-dir:',
+    'xsd:',
+]);
 
-    /**
-     * Create a new instance.
-     */
-    public function __construct()
-    {
-        $this->setDefaults();
-        
-    }
+$profileDir = $options['profile-dir'] ?? null;
+$xmlDir = $options['xml-dir'] ?? null;
+$xsd = $options['xsd'] ?? null;
 
-    /**
-     * Set default values.
-     *
-     * @return void
-     */
-    private function setDefaults(): void
-    {
-        $this->structuresSchemas = [];
-        $this->segmentsSchemas = [];
-        $this->fieldsSchemas = [];
-        $this->dataTypesSchemas = [];
-        $this->eventName = "";
-        $this->fieldsConstraints = false;
-    }
-
-    /**
-     * Set the datatype schema filename.
-     *
-     * @param string $filename dataTypes.json filename.
-     *
-     * @return void
-     */
-    public function setDataTypesFilename(string $filename): void
-    {
-        $this->dataTypesFilename = $filename;
-    }
-
-    /**
-     * Set the field schema filename.
-     *
-     * @param string $filename fields.json filename.
-     *
-     * @return void
-     */
-    public function setFieldsFilename(string $filename): void
-    {
-        $this->fieldsFilename = $filename;
-    }
-
-    /**
-     * Set the segment schema filename.
-     *
-     * @param string $filename segments.json filename.
-     *
-     * @return void
-     */
-    public function setSegmentsFilename(string $filename): void
-    {
-        $this->segmentsFilename = $filename;
-    }
-
-    /**
-     * Set the message type filename.
-     *
-     * @param string $filename messageType.json filename.
-     *
-     * @return void
-     */
-    public function setMessageTypeFilename(string $filename): void
-    {
-        $this->messageTypeFilename = $filename;
-    }
-
-    /**
-     * Set the event description filename.
-     *
-     * @param string $filename eventDesc.json filename.
-     *
-     * @return void
-     */
-    public function setEventDescFilename(string $filename): void
-    {
-        $this->eventDescFilename = $filename;
-    }
-
-    /**
-     * Set the message structure directory.
-     *
-     * @param string $directory Directory containing the message structures (structures/).
-     *
-     * @return void
-     */
-    public function setStructuresInputDir(string $directory): void
-    {
-        $this->structuresInputDir = $directory;
-    }
-
-    /**
-     * Set the profile output directory.
-     *
-     * @param string $directory Output directory.
-     *
-     * @return void
-     */
-    public function setProfilesOutputDir(string $directory): void
-    {
-        $this->profilesOutputDir = $directory;
-    }
-
-    /**
-     * Set fields constraints.
-     *
-     * Applies the IHE PAM FR conditional predicates to fields (see addField()).
-     *
-     * @param bool $fieldsConstraints Apply the conditional predicates.
-     *
-     * @return void
-     */
-    public function setFieldsConstraints(bool $fieldsConstraints): void
-    {
-        $this->fieldsConstraints = $fieldsConstraints;
-    }
-
-    /**
-     * Create XML profiles.
-     *
-     * Writes one profile per message (<type>-<event>-<structure>.xml)
-     * to the output directory.
-     *
-     * @param string $HL7Version HL7 version written in the profiles (e.g. 2.5).
-     * @param list<string> $messageType Message types to generate (e.g. ACK, ADT, SIU).
-     * @param list<string> $ignoreEvents Trigger events to skip (e.g. A08).
-     *
-     * @return void
-     *
-     * @throws RuntimeException If a schema cannot be loaded.
-     */
-    public function createXmlProfiles(string $HL7Version, array $messageType, array $ignoreEvents = []): void
-    {
-        // Load json schemas
-        $this->messageType = $this->loadJson($this->messageTypeFilename);
-        $this->eventDesc = $this->loadJson($this->eventDescFilename);
-        
-        $this->dataTypesSchemas = $this->loadJson($this->dataTypesFilename);
-        $this->fieldsSchemas = $this->loadJson($this->fieldsFilename);
-        $this->segmentsSchemas = $this->loadJson($this->segmentsFilename);
-
-        // Create profiles
-        foreach ($this->messageType as $type => $event) {
-            if (in_array($type, $messageType)) {
-                foreach ($event as $eventName => $structureName) {
-                    if (in_array($eventName, $ignoreEvents)) {
-                        continue;
-                    }
-                    $this->eventName = $eventName;
-                    $xmlDoc = new DOMDocument("1.0", "UTF-8" );
-
-                    // get structureId
-                    $nameParts = explode("-", $structureName);
-                    $structureId = end($nameParts);
-
-                    $outputFilename = "$type-$eventName-$structureId.xml";
-                    $eventDesc = $this->eventDesc[$type][$eventName];
-
-                    // output format 
-                    $xmlDoc->preserveWhiteSpace = false;
-                    $xmlDoc->formatOutput = true;
-                    
-                    // add comment
-                    // $xmlDoc->appendChild($xmlDoc->createComment("\r\n " . $outputFilename . " " . date('Y-m-d h:i:s') . "\r\n"));
-
-                    // create stylesheet line
-                    $xslt = $xmlDoc->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"');
-                    $xmlDoc->appendChild($xslt);
-
-                    // add HL7v2xConformanceProfile (root node)
-                    $HL7v2xConformanceProfile = $xmlDoc->appendChild($xmlDoc->createElement("HL7v2xConformanceProfile"));
-
-                    // add HL7v2xConformanceProfile attributes
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createAttribute('xmlns:xsi'))->appendChild($xmlDoc->createTextNode("http://www.w3.org/2001/XMLSchema-instance"));
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createAttribute('xsi:noNamespaceSchemaLocation'))->appendChild($xmlDoc->createTextNode("http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd"));
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createAttribute('HL7Version'))->appendChild($xmlDoc->createTextNode($HL7Version));
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createAttribute('ProfileType'))->appendChild($xmlDoc->createTextNode("Constrainable"));
-
-                    // add MetaData
-                    $MetaData = $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("MetaData"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Name'))->appendChild($xmlDoc->createTextNode("ITI"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('OrgName'))->appendChild($xmlDoc->createTextNode("IHE"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Version'))->appendChild($xmlDoc->createTextNode($HL7Version));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Status'))->appendChild($xmlDoc->createTextNode("DRAFT"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Topics'))->appendChild($xmlDoc->createTextNode("confsig-IHE-" . $HL7Version . "-profile-accNE_accAL-Deferred"));
-
-                    // add ImpNote
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("ImpNote"))->appendChild($xmlDoc->createTextNode($eventDesc));
-                    
-                    // add UseCase
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("UseCase"));
-                    
-                    // add Encodings
-                    $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("Encodings"))->appendChild($xmlDoc->createElement("Encoding"))->appendChild($xmlDoc->createTextNode("ER7"));
-
-                    // add DynamicDef
-                    $DynamicDef = $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("DynamicDef"));
-                    $DynamicDef->appendChild($xmlDoc->createAttribute('AccAck'))->appendChild($xmlDoc->createTextNode("NE"));
-                    $DynamicDef->appendChild($xmlDoc->createAttribute('AppAck'))->appendChild($xmlDoc->createTextNode("AL"));
-                    $DynamicDef->appendChild($xmlDoc->createAttribute('MsgAckMode'))->appendChild($xmlDoc->createTextNode("Deferred"));
-
-                    // add HL7v2xStaticDef
-                    $HL7v2xStaticDef = $HL7v2xConformanceProfile->appendChild($xmlDoc->createElement("HL7v2xStaticDef"));
-                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('MsgType'))->appendChild($xmlDoc->createTextNode($type));
-                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('EventType'))->appendChild($xmlDoc->createTextNode($eventName));
-                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('MsgStructID'))->appendChild($xmlDoc->createTextNode($structureId));
-                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('EventDesc'))->appendChild($xmlDoc->createTextNode($eventDesc));
-                    $HL7v2xStaticDef->appendChild($xmlDoc->createAttribute('Role'))->appendChild($xmlDoc->createTextNode("Sender"));
-
-                    // add HL7v2xStaticDef MetaData
-                    $MetaData = $HL7v2xStaticDef->appendChild($xmlDoc->createElement("MetaData"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Name'))->appendChild($xmlDoc->createTextNode("ITI"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('OrgName'))->appendChild($xmlDoc->createTextNode("IHE"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Version'))->appendChild($xmlDoc->createTextNode($HL7Version));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Status'))->appendChild($xmlDoc->createTextNode("DRAFT"));
-                    $MetaData->appendChild($xmlDoc->createAttribute('Topics'))->appendChild($xmlDoc->createTextNode("confsig-IHE-" . $HL7Version . "-static-" . $type . "-" . $eventName . "-null-" . $structureId . "-" . $HL7Version . "-DRAFT-Sender"));
-                    
-                    // get message structure
-                    if (!isset($this->structuresSchemas[$structureName])) {
-                        $this->structuresSchemas[$structureName] = $this->loadJson($this->structuresInputDir . "/" . $structureName . ".json");
-                    }
-
-                    // 'root' groupName is structureId
-                    $groupName = $structureId;
-                    $this->messageProfile = $xmlDoc;
-                    foreach ($this->structuresSchemas[$structureName][$groupName]["elements"] as $element) {
-                        $attributes = $this->getElementAttributes($element);
-                        if ($attributes["Type"] == "segment") {
-                            // add segment node
-                            $segNode = $HL7v2xStaticDef->appendChild($xmlDoc->createElement("Segment"));
-                            $this->addSegment($segNode, $element["segment"], $attributes);
-                        }
-                        else if ($attributes["Type"] == "group") {
-                            // add group node
-                            $segGroupNode = $HL7v2xStaticDef->appendChild($xmlDoc->createElement("SegGroup"));
-                            $this->addSegGroup($segGroupNode, $structureName, $element["group"], $attributes);
-                        }
-                    }
-
-                    echo "- {$outputFilename}\n";
-                    $xmlDoc->save($this->profilesOutputDir . "/" . $outputFilename);
-                }
-            }
-        }
-        echo "Done.\n";
-    }
-
-    /**
-     * Load JSON file.
-     *
-     * @param string $filename JSON filename.
-     *
-     * @return array<string, mixed>
-     *
-     * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
-     */
-    private function loadJson(string $filename): array
-    {
-        if (!is_file($filename)) {
-            throw new RuntimeException(
-                "File not found: {$filename}"
-            );
-        }
-
-        $json = file_get_contents($filename);
-
-        if ($json === false) {
-            throw new RuntimeException(
-                "Unable to read file: {$filename}"
-            );
-        }
-
-        $data = json_decode($json, true);
-
-        if (!is_array($data)) {
-            throw new RuntimeException(
-                "Invalid JSON file: {$filename}"
-            );
-        }
-
-        return $data;
-    }
-
-    /**
-     * Get element usage from its cardinality.
-     *
-     * Used when the schema has no usage: 0..0 is X, a minimum of 1 is R, otherwise O.
-     *
-     * @param string $minOccurs Minimum cardinality.
-     * @param string $maxOccurs Maximum cardinality.
-     *
-     * @return string Usage (R, O or X).
-     */
-    private function getElementUsage(string $minOccurs = "0", string $maxOccurs = "0"): string
-    {
-        $usage = "O";
-        if ($minOccurs == "0" && $maxOccurs == "0") {
-            $usage = "X";
-        }
-        else if ($minOccurs == "1") {
-            $usage = "R";
-        }
-        return $usage;
-    }
-
-    /**
-     * Get group or segment attributes.
-     *
-     * @param array<string, mixed> $element Structure element (segment or group).
-     *
-     * @return array<string, string> Type, Name, Usage, Min and Max.
-     */
-    private function getElementAttributes(array $element): array
-    {
-        $elementType = (isset($element["segment"]) ? "segment" : "group");
-        $elementName = trim($element[$elementType]);
-        $elementMin = trim($element["minOccurs"]);
-        $elementMax = trim($element["maxOccurs"]);
-        $elementMax = ($elementMax == "unbounded" ? "*" : $elementMax);
-        // Usage
-        if (isset($element["usage"])) {
-            $elementUsage = trim($element["usage"]);
-        } else {
-            $elementUsage = $this->getElementUsage($elementMin, $elementMax);
-        }
-
-        return $attributes = array(
-            "Type" => $elementType,
-            "Name" => $elementName,
-            "Usage" => $elementUsage,
-            "Min" => $elementMin,
-            "Max" => $elementMax
-        );
-    }
-
-    /**
-     * Get field attributes.
-     *
-     * @param array<string, mixed> $field Segment field (segments.json).
-     *
-     * @return array<string, string> Name, Usage, Min and Max.
-     */
-    private function getFieldAttributes(array $field): array
-    {
-        $fieldName = trim($field["field"]);
-        $fieldMin = trim($field["minOccurs"]);
-        $fieldMax = trim($field["maxOccurs"]);
-        $fieldMax = ($fieldMax == "unbounded" ? "*" : $fieldMax);
-        // Usage
-        if (isset($field["usage"])) {
-            $fieldUsage = trim($field["usage"]);
-        } else {
-            $fieldUsage = $this->getElementUsage($fieldMin, $fieldMax);
-        }
-
-        return $fieldAttributes = array(
-            "Name" => $fieldName,
-            "Usage" => $fieldUsage,
-            "Min" => $fieldMin,
-            "Max" => $fieldMax
-        );
-    }
-
-    /**
-     * Get component attributes.
-     *
-     * @param array<string, mixed> $component Datatype component (dataTypes.json).
-     *
-     * @return array<string, string> Name, Usage, Min, Max and Type.
-     */
-    private function getComponentAttributes(array $component): array
-    {
-        $componentName = trim($component["dataType"]);
-        $componentMin = trim($component["minOccurs"]);
-        $componentMax = trim($component["maxOccurs"]);
-        $componentMax = ($componentMax == "unbounded" ? "*" : $componentMax);
-        // Usage
-        if (isset($component["usage"])) {
-            $componentUsage = trim($component["usage"]);
-        } else {
-            $componentUsage = $this->getElementUsage($componentMin, $componentMax);
-        }
-        return $componentAttributes = array(
-            "Name" => $componentName,
-            "Usage" => $componentUsage,
-            "Min" => $componentMin,
-            "Max" => $componentMax,
-            "Type" => "",
-        );
-    }
-
-    /**
-     * Add segment group.
-     *
-     * Writes the group attributes and its segments and groups, recursively.
-     *
-     * @param DOMElement $segGroupNode SegGroup node to fill.
-     * @param string $structureName Message structure name (structure filename without .json).
-     * @param string $segGroupName Group name (e.g. ADT_A01.PROCEDURE).
-     * @param array<string, string> $segGroupAttributes Group attributes (see getElementAttributes()).
-     *
-     * @return void
-     */
-    private function addSegGroup(DOMElement $segGroupNode, string $structureName, string $segGroupName, array $segGroupAttributes): void
-    {
-        // add attributes to segment group node
-        $segGroupAttributes["LongName"] = $segGroupAttributes["Name"];
-        $segGroupNode->appendChild($this->messageProfile->createAttribute('Name'))->appendChild($this->messageProfile->createTextNode($segGroupName));
-        $segGroupNode->appendChild($this->messageProfile->createAttribute('LongName'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["LongName"]));
-        $segGroupNode->appendChild($this->messageProfile->createAttribute('Usage'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Usage"]));
-        $segGroupNode->appendChild($this->messageProfile->createAttribute('Min'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Min"]));
-        $segGroupNode->appendChild($this->messageProfile->createAttribute('Max'))->appendChild($this->messageProfile->createTextNode($segGroupAttributes["Max"]));
-
-        if (isset($this->structuresSchemas[$structureName][$segGroupName]['type']) && $this->structuresSchemas[$structureName][$segGroupName]['type'] === "choice") {
-            $segGroupNode->appendChild($this->messageProfile->createAttribute('kind'))->appendChild($this->messageProfile->createTextNode("choice"));
-            $attributes["kind"] = "choice";
-        }
-
-        foreach ($this->structuresSchemas[$structureName][$segGroupName]["elements"] as $element) {
-            $attributes = $this->getElementAttributes($element);
-            if ($attributes["Type"] == "segment") {
-                // add segment node
-                $segNode = $segGroupNode->appendChild($this->messageProfile->createElement("Segment"));
-                $this->addSegment($segNode, $element["segment"], $attributes);
-            }
-            else if ($attributes["Type"] == "group") {
-                // add group node
-                $segGrpNode = $segGroupNode->appendChild($this->messageProfile->createElement("SegGroup"));
-                $this->addSegGroup($segGrpNode, $structureName, $element["group"], $attributes);
-            }
-        }
-    }
-
-    /**
-     * Add segment.
-     *
-     * Writes the segment attributes and its fields.
-     *
-     * @param DOMElement $segNode Segment node to fill.
-     * @param string $segName Segment name (e.g. PID).
-     * @param array<string, string> $segAttributes Segment attributes (see getElementAttributes()).
-     *
-     * @return void
-     */
-    private function addSegment(DOMElement $segNode, string $segName, array $segAttributes): void
-    {
-        // add attributes to segment node
-        $segAttributes["LongName"] = trim($this->segmentsSchemas[$segName]["LongName"]);
-        $segAttributes["Chapter"] = trim($this->segmentsSchemas[$segName]["Chapter"]);
-        $segNode->appendChild($this->messageProfile->createAttribute('Name'))->appendChild($this->messageProfile->createTextNode($segName));
-        $segNode->appendChild($this->messageProfile->createAttribute('LongName'))->appendChild($this->messageProfile->createTextNode($segAttributes["LongName"]));
-        $segNode->appendChild($this->messageProfile->createAttribute('Usage'))->appendChild($this->messageProfile->createTextNode($segAttributes["Usage"]));
-        $segNode->appendChild($this->messageProfile->createAttribute('Min'))->appendChild($this->messageProfile->createTextNode($segAttributes["Min"]));
-        $segNode->appendChild($this->messageProfile->createAttribute('Max'))->appendChild($this->messageProfile->createTextNode($segAttributes["Max"]));
-        // $segNode->appendChild($this->messageProfile->createAttribute('Chapter'))->appendChild($this->messageProfile->createTextNode($segAttributes["Chapter"]));
-
-        // get fields
-        $fields = [];
-        foreach ($this->segmentsSchemas[$segName]["fields"] as $field) {
-            // field attributes
-            $fieldAttributes = $this->getFieldAttributes($field);
-
-            // add field node
-            $fieldNode = $segNode->appendChild($this->messageProfile->createElement("Field"));
-            $this->addField($fieldNode, $field["field"], $fieldAttributes);
-        }
-    }
-
-    /**
-     * Add field.
-     *
-     * Writes the field attributes and its components.
-     * Applies the conditional predicates if fields constraints are enabled.
-     *
-     * @param DOMElement $fieldNode Field node to fill.
-     * @param string $fieldName Field identifier (e.g. PID.3).
-     * @param array<string, string> $fieldAttributes Field attributes (see getFieldAttributes()).
-     *
-     * @return void
-     */
-    private function addField(DOMElement $fieldNode, string $fieldName, array $fieldAttributes): void
-    {
-        // set field attributes
-        $fieldTable = ($this->fieldsSchemas[$fieldName]["Table"] != "") ? $this->fieldsSchemas[$fieldName]["Table"] : "";
-        $fieldTable = (substr($fieldTable,0,3) == "HL7") ? substr($fieldTable,3) : $fieldTable;
-        $fieldAttributes["Item"] = ($this->fieldsSchemas[$fieldName]["Item"] != "") ? sprintf('%05s', $this->fieldsSchemas[$fieldName]["Item"]) : "";
-        $fieldAttributes["Datatype"] = $this->fieldsSchemas[$fieldName]["Type"];
-        $fieldAttributes["Length"] = $this->fieldsSchemas[$fieldName]["maxLength"];
-        $fieldAttributes["Table"] = $fieldTable;
-        $fieldAttributes["LongName"] = $this->fieldsSchemas[$fieldName]["LongName"];
-        $fieldAttributes["Chapter"] = $this->fieldsSchemas[$fieldName]["Chapter"];
-
-        // condition predicates
-        // --------------------
-        if ($this->fieldsConstraints) {
-            // PID 
-            if (substr($fieldName, 0, 3) == "PID") {
-                // PID-7 – Date/Time of Birth
-                // This field is required if available in the following messages: A28, A31, A01, A04, A08
-                // In all other messages, it is optional.
-                if ($fieldName == "PID.7") {
-                    $fieldAttributes["Usage"] = "O";
-                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
-                        $fieldAttributes["Usage"] = "RE";
-                    }
-                }
-
-                // PID-8 – Administrative Sex
-                // This field is required if available in the following messages: A28, A31, A01, A04
-                // In all other messages, it is optional.
-                if ($fieldName == "PID.8") {
-                    $fieldAttributes["Usage"] = "O";
-                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
-                        $fieldAttributes["Usage"] = "RE";
-                    }
-                }
-
-                // PID-11 – Patient Address
-                // This field is required if available in the following messages: A28, A31, A01, A04
-                // In all other messages, it is optional.
-                if ($fieldName == "PID.11") {
-                    $fieldAttributes["Usage"] = "O";
-                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04"))) {
-                        $fieldAttributes["Usage"] = "RE";
-                    }
-                }
-
-                // PID-33 – Last Update Date/Time
-                // This field is required if available in the following messages: A28, A31, A01, A04, A08
-                if ($fieldName == "PID.33") {
-                    $fieldAttributes["Usage"] = "C";
-                    if (in_array($this->eventName, array("A28", "A31", "A01", "A04", "A08"))) {
-                        $fieldAttributes["Usage"] = "RE";
-                    }
-                }
-            }
-            
-            // PV1
-            if (substr($fieldName, 0, 3) == "PV1") {
-                // PV1 - General conditions of use
-                // All messages of transaction [ITI-30] that use this segment, actually use a pseudo-PV1, which is empty. The only field populated is PV1-2 “Patient Class” values “N” (Not Applicable).
-                if (in_array($this->eventName, array("A28", "A31", "A40", "A47", "A24", "A37"))) {
-                    if (!in_array($fieldName, array("PV1.2"))) {
-                        $fieldAttributes["Usage"] = "X";
-                    }
-                }
-                else {
-                    // PV1-3 – Assigned Patient Location
-                    // This field is required in the following messages: A02, A12
-                    // In all other messages of transaction [ITI-31], it is required if known to the sender.
-                    if ($fieldName == "PV1.3") {
-                        $fieldAttributes["Usage"] = "RE";
-                        if (in_array($this->eventName, array("A02", "A12"))) {
-                            $fieldAttributes["Usage"] = "R";
-                        }
-                    }
-
-                    // PV1-6 – Prior Patient Location
-                    // This field is required in the following messages: A02
-                    // In all other messages of transaction [ITI-31], it is optional.
-                    if ($fieldName == "PV1.6") {
-                        $fieldAttributes["Usage"] = "O";
-                        if (in_array($this->eventName, array("A02"))) {
-                            $fieldAttributes["Usage"] = "R";
-                        }
-                    }
-
-                    // PV1-42 – Pending Location
-                    // This field is required in the Pending Transfer (A15) and Cancel Pending Transfer (A26) messages.
-                    // In all other messages of transaction [ITI-31], it is optional.
-                    if ($fieldName == "PV1.42") {
-                        $fieldAttributes["Usage"] = "O";
-                        if (in_array($this->eventName, array("A15", "A26"))) {
-                            $fieldAttributes["Usage"] = "R";
-                        }
-                    }
-                }
-            }
-
-            // PV2
-            if (substr($fieldName, 0, 3) == "PV2") {
-                if (in_array($this->eventName, array("A01", "A14"))) {
-                    if ($fieldName == "PV2.38") {
-                        $fieldAttributes["Usage"] = "RE";
-                    }
-                }
-            }
-        }
-        // --------------------
-
-        // add field attributes
-        $fieldNode->appendChild($this->messageProfile->createAttribute('Name'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["LongName"]));
-        $fieldNode->appendChild($this->messageProfile->createAttribute('Usage'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Usage"]));
-        $fieldNode->appendChild($this->messageProfile->createAttribute('Min'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Min"]));
-        $fieldNode->appendChild($this->messageProfile->createAttribute('Max'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Max"]));
-        $fieldNode->appendChild($this->messageProfile->createAttribute('Datatype'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Datatype"]));
-        $fieldNode->appendChild($this->messageProfile->createAttribute('Length'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Length"]));
-        if ($fieldAttributes["Table"] != "") {
-            $fieldNode->appendChild($this->messageProfile->createAttribute('Table'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Table"]));
-        }
-        $fieldNode->appendChild($this->messageProfile->createAttribute('ItemNo'))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Item"]));
-
-        // add Reference node if Chapter exists
-        $fieldNode->appendChild($this->messageProfile->createElement("Reference"))->appendChild($this->messageProfile->createTextNode($fieldAttributes["Chapter"]));
-
-        // If dataType has components
-        $dataType = $this->fieldsSchemas[$fieldName]["Type"];
-        if (isset($this->dataTypesSchemas[$dataType]["components"])) {
-            $components = [];
-            foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $component) {
-                // component attributes
-                $componentAttributes = $this->getComponentAttributes($component);
-
-                // Note: fix.
-                // The table associated with the field is not used to validate the components.
-                //if ($key == 0 && $fieldTable != "") {
-                //    // send hl7 table to first component
-                //    $componentAttributes["Table"] =  $fieldTable;
-                //}
-
-                // add component node
-                $componentNode = $fieldNode->appendChild($this->messageProfile->createElement("Component"));
-                $this->addComponent($componentNode, $component["dataType"], $componentAttributes);
-            }
-        }
-    }
-
-     /**
-     * Add component.
-     *
-     * Writes the component attributes and its sub-components.
-     * Sub-components are added for components only, not recursively.
-     *
-     * @param DOMElement $componentNode Component or SubComponent node to fill.
-     * @param string $componentName Component identifier (e.g. CX.1).
-     * @param array<string, string> $componentAttributes Component attributes (see getComponentAttributes()).
-     * @param bool $isSubComponent True for a sub-component.
-     *
-     * @return void
-     */
-    private function addComponent(DOMElement $componentNode, string $componentName, array $componentAttributes, bool $isSubComponent = false): void
-    {
-        // get component attributes
-        $componentTable = ($this->dataTypesSchemas[$componentName]["Table"] != "") ? $this->dataTypesSchemas[$componentName]["Table"] : "";
-        $componentTable = (substr($componentTable,0,3) == "HL7") ? substr($componentTable,3) : $componentTable;
-
-        if (isset($componentAttributes["Table"]) && $componentAttributes["Table"] != "") {
-            $componentTable = $componentAttributes["Table"];
-        }
-
-        $componentAttributes["Type"] = $this->dataTypesSchemas[$componentName]["Type"];
-        $componentAttributes["Table"] = $componentTable;
-        $componentAttributes["LongName"] = $this->dataTypesSchemas[$componentName]["LongName"];
-        $componentAttributes["maxLength"] = $this->dataTypesSchemas[$componentName]["maxLength"];
-        
-        // add component attributes
-        $componentNode->appendChild($this->messageProfile->createAttribute('Name'))->appendChild($this->messageProfile->createTextNode($componentAttributes["LongName"]));
-        $componentNode->appendChild($this->messageProfile->createAttribute('Usage'))->appendChild($this->messageProfile->createTextNode($componentAttributes["Usage"]));
-        $componentNode->appendChild($this->messageProfile->createAttribute('Datatype'))->appendChild($this->messageProfile->createTextNode($componentAttributes["Type"]));
-        $componentNode->appendChild($this->messageProfile->createAttribute('Length'))->appendChild($this->messageProfile->createTextNode($componentAttributes["maxLength"]));
-        if ($componentAttributes["Table"] != "") {
-            $componentNode->appendChild($this->messageProfile->createAttribute('Table'))->appendChild($this->messageProfile->createTextNode($componentAttributes["Table"]));
-        }
-        
-        // if dataType (component) has (sub)components
-        $dataType = $this->dataTypesSchemas[$componentName]["Type"];
-        if (isset($this->dataTypesSchemas[$dataType]["components"]) && ! $isSubComponent) {
-            $subcomponents = [];
-            foreach ($this->dataTypesSchemas[$dataType]["components"] as $key => $subcomponent) {
-                // subcomponent attributes
-                $subcomponentAttributes = $this->getComponentAttributes($subcomponent);
-
-                // Note: fix.
-                // The table associated with the component is not used to validate the sub-components.
-                //if ($key == 0 && $componentTable != "") {
-                //    // send hl7 tabme to first component
-                //    $subcomponentAttributes["Table"] =  $componentTable;
-                //}
-
-                // add subcomponent node
-                $subcomponentNode = $componentNode->appendChild($this->messageProfile->createElement("SubComponent"));
-                $this->addComponent($subcomponentNode, $subcomponent["dataType"], $subcomponentAttributes, true);
-            }
-        }
-    }
+if (
+    !is_string($profileDir) || $profileDir === ''
+    || !is_string($xmlDir) || $xmlDir === ''
+    || ($xsd !== null && (!is_string($xsd) || $xsd === ''))
+) {
+    fwrite(
+        STDERR,
+        "Usage: php 07-create-xml-profile.php --profile-dir=<directory> --xml-dir=<directory> [--xsd=<file>]\n"
+    );
+    exit(1);
 }
 
+if (!is_dir($profileDir)) {
+    throw new RuntimeException(
+        "Directory not found: {$profileDir}"
+    );
+}
 
-$configDist = __DIR__ . '/07-create-xml-profile.config.dist.php';
-$configFile = __DIR__ . '/07-create-xml-profile.config.php';
+if ($xsd !== null && !is_file($xsd)) {
+    throw new RuntimeException(
+        "File not found: {$xsd}"
+    );
+}
 
-if (!is_file($configFile)) {
-    if (!copy($configDist, $configFile)) {
+if (is_dir($xmlDir) && realpath($profileDir) === realpath($xmlDir)) {
+    throw new RuntimeException(
+        'Profile and XML directories must be different.'
+    );
+}
+
+/**
+ * Load JSON file.
+ *
+ * @param string $filename JSON filename.
+ *
+ * @return array<string, mixed>
+ *
+ * @throws RuntimeException If the file does not exist, cannot be read or is not a valid JSON object.
+ */
+function loadJson(string $filename): array
+{
+    if (!is_file($filename)) {
         throw new RuntimeException(
-            'Unable to create configuration file.'
+            "File not found: {$filename}"
         );
     }
 
-    echo "Configuration file created: {$configFile}\n";
+    $json = file_get_contents($filename);
+
+    if ($json === false) {
+        throw new RuntimeException(
+            "Unable to read file: {$filename}"
+        );
+    }
+
+    $data = json_decode($json, true);
+
+    if (!is_array($data)) {
+        throw new RuntimeException(
+            "Invalid JSON file: {$filename}"
+        );
+    }
+
+    return $data;
 }
 
-$config = require $configFile;
+/**
+ * Read a string value of a profile entry.
+ *
+ * @param array<mixed> $entry Profile entry.
+ * @param string $key Key.
+ * @param string $where Entry, for the error message.
+ *
+ * @return string
+ *
+ * @throws RuntimeException If the value is missing or is not a string.
+ */
+function stringOf(array $entry, string $key, string $where): string
+{
+    if (!isset($entry[$key]) || !is_string($entry[$key])) {
+        throw new RuntimeException("{$where}: missing or invalid '{$key}'");
+    }
 
-if (!is_array($config)) {
+    return $entry[$key];
+}
+
+/**
+ * Read an object or a list of a profile.
+ *
+ * @param array<mixed> $profile Profile part.
+ * @param string $key Key.
+ * @param string $where Profile part, for the error message.
+ *
+ * @return array<mixed>
+ *
+ * @throws RuntimeException If the key is not defined.
+ */
+function entryOf(array $profile, string $key, string $where): array
+{
+    if (!isset($profile[$key]) || !is_array($profile[$key])) {
+        throw new RuntimeException("{$where}: '{$key}' is not defined");
+    }
+
+    return $profile[$key];
+}
+
+/**
+ * Convert usage and cardinality to the values allowed by the profile schema.
+ *
+ * B → O, W → X, and a maximum of 0 → 1 (the usage X says the element must not be sent).
+ *
+ * @param array<mixed> $entry Profile entry with usage, min and max.
+ * @param string $where Entry, for the error message.
+ *
+ * @return array{Usage: string, Min: string, Max: string}
+ *
+ * @throws RuntimeException If a value is missing.
+ */
+function xmlOccurs(array $entry, string $where): array
+{
+    $usage = stringOf($entry, 'usage', $where);
+    $max = stringOf($entry, 'max', $where);
+
+    return [
+        'Usage' => ['B' => 'O', 'W' => 'X'][$usage] ?? $usage,
+        'Min' => stringOf($entry, 'min', $where),
+        'Max' => $max === '0' ? '1' : $max,
+    ];
+}
+
+/**
+ * Add attributes to a node, in order.
+ *
+ * @param DOMElement $node Node.
+ * @param array<string, string> $attributes Attributes, by name.
+ *
+ * @return DOMElement
+ */
+function withAttributes(DOMElement $node, array $attributes): DOMElement
+{
+    foreach ($attributes as $name => $value) {
+        $node->setAttribute($name, $value);
+    }
+
+    return $node;
+}
+
+/**
+ * XML profile writer for one JSON profile directory.
+ */
+final class XmlProfileWriter
+{
+    /**
+     * Create a writer.
+     *
+     * @param array<string, mixed> $segments Segments (segments.json).
+     * @param array<string, mixed> $fields Fields (fields.json).
+     * @param array<string, mixed> $dataTypes Datatypes (dataTypes.json).
+     */
+    public function __construct(
+        private readonly array $segments,
+        private readonly array $fields,
+        private readonly array $dataTypes,
+    ) {
+    }
+
+    /**
+     * Add the elements of a group (segments and groups).
+     *
+     * @param DOMDocument $document XML document.
+     * @param DOMElement $parent Parent node (HL7v2xStaticDef or SegGroup).
+     * @param array<string, mixed> $structure Message structure, by group name.
+     * @param string $group Group name.
+     * @param string $where Message, for the error message.
+     *
+     * @return void
+     *
+     * @throws RuntimeException On an undefined group, segment, field or datatype.
+     */
+    public function addElements(DOMDocument $document, DOMElement $parent, array $structure, string $group, string $where): void
+    {
+        foreach (entryOf(entryOf($structure, $group, $where), 'elements', "{$where} {$group}") as $element) {
+            if (!is_array($element)) {
+                throw new RuntimeException("{$where} {$group}: invalid element");
+            }
+
+            $occurs = xmlOccurs($element, "{$where} {$group}");
+
+            if (isset($element['group'])) {
+                $name = stringOf($element, 'group', "{$where} {$group}");
+                $node = withAttributes($document->createElement('SegGroup'), ['Name' => $name, 'LongName' => $name] + $occurs);
+
+                if (($structure[$name]['choice'] ?? false) === true) {
+                    $node->setAttribute('kind', 'choice');
+                }
+
+                $parent->appendChild($node);
+                $this->addElements($document, $node, $structure, $name, $where);
+                continue;
+            }
+
+            $name = stringOf($element, 'segment', "{$where} {$group}");
+            $segment = entryOf($this->segments, $name, 'segments.json');
+            $node = withAttributes(
+                $document->createElement('Segment'),
+                ['Name' => $name, 'LongName' => stringOf($segment, 'longName', "segments.json: {$name}")] + $occurs
+            );
+            $parent->appendChild($node);
+            $overrides = isset($element['fields']) ? entryOf($element, 'fields', "{$where} {$name}") : [];
+
+            foreach (entryOf($segment, 'fields', "segments.json: {$name}") as $field) {
+                if (!is_array($field)) {
+                    throw new RuntimeException("segments.json: {$name}: invalid field");
+                }
+
+                $id = stringOf($field, 'field', "segments.json: {$name}");
+                $occurrence = isset($overrides[$id]) && is_array($overrides[$id]) ? $overrides[$id] : $field;
+                $node->appendChild($this->field($document, $id, $occurrence));
+            }
+        }
+    }
+
+    /**
+     * Create a field node.
+     *
+     * @param DOMDocument $document XML document.
+     * @param string $id Field identifier (e.g. PID.3).
+     * @param array<mixed> $occurrence Usage and cardinality of the field in the message.
+     *
+     * @return DOMElement
+     *
+     * @throws RuntimeException On an undefined field or datatype.
+     */
+    private function field(DOMDocument $document, string $id, array $occurrence): DOMElement
+    {
+        $definition = entryOf($this->fields, $id, 'fields.json');
+        $where = "fields.json: {$id}";
+        $dataType = stringOf($definition, 'dataType', $where);
+        $table = stringOf($definition, 'table', $where);
+        $length = stringOf($definition, 'maxLength', $where);
+        $item = stringOf($definition, 'item', $where);
+
+        $attributes = ['Name' => stringOf($definition, 'longName', $where)]
+            + xmlOccurs($occurrence, $id)
+            + ['Datatype' => $dataType];
+
+        if ($length !== '') {
+            $attributes['Length'] = $length;
+        }
+
+        if ($table !== '') {
+            $attributes['Table'] = $table;
+        }
+
+        if ($item !== '') {
+            $attributes['ItemNo'] = $item;
+        }
+        $node = withAttributes($document->createElement('Field'), $attributes);
+        $node->appendChild($document->createElement('Reference'))->appendChild($document->createTextNode(stringOf($definition, 'chapter', $where)));
+
+        foreach ($this->components($dataType) as $component) {
+            $node->appendChild($this->component($document, 'Component', $component, true));
+        }
+
+        return $node;
+    }
+
+    /**
+     * Get the components of a datatype.
+     *
+     * @param string $dataType Datatype name.
+     *
+     * @return list<array<mixed>> Components (none for a primitive datatype).
+     *
+     * @throws RuntimeException On an undefined datatype.
+     */
+    private function components(string $dataType): array
+    {
+        $definition = entryOf($this->dataTypes, $dataType, 'dataTypes.json');
+
+        if (!isset($definition['components'])) {
+            return [];
+        }
+
+        $components = [];
+
+        foreach (entryOf($definition, 'components', "dataTypes.json: {$dataType}") as $component) {
+            if (!is_array($component)) {
+                throw new RuntimeException("dataTypes.json: {$dataType}: invalid component");
+            }
+
+            $components[] = $component;
+        }
+
+        return $components;
+    }
+
+    /**
+     * Create a component or sub-component node.
+     *
+     * Sub-components are written one level down only.
+     *
+     * @param DOMDocument $document XML document.
+     * @param string $tag Node name (Component, SubComponent).
+     * @param array<mixed> $component Component of the profile.
+     * @param bool $withSubComponents Add the sub-components.
+     *
+     * @return DOMElement
+     *
+     * @throws RuntimeException On an undefined datatype.
+     */
+    private function component(DOMDocument $document, string $tag, array $component, bool $withSubComponents): DOMElement
+    {
+        $id = stringOf($component, 'component', 'dataTypes.json');
+        $dataType = stringOf($component, 'dataType', "dataTypes.json: {$id}");
+        $table = stringOf($component, 'table', "dataTypes.json: {$id}");
+        $length = stringOf($component, 'maxLength', "dataTypes.json: {$id}");
+
+        $attributes = [
+            'Name' => stringOf($component, 'longName', "dataTypes.json: {$id}"),
+            'Usage' => xmlOccurs($component, "dataTypes.json: {$id}")['Usage'],
+            'Datatype' => $dataType,
+        ];
+
+        if ($length !== '') {
+            $attributes['Length'] = $length;
+        }
+
+        if ($table !== '') {
+            $attributes['Table'] = $table;
+        }
+
+        $node = withAttributes($document->createElement($tag), $attributes);
+
+        if ($withSubComponents) {
+            foreach ($this->components($dataType) as $subComponent) {
+                $node->appendChild($this->component($document, 'SubComponent', $subComponent, false));
+            }
+        }
+
+        return $node;
+    }
+}
+
+
+
+// Load the JSON profile
+$profile     = loadJson($profileDir . '/profile.json');
+$messageType = loadJson($profileDir . '/messageType.json');
+$eventDesc   = loadJson($profileDir . '/eventDesc.json');
+$writer      = new XmlProfileWriter(
+    loadJson($profileDir . '/segments.json'),
+    loadJson($profileDir . '/fields.json'),
+    loadJson($profileDir . '/dataTypes.json'),
+);
+$hl7Version  = stringOf($profile, 'hl7Version', 'profile.json');
+
+if (!is_dir($xmlDir) && !mkdir($xmlDir, 0777, true) && !is_dir($xmlDir)) {
     throw new RuntimeException(
-        'Invalid configuration file.'
+        "Unable to create directory: {$xmlDir}"
     );
 }
 
-// config
-$HL7Version   = $config["HL7Version"];
-$inputDir     = $config["inputDir"];
-$outputDir    = $config["outputDir"];
-$msgType      = $config["msgType"];
-$ignoreEvents = $config["ignoreEvents"];
-$fieldsConstr = $config["fieldsConstraints"];
-
-if (!is_string($inputDir) || $inputDir === '') {
-    throw new RuntimeException(
-        'Missing inputDir configuration.'
-    );
+foreach (glob($xmlDir . '/*.xml') ?: [] as $filename) {
+    if (!unlink($filename)) {
+        throw new RuntimeException("Unable to remove file: {$filename}");
+    }
 }
 
-if (!is_dir($inputDir)) {
-    throw new RuntimeException(
-        "Directory not found: {$inputDir}"
-    );
+$count = 0;
+
+foreach ($messageType as $type => $events) {
+    foreach (entryOf($messageType, $type, 'messageType.json') as $event => $structureName) {
+        $event = (string) $event;
+        $where = "{$type}^{$event}";
+        $structureName = is_string($structureName) ? $structureName : throw new RuntimeException("messageType.json: {$where}: string expected");
+        $description = stringOf(entryOf($eventDesc, $type, 'eventDesc.json'), $event, "eventDesc.json: {$type}");
+        $structure = loadJson("{$profileDir}/structures/{$type}-{$event}-{$structureName}.json");
+
+        $document = new DOMDocument('1.0', 'UTF-8');
+        $document->preserveWhiteSpace = false;
+        $document->formatOutput = true;
+        $document->appendChild($document->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"'));
+
+        // Header values follow the Gazelle profiles (Q169).
+        $root = $document->createElement('HL7v2xConformanceProfile');
+        $root->setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+        $root->setAttributeNS('http://www.w3.org/2001/XMLSchema-instance', 'xsi:noNamespaceSchemaLocation', 'http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd');
+        $document->appendChild(withAttributes($root, [
+            'HL7Version' => $hl7Version,
+            'ProfileType' => 'Constrainable',
+        ]));
+        $root->appendChild(withAttributes($document->createElement('MetaData'), [
+            'Name' => 'ITI',
+            'OrgName' => 'IHE',
+            'Version' => $hl7Version,
+            'Status' => 'DRAFT',
+            'Topics' => "confsig-IHE-{$hl7Version}-profile-accNE_accAL-Deferred",
+        ]));
+        $root->appendChild($document->createElement('ImpNote'))->appendChild($document->createTextNode($description));
+        $root->appendChild($document->createElement('UseCase'));
+        $root->appendChild($document->createElement('Encodings'))->appendChild($document->createElement('Encoding'))->appendChild($document->createTextNode('ER7'));
+        $root->appendChild(withAttributes($document->createElement('DynamicDef'), [
+            'AccAck' => 'NE',
+            'AppAck' => 'AL',
+            'MsgAckMode' => 'Deferred',
+        ]));
+
+        $staticDef = withAttributes($document->createElement('HL7v2xStaticDef'), [
+            'MsgType' => $type,
+            'EventType' => $event,
+            'MsgStructID' => $structureName,
+            'EventDesc' => $description,
+            'Role' => 'Sender',
+        ]);
+        $root->appendChild($staticDef);
+        $staticDef->appendChild(withAttributes($document->createElement('MetaData'), [
+            'Name' => 'ITI',
+            'OrgName' => 'IHE',
+            'Version' => $hl7Version,
+            'Status' => 'DRAFT',
+            'Topics' => "confsig-IHE-{$hl7Version}-static-{$type}-{$event}-null-{$structureName}-{$hl7Version}-DRAFT-Sender",
+        ]));
+
+        $writer->addElements($document, $staticDef, $structure, $structureName, $where);
+
+        $filename = "{$xmlDir}/{$type}-{$event}-{$structureName}.xml";
+
+        if ($xsd !== null) {
+            libxml_use_internal_errors(true);
+
+            if (!$document->schemaValidate($xsd)) {
+                $error = libxml_get_errors()[0] ?? null;
+                throw new RuntimeException("{$filename}: " . ($error === null ? 'invalid' : trim($error->message) . " (line {$error->line})"));
+            }
+        }
+
+        if ($document->save($filename) === false) {
+            throw new RuntimeException("Unable to write file: {$filename}");
+        }
+
+        $count++;
+    }
 }
 
-if (!is_dir($outputDir) && !mkdir($outputDir, 0777, true) && !is_dir($outputDir)) {
-    throw new RuntimeException(
-        "Unable to create directory: {$outputDir}"
-    );
-}
-
-if ($inputDir === $outputDir) {
-    throw new RuntimeException(
-        'Input and output directories must be different.'
-    );
-}
-
-// main
-$profilesGen = new HL7xmlProfilesGenerator();
-
-// set input directories
-$profilesGen->setDataTypesFilename($inputDir . "/dataTypes.json");
-$profilesGen->setFieldsFilename($inputDir . "/fields.json");
-$profilesGen->setSegmentsFilename($inputDir . "/segments.json");
-$profilesGen->setStructuresInputDir($inputDir . "/structures");
-$profilesGen->setMessageTypeFilename($inputDir . "/messageType.json");
-$profilesGen->setEventDescFilename($inputDir . "/eventDesc.json");
-
-// set output directory
-$profilesGen->setProfilesOutputDir($outputDir);
-
-// fields constraints (update condition predicates)
-$profilesGen->setFieldsConstraints($fieldsConstr);
-
-// create profile
-$profilesGen->createXmlProfiles($HL7Version, $msgType, $ignoreEvents);
+echo "{$count} XML profiles.\nDone.\n";

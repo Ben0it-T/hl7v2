@@ -13,7 +13,6 @@ build/
 /schemas/hl7*/
 /schemas/json-*-org/
 /schemas/json-*-sun/
-/scripts/07-create-xml-profile.config.php
 /profiles-next/
 
 # Composer
