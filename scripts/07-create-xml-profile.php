@@ -148,7 +148,11 @@ function entryOf(array $profile, string $key, string $where): array
 /**
  * Convert usage and cardinality to the values allowed by the profile schema.
  *
- * B → O, W → X, and a maximum of 0 → 1 (the usage X says the element must not be sent).
+ * HL7MessageProfileSchema.xsd (2002) only allows the usages R, RE, O, C, CE and X, and a Max
+ * that is '*' or a positive integer. The JSON profile keeps the HL7 values, so:
+ * - B (backward compatibility) is written O: the element may still be sent;
+ * - W (withdrawn) is written X: the element must not be sent;
+ * - a maximum of 0 is written 1: the usage X already says the element must not be sent.
  *
  * @param array<mixed> $entry Profile entry with usage, min and max.
  * @param string $where Entry, for the error message.
@@ -163,8 +167,10 @@ function xmlOccurs(array $entry, string $where): array
     $max = stringOf($entry, 'max', $where);
 
     return [
+        // XSD usage enumeration: R, RE, O, C, CE, X.
         'Usage' => ['B' => 'O', 'W' => 'X'][$usage] ?? $usage,
         'Min' => stringOf($entry, 'min', $where),
+        // XSD Max: '*' or xs:positiveInteger, never 0.
         'Max' => $max === '0' ? '1' : $max,
     ];
 }
@@ -285,6 +291,8 @@ final class XmlProfileWriter
             + xmlOccurs($occurrence, $id)
             + ['Datatype' => $dataType];
 
+        // Length (xs:positiveInteger) and ItemNo (\d{5} or Z\d{4}) are optional in the profile
+        // schema: an empty value would not be valid, so the attribute is not written.
         if ($length !== '') {
             $attributes['Length'] = $length;
         }
@@ -357,12 +365,14 @@ final class XmlProfileWriter
         $table = stringOf($component, 'table', "dataTypes.json: {$id}");
         $length = stringOf($component, 'maxLength', "dataTypes.json: {$id}");
 
+        // The profile schema has no Min or Max on a component: only the usage is written.
         $attributes = [
             'Name' => stringOf($component, 'longName', "dataTypes.json: {$id}"),
             'Usage' => xmlOccurs($component, "dataTypes.json: {$id}")['Usage'],
             'Datatype' => $dataType,
         ];
 
+        // Length is optional and must be a positive integer (empty in 2.3 to 2.4 for components).
         if ($length !== '') {
             $attributes['Length'] = $length;
         }
@@ -423,7 +433,9 @@ foreach ($messageType as $type => $events) {
         $document->formatOutput = true;
         $document->appendChild($document->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="http://gazelle.ihe.net/xsl/mp2htm.xsl"'));
 
-        // Header values follow the Gazelle profiles (Q169).
+        // Header values follow the Gazelle profiles.
+        // The xsi attributes are set with setAttributeNS(): set as plain attributes, they are not
+        // namespace declarations in memory, and schemaValidate() rejects xmlns:xsi.
         $root = $document->createElement('HL7v2xConformanceProfile');
         $root->setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
         $root->setAttributeNS('http://www.w3.org/2001/XMLSchema-instance', 'xsi:noNamespaceSchemaLocation', 'http://gazelle.ihe.net/xsd/HL7MessageProfileSchema.xsd');
@@ -467,6 +479,8 @@ foreach ($messageType as $type => $events) {
 
         $filename = "{$xmlDir}/{$type}-{$event}-{$structureName}.xml";
 
+        // The document is validated in memory, before it is written: an XML profile that does
+        // not follow the profile schema is never saved.
         if ($xsd !== null) {
             libxml_use_internal_errors(true);
 
