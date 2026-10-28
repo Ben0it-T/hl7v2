@@ -1,0 +1,11 @@
+{
+    "deviations": [
+        {
+            "messages": ["ADT^A05", "ADT^A14"],
+            "path": "ADT_A05/PDA",
+            "kind": "segmentAdded",
+            "source": "PAMFR 5.2",
+            "comment": "PDA is in the ADT_A05 tables of PAMFR 5.2 and IHE ITI TF-2 (3.31.7.7.2 for A05, 3.31.7.13.2 for A14), but not in HL7 2.5 ADT_A05."
+        }
+    ]
+}

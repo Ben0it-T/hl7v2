@@ -1,0 +1,2223 @@
+{
+    "documents": {
+        "PAMFR": "IHE PAM FR 2.11.2 (IHE France, PAM National Extension)",
+        "DTFR": "IHE ITI TF-2 Appendix N.FR 1.8.2 (IHE France, Constraints on common HL7 v2.5 data types for ITI Integration Profiles in France)",
+        "ITI": "IHE ITI TF-2 Revision 20.0 (IHE International, IT Infrastructure Technical Framework Volume 2)"
+    },
+    "groups": {
+        "iti30Zsegments": {
+            "source": "PAMFR 4.3",
+            "comment": "PAMFR 4.3 adds ZFA, ZFD and ZFS to ITI-30 but does not say where. They are inserted after PV2, as in the ADT_A05 table of PAMFR 5.2. Usage O (CP-ITI-FR-2016-126 and CP-ITI-FR-2016-127).",
+            "elements": [
+                {
+                    "segment": "ZFA",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFD",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFS",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded"
+                }
+            ]
+        },
+        "iti31Zsegments": {
+            "source": "PAMFR 5.2",
+            "comment": "Order and placement after PV2 from the ADT_A05 table of PAMFR 5.2; usage O except ZBE (CP-ITI-FR-2016-126 and CP-ITI-FR-2016-127). Messages: ZBE in A01, A02, A03, A04, A05, A06, A07, A11, A12, A13, A14, A15, A16, A21, A22, A25, A26, A27, A38, A52, A53, A54, A55 and Z99 (ITI 3.31.5.6; the Historic Movement option is required in France, PAMFR 2.2); ITI 3.31.5.6 explicitly excludes this option for the Temporary Patient Transfers Tracking messages A09, A10, A32 and A33. ZFA, ZFP and ZFD in A01, A04, A05, A14 and Z99 (PAMFR 6.14, 6.15, 6.18); ZFV in A01, A02, A03, A04, A05, A14, A21 and Z99 (PAMFR 6.16); ZFM in A01, A02, A03, A04, A05, A06, A14, A21, A22 and Z99 (PAMFR 6.17); ZFS in A01, A04, A05, A14 and Z99, like ZFA and ZFD (PAMFR 6.19 does not list the ITI-31 messages; ZFS is in the ADT_A05 table of PAMFR 5.2).",
+            "elements": [
+                {
+                    "segment": "ZBE",
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFA",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFP",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFV",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFM",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFD",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                },
+                {
+                    "segment": "ZFS",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded"
+                }
+            ]
+        },
+        "pda": {
+            "source": "PAMFR 5.2",
+            "comment": "PDA is in the ADT_A05 tables of IHE ITI TF-2 and PAMFR 5.2, but not in HL7 2.5 ADT_A05: accepted deviation.",
+            "elements": [
+                {
+                    "segment": "PDA",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1"
+                }
+            ]
+        }
+    },
+    "dataTypes": {
+        "CX": {
+            "components": {
+                "CX.4": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.1"
+                },
+                "CX.5": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.1"
+                },
+                "CX.7": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.1"
+                }
+            }
+        },
+        "CX.1": {
+            "maxLength": "128",
+            "source": "DTFR N.1"
+        },
+        "EI": {
+            "components": {
+                "EI.1": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI N.2"
+                },
+                "EI.2": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI N.2"
+                }
+            }
+        },
+        "EI.1": {
+            "maxLength": "128",
+            "source": "DTFR N.2",
+            "comment": "French national extension (DTFR N.2). IHE ITI TF-2 Appendix N.2 constrains EI-1 to 16 characters (revisions 13.0 to 20.0) and allows national extensions up to 199; DTFR N.2 states 128 \"as for IHE international\"."
+        },
+        "HD": {
+            "components": {
+                "HD.1": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.3"
+                }
+            }
+        },
+        "HD.3": {
+            "comment": "Table 0301 (Universal ID Type), as in the text of DTFR N.3, HL7 2.5 and IHE ITI TF-2 Appendix N.3. The table of DTFR N.3 gives 203, a leftover of CP-ITI-FR-2008-007b."
+        },
+        "MOP.1": {
+            "Table": "HL70146",
+            "source": "PAMFR 6.20.5",
+            "comment": "Table 0146 replaces table 0148 for IN3-5.1 (CP-ITI-FR-2015-113). The constraint is on the datatype, so it also applies to RMC.4.1 (IN2-28). PAMFR 6.20.1 still refers to table 0148."
+        },
+        "TS": {
+            "components": {
+                "TS.2": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.5"
+                }
+            }
+        },
+        "TS.1": {
+            "comment": "TS.1 stays R [1..1], as in HL7 2.5 and IHE ITI TF-2 Appendix N.5. The table of DTFR N.5 gives R [0..1]: R implies a minimum of 1."
+        },
+        "XAD": {
+            "components": {
+                "XAD.12": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.6"
+                }
+            }
+        },
+        "XAD.7": {
+            "comment": "Valid values in France are a subset of HL7 table 0190 (Address Type), listed in DTFR N.6."
+        },
+        "XAD.9": {
+            "comment": "Required when the INS is sent with a qualified identity: condition on the message content, evaluated at validation time (DTFR N.6)."
+        },
+        "SAD": {
+            "components": {
+                "SAD.2": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.7"
+                },
+                "SAD.3": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.7"
+                }
+            }
+        },
+        "XCN": {
+            "components": {
+                "XCN.1": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.8"
+                },
+                "XCN.2": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.8"
+                },
+                "XCN.3": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.8"
+                },
+                "XCN.5": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.7": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.8": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.9": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.8"
+                },
+                "XCN.10": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.8",
+                    "comment": "Condition: required as soon as at least one of XCN-2 and XCN-3 is valued (DTFR N.8). Evaluated at validation time."
+                },
+                "XCN.11": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.12": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.13": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.8"
+                },
+                "XCN.15": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.16": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.17": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.18": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.19": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.20": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.21": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.22": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                },
+                "XCN.23": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.8"
+                }
+            }
+        },
+        "XCN.1": {
+            "maxLength": "199",
+            "source": "DTFR N.8"
+        },
+        "XON": {
+            "components": {
+                "XON.1": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.9"
+                },
+                "XON.2": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.9"
+                },
+                "XON.3": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.9"
+                },
+                "XON.4": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.9"
+                },
+                "XON.5": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.9"
+                },
+                "XON.6": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.9"
+                },
+                "XON.7": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.9"
+                },
+                "XON.8": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.9",
+                    "comment": "DTFR N.9 table gives X [0..1]; X implies a maximum of 0."
+                },
+                "XON.9": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.9"
+                },
+                "XON.10": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.9"
+                }
+            }
+        },
+        "XON.10": {
+            "maxLength": "64",
+            "source": "DTFR N.9"
+        },
+        "XPN": {
+            "components": {
+                "XPN.1": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.10",
+                    "comment": "DTFR N.10 table gives C [0..1]; its text says \"required if known\" (RE), as in IHE ITI TF-2 Appendix N.6 (RE). The family name of birth (type L) is required when the INS is sent with a qualified identity."
+                },
+                "XPN.2": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.10",
+                    "comment": "Condition: for an identity created or modified by a call to the INSi teleservice, the first given name of the list returned by the teleservice must be extracted; the component is then required (DTFR N.10)."
+                },
+                "XPN.3": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.10"
+                },
+                "XPN.4": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.6": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.7": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.10"
+                },
+                "XPN.8": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.9": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.10": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.11": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.12": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.13": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                },
+                "XPN.14": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.10"
+                }
+            }
+        },
+        "XPN.2": {
+            "maxLength": "194",
+            "source": "DTFR N.10"
+        },
+        "XPN.3": {
+            "maxLength": "194",
+            "source": "DTFR N.10"
+        },
+        "XTN": {
+            "components": {
+                "XTN.1": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11"
+                },
+                "XTN.4": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "DTFR N.11",
+                    "comment": "Condition: valued with an email address when XTN-2 is NET (network email address) (DTFR N.11). Evaluated at validation time."
+                },
+                "XTN.5": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11",
+                    "comment": "DTFR N.11 table gives X [0..1]; X implies a maximum of 0."
+                },
+                "XTN.6": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11"
+                },
+                "XTN.7": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11"
+                },
+                "XTN.8": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11"
+                },
+                "XTN.10": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11"
+                },
+                "XTN.11": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "DTFR N.11"
+                }
+            }
+        },
+        "XTN.12": {
+            "comment": "Condition: valued when XTN-2 is not NET or is empty (DTFR N.11). Contains the full telephone number, digits only with no separator, e.g. 0148587200 or +33607080910. DTFR N.11 gives +3360708091, which has 8 digits after +33 instead of 9. Evaluated at validation time."
+        },
+        "VID": {
+            "components": {
+                "VID.1": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.5"
+                },
+                "VID.2": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.5"
+                },
+                "VID.3": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.5"
+                }
+            },
+            "comment": "VID is only used in MSH-12: version of HL7 (2.5), internationalization code (FRA) and version of the profile (2.11)."
+        }
+    },
+    "segments": {
+        "ACC": {
+            "fields": {
+                "ACC.1": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.12"
+                },
+                "ACC.2": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.12"
+                },
+                "ACC.4": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.12"
+                }
+            }
+        },
+        "AL1": {
+            "fields": {
+                "AL1.6": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.8"
+                }
+            }
+        },
+        "EVN": {
+            "fields": {
+                "EVN.1": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.2"
+                },
+                "EVN.3": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.2",
+                    "comment": "C everywhere. IHE ITI TF-2 3.30.5.2: shall be populated in A15 and A26; the planned date/time of other planned events (A14, A16, A25, A27) is given in PV2 and is recommended to be copied to EVN-3. PAMFR 6.4: in a pending event, an empty EVN-3 means an expected event (taking place) rather than a planned one; EVN-3 therefore stays C, also in A15 and A26."
+                },
+                "EVN.6": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.2",
+                    "comment": "IHE ITI TF-2 3.30.5.2: not populated in pending events and their cancellations (X in A14, A15, A16, A25, A26, A27, set per message); populated with the real date/time in effective events (inserts and updates), checked at validation time."
+                },
+                "EVN.7": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.2"
+                }
+            }
+        },
+        "GT1": {
+            "fields": {
+                "GT1.4": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.8": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.9": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.29": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.33": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.34": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.35": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.38": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.39": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.40": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.41": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.42": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.44": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.51": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.52": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                },
+                "GT1.55": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.20.3"
+                }
+            }
+        },
+        "IN1": {
+            "fields": {
+                "IN1.3": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.12": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.13": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.15": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.16": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.17": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.19": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.20": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.31": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.35": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.36": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.45": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                },
+                "IN1.49": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                }
+            }
+        },
+        "IN2": {
+            "fields": {
+                "IN2.63": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                }
+            }
+        },
+        "IN3": {
+            "fields": {
+                "IN3.5": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.20.1"
+                }
+            }
+        },
+        "MRG": {
+            "fields": {
+                "MRG.2": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.5"
+                },
+                "MRG.4": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.5"
+                },
+                "MRG.5": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.5"
+                },
+                "MRG.6": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.5"
+                }
+            }
+        },
+        "MSH": {
+            "fields": {
+                "MSH.3": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.4": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.5": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.6": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.8": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.14": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.17": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1",
+                    "comment": "IHE ITI TF-2 3.30.5.1 gives RE [1..1]; RE implies a minimum of 0."
+                },
+                "MSH.18": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.19": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.20": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.1"
+                },
+                "MSH.21": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.5",
+                    "comment": "The message profile identifier must be sent (PAMFR 6.5); IHE ITI TF-2 3.30.5.1 gives RE [0..*]. One repetition is expected to be 2.11^IHE_FRANCE-2.11-PAM: checked at validation time."
+                }
+            }
+        },
+        "NK1": {
+            "fields": {
+                "NK1.25": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.3"
+                },
+                "NK1.28": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.3"
+                },
+                "NK1.33": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.9"
+                },
+                "NK1.35": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.3"
+                }
+            }
+        },
+        "OBX": {
+            "fields": {
+                "OBX.1": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.21"
+                },
+                "OBX.2": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.21"
+                },
+                "OBX.5": {
+                    "usage": "C",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.21"
+                },
+                "OBX.6": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.21"
+                },
+                "OBX.8": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.7"
+                },
+                "OBX.10": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.7"
+                },
+                "OBX.14": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.21"
+                },
+                "OBX.16": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.21"
+                },
+                "OBX.17": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.7"
+                },
+                "OBX.18": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.7"
+                }
+            }
+        },
+        "PID": {
+            "fields": {
+                "PID.2": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.4": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.7": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6",
+                    "comment": "C in PAMFR 6.6 (CE in IHE ITI TF-2 3.30.5.3). Conditions, checked at validation time: required if known in A28, A31, A01, A04 (ITI 3.30.5.3), optional in the other messages; required when the INS is sent with a qualified identity (PAMFR 6.6.4)."
+                },
+                "PID.8": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6",
+                    "comment": "C in PAMFR 6.6 (CE [1..1] in IHE ITI TF-2 3.30.5.3). Conditions, checked at validation time: required if known in A28, A31, A01, A04 (ITI 3.30.5.3), optional in the other messages; required when the INS is sent with a qualified identity (PAMFR 6.6.5)."
+                },
+                "PID.9": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.10": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.3"
+                },
+                "PID.11": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.6",
+                    "comment": "C in PAMFR 6.6 (CE in IHE ITI TF-2 3.30.5.3). The ITI 3.30.5.3 condition depends only on the message: RE in A28, A31, A01, A04 and O in the other ADT messages, set per message."
+                },
+                "PID.12": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.17": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.3"
+                },
+                "PID.18": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6",
+                    "comment": "C in PAMFR 6.6; required in the ITI-31 messages (PAMFR 6.6.9), set per message. IHE ITI TF-2 3.30.5.3: PID-18 or PV1-19 is valued in ITI-31."
+                },
+                "PID.19": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.20": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.22": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.3"
+                },
+                "PID.25": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.28": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.31": {
+                    "usage": "CE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.32": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.6"
+                },
+                "PID.33": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6",
+                    "comment": "C in PAMFR 6.6 (CE in IHE ITI TF-2 3.30.5.3). RE in A28, A31, A01, A04, set per message (ITI 3.30.5.3); ITI gives no value for the other messages, which keep C. In A31, equal to EVN-6 (checked at validation time)."
+                }
+            }
+        },
+        "PV1": {
+            "fields": {
+                "PV1.3": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.5": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.6": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.9": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.11": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.19": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.40": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.42": {
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.45": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.10"
+                },
+                "PV1.52": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.10"
+                }
+            }
+        },
+        "PV2": {
+            "fields": {
+                "PV2.3": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "PAMFR 6.11",
+                    "comment": "PAMFR 6.11 table gives X [0..1]; X implies a maximum of 0."
+                },
+                "PV2.18": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.11"
+                }
+            }
+        },
+        "ROL": {
+            "fields": {
+                "ROL.9": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.8"
+                },
+                "ROL.11": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.8"
+                }
+            }
+        }
+    },
+    "fields": {
+        "ACC.4": {
+            "Table": "",
+            "source": "PAMFR 6.12"
+        },
+        "IN1.2": {
+            "Table": "HL70068",
+            "source": "PAMFR 6.20.4",
+            "comment": "Table 0068 (Guarantor Type) replaces table 0072 (CP-ITI-FR-2015-113)."
+        },
+        "PV1.9": {
+            "Table": "",
+            "source": "PAMFR 6.10"
+        },
+        "PV1.40": {
+            "Table": "",
+            "source": "PAMFR 6.10"
+        },
+        "PV1.52": {
+            "Table": "",
+            "source": "PAMFR 6.10"
+        },
+        "IN1.35": {
+            "maxLength": "20",
+            "source": "PAMFR 6.20.1"
+        },
+        "NK1.11": {
+            "comment": "JCC.1 uses table 0327 and JCC.2 table 0328 (HL7 2.5), already set on the JCC components."
+        }
+    },
+    "rules": [
+        {
+            "messages": [
+                "ADT^A14",
+                "ADT^A15",
+                "ADT^A16",
+                "ADT^A25",
+                "ADT^A26",
+                "ADT^A27"
+            ],
+            "fields": {
+                "EVN.6": {
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.5.2",
+                    "comment": "EVN-6 shall not be populated in messages communicating pending events (A14, A15, A16) and their cancellations (A27, A26, A25) (ITI 3.30.5.2)."
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A02",
+                "ADT^A03",
+                "ADT^A05",
+                "ADT^A06",
+                "ADT^A07",
+                "ADT^A09",
+                "ADT^A10",
+                "ADT^A11",
+                "ADT^A12",
+                "ADT^A13",
+                "ADT^A14",
+                "ADT^A15",
+                "ADT^A16",
+                "ADT^A21",
+                "ADT^A22",
+                "ADT^A25",
+                "ADT^A26",
+                "ADT^A27",
+                "ADT^A32",
+                "ADT^A33",
+                "ADT^A38",
+                "ADT^A40",
+                "ADT^A44",
+                "ADT^A47",
+                "ADT^A49",
+                "ADT^A52",
+                "ADT^A53",
+                "ADT^A54",
+                "ADT^A55",
+                "ADT^Z99"
+            ],
+            "fields": {
+                "PID.11": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "ITI 3.30.5.3"
+                },
+                "PID.31": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.3",
+                    "comment": "Optional outside A28, A31, A01, A04 (ITI 3.30.5.3: \"In all other messages, it is optional\")."
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A01",
+                "ADT^A04",
+                "ADT^A28",
+                "ADT^A31"
+            ],
+            "fields": {
+                "PID.11": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "ITI 3.30.5.3"
+                },
+                "PID.31": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.3",
+                    "comment": "Required if known in A28, A31, A01, A04 (ITI 3.30.5.3); CE in PAMFR 6.6 (CP-ITI-FR-2015-110: the field cannot be forbidden)."
+                },
+                "PID.33": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.3"
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A01",
+                "ADT^A02",
+                "ADT^A03",
+                "ADT^A04",
+                "ADT^A05",
+                "ADT^A06",
+                "ADT^A07",
+                "ADT^A09",
+                "ADT^A10",
+                "ADT^A11",
+                "ADT^A12",
+                "ADT^A13",
+                "ADT^A14",
+                "ADT^A15",
+                "ADT^A16",
+                "ADT^A21",
+                "ADT^A22",
+                "ADT^A25",
+                "ADT^A26",
+                "ADT^A27",
+                "ADT^A32",
+                "ADT^A33",
+                "ADT^A38",
+                "ADT^A44",
+                "ADT^A49",
+                "ADT^A52",
+                "ADT^A53",
+                "ADT^A54",
+                "ADT^A55",
+                "ADT^Z99"
+            ],
+            "fields": {
+                "PID.18": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.6.9",
+                    "comment": "PID-18 (account number, NDA) is required in France in the context of ITI-31 (PAMFR 6.6.9); IHE ITI TF-2 3.30.5.3 only requires PID-18 or PV1-19."
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A28",
+                "ADT^A31"
+            ],
+            "fields": {
+                "PV1": {
+                    "default": {
+                        "usage": "X",
+                        "minOccurs": "0",
+                        "maxOccurs": "0",
+                        "source": "ITI 3.30.5.4",
+                        "comment": "Pseudo-PV1: in ITI-30 only PV1-2 (Patient Class) is valued, with value N (checked at validation time)."
+                    },
+                    "except": [
+                        "PV1.2"
+                    ]
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A01",
+                "ADT^A03",
+                "ADT^A04",
+                "ADT^A05",
+                "ADT^A06",
+                "ADT^A07",
+                "ADT^A09",
+                "ADT^A10",
+                "ADT^A11",
+                "ADT^A13",
+                "ADT^A14",
+                "ADT^A15",
+                "ADT^A16",
+                "ADT^A21",
+                "ADT^A22",
+                "ADT^A25",
+                "ADT^A26",
+                "ADT^A27",
+                "ADT^A32",
+                "ADT^A33",
+                "ADT^A38",
+                "ADT^A52",
+                "ADT^A53",
+                "ADT^A54",
+                "ADT^A55",
+                "ADT^Z99"
+            ],
+            "fields": {
+                "PV1.3": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.4"
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A02",
+                "ADT^A12"
+            ],
+            "fields": {
+                "PV1.3": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.4"
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A01",
+                "ADT^A03",
+                "ADT^A04",
+                "ADT^A05",
+                "ADT^A06",
+                "ADT^A07",
+                "ADT^A09",
+                "ADT^A10",
+                "ADT^A11",
+                "ADT^A12",
+                "ADT^A13",
+                "ADT^A14",
+                "ADT^A15",
+                "ADT^A16",
+                "ADT^A21",
+                "ADT^A22",
+                "ADT^A25",
+                "ADT^A26",
+                "ADT^A27",
+                "ADT^A32",
+                "ADT^A33",
+                "ADT^A38",
+                "ADT^A52",
+                "ADT^A53",
+                "ADT^A54",
+                "ADT^A55",
+                "ADT^Z99"
+            ],
+            "fields": {
+                "PV1.6": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.4"
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A01",
+                "ADT^A02",
+                "ADT^A03",
+                "ADT^A04",
+                "ADT^A05",
+                "ADT^A06",
+                "ADT^A07",
+                "ADT^A09",
+                "ADT^A10",
+                "ADT^A11",
+                "ADT^A12",
+                "ADT^A13",
+                "ADT^A14",
+                "ADT^A16",
+                "ADT^A21",
+                "ADT^A22",
+                "ADT^A25",
+                "ADT^A27",
+                "ADT^A32",
+                "ADT^A33",
+                "ADT^A38",
+                "ADT^A52",
+                "ADT^A53",
+                "ADT^A54",
+                "ADT^A55",
+                "ADT^Z99"
+            ],
+            "fields": {
+                "PV1.42": {
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.4"
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A15",
+                "ADT^A26"
+            ],
+            "fields": {
+                "PV1.42": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.4"
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A04",
+                "ADT^A07"
+            ],
+            "fields": {
+                "PV2.7": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.11.3",
+                    "comment": "The coordinated care indicator is required by the regulation in A04 and A07, i.e. for outpatients (PAMFR 6.11.3); RE in the PAMFR 6.20.1 table. In Z99, it depends on ZBE-6 (checked at validation time)."
+                }
+            }
+        },
+        {
+            "messages": [
+                "ADT^A01",
+                "ADT^A14"
+            ],
+            "fields": {
+                "PV2.38": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.11.10"
+                }
+            }
+        }
+    ],
+    "messages": {
+        "ADT^A01": {
+            "structure": [
+                {
+                    "update": "ADT_A01/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.1.2"
+                },
+                {
+                    "update": "ADT_A01/ROL[1]",
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.8.6",
+                    "comment": "The ROL segment following PID/PD1 carries the attending physician (ROL-3 = ODRP); it is required in A01 and A04 when the attending physician is known."
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "after": "ADT_A01/PV2"
+                }
+            ]
+        },
+        "ADT^A02": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE",
+                        "ZFV",
+                        "ZFM"
+                    ],
+                    "after": "ADT_A02/PV2"
+                }
+            ],
+            "fields": {
+                "PV1.6": {
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.5.4"
+                }
+            }
+        },
+        "ADT^A03": {
+            "structure": [
+                {
+                    "update": "ADT_A03/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.4.2"
+                },
+                {
+                    "update": "ADT_A03/PV2",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.31.7.4.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE",
+                        "ZFV",
+                        "ZFM"
+                    ],
+                    "after": "ADT_A03/PV2"
+                }
+            ]
+        },
+        "ADT^A04": {
+            "structure": [
+                {
+                    "update": "ADT_A01/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.3.2"
+                },
+                {
+                    "update": "ADT_A01/ROL[1]",
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.8.6",
+                    "comment": "The ROL segment following PID/PD1 carries the attending physician (ROL-3 = ODRP); it is required in A01 and A04 when the attending physician is known."
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "after": "ADT_A01/PV2"
+                }
+            ]
+        },
+        "ADT^A05": {
+            "structure": [
+                {
+                    "update": "ADT_A05/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.7.2"
+                },
+                {
+                    "update": "ADT_A05/PV2",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 5.2",
+                    "comment": "IHE ITI TF-2 3.31.7.7.2 gives PV2 X; the ADT_A05 table of PAMFR 5.2 gives PV2 O [0..1]."
+                },
+                {
+                    "insert": "pda",
+                    "after": "ADT_A05/UB2",
+                    "source": "ITI 3.31.7.7.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "after": "ADT_A05/PV2"
+                }
+            ]
+        },
+        "ADT^A06": {
+            "structure": [
+                {
+                    "update": "ADT_A06/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.9.2"
+                },
+                {
+                    "update": "ADT_A06/PV2",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.31.7.9.2"
+                },
+                {
+                    "update": "ADT_A06/MRG",
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.9.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE",
+                        "ZFM"
+                    ],
+                    "after": "ADT_A06/PV2"
+                }
+            ]
+        },
+        "ADT^A07": {
+            "structure": [
+                {
+                    "update": "ADT_A06/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.10.2"
+                },
+                {
+                    "update": "ADT_A06/PV2",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.11.3",
+                    "comment": "IHE ITI TF-2 3.31.7.10.2 gives PV2 X; PAMFR 6.11.3 requires the coordinated care indicator PV2-7 in A07, so PV2 is allowed."
+                },
+                {
+                    "update": "ADT_A06/MRG",
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.10.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A06/PV2"
+                }
+            ]
+        },
+        "ADT^A10": {
+            "structure": [
+                {
+                    "update": "ADT_A09/DG1",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.31.7.28.2"
+                }
+            ]
+        },
+        "ADT^A11": {
+            "structure": [
+                {
+                    "update": "ADT_A09/DG1",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.31.7.2.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A09/PV2"
+                }
+            ]
+        },
+        "ADT^A12": {
+            "structure": [
+                {
+                    "update": "ADT_A12/DG1",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.31.7.12.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A12/PV2"
+                }
+            ]
+        },
+        "ADT^A13": {
+            "structure": [
+                {
+                    "update": "ADT_A01/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.5.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A01/PV2"
+                }
+            ]
+        },
+        "ADT^A14": {
+            "structure": [
+                {
+                    "update": "ADT_A05/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.13.2"
+                },
+                {
+                    "update": "ADT_A05/PV2",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.11.10",
+                    "comment": "IHE ITI TF-2 3.31.7.13.2 gives PV2 X; PAMFR 6.11.10 requires PV2-38 if known in A14, so PV2 is allowed. IHE ITI TF-2 3.30.5.2 (EVN-3) also says that Pending Admit gives the planned date/time in a PV2 field."
+                },
+                {
+                    "insert": "pda",
+                    "after": "ADT_A05/UB2",
+                    "source": "ITI 3.31.7.13.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "after": "ADT_A05/PV2"
+                }
+            ]
+        },
+        "ADT^A15": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A15/PV2"
+                }
+            ]
+        },
+        "ADT^A16": {
+            "structure": [
+                {
+                    "update": "ADT_A16/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.17.2"
+                },
+                {
+                    "update": "ADT_A16/PV2",
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.17.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A16/PV2"
+                }
+            ]
+        },
+        "ADT^A21": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE",
+                        "ZFV",
+                        "ZFM"
+                    ],
+                    "after": "ADT_A21/PV2"
+                }
+            ],
+            "fields": {
+                "PV2.47": {
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "PAMFR 6.11.11",
+                    "comment": "Expected return date of the leave of absence, sent with A21 (PAMFR 6.11.11); C in the PAMFR 6.11 table, no value given for the other messages."
+                }
+            }
+        },
+        "ADT^A22": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE",
+                        "ZFM"
+                    ],
+                    "after": "ADT_A21/PV2"
+                }
+            ]
+        },
+        "ADT^A25": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A21/PV2"
+                }
+            ]
+        },
+        "ADT^A26": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A21/PV2"
+                }
+            ]
+        },
+        "ADT^A27": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A21/PV2"
+                }
+            ]
+        },
+        "ADT^A28": {
+            "structure": [
+                {
+                    "update": "ADT_A05/NK1",
+                    "usage": "RE",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.9",
+                    "comment": "NK1 is RE in A28, A01, A04 and Z99 (PAMFR 6.9). It is also sent in A31 and A05 (PAMFR 6.9.2) with usage O; a NK1 for a trusted person (NK1-7 = K) is only sent in ITI-31."
+                },
+                {
+                    "update": "ADT_A05/PV2",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.6.2.2"
+                },
+                {
+                    "update": "ADT_A05/ROL[2]",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.6.2.2"
+                },
+                {
+                    "update": "ADT_A05/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.6.2.2"
+                },
+                {
+                    "insert": "iti30Zsegments",
+                    "after": "ADT_A05/PV2"
+                }
+            ]
+        },
+        "ADT^A31": {
+            "structure": [
+                {
+                    "update": "ADT_A05/PV2",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.6.3.2"
+                },
+                {
+                    "update": "ADT_A05/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.6.3.2"
+                },
+                {
+                    "insert": "iti30Zsegments",
+                    "after": "ADT_A05/PV2"
+                }
+            ]
+        },
+        "ADT^A38": {
+            "structure": [
+                {
+                    "update": "ADT_A38/DRG",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "ITI 3.31.7.8.2",
+                    "comment": "IHE ITI TF-2 3.31.7.8.2 gives DRG O [0..*]; HL7 2.5 ADT_A38 gives [0..1]."
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A38/PV2"
+                }
+            ]
+        },
+        "ADT^A40": {
+            "structure": [
+                {
+                    "update": "ADT_A39/PATIENT",
+                    "usage": "R",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.30.6.4.2",
+                    "comment": "Only one merge operation per message."
+                },
+                {
+                    "update": "ADT_A39/PATIENT/PV1",
+                    "usage": "X",
+                    "minOccurs": "0",
+                    "maxOccurs": "0",
+                    "source": "ITI 3.30.6.4.2"
+                }
+            ]
+        },
+        "ADT^A47": {
+            "structure": [
+                {
+                    "replace": "ADT_A30",
+                    "source": "ITI 3.30.6.5.2",
+                    "comment": "IHE ITI TF-2 puts PID, PD1 and MRG in a PATIENT group [1..1]; HL7 2.5 ADT_A30 has no group. The ER7 message is the same.",
+                    "with": {
+                        "ADT_A30": {
+                            "elements": [
+                                {
+                                    "segment": "MSH",
+                                    "usage": "R",
+                                    "minOccurs": "1",
+                                    "maxOccurs": "1"
+                                },
+                                {
+                                    "segment": "SFT",
+                                    "usage": "O",
+                                    "minOccurs": "0",
+                                    "maxOccurs": "unbounded"
+                                },
+                                {
+                                    "segment": "EVN",
+                                    "usage": "R",
+                                    "minOccurs": "1",
+                                    "maxOccurs": "1"
+                                },
+                                {
+                                    "group": "PATIENT",
+                                    "usage": "R",
+                                    "minOccurs": "1",
+                                    "maxOccurs": "1"
+                                }
+                            ]
+                        },
+                        "PATIENT": {
+                            "elements": [
+                                {
+                                    "segment": "PID",
+                                    "usage": "R",
+                                    "minOccurs": "1",
+                                    "maxOccurs": "1"
+                                },
+                                {
+                                    "segment": "PD1",
+                                    "usage": "O",
+                                    "minOccurs": "0",
+                                    "maxOccurs": "1"
+                                },
+                                {
+                                    "segment": "MRG",
+                                    "usage": "R",
+                                    "minOccurs": "1",
+                                    "maxOccurs": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "ADT^A52": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A52/PV2"
+                }
+            ]
+        },
+        "ADT^A53": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A52/PV2"
+                }
+            ]
+        },
+        "ADT^A54": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A54/PV2"
+                }
+            ]
+        },
+        "ADT^A55": {
+            "structure": [
+                {
+                    "insert": "iti31Zsegments",
+                    "only": [
+                        "ZBE"
+                    ],
+                    "after": "ADT_A52/PV2"
+                }
+            ]
+        },
+        "ADT^Z99": {
+            "structure": [
+                {
+                    "update": "ADT_A01/INSURANCE/IN3",
+                    "usage": "O",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "source": "ITI 3.31.7.30.2"
+                },
+                {
+                    "insert": "iti31Zsegments",
+                    "after": "ADT_A01/PV2"
+                },
+                {
+                    "update": "ADT_A01/NK1",
+                    "usage": "C",
+                    "minOccurs": "0",
+                    "maxOccurs": "unbounded",
+                    "source": "PAMFR 6.9",
+                    "comment": "Condition: RE when the corrected movement was created by A01 or A04 (ZBE-6), O otherwise. Evaluated at validation time."
+                }
+            ],
+            "comment": "ROL (after PID/PD1) and PV2 keep usage O (IHE ITI TF-2 3.31.7.30.2); NK1 is C (PAMFR 6.9). Their use depends on the original trigger event of the corrected movement (ZBE-6), checked at validation time: ROL is required if known when ZBE-6 is A01 or A04 (PAMFR 6.8.6); NK1 is required if known when ZBE-6 is A01 or A04 (PAMFR 6.9); PV2 follows its usage in the message of the original event (X for A03, A06; RE for A16; O for A05, A07, A14)."
+        }
+    }
+}

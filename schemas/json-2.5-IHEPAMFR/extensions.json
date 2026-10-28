@@ -1,5 +1,5 @@
 {
-    "source": "IHE PAM FR 2.11.2 (IHE France, PAM National Extension)",
+    "source": "PAMFR",
     "segments": {
         "ZBE": {
             "fields": [
