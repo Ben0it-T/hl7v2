@@ -13,7 +13,6 @@ build/
 /schemas/hl7*/
 /schemas/json-*-org/
 /schemas/json-*-sun/
-/scripts/06-create-json-profile.config.php
 /scripts/07-create-xml-profile.config.php
 /profiles-next/
 

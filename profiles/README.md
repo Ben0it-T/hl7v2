@@ -2,7 +2,7 @@
 
 A profile directory describes the messages that can be validated for one HL7 version or one derived profile (for example IHE PAM FR). It is a **resolved copy** of a schema directory (`schemas/json-<v>/`), produced by `scripts/06-create-json-profile.php`:
 
-- restricted to the supported messages;
+- restricted to the selected messages, and to the segments, fields and datatypes they use;
 - usages computed;
 - table names normalized (`0010`);
 - keys in camelCase.
@@ -60,11 +60,14 @@ In a derived profile, a value changed or added by its specification has a `sourc
   "hl7Version": "2.5",
   "name": "IHE PAM FR 2.11.2",
   "base": "json-2.5",
-  "generatedFrom": "schemas/json-2.5-IHEPAMFR"
+  "generatedFrom": "schemas/json-2.5-IHEPAMFR",
+  "documents": {
+    "PAMFR": "IHE PAM FR 2.11.2 (IHE France, PAM National Extension)"
+  }
 }
 ```
 
-`base` is `""` for an HL7 profile (not derived).
+`name`, `hl7Version` and `base` come from `schemas/json-<v>/profile.json`. `base` is `""` for an HL7 profile (not derived). `documents` lists the documents cited by the `source` keys (`{}` for an HL7 profile).
 
 ## messageType.json
 

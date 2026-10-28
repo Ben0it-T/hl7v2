@@ -73,28 +73,37 @@ php 05-derive-schemas.php \
 
 ## Generate profiles
 
-Scripts 06 and 07 use dedicated configuration files instead of command-line parameters.
+Script 07 uses a dedicated configuration file instead of command-line parameters.
 
 ### 06 - Create JSON profiles
 
-Generate JSON profiles from JSON schemas.
+Generate a JSON profile directory from a JSON schema directory. The format is described in `profiles/README.md`.
 
-Configuration file:
+The profile is restricted to the selected messages and to the segments, fields and datatypes they use. Every table of `hl7tables.json` is kept. A table cited by a field or a component but absent from `hl7tables.json` is reported as a warning.
 
-```text
-06-create-json-profile.config.php
-```
-
-If missing, it is automatically created from:
-
-```text
-06-create-json-profile.config.dist.php
-```
-
-Run:
+The script replaces the generated files of the profile directory and keeps `rules.json`.
 
 ```bash
-php 06-create-json-profile.php
+php 06-create-json-profile.php \
+    --schema-dir=<directory> \
+    --profile-dir=<directory> \
+    [--types=<type,...>] \
+    [--ignore-events=<event,...>]
+```
+
+Without `--types`, every message type of `messageType.json` is generated.
+
+Examples:
+
+```bash
+php 06-create-json-profile.php \
+    --schema-dir=../schemas/json-2.5 \
+    --profile-dir=../profiles-next/json-2.5 \
+    --types=ACK,ADT,SIU
+
+php 06-create-json-profile.php \
+    --schema-dir=../schemas/json-2.5-IHEPAMFR \
+    --profile-dir=../profiles-next/json-2.5-IHEPAMFR
 ```
 
 ### 07 - Create XML profiles
