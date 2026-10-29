@@ -1746,6 +1746,12 @@
             }
         ]
     },
+    "0010": {
+        "id": "0010",
+        "name": "Physician ID",
+        "type": "User",
+        "codes": []
+    },
     "0017": {
         "id": "0017",
         "name": "Transaction Type",
@@ -1772,6 +1778,30 @@
                 "description": "Payment"
             }
         ]
+    },
+    "0018": {
+        "id": "0018",
+        "name": "Patient Type",
+        "type": "User",
+        "codes": []
+    },
+    "0019": {
+        "id": "0019",
+        "name": "Anesthesia Code",
+        "type": "User",
+        "codes": []
+    },
+    "0021": {
+        "id": "0021",
+        "name": "Bad Debt Agency Code",
+        "type": "User",
+        "codes": []
+    },
+    "0022": {
+        "id": "0022",
+        "name": "Billing Status",
+        "type": "User",
+        "codes": []
     },
     "0023": {
         "id": "0023",
@@ -2009,6 +2039,24 @@
             }
         ]
     },
+    "0042": {
+        "id": "0042",
+        "name": "Company Plan Code",
+        "type": "User",
+        "codes": []
+    },
+    "0043": {
+        "id": "0043",
+        "name": "Condition Code",
+        "type": "User",
+        "codes": []
+    },
+    "0044": {
+        "id": "0044",
+        "name": "Contract Code",
+        "type": "User",
+        "codes": []
+    },
     "0045": {
         "id": "0045",
         "name": "Courtesy code",
@@ -2023,6 +2071,12 @@
                 "description": "Yes"
             }
         ]
+    },
+    "0046": {
+        "id": "0046",
+        "name": "Credit Rating",
+        "type": "User",
+        "codes": []
     },
     "0048": {
         "id": "0048",
@@ -2222,6 +2276,12 @@
             }
         ]
     },
+    "0051": {
+        "id": "0051",
+        "name": "Diagnosis Code",
+        "type": "User",
+        "codes": []
+    },
     "0052": {
         "id": "0052",
         "name": "Diagnosis Type",
@@ -2240,6 +2300,30 @@
                 "description": "Working"
             }
         ]
+    },
+    "0053": {
+        "id": "0053",
+        "name": "Diagnosis Coding Method",
+        "type": "User",
+        "codes": []
+    },
+    "0055": {
+        "id": "0055",
+        "name": "Diagnosis related group",
+        "type": "User",
+        "codes": []
+    },
+    "0056": {
+        "id": "0056",
+        "name": "DRG grouper review code",
+        "type": "User",
+        "codes": []
+    },
+    "0059": {
+        "id": "0059",
+        "name": "Consent Code",
+        "type": "User",
+        "codes": []
     },
     "0061": {
         "id": "0061",
@@ -2429,6 +2513,12 @@
                 "description": "Ward of court"
             }
         ]
+    },
+    "0064": {
+        "id": "0064",
+        "name": "Financial class",
+        "type": "User",
+        "codes": []
     },
     "0065": {
         "id": "0065",
@@ -4012,6 +4102,12 @@
             }
         ]
     },
+    "0073": {
+        "id": "0073",
+        "name": "Interest Rate Code",
+        "type": "User",
+        "codes": []
+    },
     "0074": {
         "id": "0074",
         "name": "Diagnostic Service Section ID",
@@ -4862,6 +4958,30 @@
             }
         ]
     },
+    "0086": {
+        "id": "0086",
+        "name": "Plan ID",
+        "type": "User",
+        "codes": []
+    },
+    "0087": {
+        "id": "0087",
+        "name": "Pre-Admit Test Indicator",
+        "type": "User",
+        "codes": []
+    },
+    "0088": {
+        "id": "0088",
+        "name": "Procedure Code",
+        "type": "User",
+        "codes": []
+    },
+    "0089": {
+        "id": "0089",
+        "name": "Procedure Coding Method",
+        "type": "User",
+        "codes": []
+    },
     "0091": {
         "id": "0091",
         "name": "Query priority",
@@ -5113,6 +5233,18 @@
             }
         ]
     },
+    "0110": {
+        "id": "0110",
+        "name": "Transfer to Bad Debt Code",
+        "type": "User",
+        "codes": []
+    },
+    "0111": {
+        "id": "0111",
+        "name": "Delete Account Code",
+        "type": "User",
+        "codes": []
+    },
     "0112": {
         "id": "0112",
         "name": "Discharge disposition",
@@ -5182,6 +5314,18 @@
         "type": "User",
         "codes": []
     },
+    "0114": {
+        "id": "0114",
+        "name": "Diet Type",
+        "type": "User",
+        "codes": []
+    },
+    "0115": {
+        "id": "0115",
+        "name": "Servicing Facility",
+        "type": "User",
+        "codes": []
+    },
     "0116": {
         "id": "0116",
         "name": "Bed status",
@@ -5211,6 +5355,12 @@
                 "description": "It was not the last visit for the account"
             }
         ]
+    },
+    "0118": {
+        "id": "0118",
+        "name": "Major Diagnostic Category",
+        "type": "User",
+        "codes": []
     },
     "0119": {
         "id": "0119",
@@ -6044,6 +6194,12 @@
             }
         ]
     },
+    "0139": {
+        "id": "0139",
+        "name": "Employer Information Data",
+        "type": "User",
+        "codes": []
+    },
     "0140": {
         "id": "0140",
         "name": "Military Service",
@@ -6220,6 +6376,12 @@
                 "description": "Retired"
             }
         ]
+    },
+    "0143": {
+        "id": "0143",
+        "name": "Non-covered Insurance Code",
+        "type": "User",
+        "codes": []
     },
     "0144": {
         "id": "0144",
@@ -6409,6 +6571,24 @@
                 "description": "Urgent"
             }
         ]
+    },
+    "0151": {
+        "id": "0151",
+        "name": "Second Opinion Status",
+        "type": "User",
+        "codes": []
+    },
+    "0152": {
+        "id": "0152",
+        "name": "Second Opinion Documentation Received",
+        "type": "User",
+        "codes": []
+    },
+    "0153": {
+        "id": "0153",
+        "name": "Value code",
+        "type": "HL7",
+        "codes": []
     },
     "0155": {
         "id": "0155",
@@ -7246,6 +7426,18 @@
             }
         ]
     },
+    "0171": {
+        "id": "0171",
+        "name": "Citizenship",
+        "type": "User",
+        "codes": []
+    },
+    "0172": {
+        "id": "0172",
+        "name": "Veterans Military Status",
+        "type": "User",
+        "codes": []
+    },
     "0173": {
         "id": "0173",
         "name": "Coordination of Benefits",
@@ -7546,6 +7738,12 @@
                 "description": "Provider does own billing"
             }
         ]
+    },
+    "0188": {
+        "id": "0188",
+        "name": "Operator ID",
+        "type": "User",
+        "codes": []
     },
     "0189": {
         "id": "0189",
@@ -8103,6 +8301,12 @@
             }
         ]
     },
+    "0212": {
+        "id": "0212",
+        "name": "Nationality",
+        "type": "User",
+        "codes": []
+    },
     "0213": {
         "id": "0213",
         "name": "Purge Status Code",
@@ -8221,6 +8425,12 @@
             }
         ]
     },
+    "0219": {
+        "id": "0219",
+        "name": "Recurring Service Code",
+        "type": "User",
+        "codes": []
+    },
     "0220": {
         "id": "0220",
         "name": "Living arrangement",
@@ -8255,6 +8465,12 @@
                 "description": "Unknown"
             }
         ]
+    },
+    "0222": {
+        "id": "0222",
+        "name": "Contact Reason",
+        "type": "User",
+        "codes": []
     },
     "0223": {
         "id": "0223",
@@ -8634,6 +8850,12 @@
                 "description": "Name/address change"
             }
         ]
+    },
+    "0233": {
+        "id": "0233",
+        "name": "Non-Concur Code/Description",
+        "type": "User",
+        "codes": []
     },
     "0234": {
         "id": "0234",
@@ -10813,6 +11035,18 @@
             }
         ]
     },
+    "0288": {
+        "id": "0288",
+        "name": "Census tract",
+        "type": "User",
+        "codes": []
+    },
+    "0289": {
+        "id": "0289",
+        "name": "County/parish",
+        "type": "User",
+        "codes": []
+    },
     "0291": {
         "id": "0291",
         "name": "Subtype of referenced data",
@@ -11374,6 +11608,24 @@
             }
         ]
     },
+    "0295": {
+        "id": "0295",
+        "name": "Handicap",
+        "type": "User",
+        "codes": []
+    },
+    "0296": {
+        "id": "0296",
+        "name": "Primary Language",
+        "type": "User",
+        "codes": []
+    },
+    "0297": {
+        "id": "0297",
+        "name": "CN ID source",
+        "type": "User",
+        "codes": []
+    },
     "0298": {
         "id": "0298",
         "name": "CP range type",
@@ -11408,6 +11660,12 @@
             }
         ]
     },
+    "0300": {
+        "id": "0300",
+        "name": "Namespace ID",
+        "type": "User",
+        "codes": []
+    },
     "0301": {
         "id": "0301",
         "name": "Universal ID Type",
@@ -11438,6 +11696,24 @@
                 "description": "UUID"
             }
         ]
+    },
+    "0302": {
+        "id": "0302",
+        "name": "Point of care",
+        "type": "User",
+        "codes": []
+    },
+    "0303": {
+        "id": "0303",
+        "name": "Room",
+        "type": "User",
+        "codes": []
+    },
+    "0304": {
+        "id": "0304",
+        "name": "Bed",
+        "type": "User",
+        "codes": []
     },
     "0305": {
         "id": "0305",
@@ -11473,6 +11749,24 @@
                 "description": "SNF"
             }
         ]
+    },
+    "0306": {
+        "id": "0306",
+        "name": "Location status",
+        "type": "User",
+        "codes": []
+    },
+    "0307": {
+        "id": "0307",
+        "name": "Building",
+        "type": "User",
+        "codes": []
+    },
+    "0308": {
+        "id": "0308",
+        "name": "Floor",
+        "type": "User",
+        "codes": []
     },
     "0309": {
         "id": "0309",
@@ -11515,6 +11809,18 @@
                 "description": "Unknown"
             }
         ]
+    },
+    "0312": {
+        "id": "0312",
+        "name": "Policy Scope",
+        "type": "User",
+        "codes": []
+    },
+    "0313": {
+        "id": "0313",
+        "name": "Policy Source",
+        "type": "User",
+        "codes": []
     },
     "0315": {
         "id": "0315",
@@ -11779,6 +12085,18 @@
             }
         ]
     },
+    "0327": {
+        "id": "0327",
+        "name": "Job code",
+        "type": "User",
+        "codes": []
+    },
+    "0328": {
+        "id": "0328",
+        "name": "Employee classification",
+        "type": "User",
+        "codes": []
+    },
     "0329": {
         "id": "0329",
         "name": "Quantity method",
@@ -11862,6 +12180,12 @@
                 "description": "Initiate"
             }
         ]
+    },
+    "0333": {
+        "id": "0333",
+        "name": "Driver's license issuing authority",
+        "type": "User",
+        "codes": []
     },
     "0334": {
         "id": "0334",
@@ -12117,6 +12441,30 @@
             }
         ]
     },
+    "0340": {
+        "id": "0340",
+        "name": "Procedure Code Modifier",
+        "type": "User",
+        "codes": []
+    },
+    "0341": {
+        "id": "0341",
+        "name": "Guarantor Credit Rating Code",
+        "type": "User",
+        "codes": []
+    },
+    "0342": {
+        "id": "0342",
+        "name": "Military Recipient",
+        "type": "User",
+        "codes": []
+    },
+    "0343": {
+        "id": "0343",
+        "name": "Military Handicapped Program Code",
+        "type": "User",
+        "codes": []
+    },
     "0344": {
         "id": "0344",
         "name": "Patient's Relationship to Insured",
@@ -12200,6 +12548,18 @@
             }
         ]
     },
+    "0345": {
+        "id": "0345",
+        "name": "Appeal Reason",
+        "type": "User",
+        "codes": []
+    },
+    "0346": {
+        "id": "0346",
+        "name": "Certification Agency",
+        "type": "User",
+        "codes": []
+    },
     "0347": {
         "id": "0347",
         "name": "State/province",
@@ -12214,6 +12574,30 @@
                 "description": "Michigan  (US)"
             }
         ]
+    },
+    "0348": {
+        "id": "0348",
+        "name": "Special Program Indicator",
+        "type": "User",
+        "codes": []
+    },
+    "0349": {
+        "id": "0349",
+        "name": "PSRO/UR Approval Indicator",
+        "type": "User",
+        "codes": []
+    },
+    "0350": {
+        "id": "0350",
+        "name": "Occurrence code",
+        "type": "HL7",
+        "codes": []
+    },
+    "0351": {
+        "id": "0351",
+        "name": "Occurrence span",
+        "type": "HL7",
+        "codes": []
     },
     "0353": {
         "id": "0353",
@@ -13383,6 +13767,24 @@
                 "description": "Trade School Graduate"
             }
         ]
+    },
+    "0361": {
+        "id": "0361",
+        "name": "Application",
+        "type": "User",
+        "codes": []
+    },
+    "0362": {
+        "id": "0362",
+        "name": "Facility",
+        "type": "User",
+        "codes": []
+    },
+    "0363": {
+        "id": "0363",
+        "name": "Assigning authority",
+        "type": "User",
+        "codes": []
     },
     "0364": {
         "id": "0364",
@@ -17158,6 +17560,24 @@
             }
         ]
     },
+    "0446": {
+        "id": "0446",
+        "name": "Species Code",
+        "type": "User",
+        "codes": []
+    },
+    "0447": {
+        "id": "0447",
+        "name": "Breed Code",
+        "type": "User",
+        "codes": []
+    },
+    "0448": {
+        "id": "0448",
+        "name": "Name context",
+        "type": "User",
+        "codes": []
+    },
     "0450": {
         "id": "0450",
         "name": "Event type",
@@ -20837,6 +21257,12 @@
                 "description": "Yes"
             }
         ]
+    },
+    "0533": {
+        "id": "0533",
+        "name": "Application error code",
+        "type": "User",
+        "codes": []
     },
     "0534": {
         "id": "0534",
