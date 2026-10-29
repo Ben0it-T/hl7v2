@@ -5176,6 +5176,12 @@
             }
         ]
     },
+    "0113": {
+        "id": "0113",
+        "name": "Discharged to location",
+        "type": "User",
+        "codes": []
+    },
     "0116": {
         "id": "0116",
         "name": "Bed status",
