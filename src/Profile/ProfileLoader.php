@@ -28,15 +28,17 @@ class ProfileLoader
         string $structure
     ): Profile {
 
+        // Structure: MSH-9.3, else ACK for an acknowledgement, else messageType.json.
         if ($structure === '') {
-            $structure = $this->resolveStructure(
-                $versionId,
-                $messageCode,
-                $triggerEvent
-            );
+            $structure = $messageCode === 'ACK'
+                ? 'ACK'
+                : $this->resolveStructure($versionId, $messageCode, $triggerEvent);
         }
 
-        $profileName = sprintf('%s-%s-%s', $messageCode, $triggerEvent, $structure);
+        // A single ACK profile, chosen by structure, whatever the trigger event.
+        $profileName = $messageCode === 'ACK'
+            ? sprintf('ACK-ACK-%s', $structure)
+            : sprintf('%s-%s-%s', $messageCode, $triggerEvent, $structure);
 
         $filename = sprintf( '%s/json-%s/%s.json', $this->profilePath, $versionId, $profileName);
         if (!is_file($filename)) {
@@ -47,7 +49,7 @@ class ProfileLoader
 
         $profile = $this->readJsonFile($filename);
 
-        return new Profile($profile);
+        return new Profile($profile, $structure);
     }
 
     /**

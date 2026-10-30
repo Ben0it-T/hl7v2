@@ -1,12 +1,12 @@
 [
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'MSH' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -594,13 +594,13 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'EVN' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'EVN' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -726,13 +726,13 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PID' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PID' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -1356,37 +1356,37 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PD1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PD1' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'NK1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'NK1' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PV1' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PV1' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -2130,145 +2130,145 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PV2' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'PV2' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'DB1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'DB1' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'OBX' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'OBX' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'AL1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'AL1' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'DG1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'DG1' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'DRG' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'DRG' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Group 'PROCEDURE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Group 'PROCEDURE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'GT1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'GT1' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Group 'INSURANCE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Group 'INSURANCE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'ACC' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'ACC' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'UB1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'UB1' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'UB2' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "ADT_A01",
         "Description": "Segment 'UB2' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true

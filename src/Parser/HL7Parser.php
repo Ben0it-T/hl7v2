@@ -116,13 +116,9 @@ class HL7Parser
         $messageType = explode($componentSeparator, $MSH[8] ?? ''); // MSH-9
         $messageVersionID = explode($componentSeparator, $MSH[11] ?? ''); // MSH-12
 
-        $type = $messageType[0];
-        if ($type === "ACK") {
-            $message->setMetadata("ACK", "ACK", "ACK", $messageVersionID[0], $messageVersionID[1] ?? '', $messageVersionID[2] ?? '');
-        }
-        else {
-            $message->setMetadata($type, $messageType[1] ?? '', $messageType[2] ?? '', $messageVersionID[0], $messageVersionID[1] ?? '', $messageVersionID[2] ?? '');
-        }
+        // Message type, trigger event and structure as written in MSH-9
+        // (the structure is empty in HL7 2.3 and 2.3.1).
+        $message->setMetadata($messageType[0], $messageType[1] ?? '', $messageType[2] ?? '', $messageVersionID[0], $messageVersionID[1] ?? '', $messageVersionID[2] ?? '');
 
         // Parse raw message (naively)
         foreach ($segments as $segmentStr) {

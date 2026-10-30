@@ -1,12 +1,12 @@
 [
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'MSH' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -540,13 +540,13 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'SCH' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'SCH' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -1368,37 +1368,37 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'NTE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'NTE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'PATIENT' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'PATIENT' cardinality is [0..*]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'PID' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'PID' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -1992,73 +1992,73 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'PV1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'PV1' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'PV2' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'PV2' cardinality is [0..1]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'OBX' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'OBX' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'DG1' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'DG1' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'RESOURCES' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'RESOURCES' cardinality is [1..*]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'RGS' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'RGS' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -2112,25 +2112,25 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'SERVICE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'SERVICE' cardinality is [0..*]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'AIS' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'AIS' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -2328,61 +2328,61 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'NTE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'NTE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'GENERAL_RESOURCE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'GENERAL_RESOURCE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'LOCATION_RESOURCE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'LOCATION_RESOURCE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'PERSONNEL_RESOURCE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Group 'PERSONNEL_RESOURCE' cardinality is [0..*]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'AIP' usage is R.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'AIP' cardinality is [1..1]. Found 1 time(s).",
         "Type": "Cardinality",
         "Result": true
@@ -2718,13 +2718,13 @@
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'NTE' usage is O.",
         "Type": "Usage",
         "Result": true
     },
     {
-        "Location": "",
+        "Location": "SIU_S12",
         "Description": "Segment 'NTE' cardinality is [0..*]. Found 0 time(s).",
         "Type": "Cardinality",
         "Result": true

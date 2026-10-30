@@ -40,6 +40,11 @@ class HL7Message
      */
     private array $profiledMessage = [];
 
+    /**
+     * Message structure resolved by the profile at validation (empty
+     * before validation).
+     */
+    private string $structure = '';
 
 
     /**
@@ -82,6 +87,7 @@ class HL7Message
         $this->profiledMessage  = [];
         $this->validationResult = null;
         $this->message = $this->parser->parse($rawMessage, $inputEncoding);
+        $this->structure        = '';
     }
 
     /**
@@ -118,6 +124,7 @@ class HL7Message
         $validator->setDebug($this->debug);
         $this->validationResult = $validator->validate($this->message, $profile, $tables);
         $this->profiledMessage = $validator->getProfiledMessage();
+        $this->structure = $profile->getStructure();
 
         return $this->validationResult;
     }
@@ -145,6 +152,7 @@ class HL7Message
         $validator->setDebug($this->debug);
         $this->validationResult = $validator->validate($this->message, $profile, $tables);
         $this->profiledMessage = $validator->getProfiledMessage();
+        $this->structure = $profile->getStructure();
 
         return $this->validationResult;
     }
@@ -197,7 +205,7 @@ class HL7Message
 
         $serializer = new HL7StructuralXmlSerializer();
 
-        return $serializer->serialize($this->message, $includeNamespace);
+        return $serializer->serialize($this->message, $includeNamespace, $this->structure);
     }
 
     /**

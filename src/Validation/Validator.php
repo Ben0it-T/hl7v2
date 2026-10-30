@@ -30,6 +30,11 @@ class Validator
 
     private Message $message;
     private Profile $profile;
+    /**
+     * Message structure used for the root group and the locations: the one
+     * of the profile, else MSH-9.3.
+     */
+    private string $structure = '';
     private DatatypeValidatorRegistry $datatypeRegistry;
     private ValidationContext $context;
     private ValidationResult $validationResult;
@@ -111,6 +116,10 @@ class Validator
 
         $this->message = $message;
 
+        $this->structure = $profile->getStructure() !== ''
+            ? $profile->getStructure()
+            : $message->getStructure();
+
         $messageSegmentNames = $message->getSegmentNames();
         $this->context = new ValidationContext();
         $this->context->profileSegmentNames = $profile->getSegmentNames();
@@ -131,11 +140,11 @@ class Validator
         // Create root group definition.
         $rootGroupDef = [
             'Type'     => 'group',
-            'Name'     => $this->message->getStructure(),
+            'Name'     => $this->structure,
             'Usage'    => 'R',
             'Min'      => '1',
             'Max'      => '1',
-            'LongName' => $this->message->getStructure(),
+            'LongName' => $this->structure,
             'segments' => $this->profile->getDefinition(),
         ];
 
@@ -149,7 +158,7 @@ class Validator
         // Validate root group
         $profiledMessage = $this->validateGroup(
             $rootGroupDef,
-            $this->message->getStructure()
+            $this->structure
         );
 
         if (!isset($profiledMessage[0])) {
@@ -181,7 +190,7 @@ class Validator
                     $this->log("-Segment- >> message '{$segmentName}' segment is not defined.");
 
                     $this->validationResult->addTestReport([
-                        'Location'    => $this->message->getStructure(),
+                        'Location'    => $this->structure,
                         'Description' => $description,
                         'Type'        => "Structure",
                         'Result'      => false,
@@ -215,7 +224,7 @@ class Validator
                     $this->log("-Segment- >> message '{$segmentName}' segment is not expected here.");
 
                     $this->validationResult->addTestReport([
-                        'Location'    => $this->message->getStructure(),
+                        'Location'    => $this->structure,
                         'Description' => $description,
                         'Type'        => "Structure",
                         'Result'      => false,
@@ -233,7 +242,7 @@ class Validator
                         "elementComments" => $description,
                     ]);
 
-                    $this->profiledMessage["segments"][] = $this->validateNotExpectedSegment($segment, $segmentDef, $this->message->getStructure());
+                    $this->profiledMessage["segments"][] = $this->validateNotExpectedSegment($segment, $segmentDef, $this->structure);
 
                 }
 
@@ -612,7 +621,7 @@ class Validator
         $isGroupExists = $this->context->isGroupExists($this->message, $entrySegments);
 
         // Group repetitions.
-        $groupRepetitions = $groupDef['Name'] === $this->message->getStructure()
+        $groupRepetitions = $groupDef['Name'] === $this->structure
             ? 1
             : $this->context->countGroupRepetitions($this->message, $entrySegments, $segmentsInGroup);
 
@@ -640,7 +649,7 @@ class Validator
         }
 
         $this->log("-Group- --- Group '{$groupDef["Name"]}' begin.");
-        $this->log("-Group- Group '".$groupDef["Name"]."' " . (($groupDef["Name"] === $this->message->getStructure()) ? "is" : "is not") . " the root group.");
+        $this->log("-Group- Group '".$groupDef["Name"]."' " . (($groupDef["Name"] === $this->structure) ? "is" : "is not") . " the root group.");
         $this->log("-Group- Names of the segments that may start a group: " . (implode(", ", $entrySegments)));
         $this->log("-Group- Segments defined in the group: " . (implode(", ", $segmentsInGroup)));
         $this->log("-Group- Segments in message: " . (implode(", ", $this->message->getSegmentNames())));
@@ -728,14 +737,14 @@ class Validator
                 $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
 
                 $this->validationResult->addTestReport([
-                    'Location'    => $this->message->getStructure(),
+                    'Location'    => $this->structure,
                     'Description' => $usage['description'],
                     'Type'        => $usage['type'],
                     'Result'      => $usage['result'],
                 ]);
 
                 $this->validationResult->addTestReport([
-                    'Location'    => $this->message->getStructure(),
+                    'Location'    => $this->structure,
                     'Description' => $cardinality['description'],
                     'Type'        => $cardinality['type'],
                     'Result'      => $cardinality['result'],
@@ -780,7 +789,7 @@ class Validator
                 $description = "Segment '{$currentSegmentName}' is not defined in the message profile. Found {$segmentRepetitions} time(s).";
 
                 $this->validationResult->addTestReport([
-                    'Location'    => $this->message->getStructure(),
+                    'Location'    => $this->structure,
                     'Description' => $description,
                     'Type'        => "Structure",
                     'Result'      => false,
@@ -831,7 +840,7 @@ class Validator
                 $description = "Segment '{$currentSegmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentRepetitions} time(s).";
 
                 $this->validationResult->addTestReport([
-                    'Location'    => $this->message->getStructure(),
+                    'Location'    => $this->structure,
                     'Description' => $description,
                     'Type'        => "Structure",
                     'Result'      => false,
@@ -870,16 +879,16 @@ class Validator
                 // Continue validation
                 $this->log("-Group- Group '{$groupDef['Name']}' found in message.");
 
-                if ($groupDef["Name"] !== $this->message->getStructure()) {
+                if ($groupDef["Name"] !== $this->structure) {
                     $this->validationResult->addTestReport([
-                        'Location'    => $this->message->getStructure(),
+                        'Location'    => $this->structure,
                         'Description' => $usage['description'],
                         'Type'        => $usage['type'],
                         'Result'      => $usage['result'],
                     ]);
 
                     $this->validationResult->addTestReport([
-                        'Location'    => $this->message->getStructure(),
+                        'Location'    => $this->structure,
                         'Description' => $cardinality['description'],
                         'Type'        => $cardinality['type'],
                         'Result'      => $cardinality['result'],
@@ -905,7 +914,7 @@ class Validator
             $this->context->profileSegmentIndex = $profileSegmentIndex;
 
             $this->log("-Group- group '{$groupDef['Name']}' rep $groupRep/$groupRepetitions");
-            if ($groupDef["Name"] !== $this->message->getStructure()) {
+            if ($groupDef["Name"] !== $this->structure) {
                 $this->validationResult->addValidationReport([
                     "type"            => "Group",
                     "name"            => "---",
@@ -990,14 +999,14 @@ class Validator
 
                         // addTestReport
                         $this->validationResult->addTestReport([
-                            'Location'    => $this->message->getStructure(),
+                            'Location'    => $this->structure,
                             'Description' => $segmentUsage['description'],
                             'Type'        => $segmentUsage['type'],
                             'Result'      => $segmentUsage['result'],
                         ]);
 
                         $this->validationResult->addTestReport([
-                            'Location'    => $this->message->getStructure(),
+                            'Location'    => $this->structure,
                             'Description' => $segmentCardinality['description'],
                             'Type'        => $segmentCardinality['type'],
                             'Result'      => $segmentCardinality['result'],
@@ -1076,14 +1085,14 @@ class Validator
                             $this->log("-Segment- >> profile segment '{$childDef["Name"]}' is not present in message (Case 1). Move on.");
 
                             $this->validationResult->addTestReport([
-                                'Location'    => $this->message->getStructure(),
+                                'Location'    => $this->structure,
                                 'Description' => $segmentUsage['description'],
                                 'Type'        => $segmentUsage['type'],
                                 'Result'      => $segmentUsage['result'],
                             ]);
 
                             $this->validationResult->addTestReport([
-                                'Location'    => $this->message->getStructure(),
+                                'Location'    => $this->structure,
                                 'Description' => $segmentCardinality['description'],
                                 'Type'        => $segmentCardinality['type'],
                                 'Result'      => $segmentCardinality['result'],
@@ -1111,7 +1120,7 @@ class Validator
                             $description = "Segment '{$segmentName}' is not defined in the message profile. Found {$segmentReps} time(s).";
 
                             $this->validationResult->addTestReport([
-                                'Location'    => $this->message->getStructure(),
+                                'Location'    => $this->structure,
                                 'Description' => $description,
                                 'Type'        => "Structure",
                                 'Result'      => false,
@@ -1192,14 +1201,14 @@ class Validator
                                 case NavigationState::SEGMENT_APPEARS_LATER:
                                     // Message: doesn't move. Profile: move on.
                                     $this->validationResult->addTestReport([
-                                        'Location'    => $this->message->getStructure(),
+                                        'Location'    => $this->structure,
                                         'Description' => $segmentUsage['description'],
                                         'Type'        => $segmentUsage['type'],
                                         'Result'      => $segmentUsage['result'],
                                     ]);
 
                                     $this->validationResult->addTestReport([
-                                        'Location'    => $this->message->getStructure(),
+                                        'Location'    => $this->structure,
                                         'Description' => $segmentCardinality['description'],
                                         'Type'        => $segmentCardinality['type'],
                                         'Result'      => $segmentCardinality['result'],
@@ -1235,7 +1244,7 @@ class Validator
                                     $description = "Segment '{$segmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentReps} time(s).";
 
                                     $this->validationResult->addTestReport([
-                                        'Location'    => $this->message->getStructure(),
+                                        'Location'    => $this->structure,
                                         'Description' => $description,
                                         'Type'        => "Structure",
                                         'Result'      => false,
@@ -1295,7 +1304,7 @@ class Validator
                 $description = "No valid alternative was selected in choice group '{$groupDef['Name']}'.";
 
                 $this->validationResult->addTestReport([
-                    'Location'    => $this->message->getStructure(),
+                    'Location'    => $this->structure,
                     'Description' => $description,
                     'Type'        => 'Structure',
                     'Result'      => false,
@@ -1307,7 +1316,7 @@ class Validator
 
             $groupArray[] = $group;
 
-            if ($groupDef["Name"] !== $this->message->getStructure()) {
+            if ($groupDef["Name"] !== $this->structure) {
                 $this->validationResult->addValidationReport([
                     "type"            => "Group",
                     "name"            => "---",

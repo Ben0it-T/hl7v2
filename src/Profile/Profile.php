@@ -12,15 +12,21 @@ class Profile
      */
     private array $definition;
 
+    /**
+     * Message structure of the profile (ADT_A01, ACK...).
+     */
+    private string $structure;
 
     /**
      * Create profile from raw JSON definition.
      *
      * @param array<mixed,mixed> $definition
+     * @param string $structure Message structure of the profile.
      */
-    public function __construct(array $definition)
+    public function __construct(array $definition, string $structure = '')
     {
         $this->definition = $definition;
+        $this->structure = $structure;
     }
 
     /**
@@ -31,6 +37,16 @@ class Profile
     public function getDefinition(): array
     {
         return $this->definition;
+    }
+
+    /**
+     * Get the message structure of the profile.
+     *
+     * @return string
+     */
+    public function getStructure(): string
+    {
+        return $this->structure;
     }
 
     /**

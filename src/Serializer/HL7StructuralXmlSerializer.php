@@ -17,10 +17,12 @@ class HL7StructuralXmlSerializer
      *
      * @param Message $message
      * @param bool $includeNamespace Export HL7 XML namespace.
+     * @param string $structure Resolved message structure (from the profile);
+     *        when empty, MSH-9.3, else <type>_<event> (or <type>).
      *
      * @return string
      */
-    public function serialize(Message $message, bool $includeNamespace = true): string
+    public function serialize(Message $message, bool $includeNamespace = true, string $structure = ''): string
     {
         $dom = new \DOMDocument(version: '1.0', encoding: 'UTF-8');
 
@@ -28,10 +30,11 @@ class HL7StructuralXmlSerializer
         $dom->formatOutput = true;
         $dom->xmlStandalone = false;
 
+        $rootName = $this->rootName($message, $structure);
         if ($includeNamespace) {
-            $root = $dom->createElementNS('urn:hl7-org:v2xml', $message->getStructure());
+            $root = $dom->createElementNS('urn:hl7-org:v2xml', $rootName);
         } else {
-            $root = $dom->createElement($message->getStructure());
+            $root = $dom->createElement($rootName);
         }
 
         $dom->appendChild($root);
@@ -49,6 +52,29 @@ class HL7StructuralXmlSerializer
         }
 
         return $xml;
+    }
+
+    /**
+     * Name of the root element: the resolved structure, else MSH-9.3, else
+     * <type>_<event> (HL7 2.3 and 2.3.1 have no structure in MSH-9).
+     *
+     * @param Message $message
+     * @param string $structure
+     *
+     *  @return string
+     */
+    private function rootName(Message $message, string $structure): string
+    {
+        if ($structure !== '') {
+            return $structure;
+        }
+        if ($message->getStructure() !== '') {
+            return $message->getStructure();
+        }
+
+        return $message->getTriggerEvent() !== ''
+            ? $message->getMessageCode() . '_' . $message->getTriggerEvent()
+            : $message->getMessageCode();
     }
 
     /**

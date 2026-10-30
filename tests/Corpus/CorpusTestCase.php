@@ -108,7 +108,12 @@ abstract class CorpusTestCase extends TestCase
         }
 
         $this->assertFileExists($file, 'Snapshot missing: run the suite with UPDATE_SNAPSHOTS=1.');
-        $this->assertSame((string) file_get_contents($file), $actual, "Snapshot differs: $file");
+        // No assertSame(): on large snapshots, the diff computed by PHPUnit
+        // takes minutes. The differences are read with review-snapshots.php.
+        $this->assertTrue(
+            (string) file_get_contents($file) === $actual,
+            "Snapshot differs: $file\nWrite the new snapshots with UPDATE_SNAPSHOTS=1, then review them with php tests/Corpus/review-snapshots.php."
+        );
     }
 
     /**

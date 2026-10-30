@@ -1,7 +1,7 @@
 {
     "Type": "group",
-    "Name": "",
-    "LongName": "",
+    "Name": "SIU_S12",
+    "LongName": "SIU_S12",
     "segments": [
         {
             "Type": "segment",

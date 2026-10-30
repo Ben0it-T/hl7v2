@@ -9,6 +9,5 @@
     "expected": {
         "valid": true,
         "findings": []
-    },
-    "knownBug": "The parser reduces the message type to ACK^ACK^ACK: the real trigger event (A01) is lost."
+    }
 }
