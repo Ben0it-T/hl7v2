@@ -1,0 +1,818 @@
+[
+    {
+        "Location": "ACK",
+        "Description": "Segment 'MSH' usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) length does not exceed the length defined in the message profile (4).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) length does not exceed the length defined in the message profile (26).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.1",
+        "Description": "Component 'Time' (TS.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.1",
+        "Description": "Component 'Time' (TS.1) length does not exceed the length defined in the message profile (24).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.1",
+        "Description": "Component 'Time' (TS.1) datatype 'DTM' is valid.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.2",
+        "Description": "Component 'Degree of Precision' (TS.2) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-8",
+        "Description": "Field 'Security' (MSH.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-8",
+        "Description": "Field 'Security' (MSH.8) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) length does not exceed the length defined in the message profile (15).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) datatype is 'MSG'. No validator registered for datatype 'MSG'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) value (ACK) exists in table 0076 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) value (A01) exists in table 0003 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) length does not exceed the length defined in the message profile (7).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) value (ACK) exists in table 0354 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) datatype is 'PT'. No validator registered for datatype 'PT'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.2",
+        "Description": "Component 'Processing Mode' (PT.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) length does not exceed the length defined in the message profile (60).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) datatype is 'VID'. No validator registered for datatype 'VID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) length does not exceed the length defined in the message profile (5).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) value (2.5) exists in table 0104 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.2",
+        "Description": "Component 'Internationalization Code' (VID.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.3",
+        "Description": "Component 'International Version ID' (VID.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-13",
+        "Description": "Field 'Sequence Number' (MSH.13) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-13",
+        "Description": "Field 'Sequence Number' (MSH.13) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-14",
+        "Description": "Field 'Continuation Pointer' (MSH.14) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-14",
+        "Description": "Field 'Continuation Pointer' (MSH.14) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-15",
+        "Description": "Field 'Accept Acknowledgment Type' (MSH.15) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-15",
+        "Description": "Field 'Accept Acknowledgment Type' (MSH.15) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-16",
+        "Description": "Field 'Application Acknowledgment Type' (MSH.16) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-16",
+        "Description": "Field 'Application Acknowledgment Type' (MSH.16) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-17",
+        "Description": "Field 'Country Code' (MSH.17) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-17",
+        "Description": "Field 'Country Code' (MSH.17) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-18",
+        "Description": "Field 'Character Set' (MSH.18) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-18",
+        "Description": "Field 'Character Set' (MSH.18) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-19",
+        "Description": "Field 'Principal Language Of Message' (MSH.19) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-19",
+        "Description": "Field 'Principal Language Of Message' (MSH.19) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-20",
+        "Description": "Field 'Alternate Character Set Handling Scheme' (MSH.20) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-20",
+        "Description": "Field 'Alternate Character Set Handling Scheme' (MSH.20) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-21",
+        "Description": "Field 'Message Profile Identifier' (MSH.21) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-21",
+        "Description": "Field 'Message Profile Identifier' (MSH.21) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'SFT' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'SFT' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'MSA' usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'MSA' cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSA-1",
+        "Description": "Field 'Acknowledgment Code' (MSA.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSA-1",
+        "Description": "Field 'Acknowledgment Code' (MSA.1) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSA-1",
+        "Description": "Field 'Acknowledgment Code' (MSA.1) length does not exceed the length defined in the message profile (2).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSA-1",
+        "Description": "Field 'Acknowledgment Code' (MSA.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSA-1",
+        "Description": "Field 'Acknowledgment Code' (MSA.1) value (AA) exists in table 0008 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSA-2",
+        "Description": "Field 'Message Control ID' (MSA.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSA-2",
+        "Description": "Field 'Message Control ID' (MSA.2) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSA-2",
+        "Description": "Field 'Message Control ID' (MSA.2) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSA-2",
+        "Description": "Field 'Message Control ID' (MSA.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSA-3",
+        "Description": "Field 'Text Message' (MSA.3) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSA-3",
+        "Description": "Field 'Text Message' (MSA.3) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSA-4",
+        "Description": "Field 'Expected Sequence Number' (MSA.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSA-4",
+        "Description": "Field 'Expected Sequence Number' (MSA.4) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSA-5",
+        "Description": "Field 'Delayed Acknowledgment Type' (MSA.5) usage is W.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSA-5",
+        "Description": "Field 'Delayed Acknowledgment Type' (MSA.5) cardinality is [0..0]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSA-6",
+        "Description": "Field 'Error Condition' (MSA.6) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSA-6",
+        "Description": "Field 'Error Condition' (MSA.6) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'ERR' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ACK",
+        "Description": "Segment 'ERR' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    }
+]

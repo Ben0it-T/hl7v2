@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace HL7v2\Tests\Corpus;
 
 use HL7v2\Exception\HL7Exception;
+use HL7v2\HL7Message;
 use HL7v2\Validation\ValidationResult;
 use PHPUnit\Framework\Attributes\DataProvider;
 
@@ -18,6 +19,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 final class HL7ExampleCorpusTest extends CorpusTestCase
 {
     private const EXAMPLES = __DIR__ . '/hl7-examples';
+    private const SNAPSHOTS = __DIR__ . '/hl7-examples/snapshots';
 
     /**
      * @return iterable<string, array{CorpusCase|null}>
@@ -36,24 +38,42 @@ final class HL7ExampleCorpusTest extends CorpusTestCase
     #[DataProvider('cases')]
     public function testValidity(?CorpusCase $case): void
     {
+        $result = $this->validateExample($case)->getValidationResult();
+        $this->assertNotNull($result);
+
+        if ($case?->expectedValid === null) {
+            $this->assertInstanceOf(ValidationResult::class, $result);
+
+            return;
+        }
+        $this->assertExpectedValidity($case, $result);
+    }
+
+    #[DataProvider('cases')]
+    public function testSnapshot(?CorpusCase $case): void
+    {
+        $hl7 = $this->validateExample($case);
+        $this->assertNotNull($case);
+        $this->assertSnapshots($hl7, self::SNAPSHOTS . '/' . $case->id);
+    }
+
+    /**
+     * Validate an example, or skip the test when there is no example or no
+     * profile for its message.
+     */
+    private function validateExample(?CorpusCase $case): HL7Message
+    {
         if ($case === null) {
             $this->markTestSkipped('No local HL7 examples.');
         }
 
         try {
-            $result = $this->validate($case);
+            return $this->validateMessage($case);
         } catch (HL7Exception $e) {
             if (preg_match('/^(Profile not found|Message structure not found)/', $e->getMessage()) === 1) {
                 $this->markTestSkipped($e->getMessage() . ' (no profile in profiles/json-' . $case->profileId . ').');
             }
             throw $e;
         }
-
-        if ($case->expectedValid === null) {
-            $this->assertInstanceOf(ValidationResult::class, $result);
-
-            return;
-        }
-        $this->assertExpectedValidity($case, $result);
     }
 }

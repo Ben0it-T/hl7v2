@@ -70,8 +70,23 @@ A fragment file lists values for one datatype and the location where each value 
 `location` is a field (`SEG-n`, first occurrence of the segment): each `value` replaces that field of the carrier message, which is valid on its own.
 `tests`, `expected` and `knownBug` have the same meaning as in a case file; `references` applies to every value of the file.
 
+## Snapshots
+
+Each suite also compares the outputs of the current validator with snapshots, so that any change of behaviour during the redesign is seen and reviewed.
+Snapshots record what the code does; `expected` and `knownBug` record what the specification requires.
+
+| Cases | Directory | Outputs |
+|---|---|---|
+| Messages | `snapshots/messages/<id>/` | `test-report.json`, `validation-report.json`, `profiled-message.json`, `message.hl7`, `structural.xml`, `datatype.xml` |
+| Fragments | `snapshots/fragments/json-<profile>/<datatype>/<n>/` | `test-report.json`, restricted to the entries of the injected field |
+| HL7 examples | `hl7-examples/snapshots/<id>/` (local) | same as messages |
+
+An output that throws an exception is recorded as `EXCEPTION <class>: <message>`.
+A missing snapshot makes the test fail. After reviewing a change, write the new snapshots with `UPDATE_SNAPSHOTS=1`, and commit them with the change.
+
 ## Running
 
 ```bash
 vendor/bin/phpunit tests/Corpus
+UPDATE_SNAPSHOTS=1 vendor/bin/phpunit tests/Corpus
 ```

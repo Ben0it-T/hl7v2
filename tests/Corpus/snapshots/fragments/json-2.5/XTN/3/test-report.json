@@ -1,0 +1,146 @@
+[
+    {
+        "Location": "PID-13",
+        "Description": "Field 'Phone Number - Home' (PID.13) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13",
+        "Description": "Field 'Phone Number - Home' (PID.13) cardinality is [0..*]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-13",
+        "Description": "Field 'Phone Number - Home' (PID.13) length does not exceed the length defined in the message profile (250).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-13",
+        "Description": "Field 'Phone Number - Home' (PID.13) datatype is 'XTN'. No validator registered for datatype 'XTN'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.1",
+        "Description": "Component 'Telephone Number' (XTN.1) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.2",
+        "Description": "Component 'Telecommunication Use Code' (XTN.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.2",
+        "Description": "Component 'Telecommunication Use Code' (XTN.2) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.2",
+        "Description": "Component 'Telecommunication Use Code' (XTN.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.2",
+        "Description": "Component 'Telecommunication Use Code' (XTN.2) value (ZZZ) not in table 0201 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": false
+    },
+    {
+        "Location": "PID-13.3",
+        "Description": "Component 'Telecommunication Equipment Type' (XTN.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.3",
+        "Description": "Component 'Telecommunication Equipment Type' (XTN.3) length does not exceed the length defined in the message profile (8).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.3",
+        "Description": "Component 'Telecommunication Equipment Type' (XTN.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.3",
+        "Description": "Component 'Telecommunication Equipment Type' (XTN.3) value (PH) exists in table 0202 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.4",
+        "Description": "Component 'Email Address' (XTN.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.5",
+        "Description": "Component 'Country Code' (XTN.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.6",
+        "Description": "Component 'Area/City Code' (XTN.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.7",
+        "Description": "Component 'Local Number' (XTN.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.8",
+        "Description": "Component 'Extension' (XTN.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.9",
+        "Description": "Component 'Any Text' (XTN.9) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.10",
+        "Description": "Component 'Extension Prefix' (XTN.10) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.11",
+        "Description": "Component 'Speed Dial Code' (XTN.11) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.12",
+        "Description": "Component 'Unformatted Telephone number' (XTN.12) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
+        "Type": "Conditional",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.12",
+        "Description": "Component 'Unformatted Telephone number' (XTN.12) length does not exceed the length defined in the message profile (199).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-13.12",
+        "Description": "Component 'Unformatted Telephone number' (XTN.12) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    }
+]

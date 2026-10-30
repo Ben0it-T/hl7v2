@@ -17,6 +17,7 @@ final class FragmentCorpusTest extends CorpusTestCase
 {
     private const FRAGMENTS = __DIR__ . '/fragments';
     private const CARRIERS = __DIR__ . '/carriers';
+    private const SNAPSHOTS = __DIR__ . '/snapshots/fragments';
 
     /**
      * @return iterable<string, array{CorpusCase}>
@@ -52,6 +53,7 @@ final class FragmentCorpusTest extends CorpusTestCase
                         'references' => $data['references'] ?? [],
                         'expected'   => $fragment['expected'] ?? [],
                         'knownBug'   => $fragment['knownBug'] ?? null,
+                        'location'   => $data['location'],
                     ]
                 )];
             }
@@ -63,6 +65,16 @@ final class FragmentCorpusTest extends CorpusTestCase
     {
         $this->assertNotNull($case->expectedValid, 'A fragment must state expected.valid.');
         $this->assertExpectedValidity($case, $this->validate($case));
+    }
+
+    #[DataProvider('cases')]
+    public function testSnapshot(CorpusCase $case): void
+    {
+        $this->assertSnapshots(
+            $this->validateMessage($case),
+            self::SNAPSHOTS . '/' . str_replace('#', '/', $case->id),
+            $case->location
+        );
     }
 
     /**

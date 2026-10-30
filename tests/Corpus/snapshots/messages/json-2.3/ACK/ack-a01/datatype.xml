@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ACK xmlns="urn:hl7-org:v2xml">
+  <MSH>
+    <MSH.1>|</MSH.1>
+    <MSH.2>^~\&amp;</MSH.2>
+    <MSH.3>
+      <HD.1>RECVAPP</HD.1>
+    </MSH.3>
+    <MSH.4>
+      <HD.1>RECVFAC</HD.1>
+    </MSH.4>
+    <MSH.5>
+      <HD.1>SENDAPP</HD.1>
+    </MSH.5>
+    <MSH.6>
+      <HD.1>SENDFAC</HD.1>
+    </MSH.6>
+    <MSH.7>
+      <TS.1>20260115083000</TS.1>
+    </MSH.7>
+    <MSH.9>
+      <CM_MSG.1>ACK</CM_MSG.1>
+      <CM_MSG.2>A01</CM_MSG.2>
+    </MSH.9>
+    <MSH.10>ACK0001</MSH.10>
+    <MSH.11>
+      <PT.1>P</PT.1>
+    </MSH.11>
+    <MSH.12>2.3</MSH.12>
+  </MSH>
+  <MSA>
+    <MSA.1>AA</MSA.1>
+    <MSA.2>MSG0001</MSA.2>
+  </MSA>
+</ACK>

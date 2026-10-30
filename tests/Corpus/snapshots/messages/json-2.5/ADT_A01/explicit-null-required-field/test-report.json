@@ -1,0 +1,2666 @@
+[
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'MSH' usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-1",
+        "Description": "Field 'Field Separator' (MSH.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) length does not exceed the length defined in the message profile (4).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-2",
+        "Description": "Field 'Encoding Characters' (MSH.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3",
+        "Description": "Field 'Sending Application' (MSH.3) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-3.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4",
+        "Description": "Field 'Sending Facility' (MSH.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-4.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5",
+        "Description": "Field 'Receiving Application' (MSH.5) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-5.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6",
+        "Description": "Field 'Receiving Facility' (MSH.6) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.2",
+        "Description": "Component 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-6.3",
+        "Description": "Component 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) length does not exceed the length defined in the message profile (26).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7",
+        "Description": "Field 'Date/Time Of Message' (MSH.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.1",
+        "Description": "Component 'Time' (TS.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.1",
+        "Description": "Component 'Time' (TS.1) length does not exceed the length defined in the message profile (24).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.1",
+        "Description": "Component 'Time' (TS.1) datatype 'DTM' is valid.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-7.2",
+        "Description": "Component 'Degree of Precision' (TS.2) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-8",
+        "Description": "Field 'Security' (MSH.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-8",
+        "Description": "Field 'Security' (MSH.8) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) length does not exceed the length defined in the message profile (15).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9",
+        "Description": "Field 'Message Type' (MSH.9) datatype is 'MSG'. No validator registered for datatype 'MSG'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.1",
+        "Description": "Component 'Message Code' (MSG.1) value (ADT) exists in table 0076 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.2",
+        "Description": "Component 'Trigger Event' (MSG.2) value (A01) exists in table 0003 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) length does not exceed the length defined in the message profile (7).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-9.3",
+        "Description": "Component 'Message Structure' (MSG.3) value (ADT_A01) exists in table 0354 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-10",
+        "Description": "Field 'Message Control ID' (MSH.10) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11",
+        "Description": "Field 'Processing ID' (MSH.11) datatype is 'PT'. No validator registered for datatype 'PT'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.1",
+        "Description": "Component 'Processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-11.2",
+        "Description": "Component 'Processing Mode' (PT.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) length does not exceed the length defined in the message profile (60).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12",
+        "Description": "Field 'Version ID' (MSH.12) datatype is 'VID'. No validator registered for datatype 'VID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) length does not exceed the length defined in the message profile (5).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.1",
+        "Description": "Component 'Version ID' (VID.1) value (2.5) exists in table 0104 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.2",
+        "Description": "Component 'Internationalization Code' (VID.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-12.3",
+        "Description": "Component 'International Version ID' (VID.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-13",
+        "Description": "Field 'Sequence Number' (MSH.13) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-13",
+        "Description": "Field 'Sequence Number' (MSH.13) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-14",
+        "Description": "Field 'Continuation Pointer' (MSH.14) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-14",
+        "Description": "Field 'Continuation Pointer' (MSH.14) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-15",
+        "Description": "Field 'Accept Acknowledgment Type' (MSH.15) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-15",
+        "Description": "Field 'Accept Acknowledgment Type' (MSH.15) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-16",
+        "Description": "Field 'Application Acknowledgment Type' (MSH.16) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-16",
+        "Description": "Field 'Application Acknowledgment Type' (MSH.16) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-17",
+        "Description": "Field 'Country Code' (MSH.17) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-17",
+        "Description": "Field 'Country Code' (MSH.17) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-18",
+        "Description": "Field 'Character Set' (MSH.18) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-18",
+        "Description": "Field 'Character Set' (MSH.18) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-19",
+        "Description": "Field 'Principal Language Of Message' (MSH.19) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-19",
+        "Description": "Field 'Principal Language Of Message' (MSH.19) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-20",
+        "Description": "Field 'Alternate Character Set Handling Scheme' (MSH.20) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-20",
+        "Description": "Field 'Alternate Character Set Handling Scheme' (MSH.20) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "MSH-21",
+        "Description": "Field 'Message Profile Identifier' (MSH.21) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "MSH-21",
+        "Description": "Field 'Message Profile Identifier' (MSH.21) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'SFT' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'SFT' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'EVN' usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'EVN' cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-1",
+        "Description": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-1",
+        "Description": "Field 'Event Type Code' (EVN.1) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-1",
+        "Description": "Field 'Event Type Code' (EVN.1) length does not exceed the length defined in the message profile (3).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "EVN-1",
+        "Description": "Field 'Event Type Code' (EVN.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "EVN-1",
+        "Description": "Field 'Event Type Code' (EVN.1) value (A01) exists in table 0003 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2",
+        "Description": "Field 'Recorded Date/Time' (EVN.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2",
+        "Description": "Field 'Recorded Date/Time' (EVN.2) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2",
+        "Description": "Field 'Recorded Date/Time' (EVN.2) length does not exceed the length defined in the message profile (26).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2",
+        "Description": "Field 'Recorded Date/Time' (EVN.2) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2.1",
+        "Description": "Component 'Time' (TS.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2.1",
+        "Description": "Component 'Time' (TS.1) length does not exceed the length defined in the message profile (24).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2.1",
+        "Description": "Component 'Time' (TS.1) datatype 'DTM' is valid.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "EVN-2.2",
+        "Description": "Component 'Degree of Precision' (TS.2) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-3",
+        "Description": "Field 'Date/Time Planned Event' (EVN.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-3",
+        "Description": "Field 'Date/Time Planned Event' (EVN.3) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-4",
+        "Description": "Field 'Event Reason Code' (EVN.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-4",
+        "Description": "Field 'Event Reason Code' (EVN.4) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-5",
+        "Description": "Field 'Operator ID' (EVN.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-5",
+        "Description": "Field 'Operator ID' (EVN.5) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-6",
+        "Description": "Field 'Event Occurred' (EVN.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-6",
+        "Description": "Field 'Event Occurred' (EVN.6) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "EVN-7",
+        "Description": "Field 'Event Facility' (EVN.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "EVN-7",
+        "Description": "Field 'Event Facility' (EVN.7) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PID' usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PID' cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-1",
+        "Description": "Field 'Set ID - PID' (PID.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-1",
+        "Description": "Field 'Set ID - PID' (PID.1) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-1",
+        "Description": "Field 'Set ID - PID' (PID.1) length does not exceed the length defined in the message profile (4).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-1",
+        "Description": "Field 'Set ID - PID' (PID.1) datatype 'SI' is valid.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-2",
+        "Description": "Field 'Patient ID' (PID.2) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-2",
+        "Description": "Field 'Patient ID' (PID.2) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) cardinality is [1..*]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) length does not exceed the length defined in the message profile (250).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) datatype is 'CX'. No validator registered for datatype 'CX'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.1",
+        "Description": "Component 'ID Number' (CX.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.1",
+        "Description": "Component 'ID Number' (CX.1) length does not exceed the length defined in the message profile (15).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.1",
+        "Description": "Component 'ID Number' (CX.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.2",
+        "Description": "Component 'Check Digit' (CX.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.3",
+        "Description": "Component 'Check Digit Scheme' (CX.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4",
+        "Description": "Component 'Assigning Authority' (CX.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4",
+        "Description": "Component 'Assigning Authority' (CX.4) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4",
+        "Description": "Component 'Assigning Authority' (CX.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.2",
+        "Description": "SubComponent 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.3",
+        "Description": "SubComponent 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) length does not exceed the length defined in the message profile (5).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) value (PI) exists in table 0203 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.6",
+        "Description": "Component 'Assigning Facility' (CX.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.7",
+        "Description": "Component 'Effective Date' (CX.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.8",
+        "Description": "Component 'Expiration Date' (CX.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.9",
+        "Description": "Component 'Assigning Jurisdiction' (CX.9) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.10",
+        "Description": "Component 'Assigning Agency or Department' (CX.10) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-4",
+        "Description": "Field 'Alternate Patient ID - PID' (PID.4) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-4",
+        "Description": "Field 'Alternate Patient ID - PID' (PID.4) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-5",
+        "Description": "Field 'Patient Name' (PID.5) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5",
+        "Description": "Field 'Patient Name' (PID.5) cardinality is [1..*]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-5",
+        "Description": "Field 'Patient Name' (PID.5) length does not exceed the length defined in the message profile (250).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-5",
+        "Description": "Field 'Patient Name' (PID.5) datatype is 'XPN'. No validator registered for datatype 'XPN'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1",
+        "Description": "Component 'Family Name' (XPN.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1",
+        "Description": "Component 'Family Name' (XPN.1) length does not exceed the length defined in the message profile (194).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1",
+        "Description": "Component 'Family Name' (XPN.1) datatype is 'FN'. No validator registered for datatype 'FN'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.1",
+        "Description": "SubComponent 'Surname' (FN.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.1",
+        "Description": "SubComponent 'Surname' (FN.1) length does not exceed the length defined in the message profile (50).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.1",
+        "Description": "SubComponent 'Surname' (FN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.2",
+        "Description": "SubComponent 'Own Surname Prefix' (FN.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.3",
+        "Description": "SubComponent 'Own Surname' (FN.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.4",
+        "Description": "SubComponent 'Surname Prefix From Partner/Spouse' (FN.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.1.5",
+        "Description": "SubComponent 'Surname From Partner/Spouse' (FN.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.2",
+        "Description": "Component 'Given Name' (XPN.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.3",
+        "Description": "Component 'Second and Further Given Names or Initials Thereof' (XPN.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.4",
+        "Description": "Component 'Suffix (e.g., JR or III)' (XPN.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.5",
+        "Description": "Component 'Prefix (e.g., DR)' (XPN.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.6",
+        "Description": "Component 'Degree (e.g., MD)' (XPN.6) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.7",
+        "Description": "Component 'Name Type Code' (XPN.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.8",
+        "Description": "Component 'Name Representation Code' (XPN.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.9",
+        "Description": "Component 'Name Context' (XPN.9) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.10",
+        "Description": "Component 'Name Validity Range' (XPN.10) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.11",
+        "Description": "Component 'Name Assembly Order' (XPN.11) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.12",
+        "Description": "Component 'Effective Date' (XPN.12) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.13",
+        "Description": "Component 'Expiration Date' (XPN.13) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-5.14",
+        "Description": "Component 'Professional Suffix' (XPN.14) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-6",
+        "Description": "Field 'Mother's Maiden Name' (PID.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-6",
+        "Description": "Field 'Mother's Maiden Name' (PID.6) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) length does not exceed the length defined in the message profile (26).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.1",
+        "Description": "Component 'Time' (TS.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.1",
+        "Description": "Component 'Time' (TS.1) length does not exceed the length defined in the message profile (24).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.1",
+        "Description": "Component 'Time' (TS.1) datatype 'DTM' is valid.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.2",
+        "Description": "Component 'Degree of Precision' (TS.2) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) value (F) exists in table 0001 (User defined tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "PID-9",
+        "Description": "Field 'Patient Alias' (PID.9) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-9",
+        "Description": "Field 'Patient Alias' (PID.9) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-10",
+        "Description": "Field 'Race' (PID.10) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-10",
+        "Description": "Field 'Race' (PID.10) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-11",
+        "Description": "Field 'Patient Address' (PID.11) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-11",
+        "Description": "Field 'Patient Address' (PID.11) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-12",
+        "Description": "Field 'County Code' (PID.12) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-12",
+        "Description": "Field 'County Code' (PID.12) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-13",
+        "Description": "Field 'Phone Number - Home' (PID.13) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-13",
+        "Description": "Field 'Phone Number - Home' (PID.13) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-14",
+        "Description": "Field 'Phone Number - Business' (PID.14) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-14",
+        "Description": "Field 'Phone Number - Business' (PID.14) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-15",
+        "Description": "Field 'Primary Language' (PID.15) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15",
+        "Description": "Field 'Primary Language' (PID.15) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-16",
+        "Description": "Field 'Marital Status' (PID.16) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-16",
+        "Description": "Field 'Marital Status' (PID.16) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-17",
+        "Description": "Field 'Religion' (PID.17) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-17",
+        "Description": "Field 'Religion' (PID.17) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-18",
+        "Description": "Field 'Patient Account Number' (PID.18) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-18",
+        "Description": "Field 'Patient Account Number' (PID.18) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-19",
+        "Description": "Field 'SSN Number - Patient' (PID.19) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-19",
+        "Description": "Field 'SSN Number - Patient' (PID.19) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-20",
+        "Description": "Field 'Driver's License Number - Patient' (PID.20) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-20",
+        "Description": "Field 'Driver's License Number - Patient' (PID.20) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-21",
+        "Description": "Field 'Mother's Identifier' (PID.21) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-21",
+        "Description": "Field 'Mother's Identifier' (PID.21) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-22",
+        "Description": "Field 'Ethnic Group' (PID.22) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-22",
+        "Description": "Field 'Ethnic Group' (PID.22) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-23",
+        "Description": "Field 'Birth Place' (PID.23) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-23",
+        "Description": "Field 'Birth Place' (PID.23) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-24",
+        "Description": "Field 'Multiple Birth Indicator' (PID.24) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-24",
+        "Description": "Field 'Multiple Birth Indicator' (PID.24) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-25",
+        "Description": "Field 'Birth Order' (PID.25) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-25",
+        "Description": "Field 'Birth Order' (PID.25) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-26",
+        "Description": "Field 'Citizenship' (PID.26) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-26",
+        "Description": "Field 'Citizenship' (PID.26) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-27",
+        "Description": "Field 'Veterans Military Status' (PID.27) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-27",
+        "Description": "Field 'Veterans Military Status' (PID.27) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-28",
+        "Description": "Field 'Nationality' (PID.28) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-28",
+        "Description": "Field 'Nationality' (PID.28) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-29",
+        "Description": "Field 'Patient Death Date and Time' (PID.29) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-29",
+        "Description": "Field 'Patient Death Date and Time' (PID.29) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-30",
+        "Description": "Field 'Patient Death Indicator' (PID.30) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-30",
+        "Description": "Field 'Patient Death Indicator' (PID.30) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-31",
+        "Description": "Field 'Identity Unknown Indicator' (PID.31) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-31",
+        "Description": "Field 'Identity Unknown Indicator' (PID.31) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-32",
+        "Description": "Field 'Identity Reliability Code' (PID.32) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-32",
+        "Description": "Field 'Identity Reliability Code' (PID.32) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-33",
+        "Description": "Field 'Last Update Date/Time' (PID.33) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-33",
+        "Description": "Field 'Last Update Date/Time' (PID.33) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-34",
+        "Description": "Field 'Last Update Facility' (PID.34) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-34",
+        "Description": "Field 'Last Update Facility' (PID.34) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-35",
+        "Description": "Field 'Species Code' (PID.35) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-35",
+        "Description": "Field 'Species Code' (PID.35) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-36",
+        "Description": "Field 'Breed Code' (PID.36) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-36",
+        "Description": "Field 'Breed Code' (PID.36) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-37",
+        "Description": "Field 'Strain' (PID.37) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-37",
+        "Description": "Field 'Strain' (PID.37) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-38",
+        "Description": "Field 'Production Class Code' (PID.38) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-38",
+        "Description": "Field 'Production Class Code' (PID.38) cardinality is [0..2]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-39",
+        "Description": "Field 'Tribal Citizenship' (PID.39) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-39",
+        "Description": "Field 'Tribal Citizenship' (PID.39) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PD1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PD1' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'ROL' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'ROL' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'NK1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'NK1' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PV1' usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PV1' cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-1",
+        "Description": "Field 'Set ID - PV1' (PV1.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-1",
+        "Description": "Field 'Set ID - PV1' (PV1.1) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-1",
+        "Description": "Field 'Set ID - PV1' (PV1.1) length does not exceed the length defined in the message profile (4).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PV1-1",
+        "Description": "Field 'Set ID - PV1' (PV1.1) datatype 'SI' is valid.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PV1-2",
+        "Description": "Field 'Patient Class' (PV1.2) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-2",
+        "Description": "Field 'Patient Class' (PV1.2) cardinality is [1..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-2",
+        "Description": "Field 'Patient Class' (PV1.2) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PV1-2",
+        "Description": "Field 'Patient Class' (PV1.2) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PV1-2",
+        "Description": "Field 'Patient Class' (PV1.2) value (I) exists in table 0004 (User defined tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3",
+        "Description": "Field 'Assigned Patient Location' (PV1.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3",
+        "Description": "Field 'Assigned Patient Location' (PV1.3) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3",
+        "Description": "Field 'Assigned Patient Location' (PV1.3) length does not exceed the length defined in the message profile (80).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3",
+        "Description": "Field 'Assigned Patient Location' (PV1.3) datatype is 'PL'. No validator registered for datatype 'PL'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.1",
+        "Description": "Component 'Point of Care' (PL.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.1",
+        "Description": "Component 'Point of Care' (PL.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.1",
+        "Description": "Component 'Point of Care' (PL.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.2",
+        "Description": "Component 'Room' (PL.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.2",
+        "Description": "Component 'Room' (PL.2) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.2",
+        "Description": "Component 'Room' (PL.2) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.3",
+        "Description": "Component 'Bed' (PL.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.3",
+        "Description": "Component 'Bed' (PL.3) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.3",
+        "Description": "Component 'Bed' (PL.3) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.4",
+        "Description": "Component 'Facility' (PL.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.5",
+        "Description": "Component 'Location Status' (PL.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.6",
+        "Description": "Component 'Person Location Type' (PL.6) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.7",
+        "Description": "Component 'Building' (PL.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.8",
+        "Description": "Component 'Floor' (PL.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.9",
+        "Description": "Component 'Location Description' (PL.9) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.10",
+        "Description": "Component 'Comprehensive Location Identifier' (PL.10) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-3.11",
+        "Description": "Component 'Assigning Authority for Location' (PL.11) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-4",
+        "Description": "Field 'Admission Type' (PV1.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-4",
+        "Description": "Field 'Admission Type' (PV1.4) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-5",
+        "Description": "Field 'Preadmit Number' (PV1.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-5",
+        "Description": "Field 'Preadmit Number' (PV1.5) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-6",
+        "Description": "Field 'Prior Patient Location' (PV1.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-6",
+        "Description": "Field 'Prior Patient Location' (PV1.6) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-7",
+        "Description": "Field 'Attending Doctor' (PV1.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-7",
+        "Description": "Field 'Attending Doctor' (PV1.7) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-8",
+        "Description": "Field 'Referring Doctor' (PV1.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-8",
+        "Description": "Field 'Referring Doctor' (PV1.8) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-9",
+        "Description": "Field 'Consulting Doctor' (PV1.9) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-9",
+        "Description": "Field 'Consulting Doctor' (PV1.9) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-10",
+        "Description": "Field 'Hospital Service' (PV1.10) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-10",
+        "Description": "Field 'Hospital Service' (PV1.10) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-11",
+        "Description": "Field 'Temporary Location' (PV1.11) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-11",
+        "Description": "Field 'Temporary Location' (PV1.11) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-12",
+        "Description": "Field 'Preadmit Test Indicator' (PV1.12) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-12",
+        "Description": "Field 'Preadmit Test Indicator' (PV1.12) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-13",
+        "Description": "Field 'Re-admission Indicator' (PV1.13) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-13",
+        "Description": "Field 'Re-admission Indicator' (PV1.13) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-14",
+        "Description": "Field 'Admit Source' (PV1.14) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-14",
+        "Description": "Field 'Admit Source' (PV1.14) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-15",
+        "Description": "Field 'Ambulatory Status' (PV1.15) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-15",
+        "Description": "Field 'Ambulatory Status' (PV1.15) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-16",
+        "Description": "Field 'VIP Indicator' (PV1.16) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-16",
+        "Description": "Field 'VIP Indicator' (PV1.16) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-17",
+        "Description": "Field 'Admitting Doctor' (PV1.17) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-17",
+        "Description": "Field 'Admitting Doctor' (PV1.17) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-18",
+        "Description": "Field 'Patient Type' (PV1.18) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-18",
+        "Description": "Field 'Patient Type' (PV1.18) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-19",
+        "Description": "Field 'Visit Number' (PV1.19) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-19",
+        "Description": "Field 'Visit Number' (PV1.19) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-20",
+        "Description": "Field 'Financial Class' (PV1.20) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-20",
+        "Description": "Field 'Financial Class' (PV1.20) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-21",
+        "Description": "Field 'Charge Price Indicator' (PV1.21) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-21",
+        "Description": "Field 'Charge Price Indicator' (PV1.21) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-22",
+        "Description": "Field 'Courtesy Code' (PV1.22) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-22",
+        "Description": "Field 'Courtesy Code' (PV1.22) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-23",
+        "Description": "Field 'Credit Rating' (PV1.23) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-23",
+        "Description": "Field 'Credit Rating' (PV1.23) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-24",
+        "Description": "Field 'Contract Code' (PV1.24) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-24",
+        "Description": "Field 'Contract Code' (PV1.24) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-25",
+        "Description": "Field 'Contract Effective Date' (PV1.25) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-25",
+        "Description": "Field 'Contract Effective Date' (PV1.25) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-26",
+        "Description": "Field 'Contract Amount' (PV1.26) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-26",
+        "Description": "Field 'Contract Amount' (PV1.26) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-27",
+        "Description": "Field 'Contract Period' (PV1.27) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-27",
+        "Description": "Field 'Contract Period' (PV1.27) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-28",
+        "Description": "Field 'Interest Code' (PV1.28) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-28",
+        "Description": "Field 'Interest Code' (PV1.28) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-29",
+        "Description": "Field 'Transfer to Bad Debt Code' (PV1.29) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-29",
+        "Description": "Field 'Transfer to Bad Debt Code' (PV1.29) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-30",
+        "Description": "Field 'Transfer to Bad Debt Date' (PV1.30) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-30",
+        "Description": "Field 'Transfer to Bad Debt Date' (PV1.30) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-31",
+        "Description": "Field 'Bad Debt Agency Code' (PV1.31) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-31",
+        "Description": "Field 'Bad Debt Agency Code' (PV1.31) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-32",
+        "Description": "Field 'Bad Debt Transfer Amount' (PV1.32) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-32",
+        "Description": "Field 'Bad Debt Transfer Amount' (PV1.32) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-33",
+        "Description": "Field 'Bad Debt Recovery Amount' (PV1.33) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-33",
+        "Description": "Field 'Bad Debt Recovery Amount' (PV1.33) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-34",
+        "Description": "Field 'Delete Account Indicator' (PV1.34) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-34",
+        "Description": "Field 'Delete Account Indicator' (PV1.34) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-35",
+        "Description": "Field 'Delete Account Date' (PV1.35) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-35",
+        "Description": "Field 'Delete Account Date' (PV1.35) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-36",
+        "Description": "Field 'Discharge Disposition' (PV1.36) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-36",
+        "Description": "Field 'Discharge Disposition' (PV1.36) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-37",
+        "Description": "Field 'Discharged to Location' (PV1.37) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-37",
+        "Description": "Field 'Discharged to Location' (PV1.37) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-38",
+        "Description": "Field 'Diet Type' (PV1.38) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-38",
+        "Description": "Field 'Diet Type' (PV1.38) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-39",
+        "Description": "Field 'Servicing Facility' (PV1.39) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-39",
+        "Description": "Field 'Servicing Facility' (PV1.39) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-40",
+        "Description": "Field 'Bed Status' (PV1.40) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-40",
+        "Description": "Field 'Bed Status' (PV1.40) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-41",
+        "Description": "Field 'Account Status' (PV1.41) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-41",
+        "Description": "Field 'Account Status' (PV1.41) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-42",
+        "Description": "Field 'Pending Location' (PV1.42) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-42",
+        "Description": "Field 'Pending Location' (PV1.42) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-43",
+        "Description": "Field 'Prior Temporary Location' (PV1.43) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-43",
+        "Description": "Field 'Prior Temporary Location' (PV1.43) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-44",
+        "Description": "Field 'Admit Date/Time' (PV1.44) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-44",
+        "Description": "Field 'Admit Date/Time' (PV1.44) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-45",
+        "Description": "Field 'Discharge Date/Time' (PV1.45) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-45",
+        "Description": "Field 'Discharge Date/Time' (PV1.45) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-46",
+        "Description": "Field 'Current Patient Balance' (PV1.46) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-46",
+        "Description": "Field 'Current Patient Balance' (PV1.46) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-47",
+        "Description": "Field 'Total Charges' (PV1.47) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-47",
+        "Description": "Field 'Total Charges' (PV1.47) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-48",
+        "Description": "Field 'Total Adjustments' (PV1.48) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-48",
+        "Description": "Field 'Total Adjustments' (PV1.48) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-49",
+        "Description": "Field 'Total Payments' (PV1.49) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-49",
+        "Description": "Field 'Total Payments' (PV1.49) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-50",
+        "Description": "Field 'Alternate Visit ID' (PV1.50) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-50",
+        "Description": "Field 'Alternate Visit ID' (PV1.50) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-51",
+        "Description": "Field 'Visit Indicator' (PV1.51) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-51",
+        "Description": "Field 'Visit Indicator' (PV1.51) cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PV1-52",
+        "Description": "Field 'Other Healthcare Provider' (PV1.52) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PV1-52",
+        "Description": "Field 'Other Healthcare Provider' (PV1.52) cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PV2' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PV2' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'ROL' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'ROL' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'DB1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'DB1' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'OBX' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'OBX' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'AL1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'AL1' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'DG1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'DG1' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'DRG' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'DRG' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Group 'PROCEDURE' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Group 'PROCEDURE' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'GT1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'GT1' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Group 'INSURANCE' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Group 'INSURANCE' cardinality is [0..*]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'ACC' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'ACC' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'UB1' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'UB1' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'UB2' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'UB2' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PDA' usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "ADT_A01",
+        "Description": "Segment 'PDA' cardinality is [0..1]. Found 0 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    }
+]

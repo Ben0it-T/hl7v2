@@ -1,0 +1,1179 @@
+{
+    "Type": "group",
+    "Name": "ORU_R01",
+    "LongName": "ORU_R01",
+    "segments": [
+        {
+            "Type": "segment",
+            "Name": "MSH",
+            "LongName": "Message Header",
+            "hasError": false,
+            "comments": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.1",
+                        "LocName": "MSH-1",
+                        "LongName": "Field Separator",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "|"
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.2",
+                        "LocName": "MSH-2",
+                        "LongName": "Encoding Characters",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "^~\\&"
+                    }
+                ],
+                "3": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.3",
+                        "LocName": "MSH-3",
+                        "LongName": "Sending Application",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Sending Application' (MSH.3) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "SENDAPP",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-3.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDAPP"
+                            }
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.4",
+                        "LocName": "MSH-4",
+                        "LongName": "Sending Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Sending Facility' (MSH.4) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "SENDFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-4.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDFAC"
+                            }
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.5",
+                        "LocName": "MSH-5",
+                        "LongName": "Receiving Application",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Receiving Application' (MSH.5) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "RECVAPP",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-5.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "RECVAPP"
+                            }
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.6",
+                        "LocName": "MSH-6",
+                        "LongName": "Receiving Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Receiving Facility' (MSH.6) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "RECVFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-6.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "RECVFAC"
+                            }
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.7",
+                        "LocName": "MSH-7",
+                        "LongName": "Date/Time Of Message",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Date/Time Of Message' (MSH.7) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "20260115083000",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "TS.1",
+                                "LocName": "MSH-7.1",
+                                "LongName": "Time",
+                                "Datatype": "DTM",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "20260115083000"
+                            }
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.8",
+                        "LocName": "MSH-8",
+                        "LongName": "Security",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Security' (MSH.8) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "9": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.9",
+                        "LocName": "MSH-9",
+                        "LongName": "Message Type",
+                        "Datatype": "MSG",
+                        "hasError": false,
+                        "comments": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "ORU^R01^ORU_R01",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "MSG.1",
+                                "LocName": "MSH-9.1",
+                                "LongName": "Message Code",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Message Code' (MSG.1) value (ORU) exists in table 0076 (HL7 standard tables).",
+                                "value": "ORU"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "MSG.2",
+                                "LocName": "MSH-9.2",
+                                "LongName": "Trigger Event",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Trigger Event' (MSG.2) value (R01) exists in table 0003 (HL7 standard tables).",
+                                "value": "R01"
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "MSG.3",
+                                "LocName": "MSH-9.3",
+                                "LongName": "Message Structure",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Message Structure' (MSG.3) value (ORU_R01) exists in table 0354 (HL7 standard tables).",
+                                "value": "ORU_R01"
+                            }
+                        }
+                    }
+                ],
+                "10": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.10",
+                        "LocName": "MSH-10",
+                        "LongName": "Message Control ID",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "MSG0001"
+                    }
+                ],
+                "11": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.11",
+                        "LocName": "MSH-11",
+                        "LongName": "Processing ID",
+                        "Datatype": "PT",
+                        "hasError": false,
+                        "comments": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "P",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "PT.1",
+                                "LocName": "MSH-11.1",
+                                "LongName": "Processing ID",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables).",
+                                "value": "P"
+                            }
+                        }
+                    }
+                ],
+                "12": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.12",
+                        "LocName": "MSH-12",
+                        "LongName": "Version ID",
+                        "Datatype": "VID",
+                        "hasError": false,
+                        "comments": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "2.5",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "VID.1",
+                                "LocName": "MSH-12.1",
+                                "LongName": "Version ID",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Version ID' (VID.1) value (2.5) exists in table 0104 (HL7 standard tables).",
+                                "value": "2.5"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "group",
+            "Name": "PATIENT_RESULT",
+            "LongName": "PATIENT_RESULT",
+            "segments": [
+                {
+                    "Type": "group",
+                    "Name": "PATIENT",
+                    "LongName": "PATIENT",
+                    "segments": [
+                        {
+                            "Type": "segment",
+                            "Name": "PID",
+                            "LongName": "Patient Identification",
+                            "hasError": false,
+                            "comments": "Segment 'PID' cardinality is [1..1]. Found 1 time(s).",
+                            "fields": {
+                                "1": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.1",
+                                        "LocName": "PID-1",
+                                        "LongName": "Set ID - PID",
+                                        "Datatype": "SI",
+                                        "hasError": false,
+                                        "comments": "Field 'Set ID - PID' (PID.1) cardinality is [0..1]. Found 1 time(s).",
+                                        "value": "1"
+                                    }
+                                ],
+                                "2": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.2",
+                                        "LocName": "PID-2",
+                                        "LongName": "Patient ID",
+                                        "Datatype": "CX",
+                                        "hasError": false,
+                                        "comments": "Field 'Patient ID' (PID.2) cardinality is [0..1]. Found 0 time(s).",
+                                        "value": ""
+                                    }
+                                ],
+                                "3": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.3",
+                                        "LocName": "PID-3",
+                                        "LongName": "Patient Identifier List",
+                                        "Datatype": "CX",
+                                        "hasError": false,
+                                        "comments": "Field 'Patient Identifier List' (PID.3) cardinality is [1..*]. Found 1 time(s).",
+                                        "value": "100001^^^HOSP^PI",
+                                        "components": {
+                                            "1": {
+                                                "Type": "component",
+                                                "Name": "CX.1",
+                                                "LocName": "PID-3.1",
+                                                "LongName": "ID Number",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "100001"
+                                            },
+                                            "2": {
+                                                "Type": "component",
+                                                "Name": "CX.2",
+                                                "LocName": "PID-3.2",
+                                                "LongName": "Check Digit",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": ""
+                                            },
+                                            "3": {
+                                                "Type": "component",
+                                                "Name": "CX.3",
+                                                "LocName": "PID-3.3",
+                                                "LongName": "Check Digit Scheme",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "Type": "component",
+                                                "Name": "CX.4",
+                                                "LocName": "PID-3.4",
+                                                "LongName": "Assigning Authority",
+                                                "Datatype": "HD",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "HOSP",
+                                                "subcomponents": {
+                                                    "1": {
+                                                        "Type": "subcomponent",
+                                                        "Name": "HD.1",
+                                                        "LocName": "PID-3.4.1",
+                                                        "LongName": "Namespace ID",
+                                                        "Datatype": "IS",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "HOSP"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "Type": "component",
+                                                "Name": "CX.5",
+                                                "LocName": "PID-3.5",
+                                                "LongName": "Identifier Type Code",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Component 'Identifier Type Code' (CX.5) value (PI) exists in table 0203 (HL7 standard tables).",
+                                                "value": "PI"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "4": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.4",
+                                        "LocName": "PID-4",
+                                        "LongName": "Alternate Patient ID - PID",
+                                        "Datatype": "CX",
+                                        "hasError": false,
+                                        "comments": "Field 'Alternate Patient ID - PID' (PID.4) cardinality is [0..*]. Found 0 time(s).",
+                                        "value": ""
+                                    }
+                                ],
+                                "5": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.5",
+                                        "LocName": "PID-5",
+                                        "LongName": "Patient Name",
+                                        "Datatype": "XPN",
+                                        "hasError": false,
+                                        "comments": "Field 'Patient Name' (PID.5) cardinality is [1..*]. Found 1 time(s).",
+                                        "value": "DOE^JANE^^^^^L",
+                                        "components": {
+                                            "1": {
+                                                "Type": "component",
+                                                "Name": "XPN.1",
+                                                "LocName": "PID-5.1",
+                                                "LongName": "Family Name",
+                                                "Datatype": "FN",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "DOE",
+                                                "subcomponents": {
+                                                    "1": {
+                                                        "Type": "subcomponent",
+                                                        "Name": "FN.1",
+                                                        "LocName": "PID-5.1.1",
+                                                        "LongName": "Surname",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "DOE"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "Type": "component",
+                                                "Name": "XPN.2",
+                                                "LocName": "PID-5.2",
+                                                "LongName": "Given Name",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "JANE"
+                                            },
+                                            "3": {
+                                                "Type": "component",
+                                                "Name": "XPN.3",
+                                                "LocName": "PID-5.3",
+                                                "LongName": "Second and Further Given Names or Initials Thereof",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": ""
+                                            },
+                                            "4": {
+                                                "Type": "component",
+                                                "Name": "XPN.4",
+                                                "LocName": "PID-5.4",
+                                                "LongName": "Suffix (e.g., JR or III)",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": ""
+                                            },
+                                            "5": {
+                                                "Type": "component",
+                                                "Name": "XPN.5",
+                                                "LocName": "PID-5.5",
+                                                "LongName": "Prefix (e.g., DR)",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": ""
+                                            },
+                                            "6": {
+                                                "Type": "component",
+                                                "Name": "XPN.6",
+                                                "LocName": "PID-5.6",
+                                                "LongName": "Degree (e.g., MD)",
+                                                "Datatype": "IS",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": ""
+                                            },
+                                            "7": {
+                                                "Type": "component",
+                                                "Name": "XPN.7",
+                                                "LocName": "PID-5.7",
+                                                "LongName": "Name Type Code",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Component 'Name Type Code' (XPN.7) value (L) exists in table 0200 (HL7 standard tables).",
+                                                "value": "L"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "6": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.6",
+                                        "LocName": "PID-6",
+                                        "LongName": "Mother's Maiden Name",
+                                        "Datatype": "XPN",
+                                        "hasError": false,
+                                        "comments": "Field 'Mother's Maiden Name' (PID.6) cardinality is [0..*]. Found 0 time(s).",
+                                        "value": ""
+                                    }
+                                ],
+                                "7": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.7",
+                                        "LocName": "PID-7",
+                                        "LongName": "Date/Time of Birth",
+                                        "Datatype": "TS",
+                                        "hasError": false,
+                                        "comments": "Field 'Date/Time of Birth' (PID.7) cardinality is [0..1]. Found 1 time(s).",
+                                        "value": "19800214",
+                                        "components": {
+                                            "1": {
+                                                "Type": "component",
+                                                "Name": "TS.1",
+                                                "LocName": "PID-7.1",
+                                                "LongName": "Time",
+                                                "Datatype": "DTM",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "19800214"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "8": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "PID.8",
+                                        "LocName": "PID-8",
+                                        "LongName": "Administrative Sex",
+                                        "Datatype": "IS",
+                                        "hasError": false,
+                                        "comments": "Field 'Administrative Sex' (PID.8) cardinality is [0..1]. Found 1 time(s). Field 'Administrative Sex' (PID.8) value (F) exists in table 0001 (User defined tables).",
+                                        "value": "F"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Type": "group",
+                    "Name": "ORDER_OBSERVATION",
+                    "LongName": "ORDER_OBSERVATION",
+                    "segments": [
+                        {
+                            "Type": "segment",
+                            "Name": "ORC",
+                            "LongName": "Common Order",
+                            "hasError": false,
+                            "comments": "Segment 'ORC' cardinality is [0..1]. Found 1 time(s).",
+                            "fields": {
+                                "1": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "ORC.1",
+                                        "LocName": "ORC-1",
+                                        "LongName": "Order Control",
+                                        "Datatype": "ID",
+                                        "hasError": false,
+                                        "comments": "Field 'Order Control' (ORC.1) cardinality is [1..1]. Found 1 time(s). Field 'Order Control' (ORC.1) value (RE) exists in table 0119 (HL7 standard tables).",
+                                        "value": "RE"
+                                    }
+                                ],
+                                "2": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "ORC.2",
+                                        "LocName": "ORC-2",
+                                        "LongName": "Placer Order Number",
+                                        "Datatype": "EI",
+                                        "hasError": false,
+                                        "comments": "Field 'Placer Order Number' (ORC.2) cardinality is [0..1]. Found 1 time(s).",
+                                        "value": "ORD0001^SENDAPP",
+                                        "components": {
+                                            "1": {
+                                                "Type": "component",
+                                                "Name": "EI.1",
+                                                "LocName": "ORC-2.1",
+                                                "LongName": "Entity Identifier",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "ORD0001"
+                                            },
+                                            "2": {
+                                                "Type": "component",
+                                                "Name": "EI.2",
+                                                "LocName": "ORC-2.2",
+                                                "LongName": "Namespace ID",
+                                                "Datatype": "IS",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "SENDAPP"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Type": "segment",
+                            "Name": "OBR",
+                            "LongName": "Observation Request",
+                            "hasError": false,
+                            "comments": "Segment 'OBR' cardinality is [1..1]. Found 1 time(s).",
+                            "fields": {
+                                "1": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "OBR.1",
+                                        "LocName": "OBR-1",
+                                        "LongName": "Set ID - OBR",
+                                        "Datatype": "SI",
+                                        "hasError": false,
+                                        "comments": "Field 'Set ID - OBR' (OBR.1) cardinality is [0..1]. Found 1 time(s).",
+                                        "value": "1"
+                                    }
+                                ],
+                                "2": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "OBR.2",
+                                        "LocName": "OBR-2",
+                                        "LongName": "Placer Order Number",
+                                        "Datatype": "EI",
+                                        "hasError": false,
+                                        "comments": "Field 'Placer Order Number' (OBR.2) cardinality is [0..1]. Found 1 time(s).",
+                                        "value": "ORD0001^SENDAPP",
+                                        "components": {
+                                            "1": {
+                                                "Type": "component",
+                                                "Name": "EI.1",
+                                                "LocName": "OBR-2.1",
+                                                "LongName": "Entity Identifier",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "ORD0001"
+                                            },
+                                            "2": {
+                                                "Type": "component",
+                                                "Name": "EI.2",
+                                                "LocName": "OBR-2.2",
+                                                "LongName": "Namespace ID",
+                                                "Datatype": "IS",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "SENDAPP"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "3": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "OBR.3",
+                                        "LocName": "OBR-3",
+                                        "LongName": "Filler Order Number",
+                                        "Datatype": "EI",
+                                        "hasError": false,
+                                        "comments": "Field 'Filler Order Number' (OBR.3) cardinality is [0..1]. Found 0 time(s).",
+                                        "value": ""
+                                    }
+                                ],
+                                "4": [
+                                    {
+                                        "Type": "field",
+                                        "Name": "OBR.4",
+                                        "LocName": "OBR-4",
+                                        "LongName": "Universal Service Identifier",
+                                        "Datatype": "CE",
+                                        "hasError": false,
+                                        "comments": "Field 'Universal Service Identifier' (OBR.4) cardinality is [1..1]. Found 1 time(s).",
+                                        "value": "GLU^Glucose^L",
+                                        "components": {
+                                            "1": {
+                                                "Type": "component",
+                                                "Name": "CE.1",
+                                                "LocName": "OBR-4.1",
+                                                "LongName": "Identifier",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "GLU"
+                                            },
+                                            "2": {
+                                                "Type": "component",
+                                                "Name": "CE.2",
+                                                "LocName": "OBR-4.2",
+                                                "LongName": "Text",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "",
+                                                "value": "Glucose"
+                                            },
+                                            "3": {
+                                                "Type": "component",
+                                                "Name": "CE.3",
+                                                "LocName": "OBR-4.3",
+                                                "LongName": "Name of Coding System",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Component 'Name of Coding System' (CE.3) value (L) exists in table 0396 (HL7 standard tables).",
+                                                "value": "L"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Type": "group",
+                            "Name": "OBSERVATION",
+                            "LongName": "OBSERVATION",
+                            "segments": [
+                                {
+                                    "Type": "segment",
+                                    "Name": "OBX",
+                                    "LongName": "Observation/Result",
+                                    "hasError": false,
+                                    "comments": "Segment 'OBX' cardinality is [1..1]. Found 1 time(s).",
+                                    "fields": {
+                                        "1": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.1",
+                                                "LocName": "OBX-1",
+                                                "LongName": "Set ID - OBX",
+                                                "Datatype": "SI",
+                                                "hasError": false,
+                                                "comments": "Field 'Set ID - OBX' (OBX.1) cardinality is [0..1]. Found 1 time(s).",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        "2": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.2",
+                                                "LocName": "OBX-2",
+                                                "LongName": "Value Type",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Field 'Value Type' (OBX.2) cardinality is [0..1]. Found 1 time(s). Field 'Value Type' (OBX.2) value (NM) exists in table 0125 (HL7 standard tables).",
+                                                "value": "NM"
+                                            }
+                                        ],
+                                        "3": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.3",
+                                                "LocName": "OBX-3",
+                                                "LongName": "Observation Identifier",
+                                                "Datatype": "CE",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Identifier' (OBX.3) cardinality is [1..1]. Found 1 time(s).",
+                                                "value": "GLU^Glucose^L",
+                                                "components": {
+                                                    "1": {
+                                                        "Type": "component",
+                                                        "Name": "CE.1",
+                                                        "LocName": "OBX-3.1",
+                                                        "LongName": "Identifier",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "GLU"
+                                                    },
+                                                    "2": {
+                                                        "Type": "component",
+                                                        "Name": "CE.2",
+                                                        "LocName": "OBX-3.2",
+                                                        "LongName": "Text",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "Glucose"
+                                                    },
+                                                    "3": {
+                                                        "Type": "component",
+                                                        "Name": "CE.3",
+                                                        "LocName": "OBX-3.3",
+                                                        "LongName": "Name of Coding System",
+                                                        "Datatype": "ID",
+                                                        "hasError": false,
+                                                        "comments": "Component 'Name of Coding System' (CE.3) value (L) exists in table 0396 (HL7 standard tables).",
+                                                        "value": "L"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "4": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.4",
+                                                "LocName": "OBX-4",
+                                                "LongName": "Observation Sub-ID",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Sub-ID' (OBX.4) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "5": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.5",
+                                                "LocName": "OBX-5",
+                                                "LongName": "Observation Value",
+                                                "Datatype": "varies",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Value' (OBX.5) cardinality is [0..*]. Found 1 time(s).",
+                                                "value": "5.4"
+                                            }
+                                        ],
+                                        "6": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.6",
+                                                "LocName": "OBX-6",
+                                                "LongName": "Units",
+                                                "Datatype": "CE",
+                                                "hasError": false,
+                                                "comments": "Field 'Units' (OBX.6) cardinality is [0..1]. Found 1 time(s).",
+                                                "value": "mmol/L",
+                                                "components": {
+                                                    "1": {
+                                                        "Type": "component",
+                                                        "Name": "CE.1",
+                                                        "LocName": "OBX-6.1",
+                                                        "LongName": "Identifier",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "mmol/L"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "7": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.7",
+                                                "LocName": "OBX-7",
+                                                "LongName": "References Range",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "Field 'References Range' (OBX.7) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "8": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.8",
+                                                "LocName": "OBX-8",
+                                                "LongName": "Abnormal Flags",
+                                                "Datatype": "IS",
+                                                "hasError": false,
+                                                "comments": "Field 'Abnormal Flags' (OBX.8) cardinality is [0..*]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "9": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.9",
+                                                "LocName": "OBX-9",
+                                                "LongName": "Probability",
+                                                "Datatype": "NM",
+                                                "hasError": false,
+                                                "comments": "Field 'Probability' (OBX.9) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "10": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.10",
+                                                "LocName": "OBX-10",
+                                                "LongName": "Nature of Abnormal Test",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Field 'Nature of Abnormal Test' (OBX.10) cardinality is [0..*]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "11": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.11",
+                                                "LocName": "OBX-11",
+                                                "LongName": "Observation Result Status",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Result Status' (OBX.11) cardinality is [1..1]. Found 1 time(s). Field 'Observation Result Status' (OBX.11) value (F) exists in table 0085 (HL7 standard tables).",
+                                                "value": "F"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Type": "group",
+                            "Name": "SPECIMEN",
+                            "LongName": "SPECIMEN",
+                            "segments": [
+                                {
+                                    "Type": "segment",
+                                    "Name": "SPM",
+                                    "LongName": "Specimen",
+                                    "hasError": false,
+                                    "comments": "Segment 'SPM' cardinality is [1..1]. Found 1 time(s).",
+                                    "fields": {
+                                        "1": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "SPM.1",
+                                                "LocName": "SPM-1",
+                                                "LongName": "Set ID - SPM",
+                                                "Datatype": "SI",
+                                                "hasError": false,
+                                                "comments": "Field 'Set ID - SPM' (SPM.1) cardinality is [0..1]. Found 1 time(s).",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        "2": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "SPM.2",
+                                                "LocName": "SPM-2",
+                                                "LongName": "Specimen ID",
+                                                "Datatype": "EIP",
+                                                "hasError": false,
+                                                "comments": "Field 'Specimen ID' (SPM.2) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "3": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "SPM.3",
+                                                "LocName": "SPM-3",
+                                                "LongName": "Specimen Parent IDs",
+                                                "Datatype": "EIP",
+                                                "hasError": false,
+                                                "comments": "Field 'Specimen Parent IDs' (SPM.3) cardinality is [0..*]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "4": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "SPM.4",
+                                                "LocName": "SPM-4",
+                                                "LongName": "Specimen Type",
+                                                "Datatype": "CWE",
+                                                "hasError": false,
+                                                "comments": "Field 'Specimen Type' (SPM.4) cardinality is [1..1]. Found 1 time(s). Field 'Specimen Type' (SPM.4) value (ASP) exists in table 0487 (HL7 standard tables).",
+                                                "value": "ASP^Aspirate",
+                                                "components": {
+                                                    "1": {
+                                                        "Type": "component",
+                                                        "Name": "CWE.1",
+                                                        "LocName": "SPM-4.1",
+                                                        "LongName": "Identifier",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "ASP"
+                                                    },
+                                                    "2": {
+                                                        "Type": "component",
+                                                        "Name": "CWE.2",
+                                                        "LocName": "SPM-4.2",
+                                                        "LongName": "Text",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "Aspirate"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Type": "segment",
+                                    "Name": "OBX",
+                                    "LongName": "Observation/Result",
+                                    "hasError": false,
+                                    "comments": "Segment 'OBX' cardinality is [0..*]. Found 1 time(s).",
+                                    "fields": {
+                                        "1": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.1",
+                                                "LocName": "OBX-1",
+                                                "LongName": "Set ID - OBX",
+                                                "Datatype": "SI",
+                                                "hasError": false,
+                                                "comments": "Field 'Set ID - OBX' (OBX.1) cardinality is [0..1]. Found 1 time(s).",
+                                                "value": "2"
+                                            }
+                                        ],
+                                        "2": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.2",
+                                                "LocName": "OBX-2",
+                                                "LongName": "Value Type",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Field 'Value Type' (OBX.2) cardinality is [0..1]. Found 1 time(s). Field 'Value Type' (OBX.2) value (NM) exists in table 0125 (HL7 standard tables).",
+                                                "value": "NM"
+                                            }
+                                        ],
+                                        "3": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.3",
+                                                "LocName": "OBX-3",
+                                                "LongName": "Observation Identifier",
+                                                "Datatype": "CE",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Identifier' (OBX.3) cardinality is [1..1]. Found 1 time(s).",
+                                                "value": "HEM^Hemolysis^L",
+                                                "components": {
+                                                    "1": {
+                                                        "Type": "component",
+                                                        "Name": "CE.1",
+                                                        "LocName": "OBX-3.1",
+                                                        "LongName": "Identifier",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "HEM"
+                                                    },
+                                                    "2": {
+                                                        "Type": "component",
+                                                        "Name": "CE.2",
+                                                        "LocName": "OBX-3.2",
+                                                        "LongName": "Text",
+                                                        "Datatype": "ST",
+                                                        "hasError": false,
+                                                        "comments": "",
+                                                        "value": "Hemolysis"
+                                                    },
+                                                    "3": {
+                                                        "Type": "component",
+                                                        "Name": "CE.3",
+                                                        "LocName": "OBX-3.3",
+                                                        "LongName": "Name of Coding System",
+                                                        "Datatype": "ID",
+                                                        "hasError": false,
+                                                        "comments": "Component 'Name of Coding System' (CE.3) value (L) exists in table 0396 (HL7 standard tables).",
+                                                        "value": "L"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "4": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.4",
+                                                "LocName": "OBX-4",
+                                                "LongName": "Observation Sub-ID",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Sub-ID' (OBX.4) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "5": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.5",
+                                                "LocName": "OBX-5",
+                                                "LongName": "Observation Value",
+                                                "Datatype": "varies",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Value' (OBX.5) cardinality is [0..*]. Found 1 time(s).",
+                                                "value": "0"
+                                            }
+                                        ],
+                                        "6": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.6",
+                                                "LocName": "OBX-6",
+                                                "LongName": "Units",
+                                                "Datatype": "CE",
+                                                "hasError": false,
+                                                "comments": "Field 'Units' (OBX.6) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "7": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.7",
+                                                "LocName": "OBX-7",
+                                                "LongName": "References Range",
+                                                "Datatype": "ST",
+                                                "hasError": false,
+                                                "comments": "Field 'References Range' (OBX.7) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "8": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.8",
+                                                "LocName": "OBX-8",
+                                                "LongName": "Abnormal Flags",
+                                                "Datatype": "IS",
+                                                "hasError": false,
+                                                "comments": "Field 'Abnormal Flags' (OBX.8) cardinality is [0..*]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "9": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.9",
+                                                "LocName": "OBX-9",
+                                                "LongName": "Probability",
+                                                "Datatype": "NM",
+                                                "hasError": false,
+                                                "comments": "Field 'Probability' (OBX.9) cardinality is [0..1]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "10": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.10",
+                                                "LocName": "OBX-10",
+                                                "LongName": "Nature of Abnormal Test",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Field 'Nature of Abnormal Test' (OBX.10) cardinality is [0..*]. Found 0 time(s).",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "11": [
+                                            {
+                                                "Type": "field",
+                                                "Name": "OBX.11",
+                                                "LocName": "OBX-11",
+                                                "LongName": "Observation Result Status",
+                                                "Datatype": "ID",
+                                                "hasError": false,
+                                                "comments": "Field 'Observation Result Status' (OBX.11) cardinality is [1..1]. Found 1 time(s). Field 'Observation Result Status' (OBX.11) value (F) exists in table 0085 (HL7 standard tables).",
+                                                "value": "F"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

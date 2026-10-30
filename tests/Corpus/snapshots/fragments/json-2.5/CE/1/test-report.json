@@ -1,0 +1,104 @@
+[
+    {
+        "Location": "PID-15",
+        "Description": "Field 'Primary Language' (PID.15) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15",
+        "Description": "Field 'Primary Language' (PID.15) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-15",
+        "Description": "Field 'Primary Language' (PID.15) length does not exceed the length defined in the message profile (250).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-15",
+        "Description": "Field 'Primary Language' (PID.15) datatype is 'CE'. No validator registered for datatype 'CE'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.1",
+        "Description": "Component 'Identifier' (CE.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.1",
+        "Description": "Component 'Identifier' (CE.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.1",
+        "Description": "Component 'Identifier' (CE.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.2",
+        "Description": "Component 'Text' (CE.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.2",
+        "Description": "Component 'Text' (CE.2) length does not exceed the length defined in the message profile (199).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.2",
+        "Description": "Component 'Text' (CE.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.3",
+        "Description": "Component 'Name of Coding System' (CE.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.3",
+        "Description": "Component 'Name of Coding System' (CE.3) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.3",
+        "Description": "Component 'Name of Coding System' (CE.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.3",
+        "Description": "Component 'Name of Coding System' (CE.3) value (ISO639) not in table 0396 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": false
+    },
+    {
+        "Location": "PID-15.4",
+        "Description": "Component 'Alternate Identifier' (CE.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.5",
+        "Description": "Component 'Alternate Text' (CE.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-15.6",
+        "Description": "Component 'Name of Alternate Coding System' (CE.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    }
+]

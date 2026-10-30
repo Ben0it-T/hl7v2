@@ -28,7 +28,8 @@ final class CorpusCase
         public readonly array $references,
         public readonly ?bool $expectedValid,
         public readonly array $expectedFindings,
-        public readonly ?string $knownBug
+        public readonly ?string $knownBug,
+        public readonly ?string $location = null
     ) {
     }
 
@@ -91,7 +92,8 @@ final class CorpusCase
             array_values(array_map('strval', $data['references'] ?? [])),
             $data['expected']['valid'] === null ? null : (bool) $data['expected']['valid'],
             array_values($data['expected']['findings'] ?? []),
-            isset($data['knownBug']) ? (string) $data['knownBug'] : null
+            isset($data['knownBug']) ? (string) $data['knownBug'] : null,
+            isset($data['location']) ? (string) $data['location'] : null
         );
     }
 }

@@ -1,0 +1,50 @@
+[
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) length does not exceed the length defined in the message profile (26).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-7",
+        "Description": "Field 'Date/Time of Birth' (PID.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.1",
+        "Description": "Component 'Time' (TS.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.1",
+        "Description": "Component 'Time' (TS.1) length does not exceed the length defined in the message profile (24).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-7.1",
+        "Description": "Component 'Time' (TS.1) datatype 'DTM' is not valid: invalid DTM value '19801314'.",
+        "Type": "Datatype",
+        "Result": false
+    },
+    {
+        "Location": "PID-7.2",
+        "Description": "Component 'Degree of Precision' (TS.2) usage is B.",
+        "Type": "Usage",
+        "Result": true
+    }
+]

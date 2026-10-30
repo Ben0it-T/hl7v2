@@ -12,6 +12,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 final class MessageCorpusTest extends CorpusTestCase
 {
     private const MESSAGES = __DIR__ . '/messages';
+    private const SNAPSHOTS = __DIR__ . '/snapshots/messages';
 
     /**
      * @return iterable<string, array{CorpusCase}>
@@ -28,5 +29,11 @@ final class MessageCorpusTest extends CorpusTestCase
     {
         $this->assertNotNull($case->expectedValid, 'A forged case must state expected.valid.');
         $this->assertExpectedValidity($case, $this->validate($case));
+    }
+
+    #[DataProvider('cases')]
+    public function testSnapshot(CorpusCase $case): void
+    {
+        $this->assertSnapshots($this->validateMessage($case), self::SNAPSHOTS . '/' . $case->id);
     }
 }

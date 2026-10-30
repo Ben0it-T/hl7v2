@@ -1,0 +1,1239 @@
+{
+    "Type": "group",
+    "Name": "ADT_A05",
+    "LongName": "ADT_A05",
+    "segments": [
+        {
+            "Type": "segment",
+            "Name": "MSH",
+            "LongName": "Message Header",
+            "hasError": false,
+            "comments": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.1",
+                        "LocName": "MSH-1",
+                        "LongName": "Field Separator",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "|"
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.2",
+                        "LocName": "MSH-2",
+                        "LongName": "Encoding Characters",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "^~\\&"
+                    }
+                ],
+                "3": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.3",
+                        "LocName": "MSH-3",
+                        "LongName": "Sending Application",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Sending Application' (MSH.3) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "SENDAPP",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-3.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDAPP"
+                            }
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.4",
+                        "LocName": "MSH-4",
+                        "LongName": "Sending Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Sending Facility' (MSH.4) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "SENDFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-4.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDFAC"
+                            }
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.5",
+                        "LocName": "MSH-5",
+                        "LongName": "Receiving Application",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Receiving Application' (MSH.5) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "RECVAPP",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-5.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "RECVAPP"
+                            }
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.6",
+                        "LocName": "MSH-6",
+                        "LongName": "Receiving Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Receiving Facility' (MSH.6) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "RECVFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-6.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "RECVFAC"
+                            }
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.7",
+                        "LocName": "MSH-7",
+                        "LongName": "Date/Time Of Message",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Date/Time Of Message' (MSH.7) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "20260115083000",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "TS.1",
+                                "LocName": "MSH-7.1",
+                                "LongName": "Time",
+                                "Datatype": "DTM",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "20260115083000"
+                            }
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.8",
+                        "LocName": "MSH-8",
+                        "LongName": "Security",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Security' (MSH.8) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "9": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.9",
+                        "LocName": "MSH-9",
+                        "LongName": "Message Type",
+                        "Datatype": "MSG",
+                        "hasError": false,
+                        "comments": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "ADT^A28^ADT_A05",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "MSG.1",
+                                "LocName": "MSH-9.1",
+                                "LongName": "Message Code",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Message Code' (MSG.1) value (ADT) exists in table 0076 (HL7 standard tables).",
+                                "value": "ADT"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "MSG.2",
+                                "LocName": "MSH-9.2",
+                                "LongName": "Trigger Event",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Trigger Event' (MSG.2) value (A28) exists in table 0003 (HL7 standard tables).",
+                                "value": "A28"
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "MSG.3",
+                                "LocName": "MSH-9.3",
+                                "LongName": "Message Structure",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Message Structure' (MSG.3) value (ADT_A05) exists in table 0354 (HL7 standard tables).",
+                                "value": "ADT_A05"
+                            }
+                        }
+                    }
+                ],
+                "10": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.10",
+                        "LocName": "MSH-10",
+                        "LongName": "Message Control ID",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "MSG0001"
+                    }
+                ],
+                "11": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.11",
+                        "LocName": "MSH-11",
+                        "LongName": "Processing ID",
+                        "Datatype": "PT",
+                        "hasError": false,
+                        "comments": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "P",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "PT.1",
+                                "LocName": "MSH-11.1",
+                                "LongName": "Processing ID",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables).",
+                                "value": "P"
+                            }
+                        }
+                    }
+                ],
+                "12": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.12",
+                        "LocName": "MSH-12",
+                        "LongName": "Version ID",
+                        "Datatype": "VID",
+                        "hasError": false,
+                        "comments": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "2.5^FRA^2.11",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "VID.1",
+                                "LocName": "MSH-12.1",
+                                "LongName": "Version ID",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Version ID' (VID.1) value (2.5) exists in table 0104 (HL7 standard tables).",
+                                "value": "2.5"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "VID.2",
+                                "LocName": "MSH-12.2",
+                                "LongName": "Internationalization Code",
+                                "Datatype": "CE",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "FRA",
+                                "subcomponents": {
+                                    "1": {
+                                        "Type": "subcomponent",
+                                        "Name": "CE.1",
+                                        "LocName": "MSH-12.2.1",
+                                        "LongName": "Identifier",
+                                        "Datatype": "ST",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "FRA"
+                                    }
+                                }
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "VID.3",
+                                "LocName": "MSH-12.3",
+                                "LongName": "International Version ID",
+                                "Datatype": "CE",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "2.11",
+                                "subcomponents": {
+                                    "1": {
+                                        "Type": "subcomponent",
+                                        "Name": "CE.1",
+                                        "LocName": "MSH-12.3.1",
+                                        "LongName": "Identifier",
+                                        "Datatype": "ST",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "2.11"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "13": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.13",
+                        "LocName": "MSH-13",
+                        "LongName": "Sequence Number",
+                        "Datatype": "NM",
+                        "hasError": false,
+                        "comments": "Field 'Sequence Number' (MSH.13) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "14": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.14",
+                        "LocName": "MSH-14",
+                        "LongName": "Continuation Pointer",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Continuation Pointer' (MSH.14) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "15": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.15",
+                        "LocName": "MSH-15",
+                        "LongName": "Accept Acknowledgment Type",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Accept Acknowledgment Type' (MSH.15) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "16": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.16",
+                        "LocName": "MSH-16",
+                        "LongName": "Application Acknowledgment Type",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Application Acknowledgment Type' (MSH.16) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "17": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.17",
+                        "LocName": "MSH-17",
+                        "LongName": "Country Code",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Country Code' (MSH.17) cardinality is [0..1]. Found 1 time(s). Field 'Country Code' (MSH.17) value (FRA) exists in table 0399 (HL7 standard tables).",
+                        "value": "FRA"
+                    }
+                ],
+                "18": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.18",
+                        "LocName": "MSH-18",
+                        "LongName": "Character Set",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Character Set' (MSH.18) cardinality is [0..1]. Found 1 time(s). Field 'Character Set' (MSH.18) value (UNICODE UTF-8) exists in table 0211 (HL7 standard tables).",
+                        "value": "UNICODE UTF-8"
+                    }
+                ],
+                "19": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.19",
+                        "LocName": "MSH-19",
+                        "LongName": "Principal Language Of Message",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Principal Language Of Message' (MSH.19) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "20": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.20",
+                        "LocName": "MSH-20",
+                        "LongName": "Alternate Character Set Handling Scheme",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Alternate Character Set Handling Scheme' (MSH.20) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "21": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.21",
+                        "LocName": "MSH-21",
+                        "LongName": "Message Profile Identifier",
+                        "Datatype": "EI",
+                        "hasError": false,
+                        "comments": "Field 'Message Profile Identifier' (MSH.21) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "2.11^IHE_FRANCE-2.11-PAM",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "EI.1",
+                                "LocName": "MSH-21.1",
+                                "LongName": "Entity Identifier",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "2.11"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "EI.2",
+                                "LocName": "MSH-21.2",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "IHE_FRANCE-2.11-PAM"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "segment",
+            "Name": "EVN",
+            "LongName": "Event Type",
+            "hasError": false,
+            "comments": "Segment 'EVN' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.1",
+                        "LocName": "EVN-1",
+                        "LongName": "Event Type Code",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Event Type Code' (EVN.1) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.2",
+                        "LocName": "EVN-2",
+                        "LongName": "Recorded Date/Time",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Recorded Date/Time' (EVN.2) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "20260115082500",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "TS.1",
+                                "LocName": "EVN-2.1",
+                                "LongName": "Time",
+                                "Datatype": "DTM",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "20260115082500"
+                            }
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.3",
+                        "LocName": "EVN-3",
+                        "LongName": "Date/Time Planned Event",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Date/Time Planned Event' (EVN.3) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.4",
+                        "LocName": "EVN-4",
+                        "LongName": "Event Reason Code",
+                        "Datatype": "IS",
+                        "hasError": false,
+                        "comments": "Field 'Event Reason Code' (EVN.4) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "5": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.5",
+                        "LocName": "EVN-5",
+                        "LongName": "Operator ID",
+                        "Datatype": "XCN",
+                        "hasError": false,
+                        "comments": "Field 'Operator ID' (EVN.5) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "6": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.6",
+                        "LocName": "EVN-6",
+                        "LongName": "Event Occurred",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Event Occurred' (EVN.6) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "Type": "field",
+                        "Name": "EVN.7",
+                        "LocName": "EVN-7",
+                        "LongName": "Event Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Event Facility' (EVN.7) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "SENDFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "EVN-7.1",
+                                "LongName": "Namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDFAC"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "segment",
+            "Name": "PID",
+            "LongName": "Patient Identification",
+            "hasError": false,
+            "comments": "Segment 'PID' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.1",
+                        "LocName": "PID-1",
+                        "LongName": "Set ID - PID",
+                        "Datatype": "SI",
+                        "hasError": false,
+                        "comments": "Field 'Set ID - PID' (PID.1) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "1"
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.2",
+                        "LocName": "PID-2",
+                        "LongName": "Patient ID",
+                        "Datatype": "CX",
+                        "hasError": false,
+                        "comments": "Field 'Patient ID' (PID.2) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "3": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.3",
+                        "LocName": "PID-3",
+                        "LongName": "Patient Identifier List",
+                        "Datatype": "CX",
+                        "hasError": false,
+                        "comments": "Field 'Patient Identifier List' (PID.3) cardinality is [1..*]. Found 1 time(s).",
+                        "value": "100001^^^HOSP&1.2.250.1.999.1.1&ISO^PI",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "CX.1",
+                                "LocName": "PID-3.1",
+                                "LongName": "ID Number",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "100001"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "CX.2",
+                                "LocName": "PID-3.2",
+                                "LongName": "Check Digit",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "CX.3",
+                                "LocName": "PID-3.3",
+                                "LongName": "Check Digit Scheme",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "4": {
+                                "Type": "component",
+                                "Name": "CX.4",
+                                "LocName": "PID-3.4",
+                                "LongName": "Assigning Authority",
+                                "Datatype": "HD",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "HOSP&1.2.250.1.999.1.1&ISO",
+                                "subcomponents": {
+                                    "1": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.1",
+                                        "LocName": "PID-3.4.1",
+                                        "LongName": "Namespace ID",
+                                        "Datatype": "IS",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "HOSP"
+                                    },
+                                    "2": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.2",
+                                        "LocName": "PID-3.4.2",
+                                        "LongName": "Universal ID",
+                                        "Datatype": "ST",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "1.2.250.1.999.1.1"
+                                    },
+                                    "3": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.3",
+                                        "LocName": "PID-3.4.3",
+                                        "LongName": "Universal ID Type",
+                                        "Datatype": "ID",
+                                        "hasError": false,
+                                        "comments": "SubComponent 'Universal ID Type' (HD.3) value (ISO) exists in table 0301 (User defined tables).",
+                                        "value": "ISO"
+                                    }
+                                }
+                            },
+                            "5": {
+                                "Type": "component",
+                                "Name": "CX.5",
+                                "LocName": "PID-3.5",
+                                "LongName": "Identifier Type Code",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Identifier Type Code' (CX.5) value (PI) exists in table 0203 (User defined tables).",
+                                "value": "PI"
+                            }
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.4",
+                        "LocName": "PID-4",
+                        "LongName": "Alternate Patient ID - PID",
+                        "Datatype": "CX",
+                        "hasError": false,
+                        "comments": "Field 'Alternate Patient ID - PID' (PID.4) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "5": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.5",
+                        "LocName": "PID-5",
+                        "LongName": "Patient Name",
+                        "Datatype": "XPN",
+                        "hasError": false,
+                        "comments": "Field 'Patient Name' (PID.5) cardinality is [1..*]. Found 1 time(s).",
+                        "value": "DOE^JANE^^^^^L",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "XPN.1",
+                                "LocName": "PID-5.1",
+                                "LongName": "Family Name",
+                                "Datatype": "FN",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "DOE",
+                                "subcomponents": {
+                                    "1": {
+                                        "Type": "subcomponent",
+                                        "Name": "FN.1",
+                                        "LocName": "PID-5.1.1",
+                                        "LongName": "Surname",
+                                        "Datatype": "ST",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "DOE"
+                                    }
+                                }
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "XPN.2",
+                                "LocName": "PID-5.2",
+                                "LongName": "Given Name",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "JANE"
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "XPN.3",
+                                "LocName": "PID-5.3",
+                                "LongName": "Second and Further Given Names or Initials Thereof",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "4": {
+                                "Type": "component",
+                                "Name": "XPN.4",
+                                "LocName": "PID-5.4",
+                                "LongName": "Suffix (e.g., JR or III)",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "5": {
+                                "Type": "component",
+                                "Name": "XPN.5",
+                                "LocName": "PID-5.5",
+                                "LongName": "Prefix (e.g., DR)",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "6": {
+                                "Type": "component",
+                                "Name": "XPN.6",
+                                "LocName": "PID-5.6",
+                                "LongName": "Degree (e.g., MD)",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "7": {
+                                "Type": "component",
+                                "Name": "XPN.7",
+                                "LocName": "PID-5.7",
+                                "LongName": "Name Type Code",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Name Type Code' (XPN.7) value (L) exists in table 0200 (User defined tables).",
+                                "value": "L"
+                            }
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.6",
+                        "LocName": "PID-6",
+                        "LongName": "Mother's Maiden Name",
+                        "Datatype": "XPN",
+                        "hasError": false,
+                        "comments": "Field 'Mother's Maiden Name' (PID.6) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.7",
+                        "LocName": "PID-7",
+                        "LongName": "Date/Time of Birth",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Date/Time of Birth' (PID.7) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "19800214",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "TS.1",
+                                "LocName": "PID-7.1",
+                                "LongName": "Time",
+                                "Datatype": "DTM",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "19800214"
+                            }
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.8",
+                        "LocName": "PID-8",
+                        "LongName": "Administrative Sex",
+                        "Datatype": "IS",
+                        "hasError": false,
+                        "comments": "Field 'Administrative Sex' (PID.8) cardinality is [0..1]. Found 1 time(s). Field 'Administrative Sex' (PID.8) value (F) exists in table 0001 (User defined tables).",
+                        "value": "F"
+                    }
+                ],
+                "9": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.9",
+                        "LocName": "PID-9",
+                        "LongName": "Patient Alias",
+                        "Datatype": "XPN",
+                        "hasError": false,
+                        "comments": "Field 'Patient Alias' (PID.9) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "10": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.10",
+                        "LocName": "PID-10",
+                        "LongName": "Race",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Race' (PID.10) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "11": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.11",
+                        "LocName": "PID-11",
+                        "LongName": "Patient Address",
+                        "Datatype": "XAD",
+                        "hasError": false,
+                        "comments": "Field 'Patient Address' (PID.11) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "12": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.12",
+                        "LocName": "PID-12",
+                        "LongName": "County Code",
+                        "Datatype": "IS",
+                        "hasError": false,
+                        "comments": "Field 'County Code' (PID.12) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "13": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.13",
+                        "LocName": "PID-13",
+                        "LongName": "Phone Number - Home",
+                        "Datatype": "XTN",
+                        "hasError": false,
+                        "comments": "Field 'Phone Number - Home' (PID.13) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "14": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.14",
+                        "LocName": "PID-14",
+                        "LongName": "Phone Number - Business",
+                        "Datatype": "XTN",
+                        "hasError": false,
+                        "comments": "Field 'Phone Number - Business' (PID.14) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "15": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.15",
+                        "LocName": "PID-15",
+                        "LongName": "Primary Language",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Primary Language' (PID.15) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "16": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.16",
+                        "LocName": "PID-16",
+                        "LongName": "Marital Status",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Marital Status' (PID.16) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "17": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.17",
+                        "LocName": "PID-17",
+                        "LongName": "Religion",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Religion' (PID.17) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "18": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.18",
+                        "LocName": "PID-18",
+                        "LongName": "Patient Account Number",
+                        "Datatype": "CX",
+                        "hasError": false,
+                        "comments": "Field 'Patient Account Number' (PID.18) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "19": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.19",
+                        "LocName": "PID-19",
+                        "LongName": "SSN Number - Patient",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'SSN Number - Patient' (PID.19) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "20": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.20",
+                        "LocName": "PID-20",
+                        "LongName": "Driver's License Number - Patient",
+                        "Datatype": "DLN",
+                        "hasError": false,
+                        "comments": "Field 'Driver's License Number - Patient' (PID.20) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "21": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.21",
+                        "LocName": "PID-21",
+                        "LongName": "Mother's Identifier",
+                        "Datatype": "CX",
+                        "hasError": false,
+                        "comments": "Field 'Mother's Identifier' (PID.21) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "22": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.22",
+                        "LocName": "PID-22",
+                        "LongName": "Ethnic Group",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Ethnic Group' (PID.22) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "23": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.23",
+                        "LocName": "PID-23",
+                        "LongName": "Birth Place",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Birth Place' (PID.23) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "24": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.24",
+                        "LocName": "PID-24",
+                        "LongName": "Multiple Birth Indicator",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Multiple Birth Indicator' (PID.24) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "25": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.25",
+                        "LocName": "PID-25",
+                        "LongName": "Birth Order",
+                        "Datatype": "NM",
+                        "hasError": false,
+                        "comments": "Field 'Birth Order' (PID.25) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "26": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.26",
+                        "LocName": "PID-26",
+                        "LongName": "Citizenship",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Citizenship' (PID.26) cardinality is [0..*]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "27": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.27",
+                        "LocName": "PID-27",
+                        "LongName": "Veterans Military Status",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Veterans Military Status' (PID.27) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "28": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.28",
+                        "LocName": "PID-28",
+                        "LongName": "Nationality",
+                        "Datatype": "CE",
+                        "hasError": false,
+                        "comments": "Field 'Nationality' (PID.28) cardinality is [0..0]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "29": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.29",
+                        "LocName": "PID-29",
+                        "LongName": "Patient Death Date and Time",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Patient Death Date and Time' (PID.29) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "30": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.30",
+                        "LocName": "PID-30",
+                        "LongName": "Patient Death Indicator",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Patient Death Indicator' (PID.30) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "31": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.31",
+                        "LocName": "PID-31",
+                        "LongName": "Identity Unknown Indicator",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Identity Unknown Indicator' (PID.31) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "32": [
+                    {
+                        "Type": "field",
+                        "Name": "PID.32",
+                        "LocName": "PID-32",
+                        "LongName": "Identity Reliability Code",
+                        "Datatype": "IS",
+                        "hasError": false,
+                        "comments": "Field 'Identity Reliability Code' (PID.32) cardinality is [1..*]. Found 1 time(s). Field 'Identity Reliability Code' (PID.32) value (PROV) exists in table 0445 (User defined tables).",
+                        "value": "PROV"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "segment",
+            "Name": "PV1",
+            "LongName": "Patient Visit",
+            "hasError": false,
+            "comments": "Segment 'PV1' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "PV1.1",
+                        "LocName": "PV1-1",
+                        "LongName": "Set ID - PV1",
+                        "Datatype": "SI",
+                        "hasError": false,
+                        "comments": "Field 'Set ID - PV1' (PV1.1) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "PV1.2",
+                        "LocName": "PV1-2",
+                        "LongName": "Patient Class",
+                        "Datatype": "IS",
+                        "hasError": false,
+                        "comments": "Field 'Patient Class' (PV1.2) cardinality is [1..1]. Found 1 time(s). Field 'Patient Class' (PV1.2) value (N) exists in table 0004 (User defined tables).",
+                        "value": "N"
+                    }
+                ],
+                "3": [
+                    {
+                        "Type": "field",
+                        "Name": "PV1.3",
+                        "LocName": "PV1-3",
+                        "LongName": "Assigned Patient Location",
+                        "Datatype": "PL",
+                        "hasError": true,
+                        "comments": "Field 'Assigned Patient Location' (PV1.3) is not allowed. Field 'Assigned Patient Location' (PV1.3) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "WARD1^101^1^SENDFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "PL.1",
+                                "LocName": "PV1-3.1",
+                                "LongName": "Point of Care",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "WARD1"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "PL.2",
+                                "LocName": "PV1-3.2",
+                                "LongName": "Room",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "101"
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "PL.3",
+                                "LocName": "PV1-3.3",
+                                "LongName": "Bed",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "1"
+                            },
+                            "4": {
+                                "Type": "component",
+                                "Name": "PL.4",
+                                "LocName": "PV1-3.4",
+                                "LongName": "Facility",
+                                "Datatype": "HD",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDFAC",
+                                "subcomponents": {
+                                    "1": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.1",
+                                        "LocName": "PV1-3.4.1",
+                                        "LongName": "Namespace ID",
+                                        "Datatype": "IS",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "SENDFAC"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

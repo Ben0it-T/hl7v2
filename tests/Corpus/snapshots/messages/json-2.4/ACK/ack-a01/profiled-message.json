@@ -1,0 +1,309 @@
+{
+    "Type": "group",
+    "Name": "ACK",
+    "LongName": "ACK",
+    "segments": [
+        {
+            "Type": "segment",
+            "Name": "MSH",
+            "LongName": "Message Header",
+            "hasError": false,
+            "comments": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.1",
+                        "LocName": "MSH-1",
+                        "LongName": "Field Separator",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "|"
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.2",
+                        "LocName": "MSH-2",
+                        "LongName": "Encoding Characters",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "^~\\&"
+                    }
+                ],
+                "3": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.3",
+                        "LocName": "MSH-3",
+                        "LongName": "Sending Application",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Sending Application' (MSH.3) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "RECVAPP",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-3.1",
+                                "LongName": "namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "RECVAPP"
+                            }
+                        }
+                    }
+                ],
+                "4": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.4",
+                        "LocName": "MSH-4",
+                        "LongName": "Sending Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Sending Facility' (MSH.4) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "RECVFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-4.1",
+                                "LongName": "namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "RECVFAC"
+                            }
+                        }
+                    }
+                ],
+                "5": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.5",
+                        "LocName": "MSH-5",
+                        "LongName": "Receiving Application",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Receiving Application' (MSH.5) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "SENDAPP",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-5.1",
+                                "LongName": "namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDAPP"
+                            }
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.6",
+                        "LocName": "MSH-6",
+                        "LongName": "Receiving Facility",
+                        "Datatype": "HD",
+                        "hasError": false,
+                        "comments": "Field 'Receiving Facility' (MSH.6) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "SENDFAC",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "HD.1",
+                                "LocName": "MSH-6.1",
+                                "LongName": "namespace ID",
+                                "Datatype": "IS",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "SENDFAC"
+                            }
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.7",
+                        "LocName": "MSH-7",
+                        "LongName": "Date/Time Of Message",
+                        "Datatype": "TS",
+                        "hasError": false,
+                        "comments": "Field 'Date/Time Of Message' (MSH.7) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "20260115083000",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "TS.1",
+                                "LocName": "MSH-7.1",
+                                "LongName": "time of an event",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "20260115083000"
+                            }
+                        }
+                    }
+                ],
+                "8": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.8",
+                        "LocName": "MSH-8",
+                        "LongName": "Security",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Security' (MSH.8) cardinality is [0..1]. Found 0 time(s).",
+                        "value": ""
+                    }
+                ],
+                "9": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.9",
+                        "LocName": "MSH-9",
+                        "LongName": "Message Type",
+                        "Datatype": "MSG",
+                        "hasError": false,
+                        "comments": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "ACK^A01^ACK",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "MSG.1",
+                                "LocName": "MSH-9.1",
+                                "LongName": "message type",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'message type' (MSG.1) value (ACK) exists in table 0076 (HL7 standard tables).",
+                                "value": "ACK"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "MSG.2",
+                                "LocName": "MSH-9.2",
+                                "LongName": "trigger event",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'trigger event' (MSG.2) value (A01) exists in table 0003 (HL7 standard tables).",
+                                "value": "A01"
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "MSG.3",
+                                "LocName": "MSH-9.3",
+                                "LongName": "message structure",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'message structure' (MSG.3) value (ACK) exists in table 0354 (HL7 standard tables).",
+                                "value": "ACK"
+                            }
+                        }
+                    }
+                ],
+                "10": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.10",
+                        "LocName": "MSH-10",
+                        "LongName": "Message Control ID",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "ACK0001"
+                    }
+                ],
+                "11": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.11",
+                        "LocName": "MSH-11",
+                        "LongName": "Processing ID",
+                        "Datatype": "PT",
+                        "hasError": false,
+                        "comments": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "P",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "PT.1",
+                                "LocName": "MSH-11.1",
+                                "LongName": "processing ID",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables).",
+                                "value": "P"
+                            }
+                        }
+                    }
+                ],
+                "12": [
+                    {
+                        "Type": "field",
+                        "Name": "MSH.12",
+                        "LocName": "MSH-12",
+                        "LongName": "Version ID",
+                        "Datatype": "VID",
+                        "hasError": false,
+                        "comments": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "2.4",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "VID.1",
+                                "LocName": "MSH-12.1",
+                                "LongName": "version ID",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'version ID' (VID.1) value (2.4) exists in table 0104 (HL7 standard tables).",
+                                "value": "2.4"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "segment",
+            "Name": "MSA",
+            "LongName": "Message Acknowledgment",
+            "hasError": false,
+            "comments": "Segment 'MSA' cardinality is [1..1]. Found 1 time(s).",
+            "fields": {
+                "1": [
+                    {
+                        "Type": "field",
+                        "Name": "MSA.1",
+                        "LocName": "MSA-1",
+                        "LongName": "Acknowledgment Code",
+                        "Datatype": "ID",
+                        "hasError": false,
+                        "comments": "Field 'Acknowledgment Code' (MSA.1) cardinality is [1..1]. Found 1 time(s). Field 'Acknowledgment Code' (MSA.1) value (AA) exists in table 0008 (HL7 standard tables).",
+                        "value": "AA"
+                    }
+                ],
+                "2": [
+                    {
+                        "Type": "field",
+                        "Name": "MSA.2",
+                        "LocName": "MSA-2",
+                        "LongName": "Message Control ID",
+                        "Datatype": "ST",
+                        "hasError": false,
+                        "comments": "Field 'Message Control ID' (MSA.2) cardinality is [1..1]. Found 1 time(s).",
+                        "value": "MSG0001"
+                    }
+                ]
+            }
+        }
+    ]
+}

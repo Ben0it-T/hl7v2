@@ -1,0 +1,158 @@
+[
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) cardinality is [1..*]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) length does not exceed the length defined in the message profile (250).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3",
+        "Description": "Field 'Patient Identifier List' (PID.3) datatype is 'CX'. No validator registered for datatype 'CX'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.1",
+        "Description": "Component 'ID Number' (CX.1) usage is R.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.1",
+        "Description": "Component 'ID Number' (CX.1) length does not exceed the length defined in the message profile (15).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.1",
+        "Description": "Component 'ID Number' (CX.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.2",
+        "Description": "Component 'Check Digit' (CX.2) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.3",
+        "Description": "Component 'Check Digit Scheme' (CX.3) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4",
+        "Description": "Component 'Assigning Authority' (CX.4) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4",
+        "Description": "Component 'Assigning Authority' (CX.4) length does not exceed the length defined in the message profile (227).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4",
+        "Description": "Component 'Assigning Authority' (CX.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) length does not exceed the length defined in the message profile (20).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.2",
+        "Description": "SubComponent 'Universal ID' (HD.2) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.4.3",
+        "Description": "SubComponent 'Universal ID Type' (HD.3) usage is C.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) length does not exceed the length defined in the message profile (5).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.5",
+        "Description": "Component 'Identifier Type Code' (CX.5) value (PI) exists in table 0203 (HL7 standard tables).",
+        "Type": "Table",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.6",
+        "Description": "Component 'Assigning Facility' (CX.6) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.7",
+        "Description": "Component 'Effective Date' (CX.7) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.8",
+        "Description": "Component 'Expiration Date' (CX.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.9",
+        "Description": "Component 'Assigning Jurisdiction' (CX.9) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-3.10",
+        "Description": "Component 'Assigning Agency or Department' (CX.10) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    }
+]

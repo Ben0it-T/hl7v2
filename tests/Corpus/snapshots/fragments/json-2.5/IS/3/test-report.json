@@ -1,0 +1,32 @@
+[
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) usage is O.",
+        "Type": "Usage",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) cardinality is [0..1]. Found 1 time(s).",
+        "Type": "Cardinality",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) length does not exceed the length defined in the message profile (1).",
+        "Type": "Length",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
+        "Type": "Datatype",
+        "Result": true
+    },
+    {
+        "Location": "PID-8",
+        "Description": "Field 'Administrative Sex' (PID.8) value (Z) not in table 0001 (User defined tables).",
+        "Type": "Table",
+        "Result": false
+    }
+]
