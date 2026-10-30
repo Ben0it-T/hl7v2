@@ -105,7 +105,16 @@ Snapshots record what the code does; `expected` and `knownBug` record what the s
 | HL7 examples | `hl7-examples/snapshots/<id>/` (local) | same as messages |
 
 An output that throws an exception is recorded as `EXCEPTION <class>: <message>`.
-A missing snapshot makes the test fail. After reviewing a change, write the new snapshots with `UPDATE_SNAPSHOTS=1`, and commit them with the change.
+A missing snapshot makes the test fail.
+
+Reviewing a change of behaviour:
+
+1. write the new snapshots: `UPDATE_SNAPSHOTS=1 vendor/bin/phpunit`;
+2. summarize the differences with `php tests/Corpus/review-snapshots.php` (against `HEAD`; `--against=<revision>` for another revision, `--details` to list every case and the changed lines);
+3. accept by committing the snapshots with the change, or reject with `git checkout -- tests/Corpus/snapshots`.
+
+The summary lists the TestReports whose error count changes (and the cases that become valid or invalid), then the TestReport entries removed and added, each distinct entry shown once with the cases it appears in, then the other outputs that changed.
+For the local HL7 examples, copy `hl7-examples/snapshots` before writing the new snapshots, and compare the two directories with `--old=<dir> --new=<dir>`.
 
 ## Running
 
