@@ -1,0 +1,17 @@
+{
+    "title": "PID-3 differs and is ignored with a 1-based indexed rule",
+    "tests": [
+        "ignore rules: 1-based indexes, segment ranked among segments of the same name"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [
+        "PID[1]-3[1]"
+    ],
+    "expected": {
+        "identical": true,
+        "differences": []
+    },
+    "knownBug": "Ignore rules use 0-based repetition indexes and the absolute segment position: PID[1]-3[1] does not match."
+}

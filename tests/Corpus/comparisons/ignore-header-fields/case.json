@@ -1,0 +1,17 @@
+{
+    "title": "MSH-7 and MSH-10 differ and are ignored",
+    "tests": [
+        "ignore rules: fields without index"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [
+        "MSH-7",
+        "MSH-10"
+    ],
+    "expected": {
+        "identical": true,
+        "differences": []
+    }
+}

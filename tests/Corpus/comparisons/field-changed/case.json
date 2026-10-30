@@ -1,0 +1,23 @@
+{
+    "title": "PID-5.2 changed",
+    "tests": [
+        "comparison: CHANGED at component level",
+        "location: 1-based, segment ranked among segments of the same name"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [],
+    "expected": {
+        "identical": false,
+        "differences": [
+            {
+                "location": "PID[1]-5[1].2.1",
+                "type": "CHANGED",
+                "left": "JANE",
+                "right": "JOAN"
+            }
+        ]
+    },
+    "knownBug": "Paths are 0-based for repetitions and use the absolute segment position (PID[2]-5[0].2.1)."
+}

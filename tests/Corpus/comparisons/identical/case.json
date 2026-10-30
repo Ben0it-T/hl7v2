@@ -1,0 +1,14 @@
+{
+    "title": "Identical messages",
+    "tests": [
+        "comparison: no difference"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [],
+    "expected": {
+        "identical": true,
+        "differences": []
+    }
+}

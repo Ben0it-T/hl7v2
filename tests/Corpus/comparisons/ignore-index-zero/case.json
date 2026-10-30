@@ -1,0 +1,16 @@
+{
+    "title": "Ignore rule with index 0",
+    "tests": [
+        "ignore rules: an index 0 is refused with an explicit message"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [
+        "PID[0]-3[0]"
+    ],
+    "expected": {
+        "error": true
+    },
+    "knownBug": "Index 0 is accepted (0-based notation): no error is raised."
+}

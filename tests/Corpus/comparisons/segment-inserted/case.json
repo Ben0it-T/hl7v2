@@ -1,0 +1,40 @@
+{
+    "title": "NK1 inserted before PV1",
+    "tests": [
+        "comparison: a segment is designated by its rank among segments of the same name; an inserted segment does not shift the following ones"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [],
+    "expected": {
+        "identical": false,
+        "differences": [
+            {
+                "location": "NK1[1]-1[1].1.1",
+                "type": "ADDED",
+                "left": null,
+                "right": "1"
+            },
+            {
+                "location": "NK1[1]-2[1].1.1",
+                "type": "ADDED",
+                "left": null,
+                "right": "DOE"
+            },
+            {
+                "location": "NK1[1]-2[1].2.1",
+                "type": "ADDED",
+                "left": null,
+                "right": "JOHN"
+            },
+            {
+                "location": "NK1[1]-3[1].1.1",
+                "type": "ADDED",
+                "left": null,
+                "right": "SPO"
+            }
+        ]
+    },
+    "knownBug": "Segments are compared by absolute position: PV1 is reported as removed and added again (14 differences instead of 4)."
+}

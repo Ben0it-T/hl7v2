@@ -1,0 +1,35 @@
+{
+    "comparedPaths": 44,
+    "differences": [
+        {
+            "path": "PID[2]-3[1].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "200001"
+        },
+        {
+            "path": "PID[2]-3[1].2.1",
+            "type": "ADDED",
+            "left": null,
+            "right": ""
+        },
+        {
+            "path": "PID[2]-3[1].3.1",
+            "type": "ADDED",
+            "left": null,
+            "right": ""
+        },
+        {
+            "path": "PID[2]-3[1].4.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "HOSP"
+        },
+        {
+            "path": "PID[2]-3[1].5.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "AN"
+        }
+    ]
+}

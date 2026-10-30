@@ -1,0 +1,15 @@
+{
+    "title": "Trailing empty fields on the right message",
+    "tests": [
+        "comparison: an absent element equals an empty element"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [],
+    "expected": {
+        "identical": true,
+        "differences": []
+    },
+    "knownBug": "Empty trailing fields are reported as ADDED (2 differences)."
+}

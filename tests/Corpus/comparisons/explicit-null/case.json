@@ -1,0 +1,23 @@
+{
+    "title": "Empty PID-10 on the left, explicit null \"\" on the right",
+    "tests": [
+        "comparison: the explicit null \"\" differs from an empty element",
+        "comparison: raw values are compared"
+    ],
+    "references": [
+        "README, Compare two messages"
+    ],
+    "ignore": [],
+    "expected": {
+        "identical": false,
+        "differences": [
+            {
+                "location": "PID[1]-10[1].1.1",
+                "type": "CHANGED",
+                "left": "",
+                "right": "\"\""
+            }
+        ]
+    },
+    "knownBug": "Paths are 0-based for repetitions and use the absolute segment position."
+}

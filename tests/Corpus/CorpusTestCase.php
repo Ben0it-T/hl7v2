@@ -95,7 +95,7 @@ abstract class CorpusTestCase extends TestCase
         }
     }
 
-    private function assertSnapshot(string $file, string $actual): void
+    protected function assertSnapshot(string $file, string $actual): void
     {
         if (getenv('UPDATE_SNAPSHOTS') === '1') {
             if (!is_dir(dirname($file)) && !mkdir(dirname($file), 0777, true)) {

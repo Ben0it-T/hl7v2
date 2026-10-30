@@ -1,0 +1,89 @@
+{
+    "comparedPaths": 48,
+    "differences": [
+        {
+            "path": "PV1[3]-1[0].1.1",
+            "type": "REMOVED",
+            "left": "1",
+            "right": null
+        },
+        {
+            "path": "PV1[3]-2[0].1.1",
+            "type": "REMOVED",
+            "left": "I",
+            "right": null
+        },
+        {
+            "path": "PV1[3]-3[0].1.1",
+            "type": "REMOVED",
+            "left": "WARD1",
+            "right": null
+        },
+        {
+            "path": "PV1[3]-3[0].2.1",
+            "type": "REMOVED",
+            "left": "101",
+            "right": null
+        },
+        {
+            "path": "PV1[3]-3[0].3.1",
+            "type": "REMOVED",
+            "left": "1",
+            "right": null
+        },
+        {
+            "path": "NK1[3]-1[0].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "1"
+        },
+        {
+            "path": "NK1[3]-2[0].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "DOE"
+        },
+        {
+            "path": "NK1[3]-2[0].2.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "JOHN"
+        },
+        {
+            "path": "NK1[3]-3[0].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "SPO"
+        },
+        {
+            "path": "PV1[4]-1[0].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "1"
+        },
+        {
+            "path": "PV1[4]-2[0].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "I"
+        },
+        {
+            "path": "PV1[4]-3[0].1.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "WARD1"
+        },
+        {
+            "path": "PV1[4]-3[0].2.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "101"
+        },
+        {
+            "path": "PV1[4]-3[0].3.1",
+            "type": "ADDED",
+            "left": null,
+            "right": "1"
+        }
+    ]
+}

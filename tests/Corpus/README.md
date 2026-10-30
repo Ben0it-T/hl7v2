@@ -70,6 +70,28 @@ A fragment file lists values for one datatype and the location where each value 
 `location` is a field (`SEG-n`, first occurrence of the segment): each `value` replaces that field of the carrier message, which is valid on its own.
 `tests`, `expected` and `knownBug` have the same meaning as in a case file; `references` applies to every value of the file.
 
+## Comparisons
+
+A comparison case is a pair of messages and a case file: `comparisons/<id>/left.hl7`, `right.hl7` and `case.json`.
+
+```json
+{
+    "title": "PID-5.2 changed",
+    "tests": ["comparison: CHANGED at component level"],
+    "references": ["README, Compare two messages"],
+    "ignore": [],
+    "expected": {
+        "identical": false,
+        "differences": [
+            { "location": "PID[1]-5[1].2.1", "type": "CHANGED", "left": "JANE", "right": "JOAN" }
+        ]
+    }
+}
+```
+
+`ignore` lists the ignore rules passed to `compare()`. `expected` states whether the messages are identical and lists the differences, in the Location notation (1-based, a segment ranked among the segments of the same name); `"expected": { "error": true }` means the ignore rules must be refused. `knownBug` has the same meaning as in a case file.
+Until the Comparator uses the Location notation, the test compares the outcome only (identical, number of differences, error); the differences are recorded in the snapshots.
+
 ## Snapshots
 
 Each suite also compares the outputs of the current validator with snapshots, so that any change of behaviour during the redesign is seen and reviewed.
@@ -79,6 +101,7 @@ Snapshots record what the code does; `expected` and `knownBug` record what the s
 |---|---|---|
 | Messages | `snapshots/messages/<id>/` | `test-report.json`, `validation-report.json`, `profiled-message.json`, `message.hl7`, `structural.xml`, `datatype.xml` |
 | Fragments | `snapshots/fragments/json-<profile>/<datatype>/<n>/` | `test-report.json`, restricted to the entries of the injected field |
+| Comparisons | `snapshots/comparisons/<id>/` | `differences.json` (compared paths and differences) |
 | HL7 examples | `hl7-examples/snapshots/<id>/` (local) | same as messages |
 
 An output that throws an exception is recorded as `EXCEPTION <class>: <message>`.
