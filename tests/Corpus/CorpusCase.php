@@ -26,7 +26,7 @@ final class CorpusCase
         public readonly string $title,
         public readonly array $tests,
         public readonly array $references,
-        public readonly bool $expectedValid,
+        public readonly ?bool $expectedValid,
         public readonly array $expectedFindings,
         public readonly ?string $knownBug
     ) {
@@ -64,7 +64,7 @@ final class CorpusCase
         }
 
         $data = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
-        if (!is_array($data) || !isset($data['title'], $data['expected']['valid'])) {
+        if (!is_array($data) || !isset($data['title']) || !array_key_exists('valid', $data['expected'] ?? [])) {
             throw new RuntimeException("Case $id: 'title' and 'expected.valid' are required.");
         }
 
@@ -75,7 +75,7 @@ final class CorpusCase
             (string) $data['title'],
             array_values(array_map('strval', $data['tests'] ?? [])),
             array_values(array_map('strval', $data['references'] ?? [])),
-            (bool) $data['expected']['valid'],
+            $data['expected']['valid'] === null ? null : (bool) $data['expected']['valid'],
             array_values($data['expected']['findings'] ?? []),
             isset($data['knownBug']) ? (string) $data['knownBug'] : null
         );
