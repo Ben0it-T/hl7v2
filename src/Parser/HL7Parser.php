@@ -10,6 +10,8 @@ use HL7v2\Model\Field;
 use HL7v2\Model\FieldRepeat;
 use HL7v2\Model\Component;
 use HL7v2\Model\SubComponent;
+use HL7v2\Parser\InputEncoding;
+use HL7v2\Parser\CharacterSet;
 
 class HL7Parser
 {
@@ -27,10 +29,11 @@ class HL7Parser
      *                     └── SubComponent
      *
      * @param string $raw the HL7 message string
+     * @param InputEncoding $inputEncoding Encoding of $raw (default: as declared by MSH-18).
      * @return Message
      * @throws HL7Exception
      */
-    public function parse(string $raw): Message
+    public function parse(string $raw, InputEncoding $inputEncoding = InputEncoding::Msh18): Message
     {
         // Remove any leading CR/LF or whitespace that may precede the
         // first MSH segment. Such characters are transport artefacts and
@@ -86,7 +89,17 @@ class HL7Parser
         $escapeChar            = $matches[5];   // '\'
         $subComponentSeparator = $matches[6];   // '&'
 
+        // Convert to UTF-8 before splitting: in some multi-byte character
+        // sets (BIG-5), a byte of a character may equal a separator.
+        [$raw, $characterSet, $sourceEncoding, $parseIssues] =
+            $this->toUtf8($raw, $matches[2], $matches[4], $inputEncoding);
+
         $message = new Message();
+
+        $message->setCharacterSet($characterSet->value, $sourceEncoding);
+        foreach ($parseIssues as $issue) {
+            $message->addParseIssue($issue);
+        }
 
         $message->setSeparators($fieldSeparator, $componentSeparator, $fieldRepeatSeparator, $escapeChar, $subComponentSeparator);
         $escapeSequences = $message->getEscapeSequences();
@@ -185,6 +198,62 @@ class HL7Parser
         }
 
         return $message;
+    }
+
+    /**
+     * Convert the message to UTF-8 according to MSH-18 (first repetition).
+     *
+     * A character set that is unknown or not supported is read as UTF-8.
+     * Bytes that are invalid for the encoding are replaced by U+FFFD.
+     * Each problem is returned as a parse issue: parsing never stops.
+     *
+     * @param non-empty-string $fieldSeparator
+     * @param non-empty-string $repetitionSeparator
+     *
+     * @return array{string, CharacterSet, string, list<string>}
+     *         UTF-8 message, character set, source encoding, parse issues.
+     */
+    private function toUtf8(string $raw, string $fieldSeparator, string $repetitionSeparator, InputEncoding $inputEncoding): array
+    {
+        $issues = [];
+
+        $mshSegment = (string) strtok($raw, "\r\n");
+        $msh18 = explode($repetitionSeparator, explode($fieldSeparator, $mshSegment)[17] ?? '')[0];
+        $characterSet = CharacterSet::fromMsh18($msh18);
+
+        if (!$characterSet->isSupported()) {
+            $issues[] = sprintf(
+                "MSH-18: %s character set '%s'; the message is read as UTF-8.",
+                $characterSet->known ? 'unsupported' : 'unknown',
+                $characterSet->value
+            );
+        }
+
+        $sourceEncoding = $inputEncoding === InputEncoding::Utf8
+            ? 'UTF-8'
+            : ($characterSet->encoding ?? 'UTF-8');
+
+        if (!mb_check_encoding($raw, $sourceEncoding)) {
+            $issues[] = sprintf(
+                'The message is not valid %s%s; invalid bytes are replaced by U+FFFD.',
+                $sourceEncoding,
+                $inputEncoding === InputEncoding::Utf8 ? ' (input declared UTF-8)' : ''
+            );
+        }
+
+        $substitute = mb_substitute_character();
+        mb_substitute_character(0xFFFD);
+        try {
+            $utf8 = mb_convert_encoding($raw, 'UTF-8', $sourceEncoding);
+        } finally {
+            mb_substitute_character($substitute);
+        }
+
+        if ($utf8 === false) {
+            throw new HL7Exception(sprintf('Unable to convert the message from %s to UTF-8.', $sourceEncoding));
+        }
+
+        return [$utf8, $characterSet, $sourceEncoding, $issues];
     }
 
     /**

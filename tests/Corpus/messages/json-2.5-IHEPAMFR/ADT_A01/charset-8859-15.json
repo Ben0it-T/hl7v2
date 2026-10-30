@@ -10,6 +10,5 @@
     "expected": {
         "valid": true,
         "findings": []
-    },
-    "knownBug": "MSH-18 is ignored: the message is read byte by byte, without conversion to UTF-8; the XML outputs, declared UTF-8, contain ISO-8859 bytes (invalid UTF-8)."
+    }
 }

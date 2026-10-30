@@ -32,6 +32,17 @@ class Message
     private string $escapeChar            = '\\';
     private ?EscapeSequences $escapeSequences = null;
 
+    // Character set (MSH-18) and encoding of the received message
+    private string $characterSet   = '';
+    private string $sourceEncoding = 'UTF-8';
+
+    /**
+     * Problems met while parsing (character set, invalid bytes).
+     *
+     * @var list<string>
+     */
+    private array $parseIssues = [];
+
     // Message metadata
     private string $messageCode              = '';
     private string $triggerEvent             = '';
@@ -103,6 +114,43 @@ class Message
         );
     }
 
+    /**
+     * Set the character set declared by MSH-18 and the encoding of the
+     * received message (restored by toHl7()).
+     */
+    public function setCharacterSet(string $characterSet, string $sourceEncoding): void
+    {
+        $this->characterSet   = $characterSet;
+        $this->sourceEncoding = $sourceEncoding;
+    }
+
+    /**
+     * Get the character set declared by MSH-18 (first repetition).
+     */
+    public function getCharacterSet(): string { return $this->characterSet; }
+
+    /**
+     * Get the encoding of the received message (PHP encoding name).
+     */
+    public function getSourceEncoding(): string { return $this->sourceEncoding; }
+
+    /**
+     * Add a problem met while parsing.
+     */
+    public function addParseIssue(string $issue): void
+    {
+        $this->parseIssues[] = $issue;
+    }
+
+    /**
+     * Get the problems met while parsing.
+     *
+     * @return list<string>
+     */
+    public function getParseIssues(): array
+    {
+        return $this->parseIssues;
+    }
 
     /**
      * Set message metadata extracted from MSH-9 and MSH-12.

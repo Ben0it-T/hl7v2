@@ -517,7 +517,7 @@
                         "Datatype": "XPN",
                         "hasError": false,
                         "comments": "Field 'Patient Name' (PID.5) cardinality is [1..*]. Found 1 time(s).",
-                        "value": "D�SIR�^JO�LLE^^^^^L",
+                        "value": "DÉSIRÉ^JOËLLE^^^^^L",
                         "components": {
                             "1": {
                                 "Type": "component",
@@ -527,7 +527,7 @@
                                 "Datatype": "FN",
                                 "hasError": false,
                                 "comments": "",
-                                "value": "D�SIR�",
+                                "value": "DÉSIRÉ",
                                 "subcomponents": {
                                     "1": {
                                         "Type": "subcomponent",
@@ -537,7 +537,7 @@
                                         "Datatype": "ST",
                                         "hasError": false,
                                         "comments": "",
-                                        "value": "D�SIR�"
+                                        "value": "DÉSIRÉ"
                                     }
                                 }
                             },
@@ -549,7 +549,7 @@
                                 "Datatype": "ST",
                                 "hasError": false,
                                 "comments": "",
-                                "value": "JO�LLE"
+                                "value": "JOËLLE"
                             },
                             "3": {
                                 "Type": "component",
@@ -685,7 +685,7 @@
                         "Datatype": "XAD",
                         "hasError": false,
                         "comments": "Field 'Patient Address' (PID.11) cardinality is [0..*]. Found 1 time(s).",
-                        "value": "12 RUE DE L'�GLISE^^SAINT-�TIENNE^^42000^FRA^H",
+                        "value": "12 RUE DE L'ÉGLISE^^SAINT-ÉTIENNE^^42000^FRA^H",
                         "components": {
                             "1": {
                                 "Type": "component",
@@ -695,7 +695,7 @@
                                 "Datatype": "SAD",
                                 "hasError": false,
                                 "comments": "",
-                                "value": "12 RUE DE L'�GLISE",
+                                "value": "12 RUE DE L'ÉGLISE",
                                 "subcomponents": {
                                     "1": {
                                         "Type": "subcomponent",
@@ -705,7 +705,7 @@
                                         "Datatype": "ST",
                                         "hasError": false,
                                         "comments": "",
-                                        "value": "12 RUE DE L'�GLISE"
+                                        "value": "12 RUE DE L'ÉGLISE"
                                     }
                                 }
                             },
@@ -727,7 +727,7 @@
                                 "Datatype": "ST",
                                 "hasError": false,
                                 "comments": "",
-                                "value": "SAINT-�TIENNE"
+                                "value": "SAINT-ÉTIENNE"
                             },
                             "4": {
                                 "Type": "component",

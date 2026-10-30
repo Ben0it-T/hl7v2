@@ -1190,7 +1190,7 @@
         "table": "",
         "reference": "3.4.2.5",
         "impNote": "",
-        "elementValue": "D�SIR�^JO�LLE^^^^^L",
+        "elementValue": "DÉSIRÉ^JOËLLE^^^^^L",
         "elementExists": true,
         "elementError": false,
         "elementComments": "Field 'Patient Name' (PID.5) cardinality is [1..*]. Found 1 time(s)."
@@ -1205,7 +1205,7 @@
         "length": "194",
         "table": "",
         "impNote": "",
-        "elementValue": "D�SIR�",
+        "elementValue": "DÉSIRÉ",
         "elementExists": true,
         "elementError": false,
         "elementComments": ""
@@ -1221,7 +1221,7 @@
         "constantValue": "",
         "table": "",
         "impNote": "",
-        "elementValue": "D�SIR�",
+        "elementValue": "DÉSIRÉ",
         "elementExists": true,
         "elementError": false,
         "elementComments": ""
@@ -1300,7 +1300,7 @@
         "length": "30",
         "table": "",
         "impNote": "",
-        "elementValue": "JO�LLE",
+        "elementValue": "JOËLLE",
         "elementExists": true,
         "elementError": false,
         "elementComments": ""
@@ -1618,7 +1618,7 @@
         "table": "",
         "reference": "3.4.2.11",
         "impNote": "",
-        "elementValue": "12 RUE DE L'�GLISE^^SAINT-�TIENNE^^42000^FRA^H",
+        "elementValue": "12 RUE DE L'ÉGLISE^^SAINT-ÉTIENNE^^42000^FRA^H",
         "elementExists": true,
         "elementError": false,
         "elementComments": "Field 'Patient Address' (PID.11) cardinality is [0..*]. Found 1 time(s)."
@@ -1633,7 +1633,7 @@
         "length": "184",
         "table": "",
         "impNote": "",
-        "elementValue": "12 RUE DE L'�GLISE",
+        "elementValue": "12 RUE DE L'ÉGLISE",
         "elementExists": true,
         "elementError": false,
         "elementComments": ""
@@ -1649,7 +1649,7 @@
         "constantValue": "",
         "table": "",
         "impNote": "",
-        "elementValue": "12 RUE DE L'�GLISE",
+        "elementValue": "12 RUE DE L'ÉGLISE",
         "elementExists": true,
         "elementError": false,
         "elementComments": ""
@@ -1711,7 +1711,7 @@
         "length": "50",
         "table": "",
         "impNote": "",
-        "elementValue": "SAINT-�TIENNE",
+        "elementValue": "SAINT-ÉTIENNE",
         "elementExists": true,
         "elementError": false,
         "elementComments": ""

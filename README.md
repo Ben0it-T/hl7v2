@@ -64,6 +64,18 @@ echo $message
     ->getValue();   // ADT_A05
 ```
 
+The message is converted to UTF-8 based on MSH-18 (UTF-8 is assumed when MSH-18 is empty). The `toHl7()` method returns the message in the encoding it was received in.
+
+When the incoming message is already a UTF-8 string, for example from a web form or a JSON request, specify it explicitly regardless of the value declared in MSH-18 to avoid double encoding:
+
+```php
+use HL7v2\Parser\InputEncoding;
+
+$hl7->parse($_POST['message'], InputEncoding::Utf8);
+```
+
+Parsing issues (unknown character set, invalid bytes) do not stop parsing. They are returned by `$hl7->getMessage()->getParseIssues()`.
+
 ### Validate a message
 
 Validate using a profile directory:

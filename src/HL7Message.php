@@ -8,6 +8,7 @@ use HL7v2\Comparator\ComparisonResult;
 use HL7v2\Comparator\HL7Comparator;
 use HL7v2\Model\Message;
 use HL7v2\Parser\HL7Parser;
+use HL7v2\Parser\InputEncoding;
 use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
 use HL7v2\Profile\ProfileLoader;
@@ -69,15 +70,18 @@ class HL7Message
      * Validate the message again to obtain a new validation result.
      *
      * @param string $rawMessage
+     * @param InputEncoding $inputEncoding Encoding of $rawMessage:
+     *          InputEncoding::Msh18 (default) for bytes as transmitted
+     *          InputEncoding::Utf8 for a string already in UTF-8 (web form, JSON).
      *
      * @throws HL7Exception If the message cannot be parsed.
      */
-    public function parse(string $rawMessage): void
+    public function parse(string $rawMessage, InputEncoding $inputEncoding = InputEncoding::Msh18): void
     {
         $this->message          = null;
         $this->profiledMessage  = [];
         $this->validationResult = null;
-        $this->message = $this->parser->parse($rawMessage);
+        $this->message = $this->parser->parse($rawMessage, $inputEncoding);
     }
 
     /**
@@ -219,7 +223,8 @@ class HL7Message
     }
 
     /**
-     * Convert parsed message to HL7 string representation.
+     * Convert parsed message to HL7 string representation, in the encoding
+     * of the received message.
      *
      * @return string
      *
@@ -234,8 +239,11 @@ class HL7Message
         }
 
         $serializer = new HL7StringSerializer();
+        $hl7 = $serializer->serialize($this->message);
+        $encoding = $this->message->getSourceEncoding();
 
-        return $serializer->serialize($this->message);
+        // Restore the encoding of the received message.
+        return $encoding === 'UTF-8' ? $hl7 : mb_convert_encoding($hl7, $encoding, 'UTF-8');
     }
 
     /**
