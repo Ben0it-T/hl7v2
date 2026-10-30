@@ -14555,6 +14555,14 @@
                 "description": "Local general code (where z is an alphanumeric character)"
             },
             {
+                "code": "99zzz",
+                "description": "Local general code (where z is an alphanumeric character)"
+            },
+            {
+                "code": "L",
+                "description": "Local general code"
+            },
+            {
                 "code": "ACR",
                 "description": "American College of Radiology finding codes"
             },
