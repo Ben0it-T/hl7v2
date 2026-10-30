@@ -1620,7 +1620,7 @@
             },
             {
                 "code": "IE",
-                "description": "InterFacility"
+                "description": "InterFacility (Prestation inter établissement)"
             },
             {
                 "code": "L",
@@ -1636,7 +1636,7 @@
             },
             {
                 "code": "RM",
-                "description": "Delivery"
+                "description": "Delivery (Rétrocession)"
             },
             {
                 "code": "U",
@@ -1871,7 +1871,7 @@
     },
     "0032": {
         "id": "0032",
-        "name": "Charge Prive indicator",
+        "name": "Charge Price indicator",
         "type": "User",
         "codes": [
             {
@@ -2663,24 +2663,1036 @@
         "type": "User",
         "codes": [
             {
-                "code": "CAR",
-                "description": "Cardiac Service"
+                "code": "035",
+                "description": "Scanographie X"
             },
             {
-                "code": "MED",
-                "description": "Medical Service"
+                "code": "039",
+                "description": "Radiothérapie externe (césium, cobalt)"
             },
             {
-                "code": "PUL",
-                "description": "Pulmonary Service"
+                "code": "043",
+                "description": "Curiethérapie"
             },
             {
-                "code": "SUR",
-                "description": "Surgical Service"
+                "code": "076",
+                "description": "Immunologie"
             },
             {
-                "code": "URO",
-                "description": "Urology Service"
+                "code": "102",
+                "description": "Maladies infectieuses"
+            },
+            {
+                "code": "103",
+                "description": "Toxicologie (y compris en particulier l'activité des centres anti-poison)"
+            },
+            {
+                "code": "104",
+                "description": "Réanimation médicale (y compris soins intensifs)"
+            },
+            {
+                "code": "105",
+                "description": "Réanimation polyvalente (médicale + chirurgicale, y compris soins intensifs)"
+            },
+            {
+                "code": "106",
+                "description": "Surveillance continue - médecine (non compris soins intensifs)"
+            },
+            {
+                "code": "107",
+                "description": "Surveillance continue polyvalente (médicale + chirurgicale, non compris soins intensifs)"
+            },
+            {
+                "code": "108",
+                "description": "Pédiatrie indifférenciée"
+            },
+            {
+                "code": "109",
+                "description": "Pédiatrie enfants et adolescents"
+            },
+            {
+                "code": "110",
+                "description": "Pédiatrie nouveau-nés et nourrissons indifférenciée"
+            },
+            {
+                "code": "111",
+                "description": "Pédiatrie nourrissons"
+            },
+            {
+                "code": "112",
+                "description": "Néonatologie"
+            },
+            {
+                "code": "113",
+                "description": "Médecine gériatrique"
+            },
+            {
+                "code": "114",
+                "description": "Spécialités médicales indifférenciées"
+            },
+            {
+                "code": "115",
+                "description": "Allergologie"
+            },
+            {
+                "code": "116",
+                "description": "Dermatologie et vénérologie indifférenciées"
+            },
+            {
+                "code": "117",
+                "description": "Dermatologie"
+            },
+            {
+                "code": "118",
+                "description": "Vénérologie"
+            },
+            {
+                "code": "119",
+                "description": "Endocrinologie, diabétologie, nutrition et métabolisme indifférenciés"
+            },
+            {
+                "code": "120",
+                "description": "Endocrinologie"
+            },
+            {
+                "code": "121",
+                "description": "Diabétologie"
+            },
+            {
+                "code": "122",
+                "description": "Nutrition-métabolisme"
+            },
+            {
+                "code": "123",
+                "description": "Hématologie et maladies du sang"
+            },
+            {
+                "code": "124",
+                "description": "Hépato-gastro-entérologie"
+            },
+            {
+                "code": "125",
+                "description": "Maladies tropicales et exotiques"
+            },
+            {
+                "code": "126",
+                "description": "Médecine carcinologique"
+            },
+            {
+                "code": "127",
+                "description": "Médecine cardio-vasculaire"
+            },
+            {
+                "code": "129",
+                "description": "Neurologie"
+            },
+            {
+                "code": "130",
+                "description": "Pneumologie indifférenciée"
+            },
+            {
+                "code": "131",
+                "description": "Pneumologie non tuberculeuse"
+            },
+            {
+                "code": "132",
+                "description": "Phtisiologie"
+            },
+            {
+                "code": "133",
+                "description": "Rhumatologie"
+            },
+            {
+                "code": "134",
+                "description": "Radiothérapie et médecine nucléaire indifférenciées"
+            },
+            {
+                "code": "135",
+                "description": "Radiothérapie"
+            },
+            {
+                "code": "136",
+                "description": "Médecine nucléaire"
+            },
+            {
+                "code": "137",
+                "description": "Chirurgie générale"
+            },
+            {
+                "code": "138",
+                "description": "Chirurgie infantile indifférenciée"
+            },
+            {
+                "code": "139",
+                "description": "Chirurgie enfants et adolescents"
+            },
+            {
+                "code": "140",
+                "description": "Chirurgie nouveau-nés et nourrissons"
+            },
+            {
+                "code": "141",
+                "description": "Réanimation chirurgicale indifférenciée (y compris soins intensifs)"
+            },
+            {
+                "code": "142",
+                "description": "Surveillance continue chirurgicale (non compris soins intensifs)"
+            },
+            {
+                "code": "143",
+                "description": "Spécialités chirurgicales indifférenciées"
+            },
+            {
+                "code": "144",
+                "description": "Chirurgie carcinologique"
+            },
+            {
+                "code": "145",
+                "description": "Chirurgie des grands brûlés"
+            },
+            {
+                "code": "146",
+                "description": "Chirurgie digestive"
+            },
+            {
+                "code": "147",
+                "description": "Chirurgie thoracique et cardiovasculaire indifférenciée"
+            },
+            {
+                "code": "148",
+                "description": "Chirurgie thoraco-pulmonaire"
+            },
+            {
+                "code": "149",
+                "description": "Chirurgie vasculaire"
+            },
+            {
+                "code": "150",
+                "description": "Chirurgie cardio-vasculaire"
+            },
+            {
+                "code": "151",
+                "description": "Neuro-chirurgie"
+            },
+            {
+                "code": "152",
+                "description": "Orthopédie-traumatologie et chirurgie plastique et réparatrice indifférenciées"
+            },
+            {
+                "code": "153",
+                "description": "Orthopédie-traumatologie"
+            },
+            {
+                "code": "154",
+                "description": "Chirurgie plastique et réparatrice"
+            },
+            {
+                "code": "155",
+                "description": "ORL et ophtalmologie indifférenciées"
+            },
+            {
+                "code": "156",
+                "description": "ORL"
+            },
+            {
+                "code": "157",
+                "description": "Ophtalmologie"
+            },
+            {
+                "code": "158",
+                "description": "Stomatologie et chirurgie maxillo-faciale indifférenciées"
+            },
+            {
+                "code": "159",
+                "description": "Stomatologie"
+            },
+            {
+                "code": "160",
+                "description": "Chirurgie maxillo-faciale"
+            },
+            {
+                "code": "161",
+                "description": "Urologie"
+            },
+            {
+                "code": "162",
+                "description": "ORL, ophtalmologie et stomatologie indifférenciées"
+            },
+            {
+                "code": "163",
+                "description": "Gynécologie, obstétrique indifférenciées"
+            },
+            {
+                "code": "164",
+                "description": "Gynécologie"
+            },
+            {
+                "code": "165",
+                "description": "Obstétrique"
+            },
+            {
+                "code": "166",
+                "description": "Chroniques et convalescents indifférenciés"
+            },
+            {
+                "code": "167",
+                "description": "Chroniques"
+            },
+            {
+                "code": "168",
+                "description": "Repos, convalescence et régime indifférenciés"
+            },
+            {
+                "code": "169",
+                "description": "Repos"
+            },
+            {
+                "code": "170",
+                "description": "Convalescence"
+            },
+            {
+                "code": "171",
+                "description": "Régime"
+            },
+            {
+                "code": "172",
+                "description": "Rééducation fonctionnelle et réadaptation polyvalente"
+            },
+            {
+                "code": "173",
+                "description": "Cure thermale indifférenciée"
+            },
+            {
+                "code": "174",
+                "description": "Médecine générale et spécialités médicales indifférenciées"
+            },
+            {
+                "code": "176",
+                "description": "Soins de longue durée pour personnes ayant perdu leur autonomie de vie"
+            },
+            {
+                "code": "177",
+                "description": "Cure médicale en établissement d'hébergement pour personnes âgées"
+            },
+            {
+                "code": "178",
+                "description": "Rééducation fonctionnelle et réadaptation motrice indifférenciées"
+            },
+            {
+                "code": "179",
+                "description": "Rééducation fonctionnelle et réadaptation neurologique"
+            },
+            {
+                "code": "180",
+                "description": "Rééducation des affections respiratoires"
+            },
+            {
+                "code": "181",
+                "description": "Chirurgie générale et spécialités chirurgicales indifférenciées"
+            },
+            {
+                "code": "182",
+                "description": "Rééducation des maladies cardio-vasculaires"
+            },
+            {
+                "code": "183",
+                "description": "Obstétrique sans possibilités chirurgicales"
+            },
+            {
+                "code": "184",
+                "description": "Rééducation des affections hépato-digestives"
+            },
+            {
+                "code": "185",
+                "description": "Repos et convalescence indifférenciés"
+            },
+            {
+                "code": "187",
+                "description": "Autre rééducation fonctionnelle et réadaptation"
+            },
+            {
+                "code": "189",
+                "description": "Cure thermale des voies respiratoires"
+            },
+            {
+                "code": "193",
+                "description": "Cure thermale en rhumatologie et séquelles de traumatismes ostéo-articulaires"
+            },
+            {
+                "code": "194",
+                "description": "Cure thermale en dermatologie"
+            },
+            {
+                "code": "195",
+                "description": "Lutte contre les toxicomanies (autres que l'alcoolisme)"
+            },
+            {
+                "code": "196",
+                "description": "Alcoologie (lutte contre l'alcoolisme)"
+            },
+            {
+                "code": "198",
+                "description": "Lutte contre le cancer (activité des Centres régionaux de lutte contre le cancer [CRLC])"
+            },
+            {
+                "code": "206",
+                "description": "Lutte anti-hansénienne (lèpre)"
+            },
+            {
+                "code": "214",
+                "description": "Postcure pour alcooliques"
+            },
+            {
+                "code": "217",
+                "description": "Lutte contre la tuberculose indifférenciée"
+            },
+            {
+                "code": "219",
+                "description": "Lutte contre la tuberculose pulmonaire (sanatorium pulmonaire, hôtel de cure)"
+            },
+            {
+                "code": "220",
+                "description": "Lutte contre la tuberculose extra-pulmonaire"
+            },
+            {
+                "code": "221",
+                "description": "Cure et repos en préventorium"
+            },
+            {
+                "code": "222",
+                "description": "Traitements préventifs de la tuberculose (aérium)"
+            },
+            {
+                "code": "223",
+                "description": "Médecine générale ou polyvalente"
+            },
+            {
+                "code": "224",
+                "description": "Observation et traitement des pneumoconioses"
+            },
+            {
+                "code": "225",
+                "description": "Médecine interne"
+            },
+            {
+                "code": "226",
+                "description": "Accueil et orientation des malades atteints ou suspects de tuberculose pulmonaire (centre départemental de phtisiologie)"
+            },
+            {
+                "code": "227",
+                "description": "Postcure pour tuberculeux"
+            },
+            {
+                "code": "230",
+                "description": "Psychiatrie générale"
+            },
+            {
+                "code": "235",
+                "description": "Soins intensifs de néonatologie"
+            },
+            {
+                "code": "236",
+                "description": "Psychiatrie infanto-juvénile"
+            },
+            {
+                "code": "252",
+                "description": "Pouponnière à caractère sanitaire (hébergement et soins en ...)"
+            },
+            {
+                "code": "263",
+                "description": "Placement familial sanitaire"
+            },
+            {
+                "code": "267",
+                "description": "Action médico-sociale précoce pour enfants polyhandicapés"
+            },
+            {
+                "code": "268",
+                "description": "Action médico-sociale précoce pour autre catégorie de clientèle"
+            },
+            {
+                "code": "269",
+                "description": "Soins de type foyer à double tarification pour adultes handicapés"
+            },
+            {
+                "code": "273",
+                "description": "Hébergement en service de soins de longue durée"
+            },
+            {
+                "code": "302",
+                "description": "Chimiothérapie en hématologie et cancérologie"
+            },
+            {
+                "code": "304",
+                "description": "Transplantation du foie"
+            },
+            {
+                "code": "305",
+                "description": "Transplantations rénales"
+            },
+            {
+                "code": "306",
+                "description": "Transplantations cardiaques"
+            },
+            {
+                "code": "309",
+                "description": "Interruption volontaire de grossesse"
+            },
+            {
+                "code": "310",
+                "description": "Examens de santé et bilans"
+            },
+            {
+                "code": "311",
+                "description": "Transplantation coeur-poumon"
+            },
+            {
+                "code": "312",
+                "description": "Néphrologie"
+            },
+            {
+                "code": "313",
+                "description": "Psychiatrie - sorties modifiant la tarification"
+            },
+            {
+                "code": "314",
+                "description": "Allogreffe de moëlle osseuse"
+            },
+            {
+                "code": "316",
+                "description": "Autre transplantation d'organe (grêle, poumon, pancréas, multigreffe...)"
+            },
+            {
+                "code": "318",
+                "description": "Action médico-sociale précoce pour tous types de déficiences S.A.I. (sans autre indication)"
+            },
+            {
+                "code": "320",
+                "description": "Centres médico-psycho-pédagogiques (C.M.P.P.) (Activité des...)"
+            },
+            {
+                "code": "321",
+                "description": "Action médico-sociale précoce pour enfants déficients auditifs"
+            },
+            {
+                "code": "322",
+                "description": "Action médico-sociale précoce pour enfants déficients visuels"
+            },
+            {
+                "code": "323",
+                "description": "Action médico-sociale précoce pour enfants déficients moteurs"
+            },
+            {
+                "code": "324",
+                "description": "Action médico-sociale précoce pour enfants déficients intellectuels"
+            },
+            {
+                "code": "325",
+                "description": "Placement familial spécialisé pour enfants handicapés"
+            },
+            {
+                "code": "355",
+                "description": "Activités des centres de jour pour personnes âgées"
+            },
+            {
+                "code": "358",
+                "description": "Soins à domicile"
+            },
+            {
+                "code": "389",
+                "description": "Lutte contre la stérilité"
+            },
+            {
+                "code": "398",
+                "description": "Placement familial spécialisé pour handicapés adultes"
+            },
+            {
+                "code": "401",
+                "description": "Unité de proximité d'accueil, de traitement et d'orientation des urgences (UPATOU)"
+            },
+            {
+                "code": "402",
+                "description": "Service d'accueil et de traitement des urgences (SAU)"
+            },
+            {
+                "code": "403",
+                "description": "Pôle spécialisé d'urgence en pédiatrie (POSU)"
+            },
+            {
+                "code": "404",
+                "description": "Pôle spécialisé d'urgence en ophtalmologie (POSU)"
+            },
+            {
+                "code": "405",
+                "description": "Pôle spécialisé d'urgence en cardiologie (POSU)"
+            },
+            {
+                "code": "406",
+                "description": "Pôle spécialisé d'urgence en traumatologie (POSU)"
+            },
+            {
+                "code": "407",
+                "description": "Pôle spécialisé d'urgence en \"SOS main\" (POSU)"
+            },
+            {
+                "code": "408",
+                "description": "Pôle spécialisé d'urgence en neurochirurgie (POSU)"
+            },
+            {
+                "code": "409",
+                "description": "Autre pôle spécialisé d'urgence non dénommé ailleurs (POSU)"
+            },
+            {
+                "code": "457",
+                "description": "Cure médicale spécialisée contre la tuberculose indifférenciée"
+            },
+            {
+                "code": "458",
+                "description": "Cure médicale spécialisée contre la tuberculose pulmonaire"
+            },
+            {
+                "code": "459",
+                "description": "Cure médicale spécialisée contre la tuberculose extra-pulmonaire"
+            },
+            {
+                "code": "460",
+                "description": "Cure médicale spécialisée contre la tuberculose (préventorium)"
+            },
+            {
+                "code": "462",
+                "description": "Autre cure médicale spécialisée pour enfants (notamment aérium reclassé)"
+            },
+            {
+                "code": "463",
+                "description": "Autre cure médicale spécialisée pour tous âges"
+            },
+            {
+                "code": "464",
+                "description": "Cure médicale spécialisée pneumologique pour enfants"
+            },
+            {
+                "code": "465",
+                "description": "Cure médicale spécialisée pneumologique pour tous âges"
+            },
+            {
+                "code": "466",
+                "description": "Convalescence et réadaptation pour personnes âgées"
+            },
+            {
+                "code": "467",
+                "description": "Cure médicale spécialisée cardiologique pour enfants"
+            },
+            {
+                "code": "468",
+                "description": "Cure médicale spécialisée cardiologique pour tous âges"
+            },
+            {
+                "code": "552",
+                "description": "Entraînement à l'hémodialyse à domicile et à l'autodialyse"
+            },
+            {
+                "code": "553",
+                "description": "Entraînement à la dialyse péritonéale à domicile"
+            },
+            {
+                "code": "554",
+                "description": "Entraînement à la dialyse péritonéale continue"
+            },
+            {
+                "code": "555",
+                "description": "Dialyse péritonéale"
+            },
+            {
+                "code": "556",
+                "description": "Dialyse péritonéale continue"
+            },
+            {
+                "code": "557",
+                "description": "ORL et stomatologie indifférenciées"
+            },
+            {
+                "code": "588",
+                "description": "Soins courants en établissement d'hébergement pour personnes âgées"
+            },
+            {
+                "code": "593",
+                "description": "Accueil de l'enfant accompagnant la mère convalescente"
+            },
+            {
+                "code": "594",
+                "description": "Repos prénatal"
+            },
+            {
+                "code": "595",
+                "description": "Convalescence post-natale"
+            },
+            {
+                "code": "604",
+                "description": "Cure médicale non spécialisée pour enfants (MECS ouverte en permanence)"
+            },
+            {
+                "code": "605",
+                "description": "Cure médicale non spécialisée pour enfants (MECS ouverte temporairement)"
+            },
+            {
+                "code": "606",
+                "description": "Cure thermale pour enfants (MECS ouverte en permanence)"
+            },
+            {
+                "code": "607",
+                "description": "Cure thermale pour enfants (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "608",
+                "description": "Cure médicale pour enfants atteints d'affections chroniques non tuberculeuses des voies respiratoires (MECS ouverte en permanence)"
+            },
+            {
+                "code": "609",
+                "description": "Cure médicale pour enfants atteints d'affections chroniques non tuberculeuses des voies respiratoires (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "610",
+                "description": "Cure médicale pour enfants convalescents de rhumatismes aigus (MECS ouverte en permanence)"
+            },
+            {
+                "code": "611",
+                "description": "Cure médicale pour enfants convalescents de rhumatismes aigus (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "612",
+                "description": "Cure médicale pour enfants diabétiques (MECS ouverte en permanence)"
+            },
+            {
+                "code": "613",
+                "description": "Cure médicale pour enfants diabétiques (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "614",
+                "description": "Cure médicale pour enfants épileptiques (MECS ouverte en permanence)"
+            },
+            {
+                "code": "615",
+                "description": "Cure médicale pour enfants épileptiques (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "616",
+                "description": "Cure médicale pour enfants atteints de déficiences temporaires somato-psychologiques (MECS ouverte en permanence)"
+            },
+            {
+                "code": "618",
+                "description": "Cure médicale pour enfants hémophiles (MECS ouverte en permanence)"
+            },
+            {
+                "code": "619",
+                "description": "Cure médicale pour enfants hémophiles (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "620",
+                "description": "Cure médicale pour enfants atteints d'infirmités orthopédiques (MECS ouverte en permanence)"
+            },
+            {
+                "code": "621",
+                "description": "Cure médicale pour enfants atteints d'infirmités orthopédiques (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "622",
+                "description": "Cure médicale pour enfants énurétiques (MECS ouverte en permanence)"
+            },
+            {
+                "code": "623",
+                "description": "Cure médicale pour enfants énurétiques (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "624",
+                "description": "Autre cure médicale spécialisée pour enfants (MECS ouverte en permanence)"
+            },
+            {
+                "code": "625",
+                "description": "Autre cure médicale spécialisée pour enfants (MECS ouverte de façon temporaire)"
+            },
+            {
+                "code": "627",
+                "description": "Soins de suite ou de réadaptation indifférenciés"
+            },
+            {
+                "code": "628",
+                "description": "Orthopédie"
+            },
+            {
+                "code": "631",
+                "description": "Gynécologie chirurgicale"
+            },
+            {
+                "code": "635",
+                "description": "Réanimation néonatale"
+            },
+            {
+                "code": "636",
+                "description": "Réanimation pédiatrique"
+            },
+            {
+                "code": "637",
+                "description": "Surveillance continue en cardiologie"
+            },
+            {
+                "code": "638",
+                "description": "Surveillance continue en pédiatrie"
+            },
+            {
+                "code": "639",
+                "description": "Surveillance continue en néphrologie"
+            },
+            {
+                "code": "640",
+                "description": "Surveillance continue en urologie"
+            },
+            {
+                "code": "641",
+                "description": "Réanimation en cardiologie"
+            },
+            {
+                "code": "644",
+                "description": "Neutronthérapie"
+            },
+            {
+                "code": "645",
+                "description": "Oxygénothérapie isolée"
+            },
+            {
+                "code": "646",
+                "description": "Assistance ventilatoire sans trachéotomie (insuffisants respiratoires)"
+            },
+            {
+                "code": "647",
+                "description": "Assistance ventilatoire endotrachéale (insuffisants respiratoires)"
+            },
+            {
+                "code": "648",
+                "description": "Trachéotomie isolée"
+            },
+            {
+                "code": "651",
+                "description": "Cure thermale des affections bucco-linguales"
+            },
+            {
+                "code": "654",
+                "description": "Hébergement spécialisé pour enfants et adolescents handicapés"
+            },
+            {
+                "code": "657",
+                "description": "Hébergement temporaire pour personnes âgées"
+            },
+            {
+                "code": "663",
+                "description": "Nutrition parentérale pour enfants"
+            },
+            {
+                "code": "664",
+                "description": "Nutrition parentérale pour adultes"
+            },
+            {
+                "code": "715",
+                "description": "Surveillance par monitorage en vue de prévenir la mort subite et inexpliquée du nourrisson"
+            },
+            {
+                "code": "717",
+                "description": "Soins hautement spécialisés en médecine"
+            },
+            {
+                "code": "718",
+                "description": "Soins hautement spécialisés en chirurgie"
+            },
+            {
+                "code": "719",
+                "description": "Soins hautement spécialisés en gynécologie-obstétrique"
+            },
+            {
+                "code": "720",
+                "description": "Réanimation néonatale et pédiatrique indifférenciée"
+            },
+            {
+                "code": "721",
+                "description": "Radiothérapie métabolique (ingestion de source)"
+            },
+            {
+                "code": "722",
+                "description": "Maladies infectieuses, tropicales et exotiques indifférenciées"
+            },
+            {
+                "code": "723",
+                "description": "Autodialyse"
+            },
+            {
+                "code": "728",
+                "description": "Cardiologie infantile"
+            },
+            {
+                "code": "729",
+                "description": "Nephrologie infantile"
+            },
+            {
+                "code": "730",
+                "description": "Carcinologie infantile"
+            },
+            {
+                "code": "731",
+                "description": "Autres spécialités pédiatriques"
+            },
+            {
+                "code": "732",
+                "description": "Hépatologie"
+            },
+            {
+                "code": "733",
+                "description": "Gastro-entérologie"
+            },
+            {
+                "code": "734",
+                "description": "Réanimation chirurgicale pédiatrique"
+            },
+            {
+                "code": "735",
+                "description": "Réanimation chirurgicale adulte"
+            },
+            {
+                "code": "736",
+                "description": "Traumatologie"
+            },
+            {
+                "code": "737",
+                "description": "Convalescence et réadaptation"
+            },
+            {
+                "code": "738",
+                "description": "Rééducation fonctionnelle et réadaptation motrice - orientation rhumatologie"
+            },
+            {
+                "code": "739",
+                "description": "Rééducation fonctionnelle et réadaptation motrice - orientation traumatologie"
+            },
+            {
+                "code": "743",
+                "description": "Immuno-hématologie"
+            },
+            {
+                "code": "744",
+                "description": "Immuno-cancérologie"
+            },
+            {
+                "code": "753",
+                "description": "Imagerie par résonance magnétique (IRM)"
+            },
+            {
+                "code": "797",
+                "description": "Hémodialyse et hémofiltration pour chroniques adultes"
+            },
+            {
+                "code": "798",
+                "description": "Hémodialyse et hémofiltration pour chroniques enfants"
+            },
+            {
+                "code": "799",
+                "description": "Assistance ventilatoire avec prothèse extra-thoracique (insuffisants respiratoires)"
+            },
+            {
+                "code": "800",
+                "description": "Assistance ventilatoire par pression positive continue ou autres techniques particulières agréées (insuffisants respiratoires)"
+            },
+            {
+                "code": "801",
+                "description": "Insulinothérapie"
+            },
+            {
+                "code": "803",
+                "description": "Psychiatrie pour arriérés profonds"
+            },
+            {
+                "code": "806",
+                "description": "Atelier thérapeutique pour adultes"
+            },
+            {
+                "code": "807",
+                "description": "Atelier thérapeutique pour adolescents"
+            },
+            {
+                "code": "808",
+                "description": "Sectorisation psychiatrique en milieu pénitentiaire"
+            },
+            {
+                "code": "809",
+                "description": "Hématologie pédiatrique"
+            },
+            {
+                "code": "825",
+                "description": "Soins et accompagnement des malades en phase terminale"
+            },
+            {
+                "code": "826",
+                "description": "Traitement spécialisé contre la douleur"
+            },
+            {
+                "code": "827",
+                "description": "Nutrition entérale à domicile"
+            },
+            {
+                "code": "828",
+                "description": "Cure thermale pour maladies cardio-artérielles"
+            },
+            {
+                "code": "829",
+                "description": "Cure thermale en neurologie"
+            },
+            {
+                "code": "830",
+                "description": "Cure thermale pour affections psychosomatiques"
+            },
+            {
+                "code": "831",
+                "description": "Cure thermale en phlébologie"
+            },
+            {
+                "code": "832",
+                "description": "Cure thermale pour troubles du développement chez l'enfant"
+            },
+            {
+                "code": "833",
+                "description": "Cure thermale en gynécologie"
+            },
+            {
+                "code": "834",
+                "description": "Cure thermale pour maladies de l'appareil digestif et maladies métaboliques"
+            },
+            {
+                "code": "835",
+                "description": "Cure thermale pour maladies de l'appareil urinaire et maladies métaboliques"
+            },
+            {
+                "code": "897",
+                "description": "Hébergement ouvert en foyer pour adultes handicapés"
+            },
+            {
+                "code": "924",
+                "description": "Hébergement en maison de retraite"
+            },
+            {
+                "code": "925",
+                "description": "Hébergement en logement foyer pour personnes âgées seules (F1)"
+            },
+            {
+                "code": "926",
+                "description": "Hébergement en logement-foyer pour personnes âgées couple (F2)"
+            },
+            {
+                "code": "927",
+                "description": "Hébergement en logement-foyer pour personnes âgées (F1 bis)"
+            },
+            {
+                "code": "936",
+                "description": "Hébergement de type foyer de vie pour adultes handicapés"
+            },
+            {
+                "code": "939",
+                "description": "Hébergement en foyer à double tarification pour adultes handicapés"
             }
         ]
     },
@@ -4909,52 +5921,16 @@
         "type": "HL7",
         "codes": [
             {
-                "code": "C",
-                "description": "Record coming over is a correction and thus replaces a final result"
-            },
-            {
-                "code": "D",
-                "description": "Deletes the OBX record"
+                "code": "R",
+                "description": "Results entered -- not verified"
             },
             {
                 "code": "F",
                 "description": "Final results; Can only be changed with a corrected result."
             },
             {
-                "code": "I",
-                "description": "Specimen in lab; results pending"
-            },
-            {
-                "code": "N",
-                "description": "Not asked; used to affirmatively document that the observation identified in the OBX was not sought when the universal service ID in OBR-4 implies that it would be sought."
-            },
-            {
-                "code": "O",
-                "description": "Order detail description only (no result)"
-            },
-            {
-                "code": "P",
-                "description": "Preliminary results"
-            },
-            {
-                "code": "R",
-                "description": "Results entered -- not verified"
-            },
-            {
-                "code": "S",
-                "description": "Partial results"
-            },
-            {
-                "code": "U",
-                "description": "Results status change to final without retransmitting results already sent as 'preliminary.'  E.g., radiology changes status from preliminary to final"
-            },
-            {
-                "code": "W",
-                "description": "Post original as wrong, e.g., transmitted for wrong patient"
-            },
-            {
-                "code": "X",
-                "description": "Results cannot be obtained for this observation"
+                "code": "D",
+                "description": "Deletes the OBX record"
             }
         ]
     },
@@ -5907,7 +6883,7 @@
     },
     "0129": {
         "id": "0129",
-        "name": "Accomodation code",
+        "name": "Accommodation code",
         "type": "User",
         "codes": [
             {
@@ -6003,7 +6979,7 @@
             },
             {
                 "code": "PS",
-                "description": "Acts & consultations in the scope of ALD D162-1-6, 5th paragraph care protocol"
+                "description": "Acts & consultations in the scope of ALD D162-1-6, 5th paragraph care protocol (permanence de soins)"
             },
             {
                 "code": "SM",
@@ -8037,7 +9013,7 @@
             },
             {
                 "code": "INS",
-                "description": "INS (provisoire ou définitive)"
+                "description": "Identifiant National de Santé (INS-NIR ou INS-NIA)"
             },
             {
                 "code": "INS-C",
@@ -8332,24 +9308,16 @@
         "type": "User",
         "codes": [
             {
-                "code": "CH",
-                "description": "Child Health Assistance"
+                "code": "AD",
+                "description": "ALD applicable, à confirmer sur le dossier"
             },
             {
-                "code": "ES",
-                "description": "Elective Surgery Program"
+                "code": "AR",
+                "description": "ALD en rapport"
             },
             {
-                "code": "FP",
-                "description": "Family Planning"
-            },
-            {
-                "code": "O",
-                "description": "Other"
-            },
-            {
-                "code": "U",
-                "description": "Unknown"
+                "code": "AN",
+                "description": "ALD non en rapport"
             }
         ]
     },
@@ -15209,6 +16177,10 @@
                 "description": "Afghanistan"
             },
             {
+                "code": "ALA",
+                "description": "Åland Islands"
+            },
+            {
                 "code": "ALB",
                 "description": "Albania"
             },
@@ -15231,6 +16203,10 @@
             {
                 "code": "AIA",
                 "description": "Anguilla"
+            },
+            {
+                "code": "ATA",
+                "description": "Antarctica"
             },
             {
                 "code": "ATG",
@@ -15305,8 +16281,16 @@
                 "description": "Botswana"
             },
             {
+                "code": "BVT",
+                "description": "Bouvet Island"
+            },
+            {
                 "code": "BRA",
                 "description": "Brazil"
+            },
+            {
+                "code": "IOT",
+                "description": "British Indian Ocean Territory"
             },
             {
                 "code": "BRN",
@@ -15355,6 +16339,14 @@
             {
                 "code": "CHN",
                 "description": "China"
+            },
+            {
+                "code": "CXR",
+                "description": "Christmas Island"
+            },
+            {
+                "code": "CCK",
+                "description": "Cocos (Keeling) Islands"
             },
             {
                 "code": "COL",
@@ -15449,6 +16441,10 @@
                 "description": "French Polynesia"
             },
             {
+                "code": "ATF",
+                "description": "French Southern Territories"
+            },
+            {
                 "code": "GAB",
                 "description": "Gabon"
             },
@@ -15493,6 +16489,10 @@
                 "description": "Guatemala"
             },
             {
+                "code": "GGY",
+                "description": "Guernsey"
+            },
+            {
                 "code": "GIN",
                 "description": "Guinea"
             },
@@ -15507,6 +16507,10 @@
             {
                 "code": "HTI",
                 "description": "Haiti"
+            },
+            {
+                "code": "HMD",
+                "description": "Heard Island and McDonald Islands"
             },
             {
                 "code": "VAT",
@@ -15541,6 +16545,10 @@
                 "description": "Iraq"
             },
             {
+                "code": "IMN",
+                "description": "Isle of Man"
+            },
+            {
                 "code": "ISR",
                 "description": "Israel"
             },
@@ -15551,6 +16559,10 @@
             {
                 "code": "JPN",
                 "description": "Japan"
+            },
+            {
+                "code": "JEY",
+                "description": "Jersey"
             },
             {
                 "code": "JOR",
@@ -15653,6 +16665,10 @@
                 "description": "Mauritius"
             },
             {
+                "code": "MYT",
+                "description": "Mayotte"
+            },
+            {
                 "code": "MEX",
                 "description": "Mexico"
             },
@@ -15671,6 +16687,10 @@
             {
                 "code": "MNG",
                 "description": "Mongolia"
+            },
+            {
+                "code": "MNE",
+                "description": "Montenegro"
             },
             {
                 "code": "MSR",
@@ -15751,6 +16771,10 @@
             {
                 "code": "PLW",
                 "description": "Palau"
+            },
+            {
+                "code": "PSE",
+                "description": "Palestine, State of"
             },
             {
                 "code": "PAN",
@@ -15837,6 +16861,10 @@
                 "description": "Senegal"
             },
             {
+                "code": "SRB",
+                "description": "Serbia"
+            },
+            {
                 "code": "SYC",
                 "description": "Seychelles"
             },
@@ -15859,6 +16887,10 @@
             {
                 "code": "ZAF",
                 "description": "South Africa"
+            },
+            {
+                "code": "SGS",
+                "description": "South Georgia and the South Sandwich Islands"
             },
             {
                 "code": "LKA",
@@ -15903,6 +16935,10 @@
             {
                 "code": "THA",
                 "description": "Thailand"
+            },
+            {
+                "code": "TLS",
+                "description": "Timor-Leste"
             },
             {
                 "code": "TGO",
@@ -15955,6 +16991,10 @@
             {
                 "code": "USA",
                 "description": "United States"
+            },
+            {
+                "code": "UMI",
+                "description": "United States Minor Outlying Islands"
             },
             {
                 "code": "URY",
@@ -16101,7 +17141,7 @@
                 "description": "United Kingdom"
             },
             {
-                "code": "ROM",
+                "code": "ROU",
                 "description": "Romania"
             },
             {
@@ -23383,7 +24423,7 @@
             },
             {
                 "code": "CC",
-                "description": " Carnet de circulation "
+                "description": "Carnet de circulation"
             },
             {
                 "code": "CE",
