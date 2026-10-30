@@ -1,11 +1,1 @@
-{
-    "comparedPaths": 39,
-    "differences": [
-        {
-            "path": "PID[2]-3[0].1.1",
-            "type": "CHANGED",
-            "left": "100001",
-            "right": "100009"
-        }
-    ]
-}
+EXCEPTION InvalidArgumentException: Invalid ignore rule "PID[0]-3[0]": indexes start at 1; a segment is counted among the segments of the same name.

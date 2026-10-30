@@ -1,15 +1,28 @@
 {
     "title": "Trailing empty fields on the right message",
     "tests": [
-        "comparison: an absent element equals an empty element"
+        "comparison: an absent element equals an empty element for data",
+        "comparison: empty elements present on one side only are form differences (EMPTY_ADDED)"
     ],
     "references": [
         "README, Compare two messages"
     ],
     "ignore": [],
     "expected": {
-        "identical": true,
-        "differences": []
-    },
-    "knownBug": "Empty trailing fields are reported as ADDED (2 differences)."
+        "identical": false,
+        "differences": [
+            {
+                "location": "PID[1]-9",
+                "type": "EMPTY_ADDED",
+                "left": null,
+                "right": null
+            },
+            {
+                "location": "PID[1]-10",
+                "type": "EMPTY_ADDED",
+                "left": null,
+                "right": null
+            }
+        ]
+    }
 }

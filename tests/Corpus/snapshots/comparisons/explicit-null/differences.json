@@ -1,10 +1,10 @@
 {
-    "comparedPaths": 41,
+    "comparedPaths": 30,
     "differences": [
         {
-            "path": "PID[2]-10[0].1.1",
-            "type": "CHANGED",
-            "left": "",
+            "path": "PID[1]-10[1].1.1",
+            "type": "ADDED",
+            "left": null,
             "right": "\"\""
         }
     ]

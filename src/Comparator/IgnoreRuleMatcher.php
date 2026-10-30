@@ -4,14 +4,19 @@ declare(strict_types=1);
 namespace HL7v2\Comparator;
 
 use HL7v2\Comparator\IgnoreRule;
-use HL7v2\Comparator\Path;
+use HL7v2\Model\Location;
 
+/**
+ * Match locations against the ignore rules of the comparator.
+ */
 final class IgnoreRuleMatcher
 {
     /**
-     * Determine whether a flattened HL7 path matches an ignore rule.
+     * Check whether a location matches an ignore rule.
      *
-     * Any null value in IgnoreRule acts as a wildcard.
+     * A null property of the rule matches every index. A rule on a deeper
+     * level than the location (a component rule for a field location) does
+     * not match it.
      *
      * Examples:
      *
@@ -19,42 +24,35 @@ final class IgnoreRuleMatcher
      *     PID-3.4
      *
      * Matches:
-     *     PID[0]-3[0].4.1
-     *     PID[5]-3[1].4.2
+     *     PID[1]-3[1].4.1
+     *     PID[2]-3[3].4.2
      *
      * Does not match:
-     *     PID[0]-3[0].5.1
-     *     PID[0]-4[0].4.1
+     *     PID[1]-3[1].5.1
+     *     PID[1]-4[1].4.1
+     *     PID[1]-3[1]       (field location: the rule is deeper)
      *
      * @param IgnoreRule $rule
-     * @param Path $path
+     * @param Location $location
+     *
      * @return bool
      */
-    public function matches(IgnoreRule $rule, Path $path): bool
+    public function matches(IgnoreRule $rule, Location $location): bool
     {
-
-        if ($rule->getSegmentName() !== $path->getSegmentName()) {
+        if ($rule->segment !== $location->segment) {
             return false;
         }
 
-        if ($rule->getSegmentIndex() !== null && $rule->getSegmentIndex() !== $path->getSegmentIndex()) {
-            return false;
-        }
-
-        if ($rule->getFieldOffset() !== null && $rule->getFieldOffset() !== $path->getFieldOffset()) {
-            return false;
-        }
-
-        if ($rule->getRepeatIndex() !== null && $rule->getRepeatIndex() !== $path->getRepeatIndex()) {
-            return false;
-        }
-
-        if ($rule->getComponentOffset() !== null && $rule->getComponentOffset() !== $path->getComponentOffset()) {
-            return false;
-        }
-
-        if ($rule->getSubComponentOffset() !== null && $rule->getSubComponentOffset() !== $path->getSubComponentOffset()) {
-            return false;
+        foreach ([
+            [$rule->segmentRank, $location->segmentRank],
+            [$rule->field, $location->field],
+            [$rule->repetition, $location->repetition],
+            [$rule->component, $location->component],
+            [$rule->subComponent, $location->subComponent],
+        ] as [$expected, $actual]) {
+            if ($expected !== null && $expected !== $actual) {
+                return false;
+            }
         }
 
         return true;

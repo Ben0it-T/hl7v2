@@ -90,7 +90,7 @@ A comparison case is a pair of messages and a case file: `comparisons/<id>/left.
 ```
 
 `ignore` lists the ignore rules passed to `compare()`. `expected` states whether the messages are identical and lists the differences, in the Location notation (1-based, a segment ranked among the segments of the same name); `"expected": { "error": true }` means the ignore rules must be refused. `knownBug` has the same meaning as in a case file.
-Until the Comparator uses the Location notation, the test compares the outcome only (identical, number of differences, error); the differences are recorded in the snapshots.
+The test compares every expected difference with the actual one, in order: location (long or short form), type, left and right Raw values. The types are `ADDED`, `REMOVED`, `CHANGED` (data) and `EMPTY_ADDED`, `EMPTY_REMOVED` (form: empty element present on one side only).
 
 ## Snapshots
 

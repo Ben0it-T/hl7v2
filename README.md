@@ -148,7 +148,7 @@ if ($result->isIdentical()) {
 }
 ```
 
-Ignore selected fields, repetitions, components or sub-components:
+Ignore selected segments, fields, repetitions, components or sub-components:
 
 ```php
 $result = $hl7a->compare(
@@ -161,31 +161,52 @@ $result = $hl7a->compare(
 );
 ```
 
-Comparison returns a ComparisonResult object containing all detected differences.
+Comparison returns a ComparisonResult object containing all detected differences, in message order.
 
 ```php
 foreach ($result->getDifferences() as $difference) {
     printf(
         "%s [%s] left='%s' right='%s'\n",
-        $difference->getPath(),
-        $difference->getType()->name,
+        $difference->getPath(),           // PID[1]-5[1].2.1
+        $difference->getType()->name,     // CHANGED
         $difference->getLeft(),
         $difference->getRight()
     );
 }
 ```
 
+Positions are counted from 1, and a segment is ranked among the segments of the same name (`NK1[2]` is the second NK1, whatever comes before it): a segment inserted in a message does not shift the following ones.
+`getPath()` returns the long form (`PID[1]-5[1].2.1`); `getLocation()->toShortString()` the short form (`PID-5.2.1`).
+
+Difference types:
+
+| Type            | Meaning                                                  |
+| --------------- | -------------------------------------------------------- |
+| `ADDED`         | value present in the right message only                  |
+| `REMOVED`       | value present in the left message only                   |
+| `CHANGED`       | different values                                         |
+| `EMPTY_ADDED`   | empty element present in the right message only (form)   |
+| `EMPTY_REMOVED` | empty element present in the left message only (form)    |
+
+Raw values are compared. An empty element and an absent one carry the same data, so they only give a form difference (for example trailing empty fields: `PID|1||` and `PID|1`); the explicit null `""` is a value.
+`isIdentical()` is true when there is no difference at all; `getDataDifferences()` returns the data differences only.
+
+Limitation: two messages with different encoding characters (MSH-2) may show differences on values that are identical once decoded.
+
 ### Ignore rule syntax
+
+Indexes start at 1; a missing index or `*` means every index. An index `0` is refused.
 
 | Rule              | Description                                                      |
 | ----------------- | ---------------------------------------------------------------- |
+| `NK1`             | Ignore every NK1 segment                                         |
+| `NK1[2]`          | Ignore the second NK1 segment                                    |
 | `MSH-7`           | Ignore field MSH-7                                               |
 | `PID-3`           | Ignore field PID-3 and all repetitions/components/sub-components |
 | `PID-3.4`         | Ignore component PID-3.4 and all sub-components                  |
 | `PID-3.4.1`       | Ignore sub-component PID-3.4.1                                   |
-| `PID[*]-3[*].4`   | Ignore component PID-3.4 and all its sub-components for all segment indexes and repetitions |
-| `PID[2]-3[0].4.1` | Ignore only a specific path                                      |
-
+| `PID[*]-3[*].4`   | Ignore component PID-3.4 in every PID segment and repetition     |
+| `PID[1]-3[2].4.1` | Ignore sub-component PID-3.4.1 of the second repetition of PID-3 in the first PID segment |
 
 ### Serialize to structural XML
 

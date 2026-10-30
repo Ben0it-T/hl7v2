@@ -1,8 +1,8 @@
 {
-    "comparedPaths": 39,
+    "comparedPaths": 29,
     "differences": [
         {
-            "path": "PID[2]-5[0].2.1",
+            "path": "PID[1]-5[1].2.1",
             "type": "CHANGED",
             "left": "JANE",
             "right": "JOAN"

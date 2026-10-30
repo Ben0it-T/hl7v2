@@ -1,11 +1,4 @@
 {
-    "comparedPaths": 39,
-    "differences": [
-        {
-            "path": "PID[2]-3[0].1.1",
-            "type": "CHANGED",
-            "left": "100001",
-            "right": "100009"
-        }
-    ]
+    "comparedPaths": 29,
+    "differences": []
 }

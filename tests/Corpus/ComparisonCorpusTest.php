@@ -5,6 +5,7 @@ namespace HL7v2\Tests\Corpus;
 
 use HL7v2\Comparator\ComparisonResult;
 use HL7v2\HL7Message;
+use HL7v2\Model\Location;
 use PHPUnit\Framework\Attributes\DataProvider;
 use RuntimeException;
 use Throwable;
@@ -17,9 +18,8 @@ use Throwable;
  * messages are identical and lists the differences (Location notation,
  * 1-based); expected.error means the ignore rules must be refused.
  *
- * Until the Comparator uses the Location notation, only the outcome
- * (identical, number of differences, error) is compared with the expected
- * result; the differences themselves are recorded in snapshots.
+ * Every expected difference is compared with the actual one: Location
+ * (long or short form), type, left and right Raw values, in order.
  */
 final class ComparisonCorpusTest extends CorpusTestCase
 {
@@ -55,14 +55,34 @@ final class ComparisonCorpusTest extends CorpusTestCase
 
         try {
             $result = $this->compare($id, $case);
-            $actual = ['error' => false, 'identical' => $result->isIdentical(), 'differences' => $result->countDifferences()];
+            $differences = [];
+            foreach ($result->getDifferences() as $difference) {
+                $differences[] = [
+                    $difference->getLocation()->toLongString(),
+                    $difference->getType()->name,
+                    $difference->getLeft(),
+                    $difference->getRight(),
+                ];
+            }
+            $actual = ['error' => false, 'identical' => $result->isIdentical(), 'differences' => $differences];
         } catch (Throwable $e) {
             $actual = ['error' => true, 'identical' => null, 'differences' => null];
         }
 
-        $wanted = ($expected['error'] ?? false) === true
-            ? ['error' => true, 'identical' => null, 'differences' => null]
-            : ['error' => false, 'identical' => (bool) $expected['identical'], 'differences' => count($expected['differences'] ?? [])];
+        if (($expected['error'] ?? false) === true) {
+            $wanted = ['error' => true, 'identical' => null, 'differences' => null];
+        } else {
+            $differences = [];
+            foreach ($expected['differences'] ?? [] as $difference) {
+                $differences[] = [
+                    Location::parse((string) $difference['location'])->toLongString(),
+                    (string) $difference['type'],
+                    $difference['left'] ?? null,
+                    $difference['right'] ?? null,
+                ];
+            }
+            $wanted = ['error' => false, 'identical' => (bool) $expected['identical'], 'differences' => $differences];
+        }
 
         if ($actual !== $wanted && $knownBug !== null) {
             $this->markTestIncomplete('Known bug: ' . $knownBug);

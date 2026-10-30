@@ -1,17 +1,17 @@
 {
-    "comparedPaths": 41,
+    "comparedPaths": 29,
     "differences": [
         {
-            "path": "PID[2]-9[0].1.1",
-            "type": "ADDED",
+            "path": "PID[1]-9[1]",
+            "type": "EMPTY_ADDED",
             "left": null,
-            "right": ""
+            "right": null
         },
         {
-            "path": "PID[2]-10[0].1.1",
-            "type": "ADDED",
+            "path": "PID[1]-10[1]",
+            "type": "EMPTY_ADDED",
             "left": null,
-            "right": ""
+            "right": null
         }
     ]
 }

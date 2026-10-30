@@ -35,6 +35,5 @@
                 "right": "SPO"
             }
         ]
-    },
-    "knownBug": "Segments are compared by absolute position: PV1 is reported as removed and added again (14 differences instead of 4)."
+    }
 }

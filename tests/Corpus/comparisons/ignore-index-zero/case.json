@@ -11,6 +11,5 @@
     ],
     "expected": {
         "error": true
-    },
-    "knownBug": "Index 0 is accepted (0-based notation): no error is raised."
+    }
 }

@@ -18,6 +18,5 @@
                 "right": "JOAN"
             }
         ]
-    },
-    "knownBug": "Paths are 0-based for repetitions and use the absolute segment position (PID[2]-5[0].2.1)."
+    }
 }

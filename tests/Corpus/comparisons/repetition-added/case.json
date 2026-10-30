@@ -29,6 +29,5 @@
                 "right": "AN"
             }
         ]
-    },
-    "knownBug": "Empty components of the new repetition are reported as ADDED (5 differences instead of 3)."
+    }
 }

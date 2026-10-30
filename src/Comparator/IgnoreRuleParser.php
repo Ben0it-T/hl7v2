@@ -7,69 +7,65 @@ use HL7v2\Comparator\IgnoreRule;
 
 use InvalidArgumentException;
 
+/**
+ * Parse the ignore rules of the comparator (see IgnoreRule).
+ */
 final class IgnoreRuleParser
 {
+    private const PATTERN =
+        '/^([A-Z][A-Z0-9]{2})'           // segment name
+        . '(?:\[(\d+|\*)\])?'            // segment rank
+        . '(?:-(\d+)'                    // field
+        . '(?:\[(\d+|\*)\])?'            // repetition
+        . '(?:\.(\d+)'                   // component
+        . '(?:\.(\d+))?'                 // sub-component
+        . ')?)?$/';
+
     /**
-     * Parse an HL7 ignore rule.
+     * Parse an ignore rule.
      *
      * Examples:
+     * - ZBE
+     * - NK1[2]
      * - MSH-7
      * - PID-3
      * - PID-3.4
      * - PID-3.4.1
      * - PID[*]-3[*].4
-     * - PID[2]-3[0].4.1
+     * - PID[1]-3[2].4.1
      *
-     * Wildcards (*) are internally represented as null.
+     * Wildcards (*) and missing indexes are represented as null.
      *
      * @param string $rule
+     *
      * @return IgnoreRule
+     *
+     * @throws InvalidArgumentException On an invalid rule, or an index 0
+     *                                  (indexes start at 1).
      */
     public function parse(string $rule): IgnoreRule
     {
         $rule = trim($rule);
 
-        $pattern =
-            '/^' .
-            '([A-Z0-9]{3})' .            // segment
-            '(?:\[(\d+|\*)\])?' .        // segment index
-            '\-' .
-            '(\d+)' .                    // field
-            '(?:\[(\d+|\*)\])?' .        // repeat index
-            '(?:\.(\d+))?' .             // component
-            '(?:\.(\d+))?' .             // subcomponent
-            '$/';
-
-        if (!preg_match($pattern, $rule, $matches)) {
-            throw new InvalidArgumentException(
-                sprintf('Invalid ignore rule "%s"', $rule)
-            );
+        if (preg_match(self::PATTERN, $rule, $m) !== 1) {
+            throw new InvalidArgumentException(sprintf('Invalid ignore rule "%s".', $rule));
         }
 
-        return new IgnoreRule(
-            segmentName: $matches[1],
-            segmentIndex: $this->parseWildcardInt($matches[2]),
-            fieldOffset: (int) $matches[3],
-            repeatIndex: $this->parseWildcardInt($matches[4] ?? null),
-            componentOffset: isset($matches[5])
-                ? (int) $matches[5]
-                : null,
-            subComponentOffset: isset($matches[6])
-                ? (int) $matches[6]
-                : null
-        );
-    }
+        $index = static function (int $i) use ($m, $rule): ?int {
+            $value = $m[$i] ?? '';
+            if ($value === '' || $value === '*') {
+                return null;
+            }
+            if ((int) $value < 1) {
+                throw new InvalidArgumentException(sprintf(
+                    'Invalid ignore rule "%s": indexes start at 1; a segment is counted among the segments of the same name.',
+                    $rule
+                ));
+            }
 
-    private function parseWildcardInt(?string $value): ?int
-    {
-        if ($value === null || $value === '') {
-            return null;
-        }
+            return (int) $value;
+        };
 
-        if ($value === '*') {
-            return null;
-        }
-
-        return (int) $value;
+        return new IgnoreRule($m[1], $index(2), $index(3), $index(4), $index(5), $index(6));
     }
 }
