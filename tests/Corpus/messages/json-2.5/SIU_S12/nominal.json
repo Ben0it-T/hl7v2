@@ -1,0 +1,13 @@
+{
+    "title": "Minimal valid SIU^S12, HL7 2.5",
+    "tests": [
+        "nominal: SCH, optional PATIENT group, RESOURCES group with SERVICE and PERSONNEL_RESOURCE"
+    ],
+    "references": [
+        "HL7 2.5 ch. 10, SIU^S12"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

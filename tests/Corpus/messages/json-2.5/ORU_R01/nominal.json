@@ -1,0 +1,13 @@
+{
+    "title": "Valid ORU^R01 with every group entered by its first segment",
+    "tests": [
+        "nominal: PATIENT, VISIT, ORDER_OBSERVATION, OBSERVATION"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "title": "PV1 after the last OBX: known segment out of place",
+    "tests": [
+        "recovery: Not expected segment (known in the profile, not expected at this position)"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 6,
+                "location": "PV1",
+                "summary": "Not expected segment"
+            }
+        ]
+    },
+    "knownBug": "Defect 9: the finding is located on the message structure (ORU_R01) instead of the segment (PV1)."
+}

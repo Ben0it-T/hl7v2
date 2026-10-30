@@ -1,0 +1,14 @@
+{
+    "title": "C5: ORU^R01 without PATIENT (optional first child of PATIENT_RESULT)",
+    "tests": [
+        "structure: entry segments of a group whose first child is an optional group (ADR 0002, ENTRIES)"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    },
+    "knownBug": "Defect 1: only the first child opens a group; the validator reports PATIENT_RESULT as missing and ORC, OBR, OBX as misplaced."
+}

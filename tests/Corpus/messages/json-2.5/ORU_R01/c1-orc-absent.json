@@ -1,0 +1,14 @@
+{
+    "title": "C1: ORU^R01 without ORC (optional first child of ORDER_OBSERVATION)",
+    "tests": [
+        "structure: entry segments of a group whose first child is optional (ADR 0002, ENTRIES)"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    },
+    "knownBug": "Defect 1: only the first child opens a group; the validator reports ORDER_OBSERVATION as missing and OBR, OBX as misplaced."
+}

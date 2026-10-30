@@ -1,0 +1,13 @@
+{
+    "title": "C6: NTE at three places (PATIENT, ORDER_OBSERVATION, OBSERVATION)",
+    "tests": [
+        "structure: the same segment name attached to three different profile nodes"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

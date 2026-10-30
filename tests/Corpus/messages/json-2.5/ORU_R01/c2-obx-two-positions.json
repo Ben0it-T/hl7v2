@@ -1,0 +1,13 @@
+{
+    "title": "C2: OBX at two positions (OBSERVATION and SPECIMEN)",
+    "tests": [
+        "structure: the same segment name attached to two different profile nodes"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

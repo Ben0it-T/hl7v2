@@ -1,0 +1,21 @@
+{
+    "title": "C4: PID after the order, opening a second PATIENT_RESULT",
+    "tests": [
+        "structure: optional group (PATIENT) absent in the first repetition, its entry segment found later",
+        "structure: PID opens PATIENT_RESULT[2], whose required ORDER_OBSERVATION is missing"
+    ],
+    "references": [
+        "HL7 2.5 ch. 7, ORU^R01"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "path": "PATIENT_RESULT[2]/ORDER_OBSERVATION",
+                "summary": "required group ORDER_OBSERVATION missing (R, [1..*])"
+            }
+        ]
+    },
+    "knownBug": "Defect 3: the optional group is looked up in the rest of the message; the validator reports ORC, OBR and OBX as misplaced and ORDER_OBSERVATION as missing (5 errors instead of 1)."
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Minimal valid ADT^A01, HL7 2.3",
+    "tests": [
+        "nominal: required segments and fields only",
+        "message type ADT^A01 (MSH-9 without message structure)"
+    ],
+    "references": [
+        "HL7 2.3 ch. 3, ADT^A01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}
