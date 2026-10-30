@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace HL7v2\Validation;
 
 use HL7v2\Model\Message;
-use HL7v2\Model\Validation\NavigationState;
+use HL7v2\Validation\NavigationState;
 
 final class ValidationContext
 {
