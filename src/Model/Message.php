@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace HL7v2\Model;
 
+use HL7v2\Model\EscapeSequences;
 use HL7v2\Model\Segment;
 
 /**
@@ -29,6 +30,7 @@ class Message
     private string $componentSeparator    = '^';
     private string $subComponentSeparator = '&';
     private string $escapeChar            = '\\';
+    private ?EscapeSequences $escapeSequences = null;
 
     // Message metadata
     private string $messageCode              = '';
@@ -61,6 +63,7 @@ class Message
         $this->fieldRepeatSeparator  = $fieldRepeatSep;
         $this->escapeChar            = $escapeChar;
         $this->subComponentSeparator = $subComponentSep;
+        $this->escapeSequences       = null;
     }
 
     /**
@@ -83,6 +86,22 @@ class Message
     public function getFieldRepeatSeparator(): string { return $this->fieldRepeatSeparator; }
     public function getSubComponentSeparator(): string { return $this->subComponentSeparator; }
     public function getEscapeChar(): string { return $this->escapeChar; }
+
+    /**
+     * Get the escape sequences of the message (from MSH-1 and MSH-2).
+     *
+     * @return EscapeSequences
+     */
+    public function getEscapeSequences(): EscapeSequences
+    {
+        return $this->escapeSequences ??= new EscapeSequences(
+            $this->fieldSeparator,
+            $this->componentSeparator,
+            $this->fieldRepeatSeparator,
+            $this->escapeChar,
+            $this->subComponentSeparator
+        );
+    }
 
 
     /**

@@ -89,6 +89,7 @@ class HL7Parser
         $message = new Message();
 
         $message->setSeparators($fieldSeparator, $componentSeparator, $fieldRepeatSeparator, $escapeChar, $subComponentSeparator);
+        $escapeSequences = $message->getEscapeSequences();
 
         // Split message to segments (CR / LF)
         $segments = preg_split("/[\n\r" . $this->segmentSeparator . ']/', $raw, -1, PREG_SPLIT_NO_EMPTY);
@@ -161,8 +162,12 @@ class HL7Parser
                         }
 
                         foreach ($subcomponents as $subcomponentStr) {
+                            // MSH-2 holds the encoding characters: never decoded.
                             $component->addSubComponent(
-                                new SubComponent($subcomponentStr)
+                                new SubComponent(
+                                    $subcomponentStr,
+                                    $segmentName === "MSH" && $i === 1 ? null : $escapeSequences
+                                )
                             );
                         }
 
