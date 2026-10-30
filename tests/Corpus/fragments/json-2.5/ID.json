@@ -1,0 +1,45 @@
+{
+    "location": "PID-24",
+    "references": [
+        "HL7 2.5 ch. 2.A.35 ID",
+        "HL7 2.5 table 0136"
+    ],
+    "cases": [
+        {
+            "value": "Y",
+            "tests": [
+                "ID: value in table 0136"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "N",
+            "tests": [
+                "ID: value in table 0136"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "y",
+            "tests": [
+                "ID: table codes are case-sensitive"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-24",
+                        "summary": "value y not in table 0136"
+                    }
+                ]
+            }
+        }
+    ]
+}

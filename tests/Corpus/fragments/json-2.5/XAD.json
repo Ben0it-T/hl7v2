@@ -1,0 +1,45 @@
+{
+    "location": "PID-11",
+    "references": [
+        "HL7 2.5 ch. 2.A.85 XAD",
+        "HL7 2.5 tables 0190, 0399"
+    ],
+    "cases": [
+        {
+            "value": "1 MAIN STREET^^SPRINGFIELD^^12345^USA^H",
+            "tests": [
+                "XAD: street, city, zip, country, address type"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "1 MAIN STREET^^SPRINGFIELD^^12345^USA^ZZ",
+            "tests": [
+                "XAD.7 address type not in table 0190"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-11.7",
+                        "summary": "value ZZ not in table 0190"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "1 MAIN STREET&MAIN STREET&1^^SPRINGFIELD^^12345^USA^H",
+            "tests": [
+                "XAD.1 (SAD) with subcomponents"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        }
+    ]
+}

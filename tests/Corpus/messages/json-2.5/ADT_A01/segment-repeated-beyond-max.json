@@ -1,0 +1,20 @@
+{
+    "title": "PD1 twice ([0..1])",
+    "tests": [
+        "cardinality: segment repeated beyond its maximum"
+    ],
+    "references": [
+        "HL7 2.5 ch. 3, ADT^A01"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 5,
+                "location": "PD1",
+                "summary": "PD1 repeated beyond its maximum (1)"
+            }
+        ]
+    }
+}

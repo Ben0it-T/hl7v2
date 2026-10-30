@@ -1,0 +1,13 @@
+{
+    "title": "ADT^A01 with the optional Z segments ZFP, ZFV and ZFM",
+    "tests": [
+        "IHE PAM FR: Z segments defined by the profile, at their place after ZBE"
+    ],
+    "references": [
+        "PAMFR 2.11.2 5.2, 6.15, 6.16, 6.17"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "title": "MSH-18 = 8859/1, message encoded in ISO-8859-1 with accented characters",
+    "tests": [
+        "parser: conversion to UTF-8 according to MSH-18",
+        "values: lengths counted in characters, not bytes"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.15.9.18"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

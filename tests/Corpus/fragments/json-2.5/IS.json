@@ -1,0 +1,61 @@
+{
+    "location": "PID-8",
+    "references": [
+        "HL7 2.5 ch. 2.A.36 IS",
+        "HL7 2.5 table 0001"
+    ],
+    "cases": [
+        {
+            "value": "F",
+            "tests": [
+                "IS: value in table 0001"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "U",
+            "tests": [
+                "IS: value in table 0001"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "Z",
+            "tests": [
+                "IS: value not in table 0001"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-8",
+                        "summary": "value Z not in table 0001"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "f",
+            "tests": [
+                "IS: table codes are case-sensitive"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-8",
+                        "summary": "value f not in table 0001"
+                    }
+                ]
+            }
+        }
+    ]
+}

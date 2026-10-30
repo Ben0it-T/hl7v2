@@ -1,0 +1,13 @@
+{
+    "title": "ADT^Z99 updating an A01 movement (ZBE-4 = UPDATE, ZBE-6 = A01)",
+    "tests": [
+        "IHE PAM FR: Z99 event, ZBE required"
+    ],
+    "references": [
+        "PAMFR 2.11.2 5.3, 6.13"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

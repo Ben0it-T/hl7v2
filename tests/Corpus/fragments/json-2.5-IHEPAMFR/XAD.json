@@ -1,0 +1,46 @@
+{
+    "location": "PID-11",
+    "references": [
+        "DTFR 1.8.2 N.6 XAD",
+        "DTFR 1.8.2 tables 0190, 0399"
+    ],
+    "cases": [
+        {
+            "value": "12 RUE DU MOULIN^^PARIS^^75001^FRA^H",
+            "tests": [
+                "XAD: home address in France"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "^^PARIS 01^75101^75001^FRA^BDL^^75101",
+            "tests": [
+                "XAD: birth place (BDL) with COG in XAD.9"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "12 RUE DU MOULIN^^PARIS^^75001^ROM^H",
+            "tests": [
+                "XAD.6 ROM is no longer an ISO 3166 code (ROU)"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-11.6",
+                        "summary": "value ROM not in table 0399"
+                    }
+                ]
+            },
+            "knownBug": "profiles/json-2.5-IHEPAMFR (old format, frozen until step 9) still has the former table 0399 with ROM; the source was corrected in 08c72dd."
+        }
+    ]
+}

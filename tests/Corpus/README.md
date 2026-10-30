@@ -29,7 +29,7 @@ tests/Corpus/
         "valid": true,
         "findings": []
     },
-    "knownBug": "Defect 1: ..."
+    "knownBug": "Only the first child opens a group; ..."
 }
 ```
 
@@ -56,11 +56,19 @@ A fragment file lists values for one datatype and the location where each value 
 ```json
 {
     "location": "PID-5",
+    "references": ["HL7 2.5 ch. 2.A.88 XPN", "HL7 2.5 table 0200"],
     "cases": [
-        { "value": "DOE^JANE^^^^^L", "expected": { "valid": true, "findings": [] } }
+        {
+            "value": "DOE^JANE^^^^^L",
+            "tests": ["XPN: family name, given name, name type L"],
+            "expected": { "valid": true, "findings": [] }
+        }
     ]
 }
 ```
+
+`location` is a field (`SEG-n`, first occurrence of the segment): each `value` replaces that field of the carrier message, which is valid on its own.
+`tests`, `expected` and `knownBug` have the same meaning as in a case file; `references` applies to every value of the file.
 
 ## Running
 

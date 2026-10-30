@@ -1,0 +1,20 @@
+{
+    "title": "ADT^A28 with a pseudo-PV1 that carries PV1-3",
+    "tests": [
+        "IHE PAM: field X present in the pseudo-PV1"
+    ],
+    "references": [
+        "ITI TF-2 3.30.5.4"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 4,
+                "location": "PV1-3",
+                "summary": "field PV1-3 not allowed (X)"
+            }
+        ]
+    }
+}

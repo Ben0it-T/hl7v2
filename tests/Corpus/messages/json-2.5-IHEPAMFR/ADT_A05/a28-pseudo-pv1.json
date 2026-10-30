@@ -1,0 +1,14 @@
+{
+    "title": "ADT^A28 with a pseudo-PV1 (PV1-2 = N only)",
+    "tests": [
+        "IHE PAM: pseudo-PV1 in ITI-30, every field X except PV1-2"
+    ],
+    "references": [
+        "ITI TF-2 3.30.5.4",
+        "PAMFR 2.11.2 6.10"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

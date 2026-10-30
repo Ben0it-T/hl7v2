@@ -1,0 +1,45 @@
+{
+    "location": "PID-13",
+    "references": [
+        "HL7 2.5 ch. 2.A.89 XTN",
+        "HL7 2.5 tables 0201, 0202"
+    ],
+    "cases": [
+        {
+            "value": "^PRN^PH^^^^^^^^^0102030405",
+            "tests": [
+                "XTN: use code, equipment type, unformatted number"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "^NET^Internet^jane.doe@example.org",
+            "tests": [
+                "XTN: e-mail address"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "^ZZZ^PH^^^^^^^^^0102030405",
+            "tests": [
+                "XTN.2 use code not in table 0201"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-13.2",
+                        "summary": "value ZZZ not in table 0201"
+                    }
+                ]
+            }
+        }
+    ]
+}

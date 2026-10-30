@@ -1,0 +1,14 @@
+{
+    "title": "ADT^A49: change of account number (PID-18 new, MRG-3 old)",
+    "tests": [
+        "IHE PAM FR: A49 with the HL7 2.5 ADT_A30 structure, without group"
+    ],
+    "references": [
+        "PAMFR 2.11.2 5.1.2",
+        "HL7 2.5 ch. 3, ADT^A49"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "location": "PID-3",
+    "references": [
+        "HL7 2.5 ch. 2.A.14 CX",
+        "HL7 2.5 tables 0203, 0301"
+    ],
+    "cases": [
+        {
+            "value": "100001^^^HOSP^PI",
+            "tests": [
+                "CX: identifier, assigning authority, identifier type"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "100001^^^HOSP&1.2.250.1.999.1.1&ISO^PI",
+            "tests": [
+                "CX.4 (HD) with universal ID"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "100001^^^HOSP^ZZ",
+            "tests": [
+                "CX.5 identifier type not in table 0203"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-3.5",
+                        "summary": "value ZZ not in table 0203"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "100001^^^HOSP&1.2.250.1.999.1.1&ZZZ^PI",
+            "tests": [
+                "CX.4.3 universal ID type not in table 0301"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-3.4.3",
+                        "summary": "value ZZZ not in table 0301"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "100001^^^HOSP^PI~200001^^^HOSP^AN",
+            "tests": [
+                "CX: repetition"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        }
+    ]
+}

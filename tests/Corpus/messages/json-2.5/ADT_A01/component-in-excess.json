@@ -1,0 +1,21 @@
+{
+    "title": "PID-8 (IS) with a second component",
+    "tests": [
+        "component in excess"
+    ],
+    "references": [
+        "HL7 2.5 ch. 3, ADT^A01"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 3,
+                "location": "PID-8.2",
+                "summary": "component in excess"
+            }
+        ]
+    },
+    "knownBug": "Length and table are checked on the serialized value (F^EXTRA), giving 4 errors instead of 1."
+}

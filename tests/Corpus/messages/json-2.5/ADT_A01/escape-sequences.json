@@ -1,0 +1,14 @@
+{
+    "title": "Valid escape sequences \\T\\, \\S\\ and \\F\\ in names and address",
+    "tests": [
+        "values: escape sequences are decoded before format and table checks",
+        "values: HL7 length counts each escape sequence as one character"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.5.3, ch. 2.7 (escape sequences)"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

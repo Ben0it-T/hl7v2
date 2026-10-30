@@ -1,0 +1,13 @@
+{
+    "title": "\"\" as a subcomponent value (CX-4.2)",
+    "tests": [
+        "values: \"\" in a subcomponent is the literal value, not a null"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.5.3"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

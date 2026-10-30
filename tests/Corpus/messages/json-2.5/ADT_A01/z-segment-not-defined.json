@@ -1,0 +1,21 @@
+{
+    "title": "Z segment unknown to the profile (ZZA after PV1)",
+    "tests": [
+        "recovery: Not defined segment, Z segment"
+    ],
+    "references": [
+        "HL7 2.5 ch. 3, ADT^A01"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": [
+            {
+                "severity": "Warning",
+                "segment": 5,
+                "location": "ZZA",
+                "summary": "Not defined segment (Z segment)"
+            }
+        ]
+    },
+    "knownBug": "No severity; the unknown Z segment is reported as an error and the message is invalid."
+}

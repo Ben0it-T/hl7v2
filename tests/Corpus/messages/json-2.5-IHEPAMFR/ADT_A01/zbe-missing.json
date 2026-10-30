@@ -1,0 +1,21 @@
+{
+    "title": "ADT^A01 without ZBE",
+    "tests": [
+        "IHE PAM FR: required Z segment absent"
+    ],
+    "references": [
+        "ITI TF-2 3.31.5.6",
+        "PAMFR 2.11.2 5.2"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "path": "ZBE",
+                "summary": "required segment ZBE missing (R, [1..1])"
+            }
+        ]
+    },
+    "knownBug": "Two errors for one cause: usage R and cardinality [1..1] are reported separately."
+}

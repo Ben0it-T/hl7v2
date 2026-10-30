@@ -1,0 +1,20 @@
+{
+    "title": "ADT^A01 without PV1 (R segment)",
+    "tests": [
+        "usage: required segment absent"
+    ],
+    "references": [
+        "HL7 2.5 ch. 3, ADT^A01"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "path": "PV1",
+                "summary": "required segment PV1 missing (R, [1..1])"
+            }
+        ]
+    },
+    "knownBug": "Two errors for one cause: usage R and cardinality [1..1] are reported separately."
+}

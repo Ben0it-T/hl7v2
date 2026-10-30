@@ -1,0 +1,20 @@
+{
+    "title": "MSH-18 with an unknown character set",
+    "tests": [
+        "parser: unknown MSH-18 gives an explicit error"
+    ],
+    "references": [
+        "HL7 2.5 table 0211"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 1,
+                "location": "MSH-18",
+                "summary": "unknown character set"
+            }
+        ]
+    }
+}

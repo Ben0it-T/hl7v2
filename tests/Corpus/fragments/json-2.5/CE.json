@@ -1,0 +1,47 @@
+{
+    "location": "PID-15",
+    "references": [
+        "HL7 2.5 ch. 2.A.8 CE",
+        "HL7 2.5 tables 0296, 0396"
+    ],
+    "cases": [
+        {
+            "value": "fr^French^ISO639",
+            "tests": [
+                "CE: identifier, text, coding system"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            },
+            "knownBug": "Table 0396 holds the patterns HL7nnnn and ISOnnnn (nnnn = table number); the validator compares them literally and rejects the value."
+        },
+        {
+            "value": "fr^French^HL70296",
+            "tests": [
+                "CE.3 coding system HL7nnnn (table 0396 pattern)"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            },
+            "knownBug": "Table 0396 holds the patterns HL7nnnn and ISOnnnn (nnnn = table number); the validator compares them literally and rejects the value."
+        },
+        {
+            "value": "fr^French^ZZZ",
+            "tests": [
+                "CE.3 coding system not in table 0396"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-15.3",
+                        "summary": "value ZZZ not in table 0396"
+                    }
+                ]
+            }
+        }
+    ]
+}

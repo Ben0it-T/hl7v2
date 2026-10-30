@@ -1,7 +1,7 @@
 {
     "title": "C3: two ORDER_OBSERVATION repetitions",
     "tests": [
-        "structure: group repetitions counted while walking the message (defect 4)"
+        "structure: group repetitions counted while walking the message"
     ],
     "references": [
         "HL7 2.5 ch. 7, ORU^R01"

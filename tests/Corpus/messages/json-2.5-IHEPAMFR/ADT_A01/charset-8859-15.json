@@ -1,0 +1,14 @@
+{
+    "title": "MSH-18 = 8859/15, message encoded in ISO-8859-15 with accented characters",
+    "tests": [
+        "parser: conversion to UTF-8 according to MSH-18",
+        "IHE PAM FR: 8859/15 allowed (table 0211 of the profile)"
+    ],
+    "references": [
+        "PAMFR 2.11.2 6.1"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

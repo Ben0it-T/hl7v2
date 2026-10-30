@@ -1,0 +1,21 @@
+{
+    "title": "Escape sequence without closing escape character (DOE\\F)",
+    "tests": [
+        "values: malformed escape sequence"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.5.3, ch. 2.7 (escape sequences)"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 3,
+                "location": "PID-5.1",
+                "summary": "malformed escape sequence"
+            }
+        ]
+    },
+    "knownBug": "Escape sequences are never checked; the message is reported valid."
+}

@@ -17,5 +17,5 @@
             }
         ]
     },
-    "knownBug": "Defect 3: the optional group is looked up in the rest of the message; the validator reports ORC, OBR and OBX as misplaced and ORDER_OBSERVATION as missing (5 errors instead of 1)."
+    "knownBug": "The optional group is looked up in the rest of the message; the validator reports ORC, OBR and OBX as misplaced and ORDER_OBSERVATION as missing (5 errors instead of 1)."
 }

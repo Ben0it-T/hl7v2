@@ -1,0 +1,13 @@
+{
+    "title": "ADT^A47 with the PATIENT group (PID, MRG)",
+    "tests": [
+        "IHE PAM: structure variant of ADT_A30 for A47 (PATIENT group)"
+    ],
+    "references": [
+        "ITI TF-2 3.30.6.5.2, table 3.30-12"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

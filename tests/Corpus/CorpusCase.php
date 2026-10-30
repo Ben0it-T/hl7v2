@@ -64,13 +64,27 @@ final class CorpusCase
         }
 
         $data = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
-        if (!is_array($data) || !isset($data['title']) || !array_key_exists('valid', $data['expected'] ?? [])) {
+        if (!is_array($data)) {
+            throw new RuntimeException("Case $id: invalid case file.");
+        }
+
+        return self::fromArray($id, substr($profileDir, strlen('json-')), $message, $data);
+    }
+
+    /**
+     * Build a case from the content of a case file.
+     *
+     * @param array<mixed> $data
+     */
+    public static function fromArray(string $id, string $profileId, string $message, array $data): self
+    {
+        if (!isset($data['title']) || !is_array($data['expected'] ?? null) || !array_key_exists('valid', $data['expected'])) {
             throw new RuntimeException("Case $id: 'title' and 'expected.valid' are required.");
         }
 
         return new self(
             $id,
-            substr($profileDir, strlen('json-')),
+            $profileId,
             $message,
             (string) $data['title'],
             array_values(array_map('strval', $data['tests'] ?? [])),

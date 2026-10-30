@@ -1,0 +1,45 @@
+{
+    "location": "PID-5",
+    "references": [
+        "DTFR 1.8.2 N.10 XPN",
+        "DTFR 1.8.2 table 0200 (D, L, S, U)"
+    ],
+    "cases": [
+        {
+            "value": "DOE^JANE^^^^^L",
+            "tests": [
+                "XPN: legal name (L)"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "DOE^JANE^^^^^D",
+            "tests": [
+                "XPN: display name (D)"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "DOE^JANE^^^^^M",
+            "tests": [
+                "XPN.7 M (maiden name) is valid in HL7 2.5 but not allowed in France"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-5.7",
+                        "summary": "value M not in table 0200"
+                    }
+                ]
+            }
+        }
+    ]
+}

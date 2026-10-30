@@ -1,0 +1,21 @@
+{
+    "title": "Segment unknown to the profile (ORC in ADT^A01)",
+    "tests": [
+        "recovery: Not defined segment, non-Z segment"
+    ],
+    "references": [
+        "HL7 2.5 ch. 3, ADT^A01"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 5,
+                "location": "ORC",
+                "summary": "Not defined segment"
+            }
+        ]
+    },
+    "knownBug": "The finding is located on the message structure (ADT_A01) instead of the segment."
+}

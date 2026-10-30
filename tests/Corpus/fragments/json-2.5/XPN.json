@@ -1,0 +1,55 @@
+{
+    "location": "PID-5",
+    "references": [
+        "HL7 2.5 ch. 2.A.88 XPN",
+        "HL7 2.5 table 0200"
+    ],
+    "cases": [
+        {
+            "value": "DOE^JANE^^^^^L",
+            "tests": [
+                "XPN: family name, given name, name type L"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "DOE^JANE^MARIE^JR^DR^^L",
+            "tests": [
+                "XPN: suffix and prefix"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "DOE^JANE^^^^^Z",
+            "tests": [
+                "XPN.7 name type not in table 0200"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-5.7",
+                        "summary": "value Z not in table 0200"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "DOE&VAN&DOE^JANE^^^^^L",
+            "tests": [
+                "XPN.1 (FN) with subcomponents"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        }
+    ]
+}

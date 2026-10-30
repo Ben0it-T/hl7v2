@@ -1,0 +1,80 @@
+{
+    "location": "PID-7",
+    "references": [
+        "HL7 2.5 ch. 2.A.77 TS, 2.A.22 DTM"
+    ],
+    "cases": [
+        {
+            "value": "19800214",
+            "tests": [
+                "DTM: precision day"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "198002141030",
+            "tests": [
+                "DTM: precision minute"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "20260115083000.1234+0100",
+            "tests": [
+                "DTM: fraction of second and time zone"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "1980",
+            "tests": [
+                "DTM: precision year"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "19801314",
+            "tests": [
+                "DTM: month 13"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-7.1",
+                        "summary": "invalid DTM"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "1980-02-14",
+            "tests": [
+                "DTM: separators not allowed"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-7.1",
+                        "summary": "invalid DTM"
+                    }
+                ]
+            }
+        }
+    ]
+}
