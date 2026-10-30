@@ -2,7 +2,8 @@
     "location": "PID-8",
     "references": [
         "HL7 2.5 ch. 2.A.36 IS",
-        "HL7 2.5 table 0001"
+        "HL7 2.5 table 0001",
+        "User tables: values outside the table give a Warning"
     ],
     "cases": [
         {
@@ -31,15 +32,16 @@
                 "IS: value not in table 0001"
             ],
             "expected": {
-                "valid": false,
+                "valid": true,
                 "findings": [
                     {
-                        "severity": "Error",
+                        "severity": "Warning",
                         "location": "PID-8",
-                        "summary": "value Z not in table 0001"
+                        "summary": "value Z not in User table 0001"
                     }
                 ]
-            }
+            },
+            "knownBug": "Values outside a User table are reported as errors; the expected severity is Warning (closed User tables are declared by the profile)."
         },
         {
             "value": "f",
@@ -47,15 +49,16 @@
                 "IS: table codes are case-sensitive"
             ],
             "expected": {
-                "valid": false,
+                "valid": true,
                 "findings": [
                     {
-                        "severity": "Error",
+                        "severity": "Warning",
                         "location": "PID-8",
-                        "summary": "value f not in table 0001"
+                        "summary": "value f not in User table 0001"
                     }
                 ]
-            }
+            },
+            "knownBug": "Values outside a User table are reported as errors; the expected severity is Warning (closed User tables are declared by the profile)."
         }
     ]
 }

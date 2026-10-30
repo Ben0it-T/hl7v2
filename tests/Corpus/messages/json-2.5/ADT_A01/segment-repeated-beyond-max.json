@@ -16,5 +16,6 @@
                 "summary": "PD1 repeated beyond its maximum (1)"
             }
         ]
-    }
+    },
+    "knownBug": "The finding is located on the message structure (ADT_A01) instead of the segment (PD1)."
 }

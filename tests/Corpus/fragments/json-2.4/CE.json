@@ -33,15 +33,16 @@
                 "CE.3 coding system not in table 0396"
             ],
             "expected": {
-                "valid": false,
+                "valid": true,
                 "findings": [
                     {
-                        "severity": "Error",
+                        "severity": "Warning",
                         "location": "PID-15.3",
-                        "summary": "value ZZZ not in table 0396"
+                        "summary": "value ZZZ not in User table 0396"
                     }
                 ]
-            }
+            },
+            "knownBug": "Values outside a User table are reported as errors; the expected severity is Warning (closed User tables are declared by the profile)."
         }
     ]
 }

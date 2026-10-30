@@ -2,7 +2,8 @@
     "location": "PID-11",
     "references": [
         "DTFR 1.8.2 N.6 XAD",
-        "DTFR 1.8.2 tables 0190, 0399"
+        "DTFR 1.8.2 tables 0190, 0399",
+        "DTFR 1.8.2: closed lists (no extension without a new revision)"
     ],
     "cases": [
         {
