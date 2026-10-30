@@ -1,0 +1,13 @@
+{
+    "title": "ACK^A01^ACK: acknowledgement with its real trigger event, HL7 2.4",
+    "tests": [
+        "message type: ACK keeps its trigger event, profile chosen by structure"
+    ],
+    "references": [
+        "HL7 2.4 ch. 2, ACK"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}

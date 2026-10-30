@@ -1,0 +1,47 @@
+{
+    "location": "PID-15",
+    "references": [
+        "HL7 2.4 ch. 2.9.3 CE",
+        "HL7 2.4 table 0396"
+    ],
+    "cases": [
+        {
+            "value": "fr^French^L",
+            "tests": [
+                "CE.3 local coding system L"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            },
+            "knownBug": "Table 0396 of profiles/json-2.4 holds the single code \"99zzz or L\" instead of the two codes 99zzz and L; L is rejected."
+        },
+        {
+            "value": "fr^French^99LOC",
+            "tests": [
+                "CE.3 local coding system 99zzz"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            },
+            "knownBug": "Table 0396 of profiles/json-2.4 holds the single code \"99zzz or L\", and the pattern 99zzz is compared literally; 99LOC is rejected."
+        },
+        {
+            "value": "fr^French^ZZZ",
+            "tests": [
+                "CE.3 coding system not in table 0396"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "location": "PID-15.3",
+                        "summary": "value ZZZ not in table 0396"
+                    }
+                ]
+            }
+        }
+    ]
+}
