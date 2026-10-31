@@ -7,6 +7,7 @@
         "card": "[1..1]",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementReps": 1,
         "elementComments": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s)."
     },
@@ -26,6 +27,7 @@
         "elementValue": "|",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -44,6 +46,7 @@
         "elementValue": "^~\\&",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -62,6 +65,7 @@
         "elementValue": "RECVAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Sending Application' (MSH.3) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -77,6 +81,7 @@
         "elementValue": "RECVAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -92,6 +97,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -107,6 +113,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -125,6 +132,7 @@
         "elementValue": "RECVFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Sending Facility' (MSH.4) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -140,6 +148,7 @@
         "elementValue": "RECVFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -155,6 +164,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -170,6 +180,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -188,6 +199,7 @@
         "elementValue": "SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Receiving Application' (MSH.5) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -203,6 +215,7 @@
         "elementValue": "SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -218,6 +231,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -233,6 +247,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -251,6 +266,7 @@
         "elementValue": "SENDFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Receiving Facility' (MSH.6) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -266,6 +282,7 @@
         "elementValue": "SENDFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -281,6 +298,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -296,6 +314,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -314,6 +333,7 @@
         "elementValue": "20260115083000",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Date/Time of Message' (MSH.7) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -329,6 +349,7 @@
         "elementValue": "20260115083000",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -344,6 +365,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -362,6 +384,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Security' (MSH.8) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -380,6 +403,7 @@
         "elementValue": "ACK^A01",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -395,6 +419,7 @@
         "elementValue": "ACK",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -410,6 +435,7 @@
         "elementValue": "A01",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -428,6 +454,7 @@
         "elementValue": "ACK0001",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -446,6 +473,7 @@
         "elementValue": "P",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -461,6 +489,7 @@
         "elementValue": "P",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables)."
     },
     {
@@ -476,6 +505,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -494,6 +524,7 @@
         "elementValue": "2.3",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s). Field 'Version ID' (MSH.12) value (2.3) exists in table 0104 (HL7 standard tables)."
     },
     {
@@ -512,6 +543,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Sequence Number' (MSH.13) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -530,6 +562,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Continuation Pointer' (MSH.14) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -548,6 +581,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Accept Acknowledgment Type' (MSH.15) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -566,6 +600,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Application Acknowledgment Type' (MSH.16) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -584,6 +619,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Country Code' (MSH.17) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -602,6 +638,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Character Set' (MSH.18) cardinality is [0..3]. Found 0 time(s)."
     },
     {
@@ -620,6 +657,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Principal Language of Message' (MSH.19) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -630,6 +668,7 @@
         "card": "[1..1]",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementReps": 1,
         "elementComments": "Segment 'MSA' cardinality is [1..1]. Found 1 time(s)."
     },
@@ -649,6 +688,7 @@
         "elementValue": "AA",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Acknowledgment Code' (MSA.1) cardinality is [1..1]. Found 1 time(s). Field 'Acknowledgment Code' (MSA.1) value (AA) exists in table 0008 (HL7 standard tables)."
     },
     {
@@ -667,6 +707,7 @@
         "elementValue": "MSG0001",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Message Control ID' (MSA.2) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -685,6 +726,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Text Message' (MSA.3) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -703,6 +745,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Expected Sequence Number' (MSA.4) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -721,6 +764,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Delayed Acknowledgment Type' (MSA.5) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -739,6 +783,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Error Condition' (MSA.6) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -749,6 +794,7 @@
         "card": "[0..1]",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementReps": 0,
         "elementComments": "Segment 'ERR' cardinality is [0..1]. Found 0 time(s)."
     }

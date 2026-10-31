@@ -7,6 +7,7 @@
         "card": "[1..1]",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementReps": 1,
         "elementComments": "Segment 'MSH' cardinality is [1..1]. Found 1 time(s)."
     },
@@ -26,6 +27,7 @@
         "elementValue": "|",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Field Separator' (MSH.1) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -44,6 +46,7 @@
         "elementValue": "^~\\&",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Encoding Characters' (MSH.2) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -62,6 +65,7 @@
         "elementValue": "SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Sending Application' (MSH.3) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -77,6 +81,7 @@
         "elementValue": "SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -92,6 +97,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -107,6 +113,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -125,6 +132,7 @@
         "elementValue": "SENDFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Sending Facility' (MSH.4) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -140,6 +148,7 @@
         "elementValue": "SENDFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -155,6 +164,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -170,6 +180,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -188,6 +199,7 @@
         "elementValue": "RECVAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Receiving Application' (MSH.5) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -203,6 +215,7 @@
         "elementValue": "RECVAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -218,6 +231,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -233,6 +247,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -251,6 +266,7 @@
         "elementValue": "RECVFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Receiving Facility' (MSH.6) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -266,6 +282,7 @@
         "elementValue": "RECVFAC",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -281,6 +298,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -296,6 +314,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -314,6 +333,7 @@
         "elementValue": "20260115083000",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Date/Time Of Message' (MSH.7) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -329,6 +349,7 @@
         "elementValue": "20260115083000",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -344,6 +365,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -362,6 +384,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Security' (MSH.8) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -380,6 +403,7 @@
         "elementValue": "ORU^R01^ORU_R01",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Message Type' (MSH.9) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -395,6 +419,7 @@
         "elementValue": "ORU",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Message Code' (MSG.1) value (ORU) exists in table 0076 (HL7 standard tables)."
     },
     {
@@ -410,6 +435,7 @@
         "elementValue": "R01",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Trigger Event' (MSG.2) value (R01) exists in table 0003 (HL7 standard tables)."
     },
     {
@@ -425,6 +451,7 @@
         "elementValue": "ORU_R01",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Message Structure' (MSG.3) value (ORU_R01) exists in table 0354 (HL7 standard tables)."
     },
     {
@@ -443,6 +470,7 @@
         "elementValue": "MSG0001",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Message Control ID' (MSH.10) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -461,6 +489,7 @@
         "elementValue": "P",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Processing ID' (MSH.11) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -476,6 +505,7 @@
         "elementValue": "P",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Processing ID' (PT.1) value (P) exists in table 0103 (HL7 standard tables)."
     },
     {
@@ -491,6 +521,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -509,6 +540,7 @@
         "elementValue": "2.5",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Version ID' (MSH.12) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -524,6 +556,7 @@
         "elementValue": "2.5",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Version ID' (VID.1) value (2.5) exists in table 0104 (HL7 standard tables)."
     },
     {
@@ -539,6 +572,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -554,6 +588,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -572,6 +607,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Sequence Number' (MSH.13) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -590,6 +626,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Continuation Pointer' (MSH.14) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -608,6 +645,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Accept Acknowledgment Type' (MSH.15) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -626,6 +664,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Application Acknowledgment Type' (MSH.16) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -644,6 +683,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Country Code' (MSH.17) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -662,6 +702,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Character Set' (MSH.18) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -680,6 +721,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Principal Language Of Message' (MSH.19) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -698,6 +740,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Alternate Character Set Handling Scheme' (MSH.20) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -716,6 +759,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Message Profile Identifier' (MSH.21) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -726,6 +770,7 @@
         "card": "[0..*]",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementReps": 0,
         "elementComments": "Segment 'SFT' cardinality is [0..*]. Found 0 time(s)."
     },
@@ -737,6 +782,7 @@
         "card": "[1..*]",
         "elementExists": false,
         "elementError": true,
+        "elementSeverity": "Error",
         "elementReps": 0,
         "elementComments": "Group 'PATIENT_RESULT' is required. Group 'PATIENT_RESULT' cardinality is [1..*]. Must have at least 1 repetition(s) (found 0)."
     },
@@ -748,6 +794,7 @@
         "card": "[1..*]",
         "elementExists": false,
         "elementError": true,
+        "elementSeverity": "Error",
         "elementReps": "",
         "elementComments": ""
     },
@@ -759,6 +806,7 @@
         "card": "[0..1]",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementReps": 0,
         "elementComments": "Segment 'DSC' cardinality is [0..1]. Found 0 time(s)."
     },
@@ -770,6 +818,7 @@
         "card": "[0..1]",
         "elementExists": true,
         "elementError": true,
+        "elementSeverity": "Error",
         "elementReps": 1,
         "elementComments": "Segment 'ORC' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure."
     },
@@ -789,6 +838,7 @@
         "elementValue": "RE",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Control' (ORC.1) cardinality is [1..1]. Found 1 time(s). Field 'Order Control' (ORC.1) value (RE) exists in table 0119 (HL7 standard tables)."
     },
     {
@@ -807,6 +857,7 @@
         "elementValue": "ORD0001^SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Placer Order Number' (ORC.2) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -822,6 +873,7 @@
         "elementValue": "ORD0001",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -837,6 +889,7 @@
         "elementValue": "SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -852,6 +905,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -867,6 +921,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -885,6 +940,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Filler Order Number' (ORC.3) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -903,6 +959,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Placer Group Number' (ORC.4) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -921,6 +978,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Status' (ORC.5) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -939,6 +997,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Response Flag' (ORC.6) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -957,6 +1016,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Quantity/Timing' (ORC.7) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -975,6 +1035,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Parent' (ORC.8) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -993,6 +1054,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Date/Time of Transaction' (ORC.9) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1011,6 +1073,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Entered By' (ORC.10) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1029,6 +1092,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Verified By' (ORC.11) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1047,6 +1111,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Ordering Provider' (ORC.12) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1065,6 +1130,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Enterer's Location' (ORC.13) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1083,6 +1149,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Call Back Phone Number' (ORC.14) cardinality is [0..2]. Found 0 time(s)."
     },
     {
@@ -1101,6 +1168,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Effective Date/Time' (ORC.15) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1119,6 +1187,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Control Code Reason' (ORC.16) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1137,6 +1206,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Entering Organization' (ORC.17) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1155,6 +1225,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Entering Device' (ORC.18) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1173,6 +1244,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Action By' (ORC.19) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1191,6 +1263,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Advanced Beneficiary Notice Code' (ORC.20) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1209,6 +1282,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Ordering Facility Name' (ORC.21) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1227,6 +1301,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Ordering Facility Address' (ORC.22) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1245,6 +1320,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Ordering Facility Phone Number' (ORC.23) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1263,6 +1339,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Ordering Provider Address' (ORC.24) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1281,6 +1358,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Status Modifier' (ORC.25) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1299,6 +1377,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Advanced Beneficiary Notice Override Reason' (ORC.26) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1317,6 +1396,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Filler's Expected Availability Date/Time' (ORC.27) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1335,6 +1415,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Confidentiality Code' (ORC.28) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1353,6 +1434,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Type' (ORC.29) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1371,6 +1453,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Enterer Authorization Mode' (ORC.30) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1381,6 +1464,7 @@
         "card": "[1..1]",
         "elementExists": true,
         "elementError": true,
+        "elementSeverity": "Error",
         "elementReps": 1,
         "elementComments": "Segment 'OBR' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure."
     },
@@ -1400,6 +1484,7 @@
         "elementValue": "1",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Set ID - OBR' (OBR.1) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -1418,6 +1503,7 @@
         "elementValue": "ORD0001^SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Placer Order Number' (OBR.2) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -1433,6 +1519,7 @@
         "elementValue": "ORD0001",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1448,6 +1535,7 @@
         "elementValue": "SENDAPP",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1463,6 +1551,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1478,6 +1567,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1496,6 +1586,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Filler Order Number' (OBR.3) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1514,6 +1605,7 @@
         "elementValue": "GLU^Glucose^L",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Universal Service Identifier' (OBR.4) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -1529,6 +1621,7 @@
         "elementValue": "GLU",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1544,6 +1637,7 @@
         "elementValue": "Glucose",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1559,6 +1653,7 @@
         "elementValue": "L",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Name of Coding System' (CE.3) value (L) exists in table 0396 (HL7 standard tables)."
     },
     {
@@ -1574,6 +1669,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1589,6 +1685,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1604,6 +1701,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -1622,6 +1720,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Priority - OBR' (OBR.5) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1640,6 +1739,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Requested Date/Time' (OBR.6) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1658,6 +1758,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation Date/Time' (OBR.7) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1676,6 +1777,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation End Date/Time' (OBR.8) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1694,6 +1796,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Collection Volume' (OBR.9) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1712,6 +1815,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Collector Identifier' (OBR.10) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1730,6 +1834,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Specimen Action Code' (OBR.11) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1748,6 +1853,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Danger Code' (OBR.12) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1766,6 +1872,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Relevant Clinical Information' (OBR.13) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1784,6 +1891,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Specimen Received Date/Time' (OBR.14) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1802,6 +1910,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Specimen Source' (OBR.15) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1820,6 +1929,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Ordering Provider' (OBR.16) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -1838,6 +1948,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Order Callback Phone Number' (OBR.17) cardinality is [0..2]. Found 0 time(s)."
     },
     {
@@ -1856,6 +1967,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Placer Field 1' (OBR.18) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1874,6 +1986,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Placer Field 2' (OBR.19) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1892,6 +2005,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Filler Field 1' (OBR.20) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1910,6 +2024,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Filler Field 2' (OBR.21) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1928,6 +2043,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Results Rpt/Status Chng - Date/Time' (OBR.22) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1946,6 +2062,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Charge to Practice' (OBR.23) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1964,6 +2081,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Diagnostic Serv Sect ID' (OBR.24) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -1982,6 +2100,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Result Status' (OBR.25) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2000,6 +2119,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Parent Result' (OBR.26) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2018,6 +2138,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Quantity/Timing' (OBR.27) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2036,6 +2157,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Result Copies To' (OBR.28) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2054,6 +2176,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Parent' (OBR.29) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2072,6 +2195,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Transportation Mode' (OBR.30) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2090,6 +2214,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Reason for Study' (OBR.31) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2108,6 +2233,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Principal Result Interpreter' (OBR.32) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2126,6 +2252,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Assistant Result Interpreter' (OBR.33) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2144,6 +2271,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Technician' (OBR.34) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2162,6 +2290,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Transcriptionist' (OBR.35) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2180,6 +2309,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Scheduled Date/Time' (OBR.36) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2198,6 +2328,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Number of Sample Containers' (OBR.37) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2216,6 +2347,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Transport Logistics of Collected Sample' (OBR.38) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2234,6 +2366,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Collector's Comment' (OBR.39) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2252,6 +2385,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Transport Arrangement Responsibility' (OBR.40) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2270,6 +2404,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Transport Arranged' (OBR.41) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2288,6 +2423,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Escort Required' (OBR.42) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2306,6 +2442,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Planned Patient Transport Comment' (OBR.43) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2324,6 +2461,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Procedure Code' (OBR.44) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2342,6 +2480,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Procedure Code Modifier' (OBR.45) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2360,6 +2499,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Placer Supplemental Service Information' (OBR.46) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2378,6 +2518,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Filler Supplemental Service Information' (OBR.47) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2396,6 +2537,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Medically Necessary Duplicate Procedure Reason.' (OBR.48) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2414,6 +2556,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Result Handling' (OBR.49) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2424,6 +2567,7 @@
         "card": "[1..1]",
         "elementExists": true,
         "elementError": true,
+        "elementSeverity": "Error",
         "elementReps": 1,
         "elementComments": "Segment 'OBX' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure."
     },
@@ -2443,6 +2587,7 @@
         "elementValue": "1",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Set ID - OBX' (OBX.1) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -2461,6 +2606,7 @@
         "elementValue": "NM",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Value Type' (OBX.2) cardinality is [0..1]. Found 1 time(s). Field 'Value Type' (OBX.2) value (NM) exists in table 0125 (HL7 standard tables)."
     },
     {
@@ -2479,6 +2625,7 @@
         "elementValue": "GLU^Glucose^L",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation Identifier' (OBX.3) cardinality is [1..1]. Found 1 time(s)."
     },
     {
@@ -2494,6 +2641,7 @@
         "elementValue": "GLU",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2509,6 +2657,7 @@
         "elementValue": "Glucose",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2524,6 +2673,7 @@
         "elementValue": "L",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Component 'Name of Coding System' (CE.3) value (L) exists in table 0396 (HL7 standard tables)."
     },
     {
@@ -2539,6 +2689,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2554,6 +2705,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2569,6 +2721,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2587,6 +2740,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation Sub-ID' (OBX.4) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2605,6 +2759,7 @@
         "elementValue": "5.4",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation Value' (OBX.5) cardinality is [0..*]. Found 1 time(s)."
     },
     {
@@ -2623,6 +2778,7 @@
         "elementValue": "mmol/L",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Units' (OBX.6) cardinality is [0..1]. Found 1 time(s)."
     },
     {
@@ -2638,6 +2794,7 @@
         "elementValue": "mmol/L",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2653,6 +2810,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2668,6 +2826,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2683,6 +2842,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2698,6 +2858,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2713,6 +2874,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": ""
     },
     {
@@ -2731,6 +2893,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'References Range' (OBX.7) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2749,6 +2912,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Abnormal Flags' (OBX.8) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2767,6 +2931,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Probability' (OBX.9) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2785,6 +2950,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Nature of Abnormal Test' (OBX.10) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2803,6 +2969,7 @@
         "elementValue": "F",
         "elementExists": true,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation Result Status' (OBX.11) cardinality is [1..1]. Found 1 time(s). Field 'Observation Result Status' (OBX.11) value (F) exists in table 0085 (HL7 standard tables)."
     },
     {
@@ -2821,6 +2988,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Effective Date of Reference Range' (OBX.12) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2839,6 +3007,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'User Defined Access Checks' (OBX.13) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2857,6 +3026,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Date/Time of the Observation' (OBX.14) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2875,6 +3045,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Producer's ID' (OBX.15) cardinality is [0..1]. Found 0 time(s)."
     },
     {
@@ -2893,6 +3064,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Responsible Observer' (OBX.16) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2911,6 +3083,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Observation Method' (OBX.17) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2929,6 +3102,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Equipment Instance Identifier' (OBX.18) cardinality is [0..*]. Found 0 time(s)."
     },
     {
@@ -2947,6 +3121,7 @@
         "elementValue": "",
         "elementExists": false,
         "elementError": false,
+        "elementSeverity": null,
         "elementComments": "Field 'Date/Time of the Analysis' (OBX.19) cardinality is [0..1]. Found 0 time(s)."
     }
 ]

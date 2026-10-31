@@ -663,7 +663,7 @@
             "Type": "segment",
             "Name": "ZZA",
             "LongName": "not defined segment",
-            "hasError": true,
+            "hasError": false,
             "comments": "Segment 'ZZA' is not defined in the message profile.",
             "fields": {
                 "1": [

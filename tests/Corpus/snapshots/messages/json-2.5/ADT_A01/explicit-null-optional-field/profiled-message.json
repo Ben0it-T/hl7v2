@@ -671,7 +671,7 @@
                         "LocName": "PID-16",
                         "LongName": "Marital Status",
                         "Datatype": "CE",
-                        "hasError": true,
+                        "hasError": false,
                         "comments": "Field 'Marital Status' (PID.16) cardinality is [0..1]. Found 1 time(s). Field 'Marital Status' (PID.16) value (\"\") not in table 0002 (User defined tables).",
                         "value": "\"\"",
                         "components": {

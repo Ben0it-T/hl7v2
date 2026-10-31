@@ -229,7 +229,9 @@ class Validator
                     $description = "Segment '{$segmentName}' is not defined in the message profile.";
                     $this->log("-Segment- >> message '{$segmentName}' segment is not defined.");
 
-                    $this->reportStructure($description, $this->notDefinedFindingType($segmentName), $this->context->messageSegmentIndex);
+                    $finding = $this->notDefinedFindingType($segmentName);
+                    $this->reportStructure($description, $finding, $this->context->messageSegmentIndex);
+                    $severity = $this->raiseSeverity(null, $finding);
 
                     $this->validationResult->addValidationReport([
                         "type"            => "Segment",
@@ -238,7 +240,8 @@ class Validator
                         "usage"           => "",
                         "card"            => "",
                         "elementExists"   => true,
-                        "elementError"    => true,
+                        "elementError"    => $severity === Severity::Error,
+                        "elementSeverity" => $severity?->value,
                         "elementReps"     => 1,
                         "elementComments" => $description,
                     ]);
@@ -259,6 +262,7 @@ class Validator
                     $this->log("-Segment- >> message '{$segmentName}' segment is not expected here.");
 
                     $this->reportStructure($description, FindingType::SegmentNotExpected, $this->context->messageSegmentIndex);
+                    $severity = $this->raiseSeverity(null, FindingType::SegmentNotExpected);
 
                     $this->validationResult->addValidationReport([
                         "type"            => "Segment",
@@ -267,7 +271,8 @@ class Validator
                         "usage"           => $segmentDef["Usage"],
                         "card"            => "[" . $segmentDef["Min"] . ".." . $segmentDef["Max"] . "]",
                         "elementExists"   => true,
-                        "elementError"    => true,
+                        "elementError"    => $severity === Severity::Error,
+                        "elementSeverity" => $severity?->value,
                         "elementReps"     => 1,
                         "elementComments" => $description,
                     ]);
@@ -358,6 +363,28 @@ class Validator
             ],
             $segmentIndex
         );
+    }
+
+    /**
+     * Raise the severity of an element of the ValidationReport and the
+     * Profiled message with the finding of a check: Error over Warning. An
+     * Info, or no finding, leaves the severity unchanged (Infos are read
+     * with the findings).
+     *
+     * @param Severity|null $severity Severity of the element so far.
+     * @param FindingType|null $finding
+     *
+     * @return Severity|null Error, Warning, or null.
+     */
+    private function raiseSeverity(?Severity $severity, ?FindingType $finding): ?Severity
+    {
+        $findingSeverity = $finding !== null ? $this->rules->severity($finding) : null;
+
+        return match (true) {
+            $severity === Severity::Error, $findingSeverity === Severity::Error     => Severity::Error,
+            $severity === Severity::Warning, $findingSeverity === Severity::Warning => Severity::Warning,
+            default                                                                 => null,
+        };
     }
 
     /**
@@ -848,7 +875,7 @@ class Validator
         // Group validation
         // ---
 
-        $groupError = false;
+        $groupSeverity = null;
         $groupComments = '';
 
         // Usage.
@@ -859,8 +886,8 @@ class Validator
             "'{$groupDef["Name"]}'"
         );
 
+        $groupSeverity = $this->raiseSeverity($groupSeverity, $usage['finding']);
         if (!$usage['result']) {
-            $groupError = true;
             $groupComments .= $usage['description'] . " ";
         }
 
@@ -874,9 +901,7 @@ class Validator
             "'{$groupDef["Name"]}'"
         );
 
-        if (!$cardinality['result']) {
-            $groupError = true;
-        }
+        $groupSeverity = $this->raiseSeverity($groupSeverity, $cardinality['finding']);
         $groupComments .= $cardinality['description'] . " ";
 
 
@@ -929,7 +954,8 @@ class Validator
                     "usage"           => $groupDef["Usage"],
                     "card"            => "[" . $groupDef["Min"] . ".." . $groupDef["Max"] . "]",
                     "elementExists"   => $isGroupExists,
-                    "elementError"    => $groupError,
+                    "elementError"    => $groupSeverity === Severity::Error,
+                    "elementSeverity" => $groupSeverity?->value,
                     "elementReps"     => $groupRepetitions,
                     "elementComments" => trim($groupComments),
                 ]);
@@ -941,7 +967,8 @@ class Validator
                     "usage"           => $groupDef["Usage"],
                     "card"            => "[" . $groupDef["Min"] . ".." . $groupDef["Max"] . "]",
                     "elementExists"   => $isGroupExists,
-                    "elementError"    => $groupError,
+                    "elementError"    => $groupSeverity === Severity::Error,
+                    "elementSeverity" => $groupSeverity?->value,
                     "elementReps"     => "",
                     "elementComments" => "",
                 ]);
@@ -960,7 +987,9 @@ class Validator
                 $segmentRepetitions = $this->message->countSegmentRepetitions($currentSegmentName, $this->context->messageSegmentIndex);
                 $description = "Segment '{$currentSegmentName}' is not defined in the message profile. Found {$segmentRepetitions} time(s).";
 
-                $this->reportStructure($description, $this->notDefinedFindingType($currentSegmentName), $this->context->messageSegmentIndex);
+                $finding = $this->notDefinedFindingType($currentSegmentName);
+                $this->reportStructure($description, $finding, $this->context->messageSegmentIndex);
+                $severity = $this->raiseSeverity(null, $finding);
 
                 $this->validationResult->addValidationReport([
                     "type"            => "Segment",
@@ -969,7 +998,8 @@ class Validator
                     "usage"           => "",
                     "card"            => "",
                     "elementExists"   => true,
-                    "elementError"    => true,
+                    "elementError"    => $severity === Severity::Error,
+                    "elementSeverity" => $severity?->value,
                     "elementReps"     => $segmentRepetitions,
                     "elementComments" => $description,
                 ]);
@@ -1007,6 +1037,7 @@ class Validator
                 $description = "Segment '{$currentSegmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentRepetitions} time(s).";
 
                 $this->reportStructure($description, FindingType::SegmentNotExpected, $this->context->messageSegmentIndex);
+                $severity = $this->raiseSeverity(null, FindingType::SegmentNotExpected);
 
                 $this->validationResult->addValidationReport([
                     "type"            => "Segment",
@@ -1015,7 +1046,8 @@ class Validator
                     "usage"           => $segmentDef["Usage"],
                     "card"            => "[" . $segmentDef["Min"] . ".." . $segmentDef["Max"] . "]",
                     "elementExists"   => true,
-                    "elementError"    => true,
+                    "elementError"    => $severity === Severity::Error,
+                    "elementSeverity" => $severity?->value,
                     "elementReps"     => $segmentRepetitions,
                     "elementComments" => $description,
                 ]);
@@ -1074,7 +1106,8 @@ class Validator
                     "usage"           => $groupDef["Usage"],
                     "card"            => "[" . $groupDef["Min"] . ".." . $groupDef["Max"] . "]",
                     "elementExists"   => $isGroupExists,
-                    "elementError"    => $groupError,
+                    "elementError"    => $groupSeverity === Severity::Error,
+                    "elementSeverity" => $groupSeverity?->value,
                     "elementReps"     => $groupRepetitions,
                     "elementComments" => trim($groupComments),
                 ]);
@@ -1112,7 +1145,7 @@ class Validator
 
                         $choiceMatched = true;
                         $segmentComments = "";
-                        $segmentError = false;
+                        $segmentSeverity = null;
                         $segmentReps = 1;
 
                         // if segment is not the first segment of the group
@@ -1128,8 +1161,8 @@ class Validator
                             "'{$childDef["Name"]}'"
                         );
 
+                        $segmentSeverity = $this->raiseSeverity($segmentSeverity, $segmentUsage['finding']);
                         if (!$segmentUsage['result']) {
-                            $segmentError = true;
                             $segmentComments .= $segmentUsage['description'] . " ";
                         }
 
@@ -1143,9 +1176,7 @@ class Validator
                              "'{$childDef["Name"]}'"
                         );
 
-                        if (!$segmentCardinality['result']) {
-                            $segmentError = true;
-                        }
+                        $segmentSeverity = $this->raiseSeverity($segmentSeverity, $segmentCardinality['finding']);
                         $segmentComments .= $segmentCardinality['description'] . " ";
 
 
@@ -1162,7 +1193,8 @@ class Validator
                             "usage"           => $childDef["Usage"],
                             "card"            => "[" . $childDef["Min"] . ".." . $childDef["Max"] . "]",
                             "elementExists"   => true,
-                            "elementError"    => $segmentError,
+                            "elementError"    => $segmentSeverity === Severity::Error,
+                            "elementSeverity" => $segmentSeverity?->value,
                             "elementReps"     => $segmentReps,
                             "elementComments" => trim($segmentComments),
                         ]);
@@ -1176,7 +1208,7 @@ class Validator
                             }
 
                             $segmentArray = $this->validateSegment($segment, $childDef, $childDef["Name"]);
-                            $segmentArray["hasError"] = $segmentError;
+                            $segmentArray["hasError"] = $segmentSeverity === Severity::Error;
                             $segmentArray["comments"] = trim($segmentComments);
                             $group["segments"][] = $segmentArray;
                             $this->context->messageSegmentIndex++; // Message: Move on
@@ -1192,7 +1224,7 @@ class Validator
                     } else {
                         $this->log("-Segment- >> Profile segment not found.");
                         $segmentComments = "";
-                        $segmentError = false;
+                        $segmentSeverity = null;
 
                         // check usage
                         $segmentUsage = $this->checkUsage(
@@ -1202,8 +1234,8 @@ class Validator
                             "'{$childDef["Name"]}'"
                         );
 
+                        $segmentSeverity = $this->raiseSeverity($segmentSeverity, $segmentUsage['finding']);
                         if (!$segmentUsage['result']) {
-                            $segmentError = true;
                             $segmentComments .= $segmentUsage['description'] . " ";
                         }
 
@@ -1217,9 +1249,7 @@ class Validator
                              "'{$childDef["Name"]}'"
                         );
 
-                        if (!$segmentCardinality['result']) {
-                            $segmentError = true;
-                        }
+                        $segmentSeverity = $this->raiseSeverity($segmentSeverity, $segmentCardinality['finding']);
                         $segmentComments .= $segmentCardinality['description'] . " ";
 
                         if (in_array($childDef["Name"], $this->context->notPresentSegments, true)) {
@@ -1237,7 +1267,8 @@ class Validator
                                 "usage"           => $childDef["Usage"],
                                 "card"            => "[" . $childDef["Min"] . ".." . $childDef["Max"] . "]",
                                 "elementExists"   => true,
-                                "elementError"    => $segmentError,
+                                "elementError"    => $segmentSeverity === Severity::Error,
+                                "elementSeverity" => $segmentSeverity?->value,
                                 "elementReps"     => 0,
                                 "elementComments" => trim($segmentComments),
                             ]);
@@ -1251,7 +1282,9 @@ class Validator
                             $segmentReps = $this->message->countSegmentRepetitions($segmentName, $this->context->messageSegmentIndex);
                             $description = "Segment '{$segmentName}' is not defined in the message profile. Found {$segmentReps} time(s).";
 
-                            $this->reportStructure($description, $this->notDefinedFindingType($segmentName), $this->context->messageSegmentIndex);
+                            $finding = $this->notDefinedFindingType($segmentName);
+                            $this->reportStructure($description, $finding, $this->context->messageSegmentIndex);
+                            $severity = $this->raiseSeverity(null, $finding);
 
                             $this->validationResult->addValidationReport([
                                 "type"            => "Segment",
@@ -1260,7 +1293,8 @@ class Validator
                                 "usage"           => "",
                                 "card"            => "",
                                 "elementExists"   => true,
-                                "elementError"    => true,
+                                "elementError"    => $severity === Severity::Error,
+                                "elementSeverity" => $severity?->value,
                                 "elementReps"     => $segmentReps,
                                 "elementComments" => trim($description),
                             ]);
@@ -1338,7 +1372,8 @@ class Validator
                                         "usage"           => $childDef["Usage"],
                                         "card"            => "[" . $childDef["Min"] . ".." . $childDef["Max"] . "]",
                                         "elementExists"   => false,
-                                        "elementError"    => $segmentError,
+                                        "elementError"    => $segmentSeverity === Severity::Error,
+                                        "elementSeverity" => $segmentSeverity?->value,
                                         "elementReps"     => 0,
                                         "elementComments" => trim($segmentComments),
                                     ]);
@@ -1361,6 +1396,7 @@ class Validator
                                     $description = "Segment '{$segmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentReps} time(s).";
 
                                     $this->reportStructure($description, FindingType::SegmentNotExpected, $this->context->messageSegmentIndex);
+                                    $severity = $this->raiseSeverity(null, FindingType::SegmentNotExpected);
 
                                     $this->validationResult->addValidationReport([
                                         "type"            => "Segment",
@@ -1369,7 +1405,8 @@ class Validator
                                         "usage"           => $segmentDef["Usage"],
                                         "card"            => "[" . $segmentDef["Min"] . ".." . $segmentDef["Max"] . "]",
                                         "elementExists"   => true,
-                                        "elementError"    => true,
+                                        "elementError"    => $severity === Severity::Error,
+                                        "elementSeverity" => $severity?->value,
                                         "elementReps"     => $segmentReps,
                                         "elementComments" => trim($description),
                                     ]);
@@ -1417,7 +1454,7 @@ class Validator
 
                 $this->reportStructure($description, FindingType::RequiredAbsent, null);
 
-                $groupError = true;
+                $groupSeverity = $this->raiseSeverity($groupSeverity, FindingType::RequiredAbsent);
                 $groupComments .= $description . " ";
             }
 
@@ -1431,7 +1468,8 @@ class Validator
                     "usage"           => "",
                     "card"            => "",
                     "elementExists"   => $isGroupExists,
-                    "elementError"    => $groupError,
+                    "elementError"    => $groupSeverity === Severity::Error,
+                    "elementSeverity" => $groupSeverity?->value,
                     "elementReps"     => "",
                     "elementComments" => "",
                 ]);
@@ -1476,7 +1514,7 @@ class Validator
             $location
         );
 
-        $segmentArray['hasError'] = true;
+        $segmentArray['hasError'] = $this->raiseSeverity(null, FindingType::SegmentNotExpected) === Severity::Error;
         $segmentArray['comments'] = "Segment '" . $segment->getName() . "' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure.";
 
         return $segmentArray;
@@ -1557,9 +1595,11 @@ class Validator
                 $fieldLocation = "{$elementName}-{$fieldPosition}";
                 $description = "Field '{$fieldLocation}' is not expected in segment '$elementName' structure.";
 
+                $severity = $this->raiseSeverity(null, FindingType::ElementInExcess);
+
                 $notDefinedField = $this->createNotDefinedField($field, $location, $fieldPosition);
                 foreach ($notDefinedField as &$repeat) {
-                    $repeat["hasError"] = true;
+                    $repeat["hasError"] = $severity === Severity::Error;
                     $repeat["comments"] = $description;
                 }
                 unset($repeat);
@@ -1592,7 +1632,8 @@ class Validator
                     "impNote"         => "",
                     "elementValue"    => $this->serializer->serializeField($field, $this->message),
                     "elementExists"   => true,
-                    "elementError"    => true,
+                    "elementError"    => $severity === Severity::Error,
+                    "elementSeverity" => $severity?->value,
                     "elementComments" => trim($description),
                 ]);
             }
@@ -1632,7 +1673,7 @@ class Validator
             && $value !== ''
         );
         $elementName = "'{$fieldDef['LongName']}' ({$fieldDef['Name']})";
-        $hasError = false;
+        $severity = null;
         $comments = '';
         $fieldArray = [];
 
@@ -1653,8 +1694,8 @@ class Validator
 
         $this->report($location, $usage);
 
+        $severity = $this->raiseSeverity($severity, $usage['finding']);
         if (!$usage['result']) {
-            $hasError = true;
             $comments .= $usage['description'] . " ";
         }
 
@@ -1671,9 +1712,7 @@ class Validator
 
         $this->report($location, $cardinality);
 
-        if (!$cardinality['result']) {
-            $hasError = true;
-        }
+        $severity = $this->raiseSeverity($severity, $cardinality['finding']);
         $comments .= $cardinality['description'] . " ";
 
         if ($exists) {
@@ -1683,7 +1722,7 @@ class Validator
                     $fieldRepeat,
                     $this->message
                 );
-                $repeatHasError = $hasError;
+                $repeatSeverity = $severity;
                 $repeatComments = $comments;
 
                 // check length
@@ -1697,8 +1736,8 @@ class Validator
 
                     $this->report($location, $lengthCheck);
 
+                    $repeatSeverity = $this->raiseSeverity($repeatSeverity, $lengthCheck['finding']);
                     if (!$lengthCheck['result']) {
-                        $repeatHasError = true;
                         $repeatComments .= $lengthCheck['description'] . " ";
                     }
                 }
@@ -1714,8 +1753,8 @@ class Validator
 
                     $this->report($location, $datatypeCheck);
 
+                    $repeatSeverity = $this->raiseSeverity($repeatSeverity, $datatypeCheck['finding']);
                     if (!$datatypeCheck['result']) {
-                        $repeatHasError = true;
                         $repeatComments .= $datatypeCheck['description'] . ' ';
                     }
                 }
@@ -1745,9 +1784,7 @@ class Validator
 
                         $this->report($location, $tableCheck);
 
-                        if (!$tableCheck['result']) {
-                            $repeatHasError = true;
-                        }
+                        $repeatSeverity = $this->raiseSeverity($repeatSeverity, $tableCheck['finding']);
                         $repeatComments .= $tableCheck['description'] . " ";
                     }
                 }
@@ -1775,7 +1812,8 @@ class Validator
                     "impNote"         => "",
                     "elementValue"    => $fieldValue,
                     "elementExists"   => $exists,
-                    "elementError"    => $repeatHasError,
+                    "elementError"    => $repeatSeverity === Severity::Error,
+                    "elementSeverity" => $repeatSeverity?->value,
                     "elementComments" => trim($repeatComments),
                 ]);
 
@@ -1786,7 +1824,7 @@ class Validator
                     "LocName"  => $location,
                     "LongName" => $fieldDef["LongName"],
                     "Datatype" => $fieldDef["Datatype"],
-                    "hasError" => $repeatHasError,
+                    "hasError" => $repeatSeverity === Severity::Error,
                     "comments" => trim($repeatComments),
                     "value"    => $fieldValue,
                 ];
@@ -1832,7 +1870,8 @@ class Validator
                             $description = "Component '{$componentLocation}' is not expected in Field '$location' structure.";
 
                             $notDefinedComponent = $this->createNotDefinedComponent($component, $location, $componentPosition);
-                            $notDefinedComponent["hasError"] = true;
+                            $excessSeverity = $this->raiseSeverity(null, FindingType::ElementInExcess);
+                            $notDefinedComponent["hasError"] = $excessSeverity === Severity::Error;
                             $notDefinedComponent["comments"] = $description;
                             $repeatArray["components"][$i + 1] = $notDefinedComponent;
 
@@ -1847,7 +1886,7 @@ class Validator
                                 'finding'     => FindingType::ElementInExcess,
                             ]);
 
-                            $repeatHasError = true;
+                            $repeatSeverity = $this->raiseSeverity($repeatSeverity, FindingType::ElementInExcess);
                             $repeatComments .= $description . ' ';
 
                             $this->validationResult->addValidationReport([
@@ -1862,7 +1901,8 @@ class Validator
                                 "impNote"         => "",
                                 "elementValue"    => $this->serializer->serializeComponent($component, $this->message),
                                 "elementExists"   => true,
-                                "elementError"    => true,
+                                "elementError"    => $excessSeverity === Severity::Error,
+                                "elementSeverity" => $excessSeverity?->value,
                                 "elementComments" => trim($description),
                             ]);
                         }
@@ -1886,7 +1926,8 @@ class Validator
                         $description = "Component '{$componentLocation}' is not expected in Field '$location' structure.";
 
                         $notDefinedComponent = $this->createNotDefinedComponent($component, $location, $componentPosition);
-                        $notDefinedComponent["hasError"] = true;
+                        $excessSeverity = $this->raiseSeverity(null, FindingType::ElementInExcess);
+                        $notDefinedComponent["hasError"] = $excessSeverity === Severity::Error;
                         $notDefinedComponent["comments"] = $description;
                         $repeatArray["components"][$i + 1] = $notDefinedComponent;
 
@@ -1901,7 +1942,7 @@ class Validator
                             'finding'     => FindingType::ElementInExcess,
                         ]);
 
-                        $repeatHasError = true;
+                        $repeatSeverity = $this->raiseSeverity($repeatSeverity, FindingType::ElementInExcess);
                         $repeatComments .= $description . ' ';
 
                         $this->validationResult->addValidationReport([
@@ -1916,7 +1957,8 @@ class Validator
                             "impNote"         => "",
                             "elementValue"    => $this->serializer->serializeComponent($component, $this->message),
                             "elementExists"   => true,
-                            "elementError"    => true,
+                            "elementError"    => $excessSeverity === Severity::Error,
+                            "elementSeverity" => $excessSeverity?->value,
                             "elementComments" => trim($description),
                         ]);
                     }
@@ -1926,12 +1968,13 @@ class Validator
                 $this->validationResult->updateValidationReport(
                     $reportIndex,
                     [
-                        'elementError'    => $repeatHasError,
+                        'elementError'    => $repeatSeverity === Severity::Error,
+                        'elementSeverity' => $repeatSeverity?->value,
                         'elementComments' => trim($repeatComments),
                     ]
                 );
 
-                $repeatArray['hasError'] = $repeatHasError;
+                $repeatArray['hasError'] = $repeatSeverity === Severity::Error;
                 $repeatArray['comments'] = trim($repeatComments);
 
                 $fieldArray[] = $repeatArray;
@@ -1971,7 +2014,7 @@ class Validator
                     "LocName"  => $location,
                     "LongName" => $fieldDef["LongName"],
                     "Datatype" => $fieldDef["Datatype"],
-                    "hasError" => $hasError,
+                    "hasError" => $severity === Severity::Error,
                     "comments" => trim($comments),
                     "value"    => "",
                 ];
@@ -1992,7 +2035,8 @@ class Validator
                 "impNote"         => "",
                 "elementValue"    => "",
                 "elementExists"   => $exists,
-                "elementError"    => $hasError,
+                "elementError"    => $severity === Severity::Error,
+                "elementSeverity" => $severity?->value,
                 "elementComments" => trim($comments),
             ]);
         }
@@ -2029,7 +2073,7 @@ class Validator
             && $value !== ''
         );
         $elementName = "'{$componentDef['LongName']}' ({$componentDef['Name']})";
-        $hasError = false;
+        $severity = null;
         $comments = '';
 
         $this->log(
@@ -2048,8 +2092,8 @@ class Validator
 
         $this->report($location, $usage);
 
+        $severity = $this->raiseSeverity($severity, $usage['finding']);
         if (!$usage['result']) {
-            $hasError = true;
             $comments .= $usage['description'] . " ";
         }
 
@@ -2066,8 +2110,8 @@ class Validator
 
                 $this->report($location, $lengthCheck);
 
+                $severity = $this->raiseSeverity($severity, $lengthCheck['finding']);
                 if (!$lengthCheck['result']) {
-                    $hasError = true;
                     $comments .= $lengthCheck['description'] . " ";
                 }
             }
@@ -2083,8 +2127,8 @@ class Validator
 
                 $this->report($location, $datatypeCheck);
 
+                $severity = $this->raiseSeverity($severity, $datatypeCheck['finding']);
                 if (!$datatypeCheck['result']) {
-                    $hasError = true;
                     $comments .= $datatypeCheck['description'] . ' ';
                 }
             }
@@ -2105,9 +2149,7 @@ class Validator
 
                     $this->report($location, $tableCheck);
 
-                    if (!$tableCheck['result']) {
-                        $hasError = true;
-                    }
+                    $severity = $this->raiseSeverity($severity, $tableCheck['finding']);
                     $comments .= $tableCheck['description'] . " ";
                 }
             }
@@ -2135,7 +2177,8 @@ class Validator
             "impNote"         => "",
             "elementValue"    => $value,
             "elementExists"   => $exists,
-            "elementError"    => $hasError,
+            "elementError"    => $severity === Severity::Error,
+            "elementSeverity" => $severity?->value,
             "elementComments" => trim($comments),
         ]);
 
@@ -2145,7 +2188,7 @@ class Validator
             "LocName"  => $location,
             "LongName" => $componentDef["LongName"],
             "Datatype" => $componentDef["Type"],
-            "hasError" => $hasError,
+            "hasError" => $severity === Severity::Error,
             "comments" => trim($comments),
             "value"    => $value,
         ];
@@ -2197,7 +2240,8 @@ class Validator
                         $description = "SubComponent '{$subComponentLocation}' is not expected in Component '$location' structure.";
 
                         $notDefinedSubComponent = $this->createNotDefinedSubComponent($subComponent, $location, $subComponentPosition);
-                        $notDefinedSubComponent["hasError"] = true;
+                        $excessSeverity = $this->raiseSeverity(null, FindingType::ElementInExcess);
+                        $notDefinedSubComponent["hasError"] = $excessSeverity === Severity::Error;
                         $notDefinedSubComponent["comments"] = $description;
                         $componentArray["subcomponents"][$i + 1] = $notDefinedSubComponent;
 
@@ -2212,7 +2256,7 @@ class Validator
                             'finding'     => FindingType::ElementInExcess,
                         ]);
 
-                        $hasError = true;
+                        $severity = $this->raiseSeverity($severity, FindingType::ElementInExcess);
                         $comments .= $description . ' ';
 
                         $this->validationResult->addValidationReport([
@@ -2228,7 +2272,8 @@ class Validator
                             "impNote"         => "",
                             "elementValue"    => $subComponent->getValue(),
                             "elementExists"   => true,
-                            "elementError"    => true,
+                            "elementError"    => $excessSeverity === Severity::Error,
+                            "elementSeverity" => $excessSeverity?->value,
                             "elementComments" => trim($description),
                         ]);
                     }
@@ -2255,7 +2300,8 @@ class Validator
                     $description = "SubComponent '{$subComponentLocation}' is not expected in Component '$location' structure.";
 
                     $notDefinedSubComponent = $this->createNotDefinedSubComponent($subComponent, $location, $subComponentPosition);
-                    $notDefinedSubComponent["hasError"] = true;
+                    $excessSeverity = $this->raiseSeverity(null, FindingType::ElementInExcess);
+                    $notDefinedSubComponent["hasError"] = $excessSeverity === Severity::Error;
                     $notDefinedSubComponent["comments"] = $description;
                     $componentArray["subcomponents"][$i + 1] = $notDefinedSubComponent;
 
@@ -2270,7 +2316,7 @@ class Validator
                         'finding'     => FindingType::ElementInExcess,
                     ]);
 
-                    $hasError = true;
+                    $severity = $this->raiseSeverity($severity, FindingType::ElementInExcess);
                     $comments .= $description . ' ';
 
                     $this->validationResult->addValidationReport([
@@ -2286,7 +2332,8 @@ class Validator
                         "impNote"         => "",
                         "elementValue"    => $subComponent->getValue(),
                         "elementExists"   => true,
-                        "elementError"    => true,
+                        "elementError"    => $excessSeverity === Severity::Error,
+                        "elementSeverity" => $excessSeverity?->value,
                         "elementComments" => trim($description),
                     ]);
                 }
@@ -2298,12 +2345,13 @@ class Validator
         $this->validationResult->updateValidationReport(
             $reportIndex,
             [
-                'elementError'    => $hasError,
+                'elementError'    => $severity === Severity::Error,
+                'elementSeverity' => $severity?->value,
                 'elementComments' => trim($comments),
             ]
         );
 
-        $componentArray['hasError'] = $hasError;
+        $componentArray['hasError'] = $severity === Severity::Error;
         $componentArray['comments'] = trim($comments);
 
         return $component !== null ? $componentArray : [];
@@ -2333,7 +2381,7 @@ class Validator
         );
         $value = $subComponent?->getValue() ?? '';
         $elementName = "'{$subComponentDef['LongName']}' ({$subComponentDef['Name']})";
-        $hasError = false;
+        $severity = null;
         $comments = '';
 
         $this->log(
@@ -2352,8 +2400,8 @@ class Validator
 
         $this->report($location, $usage);
 
+        $severity = $this->raiseSeverity($severity, $usage['finding']);
         if (!$usage['result']) {
-            $hasError = true;
             $comments .= $usage['description'] . " ";
         }
 
@@ -2370,8 +2418,8 @@ class Validator
 
                 $this->report($location, $lengthCheck);
 
+                $severity = $this->raiseSeverity($severity, $lengthCheck['finding']);
                 if (!$lengthCheck['result']) {
-                    $hasError = true;
                     $comments .= $lengthCheck['description'] . " ";
                 }
             }
@@ -2387,8 +2435,8 @@ class Validator
 
                 $this->report($location, $datatypeCheck);
 
+                $severity = $this->raiseSeverity($severity, $datatypeCheck['finding']);
                 if (!$datatypeCheck['result']) {
-                    $hasError = true;
                     $comments .= $datatypeCheck['description'] . ' ';
                 }
             }
@@ -2405,9 +2453,7 @@ class Validator
 
                     $this->report($location, $tableCheck);
 
-                    if (!$tableCheck['result']) {
-                        $hasError = true;
-                    }
+                    $severity = $this->raiseSeverity($severity, $tableCheck['finding']);
                     $comments .= $tableCheck['description'] . " ";
                 }
             }
@@ -2427,7 +2473,8 @@ class Validator
             "impNote"         => "",
             "elementValue"    => $value,
             "elementExists"   => $exists,
-            "elementError"    => $hasError,
+            "elementError"    => $severity === Severity::Error,
+            "elementSeverity" => $severity?->value,
             "elementComments" => trim($comments),
         ]);
 
@@ -2438,7 +2485,7 @@ class Validator
             "LocName"  => $location,
             "LongName" => $subComponentDef["LongName"],
             "Datatype" => $subComponentDef["Type"],
-            "hasError" => $hasError,
+            "hasError" => $severity === Severity::Error,
             "comments" => trim($comments),
             "value"    => $value,
         ];
@@ -2467,7 +2514,7 @@ class Validator
             "Type"     => "segment",
             "Name"     => "$segmentName",
             "LongName" => "not defined segment",
-            "hasError" => true,
+            "hasError" => $this->raiseSeverity(null, $this->notDefinedFindingType($segmentName)) === Severity::Error,
             "comments" => "Segment '{$segmentName}' is not defined in the message profile.",
             "fields"   => [],
         ];

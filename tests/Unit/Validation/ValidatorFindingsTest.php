@@ -96,12 +96,72 @@ final class ValidatorFindingsTest extends TestCase
         $this->assertSame('Warning', $entries[0]['Severity']);
     }
 
+    public function testValidationReportFlagsFollowTheSeverity(): void
+    {
+        $hl7 = new HL7Message();
+        $hl7->parse(
+            self::MSH
+            . "PID|1||1^^^AUTH^PI~2^^^AUTH^QQ||DOE^JANE||19800214|Z\r"
+            . "PV1|1|I\r"
+            . "ZZA|1"
+        );
+        $report = $hl7->validate(self::PROFILES)->getValidationReport();
+
+        // elementError and elementSeverity, by name; a component error is not
+        // carried by its field (PID.3 (Rep. 2)).
+        $this->assertSame(
+            [
+                'PID.3 (Rep. 1)' => [false, null],
+                'PID.3 (Rep. 2)' => [false, null],
+                'PID.8'          => [false, 'Warning'],
+                'ZZA'            => [false, 'Warning'],
+            ],
+            $this->flags($report, ['PID.3 (Rep. 1)', 'PID.3 (Rep. 2)', 'PID.8', 'ZZA'])
+        );
+        $this->assertContains(
+            ['PID-3.5', 'QQ', true, 'Error'],
+            array_map(
+                static fn (array $entry): array => [
+                    $entry['location'] ?? null,
+                    $entry['elementValue'] ?? null,
+                    $entry['elementError'],
+                    $entry['elementSeverity'],
+                ],
+                $report
+            )
+        );
+
+        $pid8 = $hl7->getProfiledMessage()['segments'][2]['fields'][8][0] ?? null;
+        $this->assertIsArray($pid8);
+        $this->assertSame('PID-8', $pid8['LocName']);
+        $this->assertFalse($pid8['hasError']);
+    }
+
     private function validate(string $segments): ValidationResult
     {
         $hl7 = new HL7Message();
         $hl7->parse(self::MSH . $segments);
 
         return $hl7->validate(self::PROFILES);
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $report
+     * @param list<string> $names
+     *
+     * @return array<string, array{mixed, mixed}> elementError and elementSeverity, by name.
+     */
+    private function flags(array $report, array $names): array
+    {
+        $flags = [];
+        foreach ($report as $entry) {
+            if (in_array($entry['name'], $names, true)) {
+                $flags[(string) $entry['name']] = [$entry['elementError'], $entry['elementSeverity']];
+            }
+        }
+        ksort($flags);
+
+        return $flags;
     }
 
     /**

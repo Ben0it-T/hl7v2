@@ -90,6 +90,10 @@ class ValidationResult
     /**
      * Add validation report entry.
      *
+     * elementError: the element has a finding of severity Error.
+     * elementSeverity: highest severity of the findings of the element, Error
+     * or Warning; null otherwise (Infos are read with the findings).
+     *
      * @param array<string, mixed> $entry
      *
      * @return int Index of the inserted entry.
