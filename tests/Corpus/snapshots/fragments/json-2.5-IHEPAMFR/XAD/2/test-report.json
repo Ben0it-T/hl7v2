@@ -169,6 +169,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "PID-11.9",
+        "Description": "Component 'County/Parish Code' (XAD.9) value (75101) not checked: table 0289 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "PID-11.10",
         "Description": "Component 'Census Tract' (XAD.10) usage is O.",
         "Type": "Usage",

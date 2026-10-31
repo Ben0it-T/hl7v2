@@ -82,7 +82,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 not found in the profile."
     },
     {
         "type": "Component",
@@ -149,7 +149,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile."
     },
     {
         "type": "Component",
@@ -216,7 +216,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 not found in the profile."
     },
     {
         "type": "Component",
@@ -283,7 +283,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 not found in the profile."
     },
     {
         "type": "Component",
@@ -996,7 +996,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (EI.2) value (IHE_FRANCE-2.11-PAM) not checked: table 0363 not found in the profile."
     },
     {
         "type": "Component",
@@ -1233,7 +1233,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile."
     },
     {
         "type": "Component",
@@ -1415,7 +1415,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile."
     },
     {
         "type": "SubComponent",
@@ -2966,7 +2966,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Point of Care' (PL.1) value (WARD1) not checked: table 0302 not found in the profile."
     },
     {
         "type": "Component",
@@ -2982,7 +2982,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Room' (PL.2) value (101) not checked: table 0303 not found in the profile."
     },
     {
         "type": "Component",
@@ -2998,7 +2998,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Bed' (PL.3) value (1) not checked: table 0304 not found in the profile."
     },
     {
         "type": "Component",
@@ -3031,7 +3031,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "SubComponent 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile."
     },
     {
         "type": "SubComponent",
@@ -3562,7 +3562,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile."
     },
     {
         "type": "SubComponent",
@@ -4426,7 +4426,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 not found in the profile."
     },
     {
         "type": "Component",

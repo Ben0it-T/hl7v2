@@ -52,7 +52,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 not found in the profile.",
                                 "value": "SENDAPP"
                             }
                         }
@@ -76,7 +76,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
                                 "value": "SENDFAC"
                             }
                         }
@@ -100,7 +100,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 not found in the profile.",
                                 "value": "RECVAPP"
                             }
                         }
@@ -124,7 +124,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 not found in the profile.",
                                 "value": "RECVFAC"
                             }
                         }
@@ -438,7 +438,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (EI.2) value (IHE_FRANCE-2.11-PAM) not checked: table 0363 not found in the profile.",
                                 "value": "IHE_FRANCE-2.11-PAM"
                             }
                         }
@@ -555,7 +555,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
                                 "value": "SENDFAC"
                             }
                         }
@@ -652,7 +652,7 @@
                                         "LongName": "Namespace ID",
                                         "Datatype": "IS",
                                         "hasError": false,
-                                        "comments": "",
+                                        "comments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
                                         "value": "HOSP"
                                     },
                                     "2": {
@@ -1185,7 +1185,7 @@
                                 "LongName": "Point of Care",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Point of Care' (PL.1) value (WARD1) not checked: table 0302 not found in the profile.",
                                 "value": "WARD1"
                             },
                             "2": {
@@ -1195,7 +1195,7 @@
                                 "LongName": "Room",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Room' (PL.2) value (101) not checked: table 0303 not found in the profile.",
                                 "value": "101"
                             },
                             "3": {
@@ -1205,7 +1205,7 @@
                                 "LongName": "Bed",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Bed' (PL.3) value (1) not checked: table 0304 not found in the profile.",
                                 "value": "1"
                             },
                             "4": {
@@ -1225,7 +1225,7 @@
                                         "LongName": "Namespace ID",
                                         "Datatype": "IS",
                                         "hasError": false,
-                                        "comments": "",
+                                        "comments": "SubComponent 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
                                         "value": "SENDFAC"
                                     }
                                 }
@@ -1471,7 +1471,7 @@
                                         "LongName": "Namespace ID",
                                         "Datatype": "IS",
                                         "hasError": false,
-                                        "comments": "",
+                                        "comments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
                                         "value": "HOSP"
                                     },
                                     "2": {
@@ -1858,7 +1858,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 not found in the profile.",
                                 "value": "SENDAPP"
                             }
                         }
@@ -2044,7 +2044,7 @@
                                 "LongName": "Discharge Location",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Discharge Location' (DLD.1) value (999999999) not checked: table 0113 not found in the profile.",
                                 "value": "999999999"
                             },
                             "2": {

@@ -106,6 +106,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-3.2",
         "Description": "Component 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -158,6 +165,13 @@
         "Location": "MSH-4.1",
         "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -218,6 +232,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-5.2",
         "Description": "Component 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -270,6 +291,13 @@
         "Location": "MSH-6.1",
         "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -913,6 +941,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-21.2",
+        "Description": "Component 'Namespace ID' (EI.2) value (IHE_FRANCE-2.11-PAM) not checked: table 0363 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-21.3",
         "Description": "Component 'Universal ID' (EI.3) usage is C.",
         "Type": "Usage",
@@ -1102,6 +1137,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "EVN-7.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "EVN-7.2",
         "Description": "Component 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -1252,6 +1294,13 @@
         "Location": "PID-3.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -1862,6 +1911,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "PID-18.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "PID-18.4.2",
         "Description": "SubComponent 'Universal ID' (HD.2) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
         "Type": "Conditional",
@@ -2352,6 +2408,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MRG-1.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MRG-1.4.2",
         "Description": "SubComponent 'Universal ID' (HD.2) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
         "Type": "Conditional",
@@ -2555,6 +2618,13 @@
         "Location": "MRG-3.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MRG-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },

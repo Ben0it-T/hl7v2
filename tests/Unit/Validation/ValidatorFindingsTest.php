@@ -4,8 +4,11 @@ declare(strict_types=1);
 namespace HL7v2\Tests\Unit\Validation;
 
 use HL7v2\HL7Message;
+use HL7v2\Profile\HL7TableLoader;
+use HL7v2\Profile\ProfileLoader;
 use HL7v2\Validation\Finding;
 use HL7v2\Validation\ValidationResult;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class ValidatorFindingsTest extends TestCase
@@ -135,6 +138,52 @@ final class ValidatorFindingsTest extends TestCase
         $this->assertIsArray($pid8);
         $this->assertSame('PID-8', $pid8['LocName']);
         $this->assertFalse($pid8['hasError']);
+    }
+
+    /**
+     * @return iterable<string, array{string, string}>
+     */
+    public static function unavailableTables(): iterable
+    {
+        // PV1-18 Patient Type, table 0018 (User, no suggested values in HL7 2.5).
+        yield 'table without values' => ['2.5', 'table 0018 (User defined tables) has no values in the profile.'];
+        // The IHE PAM FR profile (old format) leaves out the tables without values.
+        yield 'table not in the profile' => ['2.5-IHEPAMFR', 'table 0018 not found in the profile.'];
+    }
+
+    #[DataProvider('unavailableTables')]
+    public function testUnavailableTableGivesAnInfo(string $profileId, string $reason): void
+    {
+        $hl7 = new HL7Message();
+        $hl7->parse(
+            self::MSH
+            . "PID|1||1^^^AUTH^PI||DOE^JANE\r"
+            . 'PV1|1|I' . str_repeat('|', 16) . 'X'
+        );
+        $result = $hl7->validateWith(
+            (new ProfileLoader(self::PROFILES))->load($profileId, 'ADT', 'A01', 'ADT_A01'),
+            (new HL7TableLoader(self::PROFILES))->load($profileId)
+        );
+
+        $findings = array_values(array_filter(
+            $result->getFindings(),
+            static fn (Finding $finding): bool => $finding->location?->toShortString() === 'PV1-18'
+                && $finding->type->value === 'tableUnavailable'
+        ));
+        $this->assertCount(1, $findings);
+        $this->assertSame('Info', $findings[0]->severity->value);
+        $this->assertSame(
+            "Field 'Patient Type' (PV1.18) value (X) not checked: $reason",
+            $findings[0]->message
+        );
+
+        $entries = array_values(array_filter(
+            $result->getTestReport(),
+            static fn (array $entry): bool => $entry['Location'] === 'PV1-18' && $entry['Type'] === 'Table'
+        ));
+        $this->assertCount(1, $entries);
+        $this->assertTrue($entries[0]['Result']);
+        $this->assertSame('Info', $entries[0]['Severity']);
     }
 
     private function validate(string $segments): ValidationResult

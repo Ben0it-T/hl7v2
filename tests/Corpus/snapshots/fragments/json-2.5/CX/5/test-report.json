@@ -94,6 +94,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "PID-3.4.2",
         "Description": "SubComponent 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -239,6 +246,13 @@
         "Location": "PID-3.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },

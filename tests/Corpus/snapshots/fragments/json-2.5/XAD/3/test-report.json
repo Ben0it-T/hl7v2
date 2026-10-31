@@ -170,6 +170,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "PID-11.6",
+        "Description": "Component 'Country' (XAD.6) value (USA) not checked: table 0399 (HL7 standard tables) has no values in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "PID-11.7",
         "Description": "Component 'Address Type' (XAD.7) usage is O.",
         "Type": "Usage",

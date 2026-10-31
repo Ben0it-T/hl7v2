@@ -52,7 +52,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "SENDAPP"
                             }
                         }
@@ -76,7 +76,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "SENDFAC"
                             }
                         }
@@ -100,7 +100,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "RECVAPP"
                             }
                         }
@@ -124,7 +124,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "RECVFAC"
                             }
                         }
@@ -406,7 +406,7 @@
                                         "LongName": "Namespace ID",
                                         "Datatype": "IS",
                                         "hasError": false,
-                                        "comments": "",
+                                        "comments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile.",
                                         "value": "HOSP"
                                     }
                                 }
@@ -739,7 +739,7 @@
                                 "LongName": "Point of Care",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Point of Care' (PL.1) value (WARD1) not checked: table 0302 (User defined tables) has no values in the profile.",
                                 "value": "WARD1"
                             },
                             "2": {
@@ -749,7 +749,7 @@
                                 "LongName": "Room",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Room' (PL.2) value (101) not checked: table 0303 (User defined tables) has no values in the profile.",
                                 "value": "101"
                             },
                             "3": {
@@ -759,7 +759,7 @@
                                 "LongName": "Bed",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Bed' (PL.3) value (1) not checked: table 0304 (User defined tables) has no values in the profile.",
                                 "value": "1"
                             }
                         }

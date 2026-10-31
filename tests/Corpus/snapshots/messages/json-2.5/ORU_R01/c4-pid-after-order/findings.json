@@ -33,6 +33,14 @@
     },
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-3.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 (User defined tables) has no values in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "noDatatypeValidator",
         "location": "MSH-4",
         "profilePath": null,
@@ -46,6 +54,14 @@
         "profilePath": null,
         "segment": 1,
         "message": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-4.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "severity": "Info",
@@ -65,6 +81,14 @@
     },
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-5.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 (User defined tables) has no values in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "noDatatypeValidator",
         "location": "MSH-6",
         "profilePath": null,
@@ -78,6 +102,14 @@
         "profilePath": null,
         "segment": 1,
         "message": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-6.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "severity": "Info",
@@ -208,6 +240,14 @@
         "message": "Component 'Namespace ID' (EI.2) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
     },
     {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "ORC-2.2",
+        "profilePath": null,
+        "segment": 2,
+        "message": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile."
+    },
+    {
         "severity": "Error",
         "type": "segmentNotExpected",
         "location": "OBR",
@@ -246,6 +286,14 @@
         "profilePath": null,
         "segment": 3,
         "message": "Component 'Namespace ID' (EI.2) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "OBR-2.2",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile."
     },
     {
         "severity": "Info",
@@ -406,6 +454,14 @@
         "profilePath": null,
         "segment": 5,
         "message": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PID-3.4.1",
+        "profilePath": null,
+        "segment": 5,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "severity": "Info",

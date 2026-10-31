@@ -52,7 +52,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "SENDAPP"
                             }
                         }
@@ -76,7 +76,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "SENDFAC"
                             }
                         }
@@ -100,7 +100,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "RECVAPP"
                             }
                         }
@@ -124,7 +124,7 @@
                                 "LongName": "Namespace ID",
                                 "Datatype": "IS",
                                 "hasError": false,
-                                "comments": "",
+                                "comments": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 (User defined tables) has no values in the profile.",
                                 "value": "RECVFAC"
                             }
                         }
@@ -371,7 +371,7 @@
                                                         "LongName": "Namespace ID",
                                                         "Datatype": "IS",
                                                         "hasError": false,
-                                                        "comments": "",
+                                                        "comments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile.",
                                                         "value": "HOSP"
                                                     }
                                                 }
@@ -601,7 +601,7 @@
                                                 "LongName": "Namespace ID",
                                                 "Datatype": "IS",
                                                 "hasError": false,
-                                                "comments": "",
+                                                "comments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile.",
                                                 "value": "SENDAPP"
                                             }
                                         }
@@ -656,7 +656,7 @@
                                                 "LongName": "Namespace ID",
                                                 "Datatype": "IS",
                                                 "hasError": false,
-                                                "comments": "",
+                                                "comments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile.",
                                                 "value": "SENDAPP"
                                             }
                                         }

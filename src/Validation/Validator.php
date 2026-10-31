@@ -721,6 +721,9 @@ class Validator
      * Check HL7 table value.
      * Applies to: Field, Component, SubComponent.
      *
+     * A table absent from the profile, or without values (User table without
+     * suggested values), gives an Info: the value is not checked.
+     *
      * Validation is currently case-insensitive to preserve legacy Validator behavior.
      *
      * @param string $table
@@ -738,6 +741,27 @@ class Validator
     private function checkHL7Table(string $table, string $elementValue, string $elementType, string $elementName): array
     {
         $type = 'Table';
+
+        // Table unavailable: the check is not performed.
+        $definition = $this->hl7Tables[$table] ?? null;
+        if (!is_array($definition) || empty($definition['elements'])) {
+            $description = "$elementType $elementName value ($elementValue) not checked: table $table "
+                . (is_array($definition)
+                    ? '(' . ($definition['type'] === 'HL7' ? 'HL7 standard' : 'User defined') . ' tables) has no values in the profile.'
+                    : 'not found in the profile.');
+
+            $this->log(
+                "-$elementType- $type: $description"
+            );
+
+            return [
+                'result' => true,
+                'type' => $type,
+                'description' => $description,
+                'finding' => FindingType::TableUnavailable,
+            ];
+        }
+
         $result = in_array($elementValue, $this->hl7Tables[$table]['elements'], true);
 
         // Local code (Z...) in a table that accepts them (rules.json).
@@ -1762,8 +1786,6 @@ class Validator
                 // check table
                 if (
                     $fieldDef['Table'] !== ""
-                    && isset($this->hl7Tables[$fieldDef['Table']])
-                    && !empty($this->hl7Tables[$fieldDef['Table']]['elements'])
                     && in_array($fieldDef['Datatype'], ['ID', 'IS', 'CE', 'CF', 'CNE', 'CWE'], true)
                 ) {
                     $valueToValidate = $fieldValue;
@@ -2137,21 +2159,18 @@ class Validator
             if (
                 !isset($componentDef['components'])
                 && $componentDef['Table'] !== ""
-                && isset($this->hl7Tables[$componentDef['Table']])
             ) {
-                if (!empty($this->hl7Tables[$componentDef['Table']]['elements'])) {
-                    $tableCheck = $this->checkHL7Table(
-                        $componentDef["Table"],
-                        $value,
-                        'Component',
-                        $elementName
-                    );
+                $tableCheck = $this->checkHL7Table(
+                    $componentDef["Table"],
+                    $value,
+                    'Component',
+                    $elementName
+                );
 
-                    $this->report($location, $tableCheck);
+                $this->report($location, $tableCheck);
 
-                    $severity = $this->raiseSeverity($severity, $tableCheck['finding']);
-                    $comments .= $tableCheck['description'] . " ";
-                }
+                $severity = $this->raiseSeverity($severity, $tableCheck['finding']);
+                $comments .= $tableCheck['description'] . " ";
             }
 
         }
@@ -2442,20 +2461,18 @@ class Validator
             }
 
             // check table
-            if ($subComponentDef['Table'] !== "" && isset($this->hl7Tables[$subComponentDef['Table']])) {
-                if (!empty($this->hl7Tables[$subComponentDef['Table']]['elements'])) {
-                    $tableCheck = $this->checkHL7Table(
-                        $subComponentDef["Table"],
-                        $value,
-                        'SubComponent',
-                        $elementName
-                    );
+            if ($subComponentDef['Table'] !== "") {
+                $tableCheck = $this->checkHL7Table(
+                    $subComponentDef["Table"],
+                    $value,
+                    'SubComponent',
+                    $elementName
+                );
 
-                    $this->report($location, $tableCheck);
+                $this->report($location, $tableCheck);
 
-                    $severity = $this->raiseSeverity($severity, $tableCheck['finding']);
-                    $comments .= $tableCheck['description'] . " ";
-                }
+                $severity = $this->raiseSeverity($severity, $tableCheck['finding']);
+                $comments .= $tableCheck['description'] . " ";
             }
 
         }

@@ -106,6 +106,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-3.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-3.2",
         "Description": "Component 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -158,6 +165,13 @@
         "Location": "MSH-4.1",
         "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -218,6 +232,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-5.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-5.2",
         "Description": "Component 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -270,6 +291,13 @@
         "Location": "MSH-6.1",
         "Description": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -913,6 +941,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-21.2",
+        "Description": "Component 'Namespace ID' (EI.2) value (IHE_FRANCE-2.11-PAM) not checked: table 0363 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-21.3",
         "Description": "Component 'Universal ID' (EI.3) usage is C.",
         "Type": "Usage",
@@ -1102,6 +1137,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "EVN-7.1",
+        "Description": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "EVN-7.2",
         "Description": "Component 'Universal ID' (HD.2) usage is C.",
         "Type": "Usage",
@@ -1252,6 +1294,13 @@
         "Location": "PID-3.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -2197,6 +2246,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "PV1-3.1",
+        "Description": "Component 'Point of Care' (PL.1) value (WARD1) not checked: table 0302 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "PV1-3.2",
         "Description": "Component 'Room' (PL.2) usage is O.",
         "Type": "Usage",
@@ -2216,6 +2272,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "PV1-3.2",
+        "Description": "Component 'Room' (PL.2) value (101) not checked: table 0303 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "PV1-3.3",
         "Description": "Component 'Bed' (PL.3) usage is O.",
         "Type": "Usage",
@@ -2231,6 +2294,13 @@
         "Location": "PV1-3.3",
         "Description": "Component 'Bed' (PL.3) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PV1-3.3",
+        "Description": "Component 'Bed' (PL.3) value (1) not checked: table 0304 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -2269,6 +2339,13 @@
         "Location": "PV1-3.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PV1-3.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -2598,6 +2675,13 @@
         "Location": "PV1-19.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PV1-19.4.1",
+        "Description": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -3224,6 +3308,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "ZBE-1.2",
+        "Description": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 not found in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "ZBE-1.3",
         "Description": "Component 'Universal ID' (EI.3) usage is C.",
         "Type": "Usage",
@@ -3631,6 +3722,13 @@
         "Location": "ZFV-1.1",
         "Description": "Component 'Discharge Location' (DLD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "ZFV-1.1",
+        "Description": "Component 'Discharge Location' (DLD.1) value (999999999) not checked: table 0113 not found in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },

@@ -100,6 +100,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-3.1",
+        "Description": "Component 'namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-3.2",
         "Description": "Component 'universal ID' (HD.2) usage is O.",
         "Type": "Usage",
@@ -146,6 +153,13 @@
         "Location": "MSH-4.1",
         "Description": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MSH-4.1",
+        "Description": "Component 'namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -200,6 +214,13 @@
         "Severity": "Info"
     },
     {
+        "Location": "MSH-5.1",
+        "Description": "Component 'namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
         "Location": "MSH-5.2",
         "Description": "Component 'universal ID' (HD.2) usage is O.",
         "Type": "Usage",
@@ -246,6 +267,13 @@
         "Location": "MSH-6.1",
         "Description": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "MSH-6.1",
+        "Description": "Component 'namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },
@@ -1670,6 +1698,13 @@
         "Location": "PID-3.4.1",
         "Description": "SubComponent 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
+        "Result": true,
+        "Severity": "Info"
+    },
+    {
+        "Location": "PID-3.4.1",
+        "Description": "SubComponent 'namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile.",
+        "Type": "Table",
         "Result": true,
         "Severity": "Info"
     },

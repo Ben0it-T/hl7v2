@@ -82,7 +82,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -149,7 +149,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -216,7 +216,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -283,7 +283,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -946,7 +946,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 (User defined tables) has no values in the profile."
     },
     {
         "type": "SubComponent",
@@ -2267,7 +2267,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -2913,7 +2913,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -4737,7 +4737,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
@@ -5383,7 +5383,7 @@
         "elementExists": true,
         "elementError": false,
         "elementSeverity": null,
-        "elementComments": ""
+        "elementComments": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 (User defined tables) has no values in the profile."
     },
     {
         "type": "Component",
