@@ -17,5 +17,5 @@
             }
         ]
     },
-    "knownBug": "Length and table are checked on the serialized value (F^EXTRA), giving 4 errors instead of 1."
+    "knownBug": "Length and table are checked on the serialized value (F^EXTRA), and both components are reported in excess (PID-8.1, PID-8.2): 3 errors and 1 warning instead of 1 error."
 }
