@@ -40,6 +40,25 @@ final readonly class GroupNode extends StructureNode
     }
 
     /**
+     * Get the name of each child in a profile path. A child sharing its name
+     * with an earlier sibling gets its rank among them, as in HAPI: the two
+     * ROL of ADT_A01 are ROL and ROL2.
+     *
+     * @return list<string> In the order of the children.
+     */
+    public function childPathNames(): array
+    {
+        $seen = [];
+        $names = [];
+        foreach ($this->children as $child) {
+            $seen[$child->name] = ($seen[$child->name] ?? 0) + 1;
+            $names[] = $seen[$child->name] === 1 ? $child->name : $child->name . $seen[$child->name];
+        }
+
+        return $names;
+    }
+
+    /**
      * Sequence: the entry segments of the children up to the first one that
      * cannot be skipped, included. The content can be empty when every child
      * can be skipped.
@@ -52,6 +71,8 @@ final readonly class GroupNode extends StructureNode
     {
         $entrySegments = [];
         foreach ($children as $child) {
+            // Spread operator (...): puts the elements of each array one
+            // after the other, as array_merge() does for lists.
             $entrySegments = [...$entrySegments, ...$child->entrySegments];
             if (!$child->skippable) {
                 return [array_values(array_unique($entrySegments)), false];
@@ -74,6 +95,8 @@ final readonly class GroupNode extends StructureNode
         $entrySegments = [];
         $emptyContent = false;
         foreach ($children as $child) {
+            // Spread operator (...): puts the elements of each array one
+            // after the other, as array_merge() does for lists.
             $entrySegments = [...$entrySegments, ...$child->entrySegments];
             $emptyContent = $emptyContent || $child->skippable;
         }
