@@ -41,8 +41,7 @@
                         "summary": "value ZZZ not in User table 0396"
                     }
                 ]
-            },
-            "knownBug": "Values outside a User table are reported as errors; the expected severity is Warning (closed User tables are declared by the profile)."
+            }
         }
     ]
 }

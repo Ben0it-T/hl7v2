@@ -44,30 +44,47 @@ class ValidationResult
     private array $validationReport = [];
 
     /**
-     * Validation error count.
+     * @var list<Finding>
      */
-    private int $errorCount = 0;
+    private array $findings = [];
 
     /**
      * Add test report entry.
      *
      * @param array<string, mixed> $entry
      *
-     * Expected structure:
+     * Expected structure (Severity: only on an entry that gives a finding):
      * array{
      *     Location: string,
      *     Description: string,
      *     Type: string,
-     *     Result: bool
+     *     Result: bool,
+     *     Severity?: string
      * }
      */
     public function addTestReport(array $entry): void
     {
         $this->testReport[] = $entry;
+    }
 
-        if (!$entry['Result']) {
-            $this->errorCount++;
-        }
+    /**
+     * Add finding.
+     *
+     * @param Finding $finding
+     */
+    public function addFinding(Finding $finding): void
+    {
+        $this->findings[] = $finding;
+    }
+
+    /**
+     * Get findings, in validation order.
+     *
+     * @return list<Finding>
+     */
+    public function getFindings(): array
+    {
+        return $this->findings;
     }
 
     /**
@@ -124,27 +141,31 @@ class ValidationResult
     }
 
     /**
-     * Get validation error count.
+     * Get validation error count: the findings of severity Error.
      *
      * @return int
      */
     public function getErrorCount(): int
     {
-        return $this->errorCount;
+        return count(array_filter(
+            $this->findings,
+            static fn (Finding $finding): bool => $finding->isError()
+        ));
     }
 
     /**
-     * Check if message has errors according to profile.
+     * Check if message has errors according to profile (findings of severity Error).
      *
      * @return bool
      */
     public function hasErrors(): bool
     {
-        return $this->errorCount > 0;
+        return $this->getErrorCount() > 0;
     }
 
     /**
-     * Check if message is valid according to profile.
+     * Check if message is valid according to profile (no finding of severity Error;
+     * Warnings and Infos keep the message valid).
      *
      * @return bool
      */

@@ -33,7 +33,8 @@
         "Location": "MSH-1",
         "Description": "Field 'Field Separator' (MSH.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-2",
@@ -57,7 +58,8 @@
         "Location": "MSH-2",
         "Description": "Field 'Encoding Characters' (MSH.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-3",
@@ -81,7 +83,8 @@
         "Location": "MSH-3",
         "Description": "Field 'Sending Application' (MSH.3) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-3.1",
@@ -93,7 +96,8 @@
         "Location": "MSH-3.1",
         "Description": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-3.2",
@@ -129,7 +133,8 @@
         "Location": "MSH-4",
         "Description": "Field 'Sending Facility' (MSH.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-4.1",
@@ -141,7 +146,8 @@
         "Location": "MSH-4.1",
         "Description": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-4.2",
@@ -177,7 +183,8 @@
         "Location": "MSH-5",
         "Description": "Field 'Receiving Application' (MSH.5) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-5.1",
@@ -189,7 +196,8 @@
         "Location": "MSH-5.1",
         "Description": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-5.2",
@@ -225,7 +233,8 @@
         "Location": "MSH-6",
         "Description": "Field 'Receiving Facility' (MSH.6) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-6.1",
@@ -237,7 +246,8 @@
         "Location": "MSH-6.1",
         "Description": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-6.2",
@@ -273,7 +283,8 @@
         "Location": "MSH-7",
         "Description": "Field 'Date/Time Of Message' (MSH.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-7.1",
@@ -285,7 +296,8 @@
         "Location": "MSH-7.1",
         "Description": "Component 'time of an event' (TS.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-7.2",
@@ -327,7 +339,8 @@
         "Location": "MSH-9",
         "Description": "Field 'Message Type' (MSH.9) datatype is 'MSG'. No validator registered for datatype 'MSG'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-9.1",
@@ -339,7 +352,8 @@
         "Location": "MSH-9.1",
         "Description": "Component 'message type' (MSG.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-9.1",
@@ -357,7 +371,8 @@
         "Location": "MSH-9.2",
         "Description": "Component 'trigger event' (MSG.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-9.2",
@@ -393,7 +408,8 @@
         "Location": "MSH-10",
         "Description": "Field 'Message Control ID' (MSH.10) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-11",
@@ -417,7 +433,8 @@
         "Location": "MSH-11",
         "Description": "Field 'Processing ID' (MSH.11) datatype is 'PT'. No validator registered for datatype 'PT'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-11.1",
@@ -429,7 +446,8 @@
         "Location": "MSH-11.1",
         "Description": "Component 'processing ID' (PT.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-11.1",
@@ -465,7 +483,8 @@
         "Location": "MSH-12",
         "Description": "Field 'Version ID' (MSH.12) datatype is 'VID'. No validator registered for datatype 'VID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-12.1",
@@ -477,7 +496,8 @@
         "Location": "MSH-12.1",
         "Description": "Component 'version ID' (VID.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "MSH-12.1",
@@ -609,7 +629,8 @@
         "Location": "SCH-1",
         "Description": "Field 'Placer Appointment ID' (SCH.1) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
         "Type": "Conditional",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-1",
@@ -627,7 +648,8 @@
         "Location": "SCH-1",
         "Description": "Field 'Placer Appointment ID' (SCH.1) datatype is 'EI'. No validator registered for datatype 'EI'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-1.1",
@@ -639,7 +661,8 @@
         "Location": "SCH-1.1",
         "Description": "Component 'entity identifier' (EI.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-1.2",
@@ -729,7 +752,8 @@
         "Location": "SCH-6",
         "Description": "Field 'Event Reason' (SCH.6) datatype is 'CE'. No validator registered for datatype 'CE'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-6.1",
@@ -741,7 +765,8 @@
         "Location": "SCH-6.1",
         "Description": "Component 'identifier' (CE.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-6.2",
@@ -753,7 +778,8 @@
         "Location": "SCH-6.2",
         "Description": "Component 'text' (CE.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-6.3",
@@ -849,7 +875,8 @@
         "Location": "SCH-11",
         "Description": "Field 'Appointment Timing Quantity' (SCH.11) datatype is 'TQ'. No validator registered for datatype 'TQ'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-11.1",
@@ -873,7 +900,8 @@
         "Location": "SCH-11.3",
         "Description": "Component 'duration' (TQ.3) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-11.4",
@@ -885,7 +913,8 @@
         "Location": "SCH-11.4",
         "Description": "Component 'start date/time' (TQ.4) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-11.4.1",
@@ -897,7 +926,8 @@
         "Location": "SCH-11.4.1",
         "Description": "SubComponent 'time of an event' (TS.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-11.4.2",
@@ -915,7 +945,8 @@
         "Location": "SCH-11.5",
         "Description": "Component 'end date/time' (TQ.5) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-11.5.1",
@@ -927,7 +958,8 @@
         "Location": "SCH-11.5.1",
         "Description": "SubComponent 'time of an event' (TS.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-11.5.2",
@@ -1047,7 +1079,8 @@
         "Location": "SCH-16",
         "Description": "Field 'Filler Contact Person' (SCH.16) datatype is 'XCN'. No validator registered for datatype 'XCN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-16.1",
@@ -1059,7 +1092,8 @@
         "Location": "SCH-16.1",
         "Description": "Component 'ID number (ST)' (XCN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-16.2",
@@ -1071,7 +1105,8 @@
         "Location": "SCH-16.2",
         "Description": "Component 'family+last name' (XCN.2) datatype is 'FN'. No validator registered for datatype 'FN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-16.2.1",
@@ -1083,7 +1118,8 @@
         "Location": "SCH-16.2.1",
         "Description": "SubComponent 'family name' (FN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-16.2.2",
@@ -1101,7 +1137,8 @@
         "Location": "SCH-16.3",
         "Description": "Component 'given name' (XCN.3) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-16.4",
@@ -1233,7 +1270,8 @@
         "Location": "SCH-20",
         "Description": "Field 'Entered by Person' (SCH.20) datatype is 'XCN'. No validator registered for datatype 'XCN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-20.1",
@@ -1245,7 +1283,8 @@
         "Location": "SCH-20.1",
         "Description": "Component 'ID number (ST)' (XCN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-20.2",
@@ -1257,7 +1296,8 @@
         "Location": "SCH-20.2",
         "Description": "Component 'family+last name' (XCN.2) datatype is 'FN'. No validator registered for datatype 'FN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-20.2.1",
@@ -1269,7 +1309,8 @@
         "Location": "SCH-20.2.1",
         "Description": "SubComponent 'family name' (FN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-20.2.2",
@@ -1287,7 +1328,8 @@
         "Location": "SCH-20.3",
         "Description": "Component 'given name' (XCN.3) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-20.4",
@@ -1431,7 +1473,8 @@
         "Location": "SCH-25",
         "Description": "Field 'Filler Status Code' (SCH.25) datatype is 'CE'. No validator registered for datatype 'CE'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-25",
@@ -1449,7 +1492,8 @@
         "Location": "SCH-25.1",
         "Description": "Component 'identifier' (CE.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "SCH-25.2",
@@ -1575,7 +1619,8 @@
         "Location": "PID-3",
         "Description": "Field 'Patient Identifier List' (PID.3) datatype is 'CX'. No validator registered for datatype 'CX'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.1",
@@ -1587,7 +1632,8 @@
         "Location": "PID-3.1",
         "Description": "Component 'ID' (CX.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.2",
@@ -1611,7 +1657,8 @@
         "Location": "PID-3.4",
         "Description": "Component 'assigning authority' (CX.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.1",
@@ -1623,7 +1670,8 @@
         "Location": "PID-3.4.1",
         "Description": "SubComponent 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.2",
@@ -1647,7 +1695,8 @@
         "Location": "PID-3.5",
         "Description": "Component 'identifier type code' (CX.5) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.5",
@@ -1695,7 +1744,8 @@
         "Location": "PID-5",
         "Description": "Field 'Patient Name' (PID.5) datatype is 'XPN'. No validator registered for datatype 'XPN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-5.1",
@@ -1707,7 +1757,8 @@
         "Location": "PID-5.1",
         "Description": "Component 'family+last name' (XPN.1) datatype is 'FN'. No validator registered for datatype 'FN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-5.1.1",
@@ -1719,7 +1770,8 @@
         "Location": "PID-5.1.1",
         "Description": "SubComponent 'family name' (FN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-5.1.2",
@@ -1737,7 +1789,8 @@
         "Location": "PID-5.2",
         "Description": "Component 'given name' (XPN.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-5.3",
@@ -1809,7 +1862,8 @@
         "Location": "PID-7",
         "Description": "Field 'Date/Time of Birth' (PID.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-7.1",
@@ -1821,7 +1875,8 @@
         "Location": "PID-7.1",
         "Description": "Component 'time of an event' (TS.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-7.2",
@@ -1851,7 +1906,8 @@
         "Location": "PID-8",
         "Description": "Field 'Sex' (PID.8) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-8",
@@ -2337,7 +2393,8 @@
         "Location": "AIS-3",
         "Description": "Field 'Universal Service ID' (AIS.3) datatype is 'CE'. No validator registered for datatype 'CE'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIS-3.1",
@@ -2349,7 +2406,8 @@
         "Location": "AIS-3.1",
         "Description": "Component 'identifier' (CE.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIS-3.2",
@@ -2361,7 +2419,8 @@
         "Location": "AIS-3.2",
         "Description": "Component 'text' (CE.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIS-3.3",
@@ -2571,7 +2630,8 @@
         "Location": "AIP-3",
         "Description": "Field 'Personnel Resource ID' (AIP.3) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
         "Type": "Conditional",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-3",
@@ -2589,7 +2649,8 @@
         "Location": "AIP-3",
         "Description": "Field 'Personnel Resource ID' (AIP.3) datatype is 'XCN'. No validator registered for datatype 'XCN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-3.1",
@@ -2601,7 +2662,8 @@
         "Location": "AIP-3.1",
         "Description": "Component 'ID number (ST)' (XCN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-3.2",
@@ -2613,7 +2675,8 @@
         "Location": "AIP-3.2",
         "Description": "Component 'family+last name' (XCN.2) datatype is 'FN'. No validator registered for datatype 'FN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-3.2.1",
@@ -2625,7 +2688,8 @@
         "Location": "AIP-3.2.1",
         "Description": "SubComponent 'family name' (FN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-3.2.2",
@@ -2643,7 +2707,8 @@
         "Location": "AIP-3.3",
         "Description": "Component 'given name' (XCN.3) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-3.4",
@@ -2739,7 +2804,8 @@
         "Location": "AIP-4",
         "Description": "Field 'Resource Role' (AIP.4) datatype is 'CE'. No validator registered for datatype 'CE'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-4.1",
@@ -2751,7 +2817,8 @@
         "Location": "AIP-4.1",
         "Description": "Component 'identifier' (CE.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-4.2",
@@ -2763,7 +2830,8 @@
         "Location": "AIP-4.2",
         "Description": "Component 'text' (CE.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "AIP-4.3",

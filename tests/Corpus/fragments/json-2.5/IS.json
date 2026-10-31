@@ -40,8 +40,7 @@
                         "summary": "value Z not in User table 0001"
                     }
                 ]
-            },
-            "knownBug": "Values outside a User table are reported as errors; the expected severity is Warning (closed User tables are declared by the profile)."
+            }
         },
         {
             "value": "f",
@@ -57,8 +56,7 @@
                         "summary": "value f not in User table 0001"
                     }
                 ]
-            },
-            "knownBug": "Values outside a User table are reported as errors; the expected severity is Warning (closed User tables are declared by the profile)."
+            }
         }
     ]
 }

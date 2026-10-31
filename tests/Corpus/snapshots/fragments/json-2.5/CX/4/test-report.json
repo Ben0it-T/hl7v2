@@ -21,7 +21,8 @@
         "Location": "PID-3",
         "Description": "Field 'Patient Identifier List' (PID.3) datatype is 'CX'. No validator registered for datatype 'CX'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.1",
@@ -39,7 +40,8 @@
         "Location": "PID-3.1",
         "Description": "Component 'ID Number' (CX.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.2",
@@ -69,7 +71,8 @@
         "Location": "PID-3.4",
         "Description": "Component 'Assigning Authority' (CX.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.1",
@@ -87,13 +90,15 @@
         "Location": "PID-3.4.1",
         "Description": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.2",
         "Description": "SubComponent 'Universal ID' (HD.2) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
         "Type": "Conditional",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.2",
@@ -105,13 +110,15 @@
         "Location": "PID-3.4.2",
         "Description": "SubComponent 'Universal ID' (HD.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.3",
         "Description": "SubComponent 'Universal ID Type' (HD.3) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message.",
         "Type": "Conditional",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.3",
@@ -123,13 +130,15 @@
         "Location": "PID-3.4.3",
         "Description": "SubComponent 'Universal ID Type' (HD.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.4.3",
         "Description": "SubComponent 'Universal ID Type' (HD.3) value (ZZZ) not in table 0301 (HL7 standard tables).",
         "Type": "Table",
-        "Result": false
+        "Result": false,
+        "Severity": "Error"
     },
     {
         "Location": "PID-3.5",
@@ -147,7 +156,8 @@
         "Location": "PID-3.5",
         "Description": "Component 'Identifier Type Code' (CX.5) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-3.5",

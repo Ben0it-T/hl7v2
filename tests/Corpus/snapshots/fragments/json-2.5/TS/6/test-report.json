@@ -21,7 +21,8 @@
         "Location": "PID-7",
         "Description": "Field 'Date/Time of Birth' (PID.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-7.1",
@@ -39,7 +40,8 @@
         "Location": "PID-7.1",
         "Description": "Component 'Time' (TS.1) datatype 'DTM' is not valid: invalid DTM format.",
         "Type": "Datatype",
-        "Result": false
+        "Result": false,
+        "Severity": "Error"
     },
     {
         "Location": "PID-7.2",

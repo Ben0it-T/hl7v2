@@ -21,7 +21,8 @@
         "Location": "PID-7",
         "Description": "Field 'Date/Time of Birth' (PID.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-7.1",

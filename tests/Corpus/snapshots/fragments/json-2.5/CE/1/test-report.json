@@ -21,7 +21,8 @@
         "Location": "PID-15",
         "Description": "Field 'Primary Language' (PID.15) datatype is 'CE'. No validator registered for datatype 'CE'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-15.1",
@@ -39,7 +40,8 @@
         "Location": "PID-15.1",
         "Description": "Component 'Identifier' (CE.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-15.2",
@@ -57,7 +59,8 @@
         "Location": "PID-15.2",
         "Description": "Component 'Text' (CE.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-15.3",
@@ -75,13 +78,15 @@
         "Location": "PID-15.3",
         "Description": "Component 'Name of Coding System' (CE.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-15.3",
         "Description": "Component 'Name of Coding System' (CE.3) value (ISO639) not in table 0396 (HL7 standard tables).",
         "Type": "Table",
-        "Result": false
+        "Result": false,
+        "Severity": "Error"
     },
     {
         "Location": "PID-15.4",

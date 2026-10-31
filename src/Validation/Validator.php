@@ -5,6 +5,7 @@ namespace HL7v2\Validation;
 
 use HL7v2\Exception\HL7Exception;
 
+use HL7v2\Model\Location;
 use HL7v2\Model\Message;
 use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
@@ -39,6 +40,24 @@ class Validator
      * of the profile, else MSH-9.3.
      */
     private string $structure = '';
+    /**
+     * Rank of each segment of the message among the segments of the same
+     * name, by index of the segment in the message (0-based).
+     *
+     * @var array<int, int>
+     */
+    private array $segmentRanks = [];
+
+    /**
+     * Index (0-based) of the segment being validated; null outside a segment.
+     */
+    private ?int $currentSegmentIndex = null;
+
+    /**
+     * Repetition (1-based) of the field being validated; null outside a repetition.
+     */
+    private ?int $currentRepetition = null;
+
     private DatatypeValidatorRegistry $datatypeRegistry;
     private ValidationContext $context;
     private ValidationResult $validationResult;
@@ -127,6 +146,16 @@ class Validator
 
         $this->message = $message;
 
+        $this->segmentRanks = [];
+        $ranks = [];
+        foreach ($message->getSegments() as $index => $segment) {
+            $name = $segment->getName();
+            $ranks[$name] = ($ranks[$name] ?? 0) + 1;
+            $this->segmentRanks[$index] = $ranks[$name];
+        }
+        $this->currentSegmentIndex = null;
+        $this->currentRepetition = null;
+
         $this->structure = $profile->getStructure() !== ''
             ? $profile->getStructure()
             : $message->getStructure();
@@ -200,12 +229,7 @@ class Validator
                     $description = "Segment '{$segmentName}' is not defined in the message profile.";
                     $this->log("-Segment- >> message '{$segmentName}' segment is not defined.");
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $this->structure,
-                        'Description' => $description,
-                        'Type'        => "Structure",
-                        'Result'      => false,
-                    ]);
+                    $this->reportStructure($description, $this->notDefinedFindingType($segmentName), $this->context->messageSegmentIndex);
 
                     $this->validationResult->addValidationReport([
                         "type"            => "Segment",
@@ -234,12 +258,7 @@ class Validator
                     $description = "Segment '{$segmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure.";
                     $this->log("-Segment- >> message '{$segmentName}' segment is not expected here.");
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $this->structure,
-                        'Description' => $description,
-                        'Type'        => "Structure",
-                        'Result'      => false,
-                    ]);
+                    $this->reportStructure($description, FindingType::SegmentNotExpected, $this->context->messageSegmentIndex);
 
                     $this->validationResult->addValidationReport([
                         "type"            => "Segment",
@@ -265,6 +284,138 @@ class Validator
         $this->log("-Validator- Validation end.");
 
         return $this->validationResult;
+    }
+
+
+    // ---
+    // --- Report functions
+    // ---
+
+    /**
+     * Report a check.
+     *
+     * The check is added to the TestReport. When it gives a finding, the
+     * finding is added with the severity of the rules, and the TestReport
+     * entry gets this severity.
+     *
+     * @param string $legacyLocation Location of the TestReport (PID-3.4.1, or the structure name).
+     * @param array{
+     *     result: bool,
+     *     type: string,
+     *     description: string,
+     *     finding: ?FindingType
+     * } $check
+     * @param int|null $segmentIndex Index (0-based) of the segment of a segment-level
+     *                               check; null for an element of the segment being
+     *                               validated, or a check without segment.
+     *
+     * @return void
+     */
+    private function report(string $legacyLocation, array $check, ?int $segmentIndex = null): void
+    {
+        $entry = [
+            'Location'    => $legacyLocation,
+            'Description' => $check['description'],
+            'Type'        => $check['type'],
+            'Result'      => $check['result'],
+        ];
+
+        if ($check['finding'] !== null) {
+            $severity = $this->rules->severity($check['finding']);
+            $entry['Severity'] = $severity->value;
+
+            [$location, $segment] = $this->findingPosition($legacyLocation, $segmentIndex);
+            $this->validationResult->addFinding(
+                new Finding($severity, $check['finding'], $check['description'], $location, null, $segment)
+            );
+        }
+
+        $this->validationResult->addTestReport($entry);
+    }
+
+    /**
+     * Report a structure finding (segment not defined or not expected, no
+     * alternative in a choice group).
+     *
+     * @param string $description
+     * @param FindingType $finding
+     * @param int|null $segmentIndex Index (0-based) of the segment concerned; null when
+     *                               no segment of the message is concerned (structure
+     *                               checks run outside validateSegment(), so there is
+     *                               no segment being validated).
+     *
+     * @return void
+     */
+    private function reportStructure(string $description, FindingType $finding, ?int $segmentIndex): void
+    {
+        $this->report(
+            $this->structure,
+            [
+                'result'      => false,
+                'type'        => 'Structure',
+                'description' => $description,
+                'finding'     => $finding,
+            ],
+            $segmentIndex
+        );
+    }
+
+    /**
+     * Get the finding type of a segment unknown to the profile: Z segment or not.
+     *
+     * @param string $segmentName
+     *
+     * @return FindingType
+     */
+    private function notDefinedFindingType(string $segmentName): FindingType
+    {
+        return str_starts_with($segmentName, 'Z')
+            ? FindingType::ZSegmentNotDefined
+            : FindingType::SegmentNotDefined;
+    }
+
+    /**
+     * Get the positions of a finding: its Location and the position of its
+     * segment in the message (1-based).
+     *
+     * - Segment-level check ($segmentIndex given): the segment (NK1[2]).
+     * - Element of the segment being validated ($segmentIndex null): the
+     *   element, with the rank of the segment and the repetition being
+     *   validated (NK1[2]-5[2].12.1). The field, component and sub-component
+     *   numbers come from the TestReport location (NK1-5.12.1); without them,
+     *   the segment.
+     * - No segment given nor being validated (absent segment or group): no
+     *   position.
+     *
+     * @param string $legacyLocation
+     * @param int|null $segmentIndex
+     *
+     * @return array{?Location, ?int}
+     */
+    private function findingPosition(string $legacyLocation, ?int $segmentIndex): array
+    {
+        $index = $segmentIndex ?? $this->currentSegmentIndex;
+        $segment = $index !== null ? $this->message->getSegment($index) : null;
+        if ($index === null || $segment === null) {
+            return [null, null];
+        }
+
+        $name = $segment->getName();
+        $rank = $this->segmentRanks[$index] ?? 1;
+
+        if ($segmentIndex === null
+            && preg_match('/-(\d+)(?:\.(\d+))?(?:\.(\d+))?$/', $legacyLocation, $m) === 1
+        ) {
+            $component = ($m[2] ?? '') !== '' ? (int) $m[2] : null;
+            $subComponent = ($m[3] ?? '') !== '' ? (int) $m[3] : null;
+
+            return [
+                new Location($name, $rank, (int) $m[1], $this->currentRepetition, $component, $subComponent),
+                $index + 1,
+            ];
+        }
+
+        return [new Location($name, $rank), $index + 1];
     }
 
 
@@ -299,7 +450,8 @@ class Validator
      * @return array{
      *     result: bool,
      *     type: string,
-     *     description: string
+     *     description: string,
+     *     finding: ?FindingType
      * }
      */
     private function checkUsage(string $elementUsage, bool $elementExists, string $elementType, string $elementName): array
@@ -310,18 +462,21 @@ class Validator
             $description = "$elementType $elementName is required.";
             $type = 'Required element';
             $result = false;
+            $finding = FindingType::RequiredAbsent;
 
         } elseif ($elementUsage === 'X' && $elementExists) {
 
             $description = "$elementType $elementName is not allowed.";
             $type = 'Element not allowed';
             $result = false;
+            $finding = FindingType::NotAllowedPresent;
 
         } elseif ($elementUsage === 'W' && $elementExists) {
 
             $description = "$elementType $elementName is withdrawn and should not be used.";
             $type = 'Element not allowed';
             $result = false;
+            $finding = FindingType::WithdrawnPresent;
 
         } elseif ($elementUsage === 'C' && $elementExists) {
 
@@ -331,12 +486,14 @@ class Validator
 
             $type = 'Conditional';
             $result = true;
+            $finding = FindingType::ConditionalPresent;
 
         } elseif ($elementUsage === 'B' && $elementExists) {
 
             $description = "$elementType $elementName is retained for backward compatibility.";
             $type = 'Usage';
             $result = true;
+            $finding = FindingType::BackwardPresent;
 
         } else {
 
@@ -345,6 +502,7 @@ class Validator
 
             $type = 'Usage';
             $result = true;
+            $finding = null;
         }
 
         $this->log("-$elementType- $type: $description");
@@ -353,6 +511,7 @@ class Validator
             'result' => $result,
             'type' => $type,
             'description' => $description,
+            'finding' => $finding,
         ];
     }
 
@@ -377,7 +536,8 @@ class Validator
      * @return array{
      *     result: bool,
      *     type: string,
-     *     description: string
+     *     description: string,
+     *     finding: ?FindingType
      * }
      */
     private function checkCardinality(string $min, string $max, int $elementCnt, string $elementUsage, string $elementType, string $elementName): array
@@ -426,6 +586,7 @@ class Validator
             'result' => $result,
             'type' => $type,
             'description' => $description,
+            'finding' => $result ? null : FindingType::Cardinality,
         ];
     }
 
@@ -446,7 +607,8 @@ class Validator
      * @return array{
      *     result: bool,
      *     type: string,
-     *     description: string
+     *     description: string,
+     *     finding: ?FindingType
      * }
      */
     private function checkLength(int $length, string $elementValue, string $elementType, string $elementName): array
@@ -466,6 +628,7 @@ class Validator
             'result' => $result,
             'type' => $type,
             'description' => $description,
+            'finding' => $result ? null : FindingType::Length,
         ];
     }
 
@@ -485,12 +648,14 @@ class Validator
      * @return array{
      *     result: bool,
      *     type: string,
-     *     description: string
+     *     description: string,
+     *     finding: ?FindingType
      * }
      */
     private function checkDatatype(string $datatype, string $elementValue, string $elementType, string $elementName): array
     {
         $type = 'Datatype';
+        $finding = null;
 
         if ($elementValue === '') {
             $result = true;
@@ -502,9 +667,11 @@ class Validator
             if ($validator === null) {
                 $result = true;
                 $description = "$elementType $elementName datatype is '$datatype'. No validator registered for datatype '$datatype'. Datatype validation skipped.";
+                $finding = FindingType::NoDatatypeValidator;
 
             } else {
                 $result = $validator->validate($elementValue);
+                $finding = $result ? null : FindingType::Datatype;
                 $description = $result
                     ? "$elementType $elementName datatype '$datatype' is valid."
                     : "$elementType $elementName datatype '$datatype' is not valid: " . $validator->getErrorMessage();
@@ -519,6 +686,7 @@ class Validator
             'result' => $result,
             'type' => $type,
             'description' => $description,
+            'finding' => $finding,
         ];
     }
 
@@ -536,7 +704,8 @@ class Validator
      * @return array{
      *     result: bool,
      *     type: string,
-     *     description: string
+     *     description: string,
+     *     finding: ?FindingType
      * }
      */
     private function checkHL7Table(string $table, string $elementValue, string $elementType, string $elementName): array
@@ -571,10 +740,19 @@ class Validator
             "-$elementType- $type: $description"
         );
 
+        // Finding: a closed table (rules.json) first, else the type of the table.
+        $finding = match (true) {
+            $result                                          => null,
+            $this->rules->isClosedTable($table)              => FindingType::TableClosed,
+            $this->hl7Tables[$table]['type'] === 'HL7'       => FindingType::TableHL7,
+            default                                          => FindingType::TableUser,
+        };
+
         return [
             'result' => $result,
             'type' => $type,
             'description' => $description,
+            'finding' => $finding,
         ];
     }
 
@@ -740,19 +918,9 @@ class Validator
                 $this->log("-Group- Group '{$groupDef['Name']}' not found in message. Move on.");
                 $this->log("-Group- --- Group '{$groupDef["Name"]}' end");
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $this->structure,
-                    'Description' => $usage['description'],
-                    'Type'        => $usage['type'],
-                    'Result'      => $usage['result'],
-                ]);
+                $this->report($this->structure, $usage);
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $this->structure,
-                    'Description' => $cardinality['description'],
-                    'Type'        => $cardinality['type'],
-                    'Result'      => $cardinality['result'],
-                ]);
+                $this->report($this->structure, $cardinality);
 
                 $this->validationResult->addValidationReport([
                     "type"            => "Group",
@@ -792,12 +960,7 @@ class Validator
                 $segmentRepetitions = $this->message->countSegmentRepetitions($currentSegmentName, $this->context->messageSegmentIndex);
                 $description = "Segment '{$currentSegmentName}' is not defined in the message profile. Found {$segmentRepetitions} time(s).";
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $this->structure,
-                    'Description' => $description,
-                    'Type'        => "Structure",
-                    'Result'      => false,
-                ]);
+                $this->reportStructure($description, $this->notDefinedFindingType($currentSegmentName), $this->context->messageSegmentIndex);
 
                 $this->validationResult->addValidationReport([
                     "type"            => "Segment",
@@ -843,12 +1006,7 @@ class Validator
 
                 $description = "Segment '{$currentSegmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentRepetitions} time(s).";
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $this->structure,
-                    'Description' => $description,
-                    'Type'        => "Structure",
-                    'Result'      => false,
-                ]);
+                $this->reportStructure($description, FindingType::SegmentNotExpected, $this->context->messageSegmentIndex);
 
                 $this->validationResult->addValidationReport([
                     "type"            => "Segment",
@@ -884,19 +1042,9 @@ class Validator
                 $this->log("-Group- Group '{$groupDef['Name']}' found in message.");
 
                 if ($groupDef["Name"] !== $this->structure) {
-                    $this->validationResult->addTestReport([
-                        'Location'    => $this->structure,
-                        'Description' => $usage['description'],
-                        'Type'        => $usage['type'],
-                        'Result'      => $usage['result'],
-                    ]);
+                    $this->report($this->structure, $usage);
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $this->structure,
-                        'Description' => $cardinality['description'],
-                        'Type'        => $cardinality['type'],
-                        'Result'      => $cardinality['result'],
-                    ]);
+                    $this->report($this->structure, $cardinality);
                 }
 
                 break;
@@ -1001,20 +1149,10 @@ class Validator
                         $segmentComments .= $segmentCardinality['description'] . " ";
 
 
-                        // addTestReport
-                        $this->validationResult->addTestReport([
-                            'Location'    => $this->structure,
-                            'Description' => $segmentUsage['description'],
-                            'Type'        => $segmentUsage['type'],
-                            'Result'      => $segmentUsage['result'],
-                        ]);
+                        // Report (located on the first matched segment)
+                        $this->report($this->structure, $segmentUsage, $this->context->messageSegmentIndex);
 
-                        $this->validationResult->addTestReport([
-                            'Location'    => $this->structure,
-                            'Description' => $segmentCardinality['description'],
-                            'Type'        => $segmentCardinality['type'],
-                            'Result'      => $segmentCardinality['result'],
-                        ]);
+                        $this->report($this->structure, $segmentCardinality, $this->context->messageSegmentIndex);
 
                         // addValidationReport
                         $this->validationResult->addValidationReport([
@@ -1088,19 +1226,9 @@ class Validator
                             // Case 1: profile segment name is not present in message. Move On.
                             $this->log("-Segment- >> profile segment '{$childDef["Name"]}' is not present in message (Case 1). Move on.");
 
-                            $this->validationResult->addTestReport([
-                                'Location'    => $this->structure,
-                                'Description' => $segmentUsage['description'],
-                                'Type'        => $segmentUsage['type'],
-                                'Result'      => $segmentUsage['result'],
-                            ]);
+                            $this->report($this->structure, $segmentUsage);
 
-                            $this->validationResult->addTestReport([
-                                'Location'    => $this->structure,
-                                'Description' => $segmentCardinality['description'],
-                                'Type'        => $segmentCardinality['type'],
-                                'Result'      => $segmentCardinality['result'],
-                            ]);
+                            $this->report($this->structure, $segmentCardinality);
 
                             $this->validationResult->addValidationReport([
                                 "type"            => "Segment",
@@ -1123,12 +1251,7 @@ class Validator
                             $segmentReps = $this->message->countSegmentRepetitions($segmentName, $this->context->messageSegmentIndex);
                             $description = "Segment '{$segmentName}' is not defined in the message profile. Found {$segmentReps} time(s).";
 
-                            $this->validationResult->addTestReport([
-                                'Location'    => $this->structure,
-                                'Description' => $description,
-                                'Type'        => "Structure",
-                                'Result'      => false,
-                            ]);
+                            $this->reportStructure($description, $this->notDefinedFindingType($segmentName), $this->context->messageSegmentIndex);
 
                             $this->validationResult->addValidationReport([
                                 "type"            => "Segment",
@@ -1204,19 +1327,9 @@ class Validator
 
                                 case NavigationState::SEGMENT_APPEARS_LATER:
                                     // Message: doesn't move. Profile: move on.
-                                    $this->validationResult->addTestReport([
-                                        'Location'    => $this->structure,
-                                        'Description' => $segmentUsage['description'],
-                                        'Type'        => $segmentUsage['type'],
-                                        'Result'      => $segmentUsage['result'],
-                                    ]);
+                                    $this->report($this->structure, $segmentUsage);
 
-                                    $this->validationResult->addTestReport([
-                                        'Location'    => $this->structure,
-                                        'Description' => $segmentCardinality['description'],
-                                        'Type'        => $segmentCardinality['type'],
-                                        'Result'      => $segmentCardinality['result'],
-                                    ]);
+                                    $this->report($this->structure, $segmentCardinality);
 
                                     $this->validationResult->addValidationReport([
                                         "type"            => "Segment",
@@ -1247,12 +1360,7 @@ class Validator
 
                                     $description = "Segment '{$segmentName}' is defined in the message profile, but error in position (sequence) within the hierarchy of the message structure. Found {$segmentReps} time(s).";
 
-                                    $this->validationResult->addTestReport([
-                                        'Location'    => $this->structure,
-                                        'Description' => $description,
-                                        'Type'        => "Structure",
-                                        'Result'      => false,
-                                    ]);
+                                    $this->reportStructure($description, FindingType::SegmentNotExpected, $this->context->messageSegmentIndex);
 
                                     $this->validationResult->addValidationReport([
                                         "type"            => "Segment",
@@ -1307,12 +1415,7 @@ class Validator
             if ($isChoice && !$choiceMatched) {
                 $description = "No valid alternative was selected in choice group '{$groupDef['Name']}'.";
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $this->structure,
-                    'Description' => $description,
-                    'Type'        => 'Structure',
-                    'Result'      => false,
-                ]);
+                $this->reportStructure($description, FindingType::RequiredAbsent, null);
 
                 $groupError = true;
                 $groupComments .= $description . " ";
@@ -1397,6 +1500,11 @@ class Validator
      */
     private function validateSegment(?Segment $segment, array $segmentDef, string $location): array
     {
+        // Segment being validated, for the positions of the findings.
+        $previousSegmentIndex = $this->currentSegmentIndex;
+        $index = $segment !== null ? array_search($segment, $this->message->getSegments(), true) : false;
+        $this->currentSegmentIndex = $index !== false ? (int) $index : null;
+
         $elementName = $segmentDef["Name"];
 
         // Create segment structure
@@ -1462,11 +1570,11 @@ class Validator
                     "-Field- {$fieldLocation} : {$description} Found {$field->countRepeats()} rep(s)."
                 );
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $fieldLocation,
-                    'Description' => $description,
-                    'Type'        => "Element not expected",
-                    'Result'      => false,
+                $this->report($fieldLocation, [
+                    'result'      => false,
+                    'type'        => 'Element not expected',
+                    'description' => $description,
+                    'finding'     => FindingType::ElementInExcess,
                 ]);
 
                 $this->validationResult->addValidationReport([
@@ -1489,6 +1597,8 @@ class Validator
                 ]);
             }
         }
+
+        $this->currentSegmentIndex = $previousSegmentIndex;
 
         return $segmentArray;
     }
@@ -1541,12 +1651,7 @@ class Validator
             $elementName
         );
 
-        $this->validationResult->addTestReport([
-            'Location'    => $location,
-            'Description' => $usage['description'],
-            'Type'        => $usage['type'],
-            'Result'      => $usage['result'],
-        ]);
+        $this->report($location, $usage);
 
         if (!$usage['result']) {
             $hasError = true;
@@ -1564,12 +1669,7 @@ class Validator
             $elementName
         );
 
-        $this->validationResult->addTestReport([
-            'Location'    => $location,
-            'Description' => $cardinality['description'],
-            'Type'        => $cardinality['type'],
-            'Result'      => $cardinality['result'],
-        ]);
+        $this->report($location, $cardinality);
 
         if (!$cardinality['result']) {
             $hasError = true;
@@ -1578,6 +1678,7 @@ class Validator
 
         if ($exists) {
             foreach ($field->getRepeats() as $repeatIndex => $fieldRepeat) {
+                $this->currentRepetition = $repeatIndex + 1;
                 $fieldValue = $this->serializer->serializeFieldRepeat(
                     $fieldRepeat,
                     $this->message
@@ -1594,12 +1695,7 @@ class Validator
                         $elementName
                     );
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $location,
-                        'Description' => $lengthCheck['description'],
-                        'Type'        => $lengthCheck['type'],
-                        'Result'      => $lengthCheck['result'],
-                    ]);
+                    $this->report($location, $lengthCheck);
 
                     if (!$lengthCheck['result']) {
                         $repeatHasError = true;
@@ -1616,12 +1712,7 @@ class Validator
                         $elementName
                     );
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $location,
-                        'Description' => $datatypeCheck['description'],
-                        'Type'        => $datatypeCheck['type'],
-                        'Result'      => $datatypeCheck['result'],
-                    ]);
+                    $this->report($location, $datatypeCheck);
 
                     if (!$datatypeCheck['result']) {
                         $repeatHasError = true;
@@ -1652,12 +1743,7 @@ class Validator
                             $elementName
                         );
 
-                        $this->validationResult->addTestReport([
-                            'Location'    => $location,
-                            'Description' => $tableCheck['description'],
-                            'Type'        => $tableCheck['type'],
-                            'Result'      => $tableCheck['result'],
-                        ]);
+                        $this->report($location, $tableCheck);
 
                         if (!$tableCheck['result']) {
                             $repeatHasError = true;
@@ -1754,11 +1840,11 @@ class Validator
                                 "-Component- {$componentLocation} :  {$description}"
                             );
 
-                            $this->validationResult->addTestReport([
-                                'Location'    => $componentLocation,
-                                'Description' => $description,
-                                'Type'        => "Element not expected",
-                                'Result'      => false,
+                            $this->report($componentLocation, [
+                                'result'      => false,
+                                'type'        => 'Element not expected',
+                                'description' => $description,
+                                'finding'     => FindingType::ElementInExcess,
                             ]);
 
                             $repeatHasError = true;
@@ -1808,11 +1894,11 @@ class Validator
                             "-Component- {$componentLocation} :  {$description}"
                         );
 
-                        $this->validationResult->addTestReport([
-                            'Location'    => $componentLocation,
-                            'Description' => $description,
-                            'Type'        => "Element not expected",
-                            'Result'      => false,
+                        $this->report($componentLocation, [
+                            'result'      => false,
+                            'type'        => 'Element not expected',
+                            'description' => $description,
+                            'finding'     => FindingType::ElementInExcess,
                         ]);
 
                         $repeatHasError = true;
@@ -1911,6 +1997,8 @@ class Validator
             ]);
         }
 
+        $this->currentRepetition = null;
+
         return $fieldArray;
     }
 
@@ -1958,12 +2046,7 @@ class Validator
             $elementName
         );
 
-        $this->validationResult->addTestReport([
-            'Location'    => $location,
-            'Description' => $usage['description'],
-            'Type'        => $usage['type'],
-            'Result'      => $usage['result'],
-        ]);
+        $this->report($location, $usage);
 
         if (!$usage['result']) {
             $hasError = true;
@@ -1981,12 +2064,7 @@ class Validator
                     $elementName
                 );
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $location,
-                    'Description' => $lengthCheck['description'],
-                    'Type'        => $lengthCheck['type'],
-                    'Result'      => $lengthCheck['result'],
-                ]);
+                $this->report($location, $lengthCheck);
 
                 if (!$lengthCheck['result']) {
                     $hasError = true;
@@ -2003,12 +2081,7 @@ class Validator
                     $elementName
                 );
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $location,
-                    'Description' => $datatypeCheck['description'],
-                    'Type'        => $datatypeCheck['type'],
-                    'Result'      => $datatypeCheck['result'],
-                ]);
+                $this->report($location, $datatypeCheck);
 
                 if (!$datatypeCheck['result']) {
                     $hasError = true;
@@ -2030,12 +2103,7 @@ class Validator
                         $elementName
                     );
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $location,
-                        'Description' => $tableCheck['description'],
-                        'Type'        => $tableCheck['type'],
-                        'Result'      => $tableCheck['result'],
-                    ]);
+                    $this->report($location, $tableCheck);
 
                     if (!$tableCheck['result']) {
                         $hasError = true;
@@ -2137,11 +2205,11 @@ class Validator
                             "-SubComponent- {$subComponentLocation} :  {$description}"
                         );
 
-                        $this->validationResult->addTestReport([
-                            'Location'    => $subComponentLocation,
-                            'Description' => $description,
-                            'Type'        => "Element not expected",
-                            'Result'      => false,
+                        $this->report($subComponentLocation, [
+                            'result'      => false,
+                            'type'        => 'Element not expected',
+                            'description' => $description,
+                            'finding'     => FindingType::ElementInExcess,
                         ]);
 
                         $hasError = true;
@@ -2195,11 +2263,11 @@ class Validator
                         "-SubComponent- {$subComponentLocation} :  {$description}"
                     );
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $subComponentLocation,
-                        'Description' => $description,
-                        'Type'        => "Element not expected",
-                        'Result'      => false,
+                    $this->report($subComponentLocation, [
+                        'result'      => false,
+                        'type'        => 'Element not expected',
+                        'description' => $description,
+                        'finding'     => FindingType::ElementInExcess,
                     ]);
 
                     $hasError = true;
@@ -2282,12 +2350,7 @@ class Validator
             $elementName
         );
 
-        $this->validationResult->addTestReport([
-            'Location'    => $location,
-            'Description' => $usage['description'],
-            'Type'        => $usage['type'],
-            'Result'      => $usage['result'],
-        ]);
+        $this->report($location, $usage);
 
         if (!$usage['result']) {
             $hasError = true;
@@ -2305,12 +2368,7 @@ class Validator
                     $elementName
                 );
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $location,
-                    'Description' => $lengthCheck['description'],
-                    'Type'        => $lengthCheck['type'],
-                    'Result'      => $lengthCheck['result'],
-                ]);
+                $this->report($location, $lengthCheck);
 
                 if (!$lengthCheck['result']) {
                     $hasError = true;
@@ -2327,12 +2385,7 @@ class Validator
                     $elementName
                 );
 
-                $this->validationResult->addTestReport([
-                    'Location'    => $location,
-                    'Description' => $datatypeCheck['description'],
-                    'Type'        => $datatypeCheck['type'],
-                    'Result'      => $datatypeCheck['result'],
-                ]);
+                $this->report($location, $datatypeCheck);
 
                 if (!$datatypeCheck['result']) {
                     $hasError = true;
@@ -2350,12 +2403,7 @@ class Validator
                         $elementName
                     );
 
-                    $this->validationResult->addTestReport([
-                        'Location'    => $location,
-                        'Description' => $tableCheck['description'],
-                        'Type'        => $tableCheck['type'],
-                        'Result'      => $tableCheck['result'],
-                    ]);
+                    $this->report($location, $tableCheck);
 
                     if (!$tableCheck['result']) {
                         $hasError = true;

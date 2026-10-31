@@ -21,7 +21,8 @@
         "Location": "PID-13",
         "Description": "Field 'Phone Number - Home' (PID.13) datatype is 'XTN'. No validator registered for datatype 'XTN'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-13.1",
@@ -45,7 +46,8 @@
         "Location": "PID-13.2",
         "Description": "Component 'Telecommunication Use Code' (XTN.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-13.2",
@@ -69,7 +71,8 @@
         "Location": "PID-13.3",
         "Description": "Component 'Telecommunication Equipment Type' (XTN.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-13.3",
@@ -93,7 +96,8 @@
         "Location": "PID-13.4",
         "Description": "Component 'Email Address' (XTN.4) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-13.5",

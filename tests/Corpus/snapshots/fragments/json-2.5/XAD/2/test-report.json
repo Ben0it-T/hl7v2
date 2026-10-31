@@ -21,7 +21,8 @@
         "Location": "PID-11",
         "Description": "Field 'Patient Address' (PID.11) datatype is 'XAD'. No validator registered for datatype 'XAD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.1",
@@ -39,7 +40,8 @@
         "Location": "PID-11.1",
         "Description": "Component 'Street Address' (XAD.1) datatype is 'SAD'. No validator registered for datatype 'SAD'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.1.1",
@@ -57,7 +59,8 @@
         "Location": "PID-11.1.1",
         "Description": "SubComponent 'Street or Mailing Address' (SAD.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.1.2",
@@ -93,7 +96,8 @@
         "Location": "PID-11.3",
         "Description": "Component 'City' (XAD.3) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.4",
@@ -117,7 +121,8 @@
         "Location": "PID-11.5",
         "Description": "Component 'Zip or Postal Code' (XAD.5) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.6",
@@ -135,7 +140,8 @@
         "Location": "PID-11.6",
         "Description": "Component 'Country' (XAD.6) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.7",
@@ -153,13 +159,15 @@
         "Location": "PID-11.7",
         "Description": "Component 'Address Type' (XAD.7) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-11.7",
         "Description": "Component 'Address Type' (XAD.7) value (ZZ) not in table 0190 (HL7 standard tables).",
         "Type": "Table",
-        "Result": false
+        "Result": false,
+        "Severity": "Error"
     },
     {
         "Location": "PID-11.8",

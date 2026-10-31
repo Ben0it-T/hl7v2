@@ -21,7 +21,8 @@
         "Location": "PID-8",
         "Description": "Field 'Administrative Sex' (PID.8) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-8",

@@ -16,6 +16,5 @@
                 "summary": "Not defined segment (Z segment)"
             }
         ]
-    },
-    "knownBug": "No severity; the unknown Z segment is reported as an error and the message is invalid."
+    }
 }

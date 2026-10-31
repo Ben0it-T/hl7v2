@@ -21,7 +21,8 @@
         "Location": "PID-24",
         "Description": "Field 'Multiple Birth Indicator' (PID.24) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped.",
         "Type": "Datatype",
-        "Result": true
+        "Result": true,
+        "Severity": "Info"
     },
     {
         "Location": "PID-24",
