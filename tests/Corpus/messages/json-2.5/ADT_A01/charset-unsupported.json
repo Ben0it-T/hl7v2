@@ -1,0 +1,21 @@
+{
+    "title": "MSH-18 with a character set of table 0211 not supported (KS X 1001)",
+    "tests": [
+        "parser: a character set not supported is read as UTF-8 and reported as an error"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.15.9.18",
+        "HL7 2.5 table 0211"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 1,
+                "location": "MSH-18",
+                "summary": "character set not supported, message read as UTF-8"
+            }
+        ]
+    }
+}

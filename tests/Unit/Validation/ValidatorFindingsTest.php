@@ -186,6 +186,37 @@ final class ValidatorFindingsTest extends TestCase
         $this->assertSame('Info', $entries[0]['Severity']);
     }
 
+    public function testParseIssuesComeFirstAsErrors(): void
+    {
+        // MSH-18 empty (UTF-8), PID-5 encoded in ISO-8859-1; MSH-18 = KS X 1001 is not supported.
+        $hl7 = new HL7Message();
+        $hl7->parse(
+            str_replace('|P|2.5', '|P|2.5||||||KS X 1001', self::MSH)
+            . "PID|1||1^^^AUTH^PI||D\xC9SIR\xC9\r"
+            . 'PV1|1|I'
+        );
+        $result = $hl7->validate(self::PROFILES);
+
+        $this->assertSame(
+            [
+                ['Error', 'parseIssue', 'MSH-18', 1],
+                ['Error', 'parseIssue', null, null],
+            ],
+            array_map(fn (Finding $finding): array => $this->row($finding), array_slice($result->getFindings(), 0, 2))
+        );
+        $this->assertFalse($result->isValid());
+        $this->assertSame(
+            [
+                ['MSH-18', 'Parse', false, 'Error'],
+                ['ADT_A01', 'Parse', false, 'Error'],
+            ],
+            array_map(
+                static fn (array $entry): array => [$entry['Location'], $entry['Type'], $entry['Result'], $entry['Severity']],
+                array_slice($result->getTestReport(), 0, 2)
+            )
+        );
+    }
+
     private function validate(string $segments): ValidationResult
     {
         $hl7 = new HL7Message();

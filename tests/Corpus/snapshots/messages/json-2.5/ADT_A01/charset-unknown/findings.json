@@ -1,5 +1,13 @@
 [
     {
+        "severity": "Error",
+        "type": "parseIssue",
+        "location": "MSH-18",
+        "profilePath": null,
+        "segment": 1,
+        "message": "MSH-18: unknown character set 'FOO-CHARSET'; the message is read as UTF-8."
+    },
+    {
         "severity": "Info",
         "type": "noDatatypeValidator",
         "location": "MSH-1",

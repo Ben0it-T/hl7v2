@@ -74,7 +74,7 @@ use HL7v2\Parser\InputEncoding;
 $hl7->parse($_POST['message'], InputEncoding::Utf8);
 ```
 
-Parsing issues (unknown character set, invalid bytes) do not stop parsing. They are returned by `$hl7->getMessage()->getParseIssues()`.
+Parsing issues (unknown character set, invalid bytes) do not stop parsing. They are returned by `$hl7->getMessage()->getParseIssues()`, each with its message and, when it concerns an element, its location (for example `MSH-18`). The validation reports them as findings of severity Error.
 
 ### Validate a message
 

@@ -1,7 +1,8 @@
 {
     "title": "MSH-18 with an unknown character set",
     "tests": [
-        "parser: unknown MSH-18 gives an explicit error"
+        "parser: unknown MSH-18 gives an explicit error",
+        "table: MSH-18 checked against table 0211"
     ],
     "references": [
         "HL7 2.5 table 0211"
@@ -13,7 +14,13 @@
                 "severity": "Error",
                 "segment": 1,
                 "location": "MSH-18",
-                "summary": "unknown character set"
+                "summary": "value FOO-CHARSET not in table 0211"
+            },
+            {
+                "severity": "Error",
+                "segment": 1,
+                "location": "MSH-18",
+                "summary": "unknown character set, message read as UTF-8"
             }
         ]
     }

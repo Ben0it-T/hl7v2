@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace HL7v2\Model;
 
 use HL7v2\Model\EscapeSequences;
+use HL7v2\Model\ParseIssue;
 use HL7v2\Model\Segment;
 
 /**
@@ -39,7 +40,7 @@ class Message
     /**
      * Problems met while parsing (character set, invalid bytes).
      *
-     * @var list<string>
+     * @var list<ParseIssue>
      */
     private array $parseIssues = [];
 
@@ -137,7 +138,7 @@ class Message
     /**
      * Add a problem met while parsing.
      */
-    public function addParseIssue(string $issue): void
+    public function addParseIssue(ParseIssue $issue): void
     {
         $this->parseIssues[] = $issue;
     }
@@ -145,7 +146,7 @@ class Message
     /**
      * Get the problems met while parsing.
      *
-     * @return list<string>
+     * @return list<ParseIssue>
      */
     public function getParseIssues(): array
     {

@@ -4,7 +4,9 @@ declare(strict_types=1);
 namespace HL7v2\Parser;
 
 use HL7v2\Exception\HL7Exception;
+use HL7v2\Model\Location;
 use HL7v2\Model\Message;
+use HL7v2\Model\ParseIssue;
 use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
 use HL7v2\Model\FieldRepeat;
@@ -206,7 +208,7 @@ class HL7Parser
      * @param non-empty-string $fieldSeparator
      * @param non-empty-string $repetitionSeparator
      *
-     * @return array{string, CharacterSet, string, list<string>}
+     * @return array{string, CharacterSet, string, list<ParseIssue>}
      *         UTF-8 message, character set, source encoding, parse issues.
      */
     private function toUtf8(string $raw, string $fieldSeparator, string $repetitionSeparator, InputEncoding $inputEncoding): array
@@ -218,10 +220,13 @@ class HL7Parser
         $characterSet = CharacterSet::fromMsh18($msh18);
 
         if (!$characterSet->isSupported()) {
-            $issues[] = sprintf(
-                "MSH-18: %s character set '%s'; the message is read as UTF-8.",
-                $characterSet->known ? 'unsupported' : 'unknown',
-                $characterSet->value
+            $issues[] = new ParseIssue(
+                sprintf(
+                    "MSH-18: %s character set '%s'; the message is read as UTF-8.",
+                    $characterSet->known ? 'unsupported' : 'unknown',
+                    $characterSet->value
+                ),
+                new Location('MSH', 1, 18)
             );
         }
 
@@ -230,10 +235,12 @@ class HL7Parser
             : ($characterSet->encoding ?? 'UTF-8');
 
         if (!mb_check_encoding($raw, $sourceEncoding)) {
-            $issues[] = sprintf(
-                'The message is not valid %s%s; invalid bytes are replaced by U+FFFD.',
-                $sourceEncoding,
-                $inputEncoding === InputEncoding::Utf8 ? ' (input declared UTF-8)' : ''
+            $issues[] = new ParseIssue(
+                sprintf(
+                    'The message is not valid %s%s; invalid bytes are replaced by U+FFFD.',
+                    $sourceEncoding,
+                    $inputEncoding === InputEncoding::Utf8 ? ' (input declared UTF-8)' : ''
+                )
             );
         }
 

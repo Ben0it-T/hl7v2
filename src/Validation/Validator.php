@@ -7,6 +7,7 @@ use HL7v2\Exception\HL7Exception;
 
 use HL7v2\Model\Location;
 use HL7v2\Model\Message;
+use HL7v2\Model\ParseIssue;
 use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
 use HL7v2\Model\FieldRepeat;
@@ -159,6 +160,11 @@ class Validator
         $this->structure = $profile->getStructure() !== ''
             ? $profile->getStructure()
             : $message->getStructure();
+
+        // Problems met while parsing come first.
+        foreach ($message->getParseIssues() as $issue) {
+            $this->reportParseIssue($issue);
+        }
 
         $messageSegmentNames = $message->getSegmentNames();
         $this->context = new ValidationContext();
@@ -336,6 +342,45 @@ class Validator
         }
 
         $this->validationResult->addTestReport($entry);
+    }
+
+    /**
+     * Report a problem met while parsing: a finding (severity of the rules),
+     * and a TestReport entry located on the element, or on the structure name
+     * when the problem concerns the whole message.
+     *
+     * @param ParseIssue $issue
+     *
+     * @return void
+     */
+    private function reportParseIssue(ParseIssue $issue): void
+    {
+        $severity = $this->rules->severity(FindingType::ParseIssue);
+
+        // Position (1-based) of the segment of the location.
+        $segment = null;
+        if ($issue->location !== null) {
+            foreach ($this->message->getSegments() as $index => $messageSegment) {
+                if ($messageSegment->getName() === $issue->location->segment
+                    && ($this->segmentRanks[$index] ?? null) === $issue->location->segmentRank
+                ) {
+                    $segment = $index + 1;
+                    break;
+                }
+            }
+        }
+
+        $this->validationResult->addFinding(
+            new Finding($severity, FindingType::ParseIssue, $issue->message, $issue->location, null, $segment)
+        );
+
+        $this->validationResult->addTestReport([
+            'Location'    => $issue->location?->toShortString() ?? $this->structure,
+            'Description' => $issue->message,
+            'Type'        => 'Parse',
+            'Result'      => false,
+            'Severity'    => $severity->value,
+        ]);
     }
 
     /**

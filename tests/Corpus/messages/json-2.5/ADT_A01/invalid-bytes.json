@@ -1,0 +1,19 @@
+{
+    "title": "MSH-18 empty (UTF-8), message encoded in ISO-8859-1 with accented characters",
+    "tests": [
+        "parser: bytes invalid for the declared character set are replaced and reported as an error"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.15.9.18",
+        "HL7 2.5 table 0211"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "summary": "the message is not valid UTF-8 (invalid bytes)"
+            }
+        ]
+    }
+}

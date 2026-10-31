@@ -1,5 +1,12 @@
 [
     {
+        "Location": "MSH-18",
+        "Description": "MSH-18: unknown character set 'FOO-CHARSET'; the message is read as UTF-8.",
+        "Type": "Parse",
+        "Result": false,
+        "Severity": "Error"
+    },
+    {
         "Location": "ADT_A01",
         "Description": "Segment 'MSH' usage is R.",
         "Type": "Usage",

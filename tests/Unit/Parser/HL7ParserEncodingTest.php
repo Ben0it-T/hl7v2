@@ -5,6 +5,7 @@ namespace HL7v2\Tests\Unit\Parser;
 
 use HL7v2\HL7Message;
 use HL7v2\Model\Message;
+use HL7v2\Model\ParseIssue;
 use HL7v2\Parser\HL7Parser;
 use HL7v2\Parser\InputEncoding;
 use PHPUnit\Framework\TestCase;
@@ -78,8 +79,8 @@ final class HL7ParserEncodingTest extends TestCase
 
         $this->assertSame("D\u{FFFD}SIR\u{FFFD}", $this->value($message, 1));
         $this->assertSame(
-            ['The message is not valid UTF-8; invalid bytes are replaced by U+FFFD.'],
-            $message->getParseIssues()
+            [['The message is not valid UTF-8; invalid bytes are replaced by U+FFFD.', null]],
+            $this->issues($message)
         );
     }
 
@@ -89,8 +90,8 @@ final class HL7ParserEncodingTest extends TestCase
         $message = (new HL7Parser())->parse($raw);
 
         $this->assertSame(
-            ['The message is not valid ASCII; invalid bytes are replaced by U+FFFD.'],
-            $message->getParseIssues()
+            [['The message is not valid ASCII; invalid bytes are replaced by U+FFFD.', null]],
+            $this->issues($message)
         );
     }
 
@@ -102,8 +103,8 @@ final class HL7ParserEncodingTest extends TestCase
         $this->assertSame('UTF-8', $message->getSourceEncoding());
         $this->assertSame('DÉSIRÉ', $this->value($message, 1));
         $this->assertSame(
-            ["MSH-18: unknown character set 'FOO-CHARSET'; the message is read as UTF-8."],
-            $message->getParseIssues()
+            [["MSH-18: unknown character set 'FOO-CHARSET'; the message is read as UTF-8.", 'MSH-18']],
+            $this->issues($message)
         );
     }
 
@@ -112,8 +113,8 @@ final class HL7ParserEncodingTest extends TestCase
         $message = (new HL7Parser())->parse($this->message('UNICODE UTF-16', self::NAME));
 
         $this->assertSame(
-            ["MSH-18: unsupported character set 'UNICODE UTF-16'; the message is read as UTF-8."],
-            $message->getParseIssues()
+            [["MSH-18: unsupported character set 'UNICODE UTF-16'; the message is read as UTF-8.", 'MSH-18']],
+            $this->issues($message)
         );
     }
 
@@ -143,8 +144,8 @@ final class HL7ParserEncodingTest extends TestCase
         $message = (new HL7Parser())->parse($raw, InputEncoding::Utf8);
 
         $this->assertSame(
-            ['The message is not valid UTF-8 (input declared UTF-8); invalid bytes are replaced by U+FFFD.'],
-            $message->getParseIssues()
+            [['The message is not valid UTF-8 (input declared UTF-8); invalid bytes are replaced by U+FFFD.', null]],
+            $this->issues($message)
         );
     }
 
@@ -173,6 +174,17 @@ final class HL7ParserEncodingTest extends TestCase
     {
         return "MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||$msh18\r"
             . "PID|1||1^^^AUTH^PI||$name^^^^^L";
+    }
+
+    /**
+     * @return list<array{string, ?string}> Message and short location of each parse issue.
+     */
+    private function issues(Message $message): array
+    {
+        return array_map(
+            static fn (ParseIssue $issue): array => [$issue->message, $issue->location?->toShortString()],
+            $message->getParseIssues()
+        );
     }
 
     private function encode(string $utf8, string $encoding): string
