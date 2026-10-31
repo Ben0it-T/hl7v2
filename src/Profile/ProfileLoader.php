@@ -49,7 +49,7 @@ class ProfileLoader
 
         $profile = $this->readJsonFile($filename);
 
-        return new Profile($profile, $structure);
+        return new Profile($profile, $structure, $this->loadRules($versionId));
     }
 
     /**
@@ -87,6 +87,25 @@ class ProfileLoader
         }
 
         return $definition[$messageCode][$triggerEvent];
+    }
+
+    /**
+     * Load the validation rules of the profile directory (rules.json).
+     *
+     * @param string $versionId
+     *
+     * @return Rules
+     *
+     * @throws HL7Exception If rules.json is missing or invalid.
+     */
+    private function loadRules(string $versionId): Rules
+    {
+        $filename = sprintf('%s/json-%s/rules.json', $this->profilePath, $versionId);
+        if (!is_file($filename)) {
+            throw new HL7Exception("Validation rules not found: $filename");
+        }
+
+        return Rules::fromArray($this->readJsonFile($filename), $filename);
     }
 
     /**

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace HL7v2\Validation;
 
+use HL7v2\Exception\HL7Exception;
+
 use HL7v2\Model\Message;
 use HL7v2\Model\Segment;
 use HL7v2\Model\Field;
@@ -12,6 +14,7 @@ use HL7v2\Model\SubComponent;
 
 use HL7v2\Profile\Profile;
 use HL7v2\Profile\HL7Tables;
+use HL7v2\Profile\Rules;
 
 use HL7v2\Serializer\HL7StringSerializer;
 
@@ -30,6 +33,7 @@ class Validator
 
     private Message $message;
     private Profile $profile;
+    private Rules $rules;
     /**
      * Message structure used for the root group and the locations: the one
      * of the profile, else MSH-9.3.
@@ -109,6 +113,13 @@ class Validator
     public function validate(Message $message, Profile $profile, HL7Tables $tables): ValidationResult
     {
         $this->profile = $profile;
+        $rules = $profile->getRules();
+        if ($rules === null) {
+            throw new HL7Exception(
+                'No validation rules: load the profile with ProfileLoader, or build it with its Rules.'
+            );
+        }
+        $this->rules = $rules;
         $this->hl7Tables = $tables->getTables();
 
         $this->validationResult = new ValidationResult();
@@ -533,17 +544,10 @@ class Validator
         $type = 'Table';
         $result = in_array($elementValue, $this->hl7Tables[$table]['elements'], true);
 
-        // Local extension of HL7 table
-        $extensibleHL7Tables = [
-            '0003', // Event Type
-            '0076', // Message Type
-            '0354', // Message Structure
-        ];
-
+        // Local code (Z...) in a table that accepts them (rules.json).
         $extension = false;
         if (!$result
-            && $this->hl7Tables[$table]['type'] === 'HL7'
-            && in_array($table, $extensibleHL7Tables, true)
+            && $this->rules->acceptsLocalCodes($table)
             && preg_match('/^Z[A-Z0-9_]*$/', $elementValue)
         ) {
             $result = true;

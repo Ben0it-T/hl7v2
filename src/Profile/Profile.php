@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace HL7v2\Profile;
 
+use HL7v2\Profile\Rules;
+
 class Profile
 {
     /**
@@ -18,15 +20,23 @@ class Profile
     private string $structure;
 
     /**
+     * Validation rules of the profile (rules.json); null when the profile
+     * was built without them.
+     */
+    private ?Rules $rules;
+
+    /**
      * Create profile from raw JSON definition.
      *
      * @param array<mixed,mixed> $definition
      * @param string $structure Message structure of the profile.
+     * @param Rules|null $rules Validation rules of the profile.
      */
-    public function __construct(array $definition, string $structure = '')
+    public function __construct(array $definition, string $structure = '', ?Rules $rules = null)
     {
         $this->definition = $definition;
         $this->structure = $structure;
+        $this->rules = $rules;
     }
 
     /**
@@ -47,6 +57,16 @@ class Profile
     public function getStructure(): string
     {
         return $this->structure;
+    }
+
+    /**
+     * Get the validation rules of the profile.
+     *
+     * @return Rules|null
+     */
+    public function getRules(): ?Rules
+    {
+        return $this->rules;
     }
 
     /**
