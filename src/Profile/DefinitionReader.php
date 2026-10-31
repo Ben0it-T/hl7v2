@@ -286,7 +286,10 @@ final class DefinitionReader
             throw new HL7Exception("$where: group not defined.");
         }
         $entry = self::entry($data[$name], $where);
-        self::checkKeys($entry, ['elements'], [], $where);
+        self::checkKeys($entry, ['elements'], ['choice'], $where);
+        if (array_key_exists('choice', $entry) && $entry['choice'] !== true) {
+            throw new HL7Exception("$where: 'choice' must be true when present.");
+        }
 
         $children = [];
         foreach (self::list($entry, 'elements', $where) as $index => $element) {
@@ -325,7 +328,7 @@ final class DefinitionReader
             );
         }
 
-        return new GroupNode($name, $usage, $cardinality, $children, $source);
+        return new GroupNode($name, $usage, $cardinality, $children, array_key_exists('choice', $entry), $source);
     }
 
     /**

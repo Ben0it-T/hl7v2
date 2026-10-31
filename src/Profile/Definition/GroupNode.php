@@ -14,13 +14,15 @@ use HL7v2\Profile\Definition\Usage;
 final readonly class GroupNode extends StructureNode
 {
     /**
-     * @param list<StructureNode> $children In profile order.
+     * @param list<StructureNode> $children In profile order; for a choice group, the alternatives.
+     * @param bool $choice True for a choice group: each occurrence holds exactly one of its children.
      */
     public function __construct(
         string $name,
         Usage $usage,
         Cardinality $cardinality,
         public array $children,
+        public bool $choice = false,
         ?string $source = null
     ) {
         parent::__construct($name, $usage, $cardinality, $source);

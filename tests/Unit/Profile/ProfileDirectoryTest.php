@@ -181,6 +181,27 @@ final class ProfileDirectoryTest extends TestCase
         $this->assertInstanceOf(GroupNode::class, $patient);
         $this->assertSame('[0..*]', $patient->cardinality->toString());
         $this->assertSame(Usage::Optional, $patient->usage);
+        $this->assertFalse($patient->choice);
+        $this->assertFalse($profile->root->choice);
+    }
+
+    public function testChoiceGroupIsRead(): void
+    {
+        // No supported message has a choice group yet (ORM_O01 has one in the
+        // schemas): the alternatives of the forged group are only placeholders.
+        $path = $this->forge();
+        $file = "$path/structures/ADT-A01-ADT_A01.json";
+        $structure = json_decode((string) file_get_contents($file), true);
+        $this->assertIsArray($structure);
+        $structure['PATIENT']['choice'] = true;
+        $structure['PATIENT']['elements'][] = ['segment' => 'MSH', 'usage' => 'R', 'min' => '1', 'max' => '1'];
+        file_put_contents($file, json_encode($structure));
+
+        $patient = ProfileDirectory::open($path)->messageProfile('ADT', 'A01', 'ADT_A01')->root->children[1];
+
+        $this->assertInstanceOf(GroupNode::class, $patient);
+        $this->assertTrue($patient->choice);
+        $this->assertSame(['PID', 'MSH'], self::names($patient->children));
     }
 
     /**
@@ -276,6 +297,11 @@ final class ProfileDirectoryTest extends TestCase
             $d['PATIENT']['elements'][0]['fields'] = ['PID.1' => ['usage' => 'X', 'min' => '0', 'max' => '0']];
             return $d;
         }, 'PID.1: missing key(s) source.'];
+
+        yield 'choice set to false' => ['structures/ADT-A01-ADT_A01.json', static function (array $d): array {
+            $d['PATIENT']['choice'] = false;
+            return $d;
+        }, "PATIENT: 'choice' must be true when present."];
     }
 
     /**
