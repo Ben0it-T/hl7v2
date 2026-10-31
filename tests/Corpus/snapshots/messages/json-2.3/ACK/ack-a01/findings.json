@@ -1,0 +1,170 @@
+[
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Field Separator' (MSH.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-2",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Encoding Characters' (MSH.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-3",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Sending Application' (MSH.3) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-3.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-4",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Sending Facility' (MSH.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-4.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-5",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Receiving Application' (MSH.5) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-5.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-6",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Receiving Facility' (MSH.6) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-6.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-7",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Date/Time of Message' (MSH.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-7.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'time of an event' (TS.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Message Type' (MSH.9) datatype is 'CM_MSG'. No validator registered for datatype 'CM_MSG'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'message type' (CM_MSG.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9.2",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'trigger event' (CM_MSG.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-10",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Message Control ID' (MSH.10) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-11",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Processing ID' (MSH.11) datatype is 'PT'. No validator registered for datatype 'PT'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-11.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'processing ID' (PT.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-12",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Version ID' (MSH.12) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSA-1",
+        "profilePath": null,
+        "segment": 2,
+        "message": "Field 'Acknowledgment Code' (MSA.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSA-2",
+        "profilePath": null,
+        "segment": 2,
+        "message": "Field 'Message Control ID' (MSA.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    }
+]

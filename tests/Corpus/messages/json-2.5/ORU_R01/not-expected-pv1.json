@@ -16,6 +16,5 @@
                 "summary": "Not expected segment"
             }
         ]
-    },
-    "knownBug": "The finding is located on the message structure (ORU_R01) instead of the segment (PV1)."
+    }
 }

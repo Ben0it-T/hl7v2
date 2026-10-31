@@ -1,0 +1,330 @@
+[
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Field Separator' (MSH.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-2",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Encoding Characters' (MSH.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-3",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Sending Application' (MSH.3) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-3.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-4",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Sending Facility' (MSH.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-4.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-5",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Receiving Application' (MSH.5) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-5.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-6",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Receiving Facility' (MSH.6) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-6.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-7",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Date/Time Of Message' (MSH.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Message Type' (MSH.9) datatype is 'MSG'. No validator registered for datatype 'MSG'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Message Code' (MSG.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9.2",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Trigger Event' (MSG.2) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-9.3",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Message Structure' (MSG.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-10",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Message Control ID' (MSH.10) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-11",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Processing ID' (MSH.11) datatype is 'PT'. No validator registered for datatype 'PT'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-11.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Processing ID' (PT.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-12",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Field 'Version ID' (MSH.12) datatype is 'VID'. No validator registered for datatype 'VID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "MSH-12.1",
+        "profilePath": null,
+        "segment": 1,
+        "message": "Component 'Version ID' (VID.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "EVN-1",
+        "profilePath": null,
+        "segment": 2,
+        "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "EVN-1",
+        "profilePath": null,
+        "segment": 2,
+        "message": "Field 'Event Type Code' (EVN.1) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "EVN-2",
+        "profilePath": null,
+        "segment": 2,
+        "message": "Field 'Recorded Date/Time' (EVN.2) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-3",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'Patient Identifier List' (PID.3) datatype is 'CX'. No validator registered for datatype 'CX'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-3.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'ID Number' (CX.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-3.4",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Assigning Authority' (CX.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-3.4.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-3.5",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Identifier Type Code' (CX.5) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-5",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'Patient Name' (PID.5) datatype is 'XPN'. No validator registered for datatype 'XPN'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-5.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Family Name' (XPN.1) datatype is 'FN'. No validator registered for datatype 'FN'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-5.1.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Surname' (FN.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-5.2",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Given Name' (XPN.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-5.7",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Name Type Code' (XPN.7) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-7",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'Date/Time of Birth' (PID.7) datatype is 'TS'. No validator registered for datatype 'TS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-8",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'Administrative Sex' (PID.8) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Error",
+        "type": "elementInExcess",
+        "location": "PID-40",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'PID-40' is not expected in segment 'PID' structure."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PV1-2",
+        "profilePath": null,
+        "segment": 4,
+        "message": "Field 'Patient Class' (PV1.2) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PV1-3",
+        "profilePath": null,
+        "segment": 4,
+        "message": "Field 'Assigned Patient Location' (PV1.3) datatype is 'PL'. No validator registered for datatype 'PL'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PV1-3.1",
+        "profilePath": null,
+        "segment": 4,
+        "message": "Component 'Point of Care' (PL.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PV1-3.2",
+        "profilePath": null,
+        "segment": 4,
+        "message": "Component 'Room' (PL.2) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PV1-3.3",
+        "profilePath": null,
+        "segment": 4,
+        "message": "Component 'Bed' (PL.3) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    }
+]

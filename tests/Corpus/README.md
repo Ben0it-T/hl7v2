@@ -49,6 +49,10 @@ A finding has a `severity` (`Error`, `Warning`, `Info`), a `summary`, and as man
 `expected` always describes what the specification requires, never what the current code does.
 When the current validator disagrees, the case documents it in `knownBug`: the test is then marked incomplete instead of failing, and the bug is never frozen as the expected result.
 
+The test compares the validity, then the findings. Only Errors and Warnings are compared: Infos (for example a datatype without validator) describe the tool, not the specification, and are only recorded in the snapshots.
+Each expected finding must match one actual finding of the same severity, on the positions it gives: `location`, and `segment` when given. `summary` is free text and is not compared. `path` is not compared yet (the current validator does not give it): an expected finding with only a `path` matches a finding without location.
+An actual Error or Warning that no expected finding matches fails the test.
+
 ## Fragments
 
 A fragment file lists values for one datatype and the location where each value is injected into the carrier message of the same profile:
@@ -99,7 +103,7 @@ Snapshots record what the code does; `expected` and `knownBug` record what the s
 
 | Cases | Directory | Outputs |
 |---|---|---|
-| Messages | `snapshots/messages/<id>/` | `test-report.json`, `validation-report.json`, `profiled-message.json`, `message.hl7`, `structural.xml`, `datatype.xml` |
+| Messages | `snapshots/messages/<id>/` | `test-report.json`, `findings.json` (every finding, Infos included), `validation-report.json`, `profiled-message.json`, `message.hl7`, `structural.xml`, `datatype.xml` |
 | Fragments | `snapshots/fragments/json-<profile>/<datatype>/<n>/` | `test-report.json`, restricted to the entries of the injected field |
 | Comparisons | `snapshots/comparisons/<id>/` | `differences.json` (compared paths and differences) |
 | HL7 examples | `hl7-examples/snapshots/<id>/` (local) | same as messages |

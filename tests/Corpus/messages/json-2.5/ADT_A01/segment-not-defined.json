@@ -16,6 +16,5 @@
                 "summary": "Not defined segment"
             }
         ]
-    },
-    "knownBug": "The finding is located on the message structure (ADT_A01) instead of the segment."
+    }
 }

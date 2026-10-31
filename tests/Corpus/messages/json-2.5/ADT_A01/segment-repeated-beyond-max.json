@@ -17,5 +17,5 @@
             }
         ]
     },
-    "knownBug": "The finding is located on the message structure (ADT_A01) instead of the segment (PD1)."
+    "knownBug": "The finding is located on the first PD1 (segment 4) instead of the repetition in excess (segment 5)."
 }

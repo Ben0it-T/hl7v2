@@ -16,5 +16,5 @@
             }
         ]
     },
-    "knownBug": "Two errors for one cause: usage R and cardinality [1..1] are reported separately; the findings are located on the message structure (ADT_A01) instead of the profile path."
+    "knownBug": "Two errors for one cause: usage R and cardinality [1..1] are reported separately."
 }

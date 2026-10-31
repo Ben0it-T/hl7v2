@@ -16,6 +16,7 @@ use HL7v2\Profile\HL7TableLoader;
 use HL7v2\Serializer\HL7DatatypeXmlSerializer;
 use HL7v2\Serializer\HL7StringSerializer;
 use HL7v2\Serializer\HL7StructuralXmlSerializer;
+use HL7v2\Validation\Finding;
 use HL7v2\Validation\Validator;
 use HL7v2\Validation\ValidationResult;
 
@@ -295,6 +296,24 @@ class HL7Message
     public function getValidationResult(): ?ValidationResult
     {
         return $this->validationResult;
+    }
+
+    /**
+     * Get the findings of the last validation, in validation order.
+     *
+     * @return list<Finding>
+     *
+     * @throws HL7Exception If the message has not been validated.
+     */
+    public function getFindings(): array
+    {
+        if ($this->validationResult === null) {
+            throw new HL7Exception(
+                'No validation result available. Validate the message first.'
+            );
+        }
+
+        return $this->validationResult->getFindings();
     }
 
 }

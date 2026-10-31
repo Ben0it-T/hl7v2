@@ -7,6 +7,8 @@ use HL7v2\HL7Message;
 use Throwable;
 use HL7v2\Profile\HL7TableLoader;
 use HL7v2\Profile\ProfileLoader;
+use HL7v2\Validation\Finding;
+use HL7v2\Validation\Severity;
 use HL7v2\Validation\ValidationResult;
 use PHPUnit\Framework\TestCase;
 
@@ -77,6 +79,10 @@ abstract class CorpusTestCase extends TestCase
         $outputs = ['test-report.json' => fn (): string => $this->json($report)];
         if ($location === null) {
             $outputs += [
+                'findings.json'          => fn (): string => $this->json(array_map(
+                    static fn (Finding $finding): array => $finding->toArray(),
+                    $hl7->getFindings()
+                )),
                 'validation-report.json' => fn (): string => $this->json($result->getValidationReport()),
                 'profiled-message.json'  => fn (): string => $this->json($hl7->getProfiledMessage()),
                 'message.hl7'            => fn (): string => $hl7->toHl7(),
@@ -147,6 +153,85 @@ abstract class CorpusTestCase extends TestCase
             $result->isValid(),
             $case->title . "\n" . $this->describe($result->getTestReport())
         );
+    }
+
+    /**
+     * Compare the findings with the expected ones, Errors and Warnings only
+     * (Infos describe the tool, not the specification). Each expected finding
+     * must match one actual finding of the same severity, on the positions it
+     * gives: location, and segment when given; an expected finding with only
+     * a path matches a finding without location (the path is not compared:
+     * the current validator does not give it). An unexpected Error or Warning
+     * fails the test. When the findings differ and the case documents a known
+     * bug, the test is marked incomplete instead of failing.
+     */
+    protected function assertExpectedFindings(CorpusCase $case, ValidationResult $result): void
+    {
+        $unexpected = array_values(array_filter(
+            $result->getFindings(),
+            static fn (Finding $finding): bool => $finding->severity !== Severity::Info
+        ));
+
+        $missing = [];
+        foreach ($case->expectedFindings as $expected) {
+            foreach ($unexpected as $i => $finding) {
+                if ($this->findingMatches($expected, $finding)) {
+                    unset($unexpected[$i]);
+                    continue 2;
+                }
+            }
+            $missing[] = $expected;
+        }
+
+        if (($missing !== [] || $unexpected !== []) && $case->knownBug !== null) {
+            $this->markTestIncomplete('Known bug: ' . $case->knownBug);
+        }
+
+        $this->assertTrue(
+            $missing === [] && $unexpected === [],
+            sprintf(
+                "%s\nMissing findings:\n%s\nUnexpected findings:\n%s",
+                $case->title,
+                implode("\n", array_map(
+                    static fn (array $expected): string => '- ' . json_encode($expected, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+                    $missing
+                )),
+                implode("\n", array_map(
+                    static fn (Finding $finding): string => sprintf(
+                        '- %s %s %s (segment %s): %s',
+                        $finding->severity->value,
+                        $finding->type->value,
+                        $finding->location?->toShortString() ?? '-',
+                        $finding->segment ?? '-',
+                        $finding->message
+                    ),
+                    $unexpected
+                ))
+            )
+        );
+    }
+
+    /**
+     * @param array<string, mixed> $expected
+     */
+    private function findingMatches(array $expected, Finding $finding): bool
+    {
+        $location = $finding->location?->toShortString();
+
+        if (($expected['severity'] ?? null) !== $finding->severity->value) {
+            return false;
+        }
+        if (array_key_exists('location', $expected) && $expected['location'] !== $location) {
+            return false;
+        }
+        if (array_key_exists('segment', $expected) && $expected['segment'] !== $finding->segment) {
+            return false;
+        }
+        if (!array_key_exists('location', $expected) && !array_key_exists('segment', $expected)) {
+            return $location === null;
+        }
+
+        return true;
     }
 
     /**

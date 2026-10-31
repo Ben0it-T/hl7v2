@@ -5,6 +5,7 @@ namespace HL7v2\Tests\Unit;
 
 use HL7v2\Exception\HL7Exception;
 use HL7v2\HL7Message;
+use HL7v2\Validation\Finding;
 use PHPUnit\Framework\TestCase;
 
 final class HL7MessageTest extends TestCase
@@ -54,5 +55,49 @@ final class HL7MessageTest extends TestCase
         $this->expectExceptionMessage('No profiled message available');
 
         $hl7->toDatatypeXml();
+    }
+
+    public function testFindingsRequireValidation(): void
+    {
+        $hl7 = new HL7Message();
+        $hl7->parse(self::ADT_A01);
+
+        $this->expectException(HL7Exception::class);
+        $this->expectExceptionMessage('No validation result available');
+
+        $hl7->getFindings();
+    }
+
+    public function testFindingsRequireValidationAfterNewParse(): void
+    {
+        $hl7 = new HL7Message();
+        $hl7->parse(self::ADT_A01);
+        $hl7->validate(self::PROFILES);
+        $hl7->parse(self::ADT_A03);
+
+        $this->expectException(HL7Exception::class);
+        $this->expectExceptionMessage('No validation result available');
+
+        $hl7->getFindings();
+    }
+
+    public function testFindingsAreTheOnesOfTheValidationResult(): void
+    {
+        $hl7 = new HL7Message();
+        $hl7->parse(self::ADT_A01 . "\rZZA|1");
+        $result = $hl7->validate(self::PROFILES);
+
+        $this->assertSame($result->getFindings(), $hl7->getFindings());
+        $this->assertContains(
+            ['Warning', 'zSegmentNotDefined', 'ZZA'],
+            array_map(
+                static fn (Finding $finding): array => [
+                    $finding->severity->value,
+                    $finding->type->value,
+                    $finding->location?->toShortString(),
+                ],
+                $hl7->getFindings()
+            )
+        );
     }
 }

@@ -14,7 +14,8 @@ use PHPUnit\Framework\Attributes\DataProvider;
  * The suite is skipped when the `hl7-examples/` directory is absent or empty.
  *
  * An example whose expected validity has not been reviewed yet (expected.valid = null)
- * only checks that the validator runs.
+ * only checks that the validator runs. The findings are not compared: only the
+ * validity of the examples has been reviewed.
  */
 final class HL7ExampleCorpusTest extends CorpusTestCase
 {
