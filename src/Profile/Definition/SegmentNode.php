@@ -21,6 +21,13 @@ final readonly class SegmentNode extends StructureNode
         public SegmentDefinition $definition,
         ?string $source = null
     ) {
-        parent::__construct($definition->name, $usage, $cardinality, $source);
+        parent::__construct(
+            $definition->name,
+            $usage,
+            $cardinality,
+            $cardinality->min === 0,
+            [$definition->name],
+            $source
+        );
     }
 }

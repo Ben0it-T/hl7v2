@@ -13,6 +13,10 @@ use HL7v2\Profile\Definition\Usage;
 abstract readonly class StructureNode
 {
     /**
+     * @param bool $skippable True when the parent can go past this node
+     *                        without consuming a segment.
+     * @param list<string> $entrySegments Names of the segments that can open
+     *                                    this node, each listed once.
      * @param string|null $source Source of the usage and cardinality, when
      *                            set by a derived profile.
      */
@@ -20,6 +24,8 @@ abstract readonly class StructureNode
         public string $name,
         public Usage $usage,
         public Cardinality $cardinality,
+        public bool $skippable,
+        public array $entrySegments,
         public ?string $source = null
     ) {
         //
