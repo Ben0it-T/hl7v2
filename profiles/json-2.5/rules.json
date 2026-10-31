@@ -1,0 +1,30 @@
+{
+    "source": "HL7 v2: usage, cardinality, data types, lengths and tables",
+    "comment": "Usage RE and CE behave as O and C. Values outside a User table give a Warning: HL7 only suggests the values of a User table.",
+    "severities": {
+        "requiredAbsent": "Error",
+        "notAllowedPresent": "Error",
+        "cardinality": "Error",
+        "segmentNotExpected": "Error",
+        "segmentNotDefined": "Error",
+        "zSegmentNotDefined": "Warning",
+        "elementInExcess": "Error",
+        "withdrawnPresent": "Warning",
+        "backwardPresent": "Info",
+        "conditionalPresent": "Info",
+        "datatype": "Error",
+        "length": "Error",
+        "tableHL7": "Error",
+        "tableUser": "Warning",
+        "tableClosed": "Error",
+        "tableUnavailable": "Info",
+        "noDatatypeValidator": "Info",
+        "parseIssue": "Error"
+    },
+    "closedTables": [],
+    "localCodeTables": [
+        "0003",
+        "0076",
+        "0354"
+    ]
+}
