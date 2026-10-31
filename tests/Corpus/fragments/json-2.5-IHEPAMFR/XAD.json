@@ -41,7 +41,7 @@
                     }
                 ]
             },
-            "knownBug": "profiles/json-2.5-IHEPAMFR (old format, frozen until step 9) still has the former table 0399 with ROM; the source was corrected in 08c72dd."
+            "knownBug": "profiles/json-2.5-IHEPAMFR (old format, frozen until step 10) still has the former table 0399 with ROM; the source was corrected in 08c72dd."
         }
     ]
 }
