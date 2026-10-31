@@ -175,36 +175,151 @@ final class StructureMatcherTest extends TestCase
         );
     }
 
-    public function testSegmentWithoutPlaceEndsTheWalk(): void
+    public function testNotDefinedSegmentStaysWhereItWasMet(): void
     {
-        // Step 7.3: no recovery yet (7.4); the segment and every following
-        // one are left unplaced.
+        // Unknown to the structure: consumed, the walk stays on its position.
         $this->assertPlacement('json-2.5', 'ADT', 'A01', 'ADT_A01', ['MSH', 'EVN', 'PID', 'ZZZ', 'PV1'], [
             'MSH[1]',
             'EVN[1]',
             'PID[1]',
-            'unplaced ZZZ (4)',
-            'unplaced PV1 (5)',
+            'notDefined ZZZ (4)',
+            'PV1[1]',
         ]);
     }
 
-    public function testRepetitionBeyondMaximumIsNotPlacedYet(): void
+    public function testNotDefinedNonZSegment(): void
     {
-        // Step 7.3: PD1 [0..1] is full; Q215 places the second PD1 in 7.4.
+        // Corpus: segment-not-defined (ORC is not in ADT_A01).
+        $this->assertPlacement('json-2.5', 'ADT', 'A01', 'ADT_A01', ['MSH', 'EVN', 'PID', 'PV1', 'ORC'], [
+            'MSH[1]',
+            'EVN[1]',
+            'PID[1]',
+            'PV1[1]',
+            'notDefined ORC (5)',
+        ]);
+    }
+
+    public function testNotDefinedZSegment(): void
+    {
+        // Corpus: z-segment-not-defined.
+        $this->assertPlacement('json-2.5', 'ADT', 'A01', 'ADT_A01', ['MSH', 'EVN', 'PID', 'PV1', 'ZZA'], [
+            'MSH[1]',
+            'EVN[1]',
+            'PID[1]',
+            'PV1[1]',
+            'notDefined ZZA (5)',
+        ]);
+    }
+
+    public function testNotExpectedSegmentNearestPreviousDefinition(): void
+    {
+        // Corpus: not-expected-pv1. PV1 opens nothing after OBX (choice A of
+        // 7.4: entry segments only, no PATIENT_RESULT[2] opened through a leaf).
+        $root = $this->structure('json-2.5', 'ORU', 'R01', 'ORU_R01');
+        $occurrence = (new StructureMatcher())->match($root, $this->message(['MSH', 'PID', 'ORC', 'OBR', 'OBX', 'PV1']));
+
+        $this->assertSame([
+            'MSH[1]',
+            'PATIENT_RESULT[1]/PATIENT[1]/PID[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]',
+            'notExpected PV1 (6)',
+        ], self::placement($occurrence));
+
+        $pv1 = $this->unplacedAt($occurrence, 6);
+        $this->assertSame('PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]', $pv1->path);
+        // No PV1 after the position: the previous definition (Q16).
+        $this->assertSame(self::node($root, ['PATIENT_RESULT', 'PATIENT', 'VISIT', 'PV1']), $pv1->nearest);
+    }
+
+    public function testNotExpectedSegmentNearestNextDefinition(): void
+    {
+        // PV2 without PV1: VISIT opens with PV1 only, PV2 is not expected and
+        // is checked against the next definition, VISIT/PV2 (Q16).
+        $root = $this->structure('json-2.5', 'ORU', 'R01', 'ORU_R01');
+        $occurrence = (new StructureMatcher())->match($root, $this->message(['MSH', 'PID', 'PV2', 'OBR']));
+
+        $this->assertSame([
+            'MSH[1]',
+            'PATIENT_RESULT[1]/PATIENT[1]/PID[1]',
+            'notExpected PV2 (3)',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]',
+        ], self::placement($occurrence));
+
+        $pv2 = $this->unplacedAt($occurrence, 3);
+        $this->assertSame('PATIENT_RESULT[1]/PATIENT[1]', $pv2->path);
+        $this->assertSame(self::node($root, ['PATIENT_RESULT', 'PATIENT', 'VISIT', 'PV2']), $pv2->nearest);
+    }
+
+    public function testUnknownSegmentInsideAGroupKeepsThePosition(): void
+    {
+        $root = $this->structure('json-2.5', 'ORU', 'R01', 'ORU_R01');
+        $occurrence = (new StructureMatcher())->match($root, $this->message(['MSH', 'PID', 'OBR', 'OBX', 'ZZZ', 'NTE']));
+
+        $this->assertSame([
+            'MSH[1]',
+            'PATIENT_RESULT[1]/PATIENT[1]/PID[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]',
+            'notDefined ZZZ (5)',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/NTE[1]',
+        ], self::placement($occurrence));
+
+        $zzz = $this->unplacedAt($occurrence, 5);
+        $this->assertSame('PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]', $zzz->path);
+        $this->assertNull($zzz->nearest);
+    }
+
+    public function testSegmentRepeatedBeyondMaximumIsPlaced(): void
+    {
+        // Q215, corpus segment-repeated-beyond-max: PD1 [0..1] twice, the
+        // second is PD1[2] (cardinality judged in 7.5).
         $this->assertPlacement('json-2.5', 'ADT', 'A01', 'ADT_A01', ['MSH', 'EVN', 'PID', 'PD1', 'PD1', 'PV1'], [
             'MSH[1]',
             'EVN[1]',
             'PID[1]',
             'PD1[1]',
-            'unplaced PD1 (5)',
-            'unplaced PV1 (6)',
+            'PD1[2]',
+            'PV1[1]',
         ]);
+    }
+
+    public function testGroupRepeatedBeyondMaximumIsPlaced(): void
+    {
+        // Q215: PATIENT [1..1] of A47 twice; the innermost full element
+        // that the segment opens takes it.
+        $this->assertPlacement('json-2.5-IHEPAMFR', 'ADT', 'A47', 'ADT_A30', ['MSH', 'EVN', 'PID', 'MRG', 'PID', 'MRG'], [
+            'MSH[1]',
+            'EVN[1]',
+            'PATIENT[1]/PID[1]',
+            'PATIENT[1]/MRG[1]',
+            'PATIENT[2]/PID[1]',
+            'PATIENT[2]/MRG[1]',
+        ]);
+    }
+
+    public function testNotSupportedSegmentIsPlacedOnItsNode(): void
+    {
+        // A segment X [0..0] present is placed on its node (7.5 reports
+        // notAllowedPresent), not taken as not expected.
+        $root = self::group('TEST', 1, 1, [
+            self::segment('MSH', 1, 1),
+            self::segment('ZXS', 0, 0),
+            self::segment('PID', 1, 1),
+        ]);
+
+        $this->assertSame(
+            ['MSH[1]', 'ZXS[1]', 'PID[1]'],
+            self::placement((new StructureMatcher())->match($root, $this->message(['MSH', 'ZXS', 'PID'])))
+        );
     }
 
     public function testGroupThatCannotTakeItsEntrySegmentDoesNotLoop(): void
     {
-        // ZXX [0..0] is an entry segment of NOT_USED, but no occurrence can
-        // hold it: the empty occurrence is dropped and the walk goes on.
+        // ZXX [0..0] is an entry segment of NOT_USED, but an occurrence of
+        // NOT_USED cannot hold it: the empty occurrence is dropped, and ZXX,
+        // known to the structure, is not expected.
         $root = self::group('TEST', 1, 1, [
             self::segment('MSH', 1, 1),
             self::group('NOT_USED', 0, null, [
@@ -215,7 +330,7 @@ final class StructureMatcherTest extends TestCase
 
         $occurrence = (new StructureMatcher())->match($root, $this->message(['MSH', 'ZXX']));
 
-        $this->assertSame(['MSH[1]', 'unplaced ZXX (2)'], self::placement($occurrence));
+        $this->assertSame(['MSH[1]', 'notExpected ZXX (2)'], self::placement($occurrence));
         $this->assertCount(0, $occurrence->occurrencesOf($root->children[1]));
     }
 
@@ -267,8 +382,8 @@ final class StructureMatcherTest extends TestCase
     }
 
     /**
-     * Path of each segment in message order; "unplaced NAME (position)" for
-     * a segment without place.
+     * Path of each segment in message order; "<reason> NAME (position)" for
+     * a segment without place (notDefined, notExpected).
      *
      * @return list<string>
      */
@@ -277,9 +392,39 @@ final class StructureMatcherTest extends TestCase
         return array_map(
             static fn (SegmentOccurrence|UnplacedSegment $item): string => $item instanceof SegmentOccurrence
                 ? $item->path
-                : sprintf('unplaced %s (%d)', $item->segment->getName(), $item->position),
+                : sprintf('%s %s (%d)', $item->reason->value, $item->segment->getName(), $item->position),
             $occurrence->segments()
         );
+    }
+
+    private function unplacedAt(GroupOccurrence $occurrence, int $position): UnplacedSegment
+    {
+        foreach ($occurrence->segments() as $item) {
+            if ($item instanceof UnplacedSegment && $item->position === $position) {
+                return $item;
+            }
+        }
+
+        $this->fail("No unplaced segment at position $position.");
+    }
+
+    /**
+     * Node of the structure reached by child names (first child of each name).
+     *
+     * @param list<string> $names
+     */
+    private static function node(GroupNode $group, array $names): StructureNode
+    {
+        $node = $group;
+        foreach ($names as $name) {
+            if (!$node instanceof GroupNode) {
+                throw new \OutOfBoundsException("$name: not in a group.");
+            }
+            $children = array_values(array_filter($node->children, static fn (StructureNode $child): bool => $child->name === $name));
+            $node = $children[0] ?? throw new \OutOfBoundsException("$name: not found.");
+        }
+
+        return $node;
     }
 
     private static function segment(string $name, int $min, ?int $max): SegmentNode
