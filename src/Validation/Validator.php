@@ -769,7 +769,9 @@ class Validator
      * A table absent from the profile, or without values (User table without
      * suggested values), gives an Info: the value is not checked.
      *
-     * Validation is currently case-insensitive to preserve legacy Validator behavior.
+     * Codes are case-sensitive: "f" is not the code "F" of table 0001. In the
+     * tables listed in localCodeTables (rules.json), a local code is accepted:
+     * Z followed by upper-case letters, digits or underscores (Z01).
      *
      * @param string $table
      * @param string $elementValue
