@@ -19,7 +19,7 @@ final readonly class Check
      * @param bool $result True when the element conforms.
      * @param FindingType|null $finding Finding given by the check.
      * @param Location|null $location HL7 location, when on an element of the message.
-     * @param string|null $profilePath Path in the profile (Q213).
+     * @param string|null $profilePath Path in the profile.
      * @param int|null $segment Position of the segment in the message (1-based).
      */
     public function __construct(

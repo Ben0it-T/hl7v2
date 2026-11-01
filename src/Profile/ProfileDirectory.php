@@ -11,11 +11,11 @@ use HL7v2\Profile\MessageProfile;
 use HL7v2\Profile\Rules;
 
 /**
- * A self-contained profile directory (ADR 0003) in the normalized format
- * (ADR 0004): profiles-next/json-2.5-IHEPAMFR.
+ * A self-contained profile directory in the normalized format:
+ * profiles-next/json-2.5-IHEPAMFR.
  *
  * The common files are read once, when the directory is opened; a message
- * structure is read on request. No cache (Q212): a directory opens in a few
+ * structure is read on request. No cache: a directory opens in a few
  * milliseconds, and a batch reuses the opened directory.
  *
  * Example:

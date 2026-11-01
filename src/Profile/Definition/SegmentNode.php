@@ -10,7 +10,7 @@ use HL7v2\Profile\Definition\Usage;
 
 /**
  * A segment at one place of a message structure. Its definition already
- * carries the field overrides of this message (ADR 0004): the engine never
+ * carries the field overrides of this message: the engine never
  * merges two files.
  */
 final readonly class SegmentNode extends StructureNode

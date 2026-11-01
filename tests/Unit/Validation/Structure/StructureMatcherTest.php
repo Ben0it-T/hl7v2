@@ -20,7 +20,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Placement of the segments of a message on the nodes of its message
- * structure (step 7.3, ADR 0002). Only segment names matter here.
+ * structure. Only segment names matter here.
  */
 final class StructureMatcherTest extends TestCase
 {
@@ -77,7 +77,7 @@ final class StructureMatcherTest extends TestCase
     public function testRepetitionsAreCountedAndGreedy(): void
     {
         // The second OBR opens a new ORDER_OBSERVATION in the same
-        // PATIENT_RESULT (innermost element first, Q14).
+        // PATIENT_RESULT (innermost element first).
         $this->assertPlacement('json-2.5', 'ORU', 'R01', 'ORU_R01', ['MSH', 'PID', 'OBR', 'OBX', 'OBX', 'OBR', 'OBX'], [
             'MSH[1]',
             'PATIENT_RESULT[1]/PATIENT[1]/PID[1]',
@@ -229,14 +229,14 @@ final class StructureMatcherTest extends TestCase
 
         $pv1 = $this->unplacedAt($occurrence, 6);
         $this->assertSame('PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]', $pv1->path);
-        // No PV1 after the position: the previous definition (Q16).
+        // No PV1 after the position: the previous definition.
         $this->assertSame(self::node($root, ['PATIENT_RESULT', 'PATIENT', 'VISIT', 'PV1']), $pv1->nearest);
     }
 
     public function testNotExpectedSegmentNearestNextDefinition(): void
     {
         // PV2 without PV1: VISIT opens with PV1 only, PV2 is not expected and
-        // is checked against the next definition, VISIT/PV2 (Q16).
+        // is checked against the next definition, VISIT/PV2.
         $root = $this->structure('json-2.5', 'ORU', 'R01', 'ORU_R01');
         $occurrence = (new StructureMatcher())->match($root, $this->message(['MSH', 'PID', 'PV2', 'OBR']));
 
@@ -273,7 +273,7 @@ final class StructureMatcherTest extends TestCase
 
     public function testSegmentRepeatedBeyondMaximumIsPlaced(): void
     {
-        // Q215, corpus segment-repeated-beyond-max: PD1 [0..1] twice, the
+        // Corpus segment-repeated-beyond-max: PD1 [0..1] twice, the
         // second is PD1[2] (cardinality judged in 7.5).
         $this->assertPlacement('json-2.5', 'ADT', 'A01', 'ADT_A01', ['MSH', 'EVN', 'PID', 'PD1', 'PD1', 'PV1'], [
             'MSH[1]',
@@ -287,7 +287,7 @@ final class StructureMatcherTest extends TestCase
 
     public function testGroupRepeatedBeyondMaximumIsPlaced(): void
     {
-        // Q215: PATIENT [1..1] of A47 twice; the innermost full element
+        // PATIENT [1..1] of A47 twice; the innermost full element
         // that the segment opens takes it.
         $this->assertPlacement('json-2.5-IHEPAMFR', 'ADT', 'A47', 'ADT_A30', ['MSH', 'EVN', 'PID', 'MRG', 'PID', 'MRG'], [
             'MSH[1]',

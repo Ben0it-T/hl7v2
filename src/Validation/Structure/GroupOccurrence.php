@@ -30,7 +30,7 @@ final readonly class GroupOccurrence
 
     /**
      * Get the occurrences of a child node in this occurrence: the real count
-     * that usage and cardinality are judged on (7.5).
+     * that usage and cardinality are judged on.
      *
      * @return list<GroupOccurrence|SegmentOccurrence>
      */

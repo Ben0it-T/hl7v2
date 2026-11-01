@@ -8,7 +8,7 @@ namespace HL7v2\Validation\Structure;
  */
 enum UnplacedReason: string
 {
-    /** Unknown to the message structure (Q214): Not defined segment. */
+    /** Unknown to the message structure: Not defined segment. */
     case NotDefined = 'notDefined';
 
     /** Known to the message structure, but not expected here: Not expected segment. */

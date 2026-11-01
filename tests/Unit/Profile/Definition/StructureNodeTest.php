@@ -14,8 +14,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Skippable nodes and entry segments of a message structure (step 7.2,
- * ADR 0002).
+ * Skippable nodes and entry segments of a message structure.
  */
 final class StructureNodeTest extends TestCase
 {

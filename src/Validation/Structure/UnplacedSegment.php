@@ -10,7 +10,7 @@ use HL7v2\Validation\Structure\UnplacedReason;
 /**
  * A segment of the message that found no place in the message structure. It
  * stays where it was met, in the occurrence being walked, and the walk stays
- * on its position in the profile (ADR 0002).
+ * on its position in the profile.
  */
 final readonly class UnplacedSegment
 {
@@ -18,7 +18,7 @@ final readonly class UnplacedSegment
      * @param int $position Position of the segment in the message (1-based).
      * @param string $path Path of the occurrence where it was met; '' at the root.
      * @param SegmentNode|null $nearest For a not expected segment, the nearest
-     *                                  definition of that name (Q16): the next
+     *                                  definition of that name: the next
      *                                  one in profile order, else the previous.
      */
     public function __construct(

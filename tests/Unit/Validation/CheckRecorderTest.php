@@ -13,7 +13,7 @@ use HL7v2\Validation\ValidationResult;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Single recording method of the checks (Q196, step 7.5): a TestReport entry
+ * Single recording method of the checks: a TestReport entry
  * for each check, a Finding with the severity of rules.json for each check
  * that gives one.
  */

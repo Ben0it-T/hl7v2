@@ -15,7 +15,7 @@ use HL7v2\Profile\Definition\SegmentNode;
 use HL7v2\Profile\Definition\Usage;
 
 /**
- * Reads the JSON files of a profile directory (ADR 0004) into definitions.
+ * Reads the JSON files of a profile directory into definitions.
  *
  * The format is checked strictly, with the file and the place in it: unknown
  * or missing key, unknown usage, invalid cardinality or length, broken

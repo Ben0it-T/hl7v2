@@ -15,28 +15,28 @@ use HL7v2\Validation\Structure\UnplacedReason;
 use HL7v2\Validation\Structure\UnplacedSegment;
 
 /**
- * Places the segments of a message on the nodes of its message structure
- * (ADR 0002): a recursive descent driven by the profile, with an explicit
- * stack of the open group occurrences.
+ * Places the segments of a message on the nodes of its message structure:
+ * a recursive descent driven by the profile, with an explicit stack of the
+ * open group occurrences.
  *
  * - A node is opened by its entry segments (StructureNode::$entrySegments).
  * - Repetitions are counted while walking, never predicted.
- * - Greedy (Q14): a segment goes to the innermost element that can take it.
+ * - Greedy: a segment goes to the innermost element that can take it.
  * - Each segment is attached to a node, never to a name.
  *
  * When the current segment does not open the current child, one question
  * decides: is it expected later (an entry segment of a following element,
  * or of a new occurrence of an enclosing element)?
  * - Yes: the child is complete or absent, the walk goes on.
- * - No, but it opens the full current child: one more repetition (Q215).
+ * - No, but it opens the full current child: one more repetition.
  * - No, and unknown to the structure: not defined segment.
- * - No, and known to the structure (Q214): not expected segment, with its
- *   nearest definition (Q16).
+ * - No, and known to the structure: not expected segment, with its
+ *   nearest definition.
  * A not defined or not expected segment is consumed where it was met, and
  * the walk stays on its position in the profile.
  *
  * The matcher judges nothing: it gives the tree of occurrences, which the
- * structure checks (7.5) and the content pass (8) walk.
+ * structure checks and the content pass walk.
  */
 final class StructureMatcher
 {
@@ -58,14 +58,14 @@ final class StructureMatcher
     private array $stack = [];
 
     /**
-     * Segment names of the message structure (Q214).
+     * Segment names of the message structure.
      *
      * @var array<string, true>
      */
     private array $knownSegments = [];
 
     /**
-     * Segment nodes of the message structure, in profile order (Q16).
+     * Segment nodes of the message structure, in profile order.
      *
      * @var list<SegmentNode>
      */
@@ -167,7 +167,7 @@ final class StructureMatcher
                 break;
             }
 
-            // It opens the full child: one more repetition (Q215).
+            // It opens the full child: one more repetition.
             if ($this->opens($child)) {
                 $occurrence = $this->placeOne($child, $pathName, $path, $frame);
                 if ($occurrence !== null) {
@@ -234,7 +234,7 @@ final class StructureMatcher
      * element of an enclosing level.
      *
      * @param bool $withinCardinality False to accept a new occurrence of a
-     *                                full enclosing element (Q215).
+     *                                full enclosing element.
      */
     private function expectedLater(string $name, bool $withinCardinality): bool
     {
@@ -266,7 +266,7 @@ final class StructureMatcher
 
     /**
      * A segment without place: not defined if unknown to the message
-     * structure, not expected otherwise (Q214).
+     * structure, not expected otherwise.
      */
     private function unplaced(Segment $segment, string $name, string $path): UnplacedSegment
     {
@@ -278,9 +278,9 @@ final class StructureMatcher
     }
 
     /**
-     * The nearest definition of a segment name from the current position
-     * (Q16): the next segment node of that name in profile order, else the
-     * previous one.
+     * The nearest definition of a segment name from the current position:
+     * the next segment node of that name in profile order, else the previous
+     * one.
      */
     private function nearest(string $name): SegmentNode
     {

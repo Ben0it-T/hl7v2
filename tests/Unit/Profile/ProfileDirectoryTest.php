@@ -13,7 +13,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Loader of the normalized profile format (step 7.1, ADR 0004): the real
+ * Loader of the normalized profile format: the real
  * directories of profiles-next/, and forged directories for format errors.
  */
 final class ProfileDirectoryTest extends TestCase
