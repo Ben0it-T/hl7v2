@@ -14,15 +14,20 @@ use HL7v2\Profile\Definition\Usage;
 use HL7v2\Profile\ProfileDirectory;
 use HL7v2\Validation\CheckRecorder;
 use HL7v2\Validation\Finding;
+use HL7v2\Validation\ProfiledMessage;
+use HL7v2\Validation\Structure\GroupOccurrence;
+use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\StructureChecker;
 use HL7v2\Validation\Structure\StructureMatcher;
+use HL7v2\Validation\Structure\UnplacedSegment;
 use HL7v2\Validation\ValidationResult;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Usage and cardinality of the groups and segments judged on the real
  * counts of the tree of StructureMatcher, and segments without place
- * (step 7.5). One finding per cause.
+ * One finding per cause. Each finding is attached to its element of the
+ * Profiled message.
  */
 final class StructureCheckerTest extends TestCase
 {
@@ -55,7 +60,7 @@ final class StructureCheckerTest extends TestCase
 
     public function testRepetitionBeyondMaximumIsOnTheSegmentInExcess(): void
     {
-        // Fiche segment-repeated-beyond-max (Q215).
+        // Fiche segment-repeated-beyond-max.
         $this->assertFindings($this->profile('json-2.5', 'ADT', 'A01', 'ADT_A01'), ['MSH', 'EVN', 'PID', 'PD1', 'PD1', 'PV1'], [
             'Error cardinality path=PD1[2] location=PD1[2] segment=5',
         ]);
@@ -189,6 +194,83 @@ final class StructureCheckerTest extends TestCase
         ]);
     }
 
+    public function testFindingsAreAttachedToTheirElement(): void
+    {
+        // Absent PV1 on the root; PD1 in excess on PD1[2] only; ZZA (Warning) on itself.
+        [$profiled, $result] = $this->profiled($this->profile('json-2.5', 'ADT', 'A01', 'ADT_A01'), ['MSH', 'EVN', 'PID', 'PD1', 'PD1', 'ZZA']);
+
+        $this->assertSame([
+            '(root) requiredAbsent error',
+            'PD1[2] cardinality error',
+            'notDefined@6 zSegmentNotDefined',
+        ], self::attachments($profiled));
+        $this->assertCount(3, $result->getFindings());
+    }
+
+    public function testAbsentChildIsAttachedToTheOccurrenceThatShouldHoldIt(): void
+    {
+        // C4: ORDER_OBSERVATION absent from PATIENT_RESULT[2].
+        [$profiled] = $this->profiled($this->profile('json-2.5', 'ORU', 'R01', 'ORU_R01'), ['MSH', 'ORC', 'OBR', 'OBX', 'PID']);
+
+        $this->assertSame(['PATIENT_RESULT[2] requiredAbsent error'], self::attachments($profiled));
+    }
+
+    public function testNotExpectedSegmentKeepsItsNearestDefinition(): void
+    {
+        $root = $this->profile('json-2.5', 'ORU', 'R01', 'ORU_R01');
+        [$profiled] = $this->profiled($root, ['MSH', 'PID', 'ORC', 'OBR', 'OBX', 'PV1']);
+
+        $this->assertSame(['notExpected@6 segmentNotExpected error'], self::attachments($profiled));
+
+        // Met in OBSERVATION[1], validated against the PV1 of VISIT.
+        $unplaced = array_values(array_filter(
+            self::elements($profiled->root),
+            static fn (GroupOccurrence|SegmentOccurrence|UnplacedSegment $element): bool => $element instanceof UnplacedSegment
+        ));
+        $this->assertCount(1, $unplaced);
+        $this->assertInstanceOf(UnplacedSegment::class, $unplaced[0]);
+        $this->assertSame('PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]', $unplaced[0]->path);
+        $this->assertSame(self::node($root, ['PATIENT_RESULT', 'PATIENT', 'VISIT', 'PV1']), $unplaced[0]->nearest);
+    }
+
+    public function testGroupFindingsAreAttachedToTheGroupOccurrence(): void
+    {
+        $root = self::group('ROOT', 1, 1, [
+            self::segment('MSH', 1, 1),
+            self::group('G', 0, 1, [self::segment('OBR', 1, 1), self::segment('NTE', 2, 3)]),
+        ]);
+
+        // NTE under its minimum in G[1]; G[2] in excess (its NTE count is right).
+        [$profiled] = $this->profiled($root, ['MSH', 'OBR', 'NTE', 'OBR', 'NTE', 'NTE']);
+
+        $this->assertSame(['G[1] cardinality error', 'G[2] cardinality error'], self::attachments($profiled));
+    }
+
+    public function testEveryFindingIsAttachedToOneElement(): void
+    {
+        $messages = [
+            ['ADT', 'A01', 'ADT_A01', ['MSH', 'ZZA', 'PID', 'PD1', 'PD1', 'ORC', 'ZZB']],
+            ['ORU', 'R01', 'ORU_R01', ['MSH', 'ORC', 'OBR', 'OBX', 'PID', 'PV1', 'OBX']],
+        ];
+
+        foreach ($messages as [$code, $event, $structure, $segments]) {
+            [$profiled, $result] = $this->profiled($this->profile('json-2.5', $code, $event, $structure), $segments);
+
+            $attached = [];
+            foreach (self::elements($profiled->root) as $element) {
+                foreach ($profiled->findingsOf($element) as $finding) {
+                    $attached[] = spl_object_id($finding);
+                }
+            }
+            $recorded = array_map('spl_object_id', $result->getFindings());
+
+            $this->assertNotSame([], $recorded, $structure);
+            sort($attached);
+            sort($recorded);
+            $this->assertSame($recorded, $attached, $structure);
+        }
+    }
+
     /**
      * @param list<string> $segments
      * @param list<string> $expected
@@ -203,12 +285,90 @@ final class StructureCheckerTest extends TestCase
      */
     private function check(GroupNode $root, array $segments): ValidationResult
     {
+        return $this->profiled($root, $segments)[1];
+    }
+
+    /**
+     * @param list<string> $segments
+     *
+     * @return array{0: ProfiledMessage, 1: ValidationResult}
+     */
+    private function profiled(GroupNode $root, array $segments): array
+    {
         $result = new ValidationResult();
         $rules = ProfileDirectory::open(self::PROFILES . '/json-2.5')->rules;
         $occurrence = (new StructureMatcher())->match($root, $this->message($segments));
-        (new StructureChecker())->check($occurrence, new CheckRecorder($rules, $result, 'TEST'));
+        $profiled = (new StructureChecker())->check($occurrence, new CheckRecorder($rules, $result, 'TEST'));
+        $this->assertSame($occurrence, $profiled->root);
 
-        return $result;
+        return [$profiled, $result];
+    }
+
+    /**
+     * Every element of the tree: the occurrence itself, then its occurrences
+     * and segments without place, in message order.
+     *
+     * @return list<GroupOccurrence|SegmentOccurrence|UnplacedSegment>
+     */
+    private static function elements(GroupOccurrence $occurrence): array
+    {
+        $elements = [$occurrence];
+        foreach ($occurrence->items as $item) {
+            if ($item instanceof GroupOccurrence) {
+                // Spread operator (...): puts the elements of each array one
+                // after the other, as array_merge() does for lists.
+                $elements = [...$elements, ...self::elements($item)];
+            } else {
+                $elements[] = $item;
+            }
+        }
+
+        return $elements;
+    }
+
+    /**
+     * Elements holding findings, in message order: "<path> <types>", with
+     * "error" when hasError(); a segment without place is "<reason>@<position>".
+     *
+     * @return list<string>
+     */
+    private static function attachments(ProfiledMessage $profiled): array
+    {
+        $attachments = [];
+        foreach (self::elements($profiled->root) as $element) {
+            $findings = $profiled->findingsOf($element);
+            if ($findings === []) {
+                continue;
+            }
+
+            $name = $element instanceof UnplacedSegment
+                ? "{$element->reason->value}@{$element->position}"
+                : ($element->path === '' ? '(root)' : $element->path);
+            $types = implode(',', array_map(static fn (Finding $finding): string => $finding->type->value, $findings));
+
+            $attachments[] = "$name $types" . ($profiled->hasError($element) ? ' error' : '');
+        }
+
+        return $attachments;
+    }
+
+    /**
+     * Node of the structure reached by child names (first child of each name).
+     *
+     * @param list<string> $names
+     */
+    private static function node(GroupNode $group, array $names): StructureNode
+    {
+        $node = $group;
+        foreach ($names as $name) {
+            if (!$node instanceof GroupNode) {
+                throw new \OutOfBoundsException("$name: not in a group.");
+            }
+            $children = array_values(array_filter($node->children, static fn (StructureNode $child): bool => $child->name === $name));
+            $node = $children[0] ?? throw new \OutOfBoundsException("$name: not found.");
+        }
+
+        return $node;
     }
 
     /**

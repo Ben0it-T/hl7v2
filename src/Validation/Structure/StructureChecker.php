@@ -10,6 +10,7 @@ use HL7v2\Profile\Definition\Usage;
 use HL7v2\Validation\Check;
 use HL7v2\Validation\CheckRecorder;
 use HL7v2\Validation\FindingType;
+use HL7v2\Validation\ProfiledMessage;
 use HL7v2\Validation\Structure\GroupOccurrence;
 use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\UnplacedReason;
@@ -30,7 +31,16 @@ use HL7v2\Validation\Structure\UnplacedSegment;
  */
 final class StructureChecker
 {
+    /**
+     * Recorder of the checks of the current call to check().
+     */
     private CheckRecorder $recorder;
+
+    /**
+     * Profiled message of the current call to check(): the tree, with the
+     * findings attached to their elements.
+     */
+    private ProfiledMessage $profiled;
 
     /**
      * Rank of each segment among the segments of the same name, by position.
@@ -39,9 +49,18 @@ final class StructureChecker
      */
     private array $ranks = [];
 
-    public function check(GroupOccurrence $root, CheckRecorder $recorder): void
+    /**
+     * Check the tree of a message and attach each finding to its element.
+     *
+     * @param GroupOccurrence $root Root occurrence given by StructureMatcher::match().
+     * @param CheckRecorder $recorder Records each check (TestReport entry, Finding).
+     *
+     * @return ProfiledMessage The tree, with the findings of each element.
+     */
+    public function check(GroupOccurrence $root, CheckRecorder $recorder): ProfiledMessage
     {
         $this->recorder = $recorder;
+        $this->profiled = new ProfiledMessage($root);
         $this->ranks = [];
 
         $counts = [];
@@ -52,10 +71,38 @@ final class StructureChecker
         }
 
         $this->checkOccurrence($root);
+
+        return $this->profiled;
     }
 
     /**
-     * Check one group occurrence, in message order.
+     * Record a check, and attach its finding to the element it is about.
+     *
+     * @param GroupOccurrence|SegmentOccurrence|UnplacedSegment $element The element
+     *        the check is about; for an absent child, or a child under its
+     *        minimum, the group occurrence that should hold it.
+     * @param Check $check
+     *
+     * @return void
+     */
+    private function record(GroupOccurrence|SegmentOccurrence|UnplacedSegment $element, Check $check): void
+    {
+        $finding = $this->recorder->record($check);
+        if ($finding !== null) {
+            $this->profiled->attach($element, $finding);
+        }
+    }
+
+    /**
+     * Check one group occurrence, in message order: each child is judged once
+     * the walk is past it, then the group occurrences it holds are checked.
+     *
+     * @param GroupOccurrence $occurrence
+     *
+     * @return void
+     *
+     * @throws \LogicException When the items do not follow the profile order
+     *                         (a bug of StructureMatcher).
      */
     private function checkOccurrence(GroupOccurrence $occurrence): void
     {
@@ -91,6 +138,10 @@ final class StructureChecker
 
     /**
      * Check an occurrence of a node: usage on the first one, maximum on each.
+     *
+     * @param GroupOccurrence|SegmentOccurrence $item
+     *
+     * @return void
      */
     private function checkPresent(GroupOccurrence|SegmentOccurrence $item): void
     {
@@ -99,7 +150,7 @@ final class StructureChecker
         [$location, $segment] = $this->position($item);
 
         if ($node->usage === Usage::NotSupported) {
-            $this->recorder->record(new Check(
+            $this->record($item, new Check(
                 'Element not allowed', false, "$label is not allowed.",
                 FindingType::NotAllowedPresent, $location, $item->path, $segment
             ));
@@ -112,10 +163,10 @@ final class StructureChecker
                 Usage::Withdrawn => ['Element not allowed', FindingType::WithdrawnPresent, "$label is withdrawn and should not be used."],
                 Usage::Backward => ['Usage', FindingType::BackwardPresent, "$label is retained for backward compatibility."],
                 Usage::Conditional, Usage::ConditionalOrEmpty => ['Conditional', FindingType::ConditionalPresent,
-                    "$label usage is {$node->usage->value}: the condition is not evaluated (Q13)."],
+                    "$label usage is {$node->usage->value}: the condition is not evaluated."],
                 default => ['Usage', null, "$label usage is {$node->usage->value}."],
             };
-            $this->recorder->record(new Check(
+            $this->record($item, new Check(
                 $type, $finding !== FindingType::WithdrawnPresent, $description,
                 $finding, $location, $item->path, $segment
             ));
@@ -123,7 +174,7 @@ final class StructureChecker
 
         $max = $node->cardinality->max;
         if ($max !== null && $item->repetition > $max) {
-            $this->recorder->record(new Check(
+            $this->record($item, new Check(
                 'Cardinality', false,
                 "$label cardinality is " . self::cardinality($node) . ": repeated beyond its maximum ($max).",
                 FindingType::Cardinality, $location, $item->path, $segment
@@ -132,12 +183,20 @@ final class StructureChecker
     }
 
     /**
-     * Judge the count of a child once the walk is past it.
+     * Judge the count of a child once the walk is past it: absent, under its
+     * minimum, or within its cardinality. The maximum is judged on each
+     * occurrence (checkPresent()).
+     *
+     * @param GroupOccurrence $parent Occurrence that holds, or should hold, the child.
+     * @param StructureNode $child
+     * @param string $pathName Name of the child in the path (ROL, ROL2).
+     *
+     * @return void
      */
     private function close(GroupOccurrence $parent, StructureNode $child, string $pathName): void
     {
         $count = count($parent->occurrencesOf($child));
-        $path = ($parent->path === '' ? '' : "{$parent->path}/") . $pathName; // Absent: no index (Q213).
+        $path = ($parent->path === '' ? '' : "{$parent->path}/") . $pathName; // Absent: no index.
         $label = self::label($child);
         $cardinality = self::cardinality($child);
 
@@ -146,12 +205,12 @@ final class StructureChecker
                 return; // Alternative not taken.
             }
             if ($child->skippable) {
-                $this->recorder->record(new Check('Usage', true, "$label usage is {$child->usage->value}; absent.", null, null, $path));
+                $this->record($parent, new Check('Usage', true, "$label usage is {$child->usage->value}; absent.", null, null, $path));
 
                 return;
             }
             $finding = $child->usage === Usage::Required ? FindingType::RequiredAbsent : FindingType::Cardinality;
-            $this->recorder->record(new Check(
+            $this->record($parent, new Check(
                 'Required element', false, "$label is required ({$child->usage->value}, $cardinality).",
                 $finding, null, $path
             ));
@@ -165,7 +224,7 @@ final class StructureChecker
         }
 
         $result = $count >= $child->cardinality->min;
-        $this->recorder->record(new Check(
+        $this->record($parent, new Check(
             'Cardinality', $result,
             $result
                 ? "$label cardinality is $cardinality. Found $count time(s)."
@@ -176,6 +235,10 @@ final class StructureChecker
 
     /**
      * Check a segment without place: not defined (Z or not), or not expected.
+     *
+     * @param UnplacedSegment $item
+     *
+     * @return void
      */
     private function checkUnplaced(UnplacedSegment $item): void
     {
@@ -194,12 +257,14 @@ final class StructureChecker
             ],
         };
 
-        $this->recorder->record(new Check('Structure', false, $description, $finding, $location, $path, $item->position));
+        $this->record($item, new Check('Structure', false, $description, $finding, $location, $path, $item->position));
     }
 
     /**
      * Positions of an occurrence: a segment has its Location; a group has
      * none (not an element of the message), and the position of its first segment.
+     *
+     * @param GroupOccurrence|SegmentOccurrence $item
      *
      * @return array{0: Location|null, 1: int}
      */
@@ -212,11 +277,25 @@ final class StructureChecker
         return [null, $item->segments()[0]->position];
     }
 
+    /**
+     * Get the label of a node in a description: Segment 'PV1', Group 'VISIT'.
+     *
+     * @param StructureNode $node
+     *
+     * @return string
+     */
     private static function label(StructureNode $node): string
     {
         return ($node instanceof GroupNode ? 'Group' : 'Segment') . " '{$node->name}'";
     }
 
+    /**
+     * Get the cardinality of a node as written in a description: [0..*].
+     *
+     * @param StructureNode $node
+     *
+     * @return string
+     */
     private static function cardinality(StructureNode $node): string
     {
         return "[{$node->cardinality->min}.." . ($node->cardinality->max ?? '*') . ']';
