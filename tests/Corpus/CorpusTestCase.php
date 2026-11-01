@@ -6,15 +6,23 @@ namespace HL7v2\Tests\Corpus;
 use HL7v2\HL7Message;
 use Throwable;
 use HL7v2\Profile\HL7TableLoader;
+use HL7v2\Profile\ProfileDirectory;
 use HL7v2\Profile\ProfileLoader;
 use HL7v2\Validation\Finding;
+use HL7v2\Validation\MessageValidator;
 use HL7v2\Validation\Severity;
+use HL7v2\Validation\ValidationOutcome;
 use HL7v2\Validation\ValidationResult;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Validates corpus cases with the current validator, against the profiles
  * in profiles/ (old format), and compares its outputs with snapshots.
+ *
+ * Shadow mode: the new validator (MessageValidator, profiles in
+ * profiles-next/) runs on the same cases; its findings are compared with
+ * the expected ones within what it checks so far, and recorded in
+ * findings-next.json.
  *
  * Snapshots record what the current code does, not what the specification
  * requires (see expected and knownBug in the case files). Run the suite with
@@ -23,6 +31,14 @@ use PHPUnit\Framework\TestCase;
 abstract class CorpusTestCase extends TestCase
 {
     protected const PROFILES = __DIR__ . '/../../profiles';
+    protected const PROFILES_NEXT = __DIR__ . '/../../profiles-next';
+
+    /**
+     * Profile directories of profiles-next/ already opened, by profile id.
+     *
+     * @var array<string, ProfileDirectory>
+     */
+    private static array $directories = [];
 
     protected function validate(CorpusCase $case): ValidationResult
     {
@@ -52,6 +68,100 @@ abstract class CorpusTestCase extends TestCase
         $hl7->validateWith($profile, $tables);
 
         return $hl7;
+    }
+
+    /**
+     * Parse the message of a case and validate it with the new validator,
+     * against profiles-next/json-<profile>.
+     */
+    protected function validateNext(CorpusCase $case): ValidationOutcome
+    {
+        $hl7 = new HL7Message();
+        $hl7->parse($case->message);
+        $message = $hl7->getMessage();
+        $this->assertNotNull($message);
+
+        $directory = self::$directories[$case->profileId]
+            ??= ProfileDirectory::open(self::PROFILES_NEXT . '/json-' . $case->profileId);
+        $profile = $directory->messageProfile(
+            $message->getMessageCode(),
+            $message->getTriggerEvent(),
+            $message->getStructure()
+        );
+
+        return (new MessageValidator())->validate($message, $profile);
+    }
+
+    /**
+     * Compare the findings of the new validator with the snapshot
+     * findings-next.json of the directory (every finding, Infos included).
+     */
+    protected function assertNextSnapshot(ValidationOutcome $outcome, string $dir): void
+    {
+        $this->assertSnapshot($dir . '/findings-next.json', $this->json(array_map(
+            static fn (Finding $finding): array => $finding->toArray(),
+            $outcome->result->getFindings()
+        )));
+    }
+
+    /**
+     * Compare the findings of the new validator with the expected ones,
+     * within what it checks so far: the findings on the structure, that is
+     * without location or located on a segment (PD1[2]), Errors and Warnings
+     * only. The path is compared when the case gives it. knownBug describes
+     * the current validator, not the new one: any difference fails.
+     */
+    protected function assertExpectedStructureFindings(CorpusCase $case, ValidationOutcome $outcome): void
+    {
+        $onSegment = static fn (?string $location): bool => $location === null
+            || preg_match('/^[A-Z][A-Z0-9]{2}(\[\d+\])?$/', $location) === 1;
+
+        $unexpected = array_values(array_filter(
+            $outcome->result->getFindings(),
+            static fn (Finding $finding): bool => $finding->severity !== Severity::Info
+                && $onSegment($finding->location?->toShortString())
+        ));
+        $expectedFindings = array_values(array_filter(
+            $case->expectedFindings,
+            static fn (array $expected): bool => $onSegment(isset($expected['location']) ? (string) $expected['location'] : null)
+        ));
+
+        $missing = [];
+        foreach ($expectedFindings as $expected) {
+            foreach ($unexpected as $i => $finding) {
+                if ($this->findingMatches($expected, $finding)
+                    && (!array_key_exists('path', $expected) || $expected['path'] === $finding->profilePath)
+                ) {
+                    unset($unexpected[$i]);
+                    continue 2;
+                }
+            }
+            $missing[] = $expected;
+        }
+
+        $this->assertTrue(
+            $missing === [] && $unexpected === [],
+            sprintf(
+                "%s\nMissing findings:\n%s\nUnexpected findings:\n%s",
+                $case->title,
+                implode("\n", array_map(
+                    static fn (array $expected): string => '- ' . json_encode($expected, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+                    $missing
+                )),
+                implode("\n", array_map(
+                    static fn (Finding $finding): string => sprintf(
+                        '- %s %s %s %s (segment %s): %s',
+                        $finding->severity->value,
+                        $finding->type->value,
+                        $finding->profilePath ?? '-',
+                        $finding->location?->toShortString() ?? '-',
+                        $finding->segment ?? '-',
+                        $finding->message
+                    ),
+                    $unexpected
+                ))
+            )
+        );
     }
 
     /**

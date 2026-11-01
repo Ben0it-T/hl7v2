@@ -59,6 +59,29 @@ final class HL7ExampleCorpusTest extends CorpusTestCase
     }
 
     /**
+     * Shadow mode: the findings of the new validator, recorded only (the
+     * expected findings of the examples are not reviewed yet).
+     */
+    #[DataProvider('cases')]
+    public function testSnapshotNext(?CorpusCase $case): void
+    {
+        if ($case === null) {
+            $this->markTestSkipped('No local HL7 examples.');
+        }
+
+        try {
+            $outcome = $this->validateNext($case);
+        } catch (HL7Exception $e) {
+            if (preg_match('/^(Profile not found|Message structure not found)/', $e->getMessage()) === 1) {
+                $this->markTestSkipped($e->getMessage() . ' (no profile in profiles-next/json-' . $case->profileId . ').');
+            }
+            throw $e;
+        }
+
+        $this->assertNextSnapshot($outcome, self::SNAPSHOTS . '/' . $case->id);
+    }
+
+    /**
      * Validate an example, or skip the test when there is no example or no
      * profile for its message.
      */

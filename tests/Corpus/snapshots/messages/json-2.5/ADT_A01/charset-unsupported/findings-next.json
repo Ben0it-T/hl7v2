@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Error",
+        "type": "parseIssue",
+        "location": "MSH-18",
+        "profilePath": null,
+        "segment": 1,
+        "message": "MSH-18: unsupported character set 'KS X 1001'; the message is read as UTF-8."
+    }
+]

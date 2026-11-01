@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Error",
+        "type": "segmentNotExpected",
+        "location": "PV1",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]",
+        "segment": 6,
+        "message": "Segment 'PV1' is not expected at this position."
+    }
+]

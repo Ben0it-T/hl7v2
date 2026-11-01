@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Error",
+        "type": "segmentNotDefined",
+        "location": "ORC",
+        "profilePath": null,
+        "segment": 5,
+        "message": "Segment 'ORC' is not defined in the message structure."
+    }
+]

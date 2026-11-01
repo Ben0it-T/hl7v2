@@ -120,6 +120,15 @@ Reviewing a change of behaviour:
 The summary lists the TestReports whose error count changes (and the cases that become valid or invalid), then the TestReport entries removed and added, each distinct entry shown once with the cases it appears in, then the other outputs that changed.
 For the local HL7 examples, copy `hl7-examples/snapshots` before writing the new snapshots, and compare the two directories with `--old=<dir> --new=<dir>`.
 
+## Shadow mode
+
+During the redesign, the new validator (`MessageValidator`, on the profiles of `profiles-next/`) runs on the same cases next to the current one, which the facade still uses.
+
+- `MessageCorpusTest::testStructureFindingsNext` compares its findings with the expected ones, within what it checks so far: the findings without location or located on a segment (`PD1[2]`), Errors and Warnings only. The `path` is compared when the case gives it. `knownBug` describes the current validator: it does not apply here, and any difference fails.
+- `testSnapshotNext` (messages and HL7 examples) records its findings, Infos included, in `findings-next.json`, next to `findings.json`.
+
+Write only these snapshots with `UPDATE_SNAPSHOTS=1 vendor/bin/phpunit tests/Corpus --filter testSnapshotNext`.
+
 ## Running
 
 ```bash

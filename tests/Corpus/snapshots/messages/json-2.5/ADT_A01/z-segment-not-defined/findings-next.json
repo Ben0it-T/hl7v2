@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Warning",
+        "type": "zSegmentNotDefined",
+        "location": "ZZA",
+        "profilePath": null,
+        "segment": 5,
+        "message": "Segment 'ZZA' is not defined in the message structure."
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Error",
+        "type": "requiredAbsent",
+        "location": null,
+        "profilePath": "ZBE",
+        "segment": null,
+        "message": "Segment 'ZBE' is required (R, [1..1])."
+    }
+]

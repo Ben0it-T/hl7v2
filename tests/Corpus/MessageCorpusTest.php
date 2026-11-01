@@ -6,8 +6,9 @@ namespace HL7v2\Tests\Corpus;
 use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
- * Runs every forged message of the corpus through the current validator.
- * The expected result comes from the specification.
+ * Runs every forged message of the corpus through the current validator,
+ * and through the new one in shadow mode. The expected result comes from
+ * the specification.
  */
 final class MessageCorpusTest extends CorpusTestCase
 {
@@ -41,5 +42,17 @@ final class MessageCorpusTest extends CorpusTestCase
     public function testSnapshot(CorpusCase $case): void
     {
         $this->assertSnapshots($this->validateMessage($case), self::SNAPSHOTS . '/' . $case->id);
+    }
+
+    #[DataProvider('cases')]
+    public function testStructureFindingsNext(CorpusCase $case): void
+    {
+        $this->assertExpectedStructureFindings($case, $this->validateNext($case));
+    }
+
+    #[DataProvider('cases')]
+    public function testSnapshotNext(CorpusCase $case): void
+    {
+        $this->assertNextSnapshot($this->validateNext($case), self::SNAPSHOTS . '/' . $case->id);
     }
 }

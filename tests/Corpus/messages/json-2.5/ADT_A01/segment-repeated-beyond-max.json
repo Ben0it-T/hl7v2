@@ -12,7 +12,8 @@
             {
                 "severity": "Error",
                 "segment": 5,
-                "location": "PD1",
+                "path": "PD1[2]",
+                "location": "PD1[2]",
                 "summary": "PD1 repeated beyond its maximum (1)"
             }
         ]

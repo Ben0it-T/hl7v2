@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Error",
+        "type": "requiredAbsent",
+        "location": null,
+        "profilePath": "PATIENT_RESULT[2]/ORDER_OBSERVATION",
+        "segment": null,
+        "message": "Group 'ORDER_OBSERVATION' is required (R, [1..*])."
+    }
+]

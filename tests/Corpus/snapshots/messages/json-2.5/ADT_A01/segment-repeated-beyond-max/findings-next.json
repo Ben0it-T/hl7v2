@@ -1,0 +1,10 @@
+[
+    {
+        "severity": "Error",
+        "type": "cardinality",
+        "location": "PD1[2]",
+        "profilePath": "PD1[2]",
+        "segment": 5,
+        "message": "Segment 'PD1' cardinality is [0..1]: repeated beyond its maximum (1)."
+    }
+]
