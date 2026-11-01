@@ -16,6 +16,7 @@ use HL7v2\Validation\Structure\GroupOccurrence;
 use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\StructureMatcher;
 use HL7v2\Validation\Structure\UnplacedSegment;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -155,6 +156,131 @@ final class StructureMatcherTest extends TestCase
             'EVN[1]',
             'PID[1]',
             'MRG[1]',
+        ]);
+    }
+
+    public function testC2ObxAtTwoPositions(): void
+    {
+        // The OBX after SPM belongs to SPECIMEN, not to a new OBSERVATION.
+        $root = $this->structure('json-2.5', 'ORU', 'R01', 'ORU_R01');
+        $occurrence = (new StructureMatcher())->match($root, $this->message(['MSH', 'PID', 'ORC', 'OBR', 'OBX', 'SPM', 'OBX']));
+
+        $this->assertSame([
+            'MSH[1]',
+            'PATIENT_RESULT[1]/PATIENT[1]/PID[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/SPECIMEN[1]/SPM[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/SPECIMEN[1]/OBX[1]',
+        ], self::placement($occurrence));
+
+        $obxs = array_values(array_filter(
+            $occurrence->segments(),
+            static fn (SegmentOccurrence|UnplacedSegment $item): bool => $item->segment->getName() === 'OBX'
+        ));
+        $this->assertInstanceOf(SegmentOccurrence::class, $obxs[0]);
+        $this->assertInstanceOf(SegmentOccurrence::class, $obxs[1]);
+        $this->assertSame(self::node($root, ['PATIENT_RESULT', 'ORDER_OBSERVATION', 'OBSERVATION', 'OBX']), $obxs[0]->node);
+        $this->assertSame(self::node($root, ['PATIENT_RESULT', 'ORDER_OBSERVATION', 'SPECIMEN', 'OBX']), $obxs[1]->node);
+    }
+
+    public function testC3TwoOrdersOpenedByOrc(): void
+    {
+        $this->assertPlacement('json-2.5', 'ORU', 'R01', 'ORU_R01', ['MSH', 'PID', 'ORC', 'OBR', 'OBX', 'ORC', 'OBR', 'OBX'], [
+            'MSH[1]',
+            'PATIENT_RESULT[1]/PATIENT[1]/PID[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[2]/ORC[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[2]/OBR[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[2]/OBSERVATION[1]/OBX[1]',
+        ]);
+    }
+
+    public function testC4PidAfterTheOrderOpensASecondPatientResult(): void
+    {
+        // PID is not expected in PATIENT_RESULT[1] any more: it opens a new
+        // occurrence, which holds no ORDER_OBSERVATION.
+        $this->assertPlacement('json-2.5', 'ORU', 'R01', 'ORU_R01', ['MSH', 'ORC', 'OBR', 'OBX', 'PID'], [
+            'MSH[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]',
+            'PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]',
+            'PATIENT_RESULT[2]/PATIENT[1]/PID[1]',
+        ]);
+    }
+
+    /**
+     * ADT_A06 in HL7 2.3: DRG [0..1] after DB1 and DRG [0..1] after DG1, two
+     * nodes of the same name. Each DRG goes to the first one that can still
+     * take it.
+     *
+     * @return iterable<string, array{0: list<string>, 1: list<string>}>
+     */
+    public static function adtA06DrgProvider(): iterable
+    {
+        yield 'one DRG, first node' => [
+            ['MSH', 'EVN', 'PID', 'PV1', 'DRG', 'AL1'],
+            ['MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'DRG[1]', 'AL1[1]'],
+        ];
+        yield 'two DRG in a row, one per node' => [
+            ['MSH', 'EVN', 'PID', 'PV1', 'DRG', 'DRG'],
+            ['MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'DRG[1]', 'DRG2[1]'],
+        ];
+        yield 'DRG after AL1, second node' => [
+            ['MSH', 'EVN', 'PID', 'PV1', 'AL1', 'DRG'],
+            ['MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'AL1[1]', 'DRG2[1]'],
+        ];
+        yield 'DRG on both sides of AL1' => [
+            ['MSH', 'EVN', 'PID', 'PV1', 'DRG', 'AL1', 'DRG'],
+            ['MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'DRG[1]', 'AL1[1]', 'DRG2[1]'],
+        ];
+        yield 'third DRG, one more repetition of the second node' => [
+            ['MSH', 'EVN', 'PID', 'PV1', 'DRG', 'DRG', 'DRG'],
+            ['MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'DRG[1]', 'DRG2[1]', 'DRG2[2]'],
+        ];
+    }
+
+    /**
+     * @param list<string> $segments
+     * @param list<string> $expected
+     */
+    #[DataProvider('adtA06DrgProvider')]
+    public function testAdtA06In23TwoDrgNodes(array $segments, array $expected): void
+    {
+        $this->assertPlacement('json-2.3', 'ADT', 'A06', 'ADT_A06', $segments, $expected);
+    }
+
+    public function testIhePamFrA28AndA31NotAllowedNodesArePlaced(): void
+    {
+        // PV2 is X [0..0] in A28 and A31: placed on its node, judged by
+        // StructureChecker.
+        foreach (['A28', 'A31'] as $event) {
+            $this->assertPlacement('json-2.5-IHEPAMFR', 'ADT', $event, 'ADT_A05', ['MSH', 'EVN', 'PID', 'PV1', 'PV2', 'ZFA'], [
+                'MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'PV2[1]', 'ZFA[1]',
+            ]);
+        }
+
+        // The ROL after the Z segments is the second ROL node (X in A28, O in A31).
+        foreach (['A28', 'A31'] as $event) {
+            $this->assertPlacement('json-2.5-IHEPAMFR', 'ADT', $event, 'ADT_A05', ['MSH', 'EVN', 'PID', 'ROL', 'PV1', 'ZFS', 'ROL'], [
+                'MSH[1]', 'EVN[1]', 'PID[1]', 'ROL[1]', 'PV1[1]', 'ZFS[1]', 'ROL2[1]',
+            ]);
+        }
+    }
+
+    public function testIhePamFrA28SegmentsOutsideItsStructureAreNotDefined(): void
+    {
+        // ZBE, ZFP, ZFV, ZFM and PDA are in ADT_A05 for A05, not for A28: not
+        // defined (not in the message structure), even if segments.json has them.
+        $this->assertPlacement('json-2.5-IHEPAMFR', 'ADT', 'A28', 'ADT_A05', ['MSH', 'EVN', 'PID', 'PV1', 'ZBE', 'ZFP', 'ZFV', 'ZFM', 'PDA'], [
+            'MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]',
+            'notDefined ZBE (5)', 'notDefined ZFP (6)', 'notDefined ZFV (7)', 'notDefined ZFM (8)', 'notDefined PDA (9)',
+        ]);
+        $this->assertPlacement('json-2.5-IHEPAMFR', 'ADT', 'A05', 'ADT_A05', ['MSH', 'EVN', 'PID', 'PV1', 'ZBE', 'ZFP', 'ZFV', 'ZFM', 'PDA'], [
+            'MSH[1]', 'EVN[1]', 'PID[1]', 'PV1[1]', 'ZBE[1]', 'ZFP[1]', 'ZFV[1]', 'ZFM[1]', 'PDA[1]',
         ]);
     }
 

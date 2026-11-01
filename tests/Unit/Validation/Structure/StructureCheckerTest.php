@@ -58,6 +58,28 @@ final class StructureCheckerTest extends TestCase
         $this->assertSame(['Error requiredAbsent path=ZBE location=- segment=-'], self::summary($result));
     }
 
+    public function testIhePamFrA28AndA31(): void
+    {
+        $a28 = $this->profile('json-2.5-IHEPAMFR', 'ADT', 'A28', 'ADT_A05');
+        $a31 = $this->profile('json-2.5-IHEPAMFR', 'ADT', 'A31', 'ADT_A05');
+        $segments = ['MSH', 'EVN', 'PID', 'PV1', 'PV2', 'ZFS', 'ROL'];
+
+        // PV2 is X in both; the ROL after the Z segments is X in A28, O in A31.
+        $this->assertFindings($a28, $segments, [
+            'Error notAllowedPresent path=PV2[1] location=PV2 segment=5',
+            'Error notAllowedPresent path=ROL2[1] location=ROL segment=7',
+        ]);
+        $this->assertFindings($a31, $segments, [
+            'Error notAllowedPresent path=PV2[1] location=PV2 segment=5',
+        ]);
+
+        // Segments of ADT_A05 kept for A05 only: not defined, Z (Warning) or not (Error).
+        $this->assertFindings($a28, ['MSH', 'EVN', 'PID', 'PV1', 'ZBE', 'PDA'], [
+            'Warning zSegmentNotDefined path=- location=ZBE segment=5',
+            'Error segmentNotDefined path=- location=PDA segment=6',
+        ]);
+    }
+
     public function testRepetitionBeyondMaximumIsOnTheSegmentInExcess(): void
     {
         // Fiche segment-repeated-beyond-max.
