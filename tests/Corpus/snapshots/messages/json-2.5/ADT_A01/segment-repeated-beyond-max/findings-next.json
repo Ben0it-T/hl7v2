@@ -6,5 +6,29 @@
         "profilePath": "PD1[2]",
         "segment": 5,
         "message": "Segment 'PD1' cardinality is [0..1]: repeated beyond its maximum (1)."
+    },
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "EVN-1",
+        "profilePath": "EVN[1]",
+        "segment": 2,
+        "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
+    },
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "PD1-4",
+        "profilePath": "PD1[1]",
+        "segment": 4,
+        "message": "Field 'Patient Primary Care Provider Name & ID No.' (PD1.4) is retained for backward compatibility."
+    },
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "PD1[2]-4",
+        "profilePath": "PD1[2]",
+        "segment": 5,
+        "message": "Field 'Patient Primary Care Provider Name & ID No.' (PD1.4) is retained for backward compatibility."
     }
 ]

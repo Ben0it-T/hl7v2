@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace HL7v2\Tests\Unit\Validation;
 
 use HL7v2\HL7Message;
+use HL7v2\Model\Location;
 use HL7v2\Profile\Definition\Cardinality;
 use HL7v2\Profile\Definition\GroupNode;
 use HL7v2\Profile\Definition\SegmentDefinition;
@@ -16,6 +17,7 @@ use HL7v2\Validation\Severity;
 use HL7v2\Validation\Structure\GroupOccurrence;
 use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\StructureMatcher;
+use HL7v2\Validation\Structure\UnplacedSegment;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -56,6 +58,34 @@ final class ProfiledMessageTest extends TestCase
         $this->assertFalse($profiled->hasError($root));
     }
 
+    public function testRankAndSegmentOfALocation(): void
+    {
+        // MSH, NK1, NK1, PID, then NK1 without place (after PID).
+        $structure = new GroupNode('ROOT', Usage::Required, new Cardinality(1, 1), [
+            new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('MSH', 'MSH', '', [])),
+            new SegmentNode(Usage::Optional, new Cardinality(0, null), new SegmentDefinition('NK1', 'NK1', '', [])),
+            new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('PID', 'PID', '', [])),
+        ]);
+        $hl7 = new HL7Message();
+        $hl7->parse("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01|1|P|2.5\rNK1|1\rNK1|2\rPID|1\rNK1|3");
+        $message = $hl7->getMessage();
+        $this->assertNotNull($message);
+        $profiled = new ProfiledMessage((new StructureMatcher())->match($structure, $message));
+        $segments = $profiled->root->segments();
+
+        $this->assertSame([1, 1, 2, 1, 3], array_map($profiled->rankOf(...), [1, 2, 3, 4, 5]));
+
+        $this->assertSame($segments[2], $profiled->segmentOf(Location::parse('NK1[2]-1')));
+        $this->assertSame($segments[3], $profiled->segmentOf(Location::parse('PID-3.1')));
+        $unplaced = $profiled->segmentOf(Location::parse('NK1[3]'));
+        $this->assertInstanceOf(UnplacedSegment::class, $unplaced);
+        $this->assertSame(5, $unplaced->position);
+        $this->assertNull($profiled->segmentOf(Location::parse('NK1[4]')));
+        $this->assertNull($profiled->segmentOf(Location::parse('PV1')));
+
+        $this->expectException(\OutOfRangeException::class);
+        $profiled->rankOf(6);
+    }
     /**
      * A tree MSH, PID with its two segment occurrences.
      *

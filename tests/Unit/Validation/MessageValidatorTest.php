@@ -12,8 +12,8 @@ use HL7v2\Validation\ValidationOutcome;
 use PHPUnit\Framework\TestCase;
 
 /**
- * The new validator on the normalized profile format: problems met while
- * parsing first, then the structure pass.
+ * The new validator on the normalized profile format: the structure pass,
+ * the problems met while parsing, then the content pass.
  */
 final class MessageValidatorTest extends TestCase
 {
@@ -21,7 +21,7 @@ final class MessageValidatorTest extends TestCase
 
     public function testValidMessage(): void
     {
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN|A01\rPID|1\rPV1|1");
+        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN||20260101120000\rPID|1||123||DOE^JOHN\rPV1|1|I");
 
         $this->assertTrue($outcome->result->isValid());
         $this->assertSame([], $outcome->result->getFindings());
@@ -30,30 +30,53 @@ final class MessageValidatorTest extends TestCase
         $this->assertCount(4, $outcome->profiledMessage->root->segments());
     }
 
-    public function testParseIssuesComeFirst(): void
+    public function testPassesInOrder(): void
     {
-        // Unknown character set (MSH-18), then PV1 absent.
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN|A01\rPID|1");
+        // PV1 absent (structure), unknown character set in MSH-18 (parsing),
+        // PID-5 absent (content).
+        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN||20260101120000\rPID|1||123");
 
         $this->assertSame([
-            'Error parseIssue MSH-18 segment=1',
             'Error requiredAbsent - segment=-',
+            'Error parseIssue MSH-18 segment=1',
+            'Error requiredAbsent PID-5 segment=3',
         ], self::summary($outcome));
+    }
 
-        $entry = $outcome->result->getTestReport()[0];
-        $this->assertSame('MSH-18', $entry['Location']);
-        $this->assertSame('Parse', $entry['Type']);
-        $this->assertFalse($entry['Result']);
-        $this->assertSame('Error', $entry['Severity']);
+    public function testParseIssueIsAttachedToItsSegment(): void
+    {
+        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN||20260101120000\rPID|1||123||DOE^JOHN\rPV1|1|I");
+
+        $this->assertSame(['Error parseIssue MSH-18 segment=1'], self::summary($outcome));
+
+        $msh = $outcome->profiledMessage->root->segments()[0];
+        $this->assertSame($outcome->result->getFindings(), $outcome->profiledMessage->findingsOf($msh));
+
+        $entries = array_values(array_filter(
+            $outcome->result->getTestReport(),
+            static fn (array $entry): bool => $entry['Type'] === 'Parse'
+        ));
+        $this->assertCount(1, $entries);
+        $this->assertSame('MSH-18', $entries[0]['Location']);
+        $this->assertFalse($entries[0]['Result']);
+        $this->assertSame('Error', $entries[0]['Severity']);
     }
 
     public function testParseIssueWithoutLocation(): void
     {
-        // Invalid UTF-8 bytes, no MSH-18: the whole message.
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN|A01\rPID|1||||DUPR\xC9\rPV1|1");
+        // Invalid UTF-8 bytes, no MSH-18: the whole message, attached to no element.
+        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN||20260101120000\rPID|1||123||DUPR\xC9\rPV1|1|I");
 
         $this->assertSame(['Error parseIssue - segment=-'], self::summary($outcome));
-        $this->assertSame('ADT_A01', $outcome->result->getTestReport()[0]['Location']);
+
+        $entries = array_values(array_filter(
+            $outcome->result->getTestReport(),
+            static fn (array $entry): bool => $entry['Type'] === 'Parse'
+        ));
+        $this->assertSame('ADT_A01', $entries[0]['Location']);
+        foreach ($outcome->profiledMessage->root->segments() as $segment) {
+            $this->assertSame([], $outcome->profiledMessage->findingsOf($segment));
+        }
     }
 
     private function validate(string $hl7): ValidationOutcome

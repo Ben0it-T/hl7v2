@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "EVN-1",
+        "profilePath": "EVN[1]",
+        "segment": 2,
+        "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
+    }
+]

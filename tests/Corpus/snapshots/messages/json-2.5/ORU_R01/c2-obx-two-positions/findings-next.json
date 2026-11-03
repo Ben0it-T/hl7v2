@@ -1,1 +1,50 @@
-[]
+[
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "ORC-2",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]",
+        "segment": 3,
+        "message": "Field 'Placer Order Number' (ORC.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "OBR-2",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]",
+        "segment": 4,
+        "message": "Field 'Placer Order Number' (OBR.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "OBX-2",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]",
+        "segment": 5,
+        "message": "Field 'Value Type' (OBX.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "OBX-5",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBSERVATION[1]/OBX[1]",
+        "segment": 5,
+        "message": "Field 'Observation Value' (OBX.5) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "OBX[2]-2",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/SPECIMEN[1]/OBX[1]",
+        "segment": 7,
+        "message": "Field 'Value Type' (OBX.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "OBX[2]-5",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/SPECIMEN[1]/OBX[1]",
+        "segment": 7,
+        "message": "Field 'Observation Value' (OBX.5) usage is C: the condition is not evaluated."
+    }
+]

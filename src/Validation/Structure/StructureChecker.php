@@ -43,13 +43,6 @@ final class StructureChecker
     private ProfiledMessage $profiled;
 
     /**
-     * Rank of each segment among the segments of the same name, by position.
-     *
-     * @var array<int, int>
-     */
-    private array $ranks = [];
-
-    /**
      * Check the tree of a message and attach each finding to its element.
      *
      * @param GroupOccurrence $root Root occurrence given by StructureMatcher::match().
@@ -61,14 +54,6 @@ final class StructureChecker
     {
         $this->recorder = $recorder;
         $this->profiled = new ProfiledMessage($root);
-        $this->ranks = [];
-
-        $counts = [];
-        foreach ($root->segments() as $item) {
-            $name = $item->segment->getName();
-            $counts[$name] = ($counts[$name] ?? 0) + 1;
-            $this->ranks[$item->position] = $counts[$name];
-        }
 
         $this->checkOccurrence($root);
 
@@ -243,7 +228,7 @@ final class StructureChecker
     private function checkUnplaced(UnplacedSegment $item): void
     {
         $name = $item->segment->getName();
-        $location = new Location($name, $this->ranks[$item->position]);
+        $location = new Location($name, $this->profiled->rankOf($item->position));
         $path = $item->path === '' ? null : $item->path;
 
         [$finding, $description] = match ($item->reason) {
@@ -271,7 +256,7 @@ final class StructureChecker
     private function position(GroupOccurrence|SegmentOccurrence $item): array
     {
         if ($item instanceof SegmentOccurrence) {
-            return [new Location($item->segment->getName(), $this->ranks[$item->position]), $item->position];
+            return [new Location($item->segment->getName(), $this->profiled->rankOf($item->position)), $item->position];
         }
 
         return [null, $item->segments()[0]->position];

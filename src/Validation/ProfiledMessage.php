@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace HL7v2\Validation;
 
+use HL7v2\Model\Location;
 use HL7v2\Validation\Finding;
 use HL7v2\Validation\Severity;
 use HL7v2\Validation\Structure\GroupOccurrence;
@@ -31,12 +32,71 @@ final class ProfiledMessage
     private \WeakMap $findings;
 
     /**
+     * Segment elements by position in the message (1-based).
+     *
+     * @var array<int, SegmentOccurrence|UnplacedSegment>
+     */
+    private array $segments = [];
+
+    /**
+     * Rank of each segment among the segments of the same name, by position.
+     *
+     * @var array<int, int>
+     */
+    private array $ranks = [];
+
+    /**
      * @param GroupOccurrence $root Root occurrence given by StructureMatcher::match().
      */
     public function __construct(
         public readonly GroupOccurrence $root
     ) {
         $this->findings = new \WeakMap();
+
+        $counts = [];
+        foreach ($root->segments() as $item) {
+            $name = $item->segment->getName();
+            $counts[$name] = ($counts[$name] ?? 0) + 1;
+            $this->segments[$item->position] = $item;
+            $this->ranks[$item->position] = $counts[$name];
+        }
+    }
+
+    /**
+     * Get the rank of a segment among the segments of the same name in the
+     * message (the second NK1 is NK1[2]).
+     *
+     * @param int $position Position of the segment in the message (1-based).
+     *
+     * @return int
+     *
+     * @throws \OutOfRangeException When no segment is at that position.
+     */
+    public function rankOf(int $position): int
+    {
+        return $this->ranks[$position]
+            ?? throw new \OutOfRangeException("No segment at position $position.");
+    }
+
+    /**
+     * Get the segment element of a location: the segment of that name and
+     * rank, placed or without place.
+     *
+     * @param Location $location Location of the segment or of one of its elements.
+     *
+     * @return SegmentOccurrence|UnplacedSegment|null Null when the message has no such segment.
+     */
+    public function segmentOf(Location $location): SegmentOccurrence|UnplacedSegment|null
+    {
+        foreach ($this->segments as $position => $item) {
+            if ($item->segment->getName() === $location->segment
+                && $this->ranks[$position] === $location->segmentRank
+            ) {
+                return $item;
+            }
+        }
+
+        return null;
     }
 
     /**

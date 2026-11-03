@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "EVN-1",
+        "profilePath": "EVN[1]",
+        "segment": 2,
+        "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
+    },
+    {
+        "severity": "Error",
+        "type": "requiredAbsent",
+        "location": "PID-3",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "Field 'Patient Identifier List' (PID.3) is required."
+    }
+]

@@ -6,5 +6,13 @@
         "profilePath": null,
         "segment": 1,
         "message": "MSH-18: unknown character set 'FOO-CHARSET'; the message is read as UTF-8."
+    },
+    {
+        "severity": "Info",
+        "type": "backwardPresent",
+        "location": "EVN-1",
+        "profilePath": "EVN[1]",
+        "segment": 2,
+        "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
     }
 ]

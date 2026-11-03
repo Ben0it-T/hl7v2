@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "SCH-1",
+        "profilePath": "SCH[1]",
+        "segment": 2,
+        "message": "Field 'Placer Appointment ID' (SCH.1) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "AIP-3",
+        "profilePath": "RESOURCES[1]/PERSONNEL_RESOURCE[1]/AIP[1]",
+        "segment": 6,
+        "message": "Field 'Personnel Resource ID' (AIP.3) usage is C: the condition is not evaluated."
+    }
+]
