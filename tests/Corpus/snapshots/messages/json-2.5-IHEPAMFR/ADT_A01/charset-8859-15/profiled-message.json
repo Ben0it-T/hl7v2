@@ -1046,8 +1046,92 @@
                         "LongName": "Patient Account Number",
                         "Datatype": "CX",
                         "hasError": false,
-                        "comments": "Field 'Patient Account Number' (PID.18) cardinality is [0..1]. Found 0 time(s).",
-                        "value": ""
+                        "comments": "Field 'Patient Account Number' (PID.18) cardinality is [0..1]. Found 1 time(s).",
+                        "value": "300001^^^HOSP&1.2.250.1.999.1.3&ISO^AN",
+                        "components": {
+                            "1": {
+                                "Type": "component",
+                                "Name": "CX.1",
+                                "LocName": "PID-18.1",
+                                "LongName": "ID Number",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "300001"
+                            },
+                            "2": {
+                                "Type": "component",
+                                "Name": "CX.2",
+                                "LocName": "PID-18.2",
+                                "LongName": "Check Digit",
+                                "Datatype": "ST",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "3": {
+                                "Type": "component",
+                                "Name": "CX.3",
+                                "LocName": "PID-18.3",
+                                "LongName": "Check Digit Scheme",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "",
+                                "value": ""
+                            },
+                            "4": {
+                                "Type": "component",
+                                "Name": "CX.4",
+                                "LocName": "PID-18.4",
+                                "LongName": "Assigning Authority",
+                                "Datatype": "HD",
+                                "hasError": false,
+                                "comments": "",
+                                "value": "HOSP&1.2.250.1.999.1.3&ISO",
+                                "subcomponents": {
+                                    "1": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.1",
+                                        "LocName": "PID-18.4.1",
+                                        "LongName": "Namespace ID",
+                                        "Datatype": "IS",
+                                        "hasError": false,
+                                        "comments": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile.",
+                                        "value": "HOSP"
+                                    },
+                                    "2": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.2",
+                                        "LocName": "PID-18.4.2",
+                                        "LongName": "Universal ID",
+                                        "Datatype": "ST",
+                                        "hasError": false,
+                                        "comments": "",
+                                        "value": "1.2.250.1.999.1.3"
+                                    },
+                                    "3": {
+                                        "Type": "subcomponent",
+                                        "Name": "HD.3",
+                                        "LocName": "PID-18.4.3",
+                                        "LongName": "Universal ID Type",
+                                        "Datatype": "ID",
+                                        "hasError": false,
+                                        "comments": "SubComponent 'Universal ID Type' (HD.3) value (ISO) exists in table 0301 (User defined tables).",
+                                        "value": "ISO"
+                                    }
+                                }
+                            },
+                            "5": {
+                                "Type": "component",
+                                "Name": "CX.5",
+                                "LocName": "PID-18.5",
+                                "LongName": "Identifier Type Code",
+                                "Datatype": "ID",
+                                "hasError": false,
+                                "comments": "Component 'Identifier Type Code' (CX.5) value (AN) exists in table 0203 (User defined tables).",
+                                "value": "AN"
+                            }
+                        }
                     }
                 ],
                 "19": [

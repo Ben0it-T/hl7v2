@@ -82,6 +82,15 @@
       <XAD.6>FRA</XAD.6>
       <XAD.7>H</XAD.7>
     </PID.11>
+    <PID.18>
+      <CX.1>300001</CX.1>
+      <CX.4>
+        <HD.1>HOSP</HD.1>
+        <HD.2>1.2.250.1.999.1.3</HD.2>
+        <HD.3>ISO</HD.3>
+      </CX.4>
+      <CX.5>AN</CX.5>
+    </PID.18>
     <PID.32>PROV</PID.32>
   </PID>
   <PV1>

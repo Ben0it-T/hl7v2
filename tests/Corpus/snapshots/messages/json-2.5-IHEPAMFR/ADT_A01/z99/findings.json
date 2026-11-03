@@ -465,6 +465,94 @@
     },
     {
         "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-18",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'Patient Account Number' (PID.18) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Field 'Patient Account Number' (PID.18) datatype is 'CX'. No validator registered for datatype 'CX'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'ID Number' (CX.1) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18.4",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Assigning Authority' (CX.4) datatype is 'HD'. No validator registered for datatype 'HD'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18.4.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Namespace ID' (HD.1) datatype is 'IS'. No validator registered for datatype 'IS'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PID-18.4.1",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 not found in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-18.4.2",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18.4.2",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) datatype is 'ST'. No validator registered for datatype 'ST'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-18.4.3",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) optionality is set as 'conditional'. Refer to the specification to check the optionality which applies in the context of this message."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18.4.3",
+        "profilePath": null,
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
+        "type": "noDatatypeValidator",
+        "location": "PID-18.5",
+        "profilePath": null,
+        "segment": 3,
+        "message": "Component 'Identifier Type Code' (CX.5) datatype is 'ID'. No validator registered for datatype 'ID'. Datatype validation skipped."
+    },
+    {
+        "severity": "Info",
         "type": "noDatatypeValidator",
         "location": "PID-32",
         "profilePath": null,

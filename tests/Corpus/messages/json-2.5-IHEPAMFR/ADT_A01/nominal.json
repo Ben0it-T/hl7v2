@@ -3,10 +3,11 @@
     "tests": [
         "nominal: required segments and fields of the IHE PAM FR profile",
         "ZBE required (ITI-31)",
-        "PID-32 identity reliability code required"
+        "PID-32 identity reliability code required",
+        "PID-18 account number required (ITI-31)"
     ],
     "references": [
-        "PAMFR 2.11.2 5.2, 6.6, 6.10, 6.13",
+        "PAMFR 2.11.2 5.2, 6.6, 6.6.9, 6.10, 6.13",
         "ITI TF-2 3.31.5.6"
     ],
     "expected": {
