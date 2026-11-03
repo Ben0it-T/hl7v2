@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace HL7v2\Tests\Unit\Model;
 
+use HL7v2\Model\EscapeKind;
 use HL7v2\Model\EscapeSequences;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
@@ -106,5 +107,113 @@ final class EscapeSequencesTest extends TestCase
 
         $this->assertSame('A\F\B', $escapes->decode('A\F\B'));
         $this->assertSame(5, $escapes->length('A\F\B'));
+    }
+    /**
+     * @return iterable<string, array{string, list<array{EscapeKind, string}>}>
+     */
+    public static function scannedSequences(): iterable
+    {
+        // raw, well-formed sequences (kind, as written)
+        yield 'no sequence'          => ['DOE', []];
+        yield 'empty'                => ['', []];
+        yield 'separators'           => ['\F\\\S\\\T\\\R\\\E\\', [
+            [EscapeKind::Separator, '\F\\'],
+            [EscapeKind::Separator, '\S\\'],
+            [EscapeKind::Separator, '\T\\'],
+            [EscapeKind::Separator, '\R\\'],
+            [EscapeKind::Separator, '\E\\'],
+        ]];
+        yield 'highlighting'         => ['\H\240*\N\\', [
+            [EscapeKind::Highlighting, '\H\\'],
+            [EscapeKind::Highlighting, '\N\\'],
+        ]];
+        yield 'hexadecimal'          => ['\X414243\\', [[EscapeKind::Hexadecimal, '\X414243\\']]];
+        yield 'local'                => ['A\Zbold\B', [[EscapeKind::Local, '\Zbold\\']]];
+        yield 'character sets'       => ['\C2D41\A\M242844\B', [
+            [EscapeKind::CharacterSet, '\C2D41\\'],
+            [EscapeKind::CharacterSet, '\M242844\\'],
+        ]];
+        yield 'formatting'           => ['\.in+4\\\\.br\TEXT\.sp 2\\', [
+            [EscapeKind::Formatting, '\.in+4\\'],
+            [EscapeKind::Formatting, '\.br\\'],
+            [EscapeKind::Formatting, '\.sp 2\\'],
+        ]];
+        yield 'order of the value'   => ['\H\A\F\B\X41\\', [
+            [EscapeKind::Highlighting, '\H\\'],
+            [EscapeKind::Separator, '\F\\'],
+            [EscapeKind::Hexadecimal, '\X41\\'],
+        ]];
+        yield 'separators in value'  => ['A^B&C', []];
+    }
+
+    /**
+     * @param list<array{EscapeKind, string}> $sequences
+     */
+    #[DataProvider('scannedSequences')]
+    public function testScanGivesWellFormedSequencesWithTheirKind(string $raw, array $sequences): void
+    {
+        $scan = (new EscapeSequences())->scan($raw);
+
+        $this->assertSame($sequences, $scan->sequences);
+        $this->assertSame([], $scan->malformed);
+    }
+
+    /**
+     * @return iterable<string, array{string, list<string>}>
+     */
+    public static function scannedMalformed(): iterable
+    {
+        // raw, malformed sequences as written
+        yield 'unclosed'                    => ['DOE\F', ['\F']];
+        yield 'unknown code'                => ['A\Q\B', ['\Q\\']];
+        yield 'data after a separator code' => ['A\Fx\B', ['\Fx\\']];
+        yield 'odd hexadecimal'             => ['\X414\\', ['\X414\\']];
+        yield 'invalid hexadecimal'         => ['\XZZ\\', ['\XZZ\\']];
+        yield 'empty sequence'              => ['A\\\\B', ['\\\\']];
+        yield 'local without data'          => ['\Z\\', ['\Z\\']];
+        yield 'unknown formatting command'  => ['\.xx\\', ['\.xx\\']];
+        yield 'single-byte, 3 digits'       => ['\C2D4\\', ['\C2D4\\']];
+        yield 'lone escape character'       => ['A\\', ['\\']];
+        yield 'two malformed'               => ['\Q\A\W\\', ['\Q\\', '\W\\']];
+    }
+
+    /**
+     * @param list<string> $malformed
+     */
+    #[DataProvider('scannedMalformed')]
+    public function testScanGivesMalformedSequencesAsWritten(string $raw, array $malformed): void
+    {
+        $scan = (new EscapeSequences())->scan($raw);
+
+        $this->assertSame($malformed, $scan->malformed);
+        $this->assertSame([], $scan->sequences);
+    }
+
+    public function testScanSeparatesWellFormedAndMalformed(): void
+    {
+        $scan = (new EscapeSequences())->scan('\Q\A\F\B');
+
+        $this->assertSame([[EscapeKind::Separator, '\F\\']], $scan->sequences);
+        $this->assertSame(['\Q\\'], $scan->malformed);
+    }
+
+    public function testScanWritesSequencesWithTheEscapeCharacterOfTheMessage(): void
+    {
+        // MSH|^~#&: '#' is the escape character.
+        $scan = (new EscapeSequences('|', '^', '~', '#', '&'))->scan('A#F#B#H#C#Q#\F\\');
+
+        $this->assertSame(
+            [[EscapeKind::Separator, '#F#'], [EscapeKind::Highlighting, '#H#']],
+            $scan->sequences
+        );
+        $this->assertSame(['#Q#'], $scan->malformed);
+    }
+
+    public function testScanWithoutEscapeCharacterFindsNoSequence(): void
+    {
+        $scan = (new EscapeSequences('|', '^', '~', '', '&'))->scan('A\F\B\Q\\');
+
+        $this->assertSame([], $scan->sequences);
+        $this->assertSame([], $scan->malformed);
     }
 }

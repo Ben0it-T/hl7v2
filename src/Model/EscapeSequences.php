@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace HL7v2\Model;
 
+use HL7v2\Model\EscapeKind;
+use HL7v2\Model\EscapeScan;
+
 /**
  * Escape sequences of a message (HL7 v2.5, section 2.7), for the encoding
  * characters of that message (MSH-1 and MSH-2).
@@ -45,7 +48,7 @@ final readonly class EscapeSequences
         $decoded = '';
         foreach ($this->tokens($raw) as [$kind, $content]) {
             $decoded .= match ($kind) {
-                'text'  => $content,
+                'text', 'malformed' => $content,
                 'F'     => $this->fieldSeparator,
                 'S'     => $this->componentSeparator,
                 'T'     => $this->subComponentSeparator,
@@ -71,7 +74,7 @@ final readonly class EscapeSequences
         $length = 0;
         foreach ($this->tokens($raw) as [$kind, $content]) {
             $length += match ($kind) {
-                'text'                  => mb_strlen($content, 'UTF-8'),
+                'text', 'malformed'     => mb_strlen($content, 'UTF-8'),
                 'F', 'S', 'T', 'R', 'E' => 1,
                 'X'                     => intdiv(strlen($content) - 1, 2),
                 // \Zdddd...\ is locally defined (HL7 v2.5, section 2.7.7):
@@ -88,12 +91,39 @@ final readonly class EscapeSequences
     }
 
     /**
-     * Split a Raw value into text and well-formed escape sequences.
-     * A malformed sequence is returned as text.
+     * Escape sequences of a Raw value: the well-formed ones with their kind,
+     * and the malformed ones, each as written, in the order of the value.
+     * Without an escape character (MSH-2), a value has no sequence.
+     */
+    public function scan(string $raw): EscapeScan
+    {
+        $sequences = [];
+        $malformed = [];
+        foreach ($this->tokens($raw) as [$kind, $content]) {
+            if ($kind === 'text') {
+                continue;
+            }
+            if ($kind === 'malformed') {
+                $malformed[] = $content;
+                continue;
+            }
+            $sequences[] = [
+                self::escapeKindOf($kind),
+                $this->escapeChar . $content . $this->escapeChar,
+            ];
+        }
+
+        return new EscapeScan($sequences, $malformed);
+    }
+
+    /**
+     * Split a Raw value into text, well-formed escape sequences and
+     * malformed escape sequences.
      *
-     * @return list<array{string, string}> Pairs [kind, content]: kind is 'text'
-     *         or the code of the sequence; content is the text, or the
-     *         sequence without its escape characters.
+     * @return list<array{string, string}> Pairs [kind, content]: kind is 'text',
+     *         'malformed' or the code of the sequence; content is the text, the
+     *         malformed sequence as written, or the well-formed sequence
+     *         without its escape characters.
      */
     private function tokens(string $raw): array
     {
@@ -117,15 +147,15 @@ final readonly class EscapeSequences
 
             $close = strpos($raw, $escape, $start + 1);
             if ($close === false) {
-                // Unclosed sequence: the rest is text.
-                $tokens[] = ['text', substr($raw, $start)];
+                // Unclosed sequence: the rest is malformed.
+                $tokens[] = ['malformed', substr($raw, $start)];
                 break;
             }
 
             $content = substr($raw, $start + 1, $close - $start - 1);
             $kind = $this->kindOf($content);
             $tokens[] = $kind === null
-                ? ['text', substr($raw, $start, $close - $start + 1)]
+                ? ['malformed', substr($raw, $start, $close - $start + 1)]
                 : [$kind, $content];
             $position = $close + 1;
         }
@@ -146,6 +176,21 @@ final readonly class EscapeSequences
             preg_match('/^M[0-9A-Fa-f]{4}(?:[0-9A-Fa-f]{2})?$/', $content) === 1 => 'M',
             preg_match('/^Z.+$/s', $content) === 1                          => 'Z',
             default                                                         => null,
+        };
+    }
+
+    /**
+     * Kind of a well-formed sequence, from its code.
+     */
+    private static function escapeKindOf(string $code): EscapeKind
+    {
+        return match ($code) {
+            'F', 'S', 'T', 'R', 'E' => EscapeKind::Separator,
+            'H', 'N'                => EscapeKind::Highlighting,
+            'X'                     => EscapeKind::Hexadecimal,
+            'Z'                     => EscapeKind::Local,
+            'C', 'M'                => EscapeKind::CharacterSet,
+            default                 => EscapeKind::Formatting, // '.'
         };
     }
 }
