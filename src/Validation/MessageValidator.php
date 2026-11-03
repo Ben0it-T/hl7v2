@@ -52,7 +52,7 @@ final class MessageValidator
             }
         }
 
-        (new ContentChecker())->check($profiled, $message, $recorder);
+        (new ContentChecker($profile->directory))->check($profiled, $message, $recorder);
 
         return new ValidationOutcome($result, $profiled);
     }

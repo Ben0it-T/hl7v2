@@ -10,6 +10,38 @@
     {
         "severity": "Info",
         "type": "conditionalPresent",
+        "location": "MSH-21.2",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (EI.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-3.4.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-3.4.3",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-5.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "Component 'Given Name' (XPN.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
         "location": "PID-7",
         "profilePath": "PID[1]",
         "segment": 3,
@@ -26,9 +58,49 @@
     {
         "severity": "Info",
         "type": "conditionalPresent",
+        "location": "PID-18.4.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-18.4.3",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
         "location": "PV1-19",
         "profilePath": "PV1[1]",
         "segment": 4,
         "message": "Field 'Visit Number' (PV1.19) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PV1-19.4.2",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PV1-19.4.3",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "ZBE-1.2",
+        "profilePath": "ZBE[1]",
+        "segment": 5,
+        "message": "Component 'Namespace ID' (EI.2) usage is C: the condition is not evaluated."
     }
 ]

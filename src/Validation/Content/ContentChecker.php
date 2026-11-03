@@ -3,12 +3,18 @@ declare(strict_types=1);
 
 namespace HL7v2\Validation\Content;
 
+use HL7v2\Model\Component;
 use HL7v2\Model\Field;
+use HL7v2\Model\FieldRepeat;
 use HL7v2\Model\Location;
 use HL7v2\Model\Message;
+use HL7v2\Model\SubComponent;
+use HL7v2\Profile\Definition\ComponentDefinition;
+use HL7v2\Profile\Definition\DataTypeDefinition;
 use HL7v2\Profile\Definition\SegmentDefinition;
 use HL7v2\Profile\Definition\SegmentField;
 use HL7v2\Profile\Definition\Usage;
+use HL7v2\Profile\ProfileDirectory;
 use HL7v2\Serializer\HL7StringSerializer;
 use HL7v2\Validation\Check;
 use HL7v2\Validation\CheckRecorder;
@@ -16,6 +22,7 @@ use HL7v2\Validation\FindingType;
 use HL7v2\Validation\ProfiledMessage;
 use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\UnplacedSegment;
+use HL7v2\Validation\Value\EscapePolicy;
 use HL7v2\Validation\Value\Presence;
 
 /**
@@ -26,18 +33,34 @@ use HL7v2\Validation\Value\Presence;
  * - a not expected segment against its nearest definition;
  * - a not defined segment is not judged: it has no definition.
  *
- * For each field of the definition:
+ * Usage, at every level (field, component, sub-component):
  * - not present: requiredAbsent if R (no second finding for its minimum);
  *   otherwise no finding, the minimum of C and CE depending on a condition
  *   that is not evaluated;
  * - present (an Explicit null included): notAllowedPresent if X, and
- *   nothing more on that field; W, B, C or CE: one finding; then the count
- *   of repetitions, as received: beyond the maximum, or under the minimum of
- *   an R field;
- * - each repetition with a value: its HL7 length, counted on its Raw value.
- *   An Explicit null has no length to check.
- * A finding on a field is attached to the segment element; its Location
- * gives the field (PID[1]-3) or the repetition (PID[1]-3[2]).
+ *   nothing more on that element; W, B, C or CE: one finding.
+ *
+ * For each field of the definition: its usage; the count of repetitions,
+ * as received: beyond the maximum, or under the minimum of an R field; then
+ * each repetition with a value: its HL7 length, counted on its Raw value, and
+ * its content according to the data type of the field.
+ *
+ * Content of a value, according to its data type (dataTypes.json):
+ * - composite: each component of the type, its usage and HL7 length; a
+ *   component with a value and of a composite type: each sub-component, its
+ *   usage and HL7 length;
+ * - a composite type at the sub-component level cannot be split further
+ *   (no separator is left): the value of the sub-component is the first
+ *   component of its type, judged by the rules of that component (usage,
+ *   HL7 length); the other components cannot be sent and are not judged.
+ *   A TS in a DR stays a TS, its value is its TS.1;
+ * - primitive (the leaf): the escape sequences of its Raw value, well formed
+ *   and allowed by its data type. The leaf of a primitive field or component
+ *   is its first sub-component; what follows it is in excess.
+ * An Explicit null, or an element without value, has nothing below it to judge.
+ *
+ * A finding is attached to the segment element; its Location gives the
+ * element (PID[1]-3, PID[1]-3[2], PID[1]-5.10, PID[1]-5.10.1).
  */
 final class ContentChecker
 {
@@ -58,9 +81,17 @@ final class ContentChecker
 
     private HL7StringSerializer $serializer;
 
-    public function __construct()
-    {
+    private EscapePolicy $escapePolicy;
+
+    /**
+     * @param ProfileDirectory $directory Profile directory of the message
+     *        profile: definitions of the data types.
+     */
+    public function __construct(
+        private readonly ProfileDirectory $directory
+    ) {
         $this->serializer = new HL7StringSerializer();
+        $this->escapePolicy = new EscapePolicy();
     }
 
     /**
@@ -120,7 +151,8 @@ final class ContentChecker
     }
 
     /**
-     * Check one field: usage, count of repetitions, length of each repetition.
+     * Check one field: usage, count of repetitions, then the length and the
+     * content of each repetition with a value.
      *
      * @param SegmentOccurrence|UnplacedSegment $item Segment element that holds the field.
      * @param SegmentField $field Field at its position in the segment definition.
@@ -132,22 +164,208 @@ final class ContentChecker
     {
         $definition = $field->definition;
         $label = "Field '{$definition->longName}' ({$definition->id})";
-        $usage = $field->usage;
         $location = $this->location($item, $field->position);
 
         $presence = $value === null ? Presence::NotPresent : Presence::ofField($value);
-        if ($value === null || $presence === Presence::NotPresent) {
+        if (!$this->checkUsage($item, $field->usage, $presence, $label, $location) || $value === null) {
+            return;
+        }
+
+        $this->checkRepetitionCount($item, $field, $value->countRepeats(), $label, $location);
+
+        $type = $this->dataType($definition->dataType);
+        // MSH-1 (field separator) and MSH-2 (encoding characters) hold the
+        // separators and the escape character themselves: their Raw value is
+        // not an escaped value (MSH-2 "^~\&" would read as a malformed "\&").
+        $escapes = !($item->segment->getName() === 'MSH' && $field->position <= 2);
+
+        foreach ($value->getRepeats() as $index => $repeat) {
+            if (Presence::ofRepeat($repeat) !== Presence::Valued) {
+                continue;
+            }
+            $repLabel = $label . ($value->countRepeats() > 1 ? ' (Rep. ' . ($index + 1) . ')' : '');
+            $repLocation = $this->location($item, $field->position, $index + 1);
+
+            if ($definition->maxLength !== null) {
+                $this->checkLength(
+                    $item,
+                    $this->serializer->serializeFieldRepeat($repeat, $this->message),
+                    $definition->maxLength,
+                    $repLabel,
+                    $repLocation
+                );
+            }
+
+            if ($type->isPrimitive()) {
+                if ($escapes) {
+                    $this->checkLeaf($item, $type->name, $repeat->getComponent(1)?->getSubComponent(1), $repLabel, $repLocation);
+                }
+                continue;
+            }
+            $this->checkComponents($item, $type, $repeat, $repLocation);
+        }
+    }
+
+    /**
+     * Check the components of a field repetition of a composite type.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param DataTypeDefinition $type Composite type of the field.
+     * @param FieldRepeat $repeat Repetition with a value.
+     * @param Location $location Location of the repetition.
+     *
+     * @return void
+     */
+    private function checkComponents(
+        SegmentOccurrence|UnplacedSegment $item,
+        DataTypeDefinition $type,
+        FieldRepeat $repeat,
+        Location $location
+    ): void {
+        foreach ($type->components as $definition) {
+            $this->checkComponent(
+                $item,
+                $definition,
+                $repeat->getComponent($definition->position),
+                self::locate($location, $definition->position)
+            );
+        }
+    }
+
+    /**
+     * Check one component: usage, then, with a value, its length and its
+     * content (sub-components of a composite, or the leaf of a primitive).
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param ComponentDefinition $definition
+     * @param Component|null $component Null when the repetition stops before it.
+     * @param Location $location Location of the component.
+     *
+     * @return void
+     */
+    private function checkComponent(
+        SegmentOccurrence|UnplacedSegment $item,
+        ComponentDefinition $definition,
+        ?Component $component,
+        Location $location
+    ): void {
+        $label = "Component '{$definition->longName}' ({$definition->id})";
+        $presence = $component === null ? Presence::NotPresent : Presence::ofComponent($component);
+        if (!$this->checkUsage($item, $definition->usage, $presence, $label, $location)
+            || $component === null
+            || $presence !== Presence::Valued
+        ) {
+            return;
+        }
+
+        if ($definition->maxLength !== null) {
+            $this->checkLength(
+                $item,
+                $this->serializer->serializeComponent($component, $this->message),
+                $definition->maxLength,
+                $label,
+                $location
+            );
+        }
+
+        $type = $this->dataType($definition->dataType);
+        if ($type->isPrimitive()) {
+            $this->checkLeaf($item, $type->name, $component->getSubComponent(1), $label, $location);
+
+            return;
+        }
+
+        foreach ($type->components as $subDefinition) {
+            $this->checkSubComponent(
+                $item,
+                $subDefinition,
+                $component->getSubComponent($subDefinition->position),
+                self::locate($location, null, $subDefinition->position)
+            );
+        }
+    }
+
+    /**
+     * Check one sub-component: usage, then, with a value, its length and its
+     * leaf. A sub-component of a composite type is judged as that type: its
+     * value is the first component of the type, judged by the rules of that
+     * component; the other components cannot be sent and are not judged.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param ComponentDefinition $definition
+     * @param SubComponent|null $subComponent Null when the component stops before it.
+     * @param Location $location Location of the sub-component.
+     *
+     * @return void
+     */
+    private function checkSubComponent(
+        SegmentOccurrence|UnplacedSegment $item,
+        ComponentDefinition $definition,
+        ?SubComponent $subComponent,
+        Location $location
+    ): void {
+        $label = "SubComponent '{$definition->longName}' ({$definition->id})";
+        $presence = $subComponent === null ? Presence::NotPresent : Presence::ofSubComponent($subComponent);
+        if (!$this->checkUsage($item, $definition->usage, $presence, $label, $location)
+            || $subComponent === null
+            || $presence !== Presence::Valued
+        ) {
+            return;
+        }
+
+        $raw = $subComponent->getRawValue();
+        if ($definition->maxLength !== null) {
+            $this->checkLength($item, $raw, $definition->maxLength, $label, $location);
+        }
+
+        $type = $this->dataType($definition->dataType);
+        while (!$type->isPrimitive()) {
+            $first = $type->component(1)
+                ?? throw new \LogicException("Data type {$type->name} has no component.");
+            $label = "Component '{$first->longName}' ({$first->id}) of $label";
+            if (!$this->checkUsage($item, $first->usage, Presence::Valued, $label, $location)) {
+                return;
+            }
+            if ($first->maxLength !== null) {
+                $this->checkLength($item, $raw, $first->maxLength, $label, $location);
+            }
+            $type = $this->dataType($first->dataType);
+        }
+
+        $this->checkLeaf($item, $type->name, $subComponent, $label, $location);
+    }
+
+    /**
+     * Check the usage of an element against its presence.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param Usage $usage
+     * @param Presence $presence
+     * @param string $label
+     * @param Location $location
+     *
+     * @return bool True when the element is present and allowed: its content
+     *              is to be judged.
+     */
+    private function checkUsage(
+        SegmentOccurrence|UnplacedSegment $item,
+        Usage $usage,
+        Presence $presence,
+        string $label,
+        Location $location
+    ): bool {
+        if ($presence === Presence::NotPresent) {
             $this->record($item, $usage === Usage::Required
                 ? $this->newCheck($item, 'Required element', false, "$label is required.", FindingType::RequiredAbsent, $location)
                 : $this->newCheck($item, 'Usage', true, "$label usage is {$usage->value}; absent.", null, $location));
 
-            return;
+            return false;
         }
 
         if ($usage === Usage::NotSupported) {
             $this->record($item, $this->newCheck($item, 'Element not allowed', false, "$label is not allowed.", FindingType::NotAllowedPresent, $location));
 
-            return;
+            return false;
         }
 
         [$type, $finding, $description] = match ($usage) {
@@ -159,20 +377,7 @@ final class ContentChecker
         };
         $this->record($item, $this->newCheck($item, $type, $finding !== FindingType::WithdrawnPresent, $description, $finding, $location));
 
-        $this->checkRepetitionCount($item, $field, $value->countRepeats(), $label, $location);
-
-        foreach ($value->getRepeats() as $index => $repeat) {
-            if ($definition->maxLength === null || Presence::ofRepeat($repeat) !== Presence::Valued) {
-                continue;
-            }
-            $this->checkLength(
-                $item,
-                $this->serializer->serializeFieldRepeat($repeat, $this->message),
-                $definition->maxLength,
-                $label . ($value->countRepeats() > 1 ? ' (Rep. ' . ($index + 1) . ')' : ''),
-                $this->location($item, $field->position, $index + 1)
-            );
-        }
+        return true;
     }
 
     /**
@@ -215,7 +420,7 @@ final class ContentChecker
      * Check the HL7 length of a Raw value against a maximum length.
      *
      * @param SegmentOccurrence|UnplacedSegment $item
-     * @param string $raw Raw value of the element (a field repetition).
+     * @param string $raw Raw value of the element.
      * @param int $maxLength
      * @param string $label
      * @param Location $location
@@ -242,6 +447,71 @@ final class ContentChecker
             $result ? null : FindingType::Length,
             $location
         ));
+    }
+
+    /**
+     * Check the escape sequences of a leaf (a primitive value): well formed,
+     * and allowed by its data type. Recorded only when the Raw value holds
+     * the escape character: a value without it has no sequence to judge.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param string $dataType Primitive data type of the leaf.
+     * @param SubComponent|null $leaf
+     * @param string $label
+     * @param Location $location Location of the element the leaf belongs to.
+     *
+     * @return void
+     */
+    private function checkLeaf(
+        SegmentOccurrence|UnplacedSegment $item,
+        string $dataType,
+        ?SubComponent $leaf,
+        string $label,
+        Location $location
+    ): void {
+        // The data type of a varies value (OBX-5) is given by another field:
+        // its escape sequences cannot be judged against "varies".
+        if ($leaf === null || $dataType === 'varies') {
+            return;
+        }
+
+        $raw = $leaf->getRawValue();
+        $escapeChar = $this->message->getEscapeChar();
+        if ($escapeChar === '' || !str_contains($raw, $escapeChar)) {
+            return;
+        }
+
+        $scan = $this->message->getEscapeSequences()->scan($raw);
+
+        $malformed = $scan->malformed;
+        $this->record($item, $malformed === []
+            ? $this->newCheck($item, 'Escape', true, "$label escape sequences are well formed.", null, $location)
+            : $this->newCheck($item, 'Escape', false,
+                "$label has malformed escape sequence(s): " . implode(', ', $malformed) . '.',
+                FindingType::EscapeMalformed, $location));
+
+        $notAllowed = $this->escapePolicy->notAllowed($scan, $dataType);
+        $this->record($item, $notAllowed === []
+            ? $this->newCheck($item, 'Escape', true, "$label escape sequences are allowed in data type $dataType.", null, $location)
+            : $this->newCheck($item, 'Escape', false,
+                "$label has escape sequence(s) not allowed in data type $dataType: " . implode(', ', $notAllowed) . '.',
+                FindingType::EscapeNotAllowed, $location));
+    }
+
+    /**
+     * Get a data type definition of the profile directory.
+     *
+     * @param string $name
+     *
+     * @return DataTypeDefinition
+     *
+     * @throws \LogicException When the profile directory does not define it
+     *                         (the loader checks every reference).
+     */
+    private function dataType(string $name): DataTypeDefinition
+    {
+        return $this->directory->dataType($name)
+            ?? throw new \LogicException("Data type $name is not defined in the profile directory.");
     }
 
     /**
@@ -286,6 +556,28 @@ final class ContentChecker
             $this->profiled->rankOf($item->position),
             $field,
             $repetition
+        );
+    }
+
+    /**
+     * Location of a component of a repetition, or of a sub-component of a
+     * component.
+     *
+     * @param Location $location Location of the repetition, or of the component.
+     * @param int|null $component Component position (1-based); null to keep that of $location.
+     * @param int|null $subComponent Sub-component position (1-based).
+     *
+     * @return Location
+     */
+    private static function locate(Location $location, ?int $component, ?int $subComponent = null): Location
+    {
+        return new Location(
+            $location->segment,
+            $location->segmentRank,
+            $location->field,
+            $location->repetition,
+            $component ?? $location->component,
+            $subComponent
         );
     }
 }

@@ -10,6 +10,38 @@
     {
         "severity": "Info",
         "type": "conditionalPresent",
+        "location": "MSH-21.2",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (EI.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-3.4.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-3.4.3",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-5.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "Component 'Given Name' (XPN.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
         "location": "PID-7",
         "profilePath": "PID[1]",
         "segment": 3,
@@ -22,5 +54,53 @@
         "profilePath": "PID[1]",
         "segment": 3,
         "message": "Field 'Administrative Sex' (PID.8) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-18.4.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-18.4.3",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "MRG-1.4.2",
+        "profilePath": "MRG[1]",
+        "segment": 4,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "MRG-1.4.3",
+        "profilePath": "MRG[1]",
+        "segment": 4,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "MRG-3.4.2",
+        "profilePath": "MRG[1]",
+        "segment": 4,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "MRG-3.4.3",
+        "profilePath": "MRG[1]",
+        "segment": 4,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
     }
 ]

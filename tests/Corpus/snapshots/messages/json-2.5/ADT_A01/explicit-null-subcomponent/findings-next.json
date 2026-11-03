@@ -6,5 +6,21 @@
         "profilePath": "EVN[1]",
         "segment": 2,
         "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-3.4.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID' (HD.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "conditionalPresent",
+        "location": "PID-3.4.3",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Universal ID Type' (HD.3) usage is C: the condition is not evaluated."
     }
 ]

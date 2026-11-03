@@ -12,7 +12,7 @@
             {
                 "severity": "Error",
                 "segment": 3,
-                "location": "PID-5.1",
+                "location": "PID-5.1.1",
                 "summary": "malformed escape sequence"
             }
         ]

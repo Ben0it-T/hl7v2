@@ -24,24 +24,26 @@ use HL7v2\Validation\ValidationResult;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Content of the segments, field level: usage, count of repetitions as
- * received, HL7 length of each repetition, Explicit null. One finding per
- * cause; each finding attached to its segment element.
+ * Content of the segments: usage, count of repetitions as received, HL7
+ * length and Explicit null of fields, components and sub-components; escape
+ * sequences of the primitive values. One finding per cause; each finding
+ * attached to its segment element.
  */
 final class ContentCheckerTest extends TestCase
 {
     private const PROFILES = __DIR__ . '/../../../../profiles-next';
 
     /**
-     * Fields of the PID segment used by the tests:
+     * Fields of the PID segment used by the tests, ST unless stated:
      * 1 R [1..1] length 1; 2 O [0..2] length 5; 3 X [0..0]; 4 W; 5 B; 6 C; 7 CE;
-     * 8 R [2..3], no length.
+     * 8 R [2..3], no length; then optional fields of the data types of the
+     * profile directory: 9 CX, 10 XPN, 11 TS, 12 FT, 13 NM, 14 varies.
      */
     private static function pid(): SegmentDefinition
     {
-        $field = static fn (int $position, Usage $usage, int $min, ?int $max, ?int $length = null): SegmentField =>
+        $field = static fn (int $position, Usage $usage, int $min, ?int $max, ?int $length = null, string $type = 'ST'): SegmentField =>
             new SegmentField($position, $usage, new Cardinality($min, $max), new FieldDefinition(
-                "PID.$position", '00000', 'ST', $length, null, "Field $position", '3'
+                "PID.$position", '00000', $type, $length, null, "Field $position", '3'
             ));
 
         return new SegmentDefinition('PID', 'Patient Identification', '3', [
@@ -53,6 +55,12 @@ final class ContentCheckerTest extends TestCase
             $field(6, Usage::Conditional, 0, 1),
             $field(7, Usage::ConditionalOrEmpty, 0, 1),
             $field(8, Usage::Required, 2, 3),
+            $field(9, Usage::Optional, 0, null, null, 'CX'),
+            $field(10, Usage::Optional, 0, null, null, 'XPN'),
+            $field(11, Usage::Optional, 0, 1, null, 'TS'),
+            $field(12, Usage::Optional, 0, 1, null, 'FT'),
+            $field(13, Usage::Optional, 0, 1, null, 'NM'),
+            $field(14, Usage::Optional, 0, 1, null, 'varies'),
         ]);
     }
 
@@ -198,26 +206,178 @@ final class ContentCheckerTest extends TestCase
         $this->assertSame([], self::summary($outcome));
     }
 
+    public function testComponentRequiredAbsent(): void
+    {
+        // CX.1 (R) absent; CX.4 (HD) present.
+        [$outcome] = $this->check('PID|A|||||||X~Y|^^^HOSP');
+
+        $this->assertSame(['Error requiredAbsent PID-9.1'], self::summary($outcome));
+    }
+
+    public function testNothingIsJudgedBelowAnExplicitNull(): void
+    {
+        // The repetition is an Explicit null: CX.1 (R) is not required.
+        [$outcome] = $this->check('PID|A|||||||X~Y|""');
+
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testComponentExplicitNullSatisfiesRequired(): void
+    {
+        [$outcome] = $this->check('PID|A|||||||X~Y|""^^^HOSP');
+
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testComponentNotAllowedPresent(): void
+    {
+        // IHE PAM FR: XPN.4 (suffix) is X, even as an Explicit null; XPN.2 is C,
+        // XPN.7 (name type) is R.
+        [$outcome] = $this->check('PID|A|||||||X~Y||DOE^JOHN^^""^^^L', 'json-2.5-IHEPAMFR');
+
+        $this->assertSame(['Info conditionalPresent PID-10.2', 'Error notAllowedPresent PID-10.4'], self::summary($outcome));
+    }
+
+    public function testSubComponentRequiredAbsent(): void
+    {
+        // XPN.1 (FN) without FN.1 (R): FN.2 only.
+        [$outcome] = $this->check('PID|A|||||||X~Y||&VAN^JOHN');
+
+        $this->assertSame(['Error requiredAbsent PID-10.1.1'], self::summary($outcome));
+    }
+
+    public function testExplicitNullInASubComponentIsALiteralValue(): void
+    {
+        // FN.1 = "" beside FN.2: a value of 2 characters, FN.1 is present.
+        [$outcome] = $this->check('PID|A|||||||X~Y||""&VAN^JOHN');
+
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testComponentAndSubComponentLength(): void
+    {
+        // CX.1: 16 characters (15 at most); FN.1: 51 characters (50 at most).
+        [$outcome] = $this->check('PID|A|||||||X~Y|1234567890123456|' . str_repeat('D', 51));
+
+        $this->assertSame(['Error length PID-9.1', 'Error length PID-10.1.1'], self::summary($outcome));
+    }
+
+    public function testCompositeAtTheSubComponentLevelIsJudgedAsItsType(): void
+    {
+        // XPN.10 (DR, B): DR.1 and DR.2 are TS; the value of each is its TS.1 (DTM, R, length 24).
+        [$outcome] = $this->check('PID|A|||||||X~Y||DOE^^^^^^^^^20200101&2020010112000000000000000');
+
+        $this->assertSame(['Info backwardPresent PID-10.10', 'Error length PID-10.10.2'], self::summary($outcome));
+        $this->assertSame(
+            "Component 'Time' (TS.1) of SubComponent 'Range End Date/Time' (DR.2) length (25) exceeds the length defined in the message profile (24).",
+            $outcome->getFindings()[1]->message
+        );
+
+        $entries = self::entries($outcome);
+        $this->assertContains("Usage PID-10.10.1 ok Component 'Time' (TS.1) of SubComponent 'Range Start Date/Time' (DR.1) usage is R.", $entries);
+        // TS.2 cannot be sent at this level: not judged.
+        $this->assertSame([], array_values(array_filter($entries, static fn (string $entry): bool => str_contains($entry, 'TS.2'))));
+    }
+
+    public function testSecondComponentOfATimeStampAsAField(): void
+    {
+        [$outcome] = $this->check('PID|A|||||||X~Y|||20260101^Y');
+        $this->assertSame(['Info backwardPresent PID-11.2'], self::summary($outcome));
+
+        [$outcome] = $this->check('PID|A|||||||X~Y|||20260101^Y', 'json-2.5-IHEPAMFR');
+        $this->assertSame(['Error notAllowedPresent PID-11.2'], self::summary($outcome));
+    }
+
+    public function testEscapeSequencesOfThePrimitiveValues(): void
+    {
+        [$outcome] = $this->check(
+            'PID|A|\.br\||||||X~Y||O\T\BRIEN\H\^JOHN\X41\||A\.br\B\H\C\N\|1\Q\\\H\\'
+        );
+
+        $this->assertSame([
+            'Error escapeNotAllowed PID-2',
+            'Error escapeNotAllowed PID-10.1.1',
+            'Error escapeNotAllowed PID-10.2',
+            'Error escapeMalformed PID-13',
+            'Error escapeNotAllowed PID-13',
+        ], self::summary($outcome));
+        $this->assertSame(
+            "SubComponent 'Surname' (FN.1) has escape sequence(s) not allowed in data type ST: \\H\\.",
+            $outcome->getFindings()[1]->message
+        );
+    }
+
+    public function testEscapeSequenceInATimeStampOfARange(): void
+    {
+        // A TS.2 attempted with an escaped component separator: a DTM allows no sequence.
+        [$outcome] = $this->check('PID|A|||||||X~Y||DOE^^^^^^^^^20200101\S\Y');
+
+        $this->assertSame(['Info backwardPresent PID-10.10', 'Error escapeNotAllowed PID-10.10.1'], self::summary($outcome));
+    }
+
+    public function testEscapeChecksOnlyWhenTheValueHoldsTheEscapeCharacter(): void
+    {
+        [$outcome] = $this->check('PID|A|AB|||||X~Y||DOE^JOHN|||12');
+        $this->assertSame([], array_values(array_filter(self::entries($outcome), static fn (string $entry): bool => str_starts_with($entry, 'Escape'))));
+
+        [$outcome] = $this->check('PID|A|A\F\B||||||X~Y');
+        $this->assertSame([
+            "Escape PID-2 ok Field 'Field 2' (PID.2) escape sequences are well formed.",
+            "Escape PID-2 ok Field 'Field 2' (PID.2) escape sequences are allowed in data type ST.",
+        ], array_values(array_filter(self::entries($outcome), static fn (string $entry): bool => str_starts_with($entry, 'Escape'))));
+    }
+
+    public function testEncodingCharactersAreNotEscapedValues(): void
+    {
+        // MSH-2 "^~\&" would read as a malformed "\&".
+        [$outcome] = $this->check('PID|A|||||||X~Y');
+
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains("Length MSH-2 ok Field 'Field 2' (MSH.2) length (4) does not exceed the length defined in the message profile (4).", self::entries($outcome));
+    }
+
+    public function testVariesValueIsNotCheckedForEscapeSequences(): void
+    {
+        [$outcome] = $this->check('PID|A|||||||X~Y||||||A\H\B\.br\\');
+
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testPrimitiveValueIsItsFirstSubComponent(): void
+    {
+        // The second component of an ST field is in excess: not judged here.
+        [$outcome] = $this->check('PID|A|AB^\H\||||||X~Y');
+
+        $this->assertSame([], self::summary($outcome));
+    }
+
     /**
-     * Run the content checks on a message MSH, then the given segments, on
-     * the structure MSH, PID, [PV1].
+     * Run the content checks on a message MSH, then the given segments, on     * the structure MSH, PID, [PV1], with the data types of a profile directory.
+     * MSH-1 and MSH-2 are defined as ST of length 1 and 4.
+     *
+     * @param string $directory Profile directory in profiles-next.
      *
      * @return array{0: ValidationResult, 1: ProfiledMessage}
      */
-    private function check(string $segments): array
+    private function check(string $segments, string $directory = 'json-2.5'): array
     {
+        $msh = static fn (int $position, int $length): SegmentField => new SegmentField(
+            $position, Usage::Required, new Cardinality(1, 1),
+            new FieldDefinition("MSH.$position", '00000', 'ST', $length, null, "Field $position", '2')
+        );
         $structure = new GroupNode('ROOT', Usage::Required, new Cardinality(1, 1), [
-            new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('MSH', 'MSH', '2', [])),
+            new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('MSH', 'MSH', '2', [$msh(1, 1), $msh(2, 4)])),
             new SegmentNode(Usage::Required, new Cardinality(1, 1), self::pid()),
             new SegmentNode(Usage::Optional, new Cardinality(0, 1), new SegmentDefinition('PV1', 'PV1', '3', [])),
         ]);
 
         $message = $this->parse("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01|1|P|2.5\r" . $segments);
         $result = new ValidationResult();
-        $recorder = new CheckRecorder(ProfileDirectory::open(self::PROFILES . '/json-2.5')->rules, $result, 'ADT_A01');
+        $profileDirectory = ProfileDirectory::open(self::PROFILES . '/' . $directory);
+        $recorder = new CheckRecorder($profileDirectory->rules, $result, 'ADT_A01');
         $profiled = new ProfiledMessage((new StructureMatcher())->match($structure, $message));
 
-        (new ContentChecker())->check($profiled, $message, $recorder);
+        (new ContentChecker($profileDirectory))->check($profiled, $message, $recorder);
 
         return [$result, $profiled];
     }
@@ -256,5 +416,17 @@ final class ContentCheckerTest extends TestCase
             ),
             $findings ?? $result->getFindings()
         );
+    }
+    /**
+     * TestReport entries as "Type Location ok|ko Description".
+     *
+     * @return list<string>
+     */
+    private static function entries(ValidationResult $result): array
+    {
+        return array_values(array_map(
+            static fn (array $entry): string => "{$entry['Type']} {$entry['Location']} " . ($entry['Result'] ? 'ok' : 'ko') . " {$entry['Description']}",
+            $result->getTestReport()
+        ));
     }
 }
