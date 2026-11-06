@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-3.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-4.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-5.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-6.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 has no codes in the profile."
+    }
+]

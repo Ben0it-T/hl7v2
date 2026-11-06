@@ -1,6 +1,38 @@
 [
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-3.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-4.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-5.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-6.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "conditionalPresent",
         "location": "MSH-18",
         "profilePath": "MSH[1]",
@@ -14,6 +46,30 @@
         "profilePath": "MSH[1]",
         "segment": 1,
         "message": "Component 'Namespace ID' (EI.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-21.2",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (EI.2) value (IHE_FRANCE-2.11-PAM) not checked: table 0363 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "EVN-7.1",
+        "profilePath": "EVN[1]",
+        "segment": 2,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PID-3.4.1",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 has no codes in the profile."
     },
     {
         "severity": "Info",
@@ -57,6 +113,14 @@
     },
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PID-18.4.1",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "conditionalPresent",
         "location": "PID-18.4.2",
         "profilePath": "PID[1]",
@@ -73,11 +137,51 @@
     },
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.1",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "Component 'Point of Care' (PL.1) value (WARD1) not checked: table 0302 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.2",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "Component 'Room' (PL.2) value (101) not checked: table 0303 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.3",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "Component 'Bed' (PL.3) value (1) not checked: table 0304 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.4.1",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "conditionalPresent",
         "location": "PV1-19",
         "profilePath": "PV1[1]",
         "segment": 4,
         "message": "Field 'Visit Number' (PV1.19) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-19.4.1",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 has no codes in the profile."
     },
     {
         "severity": "Info",
@@ -102,5 +206,21 @@
         "profilePath": "ZBE[1]",
         "segment": 5,
         "message": "Component 'Namespace ID' (EI.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "ZBE-1.2",
+        "profilePath": "ZBE[1]",
+        "segment": 5,
+        "message": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "ZFV-1.1",
+        "profilePath": "ZFV[1]",
+        "segment": 7,
+        "message": "Component 'Discharge Location' (DLD.1) value (999999999) not checked: table 0113 has no codes in the profile."
     }
 ]

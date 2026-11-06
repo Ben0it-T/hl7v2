@@ -6,6 +6,7 @@ namespace HL7v2\Profile;
 use HL7v2\Exception\HL7Exception;
 use HL7v2\Profile\Definition\DataTypeDefinition;
 use HL7v2\Profile\Definition\SegmentDefinition;
+use HL7v2\Profile\Definition\TableDefinition;
 use HL7v2\Profile\DefinitionReader;
 use HL7v2\Profile\MessageProfile;
 use HL7v2\Profile\Rules;
@@ -29,6 +30,7 @@ final readonly class ProfileDirectory
      * @param array<string, array<string, string>> $messageTypes Structure by message code and trigger event.
      * @param array<string, SegmentDefinition> $segments
      * @param array<string, DataTypeDefinition> $dataTypes
+     * @param array<string, TableDefinition> $tables
      */
     private function __construct(
         public string $path,
@@ -39,7 +41,8 @@ final readonly class ProfileDirectory
         public Rules $rules,
         private array $messageTypes,
         private array $segments,
-        private array $dataTypes
+        private array $dataTypes,
+        private array $tables
     ) {
         //
     }
@@ -70,7 +73,8 @@ final readonly class ProfileDirectory
             Rules::fromArray(self::readJson("$path/rules.json"), "$path/rules.json"),
             DefinitionReader::messageTypes(self::readJson("$path/messageType.json"), "$path/messageType.json"),
             $segments,
-            $dataTypes
+            $dataTypes,
+            DefinitionReader::tables(self::readJson("$path/hl7tables.json"), "$path/hl7tables.json")
         );
     }
 
@@ -120,6 +124,18 @@ final readonly class ProfileDirectory
     public function dataType(string $name): ?DataTypeDefinition
     {
         return $this->dataTypes[$name] ?? null;
+    }
+
+    /**
+     * Get a table of hl7tables.json.
+     *
+     * @param string $id Table id (0001, IHE-FRANCE-ZBE-4...).
+     *
+     * @return TableDefinition|null Null when the profile does not have it.
+     */
+    public function table(string $id): ?TableDefinition
+    {
+        return $this->tables[$id] ?? null;
     }
 
     /**

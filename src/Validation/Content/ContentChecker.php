@@ -13,17 +13,21 @@ use HL7v2\Profile\Definition\ComponentDefinition;
 use HL7v2\Profile\Definition\DataTypeDefinition;
 use HL7v2\Profile\Definition\SegmentDefinition;
 use HL7v2\Profile\Definition\SegmentField;
+use HL7v2\Profile\Definition\TableType;
 use HL7v2\Profile\Definition\Usage;
 use HL7v2\Profile\ProfileDirectory;
 use HL7v2\Serializer\HL7StringSerializer;
 use HL7v2\Validation\Check;
 use HL7v2\Validation\CheckRecorder;
+use HL7v2\Validation\Content\LeafTable;
 use HL7v2\Validation\FindingType;
 use HL7v2\Validation\ProfiledMessage;
 use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\UnplacedSegment;
 use HL7v2\Validation\Value\EscapePolicy;
 use HL7v2\Validation\Value\Presence;
+use HL7v2\Validation\Value\PrimitiveValidators;
+use HL7v2\Validation\Value\TableMembership;
 
 /**
  * Judges the content of the segments of a Profiled message, in message
@@ -55,9 +59,29 @@ use HL7v2\Validation\Value\Presence;
  *   HL7 length); the other components cannot be sent and are not judged.
  *   A TS in a DR stays a TS, its value is its TS.1;
  * - primitive (the leaf): the escape sequences of its Raw value, well formed
- *   and allowed by its data type. The leaf of a primitive field or component
- *   is its first sub-component; what follows it is in excess.
+ *   and allowed by its data type; then, on its Decoded value, its data type
+ *   (the validator of the type; ID and IS have none, their table checks
+ *   them; ST, TX and FT have their own rules, not checked here yet; any
+ *   other type without validator gives noDatatypeValidator) and its table.
+ *   The leaf of a primitive field or component is its first sub-component;
+ *   what follows it is in excess.
  * An Explicit null, or an element without value, has nothing below it to judge.
+ *
+ * Table of a leaf: the table of its element in the profile, else the table
+ * passed down by its parent; the table of a composite is not checked, except
+ * for a CE (HL7 v2.5 section 2.A.8):
+ * - CE.1 against the table its coding system CE.3 designates: HL7nnnn is
+ *   table nnnn, a table id of the profile is that table, any other coding
+ *   system is not a table of the profile and CE.1 is not checked; CE.3
+ *   empty: the table of the CE;
+ * - CE.4 against the table its coding system CE.6 designates, in the same
+ *   way; CE.6 empty: not checked;
+ * - a CE at the sub-component level has no CE.3: the table of the CE.
+ * Outcome: not in the table, tableClosed for a table closed by the profile
+ * (rules.json), else according to the type of the table (tableHL7,
+ * tableUser); a local code (Z...) is accepted in the tables of
+ * localCodeTables; a table absent from the profile, or without codes, gives
+ * tableUnavailable.
  *
  * A finding is attached to the segment element; its Location gives the
  * element (PID[1]-3, PID[1]-3[2], PID[1]-5.10, PID[1]-5.10.1).
@@ -83,15 +107,21 @@ final class ContentChecker
 
     private EscapePolicy $escapePolicy;
 
+    private PrimitiveValidators $validators;
+
+    private TableMembership $tables;
+
     /**
      * @param ProfileDirectory $directory Profile directory of the message
-     *        profile: definitions of the data types.
+     *        profile: definitions of the data types, tables and rules.
      */
     public function __construct(
         private readonly ProfileDirectory $directory
     ) {
         $this->serializer = new HL7StringSerializer();
         $this->escapePolicy = new EscapePolicy();
+        $this->validators = PrimitiveValidators::standard();
+        $this->tables = new TableMembership();
     }
 
     /**
@@ -198,11 +228,18 @@ final class ContentChecker
 
             if ($type->isPrimitive()) {
                 if ($escapes) {
-                    $this->checkLeaf($item, $type->name, $repeat->getComponent(1)?->getSubComponent(1), $repLabel, $repLocation);
+                    $this->checkLeaf(
+                        $item,
+                        $type->name,
+                        $repeat->getComponent(1)?->getSubComponent(1),
+                        new LeafTable($definition->table),
+                        $repLabel,
+                        $repLocation
+                    );
                 }
                 continue;
             }
-            $this->checkComponents($item, $type, $repeat, $repLocation);
+            $this->checkComponents($item, $type, $definition->table, $repeat, $repLocation);
         }
     }
 
@@ -211,6 +248,7 @@ final class ContentChecker
      *
      * @param SegmentOccurrence|UnplacedSegment $item
      * @param DataTypeDefinition $type Composite type of the field.
+     * @param string|null $table Table of the field.
      * @param FieldRepeat $repeat Repetition with a value.
      * @param Location $location Location of the repetition.
      *
@@ -219,14 +257,24 @@ final class ContentChecker
     private function checkComponents(
         SegmentOccurrence|UnplacedSegment $item,
         DataTypeDefinition $type,
+        ?string $table,
         FieldRepeat $repeat,
         Location $location
     ): void {
+        $valueAt = static function (int $position) use ($repeat): string {
+            $component = $repeat->getComponent($position);
+
+            return $component !== null && Presence::ofComponent($component) === Presence::Valued
+                ? $component->getSubComponent(1)?->getDecodedValue() ?? ''
+                : '';
+        };
+
         foreach ($type->components as $definition) {
             $this->checkComponent(
                 $item,
                 $definition,
                 $repeat->getComponent($definition->position),
+                $this->codedTable($type, $table, $definition->position, $valueAt),
                 self::locate($location, $definition->position)
             );
         }
@@ -239,6 +287,7 @@ final class ContentChecker
      * @param SegmentOccurrence|UnplacedSegment $item
      * @param ComponentDefinition $definition
      * @param Component|null $component Null when the repetition stops before it.
+     * @param LeafTable $table Table passed down by the field (a CE).
      * @param Location $location Location of the component.
      *
      * @return void
@@ -247,6 +296,7 @@ final class ContentChecker
         SegmentOccurrence|UnplacedSegment $item,
         ComponentDefinition $definition,
         ?Component $component,
+        LeafTable $table,
         Location $location
     ): void {
         $label = "Component '{$definition->longName}' ({$definition->id})";
@@ -270,16 +320,32 @@ final class ContentChecker
 
         $type = $this->dataType($definition->dataType);
         if ($type->isPrimitive()) {
-            $this->checkLeaf($item, $type->name, $component->getSubComponent(1), $label, $location);
+            $this->checkLeaf(
+                $item,
+                $type->name,
+                $component->getSubComponent(1),
+                $definition->table !== null ? new LeafTable($definition->table) : $table,
+                $label,
+                $location
+            );
 
             return;
         }
+
+        $valueAt = static function (int $position) use ($component): string {
+            $subComponent = $component->getSubComponent($position);
+
+            return $subComponent !== null && Presence::ofSubComponent($subComponent) === Presence::Valued
+                ? $subComponent->getDecodedValue()
+                : '';
+        };
 
         foreach ($type->components as $subDefinition) {
             $this->checkSubComponent(
                 $item,
                 $subDefinition,
                 $component->getSubComponent($subDefinition->position),
+                $this->codedTable($type, $definition->table, $subDefinition->position, $valueAt),
                 self::locate($location, null, $subDefinition->position)
             );
         }
@@ -294,6 +360,7 @@ final class ContentChecker
      * @param SegmentOccurrence|UnplacedSegment $item
      * @param ComponentDefinition $definition
      * @param SubComponent|null $subComponent Null when the component stops before it.
+     * @param LeafTable $table Table passed down by the component (a CE).
      * @param Location $location Location of the sub-component.
      *
      * @return void
@@ -302,6 +369,7 @@ final class ContentChecker
         SegmentOccurrence|UnplacedSegment $item,
         ComponentDefinition $definition,
         ?SubComponent $subComponent,
+        LeafTable $table,
         Location $location
     ): void {
         $label = "SubComponent '{$definition->longName}' ({$definition->id})";
@@ -318,6 +386,9 @@ final class ContentChecker
             $this->checkLength($item, $raw, $definition->maxLength, $label, $location);
         }
 
+        if ($definition->table !== null) {
+            $table = new LeafTable($definition->table);
+        }
         $type = $this->dataType($definition->dataType);
         while (!$type->isPrimitive()) {
             $first = $type->component(1)
@@ -329,10 +400,13 @@ final class ContentChecker
             if ($first->maxLength !== null) {
                 $this->checkLength($item, $raw, $first->maxLength, $label, $location);
             }
+            if ($first->table !== null) {
+                $table = new LeafTable($first->table);
+            }
             $type = $this->dataType($first->dataType);
         }
 
-        $this->checkLeaf($item, $type->name, $subComponent, $label, $location);
+        $this->checkLeaf($item, $type->name, $subComponent, $table, $label, $location);
     }
 
     /**
@@ -450,13 +524,13 @@ final class ContentChecker
     }
 
     /**
-     * Check the escape sequences of a leaf (a primitive value): well formed,
-     * and allowed by its data type. Recorded only when the Raw value holds
-     * the escape character: a value without it has no sequence to judge.
+     * Check a leaf (a primitive value): its escape sequences, then its data
+     * type and its table.
      *
      * @param SegmentOccurrence|UnplacedSegment $item
      * @param string $dataType Primitive data type of the leaf.
      * @param SubComponent|null $leaf
+     * @param LeafTable $table Table to check the leaf against.
      * @param string $label
      * @param Location $location Location of the element the leaf belongs to.
      *
@@ -466,16 +540,47 @@ final class ContentChecker
         SegmentOccurrence|UnplacedSegment $item,
         string $dataType,
         ?SubComponent $leaf,
+        LeafTable $table,
         string $label,
         Location $location
     ): void {
         // The data type of a varies value (OBX-5) is given by another field:
-        // its escape sequences cannot be judged against "varies".
+        // it cannot be judged against "varies".
         if ($leaf === null || $dataType === 'varies') {
             return;
         }
 
         $raw = $leaf->getRawValue();
+        $this->checkEscapes($item, $dataType, $raw, $label, $location);
+        if ($raw === '') {
+            return;
+        }
+
+        $value = $leaf->getDecodedValue();
+        $this->checkDataType($item, $dataType, $value, $label, $location);
+        $this->checkTable($item, $table, $value, $label, $location);
+    }
+
+    /**
+     * Check the escape sequences of a leaf: well formed, and allowed by its
+     * data type. Recorded only when the Raw value holds the escape character:
+     * a value without it has no sequence to judge.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param string $dataType Primitive data type of the leaf.
+     * @param string $raw Raw value of the leaf.
+     * @param string $label
+     * @param Location $location
+     *
+     * @return void
+     */
+    private function checkEscapes(
+        SegmentOccurrence|UnplacedSegment $item,
+        string $dataType,
+        string $raw,
+        string $label,
+        Location $location
+    ): void {
         $escapeChar = $this->message->getEscapeChar();
         if ($escapeChar === '' || !str_contains($raw, $escapeChar)) {
             return;
@@ -496,6 +601,158 @@ final class ContentChecker
             : $this->newCheck($item, 'Escape', false,
                 "$label has escape sequence(s) not allowed in data type $dataType: " . implode(', ', $notAllowed) . '.',
                 FindingType::EscapeNotAllowed, $location));
+    }
+
+    /**
+     * Check the Decoded value of a leaf against the validator of its data type.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param string $dataType Primitive data type of the leaf.
+     * @param string $value Decoded value, not empty.
+     * @param string $label
+     * @param Location $location
+     *
+     * @return void
+     */
+    private function checkDataType(
+        SegmentOccurrence|UnplacedSegment $item,
+        string $dataType,
+        string $value,
+        string $label,
+        Location $location
+    ): void {
+        // ID and IS: checked against their table. ST, TX and FT: their own
+        // rules, not checked here yet.
+        if (in_array($dataType, ['ID', 'IS', 'ST', 'TX', 'FT'], true)) {
+            return;
+        }
+
+        $validator = $this->validators->get($dataType);
+        if ($validator === null) {
+            $this->record($item, $this->newCheck($item, 'Datatype', true,
+                "$label data type is $dataType: no validator, value not checked.",
+                FindingType::NoDatatypeValidator, $location));
+
+            return;
+        }
+
+        $reason = $validator->check($value);
+        $this->record($item, $reason === null
+            ? $this->newCheck($item, 'Datatype', true, "$label value is a valid $dataType.", null, $location)
+            : $this->newCheck($item, 'Datatype', false, "$label value is not a valid $dataType: $reason",
+                FindingType::Datatype, $location));
+    }
+
+    /**
+     * Check the Decoded value of a leaf against its table.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param LeafTable $table
+     * @param string $value Decoded value, not empty.
+     * @param string $label
+     * @param Location $location
+     *
+     * @return void
+     */
+    private function checkTable(
+        SegmentOccurrence|UnplacedSegment $item,
+        LeafTable $table,
+        string $value,
+        string $label,
+        Location $location
+    ): void {
+        if ($table->id === null) {
+            if ($table->codingSystem !== null) {
+                $this->record($item, $this->newCheck($item, 'Table', true,
+                    "$label value ($value) not checked: coding system '{$table->codingSystem}' is not a table of the profile.",
+                    null, $location));
+            }
+
+            return;
+        }
+
+        $id = $table->id;
+        $source = $table->codingSystem === null ? '' : " (coding system '{$table->codingSystem}')";
+        $definition = $this->directory->table($id);
+        if ($definition === null || $definition->codes === []) {
+            $this->record($item, $this->newCheck($item, 'Table', true,
+                "$label value ($value) not checked: table $id$source "
+                    . ($definition === null ? 'is not in the profile.' : 'has no codes in the profile.'),
+                FindingType::TableUnavailable, $location));
+
+            return;
+        }
+
+        $kind = $definition->type->value . ' table';
+        $rules = $this->directory->rules;
+
+        if ($this->tables->contains($definition, $value)) {
+            $this->record($item, $this->newCheck($item, 'Table', true,
+                "$label value ($value) exists in table $id$source ($kind).", null, $location));
+
+            return;
+        }
+
+        if ($rules->acceptsLocalCodes($id) && preg_match('/^Z[A-Z0-9_]*$/', $value) === 1) {
+            $this->record($item, $this->newCheck($item, 'Table', true,
+                "$label value ($value) accepted as a local code of table $id$source ($kind).", null, $location));
+
+            return;
+        }
+
+        $this->record($item, $this->newCheck($item, 'Table', false,
+            "$label value ($value) not in table $id$source ($kind" . ($rules->isClosedTable($id) ? ', closed by the profile' : '') . ').',
+            match (true) {
+                $rules->isClosedTable($id)            => FindingType::TableClosed,
+                $definition->type === TableType::HL7  => FindingType::TableHL7,
+                default                               => FindingType::TableUser,
+            },
+            $location));
+    }
+
+    /**
+     * Table passed down by a composite to one of its components: for a CE,
+     * CE.1 and CE.4 against the table their coding system designates (CE.3,
+     * CE.6); CE.1 against the table of the CE when CE.3 is empty. Nothing for
+     * any other composite, or any other component.
+     *
+     * @param DataTypeDefinition $type Composite type.
+     * @param string|null $table Table of the composite element.
+     * @param int $position Position of the component (1-based).
+     * @param callable(int): string $valueAt Decoded value of a component of
+     *        the composite element, empty when it has no value.
+     *
+     * @return LeafTable
+     */
+    private function codedTable(DataTypeDefinition $type, ?string $table, int $position, callable $valueAt): LeafTable
+    {
+        if ($type->name !== 'CE' || ($position !== 1 && $position !== 4)) {
+            return LeafTable::none();
+        }
+
+        $codingSystem = $valueAt($position + 2);
+        if ($codingSystem === '') {
+            return $position === 1 ? new LeafTable($table) : LeafTable::none();
+        }
+
+        return new LeafTable($this->tableDesignatedBy($codingSystem), $codingSystem);
+    }
+
+    /**
+     * Table designated by a coding system (table 0396): HL7nnnn is table
+     * nnnn; a table id of the profile is that table.
+     *
+     * @param string $codingSystem Coding system, as received.
+     *
+     * @return string|null Null when the coding system is not a table of the profile.
+     */
+    private function tableDesignatedBy(string $codingSystem): ?string
+    {
+        if (preg_match('/^HL7(\d{4})$/', $codingSystem, $matches) === 1) {
+            return $matches[1];
+        }
+
+        return $this->directory->table($codingSystem) !== null ? $codingSystem : null;
     }
 
     /**

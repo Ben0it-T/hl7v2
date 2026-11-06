@@ -1,6 +1,38 @@
 [
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-3.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-4.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-5.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-6.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "conditionalPresent",
         "location": "ORC-2",
         "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]",
@@ -9,11 +41,27 @@
     },
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "ORC-2.2",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/ORC[1]",
+        "segment": 2,
+        "message": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
         "type": "conditionalPresent",
         "location": "OBR-2",
         "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]",
         "segment": 3,
         "message": "Field 'Placer Order Number' (OBR.2) usage is C: the condition is not evaluated."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "OBR-2.2",
+        "profilePath": "PATIENT_RESULT[1]/ORDER_OBSERVATION[1]/OBR[1]",
+        "segment": 3,
+        "message": "Component 'Namespace ID' (EI.2) value (SENDAPP) not checked: table 0363 has no codes in the profile."
     },
     {
         "severity": "Info",

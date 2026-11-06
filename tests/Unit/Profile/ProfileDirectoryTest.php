@@ -7,6 +7,7 @@ use HL7v2\Exception\HL7Exception;
 use HL7v2\Profile\Definition\GroupNode;
 use HL7v2\Profile\Definition\SegmentNode;
 use HL7v2\Profile\Definition\StructureNode;
+use HL7v2\Profile\Definition\TableType;
 use HL7v2\Profile\Definition\Usage;
 use HL7v2\Profile\ProfileDirectory;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -99,6 +100,25 @@ final class ProfileDirectoryTest extends TestCase
         $this->assertSame('IS', $hd1->dataType);
         $this->assertSame('0300', $hd1->table);
         $this->assertSame(Usage::Conditional, $hd->component(2)?->usage);
+
+        $sex = $directory->table('0001');
+        $this->assertNotNull($sex);
+        $this->assertSame('0001', $sex->id);
+        $this->assertSame(TableType::User, $sex->type);
+        $this->assertSame(['A', 'F', 'M', 'N', 'O', 'U'], $sex->codes);
+        $this->assertSame(TableType::HL7, $directory->table('0136')?->type);
+        $this->assertSame([], $directory->table('0300')?->codes);
+        $this->assertNull($directory->table('ZZZZ'));
+    }
+
+    public function testTablesOfADerivedProfile(): void
+    {
+        $directory = ProfileDirectory::open(self::PROFILES . '/json-2.5-IHEPAMFR');
+
+        $this->assertSame(['INSERT', 'CANCEL', 'UPDATE'], $directory->table('IHE-FRANCE-ZBE-4')?->codes);
+        $codingSystems = $directory->table('0396');
+        $this->assertNotNull($codingSystems);
+        $this->assertContains('ISO 3166 alpha-3', $codingSystems->codes);
     }
 
     public function testMessageStructureTree(): void
@@ -302,6 +322,31 @@ final class ProfileDirectoryTest extends TestCase
             $d['PATIENT']['choice'] = false;
             return $d;
         }, "PATIENT: 'choice' must be true when present."];
+
+        yield 'unknown key of a table' => ['hl7tables.json', static function (array $d): array {
+            $d['0001']['elements'] = [];
+            return $d;
+        }, '0001: unknown key(s) elements.'];
+
+        yield 'table id not its key' => ['hl7tables.json', static function (array $d): array {
+            $d['0001']['id'] = '0002';
+            return $d;
+        }, "0001: 'id' must be '0001'."];
+
+        yield 'unknown table type' => ['hl7tables.json', static function (array $d): array {
+            $d['0001']['type'] = 'Local';
+            return $d;
+        }, "0001: unknown table type 'Local'."];
+
+        yield 'codes not a list' => ['hl7tables.json', static function (array $d): array {
+            $d['0001']['codes'] = ['F' => 'Female'];
+            return $d;
+        }, "0001: 'codes' must be a list."];
+
+        yield 'code not a string' => ['hl7tables.json', static function (array $d): array {
+            $d['0001']['codes'] = ['F', 1];
+            return $d;
+        }, "0001: 'codes' must be a list of strings."];
     }
 
     /**
@@ -357,6 +402,10 @@ final class ProfileDirectoryTest extends TestCase
                 ]],
             ],
             'messageType.json' => ['ADT' => ['A01' => 'ADT_A01']],
+            'hl7tables.json' => [
+                '0001' => ['id' => '0001', 'name' => 'Administrative Sex', 'type' => 'User', 'codes' => ['F', 'M', 'U']],
+                '0300' => ['id' => '0300', 'name' => 'Namespace ID', 'type' => 'User', 'codes' => []],
+            ],
             'structures/ADT-A01-ADT_A01.json' => [
                 'ADT_A01' => ['elements' => [
                     ['segment' => 'MSH', 'usage' => 'R', 'min' => '1', 'max' => '1'],

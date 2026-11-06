@@ -37,13 +37,17 @@ final class ContentCheckerTest extends TestCase
      * Fields of the PID segment used by the tests, ST unless stated:
      * 1 R [1..1] length 1; 2 O [0..2] length 5; 3 X [0..0]; 4 W; 5 B; 6 C; 7 CE;
      * 8 R [2..3], no length; then optional fields of the data types of the
-     * profile directory: 9 CX, 10 XPN, 11 TS, 12 FT, 13 NM, 14 varies.
+     * profile directory: 9 CX, 10 XPN, 11 TS, 12 FT, 13 NM, 14 varies;
+     * 15 ID of table 0136 (HL7), 16 IS of table 0001 (User, closed in IHE PAM
+     * FR), 17 CE of table 0001, 18 ID of table 0003 (local codes accepted),
+     * 19 ID of table ZZZZ (absent), 20 IS of table 0300 (without codes),
+     * 21 DT, 22 SI, 23 TM, 24 GTS (no validator), 25 NM of table 0136.
      */
     private static function pid(): SegmentDefinition
     {
-        $field = static fn (int $position, Usage $usage, int $min, ?int $max, ?int $length = null, string $type = 'ST'): SegmentField =>
+        $field = static fn (int $position, Usage $usage, int $min, ?int $max, ?int $length = null, string $type = 'ST', ?string $table = null): SegmentField =>
             new SegmentField($position, $usage, new Cardinality($min, $max), new FieldDefinition(
-                "PID.$position", '00000', $type, $length, null, "Field $position", '3'
+                "PID.$position", '00000', $type, $length, $table, "Field $position", '3'
             ));
 
         return new SegmentDefinition('PID', 'Patient Identification', '3', [
@@ -61,6 +65,17 @@ final class ContentCheckerTest extends TestCase
             $field(12, Usage::Optional, 0, 1, null, 'FT'),
             $field(13, Usage::Optional, 0, 1, null, 'NM'),
             $field(14, Usage::Optional, 0, 1, null, 'varies'),
+            $field(15, Usage::Optional, 0, 1, null, 'ID', '0136'),
+            $field(16, Usage::Optional, 0, 1, null, 'IS', '0001'),
+            $field(17, Usage::Optional, 0, 1, null, 'CE', '0001'),
+            $field(18, Usage::Optional, 0, 1, null, 'ID', '0003'),
+            $field(19, Usage::Optional, 0, 1, null, 'ID', 'ZZZZ'),
+            $field(20, Usage::Optional, 0, 1, null, 'IS', '0300'),
+            $field(21, Usage::Optional, 0, 1, null, 'DT'),
+            $field(22, Usage::Optional, 0, 1, null, 'SI'),
+            $field(23, Usage::Optional, 0, 1, null, 'TM'),
+            $field(24, Usage::Optional, 0, 1, null, 'GTS'),
+            $field(25, Usage::Optional, 0, 1, null, 'NM', '0136'),
         ]);
     }
 
@@ -208,10 +223,10 @@ final class ContentCheckerTest extends TestCase
 
     public function testComponentRequiredAbsent(): void
     {
-        // CX.1 (R) absent; CX.4 (HD) present.
+        // CX.1 (R) absent; CX.4 (HD) present, HD.1 of table 0300, without codes.
         [$outcome] = $this->check('PID|A|||||||X~Y|^^^HOSP');
 
-        $this->assertSame(['Error requiredAbsent PID-9.1'], self::summary($outcome));
+        $this->assertSame(['Error requiredAbsent PID-9.1', 'Info tableUnavailable PID-9.4.1'], self::summary($outcome));
     }
 
     public function testNothingIsJudgedBelowAnExplicitNull(): void
@@ -226,7 +241,7 @@ final class ContentCheckerTest extends TestCase
     {
         [$outcome] = $this->check('PID|A|||||||X~Y|""^^^HOSP');
 
-        $this->assertSame([], self::summary($outcome));
+        $this->assertSame(['Info tableUnavailable PID-9.4.1'], self::summary($outcome));
     }
 
     public function testComponentNotAllowedPresent(): void
@@ -267,7 +282,10 @@ final class ContentCheckerTest extends TestCase
         // XPN.10 (DR, B): DR.1 and DR.2 are TS; the value of each is its TS.1 (DTM, R, length 24).
         [$outcome] = $this->check('PID|A|||||||X~Y||DOE^^^^^^^^^20200101&2020010112000000000000000');
 
-        $this->assertSame(['Info backwardPresent PID-10.10', 'Error length PID-10.10.2'], self::summary($outcome));
+        $this->assertSame(
+            ['Info backwardPresent PID-10.10', 'Error length PID-10.10.2', 'Error datatype PID-10.10.2'],
+            self::summary($outcome)
+        );
         $this->assertSame(
             "Component 'Time' (TS.1) of SubComponent 'Range End Date/Time' (DR.2) length (25) exceeds the length defined in the message profile (24).",
             $outcome->getFindings()[1]->message
@@ -300,6 +318,7 @@ final class ContentCheckerTest extends TestCase
             'Error escapeNotAllowed PID-10.2',
             'Error escapeMalformed PID-13',
             'Error escapeNotAllowed PID-13',
+            'Error datatype PID-13',
         ], self::summary($outcome));
         $this->assertSame(
             "SubComponent 'Surname' (FN.1) has escape sequence(s) not allowed in data type ST: \\H\\.",
@@ -309,10 +328,14 @@ final class ContentCheckerTest extends TestCase
 
     public function testEscapeSequenceInATimeStampOfARange(): void
     {
-        // A TS.2 attempted with an escaped component separator: a DTM allows no sequence.
+        // A TS.2 attempted with an escaped component separator: a DTM allows no
+        // sequence, and its Decoded value (20200101^Y) is not a DTM.
         [$outcome] = $this->check('PID|A|||||||X~Y||DOE^^^^^^^^^20200101\S\Y');
 
-        $this->assertSame(['Info backwardPresent PID-10.10', 'Error escapeNotAllowed PID-10.10.1'], self::summary($outcome));
+        $this->assertSame(
+            ['Info backwardPresent PID-10.10', 'Error escapeNotAllowed PID-10.10.1', 'Error datatype PID-10.10.1'],
+            self::summary($outcome)
+        );
     }
 
     public function testEscapeChecksOnlyWhenTheValueHoldsTheEscapeCharacter(): void
@@ -349,6 +372,204 @@ final class ContentCheckerTest extends TestCase
         [$outcome] = $this->check('PID|A|AB^\H\||||||X~Y');
 
         $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testPrimitiveDataTypes(): void
+    {
+        [$outcome] = $this->check(self::pidWith([11 => '20260101120000+0100', 13 => '-1.5', 21 => '20260228', 22 => '3', 23 => '2359']));
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains("Datatype PID-21 ok Field 'Field 21' (PID.21) value is a valid DT.", self::entries($outcome));
+
+        [$outcome] = $this->check(self::pidWith([11 => '20260230', 13 => '1,5', 21 => '2026022', 22 => '-3', 23 => '2460']));
+        $this->assertSame([
+            'Error datatype PID-11.1',
+            'Error datatype PID-13',
+            'Error datatype PID-21',
+            'Error datatype PID-22',
+            'Error datatype PID-23',
+        ], self::summary($outcome));
+        $this->assertSame(
+            "Component 'Time' (TS.1) value is not a valid DTM: '20260230' is not a date of the calendar.",
+            $outcome->getFindings()[0]->message
+        );
+    }
+
+    public function testDataTypeWithoutValidator(): void
+    {
+        // GTS: no validator, an Info. ST, ID and IS: no Datatype entry.
+        [$outcome] = $this->check(self::pidWith([2 => 'AB', 15 => 'Y', 16 => 'F', 24 => 'R1']));
+
+        $this->assertSame(['Info noDatatypeValidator PID-24'], self::summary($outcome));
+        $this->assertSame(['PID-24'], array_values(array_map(
+            static fn (string $entry): string => explode(' ', $entry)[1],
+            array_filter(self::entries($outcome), static fn (string $entry): bool => str_starts_with($entry, 'Datatype'))
+        )));
+    }
+
+    public function testValueOutsideItsTable(): void
+    {
+        // 0136 is an HL7 table, 0001 a User table.
+        [$outcome] = $this->check(self::pidWith([15 => 'y', 16 => 'X']));
+
+        $this->assertSame(['Error tableHL7 PID-15', 'Warning tableUser PID-16'], self::summary($outcome));
+        $this->assertSame("Field 'Field 15' (PID.15) value (y) not in table 0136 (HL7 table).", $outcome->getFindings()[0]->message);
+    }
+
+    public function testValueOutsideATableClosedByTheProfile(): void
+    {
+        // IHE PAM FR closes table 0001.
+        [$outcome] = $this->check(self::pidWith([15 => 'Y', 16 => 'A']), 'json-2.5-IHEPAMFR');
+
+        $this->assertSame(['Error tableClosed PID-16'], self::summary($outcome));
+        $this->assertSame("Field 'Field 16' (PID.16) value (A) not in table 0001 (User table, closed by the profile).", $outcome->getFindings()[0]->message);
+    }
+
+    public function testTableIsCheckedOnTheDecodedValue(): void
+    {
+        // \X59\ is "Y".
+        [$outcome] = $this->check(self::pidWith([15 => '\X59\\']));
+
+        $this->assertSame(['Error escapeNotAllowed PID-15'], self::summary($outcome));
+        $this->assertContains("Table PID-15 ok Field 'Field 15' (PID.15) value (Y) exists in table 0136 (HL7 table).", self::entries($outcome));
+    }
+
+    public function testLocalCodeOfATableThatAcceptsThem(): void
+    {
+        [$outcome] = $this->check(self::pidWith([18 => 'Z01']));
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains("Table PID-18 ok Field 'Field 18' (PID.18) value (Z01) accepted as a local code of table 0003 (HL7 table).", self::entries($outcome));
+
+        // Not in a table that does not accept them.
+        [$outcome] = $this->check(self::pidWith([15 => 'Z01']));
+        $this->assertSame(['Error tableHL7 PID-15'], self::summary($outcome));
+    }
+
+    public function testTableUnavailable(): void
+    {
+        [$outcome] = $this->check(self::pidWith([19 => 'X', 20 => 'X']));
+
+        $this->assertSame(['Info tableUnavailable PID-19', 'Info tableUnavailable PID-20'], self::summary($outcome));
+        $this->assertSame("Field 'Field 19' (PID.19) value (X) not checked: table ZZZZ is not in the profile.", $outcome->getFindings()[0]->message);
+        $this->assertSame("Field 'Field 20' (PID.20) value (X) not checked: table 0300 has no codes in the profile.", $outcome->getFindings()[1]->message);
+    }
+
+    public function testDataTypeAndTableGiveOneFindingEach(): void
+    {
+        // An NM field with a table: not a number, and not in table 0136.
+        [$outcome] = $this->check(self::pidWith([25 => 'X']));
+
+        $this->assertSame(['Error datatype PID-25', 'Error tableHL7 PID-25'], self::summary($outcome));
+    }
+
+    public function testCodedElementWithoutCodingSystemUsesTheTableOfTheField(): void
+    {
+        [$outcome] = $this->check(self::pidWith([17 => 'M^Male']));
+        $this->assertSame([], self::summary($outcome));
+
+        [$outcome] = $this->check(self::pidWith([17 => 'X^Unknown']));
+        $this->assertSame(['Warning tableUser PID-17.1'], self::summary($outcome));
+    }
+
+    public function testCodedElementAgainstTheTableItsCodingSystemDesignates(): void
+    {
+        // CE.3 = HL70136: CE.1 against table 0136, not table 0001 of the field.
+        [$outcome] = $this->check(self::pidWith([17 => 'Y^Yes^HL70136']));
+        $this->assertSame([], self::summary($outcome));
+
+        [$outcome] = $this->check(self::pidWith([17 => 'M^Male^HL70136']));
+        $this->assertSame(['Error tableHL7 PID-17.1'], self::summary($outcome));
+        $this->assertSame(
+            "Component 'Identifier' (CE.1) value (M) not in table 0136 (coding system 'HL70136') (HL7 table).",
+            $outcome->getFindings()[0]->message
+        );
+
+        // HL79998: a table absent from the profile.
+        [$outcome] = $this->check(self::pidWith([17 => 'M^Male^HL79998']));
+        $this->assertSame(['Info tableUnavailable PID-17.1'], self::summary($outcome));
+    }
+
+    public function testCodedElementOfAnotherCodingSystemIsNotChecked(): void
+    {
+        // ISO3166 is in table 0396 (pattern ISOnnnn); CE.1 is not checked.
+        [$outcome] = $this->check(self::pidWith([17 => 'FR^France^ISO3166']));
+
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains(
+            "Table PID-17.1 ok Component 'Identifier' (CE.1) value (FR) not checked: coding system 'ISO3166' is not a table of the profile.",
+            self::entries($outcome)
+        );
+    }
+
+    public function testCodingSystemsOfThePamFrExample(): void
+    {
+        // PAM FR 2.11.2 section 6.6.13: not in table 0396 of HL7 2.5, added to
+        // table 0396 of IHE PAM FR.
+        [$outcome] = $this->check(self::pidWith([17 => 'FR^^ISO 3166 alpha-2']));
+        $this->assertSame(['Error tableHL7 PID-17.3'], self::summary($outcome));
+
+        [$outcome] = $this->check(self::pidWith([17 => 'FR^^ISO 3166 alpha-2']), 'json-2.5-IHEPAMFR');
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testAlternateIdentifierAgainstTheTableOfItsCodingSystem(): void
+    {
+        // CE.4 against the table CE.6 designates.
+        [$outcome] = $this->check(self::pidWith([17 => 'M^Male^^Q^^HL70136']));
+        $this->assertSame(['Error tableHL7 PID-17.4'], self::summary($outcome));
+
+        // CE.6 empty: CE.4 is not checked.
+        [$outcome] = $this->check(self::pidWith([17 => 'M^Male^^Q']));
+        $this->assertSame([], self::summary($outcome));
+        $this->assertSame([], array_values(array_filter(
+            self::entries($outcome),
+            static fn (string $entry): bool => str_starts_with($entry, 'Table PID-17.4')
+        )));
+    }
+
+    public function testCodedElementAsAComponent(): void
+    {
+        // XPN.9 (CE, table 0448 without codes): its CE.3, a sub-component,
+        // designates the table of its CE.1.
+        [$outcome] = $this->check(self::pidWith([10 => 'DOE^^^^^^^^Q']));
+        $this->assertSame(['Info tableUnavailable PID-10.9.1'], self::summary($outcome));
+
+        [$outcome] = $this->check(self::pidWith([10 => 'DOE^^^^^^^^Q&&HL70136']));
+        $this->assertSame(['Error tableHL7 PID-10.9.1'], self::summary($outcome));
+    }
+
+    public function testPatternsOfTheCodingSystemTable(): void
+    {
+        foreach (['HL70136', 'ISO639', 'IBT0001', '99ABC', '99Z', 'L', 'LN'] as $codingSystem) {
+            [$outcome] = $this->check(self::pidWith([17 => "X^^$codingSystem"]));
+            $this->assertNotContains('Error tableHL7 PID-17.3', self::summary($outcome), $codingSystem);
+        }
+
+        foreach (['HL7136', 'HL7nnnn', 'ISO', '99', 'l'] as $codingSystem) {
+            [$outcome] = $this->check(self::pidWith([17 => "X^^$codingSystem"]));
+            $this->assertContains('Error tableHL7 PID-17.3', self::summary($outcome), $codingSystem);
+        }
+    }
+
+    /**
+     * A PID segment with PID-1 and PID-8 valued (A, X~Y), and the given fields.
+     *
+     * @param array<int, string> $values Raw value by field position.
+     *
+     * @return string
+     */
+    private static function pidWith(array $values): string
+    {
+        $fields = [1 => 'A', 8 => 'X~Y'];
+        foreach ($values as $position => $value) {
+            $fields[$position] = $value;
+        }
+
+        $segment = 'PID';
+        for ($position = 1; $position <= max(array_keys($fields)); $position++) {
+            $segment .= '|' . ($fields[$position] ?? '');
+        }
+
+        return $segment;
     }
 
     /**

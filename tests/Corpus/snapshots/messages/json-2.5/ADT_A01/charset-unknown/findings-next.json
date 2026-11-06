@@ -9,10 +9,82 @@
     },
     {
         "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-3.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-4.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (SENDFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-5.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVAPP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "MSH-6.1",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Component 'Namespace ID' (HD.1) value (RECVFAC) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Error",
+        "type": "tableHL7",
+        "location": "MSH-18",
+        "profilePath": "MSH[1]",
+        "segment": 1,
+        "message": "Field 'Character Set' (MSH.18) value (FOO-CHARSET) not in table 0211 (HL7 table)."
+    },
+    {
+        "severity": "Info",
         "type": "backwardPresent",
         "location": "EVN-1",
         "profilePath": "EVN[1]",
         "segment": 2,
         "message": "Field 'Event Type Code' (EVN.1) is retained for backward compatibility."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PID-3.4.1",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.1",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "Component 'Point of Care' (PL.1) value (WARD1) not checked: table 0302 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.2",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "Component 'Room' (PL.2) value (101) not checked: table 0303 has no codes in the profile."
+    },
+    {
+        "severity": "Info",
+        "type": "tableUnavailable",
+        "location": "PV1-3.3",
+        "profilePath": "PV1[1]",
+        "segment": 4,
+        "message": "Component 'Bed' (PL.3) value (1) not checked: table 0304 has no codes in the profile."
     }
 ]

@@ -21,7 +21,8 @@ final class MessageValidatorTest extends TestCase
 
     public function testValidMessage(): void
     {
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN||20260101120000\rPID|1||123||DOE^JOHN\rPV1|1|I");
+        // MSH-3 to MSH-6 absent: their HD.1 has a table without codes (0300, 0362), an Info.
+        $outcome = $this->validate("MSH|^~\\&|||||20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN||20260101120000\rPID|1||123||DOE^JOHN\rPV1|1|I");
 
         $this->assertTrue($outcome->result->isValid());
         $this->assertSame([], $outcome->result->getFindings());
@@ -32,22 +33,23 @@ final class MessageValidatorTest extends TestCase
 
     public function testPassesInOrder(): void
     {
-        // PV1 absent (structure), unknown character set in MSH-18 (parsing),
-        // PID-5 absent (content).
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN||20260101120000\rPID|1||123");
+        // PV1 absent (structure), unknown character set in MSH-18 (parsing,
+        // then content: not in table 0211), PID-5 absent (content).
+        $outcome = $this->validate("MSH|^~\\&|||||20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN||20260101120000\rPID|1||123");
 
         $this->assertSame([
             'Error requiredAbsent - segment=-',
             'Error parseIssue MSH-18 segment=1',
+            'Error tableHL7 MSH-18 segment=1',
             'Error requiredAbsent PID-5 segment=3',
         ], self::summary($outcome));
     }
 
     public function testParseIssueIsAttachedToItsSegment(): void
     {
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN||20260101120000\rPID|1||123||DOE^JOHN\rPV1|1|I");
+        $outcome = $this->validate("MSH|^~\\&|||||20260101120000||ADT^A01^ADT_A01|1|P|2.5||||||FOO-CHARSET\rEVN||20260101120000\rPID|1||123||DOE^JOHN\rPV1|1|I");
 
-        $this->assertSame(['Error parseIssue MSH-18 segment=1'], self::summary($outcome));
+        $this->assertSame(['Error parseIssue MSH-18 segment=1', 'Error tableHL7 MSH-18 segment=1'], self::summary($outcome));
 
         $msh = $outcome->profiledMessage->root->segments()[0];
         $this->assertSame($outcome->result->getFindings(), $outcome->profiledMessage->findingsOf($msh));
@@ -65,7 +67,7 @@ final class MessageValidatorTest extends TestCase
     public function testParseIssueWithoutLocation(): void
     {
         // Invalid UTF-8 bytes, no MSH-18: the whole message, attached to no element.
-        $outcome = $this->validate("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN||20260101120000\rPID|1||123||DUPR\xC9\rPV1|1|I");
+        $outcome = $this->validate("MSH|^~\\&|||||20260101120000||ADT^A01^ADT_A01|1|P|2.5\rEVN||20260101120000\rPID|1||123||DUPR\xC9\rPV1|1|I");
 
         $this->assertSame(['Error parseIssue - segment=-'], self::summary($outcome));
 

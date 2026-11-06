@@ -12,6 +12,8 @@ use HL7v2\Profile\Definition\GroupNode;
 use HL7v2\Profile\Definition\SegmentDefinition;
 use HL7v2\Profile\Definition\SegmentField;
 use HL7v2\Profile\Definition\SegmentNode;
+use HL7v2\Profile\Definition\TableDefinition;
+use HL7v2\Profile\Definition\TableType;
 use HL7v2\Profile\Definition\Usage;
 
 /**
@@ -182,6 +184,46 @@ final class DefinitionReader
         }
 
         return $fields;
+    }
+
+    /**
+     * @param array<mixed, mixed> $data Decoded hl7tables.json.
+     *
+     * @return array<string, TableDefinition>
+     *
+     * @throws HL7Exception
+     */
+    public static function tables(array $data, string $file): array
+    {
+        $tables = [];
+        foreach ($data as $id => $entry) {
+            $id = (string) $id;
+            $where = "$file: $id";
+            $entry = self::entry($entry, $where);
+
+            self::checkKeys($entry, ['id', 'name', 'type', 'codes'], [], $where);
+            self::checkId($entry, 'id', $id, $where);
+
+            $type = self::string($entry, 'type', $where);
+            $codes = $entry['codes'];
+            if (!is_array($codes) || !array_is_list($codes)) {
+                throw new HL7Exception("$where: 'codes' must be a list.");
+            }
+            foreach ($codes as $code) {
+                if (!is_string($code)) {
+                    throw new HL7Exception("$where: 'codes' must be a list of strings.");
+                }
+            }
+
+            $tables[$id] = new TableDefinition(
+                $id,
+                self::string($entry, 'name', $where),
+                TableType::tryFrom($type) ?? throw new HL7Exception("$where: unknown table type '$type'."),
+                $codes
+            );
+        }
+
+        return $tables;
     }
 
     /**
