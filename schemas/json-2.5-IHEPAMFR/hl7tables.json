@@ -15960,6 +15960,14 @@
                 "description": "International Classification of Sleep Disorders"
             },
             {
+                "code": "ISO 3166 alpha-2",
+                "description": "ISO 3166 alpha-2 country codes (PAM FR 2.11.2, 6.6.13)"
+            },
+            {
+                "code": "ISO 3166 alpha-3",
+                "description": "ISO 3166 alpha-3 country codes (PAM FR 2.11.2, 6.6.13)"
+            },
+            {
                 "code": "ISO+",
                 "description": "ISO 2955.83 (units of measure) with HL7 extensions"
             },
