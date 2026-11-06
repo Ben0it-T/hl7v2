@@ -10680,7 +10680,7 @@
     "0340": {
         "id": "0340",
         "name": "Procedure Code Modifier",
-        "type": "External",
+        "type": "User",
         "codes": []
     },
     "0341": {
