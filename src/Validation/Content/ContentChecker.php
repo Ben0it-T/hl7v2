@@ -69,7 +69,7 @@ use HL7v2\Validation\Value\TableMembership;
  *
  * Table of a leaf: the table of its element in the profile, else the table
  * passed down by its parent; the table of a composite is not checked, except
- * for a CE (HL7 v2.5 section 2.A.8):
+ * for a CE (HL7 v2.5 section 2.A.6):
  * - CE.1 against the table its coding system CE.3 designates: HL7nnnn is
  *   table nnnn, a table id of the profile is that table, any other coding
  *   system is not a table of the profile and CE.1 is not checked; CE.3
