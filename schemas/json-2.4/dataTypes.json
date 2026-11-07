@@ -603,9 +603,9 @@
         "components": [
             {
                 "dataType": "CNE.1",
-                "minOccurs": "0",
+                "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "R"
             },
             {
                 "dataType": "CNE.2",
