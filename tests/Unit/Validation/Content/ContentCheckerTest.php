@@ -41,7 +41,10 @@ final class ContentCheckerTest extends TestCase
      * 15 ID of table 0136 (HL7), 16 IS of table 0001 (User, closed in IHE PAM
      * FR), 17 CE of table 0001, 18 ID of table 0003 (local codes accepted),
      * 19 ID of table ZZZZ (absent), 20 IS of table 0300 (without codes),
-     * 21 DT, 22 SI, 23 TM, 24 GTS (no validator), 25 NM of table 0136.
+     * 21 DT, 22 SI, 23 TM, 24 GTS (no validator), 25 NM of table 0136;
+     * 26 CNE of table 0136 (HL7), 27 CWE of table 0136, 28 CNE of table 0001
+     * (User), 29 CWE of table 0001 (closed in IHE PAM FR), 30 CNE of table
+     * 0003 and 31 CWE of table 0003 (local codes accepted).
      */
     private static function pid(): SegmentDefinition
     {
@@ -76,6 +79,12 @@ final class ContentCheckerTest extends TestCase
             $field(23, Usage::Optional, 0, 1, null, 'TM'),
             $field(24, Usage::Optional, 0, 1, null, 'GTS'),
             $field(25, Usage::Optional, 0, 1, null, 'NM', '0136'),
+            $field(26, Usage::Optional, 0, 1, null, 'CNE', '0136'),
+            $field(27, Usage::Optional, 0, 1, null, 'CWE', '0136'),
+            $field(28, Usage::Optional, 0, 1, null, 'CNE', '0001'),
+            $field(29, Usage::Optional, 0, 1, null, 'CWE', '0001'),
+            $field(30, Usage::Optional, 0, 1, null, 'CNE', '0003'),
+            $field(31, Usage::Optional, 0, 1, null, 'CWE', '0003'),
         ]);
     }
 
@@ -548,6 +557,88 @@ final class ContentCheckerTest extends TestCase
             [$outcome] = $this->check(self::pidWith([17 => "X^^$codingSystem"]));
             $this->assertContains('Error tableHL7 PID-17.3', self::summary($outcome), $codingSystem);
         }
+    }
+
+    public function testCodedWithNoExceptionsAllowsNoValueOutsideItsTable(): void
+    {
+        [$outcome] = $this->check(self::pidWith([26 => 'Y^Yes']));
+        $this->assertSame([], self::summary($outcome));
+
+        // Outside an HL7 table, a User table, or a local code: an Error each time.
+        [$outcome] = $this->check(self::pidWith([26 => 'X', 28 => 'X', 30 => 'Z01']));
+        $this->assertSame(['Error tableClosed PID-26.1', 'Error tableClosed PID-28.1', 'Error tableClosed PID-30.1'], self::summary($outcome));
+        $this->assertSame(
+            "Component 'Identifier' (CNE.1) value (X) not in table 0136 (HL7 table, closed by the CNE data type).",
+            $outcome->getFindings()[0]->message
+        );
+    }
+
+    public function testCodedWithNoExceptionsRequiresItsIdentifier(): void
+    {
+        // Text may not replace the code: CNE.1 is R.
+        [$outcome] = $this->check(self::pidWith([26 => '^Yes']));
+
+        $this->assertSame(['Error requiredAbsent PID-26.1'], self::summary($outcome));
+    }
+
+    public function testCodedWithNoExceptionsAllowsNoLocalCodingSystem(): void
+    {
+        foreach (['L', '99LOC'] as $codingSystem) {
+            [$outcome] = $this->check(self::pidWith([26 => "Y^Yes^$codingSystem"]));
+            $this->assertSame(['Error tableClosed PID-26.1'], self::summary($outcome), $codingSystem);
+        }
+        $this->assertSame(
+            "Component 'Identifier' (CNE.1) value (Y) has the local coding system '99LOC': a CNE allows no local value.",
+            $outcome->getFindings()[0]->message
+        );
+
+        // An external coding system: CNE.1 is not checked.
+        [$outcome] = $this->check(self::pidWith([26 => 'Y^Yes^LN']));
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testAlternateIdentifierOfACodedWithNoExceptions(): void
+    {
+        // CNE.4 against the table CNE.6 designates, with the rules of the CNE.
+        [$outcome] = $this->check(self::pidWith([26 => 'Y^Yes^^Q^^HL70136']));
+        $this->assertSame(['Error tableClosed PID-26.4'], self::summary($outcome));
+
+        // The alternate components may hold a local code.
+        [$outcome] = $this->check(self::pidWith([26 => 'Y^Yes^^Q^Local^L']));
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testCodedWithExceptionsAllowsLocalValues(): void
+    {
+        // Outside an HL7 table: a Warning.
+        [$outcome] = $this->check(self::pidWith([27 => 'X']));
+        $this->assertSame(['Warning tableUser PID-27.1'], self::summary($outcome));
+        $this->assertSame(
+            "Component 'Identifier' (CWE.1) value (X) not in table 0136 (HL7 table; the CWE data type allows local values).",
+            $outcome->getFindings()[0]->message
+        );
+
+        // A local code (Z...) of a table that accepts them; a local coding system.
+        [$outcome] = $this->check(self::pidWith([31 => 'Z01', 27 => 'LOC^Local^L']));
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testCodedWithExceptionsInATableClosedByTheProfile(): void
+    {
+        // IHE PAM FR closes table 0001 (as ZBE-9, a CWE of a closed table).
+        [$outcome] = $this->check(self::pidWith([29 => 'A']), 'json-2.5-IHEPAMFR');
+
+        $this->assertSame(['Error tableClosed PID-29.1'], self::summary($outcome));
+    }
+
+    public function testCodedWithExceptionsTextOnlyAndDataMissing(): void
+    {
+        // Uncoded: text only. Data missing: a CWE status of table 0353.
+        [$outcome] = $this->check(self::pidWith([27 => '^Wesnerian', 29 => 'NAV^Not available^HL70353']));
+        $this->assertSame([], self::summary($outcome));
+
+        [$outcome] = $this->check(self::pidWith([29 => 'NONE^Not available^HL70353']));
+        $this->assertSame(['Warning tableUser PID-29.1'], self::summary($outcome));
     }
 
     /**

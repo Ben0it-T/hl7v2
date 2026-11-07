@@ -44,6 +44,19 @@ final readonly class TableMembership
     ];
 
     /**
+     * Check whether a coding system is a local one (table 0396): L, or 99
+     * followed by letters or digits (99zzz).
+     *
+     * @param string $codingSystem Coding system, as received.
+     *
+     * @return bool
+     */
+    public function isLocalCodingSystem(string $codingSystem): bool
+    {
+        return $codingSystem === 'L' || preg_match(self::CODING_SYSTEM_PATTERNS['99zzz']['pattern'], $codingSystem) === 1;
+    }
+
+    /**
      * Check whether a value belongs to a table.
      *
      * @param TableDefinition $table A table with codes.

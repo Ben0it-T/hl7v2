@@ -69,19 +69,30 @@ use HL7v2\Validation\Value\TableMembership;
  *
  * Table of a leaf: the table of its element in the profile, else the table
  * passed down by its parent; the table of a composite is not checked, except
- * for a CE (HL7 v2.5 section 2.A.6):
- * - CE.1 against the table its coding system CE.3 designates: HL7nnnn is
- *   table nnnn, a table id of the profile is that table, any other coding
- *   system is not a table of the profile and CE.1 is not checked; CE.3
- *   empty: the table of the CE;
- * - CE.4 against the table its coding system CE.6 designates, in the same
- *   way; CE.6 empty: not checked;
- * - a CE at the sub-component level has no CE.3: the table of the CE.
- * Outcome: not in the table, tableClosed for a table closed by the profile
- * (rules.json), else according to the type of the table (tableHL7,
- * tableUser); a local code (Z...) is accepted in the tables of
- * localCodeTables; a table absent from the profile, or without codes, gives
- * tableUnavailable.
+ * for a coded element, CE, CNE or CWE (HL7 v2.5 sections 2.A.6, 2.A.8,
+ * 2.A.13; HL7 v2.4 sections 2.9.3, 2.9.8, 2.9.11):
+ * - component 1 against the table its coding system (component 3)
+ *   designates: HL7nnnn is table nnnn, a table id of the profile is that
+ *   table, any other coding system is not a table of the profile and
+ *   component 1 is not checked; component 3 empty means the HL7 coding
+ *   system: the table of the element;
+ * - component 4 against the table its coding system (component 6)
+ *   designates, in the same way; component 6 empty: not checked;
+ * - a coded element at the sub-component level has no component 3: the
+ *   table of the element.
+ * Outcome, value not in the table:
+ * - CNE, "coded with no exceptions" (the table "may not be extended with
+ *   local values"): tableClosed, whatever the type of the table; no local
+ *   code (Z...); a local coding system (L, 99zzz) in component 3 is not
+ *   allowed either (tableClosed);
+ * - otherwise, a table closed by the profile (rules.json): tableClosed;
+ * - CWE, "coded with exceptions" (the table "may be extended with local
+ *   values"): tableUser, whatever the type of the table;
+ * - otherwise according to the type of the table: tableHL7, tableUser.
+ * A local code (Z...) is accepted in the tables of localCodeTables, except
+ * for a CNE; a table absent from the profile, or without codes, gives
+ * tableUnavailable. An empty component 1 of a CWE (text only) is not
+ * checked: the leaf has no value.
  *
  * A finding is attached to the segment element; its Location gives the
  * element (PID[1]-3, PID[1]-3[2], PID[1]-5.10, PID[1]-5.10.1).
@@ -110,6 +121,12 @@ final class ContentChecker
     private PrimitiveValidators $validators;
 
     private TableMembership $tables;
+
+    /**
+     * Coded data types: their component 1 and 4 are checked against the table
+     * their coding system designates.
+     */
+    private const CODED_TYPES = ['CE', 'CNE', 'CWE'];
 
     /**
      * @param ProfileDirectory $directory Profile directory of the message
@@ -387,7 +404,7 @@ final class ContentChecker
         }
 
         if ($definition->table !== null) {
-            $table = new LeafTable($definition->table);
+            $table = new LeafTable($definition->table, null, self::codedType($definition->dataType));
         }
         $type = $this->dataType($definition->dataType);
         while (!$type->isPrimitive()) {
@@ -401,7 +418,7 @@ final class ContentChecker
                 $this->checkLength($item, $raw, $first->maxLength, $label, $location);
             }
             if ($first->table !== null) {
-                $table = new LeafTable($first->table);
+                $table = new LeafTable($first->table, null, self::codedType($first->dataType));
             }
             $type = $this->dataType($first->dataType);
         }
@@ -662,11 +679,16 @@ final class ContentChecker
         Location $location
     ): void {
         if ($table->id === null) {
-            if ($table->codingSystem !== null) {
-                $this->record($item, $this->newCheck($item, 'Table', true,
+            if ($table->codingSystem === null) {
+                return;
+            }
+            $this->record($item, $table->codedType === 'CNE' && $this->tables->isLocalCodingSystem($table->codingSystem)
+                ? $this->newCheck($item, 'Table', false,
+                    "$label value ($value) has the local coding system '{$table->codingSystem}': a CNE allows no local value.",
+                    FindingType::TableClosed, $location)
+                : $this->newCheck($item, 'Table', true,
                     "$label value ($value) not checked: coding system '{$table->codingSystem}' is not a table of the profile.",
                     null, $location));
-            }
 
             return;
         }
@@ -693,17 +715,27 @@ final class ContentChecker
             return;
         }
 
-        if ($rules->acceptsLocalCodes($id) && preg_match('/^Z[A-Z0-9_]*$/', $value) === 1) {
+        $cne = $table->codedType === 'CNE';
+        $cwe = $table->codedType === 'CWE';
+
+        if (!$cne && $rules->acceptsLocalCodes($id) && preg_match('/^Z[A-Z0-9_]*$/', $value) === 1) {
             $this->record($item, $this->newCheck($item, 'Table', true,
                 "$label value ($value) accepted as a local code of table $id$source ($kind).", null, $location));
 
             return;
         }
 
+        $closed = $rules->isClosedTable($id);
         $this->record($item, $this->newCheck($item, 'Table', false,
-            "$label value ($value) not in table $id$source ($kind" . ($rules->isClosedTable($id) ? ', closed by the profile' : '') . ').',
+            "$label value ($value) not in table $id$source ($kind" . match (true) {
+                $cne    => ', closed by the CNE data type',
+                $closed => ', closed by the profile',
+                $cwe    => '; the CWE data type allows local values',
+                default => '',
+            } . ').',
             match (true) {
-                $rules->isClosedTable($id)            => FindingType::TableClosed,
+                $cne || $closed                       => FindingType::TableClosed,
+                $cwe                                  => FindingType::TableUser,
                 $definition->type === TableType::HL7  => FindingType::TableHL7,
                 default                               => FindingType::TableUser,
             },
@@ -711,10 +743,11 @@ final class ContentChecker
     }
 
     /**
-     * Table passed down by a composite to one of its components: for a CE,
-     * CE.1 and CE.4 against the table their coding system designates (CE.3,
-     * CE.6); CE.1 against the table of the CE when CE.3 is empty. Nothing for
-     * any other composite, or any other component.
+     * Table passed down by a composite to one of its components: for a coded
+     * element (CE, CNE, CWE), components 1 and 4 against the table their
+     * coding system designates (components 3, 6); component 1 against the
+     * table of the element when component 3 is empty. Nothing for any other
+     * composite, or any other component.
      *
      * @param DataTypeDefinition $type Composite type.
      * @param string|null $table Table of the composite element.
@@ -726,16 +759,34 @@ final class ContentChecker
      */
     private function codedTable(DataTypeDefinition $type, ?string $table, int $position, callable $valueAt): LeafTable
     {
-        if ($type->name !== 'CE' || ($position !== 1 && $position !== 4)) {
+        if (!in_array($type->name, self::CODED_TYPES, true) || ($position !== 1 && $position !== 4)) {
             return LeafTable::none();
         }
 
+        $codedType = self::codedType($type->name);
         $codingSystem = $valueAt($position + 2);
         if ($codingSystem === '') {
-            return $position === 1 ? new LeafTable($table) : LeafTable::none();
+            return $position === 1 ? new LeafTable($table, null, $codedType) : LeafTable::none();
         }
 
-        return new LeafTable($this->tableDesignatedBy($codingSystem), $codingSystem);
+        // The alternate components (4 to 6) of a CNE may hold a local code.
+        if ($position === 4 && $this->tables->isLocalCodingSystem($codingSystem)) {
+            $codedType = null;
+        }
+
+        return new LeafTable($this->tableDesignatedBy($codingSystem), $codingSystem, $codedType);
+    }
+
+    /**
+     * The coded type whose rules judge a value outside its table.
+     *
+     * @param string $dataType
+     *
+     * @return string|null CNE or CWE; null for any other data type (a CE included).
+     */
+    private static function codedType(string $dataType): ?string
+    {
+        return in_array($dataType, ['CNE', 'CWE'], true) ? $dataType : null;
     }
 
     /**

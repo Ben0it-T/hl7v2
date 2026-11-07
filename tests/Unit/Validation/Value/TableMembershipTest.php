@@ -39,6 +39,18 @@ final class TableMembershipTest extends TestCase
         }
     }
 
+    public function testLocalCodingSystems(): void
+    {
+        $membership = new TableMembership();
+
+        foreach (['L', '99LOC', '99Z', '99zzz'] as $codingSystem) {
+            $this->assertTrue($membership->isLocalCodingSystem($codingSystem), $codingSystem);
+        }
+        foreach (['l', '99', 'LN', 'HL70001', '99-A', 'L1'] as $codingSystem) {
+            $this->assertFalse($membership->isLocalCodingSystem($codingSystem), $codingSystem);
+        }
+    }
+
     public function testPatternsAreReadInTableCodingSystemOnly(): void
     {
         // Table 0203 holds "NNxxx", compared as written.

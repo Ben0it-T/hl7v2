@@ -57,10 +57,10 @@ enum FindingType: string
     /** Value not in an HL7 table. */
     case TableHL7 = 'tableHL7';
 
-    /** Value not in a User table. */
+    /** Value not in a User table, or in the table of a CWE (local values allowed). */
     case TableUser = 'tableUser';
 
-    /** Value not in a table closed by the profile. */
+    /** Value not in a table closed by the profile, or in the table of a CNE (no local value). */
     case TableClosed = 'tableClosed';
 
     /** Table absent from the profile: no check done. */
