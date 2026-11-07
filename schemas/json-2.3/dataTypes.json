@@ -216,7 +216,7 @@
         ]
     },
     "CE.1": {
-        "Type": "ID",
+        "Type": "ST",
         "Table": "",
         "LongName": "identifier",
         "maxLength": ""
@@ -234,7 +234,7 @@
         "maxLength": ""
     },
     "CE.4": {
-        "Type": "ID",
+        "Type": "ST",
         "Table": "",
         "LongName": "alternate identifier",
         "maxLength": ""

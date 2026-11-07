@@ -42,7 +42,7 @@
                     "dataType": "CNE.7",
                     "minOccurs": "0",
                     "maxOccurs": "1",
-                    "usage": "O"
+                    "usage": "C"
                 },
                 {
                     "dataType": "CNE.8",
@@ -52,6 +52,64 @@
                 },
                 {
                     "dataType": "CNE.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ]
+        },
+        "CWE": {
+            "components": [
+                {
+                    "dataType": "CWE.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "CWE.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CWE.9",
                     "minOccurs": "0",
                     "maxOccurs": "1",
                     "usage": "O"
