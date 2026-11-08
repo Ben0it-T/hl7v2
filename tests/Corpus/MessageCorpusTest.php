@@ -45,9 +45,15 @@ final class MessageCorpusTest extends CorpusTestCase
     }
 
     #[DataProvider('cases')]
-    public function testStructureFindingsNext(CorpusCase $case): void
+    public function testValidityNext(CorpusCase $case): void
     {
-        $this->assertExpectedStructureFindings($case, $this->validateNext($case));
+        $this->assertExpectedValidityNext($case, $this->validateNext($case));
+    }
+
+    #[DataProvider('cases')]
+    public function testFindingsNext(CorpusCase $case): void
+    {
+        $this->assertExpectedFindingsNext($case, $this->validateNext($case));
     }
 
     #[DataProvider('cases')]

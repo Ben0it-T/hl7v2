@@ -105,26 +105,29 @@ abstract class CorpusTestCase extends TestCase
     }
 
     /**
-     * Compare the findings of the new validator with the expected ones,
-     * within what it checks so far: the findings on the structure, that is
-     * without location or located on a segment (PD1[2]), Errors and Warnings
-     * only. The path is compared when the case gives it. knownBug describes
-     * the current validator, not the new one: any difference fails.
+     * Compare the validity given by the new validator with the expected one.
+     * knownBug describes the current validator, not the new one: any
+     * difference fails.
      */
-    protected function assertExpectedStructureFindings(CorpusCase $case, ValidationOutcome $outcome): void
+    protected function assertExpectedValidityNext(CorpusCase $case, ValidationOutcome $outcome): void
     {
-        $onSegment = static fn (?string $location): bool => $location === null
-            || preg_match('/^[A-Z][A-Z0-9]{2}(\[\d+\])?$/', $location) === 1;
+        $this->assertSame($case->expectedValid, $outcome->result->isValid(), $case->title);
+    }
 
+    /**
+     * Compare the findings of the new validator with the expected ones,
+     * Errors and Warnings only (Infos describe the tool, not the
+     * specification), on every position: structure and content. The path is
+     * compared when the case gives it. knownBug describes the current
+     * validator, not the new one: any difference fails.
+     */
+    protected function assertExpectedFindingsNext(CorpusCase $case, ValidationOutcome $outcome): void
+    {
         $unexpected = array_values(array_filter(
             $outcome->result->getFindings(),
             static fn (Finding $finding): bool => $finding->severity !== Severity::Info
-                && $onSegment($finding->location?->toShortString())
         ));
-        $expectedFindings = array_values(array_filter(
-            $case->expectedFindings,
-            static fn (array $expected): bool => $onSegment(isset($expected['location']) ? (string) $expected['location'] : null)
-        ));
+        $expectedFindings = $case->expectedFindings;
 
         $missing = [];
         foreach ($expectedFindings as $expected) {

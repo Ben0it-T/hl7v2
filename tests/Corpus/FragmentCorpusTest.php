@@ -74,6 +74,18 @@ final class FragmentCorpusTest extends CorpusTestCase
     }
 
     #[DataProvider('cases')]
+    public function testValidityNext(CorpusCase $case): void
+    {
+        $this->assertExpectedValidityNext($case, $this->validateNext($case));
+    }
+
+    #[DataProvider('cases')]
+    public function testFindingsNext(CorpusCase $case): void
+    {
+        $this->assertExpectedFindingsNext($case, $this->validateNext($case));
+    }
+
+    #[DataProvider('cases')]
     public function testSnapshot(CorpusCase $case): void
     {
         $this->assertSnapshots(

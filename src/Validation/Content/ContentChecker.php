@@ -47,7 +47,8 @@ use HL7v2\Validation\Value\TableMembership;
  *
  * For each field of the definition: its usage; the count of repetitions,
  * as received: beyond the maximum, or under the minimum of an R field; then
- * each repetition with a value: its HL7 length, counted on its Raw value, and
+ * each repetition with a value: its HL7 length, counted on its Raw value
+ * without its elements in excess (they have their own finding), and
  * its content according to the data type of the field.
  *
  * Content of a value, according to its data type (dataTypes.json):
@@ -285,7 +286,7 @@ final class ContentChecker
             if ($definition->maxLength !== null) {
                 $this->checkLength(
                     $item,
-                    $this->serializer->serializeFieldRepeat($repeat, $this->message),
+                    $this->definedRepeatRaw($repeat, $type),
                     $definition->maxLength,
                     $repLabel,
                     $repLocation
@@ -441,17 +442,11 @@ final class ContentChecker
             return;
         }
 
+        $type = $this->dataType($definition->dataType);
         if ($definition->maxLength !== null) {
-            $this->checkLength(
-                $item,
-                $this->serializer->serializeComponent($component, $this->message),
-                $definition->maxLength,
-                $label,
-                $location
-            );
+            $this->checkLength($item, $this->definedComponentRaw($component, $type), $definition->maxLength, $label, $location);
         }
 
-        $type = $this->dataType($definition->dataType);
         if ($type->isPrimitive()) {
             $this->checkLeaf(
                 $item,
@@ -543,6 +538,55 @@ final class ContentChecker
         }
 
         $this->checkLeaf($item, $type->name, $subComponent, $table, $label, $location);
+    }
+
+    /**
+     * Raw value of a repetition without its elements in excess: the
+     * components of its data type, each with the sub-components of its own
+     * type (one for a primitive). Elements in excess have their own finding:
+     * they do not count in the length too.
+     *
+     * @param FieldRepeat $repeat
+     * @param DataTypeDefinition|null $type Data type of the repetition; null
+     *        when undetermined (varies): the whole Raw value.
+     *
+     * @return string
+     */
+    private function definedRepeatRaw(FieldRepeat $repeat, ?DataTypeDefinition $type): string
+    {
+        if ($type === null) {
+            return $this->serializer->serializeFieldRepeat($repeat, $this->message);
+        }
+
+        $parts = [];
+        foreach ($repeat->getComponents() as $index => $component) {
+            if ($type->isPrimitive() ? $index > 0 : $index >= count($type->components)) {
+                break;
+            }
+            $componentType = $type->isPrimitive() ? $type : $this->dataType($type->components[$index]->dataType);
+            $parts[] = $this->definedComponentRaw($component, $componentType);
+        }
+
+        return implode($this->message->getComponentSeparator(), $parts);
+    }
+
+    /**
+     * Raw value of a component without its sub-components in excess: the
+     * components of its data type (one for a primitive).
+     *
+     * @param Component $component
+     * @param DataTypeDefinition $type Data type of the component.
+     *
+     * @return string
+     */
+    private function definedComponentRaw(Component $component, DataTypeDefinition $type): string
+    {
+        $defined = $type->isPrimitive() ? 1 : count($type->components);
+
+        return implode($this->message->getSubComponentSeparator(), array_map(
+            static fn (SubComponent $subComponent): string => $subComponent->getRawValue(),
+            array_slice($component->getSubComponents(), 0, $defined)
+        ));
     }
 
     /**

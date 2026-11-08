@@ -215,7 +215,8 @@ final class ContentCheckerTest extends TestCase
     public function testLengthIsTheHl7Length(): void
     {
         // A\F\BCD: 5 characters of data (\F\ counts 1); ABCD\F\: 5 too;
-        // ABCDE\F\: 6. The separators of a repetition count 1 each (A^B&C: 5).
+        // ABCDE\F\: 6. In an ST, A^B&C counts its component 1 only: the rest
+        // is in excess, with its own finding.
         [$outcome] = $this->check('PID|A|A\F\BCD~ABCD\F\||||||X~Y');
         $this->assertSame([], self::summary($outcome));
 
@@ -415,6 +416,17 @@ final class ContentCheckerTest extends TestCase
 
         $this->assertSame(['Error elementInExcess PID-35', 'Error elementInExcess PID-36'], self::summary($outcome));
         $this->assertSame('Field PID-35 is in excess: segment PID has 34 field(s).', $outcome->getFindings()[0]->message);
+    }
+
+    public function testElementsInExcessDoNotCountInTheLength(): void
+    {
+        // PID-2 (ST, length 5): ABCDEFGH would exceed it, but only AB is defined.
+        [$outcome] = $this->check(self::pidWith([2 => 'AB^CDEFGH']));
+        $this->assertSame(['Error elementInExcess PID-2.2'], self::summary($outcome));
+
+        // The defined components are still judged: CX.1 (length 15) has 16 characters.
+        [$outcome] = $this->check(self::pidWith([9 => str_repeat('1', 16) . '^^^^^^^^^^X']));
+        $this->assertSame(['Error length PID-9.1', 'Error elementInExcess PID-9.11'], self::summary($outcome));
     }
 
     public function testEmptyTrailingElementsAreNotInExcess(): void
