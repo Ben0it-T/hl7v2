@@ -1,0 +1,71 @@
+{
+    "title": "OBX-5 judged as the data type of OBX-2: text types, numbers, undetermined type, component in excess",
+    "tests": [
+        "TX: control character in a repetition",
+        "FT: formatting command allowed; ST: not allowed",
+        "TX: \\X09\\ allowed",
+        "ST: control character",
+        "NM: not a number",
+        "OBX-2 empty: data type undetermined (Warning)",
+        "OBX-2 not in table 0125 and not a data type: undetermined",
+        "NM: component in excess"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.7, 2.A.31 FT, 2.A.47 NM, 2.A.74 ST, 2.A.78 TX, table 0125",
+        "HL7 2.5 ch. 7.4.2.2, 7.4.2.5"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 6,
+                "location": "OBX-5[2]",
+                "summary": "control character in TX"
+            },
+            {
+                "severity": "Error",
+                "segment": 8,
+                "location": "OBX[3]-5",
+                "summary": "formatting command in ST"
+            },
+            {
+                "severity": "Error",
+                "segment": 10,
+                "location": "OBX[5]-5",
+                "summary": "control character in ST"
+            },
+            {
+                "severity": "Error",
+                "segment": 11,
+                "location": "OBX[6]-5",
+                "summary": "not a number"
+            },
+            {
+                "severity": "Warning",
+                "segment": 12,
+                "location": "OBX[7]-5",
+                "summary": "OBX-2 empty"
+            },
+            {
+                "severity": "Error",
+                "segment": 13,
+                "location": "OBX[8]-2",
+                "summary": "ZZ not in table 0125"
+            },
+            {
+                "severity": "Warning",
+                "segment": 13,
+                "location": "OBX[8]-5",
+                "summary": "ZZ not a data type"
+            },
+            {
+                "severity": "Error",
+                "segment": 14,
+                "location": "OBX[9]-5.2",
+                "summary": "component in excess"
+            }
+        ]
+    },
+    "knownBug": "OBX-5 is not judged as the data type of OBX-2: its components are reported in excess, and its data types and tables are not checked."
+}

@@ -66,6 +66,34 @@
                 "valid": true,
                 "findings": []
             }
+        },
+        {
+            "value": "12345678901234\\F\\^^^HOSP^PI",
+            "tests": [
+                "CX.1 (ST, length 15): 17 characters as written, HL7 length 15 (\\F\\ counts 1)"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            },
+            "knownBug": "The length is counted on the characters as written: \\F\\ counts 3 instead of 1."
+        },
+        {
+            "value": "123456789012345\\F\\^^^HOSP^PI",
+            "tests": [
+                "CX.1 (ST, length 15): HL7 length 16"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-3.1",
+                        "summary": "length 16 > 15"
+                    }
+                ]
+            }
         }
     ]
 }

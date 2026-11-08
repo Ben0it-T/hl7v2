@@ -1,0 +1,30 @@
+{
+    "location": "PID-26",
+    "references": [
+        "PAMFR 2.11.2 6.6.13",
+        "HL7 2.5 ch. 2.A.6 CE, table 0396"
+    ],
+    "cases": [
+        {
+            "value": "FRA",
+            "tests": [
+                "CE: country code alone (PAM FR 6.6.13, default ISO 3166 alpha-3); table 0171 has no codes"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "FRA~FR^^ISO 3166 alpha-2",
+            "tests": [
+                "CE: ISO 3166 alpha-2 coding system of the PAM FR example, in table 0396 of IHE PAM FR; CE.1 not checked"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            },
+            "knownBug": "Table 0396 of the old profile holds neither the patterns (ISOnnnn) nor the coding systems of PAM FR: ISO 3166 alpha-2 is rejected."
+        }
+    ]
+}

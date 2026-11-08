@@ -1,0 +1,100 @@
+{
+    "title": "OBX-5 coded values (CE, CNE, CWE) against the table their coding system designates",
+    "tests": [
+        "CE.1 against the table CE.3 designates (HL7nnnn)",
+        "CE.3 of another coding system: CE.1 not checked",
+        "CE.4 against the table CE.6 designates",
+        "CE.3 not in table 0396",
+        "CNE outside an HL7 table, outside a User table, with a local coding system: Error",
+        "CWE outside its table: Warning; text only; data missing (table 0353)",
+        "CNE and CWE are not in table 0125 of HL7 2.5: OBX-2 not in its table"
+    ],
+    "references": [
+        "HL7 2.5 ch. 2.A.6 CE, 2.A.8 CNE, 2.A.13 CWE, tables 0125, 0136, 0001, 0353, 0396",
+        "HL7 2.5 ch. 7.4.2.2, 7.4.2.5"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 7,
+                "location": "OBX[2]-5.1",
+                "summary": "M not in table 0136"
+            },
+            {
+                "severity": "Error",
+                "segment": 9,
+                "location": "OBX[4]-5.4",
+                "summary": "Q not in table 0136"
+            },
+            {
+                "severity": "Error",
+                "segment": 10,
+                "location": "OBX[5]-5.3",
+                "summary": "ZZZ not in table 0396"
+            },
+            {
+                "severity": "Error",
+                "segment": 11,
+                "location": "OBX[6]-2",
+                "summary": "CNE not in table 0125"
+            },
+            {
+                "severity": "Error",
+                "segment": 11,
+                "location": "OBX[6]-5.1",
+                "summary": "X not in table 0136 (CNE)"
+            },
+            {
+                "severity": "Error",
+                "segment": 12,
+                "location": "OBX[7]-2",
+                "summary": "CNE not in table 0125"
+            },
+            {
+                "severity": "Error",
+                "segment": 12,
+                "location": "OBX[7]-5.1",
+                "summary": "local coding system in a CNE"
+            },
+            {
+                "severity": "Error",
+                "segment": 13,
+                "location": "OBX[8]-2",
+                "summary": "CNE not in table 0125"
+            },
+            {
+                "severity": "Error",
+                "segment": 13,
+                "location": "OBX[8]-5.1",
+                "summary": "X not in User table 0001 (CNE)"
+            },
+            {
+                "severity": "Error",
+                "segment": 14,
+                "location": "OBX[9]-2",
+                "summary": "CWE not in table 0125"
+            },
+            {
+                "severity": "Warning",
+                "segment": 14,
+                "location": "OBX[9]-5.1",
+                "summary": "X not in table 0136 (CWE)"
+            },
+            {
+                "severity": "Error",
+                "segment": 15,
+                "location": "OBX[10]-2",
+                "summary": "CWE not in table 0125"
+            },
+            {
+                "severity": "Error",
+                "segment": 16,
+                "location": "OBX[11]-2",
+                "summary": "CWE not in table 0125"
+            }
+        ]
+    },
+    "knownBug": "OBX-5 is not judged as the data type of OBX-2: its components are reported in excess, and its data types and tables are not checked."
+}

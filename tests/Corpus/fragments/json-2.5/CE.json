@@ -42,6 +42,23 @@
                     }
                 ]
             }
+        },
+        {
+            "value": "fr^^ISO 3166 alpha-2",
+            "tests": [
+                "CE.3 coding system written as in the PAM FR example: not in table 0396 of HL7 2.5"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-15.3",
+                        "summary": "not in table 0396"
+                    }
+                ]
+            }
         }
     ]
 }

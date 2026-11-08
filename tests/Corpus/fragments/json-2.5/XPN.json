@@ -50,6 +50,111 @@
                 "valid": true,
                 "findings": []
             }
+        },
+        {
+            "value": "DOE^\"\"^^^^^L",
+            "tests": [
+                "XPN: Explicit null in a component (XPN.2, optional)"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "DO\\H\\E^JANE^^^^^L",
+            "tests": [
+                "XPN: escape sequence not allowed by the type (highlighting in an ST)"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.1.1",
+                        "summary": "escape not allowed in ST"
+                    }
+                ]
+            },
+            "knownBug": "Escape sequences are not checked against the data type of a sub-component."
+        },
+        {
+            "value": "DO\tE^JANE^^^^^L",
+            "tests": [
+                "XPN: control character (tabulation) in an ST"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.1.1",
+                        "summary": "control character in ST"
+                    }
+                ]
+            },
+            "knownBug": "The characters of an ST are not checked."
+        },
+        {
+            "value": "DOE^JANE^^^^^L^^^20200101&Y",
+            "tests": [
+                "XPN.10 (DR): TS.2 attempted with & gives DR.2 = Y, not a DTM"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.10.2",
+                        "summary": "DR.2 not a DTM"
+                    }
+                ]
+            },
+            "knownBug": "The data type of a composite at the sub-component level (DR.2, a TS) is not checked."
+        },
+        {
+            "value": "DOE^JANE^^^^^L^^^20200101^Y",
+            "tests": [
+                "XPN.10 (DR): TS.2 attempted with ^ gives XPN.11 = Y, outside table 0444"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.11",
+                        "summary": "Y not in table 0444"
+                    }
+                ]
+            }
+        },
+        {
+            "value": "DOE^JANE^^^^^L^^^20200101\\S\\Y",
+            "tests": [
+                "XPN.10 (DR): TS.2 attempted with \\S\\: no escape sequence in a DTM, and 20200101^Y is not a DTM"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.10.1",
+                        "summary": "escape not allowed in DTM"
+                    },
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.10.1",
+                        "summary": "not a DTM"
+                    }
+                ]
+            },
+            "knownBug": "Escape sequences and data type are not checked below a DR component."
         }
     ]
 }

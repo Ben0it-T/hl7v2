@@ -40,6 +40,54 @@
                     }
                 ]
             }
+        },
+        {
+            "value": "\\X59\\",
+            "tests": [
+                "ID: escape sequence not allowed by the type; the table is checked on the Decoded value (Y)"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-24",
+                        "summary": "escape not allowed in ID"
+                    }
+                ]
+            },
+            "knownBug": "The table is checked on the Raw value (\\X59\\), not on the Decoded value (Y); escape sequences are not checked against the data type."
+        },
+        {
+            "value": "Y\tN",
+            "tests": [
+                "ID: control character, length 3 (1 at most), not in table 0136: one finding per cause"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-24",
+                        "summary": "length 3 > 1"
+                    },
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-24",
+                        "summary": "control character in ID"
+                    },
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-24",
+                        "summary": "not in table 0136"
+                    }
+                ]
+            },
+            "knownBug": "The characters of an ID are not checked."
         }
     ]
 }

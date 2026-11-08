@@ -41,6 +41,23 @@
                     }
                 ]
             }
+        },
+        {
+            "value": "DOE^JANE^^\"\"^^^L",
+            "tests": [
+                "XPN.4 (X in IHE PAM FR): an Explicit null is present, not allowed"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-5.4",
+                        "summary": "X present"
+                    }
+                ]
+            }
         }
     ]
 }

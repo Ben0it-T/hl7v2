@@ -1,0 +1,36 @@
+{
+    "location": "PID-8",
+    "references": [
+        "PAMFR 2.11.2 6.6.5",
+        "IHE PAM FR rules.json closedTables"
+    ],
+    "cases": [
+        {
+            "value": "F",
+            "tests": [
+                "IS: in table 0001"
+            ],
+            "expected": {
+                "valid": true,
+                "findings": []
+            }
+        },
+        {
+            "value": "A",
+            "tests": [
+                "IS: in table 0001 of HL7 2.5, not in table 0001 of IHE PAM FR, closed by the profile"
+            ],
+            "expected": {
+                "valid": false,
+                "findings": [
+                    {
+                        "severity": "Error",
+                        "segment": 3,
+                        "location": "PID-8",
+                        "summary": "not in closed table 0001"
+                    }
+                ]
+            }
+        }
+    ]
+}
