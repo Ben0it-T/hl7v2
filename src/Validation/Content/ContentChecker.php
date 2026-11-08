@@ -69,6 +69,16 @@ use HL7v2\Validation\Value\TableMembership;
  *   what follows it is in excess.
  * An Explicit null, or an element without value, has nothing below it to judge.
  *
+ * A varies field takes the data type named by another field of its segment:
+ * OBX-5 the data type of OBX-2 (HL7 v2.5 section 7.4.2.5, "An observation
+ * value is always represented as the data type specified in OBX-2"; the same
+ * in v2.3 to v2.4). With a value, it is judged as a field of that type. The
+ * data type is undetermined (variesUndetermined, and nothing judged below the
+ * repetitions, their length aside) when that field is empty, when its value
+ * is not a data type of the profile directory, or when no field gives the
+ * data type. A value of OBX-2 outside table 0125 is judged by the table check
+ * of OBX-2 itself; a data type of the profile directory is used even then.
+ *
  * Table of a leaf: the table of its element in the profile, else the table
  * passed down by its parent; the table of a composite is not checked, except
  * for a coded element, CE, CNE or CWE (HL7 v2.5 sections 2.A.6, 2.A.8,
@@ -131,6 +141,14 @@ final class ContentChecker
      * their coding system designates.
      */
     private const CODED_TYPES = ['CE', 'CNE', 'CWE'];
+
+    /**
+     * Varies fields, by segment and position: the position of the field that
+     * names their data type.
+     *
+     * @var array<string, array<int, int>>
+     */
+    private const VARIES_TYPE_FIELDS = ['OBX' => [5 => 2]];
 
     /**
      * @param ProfileDirectory $directory Profile directory of the message
@@ -226,6 +244,9 @@ final class ContentChecker
         $this->checkRepetitionCount($item, $field, $value->countRepeats(), $label, $location);
 
         $type = $this->dataType($definition->dataType);
+        if ($type->name === 'varies') {
+            $type = $this->variesType($item, $field, $value, $label, $location);
+        }
         // MSH-1 (field separator) and MSH-2 (encoding characters) hold the
         // separators and the escape character themselves: their Raw value is
         // not an escaped value (MSH-2 "^~\&" would read as a malformed "\&").
@@ -248,6 +269,9 @@ final class ContentChecker
                 );
             }
 
+            if ($type === null) {
+                continue;
+            }
             if ($type->isPrimitive()) {
                 if ($escapes) {
                     $this->checkLeaf(
@@ -263,6 +287,67 @@ final class ContentChecker
             }
             $this->checkComponents($item, $type, $definition->table, $repeat, $repLocation);
         }
+    }
+
+    /**
+     * Data type of a varies field, given by another field of its segment
+     * (OBX-5 by OBX-2), recorded in the TestReport.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param SegmentField $field The varies field.
+     * @param Field $value Its value.
+     * @param string $label
+     * @param Location $location Location of the field.
+     *
+     * @return DataTypeDefinition|null Null when the field has no value, or when its
+     *                                 data type is undetermined (variesUndetermined).
+     */
+    private function variesType(
+        SegmentOccurrence|UnplacedSegment $item,
+        SegmentField $field,
+        Field $value,
+        string $label,
+        Location $location
+    ): ?DataTypeDefinition {
+        $valued = array_filter(
+            $value->getRepeats(),
+            static fn (FieldRepeat $repeat): bool => Presence::ofRepeat($repeat) === Presence::Valued
+        );
+        if ($valued === []) {
+            return null;
+        }
+
+        $segment = $item->segment->getName();
+        $typePosition = self::VARIES_TYPE_FIELDS[$segment][$field->position] ?? null;
+        if ($typePosition === null) {
+            $this->record($item, $this->newCheck($item, 'Datatype', false,
+                "$label data type is undetermined: no field gives the data type of a varies field in $segment.",
+                FindingType::VariesUndetermined, $location));
+
+            return null;
+        }
+
+        $typeRepeat = $item->segment->getField($typePosition)?->getRepeat(0);
+        $name = $typeRepeat !== null && Presence::ofRepeat($typeRepeat) === Presence::Valued
+            ? $typeRepeat->getComponent(1)?->getSubComponent(1)?->getDecodedValue() ?? ''
+            : '';
+        if ($name === '') {
+            $this->record($item, $this->newCheck($item, 'Datatype', false,
+                "$label data type is undetermined: $segment-$typePosition is empty.",
+                FindingType::VariesUndetermined, $location));
+
+            return null;
+        }
+
+        $type = $name === 'varies' ? null : $this->directory->dataType($name);
+        $this->record($item, $type === null
+            ? $this->newCheck($item, 'Datatype', false,
+                "$label data type is undetermined: $segment-$typePosition value ($name) is not a data type of the profile.",
+                FindingType::VariesUndetermined, $location)
+            : $this->newCheck($item, 'Datatype', true,
+                "$label data type is $name, given by $segment-$typePosition.", null, $location));
+
+        return $type;
     }
 
     /**

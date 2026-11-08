@@ -107,6 +107,26 @@ final class ContentCheckerTest extends TestCase
         ]);
     }
 
+    /**
+     * Fields of the OBX segment used by the tests, all optional: 1 SI, 2 ID of
+     * table 0125, 3 CE, 4 ST, 5 varies [0..*] (its data type given by OBX-2).
+     */
+    private static function obx(): SegmentDefinition
+    {
+        $field = static fn (int $position, string $type, ?int $max = 1, ?string $table = null): SegmentField =>
+            new SegmentField($position, Usage::Optional, new Cardinality(0, $max), new FieldDefinition(
+                "OBX.$position", '00000', $type, null, $table, "Field $position", '7'
+            ));
+
+        return new SegmentDefinition('OBX', 'Observation/Result', '7', [
+            $field(1, 'SI'),
+            $field(2, 'ID', 1, '0125'),
+            $field(3, 'CE'),
+            $field(4, 'ST'),
+            $field(5, 'varies', null),
+        ]);
+    }
+
     public function testValidSegment(): void
     {
         [$outcome] = $this->check('PID|A|ABCDE~AB||||||X~Y');
@@ -387,11 +407,12 @@ final class ContentCheckerTest extends TestCase
         $this->assertContains("Length MSH-2 ok Field 'Field 2' (MSH.2) length (4) does not exceed the length defined in the message profile (4).", self::entries($outcome));
     }
 
-    public function testVariesValueIsNotCheckedForEscapeSequences(): void
+    public function testVariesFieldWithoutTypeFieldIsUndetermined(): void
     {
+        // PID-14 (varies in the test segment): no field gives its data type, nothing judged below.
         [$outcome] = $this->check('PID|A|||||||X~Y||||||A\H\B\.br\\');
 
-        $this->assertSame([], self::summary($outcome));
+        $this->assertSame(['Warning variesUndetermined PID-14'], self::summary($outcome));
     }
 
     public function testPrimitiveValueIsItsFirstSubComponent(): void
@@ -444,6 +465,73 @@ final class ContentCheckerTest extends TestCase
         // A tabulation: one finding per cause, data type then table.
         [$outcome] = $this->check(self::pidWith([15 => "Y\t", 32 => "555\t1234"]), 'json-2.4');
         $this->assertSame(['Error datatype PID-15', 'Error tableHL7 PID-15', 'Error datatype PID-32'], self::summary($outcome));
+    }
+
+    public function testObservationValueIsJudgedAsTheTypeOfItsValueType(): void
+    {
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|NM|||12.5");
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains("Datatype OBX-5 ok Field 'Field 5' (OBX.5) data type is NM, given by OBX-2.", self::entries($outcome));
+
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|NM|||>300");
+        $this->assertSame(['Error datatype OBX-5'], self::summary($outcome));
+    }
+
+    public function testObservationValueOfACompositeType(): void
+    {
+        // CE: the rule of the coded types; SN: a composite added to the profile for OBX-5.
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|CE|||X^Unknown^HL70136\rOBX|2|SN|||>^300\rOBX|3|SN|||>^abc");
+
+        $this->assertSame(['Error tableHL7 OBX-5.1', 'Error datatype OBX[3]-5.2'], self::summary($outcome));
+    }
+
+    public function testEachRepetitionOfTheObservationValue(): void
+    {
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|TX|||First line~Second\tline");
+
+        $this->assertSame(['Error datatype OBX-5[2]'], self::summary($outcome));
+    }
+
+    public function testEscapeSequencesOfTheObservationValueFollowItsType(): void
+    {
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|FT|||A\\.br\\B\rOBX|2|ST|||A\\.br\\B");
+
+        $this->assertSame(['Error escapeNotAllowed OBX[2]-5'], self::summary($outcome));
+    }
+
+    public function testObservationValueWithoutValueType(): void
+    {
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1||||12.5");
+        $this->assertSame(['Warning variesUndetermined OBX-5'], self::summary($outcome));
+        $this->assertSame("Field 'Field 5' (OBX.5) data type is undetermined: OBX-2 is empty.", $outcome->getFindings()[0]->message);
+
+        // No value to judge: no finding.
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1||||\"\"");
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testValueTypeOutsideTheProfile(): void
+    {
+        // ZZ: not in table 0125, not a data type. TN: in table 0125 of HL7 2.5, not a data type of 2.5.
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|ZZ|||A\rOBX|2|TN|||555-1234");
+
+        $this->assertSame([
+            'Error tableHL7 OBX-2',
+            'Warning variesUndetermined OBX-5',
+            'Warning variesUndetermined OBX[2]-5',
+        ], self::summary($outcome));
+        $this->assertSame(
+            "Field 'Field 5' (OBX.5) data type is undetermined: OBX-2 value (TN) is not a data type of the profile.",
+            $outcome->getFindings()[2]->message
+        );
+    }
+
+    public function testValueTypeOutsideTableButADataTypeOfTheProfile(): void
+    {
+        // CWE: not in table 0125 of HL7 2.5, a data type of 2.5: OBX-5 is judged as a CWE.
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|CWE|||^Wesnerian\rOBX|2|CWE|||X^^HL70136");
+
+        $this->assertSame(['Error tableHL7 OBX-2', 'Error tableHL7 OBX[2]-2', 'Warning tableUser OBX[2]-5.1'], self::summary($outcome));
     }
 
     public function testTextTypesHaveDisplayableCharactersOnly(): void
@@ -778,6 +866,7 @@ final class ContentCheckerTest extends TestCase
             new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('MSH', 'MSH', '2', [$msh(1, 1), $msh(2, 4)])),
             new SegmentNode(Usage::Required, new Cardinality(1, 1), self::pid()),
             new SegmentNode(Usage::Optional, new Cardinality(0, 1), new SegmentDefinition('PV1', 'PV1', '3', [])),
+            new SegmentNode(Usage::Optional, new Cardinality(0, null), self::obx()),
         ]);
 
         $message = $this->parse("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01|1|P|2.5\r" . $segments);
