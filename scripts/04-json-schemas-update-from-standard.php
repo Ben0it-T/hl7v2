@@ -32,6 +32,12 @@ declare(strict_types=1);
  * - Applies <publish-dir>/patches.json, if any, to the updated schema.
  *   A patch is a partial schema (dataTypes, fields, segments) merged key by key;
  *   lists are replaced as a whole and a null value removes the key.
+ *   Each entry (a data type, a field, a segment) may carry a `source` and a
+ *   `comment`, which are checked and never written to the schema:
+ *   - source: a document code declared in `documents`, a space, then a
+ *     section (e.g. "HL7 2.8.8.10");
+ *   - comment: free text.
+ *   `documents` (optional): the documents cited by the sources, by code.
  * - Replaces the generated content of the published schema
  *   (dataTypes.json, fields.json, segments.json, structures/) with that of --json-dir.
  * - Hand-maintained files of the published schema
@@ -101,6 +107,9 @@ const PUBLISHED_SCHEMA_FILES = ['messageType.json', 'eventDesc.json'];
 const PATCH_FILE = 'patches.json';
 const PATCHABLE_SCHEMAS = ['dataTypes', 'fields', 'segments'];
 
+// Keys of a patch entry that document it: checked, then removed before merging.
+const PATCH_ANNOTATIONS = ['source', 'comment'];
+
 if ($publishDir !== null) {
     if (!is_dir($publishDir)) {
         throw new RuntimeException(
@@ -139,15 +148,7 @@ if ($publishDir !== null) {
     }
 
     if (is_file($publishDir . '/' . PATCH_FILE)) {
-        $patches = loadJson($publishDir . '/' . PATCH_FILE);
-
-        foreach ($patches as $schemaName => $patch) {
-            if (!in_array($schemaName, PATCHABLE_SCHEMAS, true) || !is_array($patch)) {
-                throw new RuntimeException(
-                    "Invalid schema patch: {$schemaName}"
-                );
-            }
-        }
+        $patches = readPatches(loadJson($publishDir . '/' . PATCH_FILE));
     }
 }
 
@@ -251,6 +252,69 @@ function saveJson(string $filename, array $data): void
     }
 
     file_put_contents($filename, $json);
+}
+
+/**
+ * Read the schema patches: check them, and remove the annotations
+ * (`documents`, and the `source` and `comment` of each entry).
+ *
+ * @param array<mixed> $file Content of patches.json.
+ *
+ * @return array<string, array<mixed>> Patches, by schema name.
+ *
+ * @throws RuntimeException On an unknown schema, a malformed document list,
+ *                          or a malformed source or comment.
+ */
+function readPatches(array $file): array
+{
+    $documents = $file['documents'] ?? [];
+    unset($file['documents']);
+    if (!is_array($documents) || ($documents !== [] && array_is_list($documents))) {
+        throw new RuntimeException('Invalid schema patch: documents must be an object.');
+    }
+    foreach ($documents as $code => $title) {
+        if (!is_string($title) || $title === '') {
+            throw new RuntimeException("Invalid schema patch: documents.{$code} must be a non-empty string.");
+        }
+    }
+
+    $patches = [];
+    foreach ($file as $schemaName => $patch) {
+        if (!in_array($schemaName, PATCHABLE_SCHEMAS, true) || !is_array($patch)) {
+            throw new RuntimeException(
+                "Invalid schema patch: {$schemaName}"
+            );
+        }
+
+        foreach ($patch as $name => $entry) {
+            if (!is_array($entry) || array_is_list($entry)) {
+                continue;
+            }
+            $where = "{$schemaName}.{$name}";
+
+            if (array_key_exists('source', $entry)) {
+                $source = $entry['source'];
+                if (!is_string($source) || preg_match('/^(\S+) \S/', $source, $matches) !== 1) {
+                    throw new RuntimeException("Invalid schema patch: {$where}.source is not '<document> <section>'.");
+                }
+                if (!isset($documents[$matches[1]])) {
+                    throw new RuntimeException("Invalid schema patch: {$where}.source cites an unknown document '{$matches[1]}'.");
+                }
+            }
+            if (array_key_exists('comment', $entry) && (!is_string($entry['comment']) || $entry['comment'] === '')) {
+                throw new RuntimeException("Invalid schema patch: {$where}.comment must be a non-empty string.");
+            }
+
+            foreach (PATCH_ANNOTATIONS as $key) {
+                unset($entry[$key]);
+            }
+            $patch[$name] = $entry;
+        }
+
+        $patches[$schemaName] = $patch;
+    }
+
+    return $patches;
 }
 
 /**

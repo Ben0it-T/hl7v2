@@ -44,7 +44,7 @@ HL7 versions only:
 
 | File           | Content |
 |----------------|---------|
-| `patches.json` | Schema patches (optional): corrections the reference sources cannot produce (for example removing a table). A patch is a partial schema (`dataTypes`, `fields`, `segments`) merged key by key; lists are replaced as a whole and a `null` value removes the key. Applied by 04. |
+| `patches.json` | Schema patches (optional): corrections the reference sources cannot produce (for example removing a table). A patch is a partial schema (`dataTypes`, `fields`, `segments`) merged key by key; lists are replaced as a whole and a `null` value removes the key. Each entry may carry a `source` (a code of `documents`, a space, then a section: `"HL7 2.8.8.10"`) and a `comment`, never written to the schema. Applied by 04. |
 
 Derived schemas only:
 

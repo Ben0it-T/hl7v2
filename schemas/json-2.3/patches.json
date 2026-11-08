@@ -1,9 +1,16 @@
 {
+    "documents": {
+        "HL7": "HL7 Messaging Standard Version 2.3"
+    },
     "dataTypes": {
         "CE.1": {
+            "source": "HL7 2.8.3",
+            "comment": "Type of the CE definition (2.8.3.1, identifier ST); the CE fields of 2.3 write identifier (ID), as the XSD and the standard extract.",
             "Type": "ST"
         },
         "CE.4": {
+            "source": "HL7 2.8.3",
+            "comment": "Type of the CE definition (2.8.3.4, alternate components defined analogously); the CE fields of 2.3 write alternate identifier (ID).",
             "Type": "ST"
         },
         "CM_ABS_RANGE.1": {

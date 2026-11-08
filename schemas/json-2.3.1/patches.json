@@ -1,4 +1,7 @@
 {
+    "documents": {
+        "HL7": "HL7 Messaging Standard Version 2.3.1"
+    },
     "dataTypes": {
         "CM_ABS_RANGE": {
             "components": [
@@ -75,6 +78,8 @@
             "maxLength": ""
         },
         "CNE": {
+            "source": "HL7 2.8.8.10",
+            "comment": "CNE.1 R: \"The identifier is required and must be a valid code.\" CNE.7 C: \"If the coding system is any system other than HL7 coding system, version ID must be valued.\"",
             "components": [
                 {
                     "dataType": "CNE.1",
@@ -133,6 +138,8 @@
             ]
         },
         "CWE": {
+            "source": "HL7 2.8.11.10",
+            "comment": "CWE.7 C: \"If the coding system is any system other than HL7 coding system, version ID must be valued.\"",
             "components": [
                 {
                     "dataType": "CWE.1",
