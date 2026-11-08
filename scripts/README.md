@@ -128,7 +128,7 @@ php 05-derive-schemas.php \
 
 Generate a JSON profile directory from a JSON schema directory. The format is described in `profiles/README.md`.
 
-The profile is restricted to the selected messages and to the segments, fields and datatypes they use. Every table of `hl7tables.json` is kept. A table cited by a field or a component but absent from `hl7tables.json` is reported as a warning, and so is a usage that is not consistent with its cardinality (for example O with a minimum of 1).
+The profile is restricted to the selected messages and to the segments and fields they use. Every datatype of the schema is kept (a `varies` field, OBX-5, takes the datatype named by OBX-2), and so is every table of `hl7tables.json`. A table cited by a field, or by a component of a datatype they use, but absent from `hl7tables.json` is reported as a warning, and so is a usage that is not consistent with its cardinality (for example O with a minimum of 1).
 
 The script replaces the generated files of the profile directory and keeps `rules.json`.
 

@@ -3291,10 +3291,6 @@
                 "description": "Formatted Text (Display)"
             },
             {
-                "code": "ID",
-                "description": "Coded Value"
-            },
-            {
                 "code": "MO",
                 "description": "Money"
             },

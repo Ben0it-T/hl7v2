@@ -2,7 +2,8 @@
 
 A profile directory describes the messages that can be validated for one HL7 version or one derived profile (for example IHE PAM FR). It is a **resolved copy** of a schema directory (`schemas/json-<v>/`), produced by `scripts/06-create-json-profile.php`:
 
-- restricted to the selected messages, and to the segments, fields and datatypes they use;
+- restricted to the selected messages, and to the segments and fields they use;
+- with every datatype of the schema (a `varies` field, OBX-5, takes the datatype named by OBX-2);
 - usages computed;
 - table names normalized (`0010`);
 - keys in camelCase.

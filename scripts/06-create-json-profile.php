@@ -6,13 +6,16 @@ declare(strict_types=1);
  * Create a JSON profile directory from a JSON schema directory.
  *
  * The profile is a resolved copy of the schema (format described in profiles/README.md):
- * - restricted to the selected messages, and to the segments, fields and datatypes they use;
+ * - restricted to the selected messages, and to the segments and fields they use;
+ * - with every datatype of the schema: a varies field (OBX-5) takes the datatype named by
+ *   another field (OBX-2), which can be any datatype;
  * - usages computed;
  * - table names normalized (0010);
  * - keys in camelCase.
  *
  * The script replaces the generated files of the profile directory and keeps rules.json.
- * A table cited by a field or a component but absent from hl7tables.json is reported as a warning,
+ * A table cited by a field, or by a component of a datatype they use, but absent from hl7tables.json
+ * is reported as a warning,
  * and so is a usage that is not consistent with its cardinality (see occursWarning()).
  *
  * Usage:
@@ -497,11 +500,27 @@ foreach (array_keys($usedSegments) as $name) {
 
 uksort($profileFields, 'strnatcmp');
 
-// Datatypes, followed from the field datatypes to the component datatypes
+// Datatypes: first those the fields use, followed to the datatypes of their components (the
+// tables they cite are checked); then every other datatype of the schema, as a varies field
+// (OBX-5) takes the datatype named by another field (OBX-2). escapeType is not an HL7 datatype
+// (an artifact of the XML schemas).
 $profileDataTypes = [];
 $queue = array_keys($usedDataTypes);
+$otherDataTypes = [];
+foreach ($dataTypes as $name => $dataType) {
+    $name = (string) $name;
+    if (is_array($dataType) && !isset($dataType['Type']) && $name !== 'escapeType') {
+        $otherDataTypes[] = $name;
+    }
+}
+$citing = true;
 
-while ($queue !== []) {
+while ($queue !== [] || $otherDataTypes !== []) {
+    if ($queue === []) {
+        $citing = false;
+        $queue = $otherDataTypes;
+        $otherDataTypes = [];
+    }
     $name = array_shift($queue);
 
     if (isset($profileDataTypes[$name])) {
@@ -537,7 +556,7 @@ while ($queue !== []) {
             'longName' => stringOf($definition, 'LongName', "dataTypes.json: {$id}"),
         ] + sourceOf([$component['source'] ?? null, $definition['source'] ?? null]);
 
-        if ($table !== '') {
+        if ($table !== '' && $citing) {
             $citedTables[$table][] = $id;
         }
 
