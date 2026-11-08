@@ -677,9 +677,9 @@
         "components": [
             {
                 "dataType": "CNE.1",
-                "minOccurs": "0",
+                "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "R"
             },
             {
                 "dataType": "CNE.2",
@@ -715,7 +715,7 @@
                 "dataType": "CNE.7",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "CNE.8",
@@ -1144,7 +1144,7 @@
                 "dataType": "CWE.7",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "CWE.8",
