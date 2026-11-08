@@ -1470,6 +1470,9 @@
     "DT": {
         "dataType": "STRING"
     },
+    "DTM": {
+        "dataType": "STRING"
+    },
     "DTN": {
         "components": [
             {
@@ -4311,7 +4314,7 @@
         ]
     },
     "TS.1": {
-        "Type": "ST",
+        "Type": "DTM",
         "Table": "",
         "LongName": "time of an event",
         "maxLength": ""

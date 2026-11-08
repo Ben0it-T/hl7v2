@@ -2621,6 +2621,9 @@
     "DT": {
         "dataType": "STRING"
     },
+    "DTM": {
+        "dataType": "STRING"
+    },
     "ED": {
         "components": [
             {
@@ -3752,12 +3755,13 @@
             {
                 "dataType": "TS.2",
                 "minOccurs": "0",
-                "maxOccurs": "1"
+                "maxOccurs": "1",
+                "usage": "B"
             }
         ]
     },
     "TS.1": {
-        "Type": "ST",
+        "Type": "DTM",
         "Table": "",
         "LongName": "time of an event",
         "maxLength": ""
