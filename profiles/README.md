@@ -30,7 +30,7 @@ json-<v>/
 
 Every file is produced by the pipeline, except `rules.json`. Do not edit the others: change the sources in `schemas/` and run the pipeline again.
 
-The format of `rules.json` is not defined yet.
+The format of `rules.json` is described [below](#rulesjson).
 
 A derived profile is resolved like any other profile: the constraints of its specification are already applied to its files.
 
@@ -199,3 +199,61 @@ The sub-components of a component are the components of its datatype (`CX.4` →
 ```
 
 Both files are produced from the hand-maintained `schemas/json-<v>/hl7tables.json`.
+
+## rules.json
+
+The validation rules of the profile: the severity of each finding type, the tables closed by the profile, and the tables that accept local codes. It is maintained by hand: `scripts/06-create-json-profile.php` keeps it as it is. The validator applies no rule of its own: every rule comes from this file, which must be complete.
+
+```json
+{
+  "source": "HL7 v2: usage, cardinality, data types, lengths and tables",
+  "comment": "Usage RE and CE behave as O and C. Values outside a User table give a Warning: HL7 only suggests the values of a User table.",
+  "severities": {
+    "requiredAbsent": "Error",
+    "zSegmentNotDefined": "Warning",
+    "backwardPresent": "Info"
+  },
+  "closedTables": [],
+  "localCodeTables": ["0003", "0076", "0354"]
+}
+```
+
+(`severities` is shortened here: it must list every finding type.)
+
+| Key | Required | Content |
+|---|---|---|
+| `source` | no | Where the rules come from (text) |
+| `comment` | no | Free text |
+| `severities` | yes | The severity of each finding type: `Error`, `Warning` or `Info`. Every finding type below must be present, and no other key. Only Errors make a message invalid. |
+| `closedTables` | yes | Ids of the tables closed by the profile (list, may be empty): a value outside one of them is a `tableClosed` finding, whatever the type of the table (HL7 or User). |
+| `localCodeTables` | yes | Ids of the tables that accept local codes (list, may be empty): a value made of `Z` then upper-case letters, digits or `_` (`Z01`) is accepted in them, except in a CNE. |
+
+An unknown key, a missing or unknown finding type, an unknown severity or a malformed list of tables is refused when the profile directory is opened.
+
+Finding types, with their severity in the profiles of this repository (the same in every profile):
+
+| Finding type | Severity | Meaning |
+|---|---|---|
+| `requiredAbsent` | Error | Required element (R) absent |
+| `notAllowedPresent` | Error | Element not allowed (X) present |
+| `cardinality` | Error | Minimum or maximum cardinality not respected |
+| `segmentNotExpected` | Error | Segment known by the profile, but not expected at its position |
+| `segmentNotDefined` | Error | Segment unknown to the profile (not a Z segment) |
+| `zSegmentNotDefined` | Warning | Z segment unknown to the profile |
+| `elementInExcess` | Error | Field, component or sub-component in excess |
+| `escapeMalformed` | Error | Escape sequence malformed (unclosed, unknown code, invalid data) |
+| `escapeNotAllowed` | Error | Escape sequence not allowed in the data type (`\H\` in an NM) |
+| `variesUndetermined` | Warning | Data type of a varies element (OBX-5) undetermined: OBX-2 absent or unknown |
+| `withdrawnPresent` | Warning | Withdrawn element (W) present |
+| `backwardPresent` | Info | Backward compatible element (B) present |
+| `conditionalPresent` | Info | Conditional element (C, CE) present, condition not evaluated |
+| `datatype` | Error | Value not valid for its data type |
+| `length` | Error | Value longer than its maximum length |
+| `tableHL7` | Error | Value not in an HL7 table |
+| `tableUser` | Warning | Value not in a User table, or in the table of a CWE (local values allowed) |
+| `tableClosed` | Error | Value not in a table closed by the profile, or in the table of a CNE (no local value) |
+| `tableUnavailable` | Info | Table absent from the profile, or without codes: no check done |
+| `noDatatypeValidator` | Info | No validator for the data type: no check done |
+| `parseIssue` | Error | Problem met while parsing (character set, invalid bytes) |
+
+Closed tables: none in the HL7 profiles; 50 in IHE PAM FR, the tables whose values are given by PAM FR or DTFR (DTFR: no list can be extended without a new revision), except the lists declared non-limitative by PAM FR. Local codes: tables 0003 (event type), 0076 (message type) and 0354 (message structure), in every profile.
