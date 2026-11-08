@@ -219,8 +219,9 @@ final class ContentCheckerTest extends TestCase
         [$outcome] = $this->check('PID|A|A\F\BCD~ABCD\F\||||||X~Y');
         $this->assertSame([], self::summary($outcome));
 
+        // A^B&C in an ST: its component 2 is in excess.
         [$outcome] = $this->check('PID|A|ABCDE\F\~A^B&C||||||X~Y');
-        $this->assertSame(['Error length PID-2'], self::summary($outcome));
+        $this->assertSame(['Error length PID-2', 'Error elementInExcess PID-2[2].2'], self::summary($outcome));
         $this->assertStringContainsString('length (6) exceeds', $outcome->getFindings()[0]->message);
     }
 
@@ -407,6 +408,47 @@ final class ContentCheckerTest extends TestCase
         $this->assertContains("Length MSH-2 ok Field 'Field 2' (MSH.2) length (4) does not exceed the length defined in the message profile (4).", self::entries($outcome));
     }
 
+    public function testFieldInExcess(): void
+    {
+        // The test PID defines 34 fields: PID-35 is in excess, an Explicit null too.
+        [$outcome] = $this->check(self::pidWith([35 => 'EXTRA', 36 => '""']));
+
+        $this->assertSame(['Error elementInExcess PID-35', 'Error elementInExcess PID-36'], self::summary($outcome));
+        $this->assertSame('Field PID-35 is in excess: segment PID has 34 field(s).', $outcome->getFindings()[0]->message);
+    }
+
+    public function testEmptyTrailingElementsAreNotInExcess(): void
+    {
+        [$outcome] = $this->check(self::pidWith([2 => 'AB^^', 10 => 'DOE&&^JOHN']) . '||||');
+
+        $this->assertSame([], self::summary($outcome));
+    }
+
+    public function testComponentInExcess(): void
+    {
+        // CX has 10 components in HL7 2.5; an ST field has one.
+        [$outcome] = $this->check(self::pidWith([2 => 'AB^CD', 9 => '123^^^^^^^^^^X']));
+
+        $this->assertSame(['Error elementInExcess PID-2.2', 'Error elementInExcess PID-9.11'], self::summary($outcome));
+        $this->assertSame('Component PID-2.2 is in excess: data type ST has 1 component(s).', $outcome->getFindings()[0]->message);
+    }
+
+    public function testSubComponentInExcess(): void
+    {
+        // XPN.1 (FN) has 5 components; XPN.2 (ST) has one.
+        [$outcome] = $this->check(self::pidWith([10 => 'DOE&&&&&X^JOHN&Y']));
+
+        $this->assertSame(['Error elementInExcess PID-10.1.6', 'Error elementInExcess PID-10.2.2'], self::summary($outcome));
+    }
+
+    public function testElementInExcessOfTheObservationValue(): void
+    {
+        // OBX-5 as an NM: its component 2 is in excess. Data type undetermined: not judged below.
+        [$outcome] = $this->check(self::pidWith([]) . "\rOBX|1|NM|||12^3\rOBX|2||||12^3");
+
+        $this->assertSame(['Error elementInExcess OBX-5.2', 'Warning variesUndetermined OBX[2]-5'], self::summary($outcome));
+    }
+
     public function testVariesFieldWithoutTypeFieldIsUndetermined(): void
     {
         // PID-14 (varies in the test segment): no field gives its data type, nothing judged below.
@@ -417,10 +459,10 @@ final class ContentCheckerTest extends TestCase
 
     public function testPrimitiveValueIsItsFirstSubComponent(): void
     {
-        // The second component of an ST field is in excess: not judged here.
+        // The second component of an ST field is in excess; its content is not judged (\H\).
         [$outcome] = $this->check('PID|A|AB^\H\||||||X~Y');
 
-        $this->assertSame([], self::summary($outcome));
+        $this->assertSame(['Error elementInExcess PID-2.2'], self::summary($outcome));
     }
 
     public function testPrimitiveDataTypes(): void
@@ -850,7 +892,8 @@ final class ContentCheckerTest extends TestCase
     /**
      * Run the content checks on a message MSH, then the given segments, on
      * the structure MSH, PID, [PV1], with the data types of a profile directory.
-     * MSH-1 and MSH-2 are defined as ST of length 1 and 4.
+     * MSH-1 and MSH-2 are defined as ST of length 1 and 4, MSH-3 to MSH-12 as
+     * optional fields of length 50 (MSH-9 a MSG, the others ST).
      *
      * @param string $directory Profile directory in profiles-next, or an absolute path (forged directory).
      *
@@ -858,18 +901,22 @@ final class ContentCheckerTest extends TestCase
      */
     private function check(string $segments, string $directory = 'json-2.5'): array
     {
-        $msh = static fn (int $position, int $length): SegmentField => new SegmentField(
-            $position, Usage::Required, new Cardinality(1, 1),
-            new FieldDefinition("MSH.$position", '00000', 'ST', $length, null, "Field $position", '2')
+        $msh = static fn (int $position, int $length, string $type = 'ST', Usage $usage = Usage::Required): SegmentField => new SegmentField(
+            $position, $usage, new Cardinality($usage === Usage::Required ? 1 : 0, 1),
+            new FieldDefinition("MSH.$position", '00000', $type, $length, null, "Field $position", '2')
         );
+        $mshFields = [$msh(1, 1), $msh(2, 4)];
+        for ($position = 3; $position <= 12; $position++) {
+            $mshFields[] = $msh($position, 50, $position === 9 ? 'MSG' : 'ST', Usage::Optional);
+        }
         $structure = new GroupNode('ROOT', Usage::Required, new Cardinality(1, 1), [
-            new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('MSH', 'MSH', '2', [$msh(1, 1), $msh(2, 4)])),
+            new SegmentNode(Usage::Required, new Cardinality(1, 1), new SegmentDefinition('MSH', 'MSH', '2', $mshFields)),
             new SegmentNode(Usage::Required, new Cardinality(1, 1), self::pid()),
             new SegmentNode(Usage::Optional, new Cardinality(0, 1), new SegmentDefinition('PV1', 'PV1', '3', [])),
             new SegmentNode(Usage::Optional, new Cardinality(0, null), self::obx()),
         ]);
 
-        $message = $this->parse("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01|1|P|2.5\r" . $segments);
+        $message = $this->parse("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01^ADT_A01|1|P|2.5\r" . $segments);
         $result = new ValidationResult();
         $profileDirectory = ProfileDirectory::open(str_starts_with($directory, '/') ? $directory : self::PROFILES . '/' . $directory);
         $recorder = new CheckRecorder($profileDirectory->rules, $result, 'ADT_A01');

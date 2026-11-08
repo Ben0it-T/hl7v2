@@ -48,6 +48,14 @@
         "message": "SubComponent 'Namespace ID' (HD.1) value (HOSP) not checked: table 0300 has no codes in the profile."
     },
     {
+        "severity": "Error",
+        "type": "elementInExcess",
+        "location": "PID-40",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "Field PID-40 is in excess: segment PID has 39 field(s)."
+    },
+    {
         "severity": "Info",
         "type": "tableUnavailable",
         "location": "PV1-3.1",

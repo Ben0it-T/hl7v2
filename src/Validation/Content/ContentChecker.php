@@ -69,6 +69,16 @@ use HL7v2\Validation\Value\TableMembership;
  *   what follows it is in excess.
  * An Explicit null, or an element without value, has nothing below it to judge.
  *
+ * Elements in excess (elementInExcess, one finding per element, its content
+ * not judged): an element present (an Explicit null included) at a position
+ * the definition does not have: a field beyond the last field of the
+ * segment; a component beyond the components of a composite, or after the
+ * first one of a primitive field; a sub-component beyond the components of a
+ * composite component, or after the first one of a primitive component. HL7
+ * asks a receiving application to ignore them (HL7 v2.5 section 2.6.2); a
+ * profile does not allow them, as an X element (section 2.12). A composite at
+ * the sub-component level has no separator left: nothing is in excess there.
+ *
  * A varies field takes the data type named by another field of its segment:
  * OBX-5 the data type of OBX-2 (HL7 v2.5 section 7.4.2.5, "An observation
  * value is always represented as the data type specified in OBX-2"; the same
@@ -218,6 +228,19 @@ final class ContentChecker
         foreach ($definition->fields as $field) {
             $this->checkField($item, $field, $item->segment->getField($field->position));
         }
+
+        $defined = count($definition->fields);
+        foreach ($item->segment->getFields() as $index => $field) {
+            $position = $index + 1;
+            if ($position > $defined && Presence::ofField($field) !== Presence::NotPresent) {
+                $this->recordExcess(
+                    $item,
+                    'Field',
+                    $this->location($item, $position),
+                    "segment {$definition->name} has $defined field(s)"
+                );
+            }
+        }
     }
 
     /**
@@ -282,6 +305,7 @@ final class ContentChecker
                         $repLabel,
                         $repLocation
                     );
+                    $this->checkExcessComponents($item, $repeat->getComponents(), 1, $type->name, $repLocation);
                 }
                 continue;
             }
@@ -385,6 +409,8 @@ final class ContentChecker
                 self::locate($location, $definition->position)
             );
         }
+
+        $this->checkExcessComponents($item, $repeat->getComponents(), count($type->components), $type->name, $location);
     }
 
     /**
@@ -435,6 +461,7 @@ final class ContentChecker
                 $label,
                 $location
             );
+            $this->checkExcessSubComponents($item, $component->getSubComponents(), 1, $type->name, $location);
 
             return;
         }
@@ -456,6 +483,8 @@ final class ContentChecker
                 self::locate($location, null, $subDefinition->position)
             );
         }
+
+        $this->checkExcessSubComponents($item, $component->getSubComponents(), count($type->components), $type->name, $location);
     }
 
     /**
@@ -514,6 +543,75 @@ final class ContentChecker
         }
 
         $this->checkLeaf($item, $type->name, $subComponent, $table, $label, $location);
+    }
+
+    /**
+     * Record each component of a repetition beyond those of its data type.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param array<int, Component> $components Components of the repetition, from index 0.
+     * @param int $defined Number of components of the data type (1 for a primitive).
+     * @param string $dataType Data type of the repetition.
+     * @param Location $location Location of the repetition.
+     *
+     * @return void
+     */
+    private function checkExcessComponents(
+        SegmentOccurrence|UnplacedSegment $item,
+        array $components,
+        int $defined,
+        string $dataType,
+        Location $location
+    ): void {
+        foreach ($components as $index => $component) {
+            $position = $index + 1;
+            if ($position > $defined && Presence::ofComponent($component) !== Presence::NotPresent) {
+                $this->recordExcess($item, 'Component', self::locate($location, $position), "data type $dataType has $defined component(s)");
+            }
+        }
+    }
+
+    /**
+     * Record each sub-component of a component beyond those of its data type.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param array<int, SubComponent> $subComponents Sub-components of the component, from index 0.
+     * @param int $defined Number of components of the data type (1 for a primitive).
+     * @param string $dataType Data type of the component.
+     * @param Location $location Location of the component.
+     *
+     * @return void
+     */
+    private function checkExcessSubComponents(
+        SegmentOccurrence|UnplacedSegment $item,
+        array $subComponents,
+        int $defined,
+        string $dataType,
+        Location $location
+    ): void {
+        foreach ($subComponents as $index => $subComponent) {
+            $position = $index + 1;
+            if ($position > $defined && Presence::ofSubComponent($subComponent) !== Presence::NotPresent) {
+                $this->recordExcess($item, 'SubComponent', self::locate($location, null, $position), "data type $dataType has $defined component(s)");
+            }
+        }
+    }
+
+    /**
+     * Record an element in excess.
+     *
+     * @param SegmentOccurrence|UnplacedSegment $item
+     * @param string $kind Field, Component or SubComponent.
+     * @param Location $location Location of the element in excess.
+     * @param string $reason What the definition has.
+     *
+     * @return void
+     */
+    private function recordExcess(SegmentOccurrence|UnplacedSegment $item, string $kind, Location $location, string $reason): void
+    {
+        $this->record($item, $this->newCheck($item, 'Element in excess', false,
+            "$kind {$location->toShortString()} is in excess: $reason.",
+            FindingType::ElementInExcess, $location));
     }
 
     /**

@@ -56,6 +56,14 @@
         "message": "Field 'Administrative Sex' (PID.8) length (7) exceeds the length defined in the message profile (1)."
     },
     {
+        "severity": "Error",
+        "type": "elementInExcess",
+        "location": "PID-8.2",
+        "profilePath": "PID[1]",
+        "segment": 3,
+        "message": "Component PID-8.2 is in excess: data type IS has 1 component(s)."
+    },
+    {
         "severity": "Info",
         "type": "tableUnavailable",
         "location": "PV1-3.1",
