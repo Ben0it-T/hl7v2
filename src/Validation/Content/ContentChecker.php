@@ -24,6 +24,7 @@ use HL7v2\Validation\FindingType;
 use HL7v2\Validation\ProfiledMessage;
 use HL7v2\Validation\Structure\SegmentOccurrence;
 use HL7v2\Validation\Structure\UnplacedSegment;
+use HL7v2\Validation\Value\DisplayableText;
 use HL7v2\Validation\Value\EscapePolicy;
 use HL7v2\Validation\Value\Presence;
 use HL7v2\Validation\Value\PrimitiveValidators;
@@ -59,10 +60,12 @@ use HL7v2\Validation\Value\TableMembership;
  *   HL7 length); the other components cannot be sent and are not judged.
  *   A TS in a DR stays a TS, its value is its TS.1;
  * - primitive (the leaf): the escape sequences of its Raw value, well formed
- *   and allowed by its data type; then, on its Decoded value, its data type
- *   (the validator of the type; ID and IS have none, their table checks
- *   them; ST, TX and FT have their own rules, not checked here yet; any
- *   other type without validator gives noDatatypeValidator) and its table.
+ *   and allowed by its data type; then its data type: ST, TX, FT and GTS
+ *   by the characters written outside the escape sequences (displayable
+ *   only), any other type by the validator of the type on the Decoded value
+ *   (ID and IS have none, their table checks them; any other type without
+ *   validator gives noDatatypeValidator); then its table, on the Decoded
+ *   value.
  *   The leaf of a primitive field or component is its first sub-component;
  *   what follows it is in excess.
  * An Explicit null, or an element without value, has nothing below it to judge.
@@ -122,6 +125,8 @@ final class ContentChecker
 
     private TableMembership $tables;
 
+    private DisplayableText $displayable;
+
     /**
      * Coded data types: their component 1 and 4 are checked against the table
      * their coding system designates.
@@ -139,6 +144,7 @@ final class ContentChecker
         $this->escapePolicy = new EscapePolicy();
         $this->validators = PrimitiveValidators::standard();
         $this->tables = new TableMembership();
+        $this->displayable = new DisplayableText();
     }
 
     /**
@@ -574,7 +580,7 @@ final class ContentChecker
         }
 
         $value = $leaf->getDecodedValue();
-        $this->checkDataType($item, $dataType, $value, $label, $location);
+        $this->checkDataType($item, $dataType, $raw, $value, $label, $location);
         $this->checkTable($item, $table, $value, $label, $location);
     }
 
@@ -621,11 +627,14 @@ final class ContentChecker
     }
 
     /**
-     * Check the Decoded value of a leaf against the validator of its data type.
+     * Check a leaf against its data type: a text type by its written
+     * characters, any other type by the validator of the type on its Decoded
+     * value.
      *
      * @param SegmentOccurrence|UnplacedSegment $item
      * @param string $dataType Primitive data type of the leaf.
-     * @param string $value Decoded value, not empty.
+     * @param string $raw Raw value, not empty.
+     * @param string $value Decoded value.
      * @param string $label
      * @param Location $location
      *
@@ -634,13 +643,24 @@ final class ContentChecker
     private function checkDataType(
         SegmentOccurrence|UnplacedSegment $item,
         string $dataType,
+        string $raw,
         string $value,
         string $label,
         Location $location
     ): void {
-        // ID and IS: checked against their table. ST, TX and FT: their own
-        // rules, not checked here yet.
-        if (in_array($dataType, ['ID', 'IS', 'ST', 'TX', 'FT'], true)) {
+        // ID and IS: checked against their table.
+        if (in_array($dataType, ['ID', 'IS'], true)) {
+            return;
+        }
+
+        if (in_array($dataType, DisplayableText::DATA_TYPES, true)) {
+            $controls = $this->displayable->controlCharacters($this->message->getEscapeSequences()->text($raw));
+            $this->record($item, $controls === []
+                ? $this->newCheck($item, 'Datatype', true, "$label value has displayable characters only ($dataType).", null, $location)
+                : $this->newCheck($item, 'Datatype', false,
+                    "$label value has control character(s) " . implode(', ', $controls) . ", not allowed in data type $dataType.",
+                    FindingType::Datatype, $location));
+
             return;
         }
 

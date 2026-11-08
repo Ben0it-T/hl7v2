@@ -26,6 +26,9 @@ use HL7v2\Model\EscapeScan;
  * - \Zdddd...\ counts its data characters (the d), without the escape characters and the code Z;
  * - a malformed sequence counts its characters.
  * The syntax of a sequence (escape characters and code) never counts: only what the sequence carries does.
+ *
+ * Written text (text): the characters written in a Raw value outside its
+ * well-formed escape sequences; a malformed sequence is kept as written.
  */
 final readonly class EscapeSequences
 {
@@ -61,6 +64,22 @@ final readonly class EscapeSequences
         }
 
         return $decoded;
+    }
+
+    /**
+     * Written text of a Raw value: its characters outside the well-formed
+     * escape sequences, a malformed sequence kept as written.
+     */
+    public function text(string $raw): string
+    {
+        $text = '';
+        foreach ($this->tokens($raw) as [$kind, $content]) {
+            if ($kind === 'text' || $kind === 'malformed') {
+                $text .= $content;
+            }
+        }
+
+        return $text;
     }
 
     /**
