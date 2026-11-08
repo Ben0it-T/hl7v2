@@ -193,6 +193,17 @@ final class ContentCheckerTest extends TestCase
         $this->assertStringContainsString('(found 3)', $outcome->getFindings()[0]->message);
     }
 
+    public function testEmptyRepetitionsAtTheEndAreNotCounted(): void
+    {
+        // PID-2 [0..2]: AB~CD~ and AB~CD~~ have 2 repetitions; PID-1 [1..1]: A~.
+        [$outcome] = $this->check('PID|A~|AB~CD~||||||X~Y');
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains("Cardinality PID-2 ok Field 'Field 2' (PID.2) cardinality is [0..2]. Found 2 time(s).", self::entries($outcome));
+
+        [$outcome] = $this->check('PID|A|AB~CD~~||||||X~Y');
+        $this->assertSame([], self::summary($outcome));
+    }
+
     public function testRequiredFieldUnderItsMinimum(): void
     {
         [$outcome] = $this->check('PID|A|||||||X');

@@ -46,7 +46,10 @@ use HL7v2\Validation\Value\TableMembership;
  *   nothing more on that element; W, B, C or CE: one finding.
  *
  * For each field of the definition: its usage; the count of repetitions,
- * as received: beyond the maximum, or under the minimum of an R field; then
+ * as received up to the last one present (an empty repetition in the middle
+ * counts, an empty one at the end does not: HL7 v2.5 section 2.6.1.1, a
+ * sender writes a repetition separator after each occurrence but the last
+ * populated one): beyond the maximum, or under the minimum of an R field; then
  * each repetition with a value: its HL7 length, counted on its Raw value
  * without its elements in excess (they have their own finding), and
  * its content according to the data type of the field.
@@ -265,7 +268,7 @@ final class ContentChecker
             return;
         }
 
-        $this->checkRepetitionCount($item, $field, $value->countRepeats(), $label, $location);
+        $this->checkRepetitionCount($item, $field, self::countRepetitions($value), $label, $location);
 
         $type = $this->dataType($definition->dataType);
         if ($type->name === 'varies') {
@@ -704,7 +707,28 @@ final class ContentChecker
     }
 
     /**
-     * Check the count of repetitions of a present field, as received.
+     * Count of repetitions of a field, as received up to the last one present:
+     * the empty repetitions at the end are not counted.
+     *
+     * @param Field $value
+     *
+     * @return int
+     */
+    private static function countRepetitions(Field $value): int
+    {
+        $count = 0;
+        foreach ($value->getRepeats() as $index => $repeat) {
+            if (Presence::ofRepeat($repeat) !== Presence::NotPresent) {
+                $count = $index + 1;
+            }
+        }
+
+        return $count;
+    }
+
+    /**
+     * Check the count of repetitions of a present field, as received up to
+     * the last one present.
      * The minimum is judged for an R field only: for C and CE it depends on
      * a condition that is not evaluated, and O, RE, B, W have a minimum of 0.
      *
