@@ -5692,7 +5692,7 @@
         "Type": "ID",
         "Table": "HL70125",
         "LongName": "Value Type",
-        "maxLength": "2",
+        "maxLength": "3",
         "Chapter": "7.3.2.2"
     },
     "OBX.3": {

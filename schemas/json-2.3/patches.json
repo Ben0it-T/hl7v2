@@ -555,6 +555,11 @@
             "maxLength": "30",
             "Chapter": "C"
         },
+        "OBX.2": {
+            "source": "HL7 7.3.2.2",
+            "comment": "Length 3, as HL7 v2.3.1 (7.3.2.2): HL7 v2.3 gives 2, but table 0125 has codes of 3 letters (XAD, XCN, XON, XPN, XTN), which a length of 2 would refuse.",
+            "maxLength": "3"
+        },
         "PRA.8": {
             "Item": "01296",
             "Type": "DT",
