@@ -16,9 +16,9 @@ use HL7v2\Validation\Value\PrimitiveValidator;
  * The same validators serve every HL7 version; they follow the definitions
  * of HL7 v2.5 (DTM exists from 2.5 on).
  *
- * ID and IS have no validator: their value is checked against their table.
- * ST, TX, FT and GTS are judged by their written characters (DisplayableText).
- * A primitive data type without validator is not checked (TN...).
+ * The text types (ST, TX, FT, GTS, ID, IS, TN) have no validator: they are
+ * judged by their written characters (DisplayableText), and an ID or an IS by
+ * its table. A primitive data type without validator is not checked.
  */
 final readonly class PrimitiveValidators
 {

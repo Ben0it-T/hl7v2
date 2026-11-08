@@ -7,8 +7,8 @@ use HL7v2\Validation\Value\DisplayableText;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Displayable characters of a text value (ST, TX, FT, GTS): no control
- * character (Unicode Cc).
+ * Displayable characters of a text value (ST, TX, FT, GTS, ID, IS, TN): no
+ * control character (Unicode Cc).
  */
 final class DisplayableTextTest extends TestCase
 {
@@ -36,6 +36,6 @@ final class DisplayableTextTest extends TestCase
 
     public function testDataTypes(): void
     {
-        $this->assertSame(['ST', 'TX', 'FT', 'GTS'], DisplayableText::DATA_TYPES);
+        $this->assertSame(['ST', 'TX', 'FT', 'GTS', 'ID', 'IS', 'TN'], DisplayableText::DATA_TYPES);
     }
 }

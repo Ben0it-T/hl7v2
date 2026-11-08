@@ -34,6 +34,20 @@ final class ContentCheckerTest extends TestCase
     private const PROFILES = __DIR__ . '/../../../../profiles-next';
 
     /**
+     * Profile directory forged by forgeDirectory(), removed after the test.
+     */
+    private ?string $forged = null;
+
+    protected function tearDown(): void
+    {
+        if ($this->forged !== null) {
+            array_map('unlink', glob($this->forged . '/*') ?: []);
+            rmdir($this->forged);
+            $this->forged = null;
+        }
+    }
+
+    /**
      * Fields of the PID segment used by the tests, ST unless stated:
      * 1 R [1..1] length 1; 2 O [0..2] length 5; 3 X [0..0]; 4 W; 5 B; 6 C; 7 CE;
      * 8 R [2..3], no length; then optional fields of the data types of the
@@ -45,7 +59,8 @@ final class ContentCheckerTest extends TestCase
      * 26 CNE of table 0136 (HL7), 27 CWE of table 0136, 28 CNE of table 0001
      * (User), 29 CWE of table 0001 (closed in IHE PAM FR), 30 CNE of table
      * 0003 and 31 CWE of table 0003 (local codes accepted); 32 TN (HL7 2.3 to
-     * 2.4, no validator), 33 TX.
+     * 2.4), 33 TX, 34 XX (a primitive without validator, in a forged
+     * directory only).
      */
     private static function pid(): SegmentDefinition
     {
@@ -88,6 +103,7 @@ final class ContentCheckerTest extends TestCase
             $field(31, Usage::Optional, 0, 1, null, 'CWE', '0003'),
             $field(32, Usage::Optional, 0, 1, null, 'TN'),
             $field(33, Usage::Optional, 0, 1, null, 'TX'),
+            $field(34, Usage::Optional, 0, 1, null, 'XX'),
         ]);
     }
 
@@ -408,14 +424,26 @@ final class ContentCheckerTest extends TestCase
 
     public function testDataTypeWithoutValidator(): void
     {
-        // HL7 2.4: TN has no validator, an Info. ID and IS: no Datatype entry.
-        [$outcome] = $this->check(self::pidWith([15 => 'Y', 16 => 'F', 32 => '(555)555-1234']), 'json-2.4');
+        // No primitive of the profile directories lacks a validator: XX, forged.
+        [$outcome] = $this->check(self::pidWith([34 => 'X1']), $this->forgeDirectory());
 
-        $this->assertSame(['Info noDatatypeValidator PID-32'], self::summary($outcome));
-        $this->assertSame(['PID-1', 'PID-8', 'PID-8[2]', 'PID-32'], array_values(array_map(
-            static fn (string $entry): string => explode(' ', $entry)[1],
-            array_filter(self::entries($outcome), static fn (string $entry): bool => str_starts_with($entry, 'Datatype'))
-        )));
+        $this->assertSame(['Info noDatatypeValidator PID-34'], self::summary($outcome));
+        $this->assertSame(
+            "Field 'Field 34' (PID.34) data type is XX: no validator, value not checked.",
+            $outcome->getFindings()[0]->message
+        );
+    }
+
+    public function testCodedValuesAndTelephoneNumberHaveDisplayableCharactersOnly(): void
+    {
+        // HL7 2.4: ID, IS (also checked against their table), TN (format not checked).
+        [$outcome] = $this->check(self::pidWith([15 => 'Y', 16 => 'F', 19 => 'X', 32 => '234-4532CWEEKENDS']), 'json-2.4');
+        $this->assertSame(['Info tableUnavailable PID-19'], self::summary($outcome));
+        $this->assertContains("Datatype PID-32 ok Field 'Field 32' (PID.32) value has displayable characters only (TN).", self::entries($outcome));
+
+        // A tabulation: one finding per cause, data type then table.
+        [$outcome] = $this->check(self::pidWith([15 => "Y\t", 32 => "555\t1234"]), 'json-2.4');
+        $this->assertSame(['Error datatype PID-15', 'Error tableHL7 PID-15', 'Error datatype PID-32'], self::summary($outcome));
     }
 
     public function testTextTypesHaveDisplayableCharactersOnly(): void
@@ -686,6 +714,30 @@ final class ContentCheckerTest extends TestCase
     }
 
     /**
+     * Forge a profile directory: the common files of json-2.5, with XX, a
+     * primitive data type without validator.
+     *
+     * @return string Path of the directory.
+     */
+    private function forgeDirectory(): string
+    {
+        $source = self::PROFILES . '/json-2.5';
+        $path = sys_get_temp_dir() . '/hl7v2-content-' . bin2hex(random_bytes(6));
+        mkdir($path);
+        $this->forged = $path;
+
+        foreach (['profile.json', 'fields.json', 'segments.json', 'rules.json', 'messageType.json', 'hl7tables.json'] as $file) {
+            copy("$source/$file", "$path/$file");
+        }
+        $dataTypes = json_decode((string) file_get_contents("$source/dataTypes.json"), true);
+        $this->assertIsArray($dataTypes);
+        $dataTypes['XX'] = ['primitive' => true];
+        file_put_contents("$path/dataTypes.json", json_encode($dataTypes));
+
+        return $path;
+    }
+
+    /**
      * A PID segment with PID-1 and PID-8 valued (A, X~Y), and the given fields.
      *
      * @param array<int, string> $values Raw value by field position.
@@ -708,10 +760,11 @@ final class ContentCheckerTest extends TestCase
     }
 
     /**
-     * Run the content checks on a message MSH, then the given segments, on     * the structure MSH, PID, [PV1], with the data types of a profile directory.
+     * Run the content checks on a message MSH, then the given segments, on
+     * the structure MSH, PID, [PV1], with the data types of a profile directory.
      * MSH-1 and MSH-2 are defined as ST of length 1 and 4.
      *
-     * @param string $directory Profile directory in profiles-next.
+     * @param string $directory Profile directory in profiles-next, or an absolute path (forged directory).
      *
      * @return array{0: ValidationResult, 1: ProfiledMessage}
      */
@@ -729,7 +782,7 @@ final class ContentCheckerTest extends TestCase
 
         $message = $this->parse("MSH|^~\\&|APP|FAC|APP|FAC|20260101120000||ADT^A01|1|P|2.5\r" . $segments);
         $result = new ValidationResult();
-        $profileDirectory = ProfileDirectory::open(self::PROFILES . '/' . $directory);
+        $profileDirectory = ProfileDirectory::open(str_starts_with($directory, '/') ? $directory : self::PROFILES . '/' . $directory);
         $recorder = new CheckRecorder($profileDirectory->rules, $result, 'ADT_A01');
         $profiled = new ProfiledMessage((new StructureMatcher())->match($structure, $message));
 

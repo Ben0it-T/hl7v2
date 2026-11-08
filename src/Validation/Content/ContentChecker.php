@@ -60,12 +60,11 @@ use HL7v2\Validation\Value\TableMembership;
  *   HL7 length); the other components cannot be sent and are not judged.
  *   A TS in a DR stays a TS, its value is its TS.1;
  * - primitive (the leaf): the escape sequences of its Raw value, well formed
- *   and allowed by its data type; then its data type: ST, TX, FT and GTS
- *   by the characters written outside the escape sequences (displayable
- *   only), any other type by the validator of the type on the Decoded value
- *   (ID and IS have none, their table checks them; any other type without
- *   validator gives noDatatypeValidator); then its table, on the Decoded
- *   value.
+ *   and allowed by its data type; then its data type: the text types (ST,
+ *   TX, FT, GTS, ID, IS, TN) by the characters written outside the escape
+ *   sequences (displayable only), any other type by the validator of the
+ *   type on the Decoded value (a type without validator gives
+ *   noDatatypeValidator); then its table, on the Decoded value.
  *   The leaf of a primitive field or component is its first sub-component;
  *   what follows it is in excess.
  * An Explicit null, or an element without value, has nothing below it to judge.
@@ -628,8 +627,8 @@ final class ContentChecker
 
     /**
      * Check a leaf against its data type: a text type by its written
-     * characters, any other type by the validator of the type on its Decoded
-     * value.
+     * characters (an ID or an IS is also checked against its table), any
+     * other type by the validator of the type on its Decoded value.
      *
      * @param SegmentOccurrence|UnplacedSegment $item
      * @param string $dataType Primitive data type of the leaf.
@@ -648,11 +647,6 @@ final class ContentChecker
         string $label,
         Location $location
     ): void {
-        // ID and IS: checked against their table.
-        if (in_array($dataType, ['ID', 'IS'], true)) {
-            return;
-        }
-
         if (in_array($dataType, DisplayableText::DATA_TYPES, true)) {
             $controls = $this->displayable->controlCharacters($this->message->getEscapeSequences()->text($raw));
             $this->record($item, $controls === []
