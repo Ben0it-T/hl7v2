@@ -216,4 +216,21 @@ final class EscapeSequencesTest extends TestCase
         $this->assertSame([], $scan->sequences);
         $this->assertSame([], $scan->malformed);
     }
+    public function testWrittenTextIsOutsideTheSequences(): void
+    {
+        $escapes = new EscapeSequences();
+
+        $this->assertSame('AB', $escapes->text('A\F\B'));
+        $this->assertSame('AB', $escapes->text('A\X09\B'));
+        $this->assertSame('LineNext', $escapes->text('Line\.br\Next'));
+        $this->assertSame("A\tB", $escapes->text("A\tB"));
+        // A malformed sequence is kept as written.
+        $this->assertSame('A\Q\B', $escapes->text('A\Q\B'));
+        $this->assertSame('A\open', $escapes->text('A\open'));
+    }
+
+    public function testWrittenTextWithoutEscapeCharacter(): void
+    {
+        $this->assertSame('A\F\B', (new EscapeSequences('|', '^', '~', '', '&'))->text('A\F\B'));
+    }
 }

@@ -44,7 +44,8 @@ final class ContentCheckerTest extends TestCase
      * 21 DT, 22 SI, 23 TM, 24 GTS (no validator), 25 NM of table 0136;
      * 26 CNE of table 0136 (HL7), 27 CWE of table 0136, 28 CNE of table 0001
      * (User), 29 CWE of table 0001 (closed in IHE PAM FR), 30 CNE of table
-     * 0003 and 31 CWE of table 0003 (local codes accepted).
+     * 0003 and 31 CWE of table 0003 (local codes accepted); 32 TN (HL7 2.3 to
+     * 2.4, no validator), 33 TX.
      */
     private static function pid(): SegmentDefinition
     {
@@ -85,6 +86,8 @@ final class ContentCheckerTest extends TestCase
             $field(29, Usage::Optional, 0, 1, null, 'CWE', '0001'),
             $field(30, Usage::Optional, 0, 1, null, 'CNE', '0003'),
             $field(31, Usage::Optional, 0, 1, null, 'CWE', '0003'),
+            $field(32, Usage::Optional, 0, 1, null, 'TN'),
+            $field(33, Usage::Optional, 0, 1, null, 'TX'),
         ]);
     }
 
@@ -405,14 +408,55 @@ final class ContentCheckerTest extends TestCase
 
     public function testDataTypeWithoutValidator(): void
     {
-        // GTS: no validator, an Info. ST, ID and IS: no Datatype entry.
-        [$outcome] = $this->check(self::pidWith([2 => 'AB', 15 => 'Y', 16 => 'F', 24 => 'R1']));
+        // HL7 2.4: TN has no validator, an Info. ID and IS: no Datatype entry.
+        [$outcome] = $this->check(self::pidWith([15 => 'Y', 16 => 'F', 32 => '(555)555-1234']), 'json-2.4');
 
-        $this->assertSame(['Info noDatatypeValidator PID-24'], self::summary($outcome));
-        $this->assertSame(['PID-24'], array_values(array_map(
+        $this->assertSame(['Info noDatatypeValidator PID-32'], self::summary($outcome));
+        $this->assertSame(['PID-1', 'PID-8', 'PID-8[2]', 'PID-32'], array_values(array_map(
             static fn (string $entry): string => explode(' ', $entry)[1],
             array_filter(self::entries($outcome), static fn (string $entry): bool => str_starts_with($entry, 'Datatype'))
         )));
+    }
+
+    public function testTextTypesHaveDisplayableCharactersOnly(): void
+    {
+        [$outcome] = $this->check(self::pidWith([2 => 'A B', 12 => 'Line\\.br\\next', 24 => 'R1', 33 => '  leading spaces']));
+        $this->assertSame([], self::summary($outcome));
+        $this->assertContains("Datatype PID-2 ok Field 'Field 2' (PID.2) value has displayable characters only (ST).", self::entries($outcome));
+
+        // A tabulation written in an ST, a TX, an FT, a GTS.
+        [$outcome] = $this->check(self::pidWith([2 => "A\tB", 12 => "A\tB", 24 => "R\t1", 33 => "A\tB"]));
+        $this->assertSame([
+            'Error datatype PID-2',
+            'Error datatype PID-12',
+            'Error datatype PID-24',
+            'Error datatype PID-33',
+        ], self::summary($outcome));
+        $this->assertSame(
+            "Field 'Field 2' (PID.2) value has control character(s) U+0009, not allowed in data type ST.",
+            $outcome->getFindings()[0]->message
+        );
+    }
+
+    public function testControlCharacterSentAsAnEscapeSequence(): void
+    {
+        // \X09\ in a TX or an FT: allowed, its Decoded value holds a tabulation.
+        [$outcome] = $this->check(self::pidWith([12 => 'A\\X09\\B', 33 => 'A\\X09\\B']));
+        $this->assertSame([], self::summary($outcome));
+
+        // In an ST: the sequence is not allowed (escape), the written text is displayable.
+        [$outcome] = $this->check(self::pidWith([2 => 'A\\X09\\']));
+        $this->assertSame(['Error escapeNotAllowed PID-2'], self::summary($outcome));
+    }
+
+    public function testEveryControlCharacterIsCitedOnce(): void
+    {
+        [$outcome] = $this->check(self::pidWith([33 => "A\tB\x01C\tD\u{0085}"]));
+
+        $this->assertSame(
+            "Field 'Field 33' (PID.33) value has control character(s) U+0009, U+0001, U+0085, not allowed in data type TX.",
+            $outcome->getFindings()[0]->message
+        );
     }
 
     public function testValueOutsideItsTable(): void
