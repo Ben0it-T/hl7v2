@@ -3741,7 +3741,7 @@
         "Type": "EI",
         "Table": "",
         "LongName": "Filler Order Number",
-        "maxLength": "22",
+        "maxLength": "427",
         "Chapter": "6.5.1.23"
     },
     "FT1.24": {
@@ -15559,7 +15559,7 @@
     },
     "STF.30": {
         "Item": "00129",
-        "Type": "CE",
+        "Type": "CWE",
         "Table": "HL70171",
         "LongName": "Citizenship",
         "maxLength": "250",

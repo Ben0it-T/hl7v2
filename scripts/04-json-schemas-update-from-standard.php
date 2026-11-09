@@ -30,9 +30,11 @@ declare(strict_types=1);
  *
  * Publish (optional, --publish-dir):
  * - Applies <publish-dir>/patches.json, if any, to the updated schema.
- *   A patch is a partial schema (dataTypes, fields, segments) merged key by key;
- *   lists are replaced as a whole and a null value removes the key.
- *   Each entry (a data type, a field, a segment) may carry a `source` and a
+ *   A patch is a partial schema (dataTypes, fields, segments, structures) merged
+ *   key by key; lists are replaced as a whole and a null value removes the key.
+ *   Under `structures`, each entry is a message structure (structures/<name>.json)
+ *   whose groups are merged the same way.
+ *   Each entry (a data type, a field, a segment, a structure) may carry a `source` and a
  *   `comment`, which are checked and never written to the schema:
  *   - source: a document code declared in `documents`, a space, then a
  *     section (e.g. "HL7 2.8.8.10");
@@ -105,7 +107,7 @@ const PUBLISHED_SCHEMA_FILES = ['messageType.json', 'eventDesc.json'];
 
 // Schema patch file of a published schema, and the schemas it may patch.
 const PATCH_FILE = 'patches.json';
-const PATCHABLE_SCHEMAS = ['dataTypes', 'fields', 'segments'];
+const PATCHABLE_SCHEMAS = ['dataTypes', 'fields', 'segments', 'structures'];
 
 // Keys of a patch entry that document it: checked, then removed before merging.
 const PATCH_ANNOTATIONS = ['source', 'comment'];
@@ -675,6 +677,20 @@ if ($patches !== []) {
     echo "Applying schema patches from {$publishDir}/" . PATCH_FILE . "...\n";
 
     foreach ($patches as $schemaName => $patch) {
+        if ($schemaName === 'structures') {
+            // One file per message structure; the order of its groups is kept.
+            foreach ($patch as $structureName => $structurePatch) {
+                $filename = $jsonDir . '/structures/' . $structureName . '.json';
+                if (!is_file($filename)) {
+                    throw new RuntimeException("Invalid schema patch: structures.{$structureName} does not exist.");
+                }
+                saveJson($filename, mergePatch(loadJson($filename), $structurePatch));
+            }
+
+            echo "- {$schemaName}: " . count($patch) . " entries\n";
+            continue;
+        }
+
         $filename = $jsonDir . '/' . $schemaName . '.json';
         $schema = mergePatch(loadJson($filename), $patch);
         ksort($schema);
