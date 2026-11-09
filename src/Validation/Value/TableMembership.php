@@ -19,8 +19,15 @@ use HL7v2\Profile\Definition\TableDefinition;
  * - "99zzz", "where z is an alphanumeric character": 99 and at least one
  *   letter or digit;
  * - "99zzz or L": the code L, and the pattern 99zzz.
- * A pattern is not a code: "HL7nnnn" itself is not in the table. The patterns
- * of the other tables (0070, 0203, 0335) are compared as written.
+ * A pattern is not a code: "HL7nnnn" itself is not in the table.
+ *
+ * Tables 0359 (diagnosis priority) and 0418 (procedure priority) end with an
+ * open rank: "2 …", "For ranked secondary diagnoses" (HL7 v2.4 and v2.5,
+ * section 6.5.2.15 and 6.5.4.14), "2 and higher" (HL7 v2.3.1). The code "2 ...",
+ * "2 …" or "2 and higher" stands for every whole number from 2; it is not
+ * a code itself.
+ *
+ * The patterns of the other tables (0070, 0203, 0335) are compared as written.
  */
 final readonly class TableMembership
 {
@@ -28,6 +35,16 @@ final readonly class TableMembership
      * Table whose patterns are read.
      */
     private const CODING_SYSTEM_TABLE = '0396';
+
+    /**
+     * Tables whose last code is an open rank.
+     */
+    private const RANK_TABLES = ['0359', '0418'];
+
+    /**
+     * Open rank: a whole number followed by "...", "…" or "and higher".
+     */
+    private const OPEN_RANK_PATTERN = '/^(\d+) ?(?:\.\.\.|\x{2026}|and higher)$/u';
 
     /**
      * Patterns of table 0396: the regular expression and the literal codes
@@ -66,6 +83,10 @@ final readonly class TableMembership
      */
     public function contains(TableDefinition $table, string $value): bool
     {
+        if (in_array($table->id, self::RANK_TABLES, true)) {
+            return $this->containsRank($table, $value);
+        }
+
         if ($table->id !== self::CODING_SYSTEM_TABLE) {
             return in_array($value, $table->codes, true);
         }
@@ -79,6 +100,33 @@ final readonly class TableMembership
                 continue;
             }
             if (in_array($value, $entry['codes'], true) || preg_match($entry['pattern'], $value) === 1) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Check whether a value belongs to a table whose codes may end with an
+     * open rank: the value is one of its codes, or a whole number from the
+     * first rank of an open rank (the open rank itself is not a code).
+     *
+     * @param TableDefinition $table A table with codes.
+     * @param string $value Decoded value.
+     *
+     * @return bool
+     */
+    private function containsRank(TableDefinition $table, string $value): bool
+    {
+        foreach ($table->codes as $code) {
+            if (preg_match(self::OPEN_RANK_PATTERN, $code, $matches) !== 1) {
+                if ($code === $value) {
+                    return true;
+                }
+                continue;
+            }
+            if (preg_match('/^\d+$/', $value) === 1 && (int) $value >= (int) $matches[1]) {
                 return true;
             }
         }

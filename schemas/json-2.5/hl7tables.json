@@ -12644,6 +12644,10 @@
                 "description": "General ledger number"
             },
             {
+                "code": "L&I",
+                "description": "Labor and industries number"
+            },
+            {
                 "code": "LI",
                 "description": "Labor and industries number"
             },
@@ -15332,7 +15336,7 @@
             },
             {
                 "code": "LN",
-                "description": "Logical Observation Identifier Names and Codes (LOINC®)"
+                "description": "Logical Observation Identifier Names and Codes (LOINC\u00ae)"
             },
             {
                 "code": "MCD",
@@ -15799,7 +15803,7 @@
                 "description": "the primary procedure"
             },
             {
-                "code": "2",
+                "code": "2 ...",
                 "description": "for ranked secondary procedures"
             }
         ]

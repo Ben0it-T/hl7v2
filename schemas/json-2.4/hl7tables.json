@@ -16289,7 +16289,7 @@
                 "description": "the primary procedure"
             },
             {
-                "code": "2",
+                "code": "2 ...",
                 "description": "for ranked secondary procedures"
             }
         ]

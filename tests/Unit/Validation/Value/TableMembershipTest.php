@@ -10,7 +10,8 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Membership of a value in a table: codes compared as written; the patterns
- * of table 0396 (HL7 v2.5 section 2.17.4).
+ * of table 0396 (HL7 v2.5 section 2.17.4); the open rank of tables 0359 and
+ * 0418 (HL7 v2.5 section 6.5.2.15 and 6.5.4.14).
  */
 final class TableMembershipTest extends TestCase
 {
@@ -70,5 +71,41 @@ final class TableMembershipTest extends TestCase
 
         $this->assertTrue($membership->contains($table, 'L'));
         $this->assertTrue($membership->contains($table, '99LOC'));
+    }
+
+    public function testOpenRankOfThePriorityTables(): void
+    {
+        $membership = new TableMembership();
+
+        foreach (['0359' => '2 ...', '0418' => "2 \u{2026}"] as $id => $openRank) {
+            $table = new TableDefinition($id, 'Priority', TableType::HL7, ['0', '1', $openRank]);
+
+            foreach (['0', '1', '2', '3', '10', '99', '02'] as $value) {
+                $this->assertTrue($membership->contains($table, $value), "$id $value");
+            }
+            foreach (['', '-1', '2.5', 'A', '2 ...', ' 3', '3 '] as $value) {
+                $this->assertFalse($membership->contains($table, $value), "$id $value");
+            }
+        }
+    }
+
+    public function testOpenRankWrittenAndHigher(): void
+    {
+        // HL7 2.3.1: "2 and higher".
+        $table = new TableDefinition('0359', 'Diagnosis priority', TableType::HL7, ['0', '1', '2 and higher']);
+        $membership = new TableMembership();
+
+        $this->assertTrue($membership->contains($table, '1'));
+        $this->assertTrue($membership->contains($table, '7'));
+        $this->assertFalse($membership->contains($table, '2 and higher'));
+    }
+
+    public function testOpenRankIsReadInPriorityTablesOnly(): void
+    {
+        $table = new TableDefinition('0112', 'Discharge disposition', TableType::User, ['01', '10 ... 19']);
+        $membership = new TableMembership();
+
+        $this->assertTrue($membership->contains($table, '10 ... 19'));
+        $this->assertFalse($membership->contains($table, '15'));
     }
 }
