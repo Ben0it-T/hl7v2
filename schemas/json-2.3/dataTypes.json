@@ -2374,9 +2374,9 @@
         "components": [
             {
                 "dataType": "CP.1",
-                "minOccurs": "0",
+                "minOccurs": "1",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "R"
             },
             {
                 "dataType": "CP.2",
@@ -2400,7 +2400,7 @@
                 "dataType": "CP.5",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "CP.6",
@@ -2783,13 +2783,13 @@
                 "dataType": "HD.2",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "HD.3",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             }
         ]
     },
@@ -3164,13 +3164,13 @@
                 "dataType": "PPN.8",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "PPN.9",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "PPN.10",
@@ -3999,13 +3999,13 @@
                 "dataType": "XCN.8",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "XCN.9",
                 "minOccurs": "0",
                 "maxOccurs": "1",
-                "usage": "O"
+                "usage": "C"
             },
             {
                 "dataType": "XCN.10",

@@ -137,6 +137,48 @@
                 }
             ]
         },
+        "CP": {
+            "source": "HL7 2.8.9",
+            "comment": "CP.1 R: the price is \"The only required component\". CP.5 C: the range units are \"required if <from value> and <to value> are present\".",
+            "components": [
+                {
+                    "dataType": "CP.1",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "usage": "R"
+                },
+                {
+                    "dataType": "CP.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CP.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CP.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "CP.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "CP.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ]
+        },
         "CWE": {
             "source": "HL7 2.8.11.10",
             "comment": "CWE.7 C: \"If the coding system is any system other than HL7 coding system, version ID must be valued.\"",
@@ -202,6 +244,132 @@
             "comment": "Type of TS.1, named after the DTM of HL7 v2.5 (2.A.22): HL7 does not name the type of the time of a TS before v2.5. Format: YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]][+/-ZZZZ]: the format line writes HHMM, but the text lists \"YYYYMMDDHH is used to specify a precision of hour\", as v2.5 does.",
             "dataType": "STRING"
         },
+        "HD": {
+            "source": "HL7 2.8.20",
+            "comment": "HD.2 and HD.3 C: \"If the third component is present, then the second must also be present\"; \"The second and third components must either both be valued (both non-null), or both be not valued (both null)\".",
+            "components": [
+                {
+                    "dataType": "HD.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "HD.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "HD.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                }
+            ]
+        },
+        "PPN": {
+            "source": "HL7 2.8.30",
+            "comment": "PPN.8 and PPN.9 C: \"If the first component is present, either the source table or the assigning authority must be valued\".",
+            "components": [
+                {
+                    "dataType": "PPN.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "PPN.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "PPN.10",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.11",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.12",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.13",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.14",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.15",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "PPN.16",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ]
+        },
         "TS": {
             "source": "HL7 2.8.44",
             "comment": "TS.2 B: the degree of precision \"is retained only for purposes of backward compatibility\" (as in v2.4, where TS.2 is B).",
@@ -224,6 +392,102 @@
             "source": "HL7 2.8.44",
             "comment": "The time of an event, YYYY[MM[DD[HH[MM[SS[.S[S[S[S]]]]]]]]][+/-ZZZZ] (see DTM), not an ST.",
             "Type": "DTM"
+        },
+        "XCN": {
+            "source": "HL7 2.8.49",
+            "comment": "XCN.8 and XCN.9 C: \"If the first component is present, either the source table or the assigning authority must be valued\".",
+            "components": [
+                {
+                    "dataType": "XCN.1",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.2",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.3",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.4",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.5",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.6",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.7",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.8",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "XCN.9",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "C"
+                },
+                {
+                    "dataType": "XCN.10",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.11",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.12",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.13",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.14",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                },
+                {
+                    "dataType": "XCN.15",
+                    "minOccurs": "0",
+                    "maxOccurs": "1",
+                    "usage": "O"
+                }
+            ]
         }
     }
 }
