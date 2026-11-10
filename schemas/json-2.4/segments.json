@@ -1988,7 +1988,7 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Event Replay Query",
+        "LongName": "Event replay query",
         "Chapter": "5"
     },
     "ERR": {
@@ -2048,7 +2048,7 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Event Type",
+        "LongName": "Event type",
         "Chapter": "3"
     },
     "FAC": {
@@ -3104,7 +3104,7 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Patient adverse reaction information - unique iden",
+        "LongName": "Patient adverse reaction information - unique identifier",
         "Chapter": "3"
     },
     "IN1": {
@@ -6224,7 +6224,7 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Observations that are Calculated from Other Observ",
+        "LongName": "Observations that are Calculated from Other Observations",
         "Chapter": "8"
     },
     "OM7": {
@@ -9002,7 +9002,7 @@
                 "usage": "O"
             }
         ],
-        "LongName": "Original Style Query Filter",
+        "LongName": "Original style query filter",
         "Chapter": "5"
     },
     "QRI": {
@@ -10877,7 +10877,7 @@
                 "field": "STF.15",
                 "minOccurs": "0",
                 "maxOccurs": "unbounded",
-                "usage": "B"
+                "usage": "O"
             },
             {
                 "field": "STF.16",

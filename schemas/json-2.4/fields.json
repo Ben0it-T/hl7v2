@@ -483,7 +483,7 @@
         "Item": "00763",
         "Type": "ID",
         "Table": "HL70206",
-        "LongName": "Segment Action Code",
+        "LongName": "Segment Action code",
         "maxLength": "3",
         "Chapter": "10.6.7.2"
     },
@@ -835,7 +835,7 @@
         "Item": "00880",
         "Type": "PL",
         "Table": "",
-        "LongName": "Entered by Location",
+        "LongName": "Entered By Location",
         "maxLength": "80",
         "Chapter": "10.6.1.21"
     },
@@ -1691,7 +1691,7 @@
         "Item": "00684",
         "Type": "CE",
         "Table": "HL70185",
-        "LongName": "Preferred Method of Contact",
+        "LongName": "Preferred Method of Contact - Provider",
         "maxLength": "250",
         "Chapter": "11.6.4.6"
     },
@@ -2179,7 +2179,7 @@
         "Item": "01450",
         "Type": "DR",
         "Table": "",
-        "LongName": "Academic Degree Program Participation Date Range",
+        "LongName": "Academic Degree Program ParticipationDate Range",
         "maxLength": "52",
         "Chapter": "15.4.2.4"
     },
@@ -3083,7 +3083,7 @@
         "Item": "01621",
         "Type": "NM",
         "Table": "",
-        "LongName": "Pay Rate per Unit",
+        "LongName": "Pay Rate per Service Unit",
         "maxLength": "4",
         "Chapter": "6.5.16.14"
     },
@@ -5067,7 +5067,7 @@
         "Item": "01326",
         "Type": "NM",
         "Table": "",
-        "LongName": "Reference interaction number",
+        "LongName": "Reference Interaction Number (unique identifier)",
         "maxLength": "20",
         "Chapter": "13.4.2.1"
     },
@@ -5915,7 +5915,7 @@
         "Item": "00110",
         "Type": "TS",
         "Table": "",
-        "LongName": "Date/Time Of Birth",
+        "LongName": "Date/Time of Birth",
         "maxLength": "26",
         "Chapter": "3.4.5.16"
     },
@@ -6397,7 +6397,7 @@
         "Table": "",
         "LongName": "Set ID - OBR",
         "maxLength": "4",
-        "Chapter": "7.4.1.1"
+        "Chapter": "4.5.3.1"
     },
     "OBR.10": {
         "Item": "00244",
@@ -6421,15 +6421,15 @@
         "Table": "",
         "LongName": "Danger Code",
         "maxLength": "250",
-        "Chapter": "7.4.1.12"
+        "Chapter": "4.5.3.12"
     },
     "OBR.13": {
         "Item": "00247",
         "Type": "ST",
         "Table": "",
-        "LongName": "Relevant Clinical Info.",
+        "LongName": "Relevant Clinical Information",
         "maxLength": "300",
-        "Chapter": "7.4.1.13"
+        "Chapter": "4.5.3.13"
     },
     "OBR.14": {
         "Item": "00248",
@@ -6437,7 +6437,7 @@
         "Table": "",
         "LongName": "Specimen Received Date/Time",
         "maxLength": "26",
-        "Chapter": "7.4.1.14"
+        "Chapter": "4.5.3.14"
     },
     "OBR.15": {
         "Item": "00249",
@@ -6453,7 +6453,7 @@
         "Table": "",
         "LongName": "Ordering Provider",
         "maxLength": "250",
-        "Chapter": "7.4.1.16"
+        "Chapter": "4.5.3.16"
     },
     "OBR.17": {
         "Item": "00250",
@@ -6485,21 +6485,21 @@
         "Table": "",
         "LongName": "Placer Order Number",
         "maxLength": "22",
-        "Chapter": "7.4.1.2"
+        "Chapter": "4.5.3.2"
     },
     "OBR.20": {
         "Item": "00253",
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler Field 1 +",
+        "LongName": "Filler Field 1",
         "maxLength": "60",
-        "Chapter": "7.4.1.20"
+        "Chapter": "4.5.3.20"
     },
     "OBR.21": {
         "Item": "00254",
         "Type": "ST",
         "Table": "",
-        "LongName": "Filler Field 2 +",
+        "LongName": "Filler Field 2",
         "maxLength": "60",
         "Chapter": "4.5.3.21"
     },
@@ -6507,15 +6507,15 @@
         "Item": "00255",
         "Type": "TS",
         "Table": "",
-        "LongName": "Results Rpt/Status Chng - Date/Time +",
+        "LongName": "Results Rpt/Status Chng - Date/Time",
         "maxLength": "26",
-        "Chapter": "7.4.1.22"
+        "Chapter": "4.5.3.22"
     },
     "OBR.23": {
         "Item": "00256",
         "Type": "MOC",
         "Table": "",
-        "LongName": "Charge to Practice +",
+        "LongName": "Charge to Practice",
         "maxLength": "40",
         "Chapter": "4.5.3.23"
     },
@@ -6525,13 +6525,13 @@
         "Table": "HL70074",
         "LongName": "Diagnostic Serv Sect ID",
         "maxLength": "10",
-        "Chapter": "7.4.1.24"
+        "Chapter": "4.5.3.24"
     },
     "OBR.25": {
         "Item": "00258",
         "Type": "ID",
         "Table": "HL70123",
-        "LongName": "Result Status +",
+        "LongName": "Result Status",
         "maxLength": "1",
         "Chapter": "4.5.3.25"
     },
@@ -6539,7 +6539,7 @@
         "Item": "00259",
         "Type": "PRL",
         "Table": "",
-        "LongName": "Parent Result +",
+        "LongName": "Parent Result",
         "maxLength": "400",
         "Chapter": "4.5.3.26"
     },
@@ -6557,7 +6557,7 @@
         "Table": "",
         "LongName": "Result Copies To",
         "maxLength": "250",
-        "Chapter": "7.4.1.28"
+        "Chapter": "4.5.3.28"
     },
     "OBR.29": {
         "Item": "00261",
@@ -6565,7 +6565,7 @@
         "Table": "",
         "LongName": "Parent",
         "maxLength": "200",
-        "Chapter": "7.4.1.29"
+        "Chapter": "4.5.3.29"
     },
     "OBR.3": {
         "Item": "00217",
@@ -6573,7 +6573,7 @@
         "Table": "",
         "LongName": "Filler Order Number",
         "maxLength": "22",
-        "Chapter": "7.4.1.3"
+        "Chapter": "4.5.3.3"
     },
     "OBR.30": {
         "Item": "00262",
@@ -6581,7 +6581,7 @@
         "Table": "HL70124",
         "LongName": "Transportation Mode",
         "maxLength": "20",
-        "Chapter": "7.4.1.30"
+        "Chapter": "4.5.3.30"
     },
     "OBR.31": {
         "Item": "00263",
@@ -6595,39 +6595,39 @@
         "Item": "00264",
         "Type": "NDL",
         "Table": "",
-        "LongName": "Principal Result Interpreter +",
+        "LongName": "Principal Result Interpreter",
         "maxLength": "200",
-        "Chapter": "7.4.1.32"
+        "Chapter": "4.5.3.32"
     },
     "OBR.33": {
         "Item": "00265",
         "Type": "NDL",
         "Table": "",
-        "LongName": "Assistant Result Interpreter +",
+        "LongName": "Assistant Result Interpreter",
         "maxLength": "200",
-        "Chapter": "7.4.1.33"
+        "Chapter": "4.5.3.33"
     },
     "OBR.34": {
         "Item": "00266",
         "Type": "NDL",
         "Table": "",
-        "LongName": "Technician +",
+        "LongName": "Technician",
         "maxLength": "200",
-        "Chapter": "7.4.1.34"
+        "Chapter": "4.5.3.34"
     },
     "OBR.35": {
         "Item": "00267",
         "Type": "NDL",
         "Table": "",
-        "LongName": "Transcriptionist +",
+        "LongName": "Transcriptionist",
         "maxLength": "200",
-        "Chapter": "7.4.1.35"
+        "Chapter": "4.5.3.35"
     },
     "OBR.36": {
         "Item": "00268",
         "Type": "TS",
         "Table": "",
-        "LongName": "Scheduled Date/Time +",
+        "LongName": "Scheduled Date/Time",
         "maxLength": "26",
         "Chapter": "4.5.3.36"
     },
@@ -6637,7 +6637,7 @@
         "Table": "",
         "LongName": "Number of Sample Containers",
         "maxLength": "4",
-        "Chapter": "7.4.1.37"
+        "Chapter": "4.5.3.37"
     },
     "OBR.38": {
         "Item": "01029",
@@ -6645,7 +6645,7 @@
         "Table": "",
         "LongName": "Transport Logistics of Collected Sample",
         "maxLength": "250",
-        "Chapter": "7.4.1.38"
+        "Chapter": "4.5.3.38"
     },
     "OBR.39": {
         "Item": "01030",
@@ -6653,7 +6653,7 @@
         "Table": "",
         "LongName": "Collector's Comment",
         "maxLength": "250",
-        "Chapter": "7.4.1.39"
+        "Chapter": "4.5.3.39"
     },
     "OBR.4": {
         "Item": "00238",
@@ -6669,7 +6669,7 @@
         "Table": "",
         "LongName": "Transport Arrangement Responsibility",
         "maxLength": "250",
-        "Chapter": "7.4.1.40"
+        "Chapter": "4.5.3.40"
     },
     "OBR.41": {
         "Item": "01032",
@@ -6677,7 +6677,7 @@
         "Table": "HL70224",
         "LongName": "Transport Arranged",
         "maxLength": "30",
-        "Chapter": "7.4.1.41"
+        "Chapter": "4.5.3.41"
     },
     "OBR.42": {
         "Item": "01033",
@@ -6693,7 +6693,7 @@
         "Table": "",
         "LongName": "Planned Patient Transport Comment",
         "maxLength": "250",
-        "Chapter": "7.4.1.43"
+        "Chapter": "4.5.3.43"
     },
     "OBR.44": {
         "Item": "00393",
@@ -6717,7 +6717,7 @@
         "Table": "HL70411",
         "LongName": "Placer Supplemental Service Information",
         "maxLength": "250",
-        "Chapter": "7.4.1.46"
+        "Chapter": "4.5.3.46"
     },
     "OBR.47": {
         "Item": "01475",
@@ -6725,13 +6725,13 @@
         "Table": "HL70411",
         "LongName": "Filler Supplemental Service Information",
         "maxLength": "250",
-        "Chapter": "7.4.1.47"
+        "Chapter": "4.5.3.47"
     },
     "OBR.5": {
         "Item": "00239",
         "Type": "ID",
         "Table": "",
-        "LongName": "Priority",
+        "LongName": "Priority - OBR",
         "maxLength": "2",
         "Chapter": "4.5.3.5"
     },
@@ -6875,7 +6875,7 @@
         "Item": "00572",
         "Type": "ST",
         "Table": "",
-        "LongName": "Observation Sub-Id",
+        "LongName": "Observation Sub-ID",
         "maxLength": "20",
         "Chapter": "7.4.2.4"
     },
@@ -6979,7 +6979,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number - Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.3.1"
     },
@@ -7140,7 +7140,7 @@
         "Type": "XAD",
         "Table": "",
         "LongName": "Address of Outside Site(s)",
-        "maxLength": "1000",
+        "maxLength": "250",
         "Chapter": "8.8.3.28"
     },
     "OM1.29": {
@@ -7148,7 +7148,7 @@
         "Type": "XTN",
         "Table": "",
         "LongName": "Phone Number of Outside Site",
-        "maxLength": "400",
+        "maxLength": "250",
         "Chapter": "8.8.3.29"
     },
     "OM1.3": {
@@ -7188,7 +7188,7 @@
         "Type": "CE",
         "Table": "HL79999",
         "LongName": "Contraindications to Observations",
-        "maxLength": "65536",
+        "maxLength": "250",
         "Chapter": "8.8.3.33"
     },
     "OM1.34": {
@@ -7212,7 +7212,7 @@
         "Type": "CE",
         "Table": "HL79999",
         "LongName": "Fixed Canned Message",
-        "maxLength": "65536",
+        "maxLength": "250",
         "Chapter": "8.8.3.36"
     },
     "OM1.37": {
@@ -7355,7 +7355,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number- Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.4.1"
     },
@@ -7435,7 +7435,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number- Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.5.1"
     },
@@ -7491,7 +7491,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number- Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.6.1"
     },
@@ -7603,7 +7603,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number- Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.7.1"
     },
@@ -7627,7 +7627,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number- Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.8.1"
     },
@@ -7643,7 +7643,7 @@
         "Item": "00586",
         "Type": "NM",
         "Table": "",
-        "LongName": "Sequence Number - Test / Observation Master File",
+        "LongName": "Sequence Number - Test/Observation Master File",
         "maxLength": "4",
         "Chapter": "8.8.9.1"
     },
@@ -8075,7 +8075,7 @@
         "Item": "01625",
         "Type": "CE",
         "Table": "HL70474",
-        "LongName": "Organization Unit Type Code - ORG",
+        "LongName": "Organization Unit Type Code",
         "maxLength": "250",
         "Chapter": "15.4.4.3"
     },
@@ -9259,7 +9259,7 @@
         "Item": "00110",
         "Type": "TS",
         "Table": "",
-        "LongName": "Date/Time Of Birth",
+        "LongName": "Date/Time of Birth",
         "maxLength": "26",
         "Chapter": "3.4.2.7"
     },
@@ -9907,7 +9907,7 @@
         "Item": "00684",
         "Type": "CE",
         "Table": "HL70185",
-        "LongName": "Preferred Method of Contact",
+        "LongName": "Preferred Method of Contact - Provider",
         "maxLength": "250",
         "Chapter": "11.6.3.6"
     },
@@ -11403,7 +11403,7 @@
         "Item": "01461",
         "Type": "CE",
         "Table": "HL70406",
-        "LongName": "Organization Unit Type - ROL",
+        "LongName": "Organization Unit Type",
         "maxLength": "250",
         "Chapter": "12.4.3.10"
     },
@@ -11891,7 +11891,7 @@
         "Item": "01303",
         "Type": "LA2",
         "Table": "",
-        "LongName": "Dispense-To Location",
+        "LongName": "Dispense-to Location",
         "maxLength": "200",
         "Chapter": "4.14.5.13"
     },
@@ -12307,7 +12307,7 @@
         "Item": "00299",
         "Type": "LA1",
         "Table": "",
-        "LongName": "Deliver-To Location",
+        "LongName": "Deliver-to Location",
         "maxLength": "200",
         "Chapter": "4.14.4.8"
     },
@@ -12531,7 +12531,7 @@
         "Item": "00304",
         "Type": "NM",
         "Table": "",
-        "LongName": "Number of Refills",
+        "LongName": "Number Of Refills",
         "maxLength": "3",
         "Chapter": "4.14.1.13"
     },
@@ -13179,7 +13179,7 @@
         "Item": "00878",
         "Type": "XCN",
         "Table": "",
-        "LongName": "Entered By Person",
+        "LongName": "Entered by Person",
         "maxLength": "250",
         "Chapter": "10.6.2.20"
     },
@@ -13187,7 +13187,7 @@
         "Item": "00879",
         "Type": "XTN",
         "Table": "",
-        "LongName": "Entered By Phone Number",
+        "LongName": "Entered by Phone Number",
         "maxLength": "250",
         "Chapter": "10.6.2.21"
     },
@@ -13419,7 +13419,7 @@
         "Item": "00684",
         "Type": "CE",
         "Table": "HL70185",
-        "LongName": "Preferred Method of Contact",
+        "LongName": "Preferred Method Of Contact",
         "maxLength": "250",
         "Chapter": "15.4.6.16"
     },
@@ -13587,7 +13587,7 @@
         "Item": "00677",
         "Type": "CE",
         "Table": "HL70069",
-        "LongName": "Hospital Service",
+        "LongName": "Hospital Service - STF",
         "maxLength": "250",
         "Chapter": "15.4.6.9"
     },
@@ -14027,7 +14027,7 @@
         "Item": "00547",
         "Type": "DT",
         "Table": "",
-        "LongName": "Occur Span Start Date (33)",
+        "LongName": "Occur Span Start Date(33)",
         "maxLength": "8",
         "Chapter": "6.5.10.18"
     },
@@ -14099,7 +14099,7 @@
         "Item": "00534",
         "Type": "NM",
         "Table": "",
-        "LongName": "Blood Not Replaced-Pints (42)",
+        "LongName": "Blood Not Replaced-Pints(42)",
         "maxLength": "2",
         "Chapter": "6.5.10.5"
     },
@@ -14123,7 +14123,7 @@
         "Item": "00537",
         "Type": "NM",
         "Table": "",
-        "LongName": "Covered Days (23)",
+        "LongName": "Covered Days - (23)",
         "maxLength": "3",
         "Chapter": "6.5.10.8"
     },
@@ -14131,7 +14131,7 @@
         "Item": "00538",
         "Type": "NM",
         "Table": "",
-        "LongName": "Non Covered Days (24)",
+        "LongName": "Non Covered Days - (24)",
         "maxLength": "3",
         "Chapter": "6.5.10.9"
     },
@@ -14243,7 +14243,7 @@
         "Item": "00558",
         "Type": "UVC",
         "Table": "HL70153",
-        "LongName": "Value Amount & Code (39-41)",
+        "LongName": "Value Amount & Code",
         "maxLength": "11",
         "Chapter": "6.5.11.6"
     },
@@ -14459,7 +14459,7 @@
         "Item": "00697",
         "Type": "ID",
         "Table": "HL70106",
-        "LongName": "Query/Response Format Code",
+        "LongName": "Query/ Response Format Code",
         "maxLength": "1",
         "Chapter": "5.10.5.8.2"
     },

@@ -274,7 +274,7 @@
     "CD.5": {
         "Type": "NM",
         "Table": "",
-        "LongName": "channel sampling frequency",
+        "LongName": "sampling frequency",
         "maxLength": ""
     },
     "CD.6": {
@@ -1336,7 +1336,7 @@
         ]
     },
     "DLD.1": {
-        "Type": "ID",
+        "Type": "IS",
         "Table": "",
         "LongName": "discharge location",
         "maxLength": ""
@@ -1372,7 +1372,7 @@
     "DLN.1": {
         "Type": "ST",
         "Table": "",
-        "LongName": "Driver's License Number",
+        "LongName": "license number",
         "maxLength": ""
     },
     "DLN.2": {
@@ -1957,7 +1957,7 @@
     "LA1.6": {
         "Type": "IS",
         "Table": "HL70305",
-        "LongName": "person location type",
+        "LongName": "patient location type",
         "maxLength": ""
     },
     "LA1.7": {
@@ -2153,7 +2153,7 @@
     "LA2.6": {
         "Type": "IS",
         "Table": "HL70305",
-        "LongName": "person location type",
+        "LongName": "patient location type",
         "maxLength": ""
     },
     "LA2.7": {
@@ -2497,7 +2497,7 @@
         ]
     },
     "NDL.1": {
-        "Type": "CNN",
+        "Type": "CN",
         "Table": "",
         "LongName": "name",
         "maxLength": ""
@@ -2559,7 +2559,7 @@
     "NDL.9": {
         "Type": "IS",
         "Table": "HL70305",
-        "LongName": "person location type",
+        "LongName": "patient location type",
         "maxLength": ""
     },
     "NM": {
@@ -2834,7 +2834,7 @@
     "PCF.3": {
         "Type": "TS",
         "Table": "",
-        "LongName": "pre-certification window",
+        "LongName": "precertification window",
         "maxLength": ""
     },
     "PI": {
@@ -3438,13 +3438,13 @@
     "PRL.1": {
         "Type": "CE",
         "Table": "",
-        "LongName": "OBX-3 observation identifier of parent result",
+        "LongName": "OBX-3-observation identifier of parent result",
         "maxLength": ""
     },
     "PRL.2": {
         "Type": "ST",
         "Table": "",
-        "LongName": "OBX-4 sub-ID of parent result",
+        "LongName": "OBX-4-sub-ID of parent result",
         "maxLength": ""
     },
     "PRL.3": {
@@ -3630,9 +3630,9 @@
         "maxLength": ""
     },
     "RCD.2": {
-        "Type": "ST",
+        "Type": "ID",
         "Table": "HL70440",
-        "LongName": "HL7 date type",
+        "LongName": "HL7 data type",
         "maxLength": ""
     },
     "RCD.3": {
@@ -4103,7 +4103,7 @@
     "SPS.6": {
         "Type": "CE",
         "Table": "",
-        "LongName": "collection modifier method code",
+        "LongName": "collection method modifier code",
         "maxLength": ""
     },
     "SPS.7": {

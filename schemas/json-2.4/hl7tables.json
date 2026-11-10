@@ -103,7 +103,7 @@
     },
     "0003": {
         "id": "0003",
-        "name": "Event",
+        "name": "Event type",
         "type": "HL7",
         "codes": [
             {
@@ -411,10 +411,6 @@
                 "description": "CSU - Update/correction of patient order/result information"
             },
             {
-                "code": "CNQ",
-                "description": "QRY/EQQ/SPQ/VQQ/RQQ - Cancel query"
-            },
-            {
                 "code": "I01",
                 "description": "RQI/RPI - Request for insurance information"
             },
@@ -481,6 +477,18 @@
             {
                 "code": "J02",
                 "description": "QSX/ACK - Cancel subscription/acknowledge message"
+            },
+            {
+                "code": "K11",
+                "description": "RSP - Segment pattern response"
+            },
+            {
+                "code": "K13",
+                "description": "RTB - Tabular response"
+            },
+            {
+                "code": "K15",
+                "description": "RDY - Display response"
             },
             {
                 "code": "K21",
@@ -641,6 +649,10 @@
             {
                 "code": "O21",
                 "description": "OML - Laboratory order"
+            },
+            {
+                "code": "O22",
+                "description": "ORL - General laboratory order response message to any OML"
             },
             {
                 "code": "P01",
@@ -827,6 +839,30 @@
                 "description": "QBP - Personnel Information by Segment Query"
             },
             {
+                "code": "Q26",
+                "description": "ROR - Pharmacy/treatment order response"
+            },
+            {
+                "code": "Q27",
+                "description": "RAR - Pharmacy/treatment administration information"
+            },
+            {
+                "code": "Q28",
+                "description": "RDR - Pharmacy/treatment dispense information"
+            },
+            {
+                "code": "Q29",
+                "description": "RER- Pharmacy/treatment encoded order information"
+            },
+            {
+                "code": "Q30",
+                "description": "RGR - Pharmacy/treatment dose information"
+            },
+            {
+                "code": "QNC",
+                "description": "Varies - Query cancellation"
+            },
+            {
                 "code": "R01",
                 "description": "ORU/ACK - Unsolicited transmission of an observation message"
             },
@@ -843,14 +879,6 @@
                 "description": "ORF - Response to query; transmission of requested observation"
             },
             {
-                "code": "R05",
-                "description": "QRY/DSR - query for display results (See Q01)"
-            },
-            {
-                "code": "R06",
-                "description": "UDM - unsolicited update/display results (See Q05)"
-            },
-            {
                 "code": "R07",
                 "description": "EDR - enhanced display response"
             },
@@ -863,28 +891,8 @@
                 "description": "ERP - event replay response"
             },
             {
-                "code": "R0R",
-                "description": ""
-            },
-            {
                 "code": "R21",
                 "description": "OUL - Unsolicited laboratory observation"
-            },
-            {
-                "code": "RAR",
-                "description": "RAR - Pharmacy administration information query response"
-            },
-            {
-                "code": "RDR",
-                "description": "RDR - Pharmacy dispense information query response"
-            },
-            {
-                "code": "RER",
-                "description": "RER - Pharmacy encoded order information query response"
-            },
-            {
-                "code": "RGR",
-                "description": "RGR - Pharmacy dose information query response"
             },
             {
                 "code": "ROR",
@@ -1121,10 +1129,6 @@
             {
                 "code": "W02",
                 "description": "QRF - Waveform result, response to query"
-            },
-            {
-                "code": "X01",
-                "description": ""
             }
         ]
     },
@@ -10789,7 +10793,7 @@
     },
     "0292": {
         "id": "0292",
-        "name": "Vaccines administered",
+        "name": "Vaccines administered (code = CVX)(parenteral, unless oral is noted)",
         "type": "HL7",
         "codes": [
             {
@@ -11920,7 +11924,7 @@
             },
             {
                 "code": "Meal Related Timings",
-                "description": "C (\"cum\")"
+                "description": "<timing>C (\"cum\")<meal>"
             },
             {
                 "code": "Once",
@@ -11940,11 +11944,11 @@
             },
             {
                 "code": "Q<integer>D",
-                "description": "every  days"
+                "description": "every <integer> days"
             },
             {
                 "code": "Q<integer>H",
-                "description": "every  hours"
+                "description": "every <integer> hours"
             },
             {
                 "code": "Q<integer>J<day#>",
@@ -11952,19 +11956,19 @@
             },
             {
                 "code": "Q<integer>L",
-                "description": "every  months (Lunar cycle)"
+                "description": "every <integer> months (Lunar cycle)"
             },
             {
                 "code": "Q<integer>M",
-                "description": "every  minutes"
+                "description": "every <integer> minutes"
             },
             {
                 "code": "Q<integer>S",
-                "description": "every  seconds"
+                "description": "every <integer> seconds"
             },
             {
                 "code": "Q<integer>W",
-                "description": "every  weeks"
+                "description": "every <integer> weeks"
             },
             {
                 "code": "QAM",
@@ -11996,7 +12000,7 @@
             },
             {
                 "code": "U <spec>",
-                "description": "for future use, where  is an interval specification as defined by the UNIX cron specification."
+                "description": "for future use, where <spec> is an interval specification as defined by the UNIX cron specification."
             },
             {
                 "code": "V",
@@ -13142,6 +13146,10 @@
                 "description": "J01, J02"
             },
             {
+                "code": "QRF_W02",
+                "description": "W02"
+            },
+            {
                 "code": "QRY_A19",
                 "description": "A19"
             },
@@ -13200,10 +13208,6 @@
             {
                 "code": "RDS_O13",
                 "description": "O13"
-            },
-            {
-                "code": "RDY_K11",
-                "description": "K11"
             },
             {
                 "code": "RDY_K15",
@@ -13270,12 +13274,20 @@
                 "description": "Q09"
             },
             {
+                "code": "RRA_O02",
+                "description": "O02 (backwards compatibility)"
+            },
+            {
                 "code": "RRA_O18",
                 "description": "O18"
             },
             {
                 "code": "RRD_O14",
                 "description": "O14"
+            },
+            {
+                "code": "RRE_O02",
+                "description": "O02 (backwards compatibility)"
             },
             {
                 "code": "RRE_O12",
@@ -13288,6 +13300,10 @@
             {
                 "code": "RRI_I12",
                 "description": "I12, I13, I14, I15"
+            },
+            {
+                "code": "RSP_K11",
+                "description": "K11"
             },
             {
                 "code": "RSP_K21",
@@ -15977,7 +15993,7 @@
     },
     "0406": {
         "id": "0406",
-        "name": "Participant Organization Unit Type",
+        "name": "Organization unit type",
         "type": "User",
         "codes": [
             {
@@ -17835,7 +17851,7 @@
     },
     "0474": {
         "id": "0474",
-        "name": "Practitioner Organization Unit Type",
+        "name": "Organization unit type - ORG",
         "type": "User",
         "codes": [
             {

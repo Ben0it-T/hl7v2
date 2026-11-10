@@ -24,6 +24,8 @@ declare(strict_types=1);
  *
  * Rules:
  * - A 'varies' datatype is kept as 'varies'.
+ * - A 'CM' datatype keeps the composite type of the JSON schema: HL7 2.3 to 2.4 write CM
+ *   for a composite defined by its field (BLG-1), the XSD name it (CCD).
  * - Table 0 (or no table) means no table.
  * - Usage sets the cardinality it implies: R → minOccurs 1; O, B → minOccurs 0;
  *   X, W → [0..0] (fields; components: R, O, B, X).
@@ -320,6 +322,25 @@ function readPatches(array $file): array
 }
 
 /**
+ * Check whether a CM datatype of the standard extract keeps the composite type of the
+ * JSON schema. HL7 2.3 to 2.4 write CM for a composite whose components are listed by the
+ * field (BLG-1 "When to charge (CM)"); the XSD give it a name (CCD) and its components.
+ *
+ * @param string $dt Datatype of the standard extract.
+ * @param string $current Datatype of the JSON schema.
+ * @param array<string, mixed> $dataTypes Datatypes of the JSON schema.
+ *
+ * @return bool
+ */
+function keepsComposite(string $dt, string $current, array $dataTypes): bool
+{
+    return trim($dt) === 'CM'
+        && $current !== 'CM'
+        && isset($dataTypes[$current]['components'])
+        && $dataTypes[$current]['components'] !== [];
+}
+
+/**
  * Merge a schema patch into a schema.
  *
  * Objects are merged key by key, lists are replaced as a whole
@@ -480,6 +501,8 @@ foreach ($rows as $row) {
     // Update fields
     if (strtolower(trim(substr($dt, 0, 5))) === 'varie') {
         $dataFields[$fieldName]['Type'] = 'varies';
+    } elseif (keepsComposite($dt, $dataFields[$fieldName]['Type'], $dataTypes)) {
+        // CM in the standard: the composite of the XSD stays.
     } elseif (trim($dt) !== '' && $dataFields[$fieldName]['Type'] !== trim($dt)) {
         $dataFields[$fieldName]['Type'] = trim($dt);
     }
@@ -614,6 +637,8 @@ foreach ($rows as $row) {
 
         if (strtolower(trim(substr($dt, 0, 5))) === 'varie') {
             $dataTypes[$pos]['Type'] = 'varies';
+        } elseif (keepsComposite($dt, $dataTypes[$pos]['Type'], $dataTypes)) {
+            // CM in the standard: the composite of the XSD stays.
         } elseif (trim($dt) !== '' && $dataTypes[$pos]['Type'] !== trim($dt)) {
             $dataTypes[$pos]['Type'] = trim($dt);
         }
