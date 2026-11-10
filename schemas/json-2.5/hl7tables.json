@@ -103,7 +103,7 @@
     },
     "0003": {
         "id": "0003",
-        "name": "Event",
+        "name": "Event type",
         "type": "HL7",
         "codes": [
             {
@@ -11325,7 +11325,7 @@
     },
     "0292": {
         "id": "0292",
-        "name": "Vaccines administered",
+        "name": "Vaccines administered (code = CVX)(parenteral, unless oral is noted)",
         "type": "HL7",
         "codes": [
             {
@@ -12500,7 +12500,7 @@
             },
             {
                 "code": "Meal Related Timings",
-                "description": "C (\"cum\")"
+                "description": "<timing>C (\"cum\")<meal>"
             },
             {
                 "code": "Once",
@@ -12520,11 +12520,11 @@
             },
             {
                 "code": "Q<integer>D",
-                "description": "every  days"
+                "description": "every <integer> days"
             },
             {
                 "code": "Q<integer>H",
-                "description": "every  hours"
+                "description": "every <integer> hours"
             },
             {
                 "code": "Q<integer>J<day#>",
@@ -12532,19 +12532,19 @@
             },
             {
                 "code": "Q<integer>L",
-                "description": "every  months (Lunar cycle)"
+                "description": "every <integer> months (Lunar cycle)"
             },
             {
                 "code": "Q<integer>M",
-                "description": "every  minutes"
+                "description": "every <integer> minutes"
             },
             {
                 "code": "Q<integer>S",
-                "description": "every  seconds"
+                "description": "every <integer> seconds"
             },
             {
                 "code": "Q<integer>W",
-                "description": "every  weeks"
+                "description": "every <integer> weeks"
             },
             {
                 "code": "QAM",
@@ -12576,7 +12576,7 @@
             },
             {
                 "code": "U <spec>",
-                "description": "for future use, where  is an interval specification as defined by the UNIX cron specification."
+                "description": "for future use, where <spec> is an interval specification as defined by the UNIX cron specification."
             },
             {
                 "code": "V",

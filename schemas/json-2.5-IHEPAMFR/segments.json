@@ -299,7 +299,7 @@
                 "usage": "C"
             }
         ],
-        "LongName": "Appointment Information _ General Resource",
+        "LongName": "Appointment Information - General Resource",
         "Chapter": "10.6.5"
     },
     "AIL": {
@@ -377,7 +377,7 @@
                 "usage": "C"
             }
         ],
-        "LongName": "Appointment Information _ Location Resource",
+        "LongName": "Appointment Information - Location Resource",
         "Chapter": "10.6.6"
     },
     "AIP": {
@@ -455,7 +455,7 @@
                 "usage": "C"
             }
         ],
-        "LongName": "Appointment Information _ Personnel Resource",
+        "LongName": "Appointment Information - Personnel Resource",
         "Chapter": "10.6.7"
     },
     "AIS": {

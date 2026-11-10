@@ -492,7 +492,7 @@
         "Item": "00763",
         "Type": "ID",
         "Table": "HL70206",
-        "LongName": "Segment Action Code",
+        "LongName": "Segment Action code",
         "maxLength": "3",
         "Chapter": "10.6.7.2"
     },
@@ -5830,7 +5830,7 @@
         "Item": "00802",
         "Type": "CE",
         "Table": "HL70063",
-        "LongName": "Guarantor's Relationship To Insured",
+        "LongName": "Guarantor's Relationship to Insured",
         "maxLength": "250",
         "Chapter": "6.5.7.62"
     },
@@ -13657,7 +13657,7 @@
         "Item": "00304",
         "Type": "NM",
         "Table": "",
-        "LongName": "Number Of Refills",
+        "LongName": "Number of Refills",
         "maxLength": "3",
         "Chapter": "4.14.4.12"
     },
@@ -13969,7 +13969,7 @@
         "Item": "00299",
         "Type": "LA1",
         "Table": "",
-        "LongName": "Deliver-To Location",
+        "LongName": "Deliver-to Location",
         "maxLength": "200",
         "Chapter": "4.14.4.8"
     },
@@ -14001,7 +14001,7 @@
         "Item": "01303",
         "Type": "LA2",
         "Table": "",
-        "LongName": "Dispense-to Location",
+        "LongName": "Dispense-To Location",
         "maxLength": "200",
         "Chapter": "4.14.6.11"
     },
@@ -14913,7 +14913,7 @@
         "Item": "00878",
         "Type": "XCN",
         "Table": "",
-        "LongName": "Entered By Person",
+        "LongName": "Entered by Person",
         "maxLength": "250",
         "Chapter": "10.6.2.20"
     },
@@ -14921,7 +14921,7 @@
         "Item": "00879",
         "Type": "XTN",
         "Table": "",
-        "LongName": "Entered By Phone Number",
+        "LongName": "Entered by Phone Number",
         "maxLength": "250",
         "Chapter": "10.6.2.21"
     },
@@ -14929,7 +14929,7 @@
         "Item": "00880",
         "Type": "PL",
         "Table": "",
-        "LongName": "Entered By Location",
+        "LongName": "Entered by Location",
         "maxLength": "80",
         "Chapter": "10.6.2.22"
     },
@@ -16305,7 +16305,7 @@
         "Item": "00547",
         "Type": "DT",
         "Table": "",
-        "LongName": "Occur Span Start Date (33)",
+        "LongName": "Occur Span Start Date(33)",
         "maxLength": "8",
         "Chapter": "6.5.10.18"
     },
@@ -16377,7 +16377,7 @@
         "Item": "00534",
         "Type": "NM",
         "Table": "",
-        "LongName": "Blood Not Replaced-Pints (42)",
+        "LongName": "Blood Not Replaced-Pints(42)",
         "maxLength": "2",
         "Chapter": "6.5.10.5"
     },
@@ -16401,7 +16401,7 @@
         "Item": "00537",
         "Type": "NM",
         "Table": "",
-        "LongName": "Covered Days (23)",
+        "LongName": "Covered Days - (23)",
         "maxLength": "3",
         "Chapter": "6.5.10.8"
     },
@@ -16409,7 +16409,7 @@
         "Item": "00538",
         "Type": "NM",
         "Table": "",
-        "LongName": "Non Covered Days (24)",
+        "LongName": "Non Covered Days - (24)",
         "maxLength": "3",
         "Chapter": "6.5.10.9"
     },
@@ -16737,7 +16737,7 @@
         "Item": "00697",
         "Type": "ID",
         "Table": "HL70106",
-        "LongName": "Query/Response Format Code",
+        "LongName": "Query/ Response Format Code",
         "maxLength": "1",
         "Chapter": "5.10.5.8.2"
     },
