@@ -1876,123 +1876,123 @@
         "codes": [
             {
                 "code": "03",
-                "description": "Inpatient care (excluding week hospitalisation)"
+                "description": "Hospitalisation Complète (non compris hospitalisation de semaine)"
             },
             {
                 "code": "04",
-                "description": "Hospital day care"
+                "description": "Hospitalisation de jour"
             },
             {
                 "code": "05",
-                "description": "Hospital night care"
+                "description": "Hospitalisation de nuit"
             },
             {
                 "code": "06",
-                "description": "Home care"
+                "description": "Hospitalisation à domicile"
             },
             {
                 "code": "07",
-                "description": "Consultations, outpatient care"
+                "description": "Consultations, soins externes"
             },
             {
                 "code": "08",
-                "description": "Operating unit (including obstetrical and gynaecological)"
+                "description": "Bloc opératoire (y compris obstétrical et gynécologique)"
             },
             {
                 "code": "09",
-                "description": "Other medico-technical wards (anaesthesiology, functional explorations, physiotherapy and rehabilitation, pharmaceuticals)"
+                "description": "Autres unités médico-techniques (anesthésiologie, explorations fonctionnelle, rééducation et réadaptation fonctionnelles, pharmacie)"
             },
             {
                 "code": "10",
-                "description": "Emergency department reception"
+                "description": "Accueil des urgences"
             },
             {
                 "code": "11",
-                "description": "Complete housing/residency (excluding during the week))"
+                "description": "Hébergement complet ou internat (non compris internat de semaine)"
             },
             {
                 "code": "12",
-                "description": "Night housing in partnered structures"
+                "description": "Hébergement de nuit en structure regroupée"
             },
             {
                 "code": "13",
-                "description": "Semi-residency"
+                "description": "Semi-internat"
             },
             {
                 "code": "14",
-                "description": "Day services"
+                "description": "Externat"
             },
             {
                 "code": "15",
-                "description": "Host family care placement (strictly social)"
+                "description": "Placement en famille d'accueil (strictement social)"
             },
             {
                 "code": "16",
-                "description": "Services in the living area (excluding host family care)"
+                "description": "Prestations sur le lieu de vie (non compris placement familial)"
             },
             {
                 "code": "17",
-                "description": "Week residency"
+                "description": "Internat de semaine"
             },
             {
                 "code": "18",
-                "description": "Night housing in fragmented structure"
+                "description": "Hébergement de nuit en structure éclatée"
             },
             {
                 "code": "19",
-                "description": "Ambulatory treatments"
+                "description": "Traitements et cures ambulatoires"
             },
             {
                 "code": "20",
-                "description": "Week hospitalisation"
+                "description": "Hospitalisation de semaine"
             },
             {
                 "code": "21",
-                "description": "Day-care reception"
+                "description": "Accueil de jour"
             },
             {
                 "code": "23",
-                "description": "Ambulatory anaesthesia or surgeries"
+                "description": "Anesthésie ou chirurgie ambulatoires"
             },
             {
                 "code": "24",
-                "description": "Reception and management in therapeutical/psychiatric host family care departments"
+                "description": "Accueil et prise en charge en service d'accueil familial thérapeutique psychiatrique"
             },
             {
                 "code": "25",
-                "description": "Temporary holidays or week-ends housing"
+                "description": "Hébergement temporaire de week-end ou de vacances"
             },
             {
                 "code": "26",
-                "description": "Biological medical tests"
+                "description": "Analyses médicales biologiques"
             },
             {
                 "code": "28",
-                "description": "Dental consultations and care"
+                "description": "Consultations dentaires et soins dentaires"
             },
             {
                 "code": "32",
-                "description": "Radiology (radio diagnostic and radiotherapy), medical imaging"
+                "description": "Radiologie (radiodiagnostic et radiothérapie), imagerie médicale"
             },
             {
                 "code": "33",
-                "description": "Research"
+                "description": "Recherche"
             },
             {
                 "code": "37",
-                "description": "Reception and management in psychiatric therapeutical apartment"
+                "description": "Accueil et prise en charge en appartement thérapeutique psychiatrique"
             },
             {
                 "code": "38",
-                "description": "Reception and management in a psychiatric facility"
+                "description": "Accueil et prise en charge en centre de postcure psychiatrique"
             },
             {
                 "code": "39",
-                "description": "Reception and management in a psychiatric crisis facility"
+                "description": "Accueil et prise en charge en centre de crise psychiatrique"
             },
             {
                 "code": "97",
-                "description": "Non-stated activity"
+                "description": "Activité non dénommée ailleurs"
             }
         ]
     },
@@ -8743,7 +8743,7 @@
     "0190": {
         "id": "0190",
         "name": "Address type",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "ASE",
@@ -8884,7 +8884,7 @@
     "0200": {
         "id": "0200",
         "name": "Name Type Code",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "D",
@@ -8907,7 +8907,7 @@
     "0201": {
         "id": "0201",
         "name": "Telecommunication Use Code",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "ASN",
@@ -8946,7 +8946,7 @@
     "0202": {
         "id": "0202",
         "name": "Telecommunication equipment type",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "BP",
@@ -8981,7 +8981,7 @@
     "0203": {
         "id": "0203",
         "name": "Identifier Type Code",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "ADELI",
@@ -11983,7 +11983,7 @@
     "0287": {
         "id": "0287",
         "name": "Problem/Goal action code",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "AD",
@@ -12596,7 +12596,7 @@
     },
     "0298": {
         "id": "0298",
-        "name": "CP range type",
+        "name": "CP Range Type",
         "type": "HL7",
         "codes": [
             {
@@ -12637,7 +12637,7 @@
     "0301": {
         "id": "0301",
         "name": "Universal ID Type",
-        "type": "User",
+        "type": "HL7",
         "codes": [
             {
                 "code": "DNS",
@@ -13209,7 +13209,7 @@
             },
             {
                 "code": "Meal Related Timings",
-                "description": "C (\"cum\")"
+                "description": "<timing>C (\"cum\")<meal>"
             },
             {
                 "code": "Once",
@@ -13229,11 +13229,11 @@
             },
             {
                 "code": "Q<integer>D",
-                "description": "every  days"
+                "description": "every <integer> days"
             },
             {
                 "code": "Q<integer>H",
-                "description": "every  hours"
+                "description": "every <integer> hours"
             },
             {
                 "code": "Q<integer>J<day#>",
@@ -13241,19 +13241,19 @@
             },
             {
                 "code": "Q<integer>L",
-                "description": "every  months (Lunar cycle)"
+                "description": "every <integer> months (Lunar cycle)"
             },
             {
                 "code": "Q<integer>M",
-                "description": "every  minutes"
+                "description": "every <integer> minutes"
             },
             {
                 "code": "Q<integer>S",
-                "description": "every  seconds"
+                "description": "every <integer> seconds"
             },
             {
                 "code": "Q<integer>W",
-                "description": "every  weeks"
+                "description": "every <integer> weeks"
             },
             {
                 "code": "QAM",
@@ -13285,7 +13285,7 @@
             },
             {
                 "code": "U <spec>",
-                "description": "for future use, where  is an interval specification as defined by the UNIX cron specification."
+                "description": "for future use, where <spec> is an interval specification as defined by the UNIX cron specification."
             },
             {
                 "code": "V",
@@ -13351,6 +13351,10 @@
             {
                 "code": "GL",
                 "description": "General ledger number"
+            },
+            {
+                "code": "L&I",
+                "description": "Labor and industries number"
             },
             {
                 "code": "LI",
@@ -13629,7 +13633,7 @@
             },
             {
                 "code": "ADT_A09",
-                "description": "A09, A10, A11"
+                "description": "A09, A10, A11, A12"
             },
             {
                 "code": "ADT_A12",
@@ -16122,14 +16126,6 @@
             {
                 "code": "WC",
                 "description": "WHO ATC"
-            },
-            {
-                "code": "NABM",
-                "description": "Nomenclature des Actes de Biologie Médicale"
-            },
-            {
-                "code": "99IHE",
-                "description": "Local general code for IHE"
             }
         ]
     },
@@ -24833,6 +24829,25 @@
             }
         ]
     },
+    "IHE-FRANCE-ZFS-5": {
+        "id": "IHE-FRANCE-ZFS-5",
+        "name": "Action du mode légal de soin",
+        "type": "User",
+        "codes": [
+            {
+                "code": "INSERT",
+                "description": "Insertion d’un nouveau mode légal de soin"
+            },
+            {
+                "code": "CANCEL",
+                "description": "Suppression du mode légal de soin, identifié par l’identifiant du ZFS-2"
+            },
+            {
+                "code": "UPDATE",
+                "description": "Correction du mode légal de soin identifié par l’identifiant du ZFS-2"
+            }
+        ]
+    },
     "IHE-FRANCE-ZFS-6": {
         "id": "IHE-FRANCE-ZFS-6",
         "name": "Mode légal de soin (Psychiatrie)",
@@ -24911,7 +24926,7 @@
             },
             {
                 "code": "7",
-                "description": "Soins Psychiatriques à la Demande d’un Tiers (2 certificats) Ou Soins Psychiatriques à la Demande d’un Tiers en urgence (1 certificat)"
+                "description": "Soins Psychiatriques à la Demande d’un Tiers (2 certificats) ou Soins Psychiatriques à la Demande d’un Tiers en urgence (1 certificat)"
             },
             {
                 "code": "8",

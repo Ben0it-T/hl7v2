@@ -1,0 +1,23 @@
+{
+    "title": "ADT^A28 with a ZFS segment whose action code is not one of INSERT, CANCEL, UPDATE",
+    "tests": [
+        "ZFS: action code FOO, not in table IHE-FRANCE-ZFS-5, closed by the profile"
+    ],
+    "references": [
+        "PAMFR 2.11.2 6.19",
+        "PAMFR 2.11.2 6.19.5",
+        "IHE PAM FR rules.json closedTables"
+    ],
+    "expected": {
+        "valid": false,
+        "findings": [
+            {
+                "severity": "Error",
+                "segment": 5,
+                "location": "ZFS-5",
+                "summary": "not in closed table IHE-FRANCE-ZFS-5"
+            }
+        ]
+    },
+    "knownBug": "The old profile links ZFS-5 to no table: the action code is not checked."
+}

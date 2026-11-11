@@ -17128,7 +17128,7 @@
     "ZFS.5": {
         "Item": "",
         "Type": "ID",
-        "Table": "",
+        "Table": "IHE-FRANCE-ZFS-5",
         "LongName": "Action du mode légal de soin",
         "maxLength": "6",
         "Chapter": "6.19.5",

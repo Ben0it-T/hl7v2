@@ -1,0 +1,15 @@
+{
+    "title": "ADT^A28 with a ZFS segment (legal mode of psychiatric care), action INSERT",
+    "tests": [
+        "ZFS: action code INSERT, in table IHE-FRANCE-ZFS-5"
+    ],
+    "references": [
+        "PAMFR 2.11.2 6.19",
+        "PAMFR 2.11.2 6.19.5",
+        "IHE PAM FR rules.json closedTables"
+    ],
+    "expected": {
+        "valid": true,
+        "findings": []
+    }
+}
